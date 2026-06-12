@@ -1,0 +1,31 @@
+{
+  "colorSpace": "sRGB",
+  "colorDepth": "RGBA8",
+  "colorEncoding": "rgb",
+  "paths": {
+    "fontsDir": "resources/fonts",
+    "imagesDir": "resources/images"
+  },
+  "lookupPaths": {
+    "fonts": [
+      "resources/fonts"
+    ],
+    "images": [
+      "resources/images"
+    ]
+  },
+  "git": {
+    "flow": "relaxed"
+  },
+  "ignorePaths": [],
+  "defaults": {
+    "text": {
+      "font": {
+        "family": "Inter",
+        "style": "Regular"
+      },
+      "fontSize": 14,
+      "fontWeight": 400
+    }
+  }
+}
