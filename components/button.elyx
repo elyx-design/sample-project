@@ -1,6 +1,6 @@
 // Define button variants and states here.
 
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub Frame = frame {
   name: "Button",
@@ -11,7 +11,7 @@ pub Frame = frame {
   corner-radius: tokens.borderRadiusM,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
-  fill: oklch(92.2195%, 0, 0deg),
+  fill: tokens.colorSecondary,
   children: Button
 }
 
@@ -20,12 +20,9 @@ Button = text {
   contents: "Button",
   left: 0px,
   top: 0px,
-  align: .left,
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 

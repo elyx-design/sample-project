@@ -1,6 +1,6 @@
 // Define checkbox variants and states here.
 
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 Frame = frame {
   name: "Frame",
@@ -9,7 +9,7 @@ Frame = frame {
   width: 0px,
   height: 0px,
   fill: .white,
-  border: oklch(84.52%, 0, 0deg)
+  border: rgb(79.9972%, 79.9972%, 79.9972%)
 }
 
 local Frame_P = frame {
@@ -19,7 +19,7 @@ local Frame_P = frame {
   width: 32px,
   height: 20px,
   layout: {justify-content: .end, align-items: .center},
-  corner-radius: tokens.boderRadiusMax,
+  corner-radius: tokens.boder-radius-max,
   padding: 3px,
   fill: tokens.colorPrimary,
   children: Frame_H
@@ -31,7 +31,7 @@ Frame_H = frame {
   top: 3px,
   width: 14px,
   height: 14px,
-  corner-radius: tokens.boderRadiusMax,
+  corner-radius: tokens.boder-radius-max,
   fill: .white
 }
 

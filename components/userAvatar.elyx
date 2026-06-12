@@ -1,5 +1,5 @@
-import "../tokens.elyx" as tokens
-import "../images/031.jpg" as module
+import "tokens.elyx" as tokens
+import "images/031.jpg" as module
 
 pub userAvatar_mKGJ6R7 = frame {
   name: "userAvatar",
@@ -8,8 +8,8 @@ pub userAvatar_mKGJ6R7 = frame {
   width: 36px,
   height: 36px,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.boderRadiusMax,
-  fill: oklch(85.0793%, 0.0774, 248.4198deg),
+  corner-radius: tokens.boder-radius-max,
+  fill: rgb(65.32%, 82.7695%, 99.9886%),
   children: AvatarInitials_F4uGTp6
 }
 
@@ -19,8 +19,6 @@ AvatarInitials_F4uGTp6 = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -28,7 +26,7 @@ AvatarInitials_F4uGTp6 = text {
 userAvatarVariant_A = userAvatar_mKGJ6R7 {
   left: 132px,
   top: 10px,
-  overrides: [remove(AvatarInitials_F4uGTp6), set("fill[0].image.sizing", .fill), set("fill[0].image.ref", module)]
+  overrides: [remove(AvatarInitials_F4uGTp6), set("fill[0].image.ref", module), set("fill[0].image.sizing", .fill)]
 }
 
 @variant(userAvatarL)
@@ -51,8 +49,6 @@ LargeAvatarInitials_MsmHoiQ = text {
   font-family: "Inter Variable",
   font-size: 22,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -65,7 +61,7 @@ PhotoM = userAvatar_mKGJ6R7 {
     set("width", 72px),
     set("height", 72px),
     set("corner-radius", 16),
-    set("fill[0].image.sizing", .fill),
-    set("fill[0].image.ref", module)
+    set("fill[0].image.ref", module),
+    set("fill[0].image.sizing", .fill)
   ]
 }

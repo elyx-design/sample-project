@@ -1,4 +1,4 @@
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub header_Pp67Y8c = frame {
   name: "header",
@@ -6,7 +6,7 @@ pub header_Pp67Y8c = frame {
   top: 20px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 8},
+  layout: {direction: .column, item-gap: tokens.gap-m},
   children: [Title_ZIlZq9y, Description_7ZfScLC]
 }
 
@@ -16,8 +16,6 @@ Title_ZIlZq9y = text {
   font-family: "Inter Variable",
   font-size: 20,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -27,7 +25,5 @@ Description_7ZfScLC = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }

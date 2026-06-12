@@ -1,6 +1,6 @@
-import "../tokens.elyx" as tokens
-import "../components/header.elyx" as header
-import "../components/activityRow.elyx" as activityRow
+import "tokens.elyx" as tokens
+import "components/header.elyx" as header
+import "components/activityRow.elyx" as activityRow
 
 pub activityCard_Qrr8IWU = frame {
   name: "activityCard",
@@ -10,9 +10,9 @@ pub activityCard_Qrr8IWU = frame {
   height: .auto,
   layout: {direction: .column, item-gap: 16},
   corner-radius: tokens.borderRadiusXL,
-  padding: 18px,
+  padding: 20px,
   fill: .white,
-  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   children: [layer, activityRow_2, activityRow_a, activityRow_v]
 }
 

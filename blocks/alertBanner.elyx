@@ -1,6 +1,6 @@
-import "../tokens.elyx" as tokens
-import "../components/button.elyx" as Button
-import "../components/iconButton.elyx" as IconButton
+import "tokens.elyx" as tokens
+import "components/button.elyx" as Button
+import "components/iconButton.elyx" as IconButton
 
 pub alertBanner = frame {
   name: "Alert Banner",
@@ -10,17 +10,11 @@ pub alertBanner = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: 12},
   corner-radius: 12px,
-  padding: 12px,
-  fill: oklch(97.3366%, 0.01, 238.1197deg),
-  border: oklch(64.4059%, 0.1892, 253.8895deg, 30%),
+  padding: tokens.paddingM,
+  fill: rgb(94.25%, 97.0062%, 98.9478%),
+  border: rgb(12.9363%, 55.29%, 98.8257%, 30%),
   shadow: {
-    drop-shadow: {
-      color: oklch(0%, 0, 0deg, 5%),
-      offset: point(0px, 5px),
-      blur-radius: 10px,
-      spread: 0px,
-      style: .smooth
-    }
+    drop-shadow: {color: rgb(0%, 0%, 0%, 5%), offset: point(0px, 5px), blur-radius: 10px, spread: 0px, style: .smooth}
   },
   children: [statusIcon, copy, actionButton, closeButton]
 }
@@ -40,8 +34,6 @@ alertTitle = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -51,8 +43,6 @@ alertMessage = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -69,8 +59,8 @@ pub dangerAlertBanner = alertBanner {
   left: 80px,
   top: 193.5px,
   overrides: [
-    set("fill[0].color", oklch(96.8%, 0.0158, 30.47deg)),
-    set("border[0].color", oklch(63.5877%, 0.2495, 25.7497deg, 35%)),
+    set("fill[0].color", rgb(99.999%, 94.4394%, 93.3791%)),
+    set("border[0].color", rgb(100%, 10.15%, 17.63%, 35%)),
     set(closeButton.IconButton.defaultsvg, "fill[0].color", tokens.colorDanger),
     set(actionButton, "$source", Button.ButtonVariant_T),
     set(statusIcon.IconButton.defaultsvg, "fill[0].color", tokens.colorDanger)

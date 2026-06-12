@@ -2,44 +2,48 @@
 
 pub borderRadiusM = 8
 
-pub boderRadiusMax = 999
+pub colorPrimary = rgb(12.9363%, 55.29%, 98.8257%)
 
-pub colorPrimary = oklch(64.4059%, 0.1892, 253.8895deg)
+pub colorDanger = rgb(100%, 10.15%, 17.63%)
 
-pub colorDanger = oklch(63.5877%, 0.2495, 25.7497deg)
+pub colorSecondary = rgb(89.84%, 89.84%, 89.84%)
 
-pub colorSecondary = oklch(92.2195%, 0, 0deg)
+pub textColorLight = rgb(98.9987%, 98.9987%, 98.9987%)
 
-pub textColorLight = oklch(99.24%, 0, 0deg)
+pub colorSecondaryPressed = rgb(79.9972%, 79.9972%, 79.9972%)
 
-pub colorSecondaryPressed = oklch(84.52%, 0, 0deg)
+pub colorPrimaryPressed = rgb(5.1197%, 45.6183%, 89.5294%)
 
-pub colorPrimaryPressed = oklch(57.2098%, 0.19, 256.07deg)
-
-pub colorDangerPressed = oklch(58.05%, 0.2371, 27.74deg)
+pub colorDangerPressed = rgb(90%, 0%, 7.4893%)
 
 pub controlHeight = 32
 
 pub labelSizeM = 12
 
-pub textColorDark = oklch(21.34%, 0, 0deg)
+pub textColorDark = rgb(9.8%, 9.8%, 9.8%)
 
 pub paddingM = 12
 
-pub colorTextFieldBorder = oklch(0%, 0, 0deg, 10%)
+pub colorTextFieldBorder = rgb(0%, 0%, 0%, 10%)
 
-pub textColorDarkSecondary = oklch(21.34%, 0, 0deg, 70%)
+pub textColorDarkSecondary = rgb(9.8%, 9.8%, 9.8%, 70%)
 
 pub labelSizeML = 13
 
-pub textColorLightSecondary = oklch(99.1069%, 0, 0deg, 80%)
+pub textColorLightSecondary = rgb(98.82%, 98.82%, 98.82%, 80%)
 
 pub labelSizeXL = 24
 
-pub colorTertiary = oklch(96.19%, 0, 0deg)
+pub colorTertiary = rgb(94.9997%, 94.9997%, 94.9997%)
 
 pub labelSizeL = 16
 
 pub borderRadiusL = 12
 
 pub borderRadiusXL = 16
+
+pub gap-m = 8
+
+pub boder-radius-max = 999
+
+pub color-background = rgb(95.8%, 97%, 98.2%)

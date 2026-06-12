@@ -1,5 +1,5 @@
-import "./iconButton.elyx" as iconButton
-import "../tokens.elyx" as tokens
+import "components/iconButton.elyx" as iconButton
+import "tokens.elyx" as tokens
 
 pub sidebarItem_5UyrE__ = frame {
   name: "sidebarItem",
@@ -7,11 +7,11 @@ pub sidebarItem_5UyrE__ = frame {
   top: 453px,
   width: .auto,
   height: tokens.controlHeight,
-  layout: {align-items: .center, item-gap: 6},
+  layout: {align-items: .center, item-gap: tokens.gap-m},
   corner-radius: tokens.borderRadiusM,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
-  fill: {color: oklch(84.52%, 0, 0deg), visible: .false},
+  fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   children: [ButtonIconM24_e0j2UAH, Overview_OasUNsl]
 }
 
@@ -23,12 +23,9 @@ Overview_OasUNsl = text {
   left: 0px,
   top: 0px,
   height: 16px,
-  align: .left,
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 

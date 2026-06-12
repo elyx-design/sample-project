@@ -1,7 +1,7 @@
-import "../components/sidebarItem.elyx" as sidebarItem
-import "../tokens.elyx" as tokens
-import "../components/sidebarHeader.elyx" as sidebarHeader2
-import "../components/userSummary.elyx" as userSummary2
+import "components/sidebarItem.elyx" as sidebarItem
+import "tokens.elyx" as tokens
+import "components/sidebarHeader.elyx" as sidebarHeader2
+import "components/userSummary.elyx" as userSummary2
 
 pub sidebar_QjenIug = frame {
   name: "sidebar",
@@ -13,14 +13,14 @@ pub sidebar_QjenIug = frame {
   border-sides: .right,
   padding: tokens.paddingM,
   fill: .white,
-  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   children: [GroupedStack_flp7iRt, userSummary_RP1JqZ1]
 }
 
 GroupedStack_flp7iRt = frame {
   name: "Grouped Stack",
   width: 100%,
-  layout: {direction: .column, item-gap: 8},
+  layout: {direction: .column, item-gap: tokens.gap-m},
   children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
 }
 

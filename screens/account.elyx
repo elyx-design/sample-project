@@ -1,15 +1,15 @@
-import "../tokens.elyx" as tokens
-import "../blocks/settingsCard.elyx" as SettingsCard
-import "../components/header.elyx" as header
-import "../blocks/toastStack.elyx" as ToastStack
-import "../blocks/alertBanner.elyx" as alertBanner
-import "../components/pageTabs.elyx" as pageTabs2
-import "../blocks/profileCard.elyx" as profileCard
-import "../blocks/securityCard.elyx" as securityCard
-import "../blocks/sidebar.elyx" as sidebar2
-import "../blocks/planCard.elyx" as planCard2
-import "../blocks/usageCard.elyx" as usageCard2
-import "../blocks/activityCard.elyx" as activityCard2
+import "tokens.elyx" as tokens
+import "blocks/settingsCard.elyx" as SettingsCard
+import "components/header.elyx" as header
+import "blocks/toastStack.elyx" as ToastStack
+import "blocks/alertBanner.elyx" as alertBanner
+import "components/pageTabs.elyx" as pageTabs2
+import "blocks/profileCard.elyx" as profileCard
+import "blocks/securityCard.elyx" as securityCard
+import "blocks/sidebar.elyx" as sidebar2
+import "blocks/planCard.elyx" as planCard2
+import "blocks/usageCard.elyx" as usageCard2
+import "blocks/activityCard.elyx" as activityCard2
 
 pub account = frame {
   name: "Account Screen",
@@ -18,7 +18,7 @@ pub account = frame {
   width: 1280px,
   height: 960px,
   layout: {direction: .row},
-  fill: oklch(97.2%, 0.006, 247.8966deg),
+  fill: tokens.color-background,
   children: [sidebar, contentShell]
 }
 
@@ -29,7 +29,7 @@ contentShell = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 20},
-  padding: [36px, 40px],
+  padding: 40px,
   children: [topBar, layer_d, mainGrid, toastPreview]
 }
 
@@ -112,7 +112,7 @@ statTile = frame {
   visible: .false,
   corner-radius: 12px,
   padding: 12px,
-  fill: oklch(97.4%, 0, 0deg),
+  fill: rgb(96.58%, 96.58%, 96.58%),
   children: [statValue, statLabel]
 }
 
@@ -122,8 +122,6 @@ statValue = text {
   font-family: "Inter Variable",
   font-size: 18,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -133,8 +131,6 @@ statLabel = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -155,8 +151,6 @@ featureLabel = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorLightSecondary
 }
 
@@ -183,8 +177,6 @@ usageLabel = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -194,8 +186,6 @@ usageValue = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -203,19 +193,11 @@ usageTrack = frame {
   name: "Usage Track",
   width: 100%,
   height: 8px,
-  corner-radius: tokens.boderRadiusMax,
-  fill: oklch(92.2195%, 0, 0deg),
+  fill: rgb(89.84%, 89.84%, 89.84%),
   children: usageFill
 }
 
-usageFill = shape {
-  name: "Usage Fill",
-  width: 50%,
-  height: 8px,
-  corner-radius: tokens.boderRadiusMax,
-  type: .rect,
-  fill: tokens.colorPrimary
-}
+usageFill = shape {name: "Usage Fill", width: 50%, height: 8px, type: .rect, fill: tokens.colorPrimary}
 
 activityRow = frame {
   name: "Activity Row",
@@ -241,8 +223,6 @@ activityTitle = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -252,8 +232,6 @@ activityTime = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -273,8 +251,6 @@ sectionTitle = text {
   font-family: "Inter Variable",
   font-size: 16,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -284,8 +260,6 @@ sectionDescription = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -298,7 +272,7 @@ settingRow = frame {
   visible: .false,
   corner-radius: 12px,
   padding: 12px,
-  fill: oklch(97.4%, 0, 0deg),
+  fill: rgb(96.58%, 96.58%, 96.58%),
   children: [settingCopy, settingAction]
 }
 
@@ -314,8 +288,6 @@ settingTitle = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -325,8 +297,6 @@ settingDescription = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -337,7 +307,7 @@ settingAction = frame {
   corner-radius: tokens.borderRadiusM,
   padding: [0px, 12px],
   fill: .white,
-  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   children: settingActionLabel
 }
 
@@ -347,7 +317,5 @@ settingActionLabel = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }

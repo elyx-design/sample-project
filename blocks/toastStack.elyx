@@ -1,4 +1,5 @@
-import "./alertBanner.elyx" as AlertBanner
+import "blocks/alertBanner.elyx" as AlertBanner
+import "tokens.elyx" as tokens
 
 pub toastStack = frame {
   name: "Toast Stack",
@@ -6,7 +7,7 @@ pub toastStack = frame {
   top: 80px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 8},
+  layout: {direction: .column, item-gap: tokens.gap-m},
   overflow: .visible,
   children: [layer, AlertBanner_a]
 }

@@ -1,6 +1,6 @@
-import "../tokens.elyx" as tokens
-import "../components/statusBadge.elyx" as statusBadge
-import "../components/button.elyx" as button
+import "tokens.elyx" as tokens
+import "components/statusBadge.elyx" as statusBadge
+import "components/button.elyx" as button
 
 pub planCard_E_82fNw = frame {
   name: "planCard",
@@ -10,8 +10,8 @@ pub planCard_E_82fNw = frame {
   height: .auto,
   layout: {direction: .column, item-gap: 16},
   corner-radius: tokens.borderRadiusXL,
-  padding: 18px,
-  fill: oklch(23%, 0.01, 247.8999deg),
+  padding: 20px,
+  fill: rgb(9.9186%, 11.53%, 13.12%),
   children: [PlanHeader_QvgQJ1C, PlanPrice_ZJx9H3J, PlanFeatures_1JNxLt3, layer_Z]
 }
 
@@ -28,8 +28,6 @@ PlanName_81UA3to = text {
   font-family: "Inter Variable",
   font-size: 20,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorLight
 }
 
@@ -45,8 +43,6 @@ PlanPrice_ZJx9H3J = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorLightSecondary
 }
 
@@ -70,8 +66,6 @@ FeatureLabel_532ZQB6 = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorLightSecondary
 }
 
@@ -89,8 +83,6 @@ FeatureLabel_UVzHWnL = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorLightSecondary
 }
 
@@ -108,8 +100,6 @@ FeatureLabel_0yZ827Q = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorLightSecondary
 }
 

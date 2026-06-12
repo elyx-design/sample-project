@@ -1,6 +1,6 @@
-import "../blocks/authForm.elyx" as AuthForm
-import "../tokens.elyx" as tokens
-import "../components/splashLogo.elyx" as splashLogo
+import "blocks/authForm.elyx" as AuthForm
+import "tokens.elyx" as tokens
+import "components/splashLogo.elyx" as splashLogo
 
 pub signIn = frame {
   name: "Sign In Screen",
@@ -9,7 +9,7 @@ pub signIn = frame {
   width: 1024px,
   height: 720px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 28},
-  fill: oklch(97.2%, 0.006, 247.899deg),
+  fill: tokens.color-background,
   children: [splashLogo_i, authPanel, footerLinks]
 }
 
@@ -29,8 +29,6 @@ privacyLink = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -40,8 +38,6 @@ termsLink = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
 
@@ -51,7 +47,5 @@ helpLink = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }

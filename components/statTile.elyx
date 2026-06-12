@@ -1,4 +1,4 @@
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub statTile_BwT4HpE = frame {
   name: "statTile",
@@ -8,7 +8,7 @@ pub statTile_BwT4HpE = frame {
   height: 66px,
   layout: {direction: .column, item-gap: 5},
   corner-radius: tokens.borderRadiusL,
-  padding: 12px,
+  padding: tokens.paddingM,
   fill: tokens.colorTertiary,
   children: [StatValue_PPgC1JG, StatLabel_zJ4gqsc]
 }
@@ -19,8 +19,6 @@ StatValue_PPgC1JG = text {
   font-family: "Inter Variable",
   font-size: 18,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -30,7 +28,5 @@ StatLabel_zJ4gqsc = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }

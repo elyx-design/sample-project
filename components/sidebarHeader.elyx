@@ -1,4 +1,4 @@
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub sidebarHeader_XE3kaHH = frame {
   name: "sidebarHeader",
@@ -23,7 +23,7 @@ WorkspaceMark_2CifZgS = shape {
 
 WorkspaceMeta_rdsbtAB = frame {
   name: "Workspace Meta",
-  layout: {direction: .column, item-gap: 3},
+  layout: {direction: .column, justify-content: .center, item-gap: 4},
   children: [WorkspaceName_e17G8jV, WorkspacePlan_PrRcOKW]
 }
 
@@ -33,8 +33,6 @@ WorkspaceName_e17G8jV = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeML,
   font-style: "SemiBold",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDark
 }
 
@@ -44,7 +42,5 @@ WorkspacePlan_PrRcOKW = text {
   font-family: "Inter Variable",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
   fill: tokens.textColorDarkSecondary
 }
