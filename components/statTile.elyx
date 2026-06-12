@@ -1,6 +1,4 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
+import "../tokens.elyx" as tokens
 
 pub statTile_BwT4HpE = frame {
   name: "statTile",

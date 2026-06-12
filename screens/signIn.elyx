@@ -1,8 +1,6 @@
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/blocks/authForm.elyx" as AuthForm
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/components/splashLogo.elyx" as splashLogo
+import "../blocks/authForm.elyx" as AuthForm
+import "../tokens.elyx" as tokens
+import "../components/splashLogo.elyx" as splashLogo
 
 pub signIn = frame {
   name: "Sign In Screen",

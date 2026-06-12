@@ -1,9 +1,9 @@
-import "scaffold/components/cardBackground.elyx" as cardBackground
-import "scaffold/components/button.elyx" as Button
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/components/statusBadge.elyx" as statusBadge
-import "scaffold/components/userAvatar.elyx" as userAvatar
-import "scaffold/components/statTile.elyx" as statTile
+import "../components/cardBackground.elyx" as cardBackground
+import "../components/button.elyx" as Button
+import "../tokens.elyx" as tokens
+import "../components/statusBadge.elyx" as statusBadge
+import "../components/userAvatar.elyx" as userAvatar
+import "../components/statTile.elyx" as statTile
 
 pub profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
   name: "profileCard",

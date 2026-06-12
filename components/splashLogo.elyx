@@ -1,7 +1,5 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable-Italic.ttf"
-import "design/fonts/InterVariable.ttf"
-import "scaffold/components/iconButton.elyx" as iconButton
+import "../tokens.elyx" as tokens
+import "./iconButton.elyx" as iconButton
 
 pub splashLogo_LCwhDG2 = frame {
   name: "splashLogo",

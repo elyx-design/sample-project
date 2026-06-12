@@ -1,4 +1,4 @@
-import "scaffold/blocks/alertBanner.elyx" as AlertBanner
+import "./alertBanner.elyx" as AlertBanner
 
 pub toastStack = frame {
   name: "Toast Stack",

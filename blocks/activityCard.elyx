@@ -1,8 +1,6 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/components/header.elyx" as header
-import "scaffold/components/activityRow.elyx" as activityRow
+import "../tokens.elyx" as tokens
+import "../components/header.elyx" as header
+import "../components/activityRow.elyx" as activityRow
 
 pub activityCard_Qrr8IWU = frame {
   name: "activityCard",

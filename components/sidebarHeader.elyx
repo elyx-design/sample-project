@@ -1,6 +1,4 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
+import "../tokens.elyx" as tokens
 
 pub sidebarHeader_XE3kaHH = frame {
   name: "sidebarHeader",

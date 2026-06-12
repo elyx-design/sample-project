@@ -1,7 +1,7 @@
-import "scaffold/components/sidebarItem.elyx" as sidebarItem
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/components/sidebarHeader.elyx" as sidebarHeader2
-import "scaffold/components/userSummary.elyx" as userSummary2
+import "../components/sidebarItem.elyx" as sidebarItem
+import "../tokens.elyx" as tokens
+import "../components/sidebarHeader.elyx" as sidebarHeader2
+import "../components/userSummary.elyx" as userSummary2
 
 pub sidebar_QjenIug = frame {
   name: "sidebar",

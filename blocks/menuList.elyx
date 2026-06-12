@@ -1,6 +1,4 @@
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/components/listRow.elyx" as ListRow
+import "../components/listRow.elyx" as ListRow
 
 pub menuList = frame {
   name: "Menu List",

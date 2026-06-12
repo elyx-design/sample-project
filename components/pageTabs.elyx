@@ -1,6 +1,4 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable-Italic.ttf"
-import "design/fonts/InterVariable.ttf"
+import "../tokens.elyx" as tokens
 
 pub pageTabs_e60eQaG = frame {
   name: "pageTabs",

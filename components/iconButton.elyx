@@ -1,7 +1,7 @@
 // Define icon-only button variants and states here.
 
-import "scaffold/icons/default.svg" as default
-import "scaffold/tokens.elyx" as tokens
+import "../icons/default.svg" as default
+import "../tokens.elyx" as tokens
 
 pub Icon = frame {
   name: "Button Icon M (24)",

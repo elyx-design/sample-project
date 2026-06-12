@@ -1,7 +1,5 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/images/031.jpg" as module
+import "../tokens.elyx" as tokens
+import "../images/031.jpg" as module
 
 pub userAvatar_mKGJ6R7 = frame {
   name: "userAvatar",

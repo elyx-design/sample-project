@@ -1,8 +1,6 @@
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/components/button.elyx" as Button
-import "scaffold/components/iconButton.elyx" as IconButton
+import "../tokens.elyx" as tokens
+import "../components/button.elyx" as Button
+import "../components/iconButton.elyx" as IconButton
 
 pub alertBanner = frame {
   name: "Alert Banner",

@@ -1,7 +1,5 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable-Italic.ttf"
-import "design/fonts/InterVariable.ttf"
-import "scaffold/components/button.elyx" as button
+import "../tokens.elyx" as tokens
+import "./button.elyx" as button
 
 pub settingRow_HQWVNjz = frame {
   name: "settingRow",

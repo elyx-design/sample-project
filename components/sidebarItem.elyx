@@ -1,7 +1,5 @@
-import "scaffold/components/iconButton.elyx" as iconButton
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable-Italic.ttf"
-import "design/fonts/InterVariable.ttf"
+import "./iconButton.elyx" as iconButton
+import "../tokens.elyx" as tokens
 
 pub sidebarItem_5UyrE__ = frame {
   name: "sidebarItem",

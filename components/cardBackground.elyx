@@ -1,4 +1,4 @@
-import "scaffold/tokens.elyx" as tokens
+import "../tokens.elyx" as tokens
 
 pub cardBackground_zXouRyz = frame {
   name: "cardBackground",

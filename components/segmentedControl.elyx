@@ -1,8 +1,6 @@
 // Define segmented control variants and states here.
 
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/tokens.elyx" as tokens
+import "../tokens.elyx" as tokens
 
 pub Frame_U = frame {
   name: "Segmented Control",

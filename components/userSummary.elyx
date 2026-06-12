@@ -1,7 +1,5 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/components/userAvatar.elyx" as userAvatar
+import "../tokens.elyx" as tokens
+import "./userAvatar.elyx" as userAvatar
 
 pub userSummary_3nStch3 = frame {
   name: "userSummary",

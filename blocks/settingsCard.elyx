@@ -1,12 +1,10 @@
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/components/button.elyx" as Button
-import "scaffold/components/checkbox.elyx" as Checkbox
-import "scaffold/components/segmentedControl.elyx" as SegmentedControl
-import "scaffold/components/textField.elyx" as TextField
-import "scaffold/components/header.elyx" as header2
-import "scaffold/components/cardBackground.elyx" as cardBackground
+import "../tokens.elyx" as tokens
+import "../components/button.elyx" as Button
+import "../components/checkbox.elyx" as Checkbox
+import "../components/segmentedControl.elyx" as SegmentedControl
+import "../components/textField.elyx" as TextField
+import "../components/header.elyx" as header2
+import "../components/cardBackground.elyx" as cardBackground
 
 pub cardBackground_W = cardBackground.cardBackground_zXouRyz {
   name: "Settings Card",

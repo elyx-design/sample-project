@@ -1,8 +1,6 @@
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable-Italic.ttf"
-import "design/fonts/InterVariable.ttf"
-import "scaffold/components/statusBadge.elyx" as statusBadge
-import "scaffold/components/button.elyx" as button
+import "../tokens.elyx" as tokens
+import "../components/statusBadge.elyx" as statusBadge
+import "../components/button.elyx" as button
 
 pub planCard_E_82fNw = frame {
   name: "planCard",

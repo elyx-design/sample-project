@@ -1,6 +1,6 @@
-import "scaffold/components/cardBackground.elyx" as cardBackground
-import "scaffold/components/header.elyx" as header2
-import "scaffold/components/settingRow.elyx" as settingRow
+import "../components/cardBackground.elyx" as cardBackground
+import "../components/header.elyx" as header2
+import "../components/settingRow.elyx" as settingRow
 
 header_HZdRlZc = header2.header_Pp67Y8c {
   left: 0px,

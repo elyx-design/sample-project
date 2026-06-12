@@ -1,9 +1,7 @@
 // Define list row variants and states here.
 
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/components/iconButton.elyx" as iconButton
+import "../tokens.elyx" as tokens
+import "./iconButton.elyx" as iconButton
 
 pub Row = frame {
   name: "Row",

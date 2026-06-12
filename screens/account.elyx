@@ -1,17 +1,15 @@
-import "design/fonts/InterVariable.ttf"
-import "design/fonts/InterVariable-Italic.ttf"
-import "scaffold/tokens.elyx" as tokens
-import "scaffold/blocks/settingsCard.elyx" as SettingsCard
-import "scaffold/components/header.elyx" as header
-import "scaffold/blocks/toastStack.elyx" as ToastStack
-import "scaffold/blocks/alertBanner.elyx" as alertBanner
-import "scaffold/components/pageTabs.elyx" as pageTabs2
-import "scaffold/blocks/profileCard.elyx" as profileCard
-import "scaffold/blocks/securityCard.elyx" as securityCard
-import "scaffold/blocks/sidebar.elyx" as sidebar2
-import "scaffold/blocks/planCard.elyx" as planCard2
-import "scaffold/blocks/usageCard.elyx" as usageCard2
-import "scaffold/blocks/activityCard.elyx" as activityCard2
+import "../tokens.elyx" as tokens
+import "../blocks/settingsCard.elyx" as SettingsCard
+import "../components/header.elyx" as header
+import "../blocks/toastStack.elyx" as ToastStack
+import "../blocks/alertBanner.elyx" as alertBanner
+import "../components/pageTabs.elyx" as pageTabs2
+import "../blocks/profileCard.elyx" as profileCard
+import "../blocks/securityCard.elyx" as securityCard
+import "../blocks/sidebar.elyx" as sidebar2
+import "../blocks/planCard.elyx" as planCard2
+import "../blocks/usageCard.elyx" as usageCard2
+import "../blocks/activityCard.elyx" as activityCard2
 
 pub account = frame {
   name: "Account Screen",

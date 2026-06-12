@@ -1,8 +1,6 @@
 // Define checkbox variants and states here.
 
-import "scaffold/tokens.elyx" as tokens
-import "design/fonts/InterVariable-Italic.ttf"
-import "design/fonts/InterVariable.ttf"
+import "../tokens.elyx" as tokens
 
 Frame = frame {
   name: "Frame",
