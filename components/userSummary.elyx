@@ -1,0 +1,47 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/components/userAvatar.elyx" as userAvatar
+
+pub userSummary_3nStch3 = frame {
+  name: "userSummary",
+  left: 16px,
+  top: 888px,
+  width: 100%,
+  height: 56px,
+  layout: {align-items: .center, item-gap: 10},
+  corner-radius: tokens.borderRadiusL,
+  padding: [10px, tokens.paddingM],
+  fill: tokens.colorTertiary,
+  children: [userAvatar_1, UserCopy_NGAEIPi]
+}
+
+userAvatar_1 = userAvatar.userAvatar_mKGJ6R7 {left: 12px, top: 10px}
+
+UserCopy_NGAEIPi = frame {
+  name: "User Copy",
+  layout: {direction: .column, item-gap: 3},
+  children: [UserName_9ZA9Ann, UserEmail_Gl6zsNE]
+}
+
+UserName_9ZA9Ann = text {
+  name: "User Name",
+  contents: "Jason Chen",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+UserEmail_Gl6zsNE = text {
+  name: "User Email",
+  contents: "jason@acme.design",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}

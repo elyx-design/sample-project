@@ -1,0 +1,64 @@
+// Define text field variants and states here.
+
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/tokens.elyx" as tokens
+
+pub TextField = frame {
+  name: "Text Field",
+  left: 869px,
+  top: 770px,
+  width: 100%,
+  height: tokens.controlHeight,
+  layout: {align-items: .center},
+  corner-radius: tokens.borderRadiusM,
+  padding-left: tokens.paddingM,
+  padding-right: tokens.paddingM,
+  fill: tokens.colorTertiary,
+  border: tokens.colorTextFieldBorder,
+  children: Label
+}
+
+Label = text {
+  name: "Label",
+  contents: "Label",
+  left: 0px,
+  top: 0px,
+  align: .left,
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+@variant(Placeholder)
+TextFieldVariant_L = TextField {
+  left: 869px,
+  top: 850px,
+  overrides: [set(Label, "fill[0].color", oklch(21.34%, 0, 0deg, 40%))]
+}
+
+@variant(Focussed)
+TextFieldVariant = TextField {
+  left: 869px,
+  top: 930px,
+  overrides: [
+    set("border[0].color", tokens.colorPrimary),
+    set("border[0].position", .center),
+    set("border[0].width", 2)
+  ]
+}
+
+@variant(Error)
+Focussed = TextField {
+  left: 869px,
+  top: 1010px,
+  overrides: [
+    set("border[0].color", tokens.colorDanger),
+    set("border[0].position", .center),
+    set("border[0].width", 2),
+    set(Label, "fill[0].color", tokens.colorDanger)
+  ]
+}

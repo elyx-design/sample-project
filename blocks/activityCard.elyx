@@ -1,0 +1,52 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/components/header.elyx" as header
+import "scaffold/components/activityRow.elyx" as activityRow
+
+pub activityCard_Qrr8IWU = frame {
+  name: "activityCard",
+  left: 0px,
+  top: 433px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, item-gap: 16},
+  corner-radius: tokens.borderRadiusXL,
+  padding: 18px,
+  fill: .white,
+  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  children: [layer, activityRow_2, activityRow_a, activityRow_v]
+}
+
+layer = header.header_Pp67Y8c {
+  left: 35px,
+  top: 453px,
+  overrides: [
+    set(header.Description_7ZfScLC, "contents", "Security and account events"),
+    set(header.Title_ZIlZq9y, "contents", "Recent activity")
+  ]
+}
+
+activityRow_2 = activityRow.activityRow_ZaTUcpO {
+  left: 18px,
+  top: 81px,
+  overrides: [
+    set(activityRow.ActivityCopy_zRPSoiA.ActivityTime_dwkCnRe, "contents", "24 days ago"),
+    set(activityRow.ActivityCopy_zRPSoiA.ActivityTitle_9XlhOnW, "contents", "Password changed")
+  ]
+}
+
+activityRow_a = activityRow.activityRow_ZaTUcpO {
+  left: 38px,
+  top: 101px,
+  overrides: [set(activityRow.ActivityCopy_zRPSoiA.ActivityTitle_9XlhOnW, "contents", "New member invited")]
+}
+
+activityRow_v = activityRow.activityRow_ZaTUcpO {
+  left: 38px,
+  top: 151px,
+  overrides: [
+    set(activityRow.ActivityCopy_zRPSoiA.ActivityTime_dwkCnRe, "contents", "June 6"),
+    set(activityRow.ActivityCopy_zRPSoiA.ActivityTitle_9XlhOnW, "contents", "Billing email updated")
+  ]
+}

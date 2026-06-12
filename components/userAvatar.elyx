@@ -1,0 +1,73 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/images/031.jpg" as module
+
+pub userAvatar_mKGJ6R7 = frame {
+  name: "userAvatar",
+  left: 12px,
+  top: 10px,
+  width: 36px,
+  height: 36px,
+  layout: {justify-content: .center, align-items: .center},
+  corner-radius: tokens.boderRadiusMax,
+  fill: oklch(85.0793%, 0.0774, 248.4198deg),
+  children: AvatarInitials_F4uGTp6
+}
+
+AvatarInitials_F4uGTp6 = text {
+  name: "Avatar Initials",
+  contents: "JC",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "SemiBold",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+@variant(PhotoM)
+userAvatarVariant_A = userAvatar_mKGJ6R7 {
+  left: 132px,
+  top: 10px,
+  overrides: [remove(AvatarInitials_F4uGTp6), set("fill[0].image.sizing", .fill), set("fill[0].image.ref", module)]
+}
+
+@variant(userAvatarL)
+userAvatarVariant_P = userAvatar_mKGJ6R7 {
+  left: 12px,
+  top: 94px,
+  overrides: [
+    insert(LargeAvatarInitials_MsmHoiQ, {after: .nil}),
+    remove(AvatarInitials_F4uGTp6),
+    set("width", 72px),
+    set("height", 72px),
+    set("corner-radius", 16)
+  ]
+}
+
+LargeAvatarInitials_MsmHoiQ = text {
+  name: "Large Avatar Initials",
+  contents: "JC",
+  left: 21.5px,
+  font-family: "Inter Variable",
+  font-size: 22,
+  font-style: "SemiBold",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+@variant(PhotoL)
+PhotoM = userAvatar_mKGJ6R7 {
+  left: 132px,
+  top: 94px,
+  overrides: [
+    remove(AvatarInitials_F4uGTp6),
+    set("width", 72px),
+    set("height", 72px),
+    set("corner-radius", 16),
+    set("fill[0].image.sizing", .fill),
+    set("fill[0].image.ref", module)
+  ]
+}

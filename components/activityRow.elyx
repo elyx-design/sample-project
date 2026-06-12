@@ -1,0 +1,43 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+
+pub activityRow_ZaTUcpO = frame {
+  name: "activityRow",
+  left: 18px,
+  top: 81px,
+  width: 100%,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 10},
+  children: [ActivityDot_0f7NVNh, ActivityCopy_zRPSoiA]
+}
+
+ActivityDot_0f7NVNh = shape {name: "Activity Dot", width: 8px, height: 8px, type: .ellipse, fill: tokens.colorPrimary}
+
+ActivityCopy_zRPSoiA = frame {
+  name: "Activity Copy",
+  layout: {direction: .column, item-gap: 4},
+  children: [ActivityTitle_9XlhOnW, ActivityTime_dwkCnRe]
+}
+
+ActivityTitle_9XlhOnW = text {
+  name: "Event",
+  contents: "Event",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+ActivityTime_dwkCnRe = text {
+  name: "Date",
+  contents: "Date",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}

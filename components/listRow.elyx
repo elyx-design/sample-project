@@ -1,0 +1,71 @@
+// Define list row variants and states here.
+
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/tokens.elyx" as tokens
+import "scaffold/components/iconButton.elyx" as iconButton
+
+pub Row = frame {
+  name: "Row",
+  left: 862px,
+  top: 603px,
+  width: 100%,
+  height: 28px,
+  layout: {justify-content: .space-between, align-items: .center},
+  corner-radius: tokens.borderRadiusM,
+  padding: [4px, tokens.paddingM],
+  children: [GroupedStack, Item_e_O]
+}
+
+GroupedStack = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 4},
+  children: [layer_H_9_E_y_R, Item_e_R_O_9]
+}
+
+layer_H_9_E_y_R = iconButton.ButtonIconMVariant_N {left: 12px, top: -2px}
+
+Item_e_R_O_9 = text {
+  name: "Item",
+  contents: "Item",
+  left: 87px,
+  top: 6.5px,
+  width: 25px,
+  height: 15px,
+  align: .left,
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+Item_e_O = text {
+  name: "Detail",
+  contents: "Detail",
+  left: 16px,
+  top: 0.5px,
+  width: .auto,
+  height: 15px,
+  align: .right,
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+@variant(Selected)
+RowVariant_7 = Row {
+  left: 862px,
+  top: 679px,
+  overrides: [
+    set("fill[0].color", tokens.colorPrimary),
+    set(Item_e_O, "fill[0].color", tokens.textColorLightSecondary),
+    set(GroupedStack.Item_e_R_O_9, "fill[0].color", .white),
+    set(GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg, "fill[0].color", tokens.textColorLight)
+  ]
+}

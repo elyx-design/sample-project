@@ -1,0 +1,63 @@
+// Define button variants and states here.
+
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/tokens.elyx" as tokens
+
+pub Frame = frame {
+  name: "Button",
+  left: 962px,
+  top: 689px,
+  height: tokens.controlHeight,
+  layout: {justify-content: .center, align-items: .center},
+  corner-radius: tokens.borderRadiusM,
+  padding-left: tokens.paddingM,
+  padding-right: tokens.paddingM,
+  fill: oklch(92.2195%, 0, 0deg),
+  children: Button
+}
+
+Button = text {
+  name: "Button",
+  contents: "Button",
+  left: 0px,
+  top: 0px,
+  align: .left,
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+@variant(Primary)
+ButtonVariant_V = Frame {
+  left: 1072px,
+  top: 689px,
+  overrides: [set("fill[0].color", tokens.colorPrimary), set(Button, "fill[0].color", tokens.textColorLight)]
+}
+
+@variant(Danger)
+ButtonVariant_T = Frame {
+  left: 1181px,
+  top: 689px,
+  overrides: [set("fill[0].color", tokens.colorDanger), set(Button, "fill[0].color", tokens.textColorLight)]
+}
+
+@variant(Pressed)
+ButtonVariant_s = Frame {left: 962px, top: 769px, overrides: [set("fill[0].color", tokens.colorSecondaryPressed)]}
+
+@variant("Primary Pressed")
+ButtonVariant_E = Frame {
+  left: 1072px,
+  top: 769px,
+  overrides: [set("fill[0].color", tokens.colorPrimaryPressed), set(Button, "fill[0].color", tokens.textColorLight)]
+}
+
+@variant("Danger Pressed")
+Danger = Frame {
+  left: 1181px,
+  top: 769px,
+  overrides: [set("fill[0].color", tokens.colorDangerPressed), set(Button, "fill[0].color", tokens.textColorLight)]
+}

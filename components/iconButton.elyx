@@ -1,0 +1,47 @@
+// Define icon-only button variants and states here.
+
+import "scaffold/icons/default.svg" as default
+import "scaffold/tokens.elyx" as tokens
+
+pub Icon = frame {
+  name: "Button Icon M (24)",
+  left: 340px,
+  top: 519px,
+  width: .auto,
+  height: .auto,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  corner-radius: 0px,
+  fill: {color: oklch(84.52%, 0, 0deg), visible: .false},
+  children: defaultsvg
+}
+
+defaultsvg = icon {
+  name: "default.svg",
+  contents: default,
+  left: -0.17px,
+  top: -1.2357px,
+  width: 24px,
+  height: 24px,
+  fill: tokens.textColorDark
+}
+
+@variant("Button Icon S (16)")
+ButtonIconMVariant_N = Icon {
+  left: 260px,
+  top: 519px,
+  overrides: [set(defaultsvg, "width", 16px), set(defaultsvg, "height", 16px)]
+}
+
+@variant("Button Icon L (32)")
+ButtonIconMVariant_3 = Icon {
+  left: 428px,
+  top: 519px,
+  overrides: [set(defaultsvg, "width", 32px), set(defaultsvg, "height", 32px)]
+}
+
+@variant("Button Icon XL (48)")
+ButtonIconL32 = Icon {
+  left: 524px,
+  top: 519px,
+  overrides: [set(defaultsvg, "width", 48px), set(defaultsvg, "height", 48px)]
+}

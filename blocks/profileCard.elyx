@@ -1,0 +1,119 @@
+import "scaffold/components/cardBackground.elyx" as cardBackground
+import "scaffold/components/button.elyx" as Button
+import "scaffold/tokens.elyx" as tokens
+import "scaffold/components/statusBadge.elyx" as statusBadge
+import "scaffold/components/userAvatar.elyx" as userAvatar
+import "scaffold/components/statTile.elyx" as statTile
+
+pub profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
+  name: "profileCard",
+  left: 0px,
+  top: 0px,
+  overrides: [
+    insert(ProfileCardHeader_J4GZIkC, {after: .nil}),
+    insert(ProfileHero__BlDB8H, {after: ProfileCardHeader_J4GZIkC}),
+    insert(ProfileStats_uRSls4V, {after: ProfileHero__BlDB8H}),
+    set("width", 100%),
+    set("height", .auto)
+  ]
+}
+
+ProfileHero__BlDB8H = frame {
+  name: "Profile Hero",
+  top: -7px,
+  width: 100%,
+  layout: {align-items: .center, item-gap: 16},
+  children: [layer, ProfileCopy_L4BIoK0, Button_hJuT9W5]
+}
+
+layer = userAvatar.userAvatarVariant_P {left: 62px, top: 101px}
+
+ProfileCopy_L4BIoK0 = frame {
+  name: "Profile Copy",
+  width: 100%,
+  layout: {direction: .column, item-gap: 5},
+  children: [ProfileName_t5aftmC, ProfileRole_q2YZxwP]
+}
+
+ProfileName_t5aftmC = text {
+  name: "Profile Name",
+  contents: "Jason Chen",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeL,
+  font-style: "SemiBold",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+ProfileRole_q2YZxwP = text {
+  name: "Profile Role",
+  contents: "Design lead at Acme Design",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+Button_hJuT9W5 = Button.Frame {overrides: [set(Button.Button, "contents", "Upload")]}
+
+ProfileStats_uRSls4V = frame {
+  name: "Profile Stats",
+  top: 85px,
+  width: 100%,
+  layout: {item-gap: 10},
+  children: [statTile_S, statTile_i, statTile_B]
+}
+
+statTile_S = statTile.statTile_BwT4HpE {
+  left: 0px,
+  top: 0px,
+  overrides: [set("width", 100%), set(statTile.StatLabel_zJ4gqsc, "contents", "Projects")]
+}
+
+statTile_i = statTile.statTile_BwT4HpE {
+  left: 0px,
+  top: 20px,
+  overrides: [
+    set("width", 100%),
+    set(statTile.StatLabel_zJ4gqsc, "contents", "Members"),
+    set(statTile.StatValue_PPgC1JG, "contents", "42")
+  ]
+}
+
+statTile_B = statTile.statTile_BwT4HpE {
+  left: 20px,
+  top: 40px,
+  overrides: [
+    set("width", 100%),
+    set(statTile.StatLabel_zJ4gqsc, "contents", "Last Active"),
+    set(statTile.StatValue_PPgC1JG, "contents", "2h")
+  ]
+}
+
+ProfileCardHeader_J4GZIkC = frame {
+  name: "Profile Card Header",
+  top: -51px,
+  width: 100%,
+  layout: {justify-content: .space-between, align-items: .center},
+  children: [ProfileHeading_m_7qb0x, statusBadge_s]
+}
+
+ProfileHeading_m_7qb0x = text {
+  name: "Profile Heading",
+  contents: "Public profile",
+  font-family: "Inter Variable",
+  font-size: 20,
+  font-style: "SemiBold",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+statusBadge_s = statusBadge.statusBadge_3ac5QoB {
+  left: 461px,
+  top: 1px,
+  overrides: [set(statusBadge.ProfileBadgeLabel_fs2wPy7, "contents", "Verified")]
+}

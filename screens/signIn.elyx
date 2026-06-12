@@ -1,0 +1,59 @@
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/blocks/authForm.elyx" as AuthForm
+import "scaffold/tokens.elyx" as tokens
+import "scaffold/components/splashLogo.elyx" as splashLogo
+
+pub signIn = frame {
+  name: "Sign In Screen",
+  left: 80px,
+  top: 80px,
+  width: 1024px,
+  height: 720px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 28},
+  fill: oklch(97.2%, 0.006, 247.899deg),
+  children: [splashLogo_i, authPanel, footerLinks]
+}
+
+splashLogo_i = splashLogo.splashLogo_LCwhDG2 {left: 487.5px, top: 145.5px}
+
+authPanel = AuthForm.authForm {left: 0px, top: 0px, overrides: [set("width", 360px)]}
+
+footerLinks = frame {
+  name: "Footer Links",
+  layout: {align-items: .center, item-gap: 18},
+  children: [privacyLink, termsLink, helpLink]
+}
+
+privacyLink = text {
+  name: "Privacy",
+  contents: "Privacy",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+termsLink = text {
+  name: "Terms",
+  contents: "Terms",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+helpLink = text {
+  name: "Help",
+  contents: "Help",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}

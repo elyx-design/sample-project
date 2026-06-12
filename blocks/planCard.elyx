@@ -1,0 +1,122 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+import "scaffold/components/statusBadge.elyx" as statusBadge
+import "scaffold/components/button.elyx" as button
+
+pub planCard_E_82fNw = frame {
+  name: "planCard",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, item-gap: 16},
+  corner-radius: tokens.borderRadiusXL,
+  padding: 18px,
+  fill: oklch(23%, 0.01, 247.8999deg),
+  children: [PlanHeader_QvgQJ1C, PlanPrice_ZJx9H3J, PlanFeatures_1JNxLt3, layer_Z]
+}
+
+PlanHeader_QvgQJ1C = frame {
+  name: "Plan Header",
+  width: 100%,
+  layout: {justify-content: .space-between, align-items: .center},
+  children: [PlanName_81UA3to, layer]
+}
+
+PlanName_81UA3to = text {
+  name: "Plan Name",
+  contents: "Team",
+  font-family: "Inter Variable",
+  font-size: 20,
+  font-style: "SemiBold",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorLight
+}
+
+layer = statusBadge.statusBadgeVariant_5 {
+  left: 176px,
+  top: 16px,
+  overrides: [set(statusBadge.ProfileBadgeLabel_fs2wPy7, "contents", "Active")]
+}
+
+PlanPrice_ZJx9H3J = text {
+  name: "Plan Price",
+  contents: "$24 per member / month",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorLightSecondary
+}
+
+PlanFeatures_1JNxLt3 = frame {
+  name: "Plan Features",
+  layout: {direction: .column, item-gap: 8},
+  children: [FeatureRow_o9Ggn3b, FeatureRow_u37z9ce, FeatureRow_v8_jXKC]
+}
+
+FeatureRow_o9Ggn3b = frame {
+  name: "Feature Row",
+  layout: {align-items: .center, item-gap: 8},
+  children: [FeatureDot_cJ3_jml, FeatureLabel_532ZQB6]
+}
+
+FeatureDot_cJ3_jml = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+
+FeatureLabel_532ZQB6 = text {
+  name: "Feature Label",
+  contents: "Unlimited projects",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorLightSecondary
+}
+
+FeatureRow_u37z9ce = frame {
+  name: "Feature Row",
+  layout: {align-items: .center, item-gap: 8},
+  children: [FeatureDot__qUChf5, FeatureLabel_UVzHWnL]
+}
+
+FeatureDot__qUChf5 = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+
+FeatureLabel_UVzHWnL = text {
+  name: "Feature Label",
+  contents: "Shared components",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorLightSecondary
+}
+
+FeatureRow_v8_jXKC = frame {
+  name: "Feature Row",
+  layout: {align-items: .center, item-gap: 8},
+  children: [FeatureDot_yv3GLSN, FeatureLabel_0yZ827Q]
+}
+
+FeatureDot_yv3GLSN = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+
+FeatureLabel_0yZ827Q = text {
+  name: "Feature Label",
+  contents: "Priority support",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorLightSecondary
+}
+
+layer_Z = button.Frame {
+  left: 145px,
+  top: 122px,
+  overrides: [set("fill[0].color", .white), set(button.Button, "contents", "Manage Plan")]
+}

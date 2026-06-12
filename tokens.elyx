@@ -1,0 +1,45 @@
+// Define shared color, typography, spacing, and radius tokens here.
+
+pub borderRadiusM = 8
+
+pub boderRadiusMax = 999
+
+pub colorPrimary = oklch(64.4059%, 0.1892, 253.8895deg)
+
+pub colorDanger = oklch(63.5877%, 0.2495, 25.7497deg)
+
+pub colorSecondary = oklch(92.2195%, 0, 0deg)
+
+pub textColorLight = oklch(99.24%, 0, 0deg)
+
+pub colorSecondaryPressed = oklch(84.52%, 0, 0deg)
+
+pub colorPrimaryPressed = oklch(57.2098%, 0.19, 256.07deg)
+
+pub colorDangerPressed = oklch(58.05%, 0.2371, 27.74deg)
+
+pub controlHeight = 32
+
+pub labelSizeM = 12
+
+pub textColorDark = oklch(21.34%, 0, 0deg)
+
+pub paddingM = 12
+
+pub colorTextFieldBorder = oklch(0%, 0, 0deg, 10%)
+
+pub textColorDarkSecondary = oklch(21.34%, 0, 0deg, 70%)
+
+pub labelSizeML = 13
+
+pub textColorLightSecondary = oklch(99.1069%, 0, 0deg, 80%)
+
+pub labelSizeXL = 24
+
+pub colorTertiary = oklch(96.19%, 0, 0deg)
+
+pub labelSizeL = 16
+
+pub borderRadiusL = 12
+
+pub borderRadiusXL = 16

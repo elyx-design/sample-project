@@ -1,0 +1,48 @@
+// Define checkbox variants and states here.
+
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+
+Frame = frame {
+  name: "Frame",
+  left: 2003px,
+  top: 1069px,
+  width: 0px,
+  height: 0px,
+  fill: .white,
+  border: oklch(84.52%, 0, 0deg)
+}
+
+local Frame_P = frame {
+  name: "Toggle",
+  left: 759px,
+  top: 674px,
+  width: 32px,
+  height: 20px,
+  layout: {justify-content: .end, align-items: .center},
+  corner-radius: tokens.boderRadiusMax,
+  padding: 3px,
+  fill: tokens.colorPrimary,
+  children: Frame_H
+}
+
+Frame_H = frame {
+  name: "Frame",
+  left: 23px,
+  top: 3px,
+  width: 14px,
+  height: 14px,
+  corner-radius: tokens.boderRadiusMax,
+  fill: .white
+}
+
+@variant(Off)
+FrameVariant_d = Frame_P {
+  left: 839px,
+  top: 674px,
+  overrides: [set("layout.justify-content", .start), set("fill[0].color", tokens.colorSecondary)]
+}
+
+@variant(Mixed)
+FrameVariant = Frame_P {left: 919px, top: 674px, overrides: [set("layout.justify-content", .center)]}

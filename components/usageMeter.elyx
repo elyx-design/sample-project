@@ -1,0 +1,62 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+
+pub usageMeter_jYcRqEA = frame {
+  name: "usageMeter",
+  left: 18px,
+  top: 81px,
+  width: 100%,
+  height: 31px,
+  layout: {direction: .column, item-gap: 8},
+  children: [UsageMeta_JeP8jbx, UsageTrack_nVG9Fte]
+}
+
+UsageMeta_JeP8jbx = frame {
+  name: "Usage Meta",
+  width: 100%,
+  layout: {justify-content: .space-between, align-items: .center},
+  children: [UsageLabel_NlsqYFA, UsageValue_SopUAjI]
+}
+
+UsageLabel_NlsqYFA = text {
+  name: "Label",
+  contents: "Label",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+UsageValue_SopUAjI = text {
+  name: "value",
+  contents: "value",
+  align: .right,
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+UsageTrack_nVG9Fte = frame {
+  name: "Usage Track",
+  width: 100%,
+  height: 8px,
+  layout: {align-items: .center},
+  corner-radius: tokens.boderRadiusMax,
+  fill: oklch(92.2195%, 0, 0deg),
+  children: UsageFill_qKQopX3
+}
+
+UsageFill_qKQopX3 = shape {
+  name: "Usage Fill",
+  width: 68%,
+  height: 8px,
+  corner-radius: tokens.boderRadiusMax,
+  type: .rect,
+  fill: tokens.colorPrimary
+}

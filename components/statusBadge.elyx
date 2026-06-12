@@ -1,0 +1,37 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+
+pub statusBadge_3ac5QoB = frame {
+  name: "statusBadge",
+  left: 461px,
+  top: 1px,
+  width: .auto,
+  height: 27px,
+  layout: {justify-content: .center, align-items: .center},
+  corner-radius: tokens.boderRadiusMax,
+  padding: [6px, 12px],
+  fill: oklch(92.8%, 0.05, 150deg),
+  children: ProfileBadgeLabel_fs2wPy7
+}
+
+ProfileBadgeLabel_fs2wPy7 = text {
+  name: "Label",
+  contents: "Label",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: oklch(34%, 0.09, 150deg)
+}
+
+@variant("statusBadge Variant")
+statusBadgeVariant_5 = statusBadge_3ac5QoB {
+  left: 461px,
+  top: 76px,
+  overrides: [
+    set("fill[0].color", oklch(99.1069%, 0, 0deg, 20%)),
+    set(ProfileBadgeLabel_fs2wPy7, "fill[0].color", tokens.textColorLight)
+  ]
+}

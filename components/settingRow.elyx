@@ -1,0 +1,47 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+import "scaffold/components/button.elyx" as button
+
+pub settingRow_HQWVNjz = frame {
+  name: "settingRow",
+  left: 20px,
+  top: 92px,
+  width: .auto,
+  height: 59px,
+  layout: {justify-content: .space-between, align-items: .center},
+  corner-radius: tokens.borderRadiusL,
+  padding: tokens.paddingM,
+  fill: tokens.colorTertiary,
+  children: [SettingCopy_xBFnq12, layer]
+}
+
+SettingCopy_xBFnq12 = frame {
+  name: "Setting Copy",
+  layout: {direction: .column, item-gap: 4},
+  children: [SettingTitle_2TQqRLX, SettingDescription_FnvoRLz]
+}
+
+SettingTitle_2TQqRLX = text {
+  name: "Label",
+  contents: "Label",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+SettingDescription_FnvoRLz = text {
+  name: "Subtitle",
+  contents: "Subtitle",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+layer = button.Frame {left: 500px, top: 105px, overrides: [set(button.Button, "contents", "Label")]}

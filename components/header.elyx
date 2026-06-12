@@ -1,0 +1,35 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+
+pub header_Pp67Y8c = frame {
+  name: "header",
+  left: 20px,
+  top: 20px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, item-gap: 8},
+  children: [Title_ZIlZq9y, Description_7ZfScLC]
+}
+
+Title_ZIlZq9y = text {
+  name: "Title",
+  contents: "Title",
+  font-family: "Inter Variable",
+  font-size: 20,
+  font-style: "SemiBold",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+Description_7ZfScLC = text {
+  name: "Subtitle",
+  contents: "Subtitle",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}

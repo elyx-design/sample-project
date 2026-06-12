@@ -1,0 +1,54 @@
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+
+pub pageTabs_e60eQaG = frame {
+  name: "pageTabs",
+  left: 40px,
+  top: 110px,
+  width: 100%,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 8},
+  corner-radius: 12px,
+  padding: 4px,
+  fill: .white,
+  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  children: [layer, ProfileTab_n, ProfileTab_O]
+}
+
+layer = ProfileTab {left: 46px, top: 23px}
+
+ProfileTab_n = ProfileTabVariant_Z {left: 66px, top: 43px, overrides: [set(ProfileTabLabel, "contents", "Access")]}
+
+ProfileTab_O = ProfileTabVariant_Z {left: 138px, top: 43px, overrides: [set(ProfileTabLabel, "contents", "Billing")]}
+
+pub ProfileTab = frame {
+  name: "Profile Tab",
+  left: 40px,
+  top: 217px,
+  width: .auto,
+  height: tokens.controlHeight,
+  layout: {justify-content: .center, align-items: .center},
+  corner-radius: tokens.borderRadiusM,
+  padding: [0px, tokens.paddingM],
+  fill: tokens.colorPrimary,
+  children: ProfileTabLabel
+}
+
+ProfileTabLabel = text {
+  name: "Profile Tab Label",
+  contents: "Profile",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorLight
+}
+
+@variant("Profile Tab Variant")
+ProfileTabVariant_Z = ProfileTab {
+  left: 154px,
+  top: 217px,
+  overrides: [set("fill[0].visible", .false), set(ProfileTabLabel, "fill[0].color", tokens.textColorDark)]
+}

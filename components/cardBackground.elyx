@@ -1,0 +1,23 @@
+import "scaffold/tokens.elyx" as tokens
+
+pub cardBackground_zXouRyz = frame {
+  name: "cardBackground",
+  left: 80px,
+  top: 467px,
+  width: 200px,
+  height: 100px,
+  layout: {direction: .column, item-gap: 20},
+  corner-radius: tokens.borderRadiusXL,
+  padding: 20px,
+  fill: .white,
+  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  shadow: {
+    drop-shadow: {
+      color: oklch(0%, 0, 0deg, 5%),
+      offset: point(0px, 5px),
+      blur-radius: 10px,
+      spread: 0px,
+      style: .smooth
+    }
+  }
+}

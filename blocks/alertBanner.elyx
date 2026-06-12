@@ -1,0 +1,80 @@
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/tokens.elyx" as tokens
+import "scaffold/components/button.elyx" as Button
+import "scaffold/components/iconButton.elyx" as IconButton
+
+pub alertBanner = frame {
+  name: "Alert Banner",
+  left: 80px,
+  top: 80px,
+  width: 100%,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 12},
+  corner-radius: 12px,
+  padding: 12px,
+  fill: oklch(97.3366%, 0.01, 238.1197deg),
+  border: oklch(64.4059%, 0.1892, 253.8895deg, 30%),
+  shadow: {
+    drop-shadow: {
+      color: oklch(0%, 0, 0deg, 5%),
+      offset: point(0px, 5px),
+      blur-radius: 10px,
+      spread: 0px,
+      style: .smooth
+    }
+  },
+  children: [statusIcon, copy, actionButton, closeButton]
+}
+
+statusIcon = IconButton.Icon {overrides: [set(IconButton.defaultsvg, "fill[0].color", tokens.colorPrimary)]}
+
+copy = frame {
+  name: "Copy",
+  width: .auto,
+  layout: {direction: .column, item-gap: 4},
+  children: [alertTitle, alertMessage]
+}
+
+alertTitle = text {
+  name: "Title",
+  contents: "Project saved",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+alertMessage = text {
+  name: "Message",
+  contents: "Your latest changes are available to everyone.",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+actionButton = Button.ButtonVariant_V {
+  overrides: [set(Button.Button, "contents", "View"), set(Button.Button, "fill[0].color", .white)]
+}
+
+closeButton = IconButton.ButtonIconMVariant_N {
+  overrides: [set(IconButton.defaultsvg, "fill[0].color", tokens.colorPrimary)]
+}
+
+@variant(Danger)
+pub dangerAlertBanner = alertBanner {
+  left: 80px,
+  top: 193.5px,
+  overrides: [
+    set("fill[0].color", oklch(96.8%, 0.0158, 30.47deg)),
+    set("border[0].color", oklch(63.5877%, 0.2495, 25.7497deg, 35%)),
+    set(closeButton.IconButton.defaultsvg, "fill[0].color", tokens.colorDanger),
+    set(actionButton, "$source", Button.ButtonVariant_T),
+    set(statusIcon.IconButton.defaultsvg, "fill[0].color", tokens.colorDanger)
+  ]
+}

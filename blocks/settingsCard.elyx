@@ -1,0 +1,125 @@
+import "design/fonts/InterVariable.ttf"
+import "design/fonts/InterVariable-Italic.ttf"
+import "scaffold/tokens.elyx" as tokens
+import "scaffold/components/button.elyx" as Button
+import "scaffold/components/checkbox.elyx" as Checkbox
+import "scaffold/components/segmentedControl.elyx" as SegmentedControl
+import "scaffold/components/textField.elyx" as TextField
+import "scaffold/components/header.elyx" as header2
+import "scaffold/components/cardBackground.elyx" as cardBackground
+
+pub cardBackground_W = cardBackground.cardBackground_zXouRyz {
+  name: "Settings Card",
+  left: 111px,
+  top: 192px,
+  overrides: [
+    insert(header, {after: .nil}),
+    insert(nameField, {after: header}),
+    insert(notificationRow, {after: nameField}),
+    insert(densityRow, {after: notificationRow}),
+    insert(actions, {after: densityRow}),
+    set("width", 100%),
+    set("height", .auto)
+  ]
+}
+
+densityRow = frame {
+  name: "Density",
+  left: 0px,
+  top: 225px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, item-gap: 8},
+  children: [densityLabel, densityControl]
+}
+
+densityLabel = text {
+  name: "Density Label",
+  contents: "Interface density",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+densityControl = SegmentedControl.Frame_U {
+  overrides: [
+    set("width", 100%),
+    set(SegmentedControl.Selected_D.Item_P, "contents", "High"),
+    set(SegmentedControl.Selected.Item_P, "contents", "Default"),
+    set(SegmentedControl.layer.Item_P, "contents", "Low")
+  ]
+}
+
+notificationRow = frame {
+  name: "Notifications",
+  left: 0px,
+  top: 174px,
+  width: 100%,
+  height: .auto,
+  layout: {justify-content: .space-between, align-items: .center},
+  children: [notificationCopy, notificationToggle]
+}
+
+notificationCopy = frame {
+  name: "Notification Copy",
+  layout: {direction: .column, item-gap: 4},
+  children: [notificationTitle, notificationText]
+}
+
+notificationTitle = text {
+  name: "Notification Title",
+  contents: "Email notifications",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+notificationText = text {
+  name: "Notification Text",
+  contents: "Receive updates about comments and mentions.",
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeM,
+  font-style: "Regular",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDarkSecondary
+}
+
+notificationToggle = Checkbox.Frame_P {}
+
+actions = frame {
+  name: "Actions",
+  left: 0px,
+  top: 314px,
+  width: 100%,
+  height: .auto,
+  layout: {justify-content: .end, item-gap: 8},
+  children: [cancelButton, saveButton]
+}
+
+cancelButton = Button.Frame {overrides: [set(Button.Button, "contents", "Cancel")]}
+
+saveButton = Button.ButtonVariant_V {overrides: [set(Button.Button, "contents", "Save changes")]}
+
+nameField = TextField.TextField {
+  left: 0px,
+  top: 115px,
+  overrides: [set("width", 100%), set(TextField.Label, "contents", "Jason Chen")]
+}
+
+header = header2.header_Pp67Y8c {
+  left: 0px,
+  top: 80px,
+  overrides: [
+    set("width", 100%),
+    set("height", .auto),
+    set(header2.Description_7ZfScLC, "contents", "Manage your profile and preferences."),
+    set(header2.Title_ZIlZq9y, "contents", "Account")
+  ]
+}

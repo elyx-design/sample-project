@@ -1,0 +1,47 @@
+import "scaffold/components/iconButton.elyx" as iconButton
+import "scaffold/tokens.elyx" as tokens
+import "design/fonts/InterVariable-Italic.ttf"
+import "design/fonts/InterVariable.ttf"
+
+pub sidebarItem_5UyrE__ = frame {
+  name: "sidebarItem",
+  left: 16px,
+  top: 453px,
+  width: .auto,
+  height: tokens.controlHeight,
+  layout: {align-items: .center, item-gap: 6},
+  corner-radius: tokens.borderRadiusM,
+  padding-left: tokens.paddingM,
+  padding-right: tokens.paddingM,
+  fill: {color: oklch(84.52%, 0, 0deg), visible: .false},
+  children: [ButtonIconM24_e0j2UAH, Overview_OasUNsl]
+}
+
+ButtonIconM24_e0j2UAH = iconButton.Icon {left: 135px, top: 535px}
+
+Overview_OasUNsl = text {
+  name: "Label",
+  contents: "Label",
+  left: 0px,
+  top: 0px,
+  height: 16px,
+  align: .left,
+  font-family: "Inter Variable",
+  font-size: tokens.labelSizeML,
+  font-style: "Medium",
+  line-height: 0,
+  letter-spacing: 0,
+  fill: tokens.textColorDark
+}
+
+@variant(Selected)
+sidebarItemVariant_Q = sidebarItem_5UyrE__ {
+  left: 16px,
+  top: 533px,
+  overrides: [
+    set("fill[0].color", tokens.colorPrimary),
+    unset("fill[0].visible"),
+    set(Overview_OasUNsl, "fill[0].color", tokens.textColorLight),
+    set(ButtonIconM24_e0j2UAH.iconButton.defaultsvg, "fill[0].color", tokens.textColorLight)
+  ]
+}
