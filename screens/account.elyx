@@ -119,7 +119,7 @@ statTile = frame {
 statValue = text {
   name: "Stat Value",
   contents: "0",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: 18,
   font-style: "SemiBold",
   fill: tokens.textColorDark
@@ -128,7 +128,7 @@ statValue = text {
 statLabel = text {
   name: "Stat Label",
   contents: "Label",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -148,7 +148,7 @@ featureDot = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse
 featureLabel = text {
   name: "Feature Label",
   contents: "Feature",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorLightSecondary
@@ -174,7 +174,7 @@ usageMeta = frame {
 usageLabel = text {
   name: "Usage Label",
   contents: "Usage",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
   fill: tokens.textColorDark
@@ -183,7 +183,7 @@ usageLabel = text {
 usageValue = text {
   name: "Usage Value",
   contents: "0%",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -220,7 +220,7 @@ activityCopy = frame {
 activityTitle = text {
   name: "Activity Title",
   contents: "Activity",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
   fill: tokens.textColorDark
@@ -229,7 +229,7 @@ activityTitle = text {
 activityTime = text {
   name: "Activity Time",
   contents: "Now",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -248,7 +248,7 @@ sectionHeader = frame {
 sectionTitle = text {
   name: "Section Title",
   contents: "Section",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: 16,
   font-style: "SemiBold",
   fill: tokens.textColorDark
@@ -257,7 +257,7 @@ sectionTitle = text {
 sectionDescription = text {
   name: "Section Description",
   contents: "Description",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -285,7 +285,7 @@ settingCopy = frame {
 settingTitle = text {
   name: "Setting Title",
   contents: "Setting",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   fill: tokens.textColorDark
@@ -294,7 +294,7 @@ settingTitle = text {
 settingDescription = text {
   name: "Setting Description",
   contents: "Description",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -314,7 +314,7 @@ settingAction = frame {
 settingActionLabel = text {
   name: "Setting Action Label",
   contents: "Manage",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
   fill: tokens.textColorDark

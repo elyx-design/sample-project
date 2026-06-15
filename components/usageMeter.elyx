@@ -20,7 +20,7 @@ UsageMeta_JeP8jbx = frame {
 UsageLabel_NlsqYFA = text {
   name: "Label",
   contents: "Label",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
   fill: tokens.textColorDark
@@ -30,7 +30,7 @@ UsageValue_SopUAjI = text {
   name: "value",
   contents: "value",
   align: .right,
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary

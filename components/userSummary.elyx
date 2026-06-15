@@ -25,7 +25,7 @@ UserCopy_NGAEIPi = frame {
 UserName_9ZA9Ann = text {
   name: "User Name",
   contents: "Jason Chen",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   fill: tokens.textColorDark
@@ -34,7 +34,7 @@ UserName_9ZA9Ann = text {
 UserEmail_Gl6zsNE = text {
   name: "User Email",
   contents: "jason@acme.design",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary

@@ -34,7 +34,7 @@ densityRow = frame {
 densityLabel = text {
   name: "Density Label",
   contents: "Interface density",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   line-height: 0,
@@ -70,7 +70,7 @@ notificationCopy = frame {
 notificationTitle = text {
   name: "Notification Title",
   contents: "Email notifications",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   line-height: 0,
@@ -81,7 +81,7 @@ notificationTitle = text {
 notificationText = text {
   name: "Notification Text",
   contents: "Receive updates about comments and mentions.",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   line-height: 0,

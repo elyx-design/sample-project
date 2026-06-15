@@ -38,7 +38,7 @@ ProfileCopy_L4BIoK0 = frame {
 ProfileName_t5aftmC = text {
   name: "Profile Name",
   contents: "Jason Chen",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeL,
   font-style: "SemiBold",
   line-height: 0,
@@ -49,7 +49,7 @@ ProfileName_t5aftmC = text {
 ProfileRole_q2YZxwP = text {
   name: "Profile Role",
   contents: "Design lead at Acme Design",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   line-height: 0,
@@ -104,7 +104,7 @@ ProfileCardHeader_J4GZIkC = frame {
 ProfileHeading_m_7qb0x = text {
   name: "Profile Heading",
   contents: "Public profile",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: 20,
   font-style: "SemiBold",
   line-height: 0,

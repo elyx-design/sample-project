@@ -23,7 +23,7 @@ Label = text {
   left: 0px,
   top: 0px,
   align: .left,
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   line-height: 0,

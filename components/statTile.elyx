@@ -16,7 +16,7 @@ pub statTile_BwT4HpE = frame {
 StatValue_PPgC1JG = text {
   name: "16",
   contents: "16",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: 18,
   font-style: "SemiBold",
   fill: tokens.textColorDark
@@ -25,7 +25,7 @@ StatValue_PPgC1JG = text {
 StatLabel_zJ4gqsc = text {
   name: "Label",
   contents: "Label",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary

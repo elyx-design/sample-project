@@ -23,7 +23,7 @@ SettingCopy_xBFnq12 = frame {
 SettingTitle_2TQqRLX = text {
   name: "Label",
   contents: "Label",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   line-height: 0,
@@ -34,7 +34,7 @@ SettingTitle_2TQqRLX = text {
 SettingDescription_FnvoRLz = text {
   name: "Subtitle",
   contents: "Subtitle",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   line-height: 0,

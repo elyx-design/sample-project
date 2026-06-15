@@ -26,7 +26,7 @@ footerLinks = frame {
 privacyLink = text {
   name: "Privacy",
   contents: "Privacy",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -35,7 +35,7 @@ privacyLink = text {
 termsLink = text {
   name: "Terms",
   contents: "Terms",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
@@ -44,7 +44,7 @@ termsLink = text {
 helpLink = text {
   name: "Help",
   contents: "Help",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary

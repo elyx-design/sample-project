@@ -36,7 +36,7 @@ pub ProfileTab = frame {
 ProfileTabLabel = text {
   name: "Profile Tab Label",
   contents: "Profile",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   fill: tokens.textColorLight

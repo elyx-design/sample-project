@@ -21,7 +21,7 @@ ActivityCopy_zRPSoiA = frame {
 ActivityTitle_9XlhOnW = text {
   name: "Event",
   contents: "Event",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   line-height: 0,
@@ -32,7 +32,7 @@ ActivityTitle_9XlhOnW = text {
 ActivityTime_dwkCnRe = text {
   name: "Date",
   contents: "Date",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   line-height: 0,

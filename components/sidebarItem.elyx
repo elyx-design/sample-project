@@ -23,7 +23,7 @@ Overview_OasUNsl = text {
   left: 0px,
   top: 0px,
   height: 16px,
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   fill: tokens.textColorDark

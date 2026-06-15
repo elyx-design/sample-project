@@ -31,7 +31,7 @@ copy = frame {
 alertTitle = text {
   name: "Title",
   contents: "Project saved",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   fill: tokens.textColorDark
@@ -40,7 +40,7 @@ alertTitle = text {
 alertMessage = text {
   name: "Message",
   contents: "Your latest changes are available to everyone.",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary

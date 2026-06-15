@@ -41,7 +41,7 @@ Item_P = text {
   left: 0px,
   top: 0px,
   align: .left,
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   line-height: 0,

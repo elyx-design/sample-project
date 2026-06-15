@@ -20,7 +20,7 @@ Button = text {
   contents: "Button",
   left: 0px,
   top: 0px,
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Medium",
   fill: tokens.textColorDark

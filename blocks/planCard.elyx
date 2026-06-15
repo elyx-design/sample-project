@@ -25,7 +25,7 @@ PlanHeader_QvgQJ1C = frame {
 PlanName_81UA3to = text {
   name: "Plan Name",
   contents: "Team",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: 20,
   font-style: "SemiBold",
   fill: tokens.textColorLight
@@ -40,7 +40,7 @@ layer = statusBadge.statusBadgeVariant_5 {
 PlanPrice_ZJx9H3J = text {
   name: "Plan Price",
   contents: "$24 per member / month",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "Regular",
   fill: tokens.textColorLightSecondary
@@ -63,7 +63,7 @@ FeatureDot_cJ3_jml = shape {name: "Feature Dot", width: 6px, height: 6px, type: 
 FeatureLabel_532ZQB6 = text {
   name: "Feature Label",
   contents: "Unlimited projects",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorLightSecondary
@@ -80,7 +80,7 @@ FeatureDot__qUChf5 = shape {name: "Feature Dot", width: 6px, height: 6px, type: 
 FeatureLabel_UVzHWnL = text {
   name: "Feature Label",
   contents: "Shared components",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorLightSecondary
@@ -97,7 +97,7 @@ FeatureDot_yv3GLSN = shape {name: "Feature Dot", width: 6px, height: 6px, type: 
 FeatureLabel_0yZ827Q = text {
   name: "Feature Label",
   contents: "Priority support",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorLightSecondary

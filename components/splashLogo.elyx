@@ -32,7 +32,7 @@ layer = iconButton.ButtonIconMVariant_3 {
 BrandName_5bh3GPf = text {
   name: "Brand Name",
   contents: "Elyx",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeXL,
   font-style: "SemiBold",
   line-height: 0,

@@ -16,7 +16,7 @@ pub statusBadge_3ac5QoB = frame {
 ProfileBadgeLabel_fs2wPy7 = text {
   name: "Label",
   contents: "Label",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Medium",
   fill: rgb(1.85%, 26.7497%, 11.23%)

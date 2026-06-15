@@ -30,7 +30,7 @@ WorkspaceMeta_rdsbtAB = frame {
 WorkspaceName_e17G8jV = text {
   name: "Workspace Name",
   contents: "Acme Design",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeML,
   font-style: "SemiBold",
   fill: tokens.textColorDark
@@ -39,7 +39,7 @@ WorkspaceName_e17G8jV = text {
 WorkspacePlan_PrRcOKW = text {
   name: "Workspace Plan",
   contents: "Team plan",
-  font-family: "Inter Variable",
+  font-family: "Inter",
   font-size: tokens.labelSizeM,
   font-style: "Regular",
   fill: tokens.textColorDarkSecondary
