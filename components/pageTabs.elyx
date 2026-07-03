@@ -6,19 +6,33 @@ pub pageTabs_e60eQaG = frame {
   top: 110px,
   width: 100%,
   height: .auto,
-  layout: {align-items: .center, item-gap: tokens.gap-m},
-  corner-radius: 12px,
-  padding: 4px,
+  layout: {align-items: .center, item-gap: tokens.spacingS},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
+  corner-radius: 12px,
+  padding: 8px,
   children: [layer, ProfileTab_n, ProfileTab_O]
 }
 
 layer = ProfileTab {left: 46px, top: 23px}
 
-ProfileTab_n = ProfileTabVariant_Z {left: 66px, top: 43px, overrides: [set(ProfileTabLabel, "contents", "Access")]}
+ProfileTab_n = ProfileTabVariant_Z {
+  left: 66px,
+  top: 43px,
 
-ProfileTab_O = ProfileTabVariant_Z {left: 138px, top: 43px, overrides: [set(ProfileTabLabel, "contents", "Billing")]}
+  ProfileTabLabel {
+    contents: "Access"
+  }
+}
+
+ProfileTab_O = ProfileTabVariant_Z {
+  left: 138px,
+  top: 43px,
+
+  ProfileTabLabel {
+    contents: "Billing"
+  }
+}
 
 pub ProfileTab = frame {
   name: "Profile Tab",
@@ -27,24 +41,28 @@ pub ProfileTab = frame {
   width: .auto,
   height: tokens.controlHeight,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusM,
-  padding: [0px, tokens.paddingM],
   fill: tokens.colorPrimary,
+  corner-radius: tokens.borderRadiusS,
+  padding: [0px, tokens.paddingM],
   children: ProfileTabLabel
 }
 
 ProfileTabLabel = text {
   name: "Profile Tab Label",
+  fill: tokens.textColorLight,
   contents: "Profile",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  fill: tokens.textColorLight
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 @variant("Profile Tab Variant")
 ProfileTabVariant_Z = ProfileTab {
   left: 154px,
   top: 217px,
-  overrides: [set("fill[0].visible", .false), set(ProfileTabLabel, "fill[0].color", tokens.textColorDark)]
+  fill[0].visible: .false,
+
+  ProfileTabLabel {
+    fill[0].color: tokens.textColorDark
+  }
 }

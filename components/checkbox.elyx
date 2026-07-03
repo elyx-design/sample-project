@@ -19,7 +19,7 @@ local Frame_P = frame {
   width: 32px,
   height: 20px,
   layout: {justify-content: .end, align-items: .center},
-  corner-radius: tokens.boder-radius-max,
+  corner-radius: tokens.borderRadiusMax,
   padding: 3px,
   fill: tokens.colorPrimary,
   children: Frame_H
@@ -31,7 +31,7 @@ Frame_H = frame {
   top: 3px,
   width: 14px,
   height: 14px,
-  corner-radius: tokens.boder-radius-max,
+  corner-radius: tokens.borderRadiusMax,
   fill: .white
 }
 

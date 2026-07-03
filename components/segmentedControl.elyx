@@ -1,6 +1,6 @@
 // Define segmented control variants and states here.
 
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub Frame_U = frame {
   name: "Segmented Control",
@@ -9,17 +9,17 @@ pub Frame_U = frame {
   width: 100%,
   height: tokens.controlHeight,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusM,
-  padding: 2px,
   fill: tokens.colorSecondary,
+  corner-radius: tokens.borderRadiusS,
+  padding: 4px,
   children: [layer, Selected, Selected_D]
 }
 
-layer = Frame_l {left: 0px, top: 10px, overrides: [set("width", 100%)]}
+layer = Frame_l {left: 0px, top: 10px, width: 100%}
 
-Selected = FrameVariant_p {left: 0px, top: 30px, overrides: [set("width", 100%)]}
+Selected = FrameVariant_p {left: 0px, top: 30px, width: 100%}
 
-Selected_D = FrameVariant_p {left: 0px, top: 30px, overrides: [set("width", 100%)]}
+Selected_D = FrameVariant_p {left: 0px, top: 30px, width: 100%}
 
 local Frame_l = frame {
   name: "Selected",
@@ -28,30 +28,31 @@ local Frame_l = frame {
   width: .auto,
   height: 28px,
   layout: {justify-content: .center, align-items: .center},
+  fill: .white,
   corner-radius: 6px,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
-  fill: .white,
   children: Item_P
 }
 
 Item_P = text {
   name: "Item",
-  contents: "Item",
   left: 0px,
   top: 0px,
-  align: .left,
-  font-family: "Inter",
+  fill: tokens.textColorDark,
+  contents: "Item",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 @variant(Inactive)
 FrameVariant_p = Frame_l {
   left: 623px,
   top: 812px,
-  overrides: [set("fill[0].visible", .false), set(Item_P, "fill[0].color", oklch(21.34%, 0, 0deg, 80%))]
+  fill[0].visible: .false,
+
+  Item_P {
+    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 80%)
+  }
 }

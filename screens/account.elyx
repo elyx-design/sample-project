@@ -1,14 +1,11 @@
 import "tokens.elyx" as tokens
 import "blocks/settingsCard.elyx" as SettingsCard
 import "components/header.elyx" as header
-import "blocks/toastStack.elyx" as ToastStack
-import "blocks/alertBanner.elyx" as alertBanner
 import "components/pageTabs.elyx" as pageTabs2
 import "blocks/profileCard.elyx" as profileCard
 import "blocks/securityCard.elyx" as securityCard
 import "blocks/sidebar.elyx" as sidebar2
 import "blocks/planCard.elyx" as planCard2
-import "blocks/usageCard.elyx" as usageCard2
 import "blocks/activityCard.elyx" as activityCard2
 
 pub account = frame {
@@ -22,7 +19,7 @@ pub account = frame {
   children: [sidebar, contentShell]
 }
 
-sidebar = sidebar2.sidebar_QjenIug {left: 0px, top: 0px, overrides: [set("width", 20%), set("height", 100%)]}
+sidebar = sidebar2.sidebar_QjenIug {left: 0px, top: 0px, width: 20%, height: 100%}
 
 contentShell = frame {
   name: "Content Shell",
@@ -30,7 +27,7 @@ contentShell = frame {
   height: 100%,
   layout: {direction: .column, item-gap: 20},
   padding: 40px,
-  children: [topBar, layer_d, mainGrid, toastPreview]
+  children: [topBar, layer_d, mainGrid]
 }
 
 topBar = frame {
@@ -43,15 +40,15 @@ topBar = frame {
 layer = header.header_Pp67Y8c {
   left: 0px,
   top: 52px,
-  overrides: [
-    set(
-      header.Description_7ZfScLC,
-      "contents",
-      "Manage profile details, workspace access, billing, and security settings."
-    ),
-    set(header.Title_ZIlZq9y, "contents", "Account"),
-    set(header.Title_ZIlZq9y, "font-size", 24)
-  ]
+
+  header.Description_7ZfScLC {
+    contents: "Manage profile details, workspace access, billing, and security settings."
+  }
+
+  header.Title_ZIlZq9y {
+    contents: "Account",
+    font-size: 24
+  }
 }
 
 layer_d = pageTabs2.pageTabs_e60eQaG {left: 426px, top: 158px}
@@ -83,75 +80,68 @@ secondaryColumn = frame {
   width: 33%,
   layout: {direction: .column, item-gap: 20},
   overflow: .visible,
-  children: [planCard, usageCard, activityCard]
+  children: [planCard, activityCard]
 }
 
 planCard = planCard2.planCard_E_82fNw {left: 0px, top: 0px}
 
-usageCard = usageCard2.usageCard_G_YRf95 {left: 0px, top: 238px}
-
 activityCard = activityCard2.activityCard_Qrr8IWU {left: 0px, top: 433px}
-
-toastPreview = ToastStack.toastStack {
-  right: 24px,
-  bottom: 24px,
-  overrides: [
-    remove(ToastStack.AlertBanner_a),
-    set("width", 400px),
-    set("ignore-stack", .true),
-    remove(ToastStack.layer, alertBanner.closeButton)
-  ]
-}
 
 statTile = frame {
   name: "Stat Tile",
   left: 1500px,
   top: 80px,
   width: 100%,
-  layout: {direction: .column, item-gap: 5},
   visible: .false,
+  layout: {direction: .column, item-gap: 5},
+  fill: rgb(96.58%, 96.58%, 96.58%),
   corner-radius: 12px,
   padding: 12px,
-  fill: rgb(96.58%, 96.58%, 96.58%),
   children: [statValue, statLabel]
 }
 
 statValue = text {
   name: "Stat Value",
+  fill: tokens.textColorDark,
   contents: "0",
-  font-family: "Inter",
   font-size: 18,
-  font-style: "SemiBold",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "SemiBold"
 }
 
 statLabel = text {
   name: "Stat Label",
+  fill: tokens.textColorDarkSecondary,
   contents: "Label",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 featureRow = frame {
   name: "Feature Row",
   left: 1500px,
   top: 180px,
-  layout: {align-items: .center, item-gap: 8},
   visible: .false,
+  layout: {align-items: .center, item-gap: 8},
   children: [featureDot, featureLabel]
 }
 
-featureDot = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+featureDot = shape {
+  name: "Feature Dot",
+  width: 6px,
+  height: 6px,
+  fill: tokens.colorPrimary,
+  type: .ellipse
+}
 
 featureLabel = text {
   name: "Feature Label",
+  fill: tokens.textColorLightSecondary,
   contents: "Feature",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorLightSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 usageMeter = frame {
@@ -159,8 +149,8 @@ usageMeter = frame {
   left: 1500px,
   top: 240px,
   width: 100%,
-  layout: {direction: .column, item-gap: 8},
   visible: .false,
+  layout: {direction: .column, item-gap: 8},
   children: [usageMeta, usageTrack]
 }
 
@@ -173,20 +163,20 @@ usageMeta = frame {
 
 usageLabel = text {
   name: "Usage Label",
+  fill: tokens.textColorDark,
   contents: "Usage",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 usageValue = text {
   name: "Usage Value",
+  fill: tokens.textColorDarkSecondary,
   contents: "0%",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 usageTrack = frame {
@@ -197,19 +187,31 @@ usageTrack = frame {
   children: usageFill
 }
 
-usageFill = shape {name: "Usage Fill", width: 50%, height: 8px, type: .rect, fill: tokens.colorPrimary}
+usageFill = shape {
+  name: "Usage Fill",
+  width: 50%,
+  height: 8px,
+  fill: tokens.colorPrimary,
+  type: .rect
+}
 
 activityRow = frame {
   name: "Activity Row",
   left: 1500px,
   top: 320px,
   width: 100%,
-  layout: {item-gap: 10},
   visible: .false,
+  layout: {item-gap: 10},
   children: [activityDot, activityCopy]
 }
 
-activityDot = shape {name: "Activity Dot", width: 8px, height: 8px, type: .ellipse, fill: tokens.colorPrimary}
+activityDot = shape {
+  name: "Activity Dot",
+  width: 8px,
+  height: 8px,
+  fill: tokens.colorPrimary,
+  type: .ellipse
+}
 
 activityCopy = frame {
   name: "Activity Copy",
@@ -219,20 +221,20 @@ activityCopy = frame {
 
 activityTitle = text {
   name: "Activity Title",
+  fill: tokens.textColorDark,
   contents: "Activity",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 activityTime = text {
   name: "Activity Time",
+  fill: tokens.textColorDarkSecondary,
   contents: "Now",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 sectionHeader = frame {
@@ -240,27 +242,27 @@ sectionHeader = frame {
   left: 1500px,
   top: 400px,
   width: 100%,
-  layout: {direction: .column, item-gap: 5},
   visible: .false,
+  layout: {direction: .column, item-gap: 5},
   children: [sectionTitle, sectionDescription]
 }
 
 sectionTitle = text {
   name: "Section Title",
+  fill: tokens.textColorDark,
   contents: "Section",
-  font-family: "Inter",
   font-size: 16,
-  font-style: "SemiBold",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "SemiBold"
 }
 
 sectionDescription = text {
   name: "Section Description",
+  fill: tokens.textColorDarkSecondary,
   contents: "Description",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 settingRow = frame {
@@ -268,11 +270,11 @@ settingRow = frame {
   left: 1500px,
   top: 480px,
   width: 100%,
-  layout: {justify-content: .space-between, align-items: .center},
   visible: .false,
+  layout: {justify-content: .space-between, align-items: .center},
+  fill: rgb(96.58%, 96.58%, 96.58%),
   corner-radius: 12px,
   padding: 12px,
-  fill: rgb(96.58%, 96.58%, 96.58%),
   children: [settingCopy, settingAction]
 }
 
@@ -284,38 +286,38 @@ settingCopy = frame {
 
 settingTitle = text {
   name: "Setting Title",
+  fill: tokens.textColorDark,
   contents: "Setting",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 settingDescription = text {
   name: "Setting Description",
+  fill: tokens.textColorDarkSecondary,
   contents: "Description",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 settingAction = frame {
   name: "Setting Action",
   height: 30px,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusM,
-  padding: [0px, 12px],
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
+  corner-radius: tokens.borderRadiusS,
+  padding: [0px, 12px],
   children: settingActionLabel
 }
 
 settingActionLabel = text {
   name: "Setting Action Label",
+  fill: tokens.textColorDark,
   contents: "Manage",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }

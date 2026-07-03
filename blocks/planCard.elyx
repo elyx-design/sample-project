@@ -9,9 +9,9 @@ pub planCard_E_82fNw = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: 16},
-  corner-radius: tokens.borderRadiusXL,
-  padding: 20px,
   fill: rgb(9.9186%, 11.53%, 13.12%),
+  corner-radius: tokens.borderRadiusL,
+  padding: 20px,
   children: [PlanHeader_QvgQJ1C, PlanPrice_ZJx9H3J, PlanFeatures_1JNxLt3, layer_Z]
 }
 
@@ -24,26 +24,29 @@ PlanHeader_QvgQJ1C = frame {
 
 PlanName_81UA3to = text {
   name: "Plan Name",
+  fill: tokens.textColorLight,
   contents: "Team",
-  font-family: "Inter",
   font-size: 20,
-  font-style: "SemiBold",
-  fill: tokens.textColorLight
+  font-family: "Inter",
+  font-style: "Bold"
 }
 
 layer = statusBadge.statusBadgeVariant_5 {
   left: 176px,
   top: 16px,
-  overrides: [set(statusBadge.ProfileBadgeLabel_fs2wPy7, "contents", "Active")]
+
+  statusBadge.ProfileBadgeLabel_fs2wPy7 {
+    contents: "Active"
+  }
 }
 
 PlanPrice_ZJx9H3J = text {
   name: "Plan Price",
+  fill: tokens.textColorLightSecondary,
   contents: "$24 per member / month",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Regular",
-  fill: tokens.textColorLightSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 PlanFeatures_1JNxLt3 = frame {
@@ -58,15 +61,21 @@ FeatureRow_o9Ggn3b = frame {
   children: [FeatureDot_cJ3_jml, FeatureLabel_532ZQB6]
 }
 
-FeatureDot_cJ3_jml = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+FeatureDot_cJ3_jml = shape {
+  name: "Feature Dot",
+  width: 6px,
+  height: 6px,
+  fill: tokens.colorPrimary,
+  type: .ellipse
+}
 
 FeatureLabel_532ZQB6 = text {
   name: "Feature Label",
+  fill: tokens.textColorLightSecondary,
   contents: "Unlimited projects",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorLightSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 FeatureRow_u37z9ce = frame {
@@ -75,15 +84,21 @@ FeatureRow_u37z9ce = frame {
   children: [FeatureDot__qUChf5, FeatureLabel_UVzHWnL]
 }
 
-FeatureDot__qUChf5 = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+FeatureDot__qUChf5 = shape {
+  name: "Feature Dot",
+  width: 6px,
+  height: 6px,
+  fill: tokens.colorPrimary,
+  type: .ellipse
+}
 
 FeatureLabel_UVzHWnL = text {
   name: "Feature Label",
+  fill: tokens.textColorLightSecondary,
   contents: "Shared components",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorLightSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 FeatureRow_v8_jXKC = frame {
@@ -92,19 +107,29 @@ FeatureRow_v8_jXKC = frame {
   children: [FeatureDot_yv3GLSN, FeatureLabel_0yZ827Q]
 }
 
-FeatureDot_yv3GLSN = shape {name: "Feature Dot", width: 6px, height: 6px, type: .ellipse, fill: tokens.colorPrimary}
+FeatureDot_yv3GLSN = shape {
+  name: "Feature Dot",
+  width: 6px,
+  height: 6px,
+  fill: tokens.colorPrimary,
+  type: .ellipse
+}
 
 FeatureLabel_0yZ827Q = text {
   name: "Feature Label",
+  fill: tokens.textColorLightSecondary,
   contents: "Priority support",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorLightSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 layer_Z = button.Frame {
   left: 145px,
   top: 122px,
-  overrides: [set("fill[0].color", .white), set(button.Button, "contents", "Manage Plan")]
+  fill[0].color: .white,
+
+  button.Button {
+    contents: "Manage Plan"
+  }
 }

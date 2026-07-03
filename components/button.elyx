@@ -8,7 +8,7 @@ pub Frame = frame {
   top: 689px,
   height: tokens.controlHeight,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusM,
+  corner-radius: tokens.borderRadiusS,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
   fill: tokens.colorSecondary,

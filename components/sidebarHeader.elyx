@@ -7,7 +7,7 @@ pub sidebarHeader_XE3kaHH = frame {
   width: .auto,
   height: .auto,
   layout: {align-items: .center, item-gap: 10},
-  corner-radius: tokens.borderRadiusL,
+  corner-radius: tokens.borderRadiusM,
   padding: tokens.paddingM,
   children: [WorkspaceMark_2CifZgS, WorkspaceMeta_rdsbtAB]
 }

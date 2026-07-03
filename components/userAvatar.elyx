@@ -8,7 +8,7 @@ pub userAvatar_mKGJ6R7 = frame {
   width: 36px,
   height: 36px,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.boder-radius-max,
+  corner-radius: tokens.borderRadiusMax,
   fill: rgb(65.32%, 82.7695%, 99.9886%),
   children: AvatarInitials_F4uGTp6
 }

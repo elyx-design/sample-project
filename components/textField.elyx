@@ -1,6 +1,6 @@
 // Define text field variants and states here.
 
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub TextField = frame {
   name: "Text Field",
@@ -9,54 +9,61 @@ pub TextField = frame {
   width: 100%,
   height: tokens.controlHeight,
   layout: {align-items: .center},
-  corner-radius: tokens.borderRadiusM,
+  fill: {linear-gradient: {angle: 0deg, stops: [stop(0%, .white), stop(100%, rgb(98%, 98%, 98%))]}},
+  border: tokens.colorTextFieldBorder,
+  shadow: {
+    inner-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 1px),
+      blur-radius: 2px,
+      spread: 0px
+    }
+  },
+  corner-radius: tokens.borderRadiusS,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
-  fill: tokens.colorTertiary,
-  border: tokens.colorTextFieldBorder,
   children: Label
 }
 
 Label = text {
   name: "Label",
-  contents: "Label",
   left: 0px,
   top: 0px,
-  align: .left,
-  font-family: "Inter",
+  fill: tokens.textColorDark,
+  contents: "Label",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 @variant(Placeholder)
 TextFieldVariant_L = TextField {
   left: 869px,
   top: 850px,
-  overrides: [set(Label, "fill[0].color", oklch(21.34%, 0, 0deg, 40%))]
+
+  Label {
+    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 40%)
+  }
 }
 
 @variant(Focussed)
 TextFieldVariant = TextField {
   left: 869px,
   top: 930px,
-  overrides: [
-    set("border[0].color", tokens.colorPrimary),
-    set("border[0].position", .center),
-    set("border[0].width", 2)
-  ]
+  border[0].color: tokens.colorPrimary,
+  border[0].position: .center,
+  border[0].width: 2
 }
 
 @variant(Error)
 Focussed = TextField {
   left: 869px,
   top: 1010px,
-  overrides: [
-    set("border[0].color", tokens.colorDanger),
-    set("border[0].position", .center),
-    set("border[0].width", 2),
-    set(Label, "fill[0].color", tokens.colorDanger)
-  ]
+  border[0].color: tokens.colorDanger,
+  border[0].position: .center,
+  border[0].width: 2,
+
+  Label {
+    fill[0].color: tokens.colorDanger
+  }
 }

@@ -8,7 +8,7 @@ pub userSummary_3nStch3 = frame {
   width: 100%,
   height: 56px,
   layout: {align-items: .center, item-gap: 10},
-  corner-radius: tokens.borderRadiusL,
+  corner-radius: tokens.borderRadiusM,
   padding: [10px, tokens.paddingM],
   fill: tokens.colorTertiary,
   children: [userAvatar_1, UserCopy_NGAEIPi]

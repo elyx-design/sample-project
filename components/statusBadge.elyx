@@ -7,7 +7,7 @@ pub statusBadge_3ac5QoB = frame {
   width: .auto,
   height: 27px,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.boder-radius-max,
+  corner-radius: tokens.borderRadiusMax,
   padding: [6px, tokens.paddingM],
   fill: rgb(81.8%, 94.6067%, 83.9155%),
   children: ProfileBadgeLabel_fs2wPy7

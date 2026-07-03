@@ -6,24 +6,24 @@ pub header_Pp67Y8c = frame {
   top: 20px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: tokens.gap-m},
+  layout: {direction: .column, item-gap: tokens.spacingS},
   children: [Title_ZIlZq9y, Description_7ZfScLC]
 }
 
 Title_ZIlZq9y = text {
   name: "Title",
+  fill: tokens.textColorDark,
   contents: "Title",
-  font-family: "Inter",
   font-size: 20,
-  font-style: "SemiBold",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Bold"
 }
 
 Description_7ZfScLC = text {
   name: "Subtitle",
+  fill: tokens.textColorDarkSecondary,
   contents: "Subtitle",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }

@@ -20,7 +20,7 @@ pub sidebar_QjenIug = frame {
 GroupedStack_flp7iRt = frame {
   name: "Grouped Stack",
   width: 100%,
-  layout: {direction: .column, item-gap: tokens.gap-m},
+  layout: {direction: .column, item-gap: tokens.spacingS},
   children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
 }
 

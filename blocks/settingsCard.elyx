@@ -1,23 +1,21 @@
-import "../tokens.elyx" as tokens
-import "../components/button.elyx" as Button
-import "../components/checkbox.elyx" as Checkbox
-import "../components/segmentedControl.elyx" as SegmentedControl
-import "../components/textField.elyx" as TextField
-import "../components/header.elyx" as header2
-import "../components/cardBackground.elyx" as cardBackground
+import "tokens.elyx" as tokens
+import "components/checkbox.elyx" as Checkbox
+import "components/segmentedControl.elyx" as SegmentedControl
+import "components/textField.elyx" as TextField
+import "components/header.elyx" as header2
+import "components/cardBackground.elyx" as cardBackground
 
 pub cardBackground_W = cardBackground.cardBackground_zXouRyz {
   name: "Settings Card",
   left: 111px,
   top: 192px,
+  width: 100%,
+  height: .auto,
   overrides: [
-    insert(header, {after: .nil}),
-    insert(nameField, {after: header}),
-    insert(notificationRow, {after: nameField}),
-    insert(densityRow, {after: notificationRow}),
-    insert(actions, {after: densityRow}),
-    set("width", 100%),
-    set("height", .auto)
+    insert(header, after = .nil),
+    insert(nameField, after = header),
+    insert(notificationRow, after = nameField),
+    insert(densityRow, after = notificationRow)
   ]
 }
 
@@ -33,22 +31,25 @@ densityRow = frame {
 
 densityLabel = text {
   name: "Density Label",
+  fill: tokens.textColorDark,
   contents: "Interface density",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 densityControl = SegmentedControl.Frame_U {
-  overrides: [
-    set("width", 100%),
-    set(SegmentedControl.Selected_D.Item_P, "contents", "High"),
-    set(SegmentedControl.Selected.Item_P, "contents", "Default"),
-    set(SegmentedControl.layer.Item_P, "contents", "Low")
-  ]
+  SegmentedControl.Selected_D.Item_P {
+    contents: "High"
+  }
+
+  SegmentedControl.Selected.Item_P {
+    contents: "Default"
+  }
+
+  SegmentedControl.layer.Item_P {
+    contents: "Low"
+  }
 }
 
 notificationRow = frame {
@@ -69,55 +70,42 @@ notificationCopy = frame {
 
 notificationTitle = text {
   name: "Notification Title",
+  fill: tokens.textColorDark,
   contents: "Email notifications",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 notificationText = text {
   name: "Notification Text",
+  fill: tokens.textColorDarkSecondary,
   contents: "Receive updates about comments and mentions.",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 notificationToggle = Checkbox.Frame_P {}
 
-actions = frame {
-  name: "Actions",
-  left: 0px,
-  top: 314px,
-  width: 100%,
-  height: .auto,
-  layout: {justify-content: .end, item-gap: 8},
-  children: [cancelButton, saveButton]
-}
-
-cancelButton = Button.Frame {overrides: [set(Button.Button, "contents", "Cancel")]}
-
-saveButton = Button.ButtonVariant_V {overrides: [set(Button.Button, "contents", "Save changes")]}
-
 nameField = TextField.TextField {
   left: 0px,
   top: 115px,
-  overrides: [set("width", 100%), set(TextField.Label, "contents", "Jason Chen")]
+
+  TextField.Label {
+    contents: "Jason Chen"
+  }
 }
 
 header = header2.header_Pp67Y8c {
   left: 0px,
   top: 80px,
-  overrides: [
-    set("width", 100%),
-    set("height", .auto),
-    set(header2.Description_7ZfScLC, "contents", "Manage your profile and preferences."),
-    set(header2.Title_ZIlZq9y, "contents", "Account")
-  ]
+
+  header2.Description_7ZfScLC {
+    contents: "Manage your profile and preferences."
+  }
+
+  header2.Title_ZIlZq9y {
+    contents: "Account"
+  }
 }

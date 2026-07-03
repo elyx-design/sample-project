@@ -8,7 +8,7 @@ pub settingRow_HQWVNjz = frame {
   width: .auto,
   height: 59px,
   layout: {justify-content: .space-between, align-items: .center},
-  corner-radius: tokens.borderRadiusL,
+  corner-radius: tokens.borderRadiusM,
   padding: tokens.paddingM,
   fill: tokens.colorTertiary,
   children: [SettingCopy_xBFnq12, layer]

@@ -9,7 +9,7 @@ pub activityCard_Qrr8IWU = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: 16},
-  corner-radius: tokens.borderRadiusXL,
+  corner-radius: tokens.borderRadiusL,
   padding: 20px,
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
