@@ -8,12 +8,12 @@ pub sidebar_QjenIug = frame {
   left: 0px,
   top: 0px,
   width: .auto,
-  height: .auto,
+  height: 100%,
   layout: {direction: .column, justify-content: .space-between},
-  border-sides: .right,
-  padding: tokens.paddingM,
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
+  border-sides: .right,
+  padding: tokens.paddingM,
   children: [GroupedStack_flp7iRt, userSummary_RP1JqZ1]
 }
 
@@ -24,7 +24,7 @@ GroupedStack_flp7iRt = frame {
   children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
 }
 
-sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {left: 0px, top: 16px, overrides: [set("width", 100%)]}
+sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {left: 0px, top: 16px, width: 100%}
 
 GroupedStack_Wkqkg47 = frame {
   name: "Grouped Stack",
@@ -42,31 +42,51 @@ GroupedStack_Wkqkg47 = frame {
 sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_5UyrE__ {
   left: 0px,
   top: 453px,
-  overrides: [set("width", 100%), set(sidebarItem.Overview_OasUNsl, "contents", "Overview")]
+  width: 100%,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Overview"
+  }
 }
 
 sidebarItem_CGF_zna = sidebarItem.sidebarItem_5UyrE__ {
   left: 20px,
   top: 473px,
-  overrides: [set("width", 100%), set(sidebarItem.Overview_OasUNsl, "contents", "Projects")]
+  width: 100%,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Projects"
+  }
 }
 
 sidebarItem_aqkFtkF = sidebarItem.sidebarItem_5UyrE__ {
   left: 40px,
   top: 493px,
-  overrides: [set("width", 100%), set(sidebarItem.Overview_OasUNsl, "contents", "Members")]
+  width: 100%,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Members"
+  }
 }
 
 sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_5UyrE__ {
   left: 60px,
   top: 513px,
-  overrides: [set("width", 100%), set(sidebarItem.Overview_OasUNsl, "contents", "Billing")]
+  width: 100%,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Billing"
+  }
 }
 
 sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
   left: 20px,
   top: 473px,
-  overrides: [set("width", 100%), set(sidebarItem.Overview_OasUNsl, "contents", "Account")]
+  width: 100%,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Account"
+  }
 }
 
 userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {left: 0px, top: 1241px}

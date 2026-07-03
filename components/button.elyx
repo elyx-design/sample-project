@@ -8,51 +8,81 @@ pub Frame = frame {
   top: 689px,
   height: tokens.controlHeight,
   layout: {justify-content: .center, align-items: .center},
+  fill: .white,
+  border: {color: tokens.colorTextFieldBorder, width: 0.5px, position: .outside},
+  shadow: {
+    drop-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 1px),
+      blur-radius: 4px,
+      spread: 0px,
+      style: .smooth
+    }
+  },
   corner-radius: tokens.borderRadiusS,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
-  fill: tokens.colorSecondary,
   children: Button
 }
 
 Button = text {
   name: "Button",
-  contents: "Button",
   left: 0px,
   top: 0px,
-  font-family: "Inter",
+  fill: tokens.textColorDark,
+  contents: "Button",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 @variant(Primary)
 ButtonVariant_V = Frame {
   left: 1072px,
   top: 689px,
-  overrides: [set("fill[0].color", tokens.colorPrimary), set(Button, "fill[0].color", tokens.textColorLight)]
+  border[0].position: .inside,
+  fill[0].color: tokens.colorPrimary,
+
+  Button {
+    fill[0].color: tokens.textColorLight
+  }
 }
 
 @variant(Danger)
 ButtonVariant_T = Frame {
   left: 1181px,
   top: 689px,
-  overrides: [set("fill[0].color", tokens.colorDanger), set(Button, "fill[0].color", tokens.textColorLight)]
+  border[0].position: .inside,
+  fill[0].color: tokens.colorDanger,
+
+  Button {
+    fill[0].color: tokens.textColorLight
+  }
 }
 
 @variant(Pressed)
-ButtonVariant_s = Frame {left: 962px, top: 769px, overrides: [set("fill[0].color", tokens.colorSecondaryPressed)]}
+ButtonVariant_s = Frame {left: 962px, top: 769px, fill[0].color: tokens.colorSecondary}
 
 @variant("Primary Pressed")
 ButtonVariant_E = Frame {
   left: 1072px,
   top: 769px,
-  overrides: [set("fill[0].color", tokens.colorPrimaryPressed), set(Button, "fill[0].color", tokens.textColorLight)]
+  border[0].position: .inside,
+  fill[0].color: tokens.colorPrimaryPressed,
+
+  Button {
+    fill[0].color: tokens.textColorLight
+  }
 }
 
 @variant("Danger Pressed")
 Danger = Frame {
   left: 1181px,
   top: 769px,
-  overrides: [set("fill[0].color", tokens.colorDangerPressed), set(Button, "fill[0].color", tokens.textColorLight)]
+  border[0].position: .inside,
+  fill[0].color: tokens.colorDangerPressed,
+
+  Button {
+    fill[0].color: tokens.textColorLight
+  }
 }

@@ -29,6 +29,16 @@ local Frame_l = frame {
   height: 28px,
   layout: {justify-content: .center, align-items: .center},
   fill: .white,
+  border: {color: tokens.colorTextFieldBorder, width: 0.5px, position: .outside},
+  shadow: {
+    drop-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 1px),
+      blur-radius: 4px,
+      spread: 0px,
+      style: .smooth
+    }
+  },
   corner-radius: 6px,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
@@ -50,8 +60,9 @@ Item_P = text {
 FrameVariant_p = Frame_l {
   left: 623px,
   top: 812px,
+  border[0].visible: .false,
   fill[0].visible: .false,
-
+  
   Item_P {
     fill[0].color: rgb(9.8%, 9.8%, 9.8%, 80%)
   }

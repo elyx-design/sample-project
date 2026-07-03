@@ -6,11 +6,11 @@ pub userSummary_3nStch3 = frame {
   left: 16px,
   top: 888px,
   width: 100%,
-  height: 56px,
-  layout: {align-items: .center, item-gap: 10},
-  corner-radius: tokens.borderRadiusM,
-  padding: [10px, tokens.paddingM],
+  height: .auto,
+  layout: {align-items: .center, item-gap: tokens.paddingM},
   fill: tokens.colorTertiary,
+  corner-radius: tokens.borderRadiusM,
+  padding: tokens.paddingM,
   children: [userAvatar_1, UserCopy_NGAEIPi]
 }
 
@@ -24,18 +24,18 @@ UserCopy_NGAEIPi = frame {
 
 UserName_9ZA9Ann = text {
   name: "User Name",
+  fill: tokens.textColorDark,
   contents: "Jason Chen",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 UserEmail_Gl6zsNE = text {
   name: "User Email",
+  fill: tokens.textColorDarkSecondary,
   contents: "jason@acme.design",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }

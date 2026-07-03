@@ -5,13 +5,13 @@ pub sidebarItem_5UyrE__ = frame {
   name: "sidebarItem",
   left: 16px,
   top: 453px,
-  width: .auto,
+  width: 100%,
   height: tokens.controlHeight,
   layout: {align-items: .center, item-gap: tokens.spacingS},
+  fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   corner-radius: tokens.borderRadiusS,
   padding-left: tokens.paddingM,
   padding-right: tokens.paddingM,
-  fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   children: [ButtonIconM24_e0j2UAH, Overview_OasUNsl]
 }
 
@@ -19,24 +19,28 @@ ButtonIconM24_e0j2UAH = iconButton.Icon {left: 135px, top: 535px}
 
 Overview_OasUNsl = text {
   name: "Label",
-  contents: "Label",
   left: 0px,
   top: 0px,
   height: 16px,
-  font-family: "Inter",
+  fill: tokens.textColorDark,
+  contents: "Label",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 @variant(Selected)
 sidebarItemVariant_Q = sidebarItem_5UyrE__ {
   left: 16px,
   top: 533px,
-  overrides: [
-    set("fill[0].color", tokens.colorPrimary),
-    unset("fill[0].visible"),
-    set(Overview_OasUNsl, "fill[0].color", tokens.textColorLight),
-    set(ButtonIconM24_e0j2UAH.iconButton.defaultsvg, "fill[0].color", tokens.textColorLight)
-  ]
+  fill[0].color: tokens.colorPrimary,
+  fill[0].visible: .nil,
+
+  Overview_OasUNsl {
+    fill[0].color: tokens.textColorLight
+  }
+
+  ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
+    fill[0].color: tokens.textColorLight
+  }
 }

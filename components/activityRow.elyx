@@ -1,4 +1,4 @@
-import "../tokens.elyx" as tokens
+import "tokens.elyx" as tokens
 
 pub activityRow_ZaTUcpO = frame {
   name: "activityRow",
@@ -6,11 +6,17 @@ pub activityRow_ZaTUcpO = frame {
   top: 81px,
   width: 100%,
   height: .auto,
-  layout: {align-items: .center, item-gap: 10},
+  layout: {align-items: .center, item-gap: tokens.spacingM},
   children: [ActivityDot_0f7NVNh, ActivityCopy_zRPSoiA]
 }
 
-ActivityDot_0f7NVNh = shape {name: "Activity Dot", width: 8px, height: 8px, type: .ellipse, fill: tokens.colorPrimary}
+ActivityDot_0f7NVNh = shape {
+  name: "Activity Dot",
+  width: 8px,
+  height: 8px,
+  fill: tokens.colorPrimary,
+  type: .ellipse
+}
 
 ActivityCopy_zRPSoiA = frame {
   name: "Activity Copy",
@@ -20,22 +26,18 @@ ActivityCopy_zRPSoiA = frame {
 
 ActivityTitle_9XlhOnW = text {
   name: "Event",
+  fill: tokens.textColorDark,
   contents: "Event",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "SemiBold"
 }
 
 ActivityTime_dwkCnRe = text {
   name: "Date",
+  fill: tokens.textColorDarkSecondary,
   contents: "Date",
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
-  font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDarkSecondary
+  font-style: "Regular"
 }

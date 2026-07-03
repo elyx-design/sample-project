@@ -5,28 +5,39 @@ pub statTile_BwT4HpE = frame {
   left: 0px,
   top: 0px,
   width: 100%,
-  height: 66px,
+  height: .auto,
   layout: {direction: .column, item-gap: 5},
+  fill: [
+    tokens.colorTertiary,
+    {
+      radial-gradient: {
+        at: point(1.1671%, -0.4195%),
+        angle: 90deg,
+        radius: 100%,
+        stops: [stop(0.83%, rgb(100%, 100%, 100%, 50%)), stop(100%, rgb(100%, 100%, 100%, 0%))]
+      }
+    }
+  ],
+  border: tokens.colorTextFieldBorder,
   corner-radius: tokens.borderRadiusM,
   padding: tokens.paddingM,
-  fill: tokens.colorTertiary,
   children: [StatValue_PPgC1JG, StatLabel_zJ4gqsc]
 }
 
 StatValue_PPgC1JG = text {
   name: "16",
+  fill: tokens.textColorDark,
   contents: "16",
+  font-size: tokens.labelSizeXL,
   font-family: "Inter",
-  font-size: 18,
-  font-style: "SemiBold",
-  fill: tokens.textColorDark
+  font-style: "SemiBold"
 }
 
 StatLabel_zJ4gqsc = text {
   name: "Label",
+  fill: tokens.textColorDarkSecondary,
   contents: "Label",
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
-  font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-style: "Regular"
 }

@@ -27,19 +27,13 @@ contentShell = frame {
   height: 100%,
   layout: {direction: .column, item-gap: 20},
   padding: 40px,
-  children: [topBar, layer_d, mainGrid]
-}
-
-topBar = frame {
-  name: "Top Bar",
-  width: 100%,
-  layout: {justify-content: .space-between, align-items: .center},
-  children: layer
+  children: [layer, layer_d, mainGrid]
 }
 
 layer = header.header_Pp67Y8c {
-  left: 0px,
-  top: 52px,
+  name: "Top Bar",
+  left: 40px,
+  top: 40px,
 
   header.Description_7ZfScLC {
     contents: "Manage profile details, workspace access, billing, and security settings."

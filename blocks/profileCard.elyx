@@ -48,7 +48,7 @@ ProfileRole_q2YZxwP = text {
   name: "Profile Role",
   fill: tokens.textColorDarkSecondary,
   contents: "Design lead at Acme Design",
-  font-size: tokens.labelSizeM,
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
   font-style: "Regular"
 }

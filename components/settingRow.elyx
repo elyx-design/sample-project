@@ -1,5 +1,5 @@
-import "../tokens.elyx" as tokens
-import "./button.elyx" as button
+import "tokens.elyx" as tokens
+import "components/button.elyx" as button
 
 pub settingRow_HQWVNjz = frame {
   name: "settingRow",
@@ -8,9 +8,9 @@ pub settingRow_HQWVNjz = frame {
   width: .auto,
   height: 59px,
   layout: {justify-content: .space-between, align-items: .center},
+  fill: tokens.colorTertiary,
   corner-radius: tokens.borderRadiusM,
   padding: tokens.paddingM,
-  fill: tokens.colorTertiary,
   children: [SettingCopy_xBFnq12, layer]
 }
 
@@ -22,24 +22,27 @@ SettingCopy_xBFnq12 = frame {
 
 SettingTitle_2TQqRLX = text {
   name: "Label",
+  fill: tokens.textColorDark,
   contents: "Label",
-  font-family: "Inter",
   font-size: tokens.labelSizeML,
-  font-style: "Medium",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 SettingDescription_FnvoRLz = text {
   name: "Subtitle",
+  fill: tokens.textColorDarkSecondary,
   contents: "Subtitle",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
-layer = button.Frame {left: 500px, top: 105px, overrides: [set(button.Button, "contents", "Label")]}
+layer = button.Frame {
+  left: 500px,
+  top: 105px,
+
+  button.Button {
+    contents: "Label"
+  }
+}

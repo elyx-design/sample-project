@@ -1,8 +1,8 @@
-import "../tokens.elyx" as tokens
-import "../components/button.elyx" as Button
-import "../components/checkbox.elyx" as Checkbox
-import "../components/textField.elyx" as TextField
-import "../components/header.elyx" as header2
+import "tokens.elyx" as tokens
+import "components/button.elyx" as Button
+import "components/checkbox.elyx" as Checkbox
+import "components/textField.elyx" as TextField
+import "components/header.elyx" as header2
 
 pub authForm = frame {
   name: "Auth Form",
@@ -10,45 +10,53 @@ pub authForm = frame {
   top: 80px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 20},
-  corner-radius: 16px,
-  padding: 20px,
+  layout: {direction: .column, item-gap: tokens.spacingXL},
   fill: .white,
-  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   shadow: {
     drop-shadow: {
-      color: oklch(0%, 0, 0deg, 5%),
+      color: rgb(0%, 0%, 0%, 5%),
       offset: point(0px, 10px),
       blur-radius: 20px,
       spread: 0px,
       style: .smooth
     }
   },
+  corner-radius: 16px,
+  padding: tokens.paddingXL,
   children: [layer_2, fields, optionsRow, submitButton]
 }
 
 layer_2 = header2.header_Pp67Y8c {
   left: 0px,
   top: 120px,
-  overrides: [
-    set(header2.Description_7ZfScLC, "contents", "Use your account to continue."),
-    set(header2.Title_ZIlZq9y, "contents", "Sign In")
-  ]
+
+  header2.Description_7ZfScLC {
+    contents: "Use your account to continue."
+  }
+
+  header2.Title_ZIlZq9y {
+    contents: "Sign In"
+  }
 }
 
 fields = frame {
   name: "Fields",
   width: 100%,
-  layout: {direction: .column, item-gap: 10},
+  layout: {direction: .column, item-gap: tokens.spacingM},
   children: [emailField, passwordField]
 }
 
 emailField = TextField.TextFieldVariant_L {
-  overrides: [set("width", 100%), set(TextField.Label, "contents", "Email address")]
+  TextField.Label {
+    contents: "Email address"
+  }
 }
 
 passwordField = TextField.TextFieldVariant_L {
-  overrides: [set("width", 100%), set(TextField.Label, "contents", "Password")]
+  TextField.Label {
+    contents: "Password"
+  }
 }
 
 optionsRow = frame {
@@ -65,13 +73,17 @@ layer = Checkbox.Frame_P {left: 127px, top: 285px}
 
 rememberLabel = text {
   name: "Remember Label",
+  fill: tokens.textColorDark,
   contents: "Remember me",
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
-  font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: tokens.textColorDark
+  font-style: "Regular"
 }
 
-submitButton = Button.ButtonVariant_V {overrides: [set("width", 100%), set(Button.Button, "contents", "Sign in")]}
+submitButton = Button.ButtonVariant_V {
+  width: 100%,
+
+  Button.Button {
+    contents: "Sign in"
+  }
+}

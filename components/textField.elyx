@@ -31,7 +31,7 @@ Label = text {
   top: 0px,
   fill: tokens.textColorDark,
   contents: "Label",
-  font-size: tokens.labelSizeM,
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
   font-style: "Regular"
 }

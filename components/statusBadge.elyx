@@ -5,29 +5,30 @@ pub statusBadge_3ac5QoB = frame {
   left: 461px,
   top: 1px,
   width: .auto,
-  height: 27px,
+  height: tokens.controlHeight,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusMax,
-  padding: [6px, tokens.paddingM],
   fill: rgb(81.8%, 94.6067%, 83.9155%),
+  corner-radius: tokens.borderRadiusMax,
+  padding: [6px, tokens.paddingL],
   children: ProfileBadgeLabel_fs2wPy7
 }
 
 ProfileBadgeLabel_fs2wPy7 = text {
   name: "Label",
+  fill: rgb(1.85%, 26.7497%, 11.23%),
   contents: "Label",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Medium",
-  fill: rgb(1.85%, 26.7497%, 11.23%)
+  font-family: "Inter",
+  font-style: "Medium"
 }
 
 @variant("statusBadge Variant")
 statusBadgeVariant_5 = statusBadge_3ac5QoB {
   left: 461px,
   top: 76px,
-  overrides: [
-    set("fill[0].color", rgb(98.82%, 98.82%, 98.82%, 20%)),
-    set(ProfileBadgeLabel_fs2wPy7, "fill[0].color", tokens.textColorLight)
-  ]
+  fill[0].color: rgb(98.82%, 98.82%, 98.82%, 20%),
+
+  ProfileBadgeLabel_fs2wPy7 {
+    fill[0].color: tokens.textColorLight
+  }
 }

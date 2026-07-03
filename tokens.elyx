@@ -28,7 +28,7 @@ pub colorTextFieldBorder = rgb(0%, 0%, 0%, 10%)
 
 pub textColorDarkSecondary = rgb(9.8%, 9.8%, 9.8%, 70%)
 
-pub labelSizeML = 13
+pub labelSizeML = 14
 
 pub textColorLightSecondary = rgb(98.82%, 98.82%, 98.82%, 80%)
 
@@ -57,3 +57,7 @@ pub spacingL = 16
 pub spacingM = 12
 
 pub paddingL = 16
+
+pub spacingXL = 20
+
+pub paddingXL = 20

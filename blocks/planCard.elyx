@@ -8,10 +8,10 @@ pub planCard_E_82fNw = frame {
   top: 0px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 16},
+  layout: {direction: .column, item-gap: tokens.spacingL},
   fill: rgb(9.9186%, 11.53%, 13.12%),
   corner-radius: tokens.borderRadiusL,
-  padding: 20px,
+  padding: tokens.paddingXL,
   children: [PlanHeader_QvgQJ1C, PlanPrice_ZJx9H3J, PlanFeatures_1JNxLt3, layer_Z]
 }
 
@@ -73,7 +73,7 @@ FeatureLabel_532ZQB6 = text {
   name: "Feature Label",
   fill: tokens.textColorLightSecondary,
   contents: "Unlimited projects",
-  font-size: tokens.labelSizeM,
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -96,7 +96,7 @@ FeatureLabel_UVzHWnL = text {
   name: "Feature Label",
   fill: tokens.textColorLightSecondary,
   contents: "Shared components",
-  font-size: tokens.labelSizeM,
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -119,7 +119,7 @@ FeatureLabel_0yZ827Q = text {
   name: "Feature Label",
   fill: tokens.textColorLightSecondary,
   contents: "Priority support",
-  font-size: tokens.labelSizeM,
+  font-size: tokens.labelSizeML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -127,7 +127,6 @@ FeatureLabel_0yZ827Q = text {
 layer_Z = button.Frame {
   left: 145px,
   top: 122px,
-  fill[0].color: .white,
 
   button.Button {
     contents: "Manage Plan"
