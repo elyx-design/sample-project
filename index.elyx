@@ -1,0 +1,23 @@
+import "tokens.elyx" as tokens
+
+Frame = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 792px,
+  height: 636px,
+  fill: .white,
+  border: rgb(80%, 80%, 80%),
+  children: WelcometotheElyx
+}
+
+WelcometotheElyx = text {
+  name: "Welcome to the Elyx ",
+  left: 0px,
+  top: 0px,
+  fill: tokens.textColorDark,
+  contents: "Welcome to the Elyx scaffold project",
+  font-size: tokens.labelSizeXL,
+  font-family: "Inter",
+  font-style: "Bold"
+}
