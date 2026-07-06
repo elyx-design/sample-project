@@ -61,7 +61,12 @@ ButtonVariant_T = Frame {
 }
 
 @variant(Pressed)
-ButtonVariant_s = Frame {left: 962px, top: 769px, fill[0].color: tokens.colorSecondary}
+ButtonVariant_s = Frame {
+  left: 962px,
+  top: 769px,
+  fill[0].color: tokens.colorSecondary,
+  shadow[0].drop-shadow.visible: .false
+}
 
 @variant("Primary Pressed")
 ButtonVariant_E = Frame {
@@ -69,6 +74,7 @@ ButtonVariant_E = Frame {
   top: 769px,
   border[0].position: .inside,
   fill[0].color: tokens.colorPrimaryPressed,
+  shadow[0].drop-shadow.visible: .false,
 
   Button {
     fill[0].color: tokens.textColorLight
@@ -81,6 +87,7 @@ Danger = Frame {
   top: 769px,
   border[0].position: .inside,
   fill[0].color: tokens.colorDangerPressed,
+  shadow[0].drop-shadow.visible: .false,
 
   Button {
     fill[0].color: tokens.textColorLight

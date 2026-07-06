@@ -8,10 +8,10 @@
   },
   "lookupPaths": {
     "fonts": [
-      "/fonts"
+      "fonts"
     ],
     "images": [
-      "/icons"
+      "icons"
     ]
   },
   "git": {

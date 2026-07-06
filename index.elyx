@@ -1,14 +1,27 @@
 import "tokens.elyx" as tokens
+import "screens/account.elyx" as account
 
 Frame = frame {
   name: "Frame",
   left: 0px,
   top: 0px,
-  width: 792px,
-  height: 636px,
+  width: 1000px,
+  height: .auto,
+  layout: {direction: .column, item-gap: tokens.spacingXL},
   fill: .white,
   border: rgb(80%, 80%, 80%),
-  children: WelcometotheElyx
+  corner-radius: tokens.borderRadiusL,
+  padding: 40px,
+  children: [GroupedStack, Asyoucanseeinth, GroupedStack_T, Alsointheproject, Finallyistheexis]
+}
+
+GroupedStack = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 8},
+  corner-radius: 0px,
+  padding: 0px,
+  children: [WelcometotheElyx, Thisdocumentcontai]
 }
 
 WelcometotheElyx = text {
@@ -21,3 +34,168 @@ WelcometotheElyx = text {
   font-family: "Inter",
   font-style: "Bold"
 }
+
+Thisdocumentcontai = text {
+  name: "This document contai",
+  left: 20px,
+  top: 20px,
+  fill: tokens.textColorDarkSecondary,
+  contents: "This document contains best practices on how to set up .elyx files within your project",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+Asyoucanseeinth = text {
+  name: "As you can see in th",
+  left: 0px,
+  top: 40px,
+  width: 100%,
+  fill: tokens.textColorDark,
+  contents: "As you can see in the project list on the left, files are organized into groups, with the most important ones being components, blocks, and screens. The three main building blocks for organizing your components.",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+GroupedStack_T = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {item-gap: 20},
+  children: [Frame_J, Frame_j, Frame_K]
+}
+
+Frame_J = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, item-gap: 10},
+  fill: rgb(96%, 96%, 96%),
+  corner-radius: tokens.borderRadiusS,
+  padding: 16px,
+  children: [Components, Componentsarethes]
+}
+
+Components = text {
+  name: "Components",
+  left: 69px,
+  top: 45px,
+  fill: rgb(40%, 40%, 40%),
+  contents: "Components",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+Componentsarethes = text {
+  name: "Components are the s",
+  left: 0px,
+  top: 65px,
+  width: 100%,
+  fill: rgb(10%, 10%, 10%),
+  contents: "Components are the smallest reusable UI pieces in the Elyx design system. Think of them like atoms. These would be UI elements such as button, text fields, badges etc.",
+  font-size: tokens.labelSizeML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+Frame_j = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, item-gap: 10},
+  fill: rgb(96%, 96%, 96%),
+  corner-radius: tokens.borderRadiusS,
+  padding: 16px,
+  children: [Blocks, Ifcomponentsareat]
+}
+
+Blocks = text {
+  name: "Blocks",
+  left: 69px,
+  top: 45px,
+  fill: rgb(40%, 40%, 40%),
+  contents: "Blocks",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+Ifcomponentsareat = text {
+  name: "If components are at",
+  left: 0px,
+  top: 71px,
+  width: 100%,
+  fill: rgb(10%, 10%, 10%),
+  contents: "If components are atoms, then blocks are like molecules. Blocks are used interface sections such as panels, menus, toasts, alerts, etc that would contain components.",
+  font-size: tokens.labelSizeML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+Frame_K = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, item-gap: 10},
+  fill: rgb(96%, 96%, 96%),
+  corner-radius: tokens.borderRadiusS,
+  padding: 16px,
+  children: [Screens, Screenswouldbethi]
+}
+
+Screens = text {
+  name: "Screens",
+  left: 69px,
+  top: 45px,
+  fill: rgb(40%, 40%, 40%),
+  contents: "Screens",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+Screenswouldbethi = text {
+  name: "Screens would be thi",
+  left: 54px,
+  top: 0px,
+  width: 100%,
+  height: .auto,
+  fill: rgb(10%, 10%, 10%),
+  contents: "Screens would be things like app windows, panels, and standalone states that represent what a user would see at one moment. Examples would be things like Log In, Dashboard, Settings, Account, etc.",
+  font-size: tokens.labelSizeML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+Alsointheproject = text {
+  name: "Also in the project ",
+  left: 20px,
+  top: 60px,
+  width: 100%,
+  fill: tokens.textColorDark,
+  contents: "Also in the project are folders for other asset types, such as images and icons. If you were to add fonts, then create a new /fonts folder.",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+Finallyistheexis = text {
+  name: "Finally, is the exis",
+  left: 20px,
+  top: 301px,
+  width: 100%,
+  fill: tokens.textColorDark,
+  contents: "Finally, is the existence of a tokens.elyx file. Properties defined here for colors and other values are referenced throughout the entire project.",
+  font-size: tokens.labelSizeL,
+  font-family: "Inter",
+  font-style: "Medium"
+}
+
+layer = account.account {left: 0px, top: 673px}

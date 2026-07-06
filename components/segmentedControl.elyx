@@ -62,6 +62,7 @@ FrameVariant_p = Frame_l {
   top: 812px,
   border[0].visible: .false,
   fill[0].visible: .false,
+  shadow[0].drop-shadow.visible: .false,
 
   Item_P {
     fill[0].color: rgb(9.8%, 9.8%, 9.8%, 80%)
