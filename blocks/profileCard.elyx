@@ -9,8 +9,6 @@ pub profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
   name: "profileCard",
   left: 0px,
   top: 0px,
-  width: 100%,
-  height: .auto,
   overrides: [
     insert(ProfileCardHeader_J4GZIkC, after = .nil),
     insert(ProfileHero__BlDB8H, after = ProfileCardHeader_J4GZIkC),
@@ -57,7 +55,7 @@ ProfileStats_uRSls4V = frame {
   name: "Profile Stats",
   top: 85px,
   width: 100%,
-  layout: {item-gap: 10},
+  layout: {item-gap: tokens.spacingM},
   children: [statTile_S, statTile_i, statTile_B]
 }
 

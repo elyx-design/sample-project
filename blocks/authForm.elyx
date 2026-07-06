@@ -22,7 +22,7 @@ pub authForm = frame {
       style: .smooth
     }
   },
-  corner-radius: 16px,
+  corner-radius: tokens.borderRadiusL,
   padding: tokens.paddingXL,
   children: [layer_2, fields, optionsRow, submitButton]
 }

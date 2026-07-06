@@ -1,4 +1,5 @@
-import "../components/listRow.elyx" as ListRow
+import "components/listRow.elyx" as ListRow
+import "tokens.elyx" as tokens
 
 pub menuList = frame {
   name: "Menu List",
@@ -7,19 +8,19 @@ pub menuList = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: 2},
-  corner-radius: 12px,
-  padding: 6px,
   fill: .white,
-  border: {color: oklch(0%, 0, 0deg, 8%), position: .outside},
+  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   shadow: {
     drop-shadow: {
-      color: oklch(0%, 0, 0deg, 5%),
+      color: rgb(0%, 0%, 0%, 5%),
       offset: point(0px, 10px),
       blur-radius: 20px,
       spread: 0px,
       style: .smooth
     }
   },
+  corner-radius: tokens.borderRadiusL,
+  padding: tokens.paddingS,
   children: [layer, Row, Row_Q, divider, Row_a]
 }
 
@@ -29,6 +30,6 @@ Row = ListRow.Row {left: 20px, top: 79px}
 
 Row_Q = ListRow.Row {left: 40px, top: 99px}
 
-divider = shape {name: "Divider", width: 100%, height: 1px, type: .rect, fill: oklch(0%, 0, 0deg, 8%)}
+divider = shape {name: "Divider", width: 100%, height: 1px, fill: rgb(0%, 0%, 0%, 8%), type: .rect}
 
 Row_a = ListRow.Row {left: 40px, top: 131px}

@@ -6,8 +6,8 @@ pub signIn = frame {
   name: "Sign In Screen",
   left: 80px,
   top: 80px,
-  width: 1024px,
-  height: 720px,
+  width: 1280px,
+  height: 960px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 28},
   fill: tokens.color-background,
   children: [splashLogo_i, authPanel, footerLinks]
@@ -15,7 +15,7 @@ pub signIn = frame {
 
 splashLogo_i = splashLogo.splashLogo_LCwhDG2 {left: 487.5px, top: 145.5px}
 
-authPanel = AuthForm.authForm {left: 0px, top: 0px, overrides: [set("width", 360px)]}
+authPanel = AuthForm.authForm {left: 0px, top: 0px, width: 360px}
 
 footerLinks = frame {
   name: "Footer Links",
@@ -25,27 +25,27 @@ footerLinks = frame {
 
 privacyLink = text {
   name: "Privacy",
+  fill: tokens.textColorDarkSecondary,
   contents: "Privacy",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 termsLink = text {
   name: "Terms",
+  fill: tokens.textColorDarkSecondary,
   contents: "Terms",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 helpLink = text {
   name: "Help",
+  fill: tokens.textColorDarkSecondary,
   contents: "Help",
-  font-family: "Inter",
   font-size: tokens.labelSizeM,
-  font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }
