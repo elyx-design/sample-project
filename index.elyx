@@ -1,17 +1,26 @@
 import "tokens.elyx" as tokens
 import "screens/account.elyx" as account
+import "blocks/profileCard.elyx" as profileCard
+import "components/button.elyx" as button
 
-Frame = frame {
-  name: "Frame",
+Welcome = frame {
+  name: "Welcome",
   left: 0px,
-  top: 0px,
-  width: 1000px,
+  top: 2px,
+  width: 1100px,
   height: .auto,
-  layout: {direction: .column, item-gap: tokens.spacingXL},
-  fill: .white,
-  border: rgb(80%, 80%, 80%),
+  layout: {direction: .column, item-gap: 24},
+  fill: rgb(99.64%, 98.67%, 94.36%),
+  shadow: {
+    drop-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 5px),
+      blur-radius: 10px,
+      spread: 0px
+    }
+  },
   corner-radius: tokens.borderRadiusL,
-  padding: 40px,
+  padding: [40px, 60px],
   children: [GroupedStack, Asyoucanseeinth, GroupedStack_T, Alsointheproject, Finallyistheexis]
 }
 
@@ -28,22 +37,22 @@ WelcometotheElyx = text {
   name: "Welcome to the Elyx ",
   left: 0px,
   top: 0px,
-  fill: tokens.textColorDark,
+  fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Welcome to the Elyx scaffold project",
-  font-size: tokens.labelSizeXL,
+  font-size: 32,
   font-family: "Inter",
-  font-style: "Bold"
+  font-style: "Regular"
 }
 
 Thisdocumentcontai = text {
   name: "This document contai",
   left: 20px,
   top: 20px,
-  fill: tokens.textColorDarkSecondary,
+  fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "This document contains best practices on how to set up .elyx files within your project",
   font-size: tokens.labelSizeL,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "Regular"
 }
 
 Asyoucanseeinth = text {
@@ -51,11 +60,11 @@ Asyoucanseeinth = text {
   left: 0px,
   top: 40px,
   width: 100%,
-  fill: tokens.textColorDark,
+  fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "As you can see in the project list on the left, files are organized into groups, with the most important ones being components, blocks, and screens. The three main building blocks for organizing your components.",
   font-size: tokens.labelSizeL,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "Regular"
 }
 
 GroupedStack_T = frame {
@@ -72,21 +81,23 @@ Frame_J = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 10},
-  fill: rgb(96%, 96%, 96%),
+  fill: rgb(99.04%, 97.86%, 88.96%),
+  border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: tokens.borderRadiusS,
   padding: 16px,
-  children: [Components, Componentsarethes]
+  children: [COMPONENTS, Componentsarethes]
 }
 
-Components = text {
-  name: "Components",
+COMPONENTS = text {
+  name: "COMPONENTS",
   left: 69px,
   top: 45px,
-  fill: rgb(40%, 40%, 40%),
-  contents: "Components",
-  font-size: tokens.labelSizeL,
+  fill: rgb(62%, 38.23%, 0%),
+  contents: "COMPONENTS",
+  font-size: 12,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "SemiBold",
+  letter-spacing: 5%
 }
 
 Componentsarethes = text {
@@ -94,7 +105,7 @@ Componentsarethes = text {
   left: 0px,
   top: 65px,
   width: 100%,
-  fill: rgb(10%, 10%, 10%),
+  fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "Components are the smallest reusable UI pieces in the Elyx design system. Think of them like atoms. These would be UI elements such as button, text fields, badges etc.",
   font-size: tokens.labelSizeML,
   font-family: "Inter",
@@ -108,21 +119,23 @@ Frame_j = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 10},
-  fill: rgb(96%, 96%, 96%),
+  fill: rgb(99.04%, 97.86%, 88.96%),
+  border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: tokens.borderRadiusS,
   padding: 16px,
-  children: [Blocks, Ifcomponentsareat]
+  children: [BLOCKS, Ifcomponentsareat]
 }
 
-Blocks = text {
-  name: "Blocks",
-  left: 69px,
-  top: 45px,
-  fill: rgb(40%, 40%, 40%),
-  contents: "Blocks",
-  font-size: tokens.labelSizeL,
+BLOCKS = text {
+  name: "BLOCKS",
+  left: 162.6667px,
+  top: -17px,
+  fill: rgb(62%, 38.23%, 0%),
+  contents: "BLOCKS",
+  font-size: 12,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "SemiBold",
+  letter-spacing: 5%
 }
 
 Ifcomponentsareat = text {
@@ -130,7 +143,7 @@ Ifcomponentsareat = text {
   left: 0px,
   top: 71px,
   width: 100%,
-  fill: rgb(10%, 10%, 10%),
+  fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "If components are atoms, then blocks are like molecules. Blocks are used interface sections such as panels, menus, toasts, alerts, etc that would contain components.",
   font-size: tokens.labelSizeML,
   font-family: "Inter",
@@ -144,21 +157,23 @@ Frame_K = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 10},
-  fill: rgb(96%, 96%, 96%),
+  fill: rgb(99.04%, 97.86%, 88.96%),
+  border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: tokens.borderRadiusS,
   padding: 16px,
-  children: [Screens, Screenswouldbethi]
+  children: [SCREENS, Screenswouldbethi]
 }
 
-Screens = text {
-  name: "Screens",
-  left: 69px,
-  top: 45px,
-  fill: rgb(40%, 40%, 40%),
-  contents: "Screens",
-  font-size: tokens.labelSizeL,
+SCREENS = text {
+  name: "SCREENS",
+  left: 162.6667px,
+  top: -25.5px,
+  fill: rgb(62%, 38.23%, 0%),
+  contents: "SCREENS",
+  font-size: 12,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "SemiBold",
+  letter-spacing: 5%
 }
 
 Screenswouldbethi = text {
@@ -167,7 +182,7 @@ Screenswouldbethi = text {
   top: 0px,
   width: 100%,
   height: .auto,
-  fill: rgb(10%, 10%, 10%),
+  fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "Screens would be things like app windows, panels, and standalone states that represent what a user would see at one moment. Examples would be things like Log In, Dashboard, Settings, Account, etc.",
   font-size: tokens.labelSizeML,
   font-family: "Inter",
@@ -179,11 +194,11 @@ Alsointheproject = text {
   left: 20px,
   top: 60px,
   width: 100%,
-  fill: tokens.textColorDark,
+  fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Also in the project are folders for other asset types, such as images and icons. If you were to add fonts, then create a new /fonts folder.",
   font-size: tokens.labelSizeL,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "Regular"
 }
 
 Finallyistheexis = text {
@@ -191,11 +206,30 @@ Finallyistheexis = text {
   left: 20px,
   top: 301px,
   width: 100%,
-  fill: tokens.textColorDark,
+  fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Finally, is the existence of a tokens.elyx file. Properties defined here for colors and other values are referenced throughout the entire project.",
   font-size: tokens.labelSizeL,
   font-family: "Inter",
-  font-style: "Medium"
+  font-style: "Regular"
 }
 
-layer = account.account {left: 0px, top: 673px}
+Screen = account.account {
+  name: "Screen",
+  doc: "A screen bringing it all together, containing both blocks and components.",
+  left: 647px,
+  top: 757px
+}
+
+Component = button.ButtonVariant_V {
+  name: "Component",
+  doc: "A simple button as a component.",
+  left: 16px,
+  top: 757px
+}
+
+Block = profileCard.profileCard_vlvneaI {
+  name: "Block",
+  doc: "A profile section as a block, containing multiple components.",
+  left: 223px,
+  top: 757px
+}

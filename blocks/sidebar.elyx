@@ -2,6 +2,11 @@ import "components/sidebarItem.elyx" as sidebarItem
 import "tokens.elyx" as tokens
 import "components/sidebarHeader.elyx" as sidebarHeader2
 import "components/userSummary.elyx" as userSummary2
+import "icons/layout-panel-top.svg" as layoutpaneltop
+import "icons/folder.svg" as folder
+import "icons/contact.svg" as contact
+import "icons/receipt-text.svg" as receipttext
+import "icons/user-round.svg" as userround
 
 pub sidebar_QjenIug = frame {
   name: "sidebar",
@@ -42,50 +47,65 @@ GroupedStack_Wkqkg47 = frame {
 sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_5UyrE__ {
   left: 0px,
   top: 453px,
-  width: 100%,
 
   sidebarItem.Overview_OasUNsl {
     contents: "Overview"
+  }
+
+  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
+    contents: layoutpaneltop
   }
 }
 
 sidebarItem_CGF_zna = sidebarItem.sidebarItem_5UyrE__ {
   left: 20px,
   top: 473px,
-  width: 100%,
 
   sidebarItem.Overview_OasUNsl {
     contents: "Projects"
+  }
+
+  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
+    contents: folder
   }
 }
 
 sidebarItem_aqkFtkF = sidebarItem.sidebarItem_5UyrE__ {
   left: 40px,
   top: 493px,
-  width: 100%,
 
   sidebarItem.Overview_OasUNsl {
     contents: "Members"
+  }
+
+  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
+    contents: contact
   }
 }
 
 sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_5UyrE__ {
   left: 60px,
   top: 513px,
-  width: 100%,
 
   sidebarItem.Overview_OasUNsl {
     contents: "Billing"
+  }
+
+  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
+    contents: receipttext
   }
 }
 
 sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
   left: 20px,
   top: 473px,
-  width: 100%,
 
   sidebarItem.Overview_OasUNsl {
     contents: "Account"
+  }
+
+  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
+    contents: userround
   }
 }
 
