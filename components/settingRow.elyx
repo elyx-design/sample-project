@@ -38,7 +38,7 @@ SettingDescription_FnvoRLz = text {
   font-style: "Regular"
 }
 
-layer = button.Frame {
+layer = button.button_43RxZnGr30 {
   left: 500px,
   top: 105px,
 

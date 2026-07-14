@@ -1,7 +1,7 @@
 import "components/listRow.elyx" as ListRow
 import "tokens.elyx" as tokens
 
-pub menuList = frame {
+pub menuList_1SbLOxYKXY = frame {
   name: "Menu List",
   left: 80px,
   top: 80px,
@@ -26,10 +26,10 @@ pub menuList = frame {
 
 layer = ListRow.RowVariant_7 {left: 0px, top: 59px}
 
-Row = ListRow.Row {left: 20px, top: 79px}
+Row = ListRow.listRow_Gz4ibpIzuN {left: 20px, top: 79px}
 
-Row_Q = ListRow.Row {left: 40px, top: 99px}
+Row_Q = ListRow.listRow_Gz4ibpIzuN {left: 40px, top: 99px}
 
 divider = shape {name: "Divider", width: 100%, height: 1px, fill: rgb(0%, 0%, 0%, 8%), type: .rect}
 
-Row_a = ListRow.Row {left: 40px, top: 131px}
+Row_a = ListRow.listRow_Gz4ibpIzuN {left: 40px, top: 131px}

@@ -14,7 +14,7 @@ pub pageTabs_e60eQaG = frame {
   children: [layer, ProfileTab_n, ProfileTab_O]
 }
 
-layer = ProfileTab {left: 46px, top: 23px}
+layer = profileTab_iALjnpOMsR {left: 46px, top: 23px}
 
 ProfileTab_n = ProfileTabVariant_Z {
   left: 66px,
@@ -34,7 +34,7 @@ ProfileTab_O = ProfileTabVariant_Z {
   }
 }
 
-pub ProfileTab = frame {
+pub profileTab_iALjnpOMsR = frame {
   name: "Profile Tab",
   left: 40px,
   top: 217px,
@@ -57,7 +57,7 @@ ProfileTabLabel = text {
 }
 
 @variant("Profile Tab Variant")
-ProfileTabVariant_Z = ProfileTab {
+ProfileTabVariant_Z = profileTab_iALjnpOMsR {
   left: 154px,
   top: 217px,
   fill[0].visible: .false,

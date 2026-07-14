@@ -3,7 +3,7 @@
 import "../tokens.elyx" as tokens
 import "./iconButton.elyx" as iconButton
 
-pub Row = frame {
+pub listRow_Gz4ibpIzuN = frame {
   name: "Row",
   left: 862px,
   top: 603px,
@@ -57,7 +57,7 @@ Item_e_O = text {
 }
 
 @variant(Selected)
-RowVariant_7 = Row {
+RowVariant_7 = listRow_Gz4ibpIzuN {
   left: 862px,
   top: 679px,
   overrides: [

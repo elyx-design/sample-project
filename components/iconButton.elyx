@@ -3,7 +3,7 @@
 import "../icons/default.svg" as default
 import "../tokens.elyx" as tokens
 
-pub Icon = frame {
+pub iconButton_gqojFFCYlK = frame {
   name: "Button Icon M (24)",
   left: 340px,
   top: 519px,
@@ -26,21 +26,21 @@ defaultsvg = icon {
 }
 
 @variant("Button Icon S (16)")
-ButtonIconMVariant_N = Icon {
+ButtonIconMVariant_N = iconButton_gqojFFCYlK {
   left: 260px,
   top: 519px,
   overrides: [set(defaultsvg, "width", 16px), set(defaultsvg, "height", 16px)]
 }
 
 @variant("Button Icon L (32)")
-ButtonIconMVariant_3 = Icon {
+ButtonIconMVariant_3 = iconButton_gqojFFCYlK {
   left: 428px,
   top: 519px,
   overrides: [set(defaultsvg, "width", 32px), set(defaultsvg, "height", 32px)]
 }
 
 @variant("Button Icon XL (48)")
-ButtonIconL32 = Icon {
+ButtonIconL32 = iconButton_gqojFFCYlK {
   left: 524px,
   top: 519px,
   overrides: [set(defaultsvg, "width", 48px), set(defaultsvg, "height", 48px)]

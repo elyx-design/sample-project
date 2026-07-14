@@ -2,7 +2,7 @@
 
 import "tokens.elyx" as tokens
 
-pub Frame_U = frame {
+pub segmentedControl_MnqIo7BFFj = frame {
   name: "Segmented Control",
   left: 623px,
   top: 656px,

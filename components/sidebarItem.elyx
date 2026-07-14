@@ -1,7 +1,7 @@
 import "components/iconButton.elyx" as iconButton
 import "tokens.elyx" as tokens
 
-pub sidebarItem_5UyrE__ = frame {
+pub sidebarItem_GirPBI3vMI = frame {
   name: "sidebarItem",
   left: 16px,
   top: 453px,
@@ -15,7 +15,7 @@ pub sidebarItem_5UyrE__ = frame {
   children: [ButtonIconM24_e0j2UAH, Overview_OasUNsl]
 }
 
-ButtonIconM24_e0j2UAH = iconButton.Icon {
+ButtonIconM24_e0j2UAH = iconButton.iconButton_gqojFFCYlK {
   left: 135px,
   top: 535px,
 
@@ -37,7 +37,7 @@ Overview_OasUNsl = text {
 }
 
 @variant(Selected)
-sidebarItemVariant_Q = sidebarItem_5UyrE__ {
+sidebarItemVariant_Q = sidebarItem_GirPBI3vMI {
   left: 16px,
   top: 533px,
   fill[0].color: tokens.colorPrimary,

@@ -5,7 +5,7 @@ import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
 import "components/cardBackground.elyx" as cardBackground
 
-pub cardBackground_W = cardBackground.cardBackground_zXouRyz {
+pub settingsCard_myBFBNhjqy = cardBackground.cardBackground_zXouRyz {
   name: "Settings Card",
   left: 111px,
   top: 192px,
@@ -38,7 +38,7 @@ densityLabel = text {
   font-style: "Medium"
 }
 
-densityControl = SegmentedControl.Frame_U {
+densityControl = SegmentedControl.segmentedControl_MnqIo7BFFj {
   SegmentedControl.Selected_D.Item_P {
     contents: "High"
   }
@@ -88,7 +88,7 @@ notificationText = text {
 
 notificationToggle = Checkbox.Frame_P {}
 
-nameField = TextField.TextField {
+nameField = TextField.textField_vGl5JUl04s {
   left: 0px,
   top: 115px,
 

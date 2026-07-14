@@ -213,7 +213,7 @@ Finallyistheexis = text {
   font-style: "Regular"
 }
 
-Screen = account.account {
+Screen = account.account_LEZl5tsouT {
   name: "Screen",
   doc: "A screen bringing it all together, containing both blocks and components.",
   left: 647px,
