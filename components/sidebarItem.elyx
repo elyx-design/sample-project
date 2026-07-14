@@ -1,7 +1,7 @@
 import "components/iconButton.elyx" as iconButton
 import "tokens.elyx" as tokens
 
-pub sidebarItem_GirPBI3vMI = frame {
+project sidebarItem_GirPBI3vMI = frame {
   name: "sidebarItem",
   left: 16px,
   top: 453px,

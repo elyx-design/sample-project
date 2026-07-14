@@ -2,7 +2,7 @@
 
 import "tokens.elyx" as tokens
 
-pub button_43RxZnGr30 = frame {
+project button_43RxZnGr30 = frame {
   name: "Button",
   left: 962px,
   top: 689px,

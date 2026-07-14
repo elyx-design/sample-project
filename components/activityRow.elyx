@@ -1,6 +1,6 @@
 import "tokens.elyx" as tokens
 
-pub activityRow_ZaTUcpO = frame {
+project activityRow_ZaTUcpO = frame {
   name: "activityRow",
   left: 18px,
   top: 81px,

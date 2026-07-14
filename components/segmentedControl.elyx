@@ -2,7 +2,7 @@
 
 import "tokens.elyx" as tokens
 
-pub segmentedControl_MnqIo7BFFj = frame {
+project segmentedControl_MnqIo7BFFj = frame {
   name: "Segmented Control",
   left: 623px,
   top: 656px,
@@ -21,7 +21,7 @@ Selected = FrameVariant_p {left: 0px, top: 30px, width: 100%}
 
 Selected_D = FrameVariant_p {left: 0px, top: 30px, width: 100%}
 
-local Frame_l = frame {
+file Frame_l = frame {
   name: "Selected",
   left: 623px,
   top: 736px,

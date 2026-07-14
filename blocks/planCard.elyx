@@ -2,7 +2,7 @@ import "tokens.elyx" as tokens
 import "components/statusBadge.elyx" as statusBadge
 import "components/button.elyx" as button
 
-pub planCard_LTK7mFiyqR = frame {
+project planCard_LTK7mFiyqR = frame {
   name: "planCard",
   left: 0px,
   top: 0px,

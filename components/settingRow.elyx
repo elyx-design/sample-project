@@ -1,7 +1,7 @@
 import "tokens.elyx" as tokens
 import "components/button.elyx" as button
 
-pub settingRow_HQWVNjz = frame {
+project settingRow_HQWVNjz = frame {
   name: "settingRow",
   left: 20px,
   top: 92px,

@@ -2,7 +2,7 @@ import "blocks/authForm.elyx" as AuthForm
 import "tokens.elyx" as tokens
 import "components/splashLogo.elyx" as splashLogo
 
-pub signIn_KSS9Sr9DMM = frame {
+project signIn_KSS9Sr9DMM = frame {
   name: "Sign In Screen",
   left: 80px,
   top: 80px,

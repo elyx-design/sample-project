@@ -3,7 +3,7 @@
 import "../tokens.elyx" as tokens
 import "./iconButton.elyx" as iconButton
 
-pub listRow_Gz4ibpIzuN = frame {
+project listRow_Gz4ibpIzuN = frame {
   name: "Row",
   left: 862px,
   top: 603px,

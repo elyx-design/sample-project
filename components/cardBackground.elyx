@@ -1,6 +1,6 @@
 import "tokens.elyx" as tokens
 
-pub cardBackground_zXouRyz = frame {
+project cardBackground_zXouRyz = frame {
   name: "cardBackground",
   left: 80px,
   top: 467px,

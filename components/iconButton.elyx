@@ -3,7 +3,7 @@
 import "../icons/default.svg" as default
 import "../tokens.elyx" as tokens
 
-pub iconButton_gqojFFCYlK = frame {
+project iconButton_gqojFFCYlK = frame {
   name: "Button Icon M (24)",
   left: 340px,
   top: 519px,

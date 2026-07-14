@@ -1,6 +1,6 @@
 import "tokens.elyx" as tokens
 
-pub pageTabs_e60eQaG = frame {
+project pageTabs_e60eQaG = frame {
   name: "pageTabs",
   left: 40px,
   top: 110px,
@@ -34,7 +34,7 @@ ProfileTab_O = ProfileTabVariant_Z {
   }
 }
 
-pub profileTab_iALjnpOMsR = frame {
+project profileTab_iALjnpOMsR = frame {
   name: "Profile Tab",
   left: 40px,
   top: 217px,

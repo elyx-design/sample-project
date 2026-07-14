@@ -5,7 +5,7 @@ import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
 import "components/cardBackground.elyx" as cardBackground
 
-pub settingsCard_myBFBNhjqy = cardBackground.cardBackground_zXouRyz {
+project settingsCard_myBFBNhjqy = cardBackground.cardBackground_zXouRyz {
   name: "Settings Card",
   left: 111px,
   top: 192px,
