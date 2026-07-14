@@ -1,6 +1,6 @@
 import "tokens.elyx" as tokens
 
-pub statTile_BwT4HpE = frame {
+project statTile_BwT4HpE = frame {
   name: "statTile",
   left: 0px,
   top: 0px,

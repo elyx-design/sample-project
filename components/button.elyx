@@ -2,7 +2,7 @@
 
 import "tokens.elyx" as tokens
 
-pub Frame = frame {
+project button_43RxZnGr30 = frame {
   name: "Button",
   left: 962px,
   top: 689px,
@@ -37,7 +37,7 @@ Button = text {
 }
 
 @variant(Primary)
-ButtonVariant_V = Frame {
+ButtonVariant_V = button_43RxZnGr30 {
   left: 1072px,
   top: 689px,
   border[0].position: .inside,
@@ -49,7 +49,7 @@ ButtonVariant_V = Frame {
 }
 
 @variant(Danger)
-ButtonVariant_T = Frame {
+ButtonVariant_T = button_43RxZnGr30 {
   left: 1181px,
   top: 689px,
   border[0].position: .inside,
@@ -61,7 +61,7 @@ ButtonVariant_T = Frame {
 }
 
 @variant(Pressed)
-ButtonVariant_s = Frame {
+ButtonVariant_s = button_43RxZnGr30 {
   left: 962px,
   top: 769px,
   fill[0].color: tokens.colorSecondary,
@@ -69,7 +69,7 @@ ButtonVariant_s = Frame {
 }
 
 @variant("Primary Pressed")
-ButtonVariant_E = Frame {
+ButtonVariant_E = button_43RxZnGr30 {
   left: 1072px,
   top: 769px,
   border[0].position: .inside,
@@ -82,7 +82,7 @@ ButtonVariant_E = Frame {
 }
 
 @variant("Danger Pressed")
-Danger = Frame {
+Danger = button_43RxZnGr30 {
   left: 1181px,
   top: 769px,
   border[0].position: .inside,

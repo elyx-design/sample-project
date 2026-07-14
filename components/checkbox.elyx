@@ -12,7 +12,7 @@ Frame = frame {
   border: rgb(79.9972%, 79.9972%, 79.9972%)
 }
 
-local Frame_P = frame {
+file Frame_P = frame {
   name: "Toggle",
   left: 759px,
   top: 674px,
@@ -43,4 +43,8 @@ FrameVariant_d = Frame_P {
 }
 
 @variant(Mixed)
-FrameVariant = Frame_P {left: 919px, top: 674px, overrides: [set("layout.justify-content", .center)]}
+FrameVariant = Frame_P {
+  left: 919px,
+  top: 674px,
+  overrides: [set("layout.justify-content", .center)]
+}

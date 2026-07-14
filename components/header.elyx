@@ -1,6 +1,6 @@
 import "tokens.elyx" as tokens
 
-pub header_Pp67Y8c = frame {
+project header_Pp67Y8c = frame {
   name: "header",
   left: 20px,
   top: 20px,

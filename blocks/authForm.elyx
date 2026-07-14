@@ -4,7 +4,7 @@ import "components/checkbox.elyx" as Checkbox
 import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
 
-pub authForm = frame {
+project authForm_3fiPvBqdA9 = frame {
   name: "Auth Form",
   left: 80px,
   top: 80px,

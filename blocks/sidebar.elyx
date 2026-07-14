@@ -8,7 +8,7 @@ import "icons/contact.svg" as contact
 import "icons/receipt-text.svg" as receipttext
 import "icons/user-round.svg" as userround
 
-pub sidebar_QjenIug = frame {
+project sidebar_QjenIug = frame {
   name: "sidebar",
   left: 0px,
   top: 0px,
@@ -44,7 +44,7 @@ GroupedStack_Wkqkg47 = frame {
   ]
 }
 
-sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_5UyrE__ {
+sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_GirPBI3vMI {
   left: 0px,
   top: 453px,
 
@@ -57,7 +57,7 @@ sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_5UyrE__ {
   }
 }
 
-sidebarItem_CGF_zna = sidebarItem.sidebarItem_5UyrE__ {
+sidebarItem_CGF_zna = sidebarItem.sidebarItem_GirPBI3vMI {
   left: 20px,
   top: 473px,
 
@@ -70,7 +70,7 @@ sidebarItem_CGF_zna = sidebarItem.sidebarItem_5UyrE__ {
   }
 }
 
-sidebarItem_aqkFtkF = sidebarItem.sidebarItem_5UyrE__ {
+sidebarItem_aqkFtkF = sidebarItem.sidebarItem_GirPBI3vMI {
   left: 40px,
   top: 493px,
 
@@ -83,7 +83,7 @@ sidebarItem_aqkFtkF = sidebarItem.sidebarItem_5UyrE__ {
   }
 }
 
-sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_5UyrE__ {
+sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_GirPBI3vMI {
   left: 60px,
   top: 513px,
 

@@ -1,7 +1,7 @@
 import "tokens.elyx" as tokens
 import "components/userAvatar.elyx" as userAvatar
 
-pub userSummary_3nStch3 = frame {
+project userSummary_3nStch3 = frame {
   name: "userSummary",
   left: 16px,
   top: 888px,

@@ -1,6 +1,6 @@
 import "tokens.elyx" as tokens
 
-pub statusBadge_3ac5QoB = frame {
+project statusBadge_3ac5QoB = frame {
   name: "statusBadge",
   left: 461px,
   top: 1px,

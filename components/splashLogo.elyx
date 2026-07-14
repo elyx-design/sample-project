@@ -1,7 +1,7 @@
 import "../tokens.elyx" as tokens
 import "./iconButton.elyx" as iconButton
 
-pub splashLogo_LCwhDG2 = frame {
+project splashLogo_LCwhDG2 = frame {
   name: "splashLogo",
   left: 487.5px,
   top: 145.5px,

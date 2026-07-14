@@ -1,7 +1,7 @@
 import "tokens.elyx" as tokens
 import "images/031.jpg" as module
 
-pub userAvatar_mKGJ6R7 = frame {
+project userAvatar_mKGJ6R7 = frame {
   name: "userAvatar",
   left: 12px,
   top: 10px,
@@ -26,7 +26,11 @@ AvatarInitials_F4uGTp6 = text {
 userAvatarVariant_A = userAvatar_mKGJ6R7 {
   left: 132px,
   top: 10px,
-  overrides: [remove(AvatarInitials_F4uGTp6), set("fill[0].image.ref", module), set("fill[0].image.sizing", .fill)]
+  overrides: [
+    remove(AvatarInitials_F4uGTp6),
+    set("fill[0].image.ref", module),
+    set("fill[0].image.sizing", .fill)
+  ]
 }
 
 @variant(userAvatarL)

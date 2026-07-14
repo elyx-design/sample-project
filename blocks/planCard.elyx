@@ -2,7 +2,7 @@ import "tokens.elyx" as tokens
 import "components/statusBadge.elyx" as statusBadge
 import "components/button.elyx" as button
 
-pub planCard_E_82fNw = frame {
+project planCard_LTK7mFiyqR = frame {
   name: "planCard",
   left: 0px,
   top: 0px,
@@ -124,7 +124,7 @@ FeatureLabel_0yZ827Q = text {
   font-style: "Regular"
 }
 
-layer_Z = button.Frame {
+layer_Z = button.button_43RxZnGr30 {
   left: 145px,
   top: 122px,
 

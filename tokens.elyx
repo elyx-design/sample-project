@@ -1,63 +1,63 @@
 // Define shared color, typography, spacing, and radius tokens here.
 
-pub borderRadiusM = 12
+project borderRadiusM = 12
 
-pub colorPrimary = rgb(12.9363%, 55.29%, 98.8257%)
+project colorPrimary = rgb(12.9363%, 55.29%, 98.8257%)
 
-pub colorDanger = rgb(100%, 10.15%, 17.63%)
+project colorDanger = rgb(100%, 10.15%, 17.63%)
 
-pub colorSecondary = rgb(89.84%, 89.84%, 89.84%)
+project colorSecondary = rgb(89.84%, 89.84%, 89.84%)
 
-pub textColorLight = rgb(98.9987%, 98.9987%, 98.9987%)
+project textColorLight = rgb(98.9987%, 98.9987%, 98.9987%)
 
-pub colorSecondaryPressed = rgb(79.9972%, 79.9972%, 79.9972%)
+project colorSecondaryPressed = rgb(79.9972%, 79.9972%, 79.9972%)
 
-pub colorPrimaryPressed = rgb(5.1197%, 45.6183%, 89.5294%)
+project colorPrimaryPressed = rgb(5.1197%, 45.6183%, 89.5294%)
 
-pub colorDangerPressed = rgb(90%, 0%, 7.4893%)
+project colorDangerPressed = rgb(90%, 0%, 7.4893%)
 
-pub controlHeight = 36
+project controlHeight = 36
 
-pub labelSizeM = 12
+project labelSizeM = 12
 
-pub textColorDark = rgb(9.8%, 9.8%, 9.8%)
+project textColorDark = rgb(9.8%, 9.8%, 9.8%)
 
-pub paddingM = 12
+project paddingM = 12
 
-pub colorTextFieldBorder = rgb(0%, 0%, 0%, 10%)
+project colorTextFieldBorder = rgb(0%, 0%, 0%, 10%)
 
-pub textColorDarkSecondary = rgb(9.8%, 9.8%, 9.8%, 70%)
+project textColorDarkSecondary = rgb(9.8%, 9.8%, 9.8%, 70%)
 
-pub labelSizeML = 14
+project labelSizeML = 14
 
-pub textColorLightSecondary = rgb(98.82%, 98.82%, 98.82%, 80%)
+project textColorLightSecondary = rgb(98.82%, 98.82%, 98.82%, 80%)
 
-pub labelSizeXL = 24
+project labelSizeXL = 24
 
-pub colorTertiary = rgb(94.9997%, 94.9997%, 94.9997%)
+project colorTertiary = rgb(94.9997%, 94.9997%, 94.9997%)
 
-pub labelSizeL = 16
+project labelSizeL = 16
 
-pub borderRadiusL = 16
+project borderRadiusL = 16
 
-pub color-background = rgb(95.8%, 97%, 98.2%)
+project color-background = rgb(95.8%, 97%, 98.2%)
 
-pub borderRadiusMax = 999
+project borderRadiusMax = 999
 
-pub spacingS = 8
+project spacingS = 8
 
-pub borderRadiusS = 8
+project borderRadiusS = 8
 
-pub colorSurface = .white
+project colorSurface = .white
 
-pub paddingS = 8
+project paddingS = 8
 
-pub spacingL = 16
+project spacingL = 16
 
-pub spacingM = 12
+project spacingM = 12
 
-pub paddingL = 16
+project paddingL = 16
 
-pub spacingXL = 20
+project spacingXL = 20
 
-pub paddingXL = 20
+project paddingXL = 20

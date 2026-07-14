@@ -2,7 +2,7 @@
 
 import "tokens.elyx" as tokens
 
-pub TextField = frame {
+project textField_vGl5JUl04s = frame {
   name: "Text Field",
   left: 869px,
   top: 770px,
@@ -37,7 +37,7 @@ Label = text {
 }
 
 @variant(Placeholder)
-TextFieldVariant_L = TextField {
+TextFieldVariant_L = textField_vGl5JUl04s {
   left: 869px,
   top: 850px,
 
@@ -47,7 +47,7 @@ TextFieldVariant_L = TextField {
 }
 
 @variant(Focussed)
-TextFieldVariant = TextField {
+TextFieldVariant = textField_vGl5JUl04s {
   left: 869px,
   top: 930px,
   border[0].color: tokens.colorPrimary,
@@ -56,7 +56,7 @@ TextFieldVariant = TextField {
 }
 
 @variant(Error)
-Focussed = TextField {
+Focussed = textField_vGl5JUl04s {
   left: 869px,
   top: 1010px,
   border[0].color: tokens.colorDanger,
