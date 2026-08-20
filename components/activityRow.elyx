@@ -1,12 +1,14 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
 
-project activityRow_ZaTUcpO = frame {
+export activityRow_ZaTUcpO = frame {
   name: "activityRow",
   left: 18px,
   top: 81px,
   width: 100%,
   height: .auto,
-  layout: {align-items: .center, item-gap: tokens.spacingM},
+  layout: {align-items: .center, item-gap: Spacing.spacing.m},
   children: [ActivityDot_0f7NVNh, ActivityCopy_zRPSoiA]
 }
 
@@ -14,7 +16,7 @@ ActivityDot_0f7NVNh = shape {
   name: "Activity Dot",
   width: 8px,
   height: 8px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .ellipse
 }
 
@@ -26,18 +28,18 @@ ActivityCopy_zRPSoiA = frame {
 
 ActivityTitle_9XlhOnW = text {
   name: "Event",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Event",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "SemiBold"
 }
 
 ActivityTime_dwkCnRe = text {
   name: "Date",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Date",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }

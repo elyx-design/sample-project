@@ -1,14 +1,17 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-project sidebarHeader_XE3kaHH = frame {
+export sidebarHeader_XE3kaHH = frame {
   name: "sidebarHeader",
   left: 16px,
   top: 16px,
   width: .auto,
   height: .auto,
   layout: {align-items: .center, item-gap: 10},
-  corner-radius: tokens.borderRadiusM,
-  padding: tokens.paddingM,
+  corner-radius: Radius.radius.m,
+  padding: Spacing.spacing.paddingM,
   children: [WorkspaceMark_2CifZgS, WorkspaceMeta_rdsbtAB]
 }
 
@@ -18,7 +21,7 @@ WorkspaceMark_2CifZgS = shape {
   height: 32px,
   corner-radius: 9px,
   type: .rect,
-  fill: tokens.colorPrimary
+  fill: Colors.colors.primary
 }
 
 WorkspaceMeta_rdsbtAB = frame {
@@ -31,16 +34,16 @@ WorkspaceName_e17G8jV = text {
   name: "Workspace Name",
   contents: "Acme Design",
   font-family: "Inter",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-style: "SemiBold",
-  fill: tokens.textColorDark
+  fill: Colors.colors.textDark
 }
 
 WorkspacePlan_PrRcOKW = text {
   name: "Workspace Plan",
   contents: "Team plan",
   font-family: "Inter",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-style: "Regular",
-  fill: tokens.textColorDarkSecondary
+  fill: Colors.colors.textDarkSecondary
 }

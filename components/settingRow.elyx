@@ -1,16 +1,19 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 
-project settingRow_HQWVNjz = frame {
+export settingRow_HQWVNjz = frame {
   name: "settingRow",
   left: 20px,
   top: 92px,
   width: .auto,
   height: 59px,
   layout: {justify-content: .space-between, align-items: .center},
-  fill: tokens.colorTertiary,
-  corner-radius: tokens.borderRadiusM,
-  padding: tokens.paddingM,
+  fill: Colors.colors.tertiary,
+  corner-radius: Radius.radius.m,
+  padding: Spacing.spacing.paddingM,
   children: [SettingCopy_xBFnq12, layer]
 }
 
@@ -22,18 +25,18 @@ SettingCopy_xBFnq12 = frame {
 
 SettingTitle_2TQqRLX = text {
   name: "Label",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Label",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
 
 SettingDescription_FnvoRLz = text {
   name: "Subtitle",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Subtitle",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }

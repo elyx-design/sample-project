@@ -1,18 +1,20 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
 
-project header_Pp67Y8c = frame {
+export header_Pp67Y8c = frame {
   name: "header",
   left: 20px,
   top: 20px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: tokens.spacingS},
+  layout: {direction: .column, item-gap: Spacing.spacing.s},
   children: [Title_ZIlZq9y, Description_7ZfScLC]
 }
 
 Title_ZIlZq9y = text {
   name: "Title",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Title",
   font-size: 20,
   font-family: "Inter",
@@ -21,9 +23,9 @@ Title_ZIlZq9y = text {
 
 Description_7ZfScLC = text {
   name: "Subtitle",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Subtitle",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }

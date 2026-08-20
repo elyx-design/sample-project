@@ -1,15 +1,16 @@
 import "blocks/authForm.elyx" as AuthForm
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
 import "components/splashLogo.elyx" as splashLogo
 
-project signIn_KSS9Sr9DMM = frame {
+export signIn_KSS9Sr9DMM = frame {
   name: "Sign In Screen",
   left: 80px,
   top: 80px,
   width: 1280px,
   height: 960px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 28},
-  fill: tokens.color-background,
+  fill: Colors.colors.background,
   children: [splashLogo_i, authPanel, footerLinks]
 }
 
@@ -25,27 +26,27 @@ footerLinks = frame {
 
 privacyLink = text {
   name: "Privacy",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Privacy",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
 
 termsLink = text {
   name: "Terms",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Terms",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
 
 helpLink = text {
   name: "Help",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Help",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }

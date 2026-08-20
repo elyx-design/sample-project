@@ -1,11 +1,12 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
 import "components/checkbox.elyx" as Checkbox
 import "components/segmentedControl.elyx" as SegmentedControl
 import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
 import "components/cardBackground.elyx" as cardBackground
 
-project settingsCard_myBFBNhjqy = cardBackground.cardBackground_zXouRyz {
+export settingsCard_myBFBNhjqy = cardBackground.cardBackground_zXouRyz {
   name: "Settings Card",
   left: 111px,
   top: 192px,
@@ -31,9 +32,9 @@ densityRow = frame {
 
 densityLabel = text {
   name: "Density Label",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Interface density",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
@@ -70,18 +71,18 @@ notificationCopy = frame {
 
 notificationTitle = text {
   name: "Notification Title",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Email notifications",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
 
 notificationText = text {
   name: "Notification Text",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Receive updates about comments and mentions.",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }

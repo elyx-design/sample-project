@@ -1,16 +1,18 @@
 // Define segmented control variants and states here.
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-import "tokens.elyx" as tokens
-
-project segmentedControl_MnqIo7BFFj = frame {
+export segmentedControl_MnqIo7BFFj = frame {
   name: "Segmented Control",
   left: 623px,
   top: 656px,
   width: 100%,
-  height: tokens.controlHeight,
+  height: Spacing.spacing.controlHeight,
   layout: {justify-content: .center, align-items: .center},
-  fill: tokens.colorSecondary,
-  corner-radius: tokens.borderRadiusS,
+  fill: Colors.colors.secondary,
+  corner-radius: Radius.radius.s,
   padding: 4px,
   children: [layer, Selected, Selected_D]
 }
@@ -21,7 +23,7 @@ Selected = FrameVariant_p {left: 0px, top: 30px, width: 100%}
 
 Selected_D = FrameVariant_p {left: 0px, top: 30px, width: 100%}
 
-file Frame_l = frame {
+export Frame_l = frame {
   name: "Selected",
   left: 623px,
   top: 736px,
@@ -29,7 +31,7 @@ file Frame_l = frame {
   height: 28px,
   layout: {justify-content: .center, align-items: .center},
   fill: .white,
-  border: {color: tokens.colorTextFieldBorder, width: 0.5px, position: .outside},
+  border: {color: Colors.colors.textFieldBorder, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
       color: rgb(0%, 0%, 0%, 10%),
@@ -40,8 +42,8 @@ file Frame_l = frame {
     }
   },
   corner-radius: 6px,
-  padding-left: tokens.paddingM,
-  padding-right: tokens.paddingM,
+  padding-left: Spacing.spacing.paddingM,
+  padding-right: Spacing.spacing.paddingM,
   children: Item_P
 }
 
@@ -49,9 +51,9 @@ Item_P = text {
   name: "Item",
   left: 0px,
   top: 0px,
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Item",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }

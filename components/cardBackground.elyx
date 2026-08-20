@@ -1,6 +1,7 @@
-import "tokens.elyx" as tokens
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-project cardBackground_zXouRyz = frame {
+export cardBackground_zXouRyz = frame {
   name: "cardBackground",
   left: 80px,
   top: 467px,
@@ -8,9 +9,9 @@ project cardBackground_zXouRyz = frame {
   height: .auto,
   min-width: 100px,
   min-height: 60px,
-  layout: {direction: .column, item-gap: tokens.paddingXL},
+  layout: {direction: .column, item-gap: Spacing.spacing.paddingXL},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  corner-radius: tokens.borderRadiusL,
-  padding: tokens.spacingXL
+  corner-radius: Radius.radius.l,
+  padding: Spacing.spacing.xl
 }

@@ -20,7 +20,7 @@ similar pieces.
 ## Best Practices
 
 - Keep one primary reusable component per file when practical.
-- Import shared values from `tokens.elyx` instead of hard-coding repeated
+- Import shared values from `tokens/` instead of hard-coding repeated
   colors, spacing, typography, or radii.
 - Expose intended reuse with `pub`; keep helper layers private unless another
   file needs to import them.

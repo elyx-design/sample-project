@@ -1,9 +1,8 @@
 // Define icon-only button variants and states here.
-
 import "../icons/default.svg" as default
-import "../tokens.elyx" as tokens
+import "../tokens/colors.elyx" as Colors
 
-project iconButton_gqojFFCYlK = frame {
+export iconButton_gqojFFCYlK = frame {
   name: "Button Icon M (24)",
   left: 340px,
   top: 519px,
@@ -22,7 +21,7 @@ defaultsvg = icon {
   top: -1.2357px,
   width: 24px,
   height: 24px,
-  fill: tokens.textColorDark
+  fill: Colors.colors.textDark
 }
 
 @variant("Button Icon S (16)")

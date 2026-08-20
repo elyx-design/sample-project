@@ -1,15 +1,17 @@
 // Define button variants and states here.
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-import "tokens.elyx" as tokens
-
-project button_43RxZnGr30 = frame {
+export button_43RxZnGr30 = frame {
   name: "Button",
   left: 962px,
   top: 689px,
-  height: tokens.controlHeight,
+  height: Spacing.spacing.controlHeight,
   layout: {justify-content: .center, align-items: .center},
   fill: .white,
-  border: {color: tokens.colorTextFieldBorder, width: 0.5px, position: .outside},
+  border: {color: Colors.colors.textFieldBorder, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
       color: rgb(0%, 0%, 0%, 10%),
@@ -19,9 +21,9 @@ project button_43RxZnGr30 = frame {
       style: .smooth
     }
   },
-  corner-radius: tokens.borderRadiusS,
-  padding-left: tokens.paddingM,
-  padding-right: tokens.paddingM,
+  corner-radius: Radius.radius.s,
+  padding-left: Spacing.spacing.paddingM,
+  padding-right: Spacing.spacing.paddingM,
   children: Button
 }
 
@@ -29,9 +31,9 @@ Button = text {
   name: "Button",
   left: 0px,
   top: 0px,
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Button",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
@@ -41,10 +43,10 @@ ButtonVariant_V = button_43RxZnGr30 {
   left: 1072px,
   top: 689px,
   border[0].position: .inside,
-  fill[0].color: tokens.colorPrimary,
+  fill[0].color: Colors.colors.primary,
 
   Button {
-    fill[0].color: tokens.textColorLight
+    fill[0].color: Colors.colors.textLight
   }
 }
 
@@ -53,10 +55,10 @@ ButtonVariant_T = button_43RxZnGr30 {
   left: 1181px,
   top: 689px,
   border[0].position: .inside,
-  fill[0].color: tokens.colorDanger,
+  fill[0].color: Colors.colors.danger,
 
   Button {
-    fill[0].color: tokens.textColorLight
+    fill[0].color: Colors.colors.textLight
   }
 }
 
@@ -64,7 +66,7 @@ ButtonVariant_T = button_43RxZnGr30 {
 ButtonVariant_s = button_43RxZnGr30 {
   left: 962px,
   top: 769px,
-  fill[0].color: tokens.colorSecondary,
+  fill[0].color: Colors.colors.secondary,
   shadow[0].drop-shadow.visible: .false
 }
 
@@ -73,11 +75,11 @@ ButtonVariant_E = button_43RxZnGr30 {
   left: 1072px,
   top: 769px,
   border[0].position: .inside,
-  fill[0].color: tokens.colorPrimaryPressed,
+  fill[0].color: Colors.colors.primaryPressed,
   shadow[0].drop-shadow.visible: .false,
 
   Button {
-    fill[0].color: tokens.textColorLight
+    fill[0].color: Colors.colors.textLight
   }
 }
 
@@ -86,10 +88,10 @@ Danger = button_43RxZnGr30 {
   left: 1181px,
   top: 769px,
   border[0].position: .inside,
-  fill[0].color: tokens.colorDangerPressed,
+  fill[0].color: Colors.colors.dangerPressed,
   shadow[0].drop-shadow.visible: .false,
 
   Button {
-    fill[0].color: tokens.textColorLight
+    fill[0].color: Colors.colors.textLight
   }
 }

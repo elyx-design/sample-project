@@ -1,14 +1,16 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/radius.elyx" as Radius
 import "images/031.jpg" as module
 
-project userAvatar_mKGJ6R7 = frame {
+export userAvatar_mKGJ6R7 = frame {
   name: "userAvatar",
   left: 12px,
   top: 10px,
   width: 36px,
   height: 36px,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusMax,
+  corner-radius: Radius.radius.max,
   fill: rgb(65.32%, 82.7695%, 99.9886%),
   children: AvatarInitials_F4uGTp6
 }
@@ -17,9 +19,9 @@ AvatarInitials_F4uGTp6 = text {
   name: "Avatar Initials",
   contents: "JC",
   font-family: "Inter",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-style: "SemiBold",
-  fill: tokens.textColorDark
+  fill: Colors.colors.textDark
 }
 
 @variant(PhotoM)
@@ -53,7 +55,7 @@ LargeAvatarInitials_MsmHoiQ = text {
   font-family: "Inter",
   font-size: 22,
   font-style: "SemiBold",
-  fill: tokens.textColorDark
+  fill: Colors.colors.textDark
 }
 
 @variant(PhotoL)

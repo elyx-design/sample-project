@@ -1,7 +1,8 @@
 import "components/listRow.elyx" as ListRow
-import "tokens.elyx" as tokens
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-project menuList_1SbLOxYKXY = frame {
+export menuList_1SbLOxYKXY = frame {
   name: "Menu List",
   left: 80px,
   top: 80px,
@@ -19,8 +20,8 @@ project menuList_1SbLOxYKXY = frame {
       style: .smooth
     }
   },
-  corner-radius: tokens.borderRadiusL,
-  padding: tokens.paddingS,
+  corner-radius: Radius.radius.l,
+  padding: Spacing.spacing.paddingS,
   children: [layer, Row, Row_Q, divider, Row_a]
 }
 
