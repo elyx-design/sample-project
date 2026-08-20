@@ -1,16 +1,19 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-project pageTabs_e60eQaG = frame {
+export pageTabs_e60eQaG = frame {
   name: "pageTabs",
   left: 40px,
   top: 110px,
   width: 100%,
   height: .auto,
-  layout: {align-items: .center, item-gap: tokens.spacingS},
+  layout: {align-items: .center, item-gap: Spacing.spacing.s},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   corner-radius: 12px,
-  padding: tokens.paddingS,
+  padding: Spacing.spacing.paddingS,
   children: [layer, ProfileTab_n, ProfileTab_O]
 }
 
@@ -34,24 +37,24 @@ ProfileTab_O = ProfileTabVariant_Z {
   }
 }
 
-project profileTab_iALjnpOMsR = frame {
+export profileTab_iALjnpOMsR = frame {
   name: "Profile Tab",
   left: 40px,
   top: 217px,
   width: .auto,
-  height: tokens.controlHeight,
+  height: Spacing.spacing.controlHeight,
   layout: {justify-content: .center, align-items: .center},
-  fill: tokens.colorPrimary,
-  corner-radius: tokens.borderRadiusS,
-  padding: [0px, tokens.paddingM],
+  fill: Colors.colors.primary,
+  corner-radius: Radius.radius.s,
+  padding: [0px, Spacing.spacing.paddingM],
   children: ProfileTabLabel
 }
 
 ProfileTabLabel = text {
   name: "Profile Tab Label",
-  fill: tokens.textColorLight,
+  fill: Colors.colors.textLight,
   contents: "Profile",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
@@ -63,6 +66,6 @@ ProfileTabVariant_Z = profileTab_iALjnpOMsR {
   fill[0].visible: .false,
 
   ProfileTabLabel {
-    fill[0].color: tokens.textColorDark
+    fill[0].color: Colors.colors.textDark
   }
 }

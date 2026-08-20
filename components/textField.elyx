@@ -1,16 +1,18 @@
 // Define text field variants and states here.
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-import "tokens.elyx" as tokens
-
-project textField_vGl5JUl04s = frame {
+export textField_vGl5JUl04s = frame {
   name: "Text Field",
   left: 869px,
   top: 770px,
   width: 100%,
-  height: tokens.controlHeight,
+  height: Spacing.spacing.controlHeight,
   layout: {align-items: .center},
   fill: {linear-gradient: {angle: 0deg, stops: [stop(0%, .white), stop(100%, rgb(98%, 98%, 98%))]}},
-  border: tokens.colorTextFieldBorder,
+  border: Colors.colors.textFieldBorder,
   shadow: {
     inner-shadow: {
       color: rgb(0%, 0%, 0%, 10%),
@@ -19,9 +21,9 @@ project textField_vGl5JUl04s = frame {
       spread: 0px
     }
   },
-  corner-radius: tokens.borderRadiusS,
-  padding-left: tokens.paddingM,
-  padding-right: tokens.paddingM,
+  corner-radius: Radius.radius.s,
+  padding-left: Spacing.spacing.paddingM,
+  padding-right: Spacing.spacing.paddingM,
   children: Label
 }
 
@@ -29,9 +31,9 @@ Label = text {
   name: "Label",
   left: 0px,
   top: 0px,
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Label",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -50,7 +52,7 @@ TextFieldVariant_L = textField_vGl5JUl04s {
 TextFieldVariant = textField_vGl5JUl04s {
   left: 869px,
   top: 930px,
-  border[0].color: tokens.colorPrimary,
+  border[0].color: Colors.colors.primary,
   border[0].position: .center,
   border[0].width: 2
 }
@@ -59,11 +61,11 @@ TextFieldVariant = textField_vGl5JUl04s {
 Focussed = textField_vGl5JUl04s {
   left: 869px,
   top: 1010px,
-  border[0].color: tokens.colorDanger,
+  border[0].color: Colors.colors.danger,
   border[0].position: .center,
   border[0].width: 2,
 
   Label {
-    fill[0].color: tokens.colorDanger
+    fill[0].color: Colors.colors.danger
   }
 }

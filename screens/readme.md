@@ -33,4 +33,4 @@ would be things like Log In, Dashboard, Settings, Account, etc.
   instead of forking the source component for one-off differences.
 
 Lower-level reusable pieces belong in `design/components/` and
-`design/blocks/`. Shared visual values belong in `tokens.elyx`.
+`design/blocks/`. Shared visual values belong in `tokens/`.

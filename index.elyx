@@ -1,4 +1,5 @@
-import "tokens.elyx" as tokens
+import "tokens/typography.elyx" as Typography
+import "tokens/radius.elyx" as Radius
 import "screens/account.elyx" as account
 import "blocks/profileCard.elyx" as profileCard
 import "components/button.elyx" as button
@@ -19,7 +20,7 @@ Welcome = frame {
       spread: 0px
     }
   },
-  corner-radius: tokens.borderRadiusL,
+  corner-radius: Radius.radius.l,
   padding: [40px, 60px],
   children: [GroupedStack, Asyoucanseeinth, GroupedStack_T, Alsointheproject, Finallyistheexis]
 }
@@ -50,7 +51,7 @@ Thisdocumentcontai = text {
   top: 20px,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "This document contains best practices on how to set up .elyx files within your project",
-  font-size: tokens.labelSizeL,
+  font-size: Typography.typography.labelL,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -62,7 +63,7 @@ Asyoucanseeinth = text {
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "As you can see in the project list on the left, files are organized into groups, with the most important ones being components, blocks, and screens. The three main building blocks for organizing your components.",
-  font-size: tokens.labelSizeL,
+  font-size: Typography.typography.labelL,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -83,7 +84,7 @@ Frame_J = frame {
   layout: {direction: .column, item-gap: 10},
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
-  corner-radius: tokens.borderRadiusS,
+  corner-radius: Radius.radius.s,
   padding: 16px,
   children: [COMPONENTS, Componentsarethes]
 }
@@ -107,7 +108,7 @@ Componentsarethes = text {
   width: 100%,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "Components are the smallest reusable UI pieces in the Elyx design system. Think of them like atoms. These would be UI elements such as button, text fields, badges etc.",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -121,7 +122,7 @@ Frame_j = frame {
   layout: {direction: .column, item-gap: 10},
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
-  corner-radius: tokens.borderRadiusS,
+  corner-radius: Radius.radius.s,
   padding: 16px,
   children: [BLOCKS, Ifcomponentsareat]
 }
@@ -145,7 +146,7 @@ Ifcomponentsareat = text {
   width: 100%,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "If components are atoms, then blocks are like molecules. Blocks are used interface sections such as panels, menus, toasts, alerts, etc that would contain components.",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -159,7 +160,7 @@ Frame_K = frame {
   layout: {direction: .column, item-gap: 10},
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
-  corner-radius: tokens.borderRadiusS,
+  corner-radius: Radius.radius.s,
   padding: 16px,
   children: [SCREENS, Screenswouldbethi]
 }
@@ -184,7 +185,7 @@ Screenswouldbethi = text {
   height: .auto,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "Screens would be things like app windows, panels, and standalone states that represent what a user would see at one moment. Examples would be things like Log In, Dashboard, Settings, Account, etc.",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -196,7 +197,7 @@ Alsointheproject = text {
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Also in the project are folders for other asset types, such as images and icons. If you were to add fonts, then create a new /fonts folder.",
-  font-size: tokens.labelSizeL,
+  font-size: Typography.typography.labelL,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -207,8 +208,8 @@ Finallyistheexis = text {
   top: 301px,
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
-  contents: "Finally, is the existence of a tokens.elyx file. Properties defined here for colors and other values are referenced throughout the entire project.",
-  font-size: tokens.labelSizeL,
+  contents: "Finally, is the existence of a tokens/ folder. Each file there groups a related family of tokens - colors, typography, spacing, radius - referenced throughout the entire project.",
+  font-size: Typography.typography.labelL,
   font-family: "Inter",
   font-style: "Regular"
 }

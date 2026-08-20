@@ -1,16 +1,19 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 import "components/userAvatar.elyx" as userAvatar
 
-project userSummary_3nStch3 = frame {
+export userSummary_3nStch3 = frame {
   name: "userSummary",
   left: 16px,
   top: 888px,
   width: 100%,
   height: .auto,
-  layout: {align-items: .center, item-gap: tokens.paddingM},
-  fill: tokens.colorTertiary,
-  corner-radius: tokens.borderRadiusM,
-  padding: tokens.paddingM,
+  layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
+  fill: Colors.colors.tertiary,
+  corner-radius: Radius.radius.m,
+  padding: Spacing.spacing.paddingM,
   children: [userAvatar_1, UserCopy_NGAEIPi]
 }
 
@@ -24,18 +27,18 @@ UserCopy_NGAEIPi = frame {
 
 UserName_9ZA9Ann = text {
   name: "User Name",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Jason Chen",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
 
 UserEmail_Gl6zsNE = text {
   name: "User Email",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "jason@acme.design",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }

@@ -22,5 +22,5 @@ Settings, Account, etc.
 Also in the project are folders for other asset types, such as images and icons. If you 
 were to add fonts, then create a new /fonts folder.
 
-Finally, is the existence of a tokens.elyx file. Properties defined here for colors and 
-other values are referenced throughout the entire project.
+Finally, is the existence of a tokens/ folder. Each file there groups a related family of
+tokens - colors, typography, spacing, radius - referenced throughout the entire project.

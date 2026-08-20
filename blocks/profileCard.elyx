@@ -1,11 +1,13 @@
 import "components/cardBackground.elyx" as cardBackground
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
 import "components/statusBadge.elyx" as statusBadge
 import "components/userAvatar.elyx" as userAvatar
 import "components/statTile.elyx" as statTile
 import "components/header.elyx" as header
 
-project profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
+export profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
   name: "profileCard",
   left: 0px,
   top: 0px,
@@ -35,18 +37,18 @@ ProfileCopy_L4BIoK0 = frame {
 
 ProfileName_t5aftmC = text {
   name: "Profile Name",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Jason Chen",
-  font-size: tokens.labelSizeL,
+  font-size: Typography.typography.labelL,
   font-family: "Inter",
   font-style: "SemiBold"
 }
 
 ProfileRole_q2YZxwP = text {
   name: "Profile Role",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Design lead at Acme Design",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -55,7 +57,7 @@ ProfileStats_uRSls4V = frame {
   name: "Profile Stats",
   top: 85px,
   width: 100%,
-  layout: {item-gap: tokens.spacingM},
+  layout: {item-gap: Spacing.spacing.m},
   children: [statTile_S, statTile_i, statTile_B]
 }
 

@@ -1,6 +1,9 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-project statTile_BwT4HpE = frame {
+export statTile_BwT4HpE = frame {
   name: "statTile",
   left: 0px,
   top: 0px,
@@ -8,7 +11,7 @@ project statTile_BwT4HpE = frame {
   height: .auto,
   layout: {direction: .column, item-gap: 5},
   fill: [
-    tokens.colorTertiary,
+    Colors.colors.tertiary,
     {
       radial-gradient: {
         at: point(1.1671%, -0.4195%),
@@ -18,26 +21,26 @@ project statTile_BwT4HpE = frame {
       }
     }
   ],
-  border: tokens.colorTextFieldBorder,
-  corner-radius: tokens.borderRadiusM,
-  padding: tokens.paddingM,
+  border: Colors.colors.textFieldBorder,
+  corner-radius: Radius.radius.m,
+  padding: Spacing.spacing.paddingM,
   children: [StatValue_PPgC1JG, StatLabel_zJ4gqsc]
 }
 
 StatValue_PPgC1JG = text {
   name: "16",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "16",
-  font-size: tokens.labelSizeXL,
+  font-size: Typography.typography.labelXL,
   font-family: "Inter",
   font-style: "SemiBold"
 }
 
 StatLabel_zJ4gqsc = text {
   name: "Label",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Label",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }

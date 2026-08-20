@@ -1,17 +1,20 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 import "components/statusBadge.elyx" as statusBadge
 import "components/button.elyx" as button
 
-project planCard_LTK7mFiyqR = frame {
+export planCard_LTK7mFiyqR = frame {
   name: "planCard",
   left: 0px,
   top: 0px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: tokens.spacingL},
+  layout: {direction: .column, item-gap: Spacing.spacing.l},
   fill: rgb(9.9186%, 11.53%, 13.12%),
-  corner-radius: tokens.borderRadiusL,
-  padding: tokens.paddingXL,
+  corner-radius: Radius.radius.l,
+  padding: Spacing.spacing.paddingXL,
   children: [PlanHeader_QvgQJ1C, PlanPrice_ZJx9H3J, PlanFeatures_1JNxLt3, layer_Z]
 }
 
@@ -24,7 +27,7 @@ PlanHeader_QvgQJ1C = frame {
 
 PlanName_81UA3to = text {
   name: "Plan Name",
-  fill: tokens.textColorLight,
+  fill: Colors.colors.textLight,
   contents: "Team",
   font-size: 20,
   font-family: "Inter",
@@ -42,9 +45,9 @@ layer = statusBadge.statusBadgeVariant_5 {
 
 PlanPrice_ZJx9H3J = text {
   name: "Plan Price",
-  fill: tokens.textColorLightSecondary,
+  fill: Colors.colors.textLightSecondary,
   contents: "$24 per member / month",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -65,15 +68,15 @@ FeatureDot_cJ3_jml = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .ellipse
 }
 
 FeatureLabel_532ZQB6 = text {
   name: "Feature Label",
-  fill: tokens.textColorLightSecondary,
+  fill: Colors.colors.textLightSecondary,
   contents: "Unlimited projects",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -88,15 +91,15 @@ FeatureDot__qUChf5 = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .ellipse
 }
 
 FeatureLabel_UVzHWnL = text {
   name: "Feature Label",
-  fill: tokens.textColorLightSecondary,
+  fill: Colors.colors.textLightSecondary,
   contents: "Shared components",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -111,15 +114,15 @@ FeatureDot_yv3GLSN = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .ellipse
 }
 
 FeatureLabel_0yZ827Q = text {
   name: "Feature Label",
-  fill: tokens.textColorLightSecondary,
+  fill: Colors.colors.textLightSecondary,
   contents: "Priority support",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }

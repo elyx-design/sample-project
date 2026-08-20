@@ -1,5 +1,5 @@
 import "components/sidebarItem.elyx" as sidebarItem
-import "tokens.elyx" as tokens
+import "tokens/spacing.elyx" as Spacing
 import "components/sidebarHeader.elyx" as sidebarHeader2
 import "components/userSummary.elyx" as userSummary2
 import "icons/layout-panel-top.svg" as layoutpaneltop
@@ -8,7 +8,7 @@ import "icons/contact.svg" as contact
 import "icons/receipt-text.svg" as receipttext
 import "icons/user-round.svg" as userround
 
-project sidebar_QjenIug = frame {
+export sidebar_QjenIug = frame {
   name: "sidebar",
   left: 0px,
   top: 0px,
@@ -18,14 +18,14 @@ project sidebar_QjenIug = frame {
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   border-sides: .right,
-  padding: tokens.paddingM,
+  padding: Spacing.spacing.paddingM,
   children: [GroupedStack_flp7iRt, userSummary_RP1JqZ1]
 }
 
 GroupedStack_flp7iRt = frame {
   name: "Grouped Stack",
   width: 100%,
-  layout: {direction: .column, item-gap: tokens.spacingS},
+  layout: {direction: .column, item-gap: Spacing.spacing.s},
   children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
 }
 

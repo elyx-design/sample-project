@@ -1,0 +1,1 @@
+export typography = tokens {labelM: 12, labelML: 14, labelL: 16, labelXL: 24}

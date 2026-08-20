@@ -1,17 +1,20 @@
 import "components/iconButton.elyx" as iconButton
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 
-project sidebarItem_GirPBI3vMI = frame {
+export sidebarItem_GirPBI3vMI = frame {
   name: "sidebarItem",
   left: 16px,
   top: 453px,
   width: 100%,
-  height: tokens.controlHeight,
-  layout: {align-items: .center, item-gap: tokens.spacingS},
+  height: Spacing.spacing.controlHeight,
+  layout: {align-items: .center, item-gap: Spacing.spacing.s},
   fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
-  corner-radius: tokens.borderRadiusS,
-  padding-left: tokens.paddingM,
-  padding-right: tokens.paddingM,
+  corner-radius: Radius.radius.s,
+  padding-left: Spacing.spacing.paddingM,
+  padding-right: Spacing.spacing.paddingM,
   children: [ButtonIconM24_e0j2UAH, Overview_OasUNsl]
 }
 
@@ -29,9 +32,9 @@ Overview_OasUNsl = text {
   left: 0px,
   top: 0px,
   height: .auto,
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Label",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
@@ -40,14 +43,14 @@ Overview_OasUNsl = text {
 sidebarItemVariant_Q = sidebarItem_GirPBI3vMI {
   left: 16px,
   top: 533px,
-  fill[0].color: tokens.colorPrimary,
+  fill[0].color: Colors.colors.primary,
   fill[0].visible: .nil,
 
   Overview_OasUNsl {
-    fill[0].color: tokens.textColorLight
+    fill[0].color: Colors.colors.textLight
   }
 
   ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    fill[0].color: tokens.textColorLight
+    fill[0].color: Colors.colors.textLight
   }
 }

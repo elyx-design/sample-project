@@ -1,4 +1,6 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/radius.elyx" as Radius
 import "blocks/settingsCard.elyx" as SettingsCard
 import "components/header.elyx" as header
 import "components/pageTabs.elyx" as pageTabs2
@@ -8,14 +10,14 @@ import "blocks/sidebar.elyx" as sidebar2
 import "blocks/planCard.elyx" as planCard2
 import "blocks/activityCard.elyx" as activityCard2
 
-project account_LEZl5tsouT = frame {
+export account_LEZl5tsouT = frame {
   name: "Account Screen",
   left: 80px,
   top: 80px,
   width: 1280px,
   height: 960px,
   layout: {direction: .row},
-  fill: tokens.color-background,
+  fill: Colors.colors.background,
   children: [sidebar, contentShell]
 }
 
@@ -96,7 +98,7 @@ statTile = frame {
 
 statValue = text {
   name: "Stat Value",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "0",
   font-size: 18,
   font-family: "Inter",
@@ -105,9 +107,9 @@ statValue = text {
 
 statLabel = text {
   name: "Stat Label",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Label",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -125,15 +127,15 @@ featureDot = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .ellipse
 }
 
 featureLabel = text {
   name: "Feature Label",
-  fill: tokens.textColorLightSecondary,
+  fill: Colors.colors.textLightSecondary,
   contents: "Feature",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -157,18 +159,18 @@ usageMeta = frame {
 
 usageLabel = text {
   name: "Usage Label",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Usage",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Medium"
 }
 
 usageValue = text {
   name: "Usage Value",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "0%",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -185,7 +187,7 @@ usageFill = shape {
   name: "Usage Fill",
   width: 50%,
   height: 8px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .rect
 }
 
@@ -203,7 +205,7 @@ activityDot = shape {
   name: "Activity Dot",
   width: 8px,
   height: 8px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   type: .ellipse
 }
 
@@ -215,18 +217,18 @@ activityCopy = frame {
 
 activityTitle = text {
   name: "Activity Title",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Activity",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Medium"
 }
 
 activityTime = text {
   name: "Activity Time",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Now",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -243,7 +245,7 @@ sectionHeader = frame {
 
 sectionTitle = text {
   name: "Section Title",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Section",
   font-size: 16,
   font-family: "Inter",
@@ -252,9 +254,9 @@ sectionTitle = text {
 
 sectionDescription = text {
   name: "Section Description",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Description",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -280,18 +282,18 @@ settingCopy = frame {
 
 settingTitle = text {
   name: "Setting Title",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Setting",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Medium"
 }
 
 settingDescription = text {
   name: "Setting Description",
-  fill: tokens.textColorDarkSecondary,
+  fill: Colors.colors.textDarkSecondary,
   contents: "Description",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Regular"
 }
@@ -302,16 +304,16 @@ settingAction = frame {
   layout: {justify-content: .center, align-items: .center},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  corner-radius: tokens.borderRadiusS,
+  corner-radius: Radius.radius.s,
   padding: [0px, 12px],
   children: settingActionLabel
 }
 
 settingActionLabel = text {
   name: "Setting Action Label",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Manage",
-  font-size: tokens.labelSizeM,
+  font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Medium"
 }

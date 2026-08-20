@@ -1,18 +1,19 @@
-import "tokens.elyx" as tokens
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 import "components/header.elyx" as header
 import "components/activityRow.elyx" as activityRow
 
-project activityCard_Qrr8IWU = frame {
+export activityCard_Qrr8IWU = frame {
   name: "activityCard",
   left: 0px,
   top: 433px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: tokens.paddingL},
+  layout: {direction: .column, item-gap: Spacing.spacing.paddingL},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  corner-radius: tokens.borderRadiusL,
-  padding: tokens.spacingXL,
+  corner-radius: Radius.radius.l,
+  padding: Spacing.spacing.xl,
   children: [layer, activityRow_2, activityRow_a, activityRow_v]
 }
 

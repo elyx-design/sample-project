@@ -1,7 +1,9 @@
-import "../tokens.elyx" as tokens
+import "../tokens/colors.elyx" as Colors
+import "../tokens/typography.elyx" as Typography
+import "../tokens/radius.elyx" as Radius
 import "./iconButton.elyx" as iconButton
 
-project splashLogo_LCwhDG2 = frame {
+export splashLogo_LCwhDG2 = frame {
   name: "splashLogo",
   left: 487.5px,
   top: 145.5px,
@@ -18,24 +20,24 @@ layer_I = frame {
   width: 44px,
   height: 44px,
   layout: {direction: .column, justify-content: .center, align-items: .center},
-  corner-radius: tokens.borderRadiusM,
-  fill: tokens.colorPrimary,
+  corner-radius: Radius.radius.m,
+  fill: Colors.colors.primary,
   children: layer
 }
 
 layer = iconButton.ButtonIconMVariant_3 {
   left: 0px,
   top: 0px,
-  overrides: [set(iconButton.defaultsvg, "fill[0].color", tokens.textColorLight)]
+  overrides: [set(iconButton.defaultsvg, "fill[0].color", Colors.colors.textLight)]
 }
 
 BrandName_5bh3GPf = text {
   name: "Brand Name",
   contents: "Elyx",
   font-family: "Inter",
-  font-size: tokens.labelSizeXL,
+  font-size: Typography.typography.labelXL,
   font-style: "SemiBold",
   line-height: 0,
   letter-spacing: 0,
-  fill: tokens.textColorDark
+  fill: Colors.colors.textDark
 }

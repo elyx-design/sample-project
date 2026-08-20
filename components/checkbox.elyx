@@ -1,6 +1,6 @@
 // Define checkbox variants and states here.
-
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/radius.elyx" as Radius
 
 Frame = frame {
   name: "Frame",
@@ -12,16 +12,16 @@ Frame = frame {
   border: rgb(79.9972%, 79.9972%, 79.9972%)
 }
 
-file Frame_P = frame {
+export Frame_P = frame {
   name: "Toggle",
   left: 759px,
   top: 674px,
   width: 32px,
   height: 20px,
   layout: {justify-content: .end, align-items: .center},
-  corner-radius: tokens.borderRadiusMax,
+  corner-radius: Radius.radius.max,
   padding: 3px,
-  fill: tokens.colorPrimary,
+  fill: Colors.colors.primary,
   children: Frame_H
 }
 
@@ -31,7 +31,7 @@ Frame_H = frame {
   top: 3px,
   width: 14px,
   height: 14px,
-  corner-radius: tokens.borderRadiusMax,
+  corner-radius: Radius.radius.max,
   fill: .white
 }
 
@@ -39,7 +39,7 @@ Frame_H = frame {
 FrameVariant_d = Frame_P {
   left: 839px,
   top: 674px,
-  overrides: [set("layout.justify-content", .start), set("fill[0].color", tokens.colorSecondary)]
+  overrides: [set("layout.justify-content", .start), set("fill[0].color", Colors.colors.secondary)]
 }
 
 @variant(Mixed)

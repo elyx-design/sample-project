@@ -17,7 +17,7 @@ toasts, alerts, etc that would contain component(s).
 ## Best Practices
 
 - Compose blocks from `design/components/` and shared values from
-  `tokens.elyx` wherever possible.
+  `tokens/` wherever possible.
 - Keep blocks portable within their product area. They may know they are an
   inspector section, sidebar group, or toolbar composition, but should avoid
   assuming the full window around them unless that is the point of the block.

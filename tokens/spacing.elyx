@@ -1,0 +1,11 @@
+export spacing = tokens {
+  s: 8,
+  m: 12,
+  l: 16,
+  xl: 20,
+  paddingS: 8,
+  paddingM: 12,
+  paddingL: 16,
+  paddingXL: 20,
+  controlHeight: 36
+}

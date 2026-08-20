@@ -1,16 +1,19 @@
-import "tokens.elyx" as tokens
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as Button
 import "components/checkbox.elyx" as Checkbox
 import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
 
-project authForm_3fiPvBqdA9 = frame {
+export authForm_3fiPvBqdA9 = frame {
   name: "Auth Form",
   left: 80px,
   top: 80px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: tokens.spacingXL},
+  layout: {direction: .column, item-gap: Spacing.spacing.xl},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   shadow: {
@@ -22,8 +25,8 @@ project authForm_3fiPvBqdA9 = frame {
       style: .smooth
     }
   },
-  corner-radius: tokens.borderRadiusL,
-  padding: tokens.paddingXL,
+  corner-radius: Radius.radius.l,
+  padding: Spacing.spacing.paddingXL,
   children: [layer_2, fields, optionsRow, submitButton]
 }
 
@@ -43,7 +46,7 @@ layer_2 = header2.header_Pp67Y8c {
 fields = frame {
   name: "Fields",
   width: 100%,
-  layout: {direction: .column, item-gap: tokens.spacingM},
+  layout: {direction: .column, item-gap: Spacing.spacing.m},
   children: [emailField, passwordField]
 }
 
@@ -73,9 +76,9 @@ layer = Checkbox.Frame_P {left: 127px, top: 285px}
 
 rememberLabel = text {
   name: "Remember Label",
-  fill: tokens.textColorDark,
+  fill: Colors.colors.textDark,
   contents: "Remember me",
-  font-size: tokens.labelSizeML,
+  font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
