@@ -1,6 +1,7 @@
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
+import "components/avatarGroup.elyx" as profileGroup
 import "components/logo.elyx" as logo
 import "images/background/horizon.jpg" as horizon
 
@@ -13,7 +14,7 @@ export SignInScreen_uAwbWmooF0 = frame {
   layout: {direction: .column, align-items: .center, item-gap: 48px},
   fill: {image: {ref: horizon}},
   padding-top: 0px,
-  children: [GroupedStack_pB84n1ORbr, FooterLinks_iuOfIBy5o9]
+  children: GroupedStack_pB84n1ORbr
 }
 
 GroupedStack_pB84n1ORbr = frame {
@@ -24,7 +25,7 @@ GroupedStack_pB84n1ORbr = frame {
   height: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 32px},
   overflow: .visible,
-  children: AuthForm_XfZtHIfR8O
+  children: [AuthForm_XfZtHIfR8O, profileGroup_LYFcdFxyNU, FooterLinks_iuOfIBy5o9]
 }
 
 AuthForm_XfZtHIfR8O = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
@@ -49,10 +50,21 @@ AuthForm_XfZtHIfR8O = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
   }
 }
 
+profileGroup_LYFcdFxyNU = profileGroup.profileGroupLabelbottom_uuBCQBPIGh {
+  name: "profileGroup Label bottom",
+  left: 600px,
+  top: 962px,
+
+  profileGroup.Frame_czczziH5wc.textLayer_dV81HeiWgb {
+    contents: "+28k online",
+    fill[0].color: Colors.colors.whiteAlpha70
+  }
+}
+
 FooterLinks_iuOfIBy5o9 = frame {
   name: "Footer Links",
   left: 569.5px,
-  top: 294px,
+  top: 0px,
   width: 141px,
   height: 15px,
   layout: {align-items: .center, item-gap: 18px},

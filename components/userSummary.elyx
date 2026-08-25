@@ -39,7 +39,8 @@ HeaderSLeft_v1iI8KgpFk = header.HeaderSLeft_nBOG31rNTk {
   }
 
   header.UserName_Qkcl7dWEIn {
-    contents: "Nora Harper"
+    contents: "Nora Harper",
+    font-style: "Bold"
   }
 }
 
@@ -79,7 +80,8 @@ HeaderMLeft_U02Hb8hK7v = header.header_Pp67Y8c {
   }
 
   header.Title_ZIlZq9y {
-    contents: "Nora Harper"
+    contents: "Nora Harper",
+    font-style: "Bold"
   }
 }
 

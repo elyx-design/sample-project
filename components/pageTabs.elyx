@@ -12,14 +12,15 @@ export pageTabs_e60eQaG = frame {
   layout: {align-items: .center, item-gap: Spacing.spacing.s},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  corner-radius: 12px,
+  corner-radius: Radius.radius.max,
   padding: Spacing.spacing.paddingS,
   children: [layer, ProfileTab_n, ProfileTab_O]
 }
 
-layer = profileTab_iALjnpOMsR {left: 46px, top: 23px}
+layer = profileTab_iALjnpOMsR {name: "Profile Tab", left: 46px, top: 23px}
 
 ProfileTab_n = ProfileTabVariant_Z {
+  name: "Profile Tab Variant",
   left: 66px,
   top: 43px,
 
@@ -29,6 +30,7 @@ ProfileTab_n = ProfileTabVariant_Z {
 }
 
 ProfileTab_O = ProfileTabVariant_Z {
+  name: "Profile Tab Variant",
   left: 138px,
   top: 43px,
 
@@ -42,10 +44,10 @@ export profileTab_iALjnpOMsR = frame {
   left: 40px,
   top: 217px,
   width: .auto,
-  height: Spacing.spacing.heightM,
+  height: Spacing.spacing.heightS,
   layout: {justify-content: .center, align-items: .center},
   fill: Colors.colors.black40,
-  corner-radius: Radius.radius.s,
+  corner-radius: Radius.radius.max,
   padding: [0px, Spacing.spacing.paddingM],
   children: ProfileTabLabel
 }

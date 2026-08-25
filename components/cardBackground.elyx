@@ -29,7 +29,7 @@ export cardBackground_zXouRyz = frame {
 cardBackgroundSolidVariant = cardBackground_zXouRyz {
   left: 80px,
   top: 575px,
-  fill[0].color: rgb(100%, 100%, 100%, 50%),
+  fill[0].color: colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }

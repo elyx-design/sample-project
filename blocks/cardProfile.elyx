@@ -1,5 +1,6 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as Spacing
+import "tokens/colors.elyx" as colors
 import "components/statusBadge.elyx" as statusBadge
 import "components/statTile.elyx" as statTile
 import "components/header.elyx" as header
@@ -32,8 +33,12 @@ ProfileStats_uRSls4V = frame {
 }
 
 statTile_S = statTile.statTile_BwT4HpE {
+  name: "statTile",
   left: 0px,
   top: 0px,
+  border[0]: .nil,
+  fill[0].color: colors.colors.black95,
+  fill[1]: .nil,
 
   statTile.StatLabel_zJ4gqsc {
     contents: "Projects"
@@ -41,8 +46,12 @@ statTile_S = statTile.statTile_BwT4HpE {
 }
 
 statTile_i = statTile.statTile_BwT4HpE {
+  name: "statTile",
   left: 0px,
   top: 20px,
+  border[0]: .nil,
+  fill[0].color: colors.colors.black95,
+  fill[1]: .nil,
 
   statTile.StatLabel_zJ4gqsc {
     contents: "Members"
@@ -54,8 +63,12 @@ statTile_i = statTile.statTile_BwT4HpE {
 }
 
 statTile_B = statTile.statTile_BwT4HpE {
+  name: "statTile",
   left: 20px,
   top: 40px,
+  border[0]: .nil,
+  fill[0].color: colors.colors.black95,
+  fill[1]: .nil,
 
   statTile.StatLabel_zJ4gqsc {
     contents: "Last Active"
@@ -75,6 +88,7 @@ ProfileCardHeader_J4GZIkC = frame {
 }
 
 layer_1 = header.header_Pp67Y8c {
+  name: "Header M (Left)",
   left: 56px,
   top: 2px,
   overrides: [remove(header.Description_7ZfScLC)],
@@ -85,6 +99,7 @@ layer_1 = header.header_Pp67Y8c {
 }
 
 statusBadge_s = statusBadge.statusBadge_3ac5QoB {
+  name: "statusBadge",
   left: 461px,
   top: 1px,
 

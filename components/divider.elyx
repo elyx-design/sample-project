@@ -6,8 +6,8 @@ export Divider_97GT5IGMgL = frame {
   top: 552px,
   width: 16px,
   layout: {justify-content: .center, align-items: .center},
-  padding-top: 8px,
-  padding-bottom: 8px,
+  padding-top: 4px,
+  padding-bottom: 4px,
   children: Rectangle_RlFhJcHgz0
 }
 
@@ -17,6 +17,6 @@ Rectangle_RlFhJcHgz0 = shape {
   top: 0px,
   width: 100%,
   height: 0.5px,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.colors.blackAlpha10,
   type: .rect
 }

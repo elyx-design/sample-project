@@ -1,36 +1,224 @@
 import "components/listRow.elyx" as ListRow
-import "tokens/spacing.elyx" as Spacing
-import "tokens/radius.elyx" as Radius
+import "tokens/colors.elyx" as colors
+import "components/cardBackground.elyx" as cardBackground
+import "components/userSummary.elyx" as userSummary
+import "components/divider.elyx" as divider
+import "components/segmentedControl.elyx" as segmentedControl
+import "components/button.elyx" as button
+import "icons/24 pixels/direct-24.svg" as direct24
+import "icons/24 pixels/ellipsis-horizontal-24.svg" as ellipsishorizontal24
+import "icons/20 pixels/database-20.svg" as database20
+import "icons/20 pixels/settings-20.svg" as settings20
+import "icons/20 pixels/notes-20.svg" as notes20
+import "icons/20 pixels/activity-20.svg" as activity20
 
-export menuList_1SbLOxYKXY = frame {
+export MenuList_6OjbR9CAsW = cardBackground.cardBackground_zXouRyz {
   name: "Menu List",
-  left: 80px,
-  top: 80px,
-  width: 100%,
-  height: .auto,
-  layout: {direction: .column, item-gap: 2},
-  fill: .white,
-  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  shadow: {
-    drop-shadow: {
-      color: rgb(0%, 0%, 0%, 5%),
-      offset: point(0px, 10px),
-      blur-radius: 20px,
-      spread: 0px,
-      style: .smooth
-    }
-  },
-  corner-radius: Radius.radius.l,
-  padding: Spacing.spacing.paddingS,
-  children: [layer, Row, Row_Q, divider, Row_a]
+  left: 33.25px,
+  top: -48px,
+  width: 287.5px,
+  padding-top: 0px,
+  padding-left: 0px,
+  padding-bottom: 0px,
+  padding-right: 0px,
+  fill[0].color: colors.colors.whiteAlpha50,
+  layout.item-gap: 0,
+  overrides: [
+    insert(layer_pYDBDO3QeP, after = .nil),
+    insert(GroupedStack_PhTktSdJeE, after = layer_pYDBDO3QeP)
+  ]
 }
 
-layer = ListRow.RowVariant_7 {left: 0px, top: 59px}
+layer_pYDBDO3QeP = frame {
+  name: "Top",
+  left: 0px,
+  top: 108.5px,
+  width: 100%,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colors.colors.white100,
+  corner-radius: 16px,
+  padding: 16px,
+  children: [UserSummaryS_V7QO9s9YIs, SegmentedControl_FHdeL5SuEV, GroupedStack_Wtlz5W8Cmm]
+}
 
-Row = ListRow.listRow_Gz4ibpIzuN {left: 20px, top: 79px}
+UserSummaryS_V7QO9s9YIs = userSummary.UserSummaryS_clM0CpDw4i {
+  name: "User Summary S",
+  left: 0px,
+  top: 0px
+}
 
-Row_Q = ListRow.listRow_Gz4ibpIzuN {left: 40px, top: 99px}
+SegmentedControl_FHdeL5SuEV = segmentedControl.SegmentedControlMVariant {
+  name: "Segmented Control S",
+  left: 0px,
+  top: -17px,
+  width: 100%,
 
-divider = shape {name: "Divider", width: 100%, height: 1px, fill: rgb(0%, 0%, 0%, 8%), type: .rect}
+  segmentedControl.Selected_D.Item_P {
+    contents: "System"
+  }
 
-Row_a = ListRow.listRow_Gz4ibpIzuN {left: 40px, top: 131px}
+  segmentedControl.Selected.Item_P {
+    contents: "Dark"
+  }
+
+  segmentedControl.layer_M.Item_P {
+    contents: "Light"
+  }
+}
+
+GroupedStack_Wtlz5W8Cmm = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 8px},
+  children: [Menu_OmCVZ7XoTy, Divider_7bOUsmBic5, Menu_Z86v8Yz2p0]
+}
+
+Menu_OmCVZ7XoTy = frame {
+  name: "Menu",
+  width: 100%,
+  layout: {direction: .column, item-gap: 4px},
+  children: [Row_dpI5iHhQJU, Selected_rskLcIWzCu, Row_uaorkPnJJf]
+}
+
+Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
+  name: "Row",
+  left: 0px,
+  top: 0px,
+
+  ListRow.GroupedStack.Item_e_R_O_9 {
+    contents: "Manage Profile"
+  }
+
+  ListRow.Item_e_O {
+    display: .hidden
+  }
+}
+
+Selected_rskLcIWzCu = ListRow.RowVariant_7 {
+  name: "Selected",
+  left: 20px,
+  top: 20px,
+
+  ListRow.GroupedStack.Item_e_R_O_9 {
+    contents: "Activity"
+  }
+
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+    contents: activity20
+  }
+
+  ListRow.Item_e_O {
+    display: .hidden
+  }
+}
+
+Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
+  name: "Row",
+  left: 20px,
+  top: 56px,
+
+  ListRow.GroupedStack.Item_e_R_O_9 {
+    contents: "Notes"
+  }
+
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+    contents: notes20
+  }
+
+  ListRow.Item_e_O {
+    display: .hidden
+  }
+}
+
+Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {name: "Divider", left: 0px, top: 0px, width: 100%}
+
+Menu_Z86v8Yz2p0 = frame {
+  name: "Menu",
+  left: 36px,
+  top: 243px,
+  width: 100%,
+  layout: {direction: .column, item-gap: 4px},
+  children: [Row_XU5C18oI9q, Row_6PGwNMvVCy]
+}
+
+Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
+  name: "Row",
+  left: 0px,
+  top: 0px,
+
+  ListRow.GroupedStack.Item_e_R_O_9 {
+    contents: "Database"
+  }
+
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+    contents: database20
+  }
+
+  ListRow.Item_e_O {
+    display: .hidden
+  }
+}
+
+Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
+  name: "Row",
+  left: 20px,
+  top: 56px,
+
+  ListRow.GroupedStack.Item_e_R_O_9 {
+    contents: "Settings"
+  }
+
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+    contents: settings20
+  }
+
+  ListRow.Item_e_O {
+    display: .hidden
+  }
+}
+
+GroupedStack_PhTktSdJeE = frame {
+  name: "Footer",
+  width: 100%,
+  layout: {justify-content: .space-between},
+  padding: 16px,
+  children: [ButtonM36_QkDpQUOUSJ, GroupedStack_TEA9Nb4ecN]
+}
+
+ButtonM36_QkDpQUOUSJ = button.ButtonVariant_T {
+  name: "Danger",
+  left: 213px,
+  top: 242px,
+
+  button.Button {
+    contents: "Sign Out"
+  }
+}
+
+GroupedStack_TEA9Nb4ecN = frame {
+  name: "Right",
+  height: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [Icon_aibAeY7M3f, Icon_kecQYvY0Mv]
+}
+
+Icon_aibAeY7M3f = button.ButtonM36Variant_h {
+  name: "Icon",
+  left: 233px,
+  top: 262px,
+
+  button.calendar24svg {
+    contents: direct24
+  }
+}
+
+Icon_kecQYvY0Mv = button.ButtonM36Variant_h {
+  name: "Icon",
+  left: 253px,
+  top: 282px,
+
+  button.calendar24svg {
+    contents: ellipsishorizontal24
+  }
+}

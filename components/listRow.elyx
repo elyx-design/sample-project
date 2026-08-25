@@ -1,75 +1,91 @@
-// Define list row variants and states here.
-import "../tokens/colors.elyx" as Colors
-import "../tokens/typography.elyx" as Typography
-import "../tokens/spacing.elyx" as Spacing
-import "../tokens/radius.elyx" as Radius
-import "./logo.elyx" as iconButton
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
+import "components/logo.elyx" as iconButton
+import "icons/24 pixels/bag-24.svg" as bag24
+import "icons/20 pixels/cloud-20.svg" as cloud20
 
 export listRow_Gz4ibpIzuN = frame {
   name: "Row",
   left: 862px,
   top: 603px,
   width: 100%,
-  height: 28px,
+  height: Spacing.spacing.heightS,
   layout: {justify-content: .space-between, align-items: .center},
-  corner-radius: Radius.radius.s,
-  padding: [4px, Spacing.spacing.paddingM],
+  corner-radius: Radius.radius.max,
+  padding: [4px, 8px],
   children: [GroupedStack, Item_e_O]
 }
 
 GroupedStack = frame {
   name: "Grouped Stack",
+  width: 100%,
   height: 100%,
-  layout: {align-items: .center, item-gap: 4},
+  layout: {align-items: .center, item-gap: 8px},
   children: [layer_H_9_E_y_R, Item_e_R_O_9]
 }
 
-layer_H_9_E_y_R = iconButton.ButtonIconMVariant_N {left: 12px, top: -2px}
+layer_H_9_E_y_R = iconButton.ButtonIconMVariant_N {
+  name: "Logo S (16)",
+  left: 12px,
+  top: -2px,
+
+  iconButton.defaultsvg {
+    contents: cloud20,
+    left: -6.17px,
+    top: -7.2357px,
+    width: 20px,
+    height: 20px
+  }
+}
 
 Item_e_R_O_9 = text {
   name: "Item",
-  contents: "Item",
   left: 87px,
   top: 6.5px,
-  width: 25px,
+  width: .auto,
   height: 15px,
-  align: .left,
-  font-family: "Inter",
+  fill: Colors.colors.black20,
+  contents: "Item",
   font-size: Typography.typography.labelM,
-  font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: Colors.colors.black20
+  font-family: "Inter",
+  font-style: "Regular"
 }
 
 Item_e_O = text {
   name: "Detail",
-  contents: "Detail",
   left: 16px,
   top: 0.5px,
   width: .auto,
   height: 15px,
-  align: .right,
-  font-family: "Inter",
+  fill: Colors.colors.blackAlpha70,
+  contents: "Detail",
   font-size: Typography.typography.labelM,
+  font-family: "Inter",
   font-style: "Regular",
-  line-height: 0,
-  letter-spacing: 0,
-  fill: Colors.colors.blackAlpha70
+  align: .right
 }
 
 @variant(Selected)
-RowVariant_7 = listRow_Gz4ibpIzuN {
-  left: 862px,
-  top: 679px,
-  overrides: [
-    set("fill[0].color", Colors.colors.blue),
-    set(Item_e_O, "fill[0].color", Colors.colors.textLightSecondary),
-    set(GroupedStack.Item_e_R_O_9, "fill[0].color", .white),
-    set(
-      GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg,
-      "fill[0].color",
-      Colors.colors.textLight
-    )
-  ]
+RowVariant_7 = listRow_Gz4ibpIzuN {left: 862px, top: 679px, fill[0].color: Colors.colors.black95}
+
+Row = frame {
+  name: "Row",
+  left: 648.75px,
+  top: 617px,
+  height: Spacing.spacing.heightS,
+  layout: {justify-content: .center, align-items: .center, item-gap: 8px},
+  children: [bag24svg, Label]
 }
+
+bag24svg = icon {
+  name: "bag-24.svg",
+  left: 551px,
+  top: 523px,
+  width: 24px,
+  height: 24px,
+  contents: bag24
+}
+
+Label = text {name: "Label", left: 0px, top: 0px, fill: .black, contents: "Label"}
