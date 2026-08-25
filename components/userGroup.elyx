@@ -21,7 +21,6 @@ GroupedStack_OfeQSGHwlq = frame {
   top: 0px,
   width: 140px,
   height: 36px,
-  layout: {align-items: .center},
   children: [layer_2, layer_T, layer_r, layer_B, layer_C]
 }
 
@@ -30,7 +29,7 @@ layer_2 = userAvatar.userAvatarVariant_O {
   left: 104px,
   top: 0px,
   ignore-stack: .true,
-  border[0].color: colors.colors.white,
+  border[0].color: colors.colors.white100,
   border[0].width: 2px,
   fill[0].image.ref: module5,
 
@@ -44,7 +43,7 @@ layer_T = userAvatar.userAvatarVariant_O {
   left: 78px,
   top: 0px,
   ignore-stack: .true,
-  border[0].color: colors.colors.white,
+  border[0].color: colors.colors.white100,
   border[0].width: 2px,
   fill[0].image.ref: module4,
 
@@ -58,7 +57,7 @@ layer_r = userAvatar.userAvatarVariant_O {
   left: 52px,
   top: 0px,
   ignore-stack: .true,
-  border[0].color: colors.colors.white,
+  border[0].color: colors.colors.white100,
   border[0].width: 2px,
   fill[0].image.ref: module6,
 
@@ -72,7 +71,7 @@ layer_B = userAvatar.userAvatarVariant_O {
   left: 26px,
   top: 0px,
   ignore-stack: .true,
-  border[0].color: colors.colors.white,
+  border[0].color: colors.colors.white100,
   border[0].width: 2px,
   fill[0].image.ref: module,
 
@@ -83,9 +82,9 @@ layer_B = userAvatar.userAvatarVariant_O {
 
 layer_C = userAvatar.userAvatarVariant_O {
   name: "Photo1",
-  left: 52px,
+  left: 0px,
   top: 0px,
-  border[0].color: colors.colors.white,
+  border[0].color: colors.colors.white100,
   border[0].width: 2px
 }
 
@@ -130,7 +129,7 @@ textLayer_7 = text {
   top: 0px,
   width: .auto,
   height: 17px,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: "+28"
 }
 
@@ -148,10 +147,22 @@ textLayer = text {
   top: 0px,
   width: .auto,
   height: 17px,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: "+28"
 }
 
-profileGroup_k = profileGroup_yzgf0sKCPf {left: 7px, top: 14px, height: 36px}
+profileGroup_k = profileGroup_yzgf0sKCPf {
+  left: 7px,
+  top: 14px,
+  height: 36px,
+  layout.align-items: .nil,
+  layout.direction: .nil
+}
 
-profileGroup = profileGroup_yzgf0sKCPf {left: 672px, top: 661px}
+profileGroup = profileGroup_yzgf0sKCPf {
+  left: 672px,
+  top: 661px,
+  height: 36px,
+  layout.align-items: .nil,
+  layout.direction: .nil
+}

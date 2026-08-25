@@ -17,7 +17,7 @@ export account_LEZl5tsouT = frame {
   width: 1280px,
   height: 960px,
   layout: {direction: .row},
-  fill: Colors.colors.background,
+  fill: rgb(95.8%, 97%, 98.2%),
   children: [sidebar, contentShell]
 }
 
@@ -27,7 +27,7 @@ sidebar = sidebar2.sidebar_QjenIug {
   width: 20%,
 
   sidebar2.GroupedStack_flp7iRt.sidebarHeader_TIJYWa6.sidebarHeader2.WorkspaceMark_2CifZgS {
-    fill[0].color: Colors.colors.neutral40
+    fill[0].color: Colors.colors.black40
   }
 }
 
@@ -78,7 +78,7 @@ profileCard_G = profileCard.profileCard_vlvneaI {
   top: 0px,
 
   profileCard.ProfileHero__BlDB8H.layer {
-    fill[0].color: Colors.colors.neutral40
+    fill[0].color: Colors.colors.black40
   }
 }
 
@@ -101,15 +101,15 @@ activityCard = activityCard2.activityCard_Qrr8IWU {
   top: 433px,
 
   activityCard2.activityRow_v.activityRow.ActivityDot_0f7NVNh {
-    fill[0].color: Colors.colors.neutral40
+    fill[0].color: Colors.colors.black40
   }
 
   activityCard2.activityRow_a.activityRow.ActivityDot_0f7NVNh {
-    fill[0].color: Colors.colors.neutral40
+    fill[0].color: Colors.colors.black40
   }
 
   activityCard2.activityRow_2.activityRow.ActivityDot_0f7NVNh {
-    fill[0].color: Colors.colors.neutral40
+    fill[0].color: Colors.colors.black40
   }
 }
 
@@ -128,7 +128,7 @@ statTile = frame {
 
 statValue = text {
   name: "Stat Value",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "0",
   font-size: 18,
   font-family: "Inter",
@@ -137,7 +137,7 @@ statValue = text {
 
 statLabel = text {
   name: "Stat Label",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Label",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -157,7 +157,7 @@ featureDot = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .ellipse
 }
 
@@ -189,7 +189,7 @@ usageMeta = frame {
 
 usageLabel = text {
   name: "Usage Label",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Usage",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -198,7 +198,7 @@ usageLabel = text {
 
 usageValue = text {
   name: "Usage Value",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "0%",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -217,7 +217,7 @@ usageFill = shape {
   name: "Usage Fill",
   width: 50%,
   height: 8px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .rect
 }
 
@@ -235,7 +235,7 @@ activityDot = shape {
   name: "Activity Dot",
   width: 8px,
   height: 8px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .ellipse
 }
 
@@ -247,7 +247,7 @@ activityCopy = frame {
 
 activityTitle = text {
   name: "Activity Title",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Activity",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -256,7 +256,7 @@ activityTitle = text {
 
 activityTime = text {
   name: "Activity Time",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Now",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -275,7 +275,7 @@ sectionHeader = frame {
 
 sectionTitle = text {
   name: "Section Title",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Section",
   font-size: 16,
   font-family: "Inter",
@@ -284,7 +284,7 @@ sectionTitle = text {
 
 sectionDescription = text {
   name: "Section Description",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Description",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -312,7 +312,7 @@ settingCopy = frame {
 
 settingTitle = text {
   name: "Setting Title",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Setting",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -321,7 +321,7 @@ settingTitle = text {
 
 settingDescription = text {
   name: "Setting Description",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Description",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -341,7 +341,7 @@ settingAction = frame {
 
 settingActionLabel = text {
   name: "Setting Action Label",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Manage",
   font-size: Typography.typography.labelM,
   font-family: "Inter",

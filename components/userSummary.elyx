@@ -27,7 +27,7 @@ UserCopy_NGAEIPi = frame {
 
 UserName_9ZA9Ann = text {
   name: "User Name",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Jason Chen",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -36,7 +36,7 @@ UserName_9ZA9Ann = text {
 
 UserEmail_Gl6zsNE = text {
   name: "User Email",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "jason@acme.design",
   font-size: Typography.typography.labelM,
   font-family: "Inter",

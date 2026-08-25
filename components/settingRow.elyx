@@ -11,7 +11,7 @@ export settingRow_HQWVNjz = frame {
   width: .auto,
   height: 59px,
   layout: {justify-content: .space-between, align-items: .center},
-  fill: Colors.colors.neutral95,
+  fill: Colors.colors.black95,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
   children: [SettingCopy_xBFnq12, layer]
@@ -25,7 +25,7 @@ SettingCopy_xBFnq12 = frame {
 
 SettingTitle_2TQqRLX = text {
   name: "Label",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -34,7 +34,7 @@ SettingTitle_2TQqRLX = text {
 
 SettingDescription_FnvoRLz = text {
   name: "Subtitle",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
   font-size: Typography.typography.labelM,
   font-family: "Inter",

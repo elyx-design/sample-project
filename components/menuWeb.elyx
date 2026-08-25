@@ -12,7 +12,7 @@ Selected = text {
   name: "Selected",
   left: 47.25px,
   top: 1.25px,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: "Menu",
   font-size: 12
 }
@@ -23,7 +23,7 @@ layer = text {
   top: 533.5px,
   width: 33px,
   height: 15px,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: "Menu",
   font-size: 12
 }

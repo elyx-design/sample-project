@@ -21,7 +21,7 @@ export statTile_BwT4HpE = frame {
       }
     }
   ],
-  border: Colors.colors.neutral-alpha25,
+  border: Colors.colors.blackAlpha25,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
   children: [StatValue_PPgC1JG, StatLabel_zJ4gqsc]
@@ -29,7 +29,7 @@ export statTile_BwT4HpE = frame {
 
 StatValue_PPgC1JG = text {
   name: "16",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "16",
   font-size: Typography.typography.labelXL,
   font-family: "Inter",
@@ -38,7 +38,7 @@ StatValue_PPgC1JG = text {
 
 StatLabel_zJ4gqsc = text {
   name: "Label",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

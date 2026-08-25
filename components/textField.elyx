@@ -11,8 +11,8 @@ export textField_vGl5JUl04s = frame {
   width: 100%,
   height: Spacing.spacing.heightM,
   layout: {align-items: .center},
-  fill: Colors.colors.white,
-  border: {color: Colors.colors.neutral-alpha25, width: 0.5px, position: .outside},
+  fill: Colors.colors.white100,
+  border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   corner-radius: Radius.radius.s,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
@@ -23,7 +23,7 @@ Label = text {
   name: "Label",
   left: 0px,
   top: 0px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -36,7 +36,7 @@ TextFieldVariant_L = textField_vGl5JUl04s {
   top: 850px,
 
   Label {
-    fill[0].color: Colors.colors.neutral80
+    fill[0].color: Colors.colors.black80
   }
 }
 
@@ -44,7 +44,7 @@ TextFieldVariant_L = textField_vGl5JUl04s {
 TextFieldVariant = textField_vGl5JUl04s {
   left: 869px,
   top: 930px,
-  border[0].color: Colors.colors.neutral20,
+  border[0].color: Colors.colors.black20,
   border[0].position: .center,
   border[0].width: 1.5px
 }
@@ -82,7 +82,7 @@ TextFieldIcon = textField_vGl5JUl04s {
   overrides: [insert(create24svg_k, after = .nil)],
 
   Label {
-    fill[0].color: Colors.colors.neutral80
+    fill[0].color: Colors.colors.black80
   }
 }
 
@@ -92,7 +92,7 @@ create24svg_k = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: calendar24
 }
 
@@ -102,7 +102,7 @@ create24svg = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: calendar24
 }
 
@@ -112,7 +112,7 @@ PlaceholderIcon = textField_vGl5JUl04s {
   top: 930px,
   padding-left: 8px,
   padding-right: 8px,
-  border[0].color: Colors.colors.neutral20,
+  border[0].color: Colors.colors.black20,
   border[0].width: 1.5px,
   layout.item-gap: 4px,
   overrides: [insert(create24svg_H, after = .nil)]
@@ -140,7 +140,7 @@ create24svg_H = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: calendar24
 }
 

@@ -24,7 +24,7 @@ calendar24svg_X9IF3sCgsd = icon {
   top: 450px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: calendar24
 }
 
@@ -33,7 +33,7 @@ Overview_OasUNsl = text {
   left: 0px,
   top: 0px,
   height: .auto,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -44,8 +44,8 @@ Overview_OasUNsl = text {
 sidebarItemVariant_Q = sidebarItem_GirPBI3vMI {
   left: 16px,
   top: 533px,
-  border[0].color: Colors.colors.neutral-alpha10,
+  border[0].color: Colors.colors.blackAlpha10,
   border[0].width: 0.5px,
-  fill[0].color: Colors.colors.neutral90,
+  fill[0].color: Colors.colors.black90,
   fill[0].visible: .nil
 }

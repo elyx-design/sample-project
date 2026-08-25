@@ -11,7 +11,7 @@ export profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
   name: "profileCard",
   left: 0px,
   top: 0px,
-  border[0].color: Colors.colors.neutral-alpha25,
+  border[0].color: Colors.colors.blackAlpha25,
   border[0].position: .inside,
   overrides: [
     insert(ProfileCardHeader_J4GZIkC, after = .nil),
@@ -39,7 +39,7 @@ ProfileCopy_L4BIoK0 = frame {
 
 ProfileName_t5aftmC = text {
   name: "Profile Name",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Jason Chen",
   font-size: Typography.typography.labelL,
   font-family: "Inter",
@@ -48,7 +48,7 @@ ProfileName_t5aftmC = text {
 
 ProfileRole_q2YZxwP = text {
   name: "Profile Role",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Design lead at Acme Design",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

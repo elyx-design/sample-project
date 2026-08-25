@@ -19,7 +19,7 @@ defaultsvg = icon {
   top: -1.2357px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: logo
 }
 

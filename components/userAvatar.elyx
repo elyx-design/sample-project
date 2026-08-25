@@ -22,8 +22,8 @@ Ellipse_9bQZpYxKwR = shape {
   width: 36px,
   height: 36px,
   ignore-stack: .true,
-  fill: Colors.colors.neutral90,
-  border: {color: Colors.colors.white, width: 2px},
+  fill: Colors.colors.black90,
+  border: {color: Colors.colors.white100, width: 2px},
   type: .ellipse
 }
 
@@ -33,7 +33,7 @@ AvatarInitials_F4uGTp6 = text {
   top: 10.5px,
   width: 16px,
   height: 15px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "JC",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -60,7 +60,7 @@ userAvatarVariant_P = userAvatar_mKGJ6R7 {
 LargeAvatarInitials_MsmHoiQ = text {
   name: "Large Avatar Initials",
   left: 21.5px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "JC",
   font-size: 22,
   font-family: "Inter",
@@ -147,7 +147,7 @@ export Ellipse_4OkVFaGU2Y = shape {
   width: 8px,
   height: 8px,
   fill: rgb(0%, 92.12%, 0%),
-  border: {color: Colors.colors.white, position: .outside},
+  border: {color: Colors.colors.white100, position: .outside},
   type: .ellipse
 }
 
@@ -175,7 +175,7 @@ statusonline_k = Ellipse_4OkVFaGU2Y {
 LargeAvatarInitials = text {
   name: "Large Avatar Initials",
   left: 21.5px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "JC",
   font-size: 22,
   font-family: "Inter",
@@ -218,7 +218,7 @@ bg_n = shape {
   height: 72px,
   ignore-stack: .true,
   fill: {image: {ref: module4}},
-  border: {color: Colors.colors.white, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px},
   type: .ellipse
 }
 
@@ -230,7 +230,7 @@ bg = shape {
   height: 72px,
   ignore-stack: .true,
   fill: {image: {ref: module4}},
-  border: {color: Colors.colors.white, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px},
   type: .ellipse
 }
 
@@ -242,7 +242,7 @@ bg_3 = shape {
   height: 36px,
   ignore-stack: .true,
   fill: {image: {ref: module4}},
-  border: {color: Colors.colors.white, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px},
   type: .ellipse
 }
 
@@ -254,6 +254,6 @@ bg_C = shape {
   height: 36px,
   ignore-stack: .true,
   fill: {image: {ref: module4}},
-  border: {color: Colors.colors.white, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px},
   type: .ellipse
 }

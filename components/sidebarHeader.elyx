@@ -31,7 +31,7 @@ WorkspaceMeta_rdsbtAB = frame {
 
 WorkspaceName_e17G8jV = text {
   name: "Haze",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Haze",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -40,7 +40,7 @@ WorkspaceName_e17G8jV = text {
 
 WorkspacePlan_PrRcOKW = text {
   name: "Workspace Plan",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Team plan",
   font-size: Typography.typography.labelM,
   font-family: "Inter",

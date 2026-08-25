@@ -44,7 +44,7 @@ export profileTab_iALjnpOMsR = frame {
   width: .auto,
   height: Spacing.spacing.heightM,
   layout: {justify-content: .center, align-items: .center},
-  fill: Colors.colors.neutral40,
+  fill: Colors.colors.black40,
   corner-radius: Radius.radius.s,
   padding: [0px, Spacing.spacing.paddingM],
   children: ProfileTabLabel
@@ -66,6 +66,6 @@ ProfileTabVariant_Z = profileTab_iALjnpOMsR {
   fill[0].visible: .false,
 
   ProfileTabLabel {
-    fill[0].color: Colors.colors.neutral20
+    fill[0].color: Colors.colors.black20
   }
 }

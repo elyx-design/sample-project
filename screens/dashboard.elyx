@@ -9,7 +9,7 @@ export SignInScreen_8cf4C95IUT = frame {
   width: 1291px,
   height: 803px,
   layout: {direction: .row},
-  fill: colors.colors.neutral95,
+  fill: colors.colors.black95,
   padding: 8px,
   children: [sideBar_fTyCwX7uzk, cardBackgroundSolid_W7nA5JjfFV]
 }

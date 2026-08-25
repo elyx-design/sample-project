@@ -16,6 +16,6 @@ Rectangle_Conokr0G5J = shape {
   top: 0px,
   width: 100%,
   height: 0.5px,
-  fill: colors.colors.neutral-alpha25,
+  fill: colors.colors.blackAlpha25,
   type: .rect
 }

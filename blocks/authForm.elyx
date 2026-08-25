@@ -43,7 +43,7 @@ Toggle_WRveQrGdLu = Checkbox.Frame_P {left: 127px, top: 285px}
 
 RememberLabel_PDIjOANzy7 = text {
   name: "Remember Label",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Remember me",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

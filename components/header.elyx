@@ -14,20 +14,22 @@ export header_Pp67Y8c = frame {
 
 Title_ZIlZq9y = text {
   name: "Title",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Title",
   font-size: 20,
   font-family: "Inter",
-  font-style: "Bold"
+  font-style: "SemiBold"
 }
 
 Description_7ZfScLC = text {
   name: "Subtitle",
-  fill: Colors.colors.textDarkSecondary,
+  width: 100%,
+  fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
-  font-style: "Regular"
+  font-style: "Regular",
+  line-height: 1.5
 }
 
 @variant("header (center)")
@@ -37,7 +39,8 @@ headerVariant = header_Pp67Y8c {
   layout.align-items: .center,
 
   Description_7ZfScLC {
-    align: .center
+    align: .center,
+    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 70%)
   }
 
   Title_ZIlZq9y {

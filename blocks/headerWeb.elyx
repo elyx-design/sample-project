@@ -40,7 +40,7 @@ Menu_d104U3BrCB = text {
   name: "Menu",
   left: 0px,
   top: 0px,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: "Menu",
   font-style: "Medium"
 }
@@ -51,7 +51,7 @@ MenuVariant = Menu_NptvsRIaJB {
   top: 521px,
 
   Menu_d104U3BrCB {
-    fill[0].color: colors.colors.neutral-alpha50
+    fill[0].color: colors.colors.blackAlpha50
   }
 }
 
@@ -79,7 +79,7 @@ MenuVariant_T = Menu_NptvsRIaJB {
   overrides: [insert(chevrondown12svg_p, after = Menu_d104U3BrCB)],
 
   Menu_d104U3BrCB {
-    fill[0].color: colors.colors.neutral-alpha50
+    fill[0].color: colors.colors.blackAlpha50
   }
 }
 
@@ -114,7 +114,7 @@ chevrondown12svg_p = icon {
   top: 460px,
   width: 12px,
   height: 12px,
-  fill: colors.colors.neutral-alpha50,
+  fill: colors.colors.blackAlpha50,
   contents: chevrondown122
 }
 
@@ -124,7 +124,7 @@ chevrondown12svg = icon {
   top: 460px,
   width: 12px,
   height: 12px,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: chevrondown122
 }
 

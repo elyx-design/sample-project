@@ -68,7 +68,7 @@ FeatureDot_cJ3_jml = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .ellipse
 }
 
@@ -91,7 +91,7 @@ FeatureDot__qUChf5 = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .ellipse
 }
 
@@ -114,7 +114,7 @@ FeatureDot_yv3GLSN = shape {
   name: "Feature Dot",
   width: 6px,
   height: 6px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .ellipse
 }
 

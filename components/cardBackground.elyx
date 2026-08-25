@@ -12,10 +12,10 @@ export cardBackground_zXouRyz = frame {
   min-height: 60px,
   layout: {direction: .column, item-gap: Spacing.spacing.paddingXL},
   fill: .white,
-  border: {color: colors.colors.neutral-alpha25, width: 0.5px, position: .outside},
+  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
-      color: colors.colors.neutral-alpha10,
+      color: colors.colors.blackAlpha10,
       offset: point(0px, 5px),
       blur-radius: 5px,
       spread: 0px
@@ -29,7 +29,7 @@ export cardBackground_zXouRyz = frame {
 cardBackgroundSolidVariant = cardBackground_zXouRyz {
   left: 80px,
   top: 575px,
-  fill[0].color: colors.colors.highlight,
+  fill[0].color: rgb(100%, 100%, 100%, 50%),
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }

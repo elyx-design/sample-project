@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>trash-20</title>
+    <g id="trash-20" stroke="none" fill="none" stroke-width="1.5">
+        <path d="M5,7.5 L15,7.5 L15,10.5 C15,13.3284271 15,14.7426407 14.1213203,15.6213203 C13.9359354,15.8067053 13.7270492,15.9669893 13.5,16.0980762 C12.8038476,16.5 11.8692317,16.5 10,16.5 C8.13076828,16.5 7.19615242,16.5 6.5,16.0980762 C6.27295078,15.9669893 6.06406456,15.8067053 5.87867966,15.6213203 C5,14.7426407 5,13.3284271 5,10.5 L5,7.5 Z" id="Rectangle" stroke="#000000"></path>
+        <line x1="3" y1="7.5" x2="17" y2="7.5" id="Path" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></line>
+        <path d="M10,3.5 C10.9299717,3.5 11.3949575,3.5 11.7764571,3.60222252 C12.8117333,3.87962394 13.6203761,4.68826668 13.8977775,5.72354286 C14,6.10504251 14,6.57002834 14,7.5 L6,7.5 C6,6.57002834 6,6.10504251 6.10222252,5.72354286 C6.37962394,4.68826668 7.18826668,3.87962394 8.22354286,3.60222252 C8.60504251,3.5 9.07002834,3.5 10,3.5 Z" id="Rectangle-2" stroke="#000000"></path>
+        <line x1="8" y1="13.5" x2="8" y2="10.5" id="Path-24" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="12" y1="13.5" x2="12" y2="10.5" id="Path-25" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></line>
+    </g>
+</svg>

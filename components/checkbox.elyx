@@ -21,10 +21,10 @@ export Frame_P = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(1.6464%, Colors.colors.neutral40), stop(100%, Colors.colors.neutral30)]
+      stops: [stop(1.6464%, Colors.colors.black40), stop(100%, Colors.colors.black30)]
     }
   },
-  border: {color: Colors.colors.neutral20, width: 0.5px},
+  border: {color: Colors.colors.black20, width: 0.5px},
   corner-radius: Radius.radius.max,
   padding: 3px,
   children: Frame_H
@@ -39,7 +39,7 @@ Frame_H = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.colors.white), stop(100%, Colors.colors.neutral95)]
+      stops: [stop(0%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
     }
   },
   corner-radius: Radius.radius.max

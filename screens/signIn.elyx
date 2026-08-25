@@ -1,7 +1,7 @@
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "components/avatarGroup.elyx" as profileGroup
+import "components/userGroup.elyx" as profileGroup
 import "components/logo.elyx" as logo
 import "images/background/horizon.jpg" as horizon
 
@@ -56,7 +56,7 @@ profileGroupLabelbottom_f8AoX6uV3c = profileGroup.profileGroupLabelRight {
 
   profileGroup.Frame.textLayer_7 {
     contents: "+428 online",
-    fill[0].color: Colors.colors.white
+    fill[0].color: Colors.colors.white100
   }
 }
 
@@ -72,7 +72,7 @@ FooterLinks_f1lwzGUqx7 = frame {
 
 Privacy_giaKGHaFOQ = text {
   name: "Privacy",
-  fill: Colors.colors.white,
+  fill: Colors.colors.white100,
   contents: "Privacy",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -81,7 +81,7 @@ Privacy_giaKGHaFOQ = text {
 
 Terms_uB09gLkpSv = text {
   name: "Terms",
-  fill: Colors.colors.white,
+  fill: Colors.colors.white100,
   contents: "Terms",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -90,7 +90,7 @@ Terms_uB09gLkpSv = text {
 
 Help_3ZaUcFS0gG = text {
   name: "Help",
-  fill: Colors.colors.white,
+  fill: Colors.colors.white100,
   contents: "Help",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -130,6 +130,6 @@ defaultsvg_xcpfvBhquS = icon {
   top: 0px,
   width: 80px,
   height: 80px,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: logo.logo
 }

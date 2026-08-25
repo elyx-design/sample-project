@@ -39,7 +39,7 @@ Item_e_R_O_9 = text {
   font-style: "Regular",
   line-height: 0,
   letter-spacing: 0,
-  fill: Colors.colors.neutral20
+  fill: Colors.colors.black20
 }
 
 Item_e_O = text {
@@ -55,7 +55,7 @@ Item_e_O = text {
   font-style: "Regular",
   line-height: 0,
   letter-spacing: 0,
-  fill: Colors.colors.textDarkSecondary
+  fill: Colors.colors.blackAlpha70
 }
 
 @variant(Selected)
@@ -63,7 +63,7 @@ RowVariant_7 = listRow_Gz4ibpIzuN {
   left: 862px,
   top: 679px,
   overrides: [
-    set("fill[0].color", Colors.colors.primary),
+    set("fill[0].color", Colors.colors.blue),
     set(Item_e_O, "fill[0].color", Colors.colors.textLightSecondary),
     set(GroupedStack.Item_e_R_O_9, "fill[0].color", .white),
     set(

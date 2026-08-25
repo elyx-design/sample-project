@@ -9,10 +9,10 @@ export ButtonS28_vpRhoz6wi3 = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, colors.colors.white), stop(100%, colors.colors.neutral95)]
+      stops: [stop(0%, colors.colors.white100), stop(100%, colors.colors.black95)]
     }
   },
-  border: {color: colors.colors.neutral-alpha25, width: 0.5px},
+  border: {color: colors.colors.blackAlpha25, width: 0.5px},
   shadow: {
     drop-shadow: {
       color: rgb(0%, 0%, 0%, 10%),
@@ -32,7 +32,7 @@ Button_Hog8Wmode8 = text {
   left: 12px,
   top: 9.5px,
   width: .auto,
-  fill: colors.colors.neutral20,
+  fill: colors.colors.black20,
   contents: "Button",
   font-size: 12,
   font-family: "Inter",
@@ -44,16 +44,16 @@ Button_Hog8Wmode8 = text {
 export Primary_lxKygAff4u = ButtonS28_vpRhoz6wi3 {
   left: 1046px,
   top: 612px,
-  border[0].color: colors.colors.neutral20,
-  fill[0].linear-gradient.stops[0].color: colors.colors.neutral40,
-  fill[0].linear-gradient.stops[1].color: colors.colors.neutral30,
+  border[0].color: colors.colors.black20,
+  fill[0].linear-gradient.stops[0].color: colors.colors.black40,
+  fill[0].linear-gradient.stops[1].color: colors.colors.black30,
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: colors.colors.highlight,
+  shadow[1].inner-shadow.color: colors.colors.whiteAlpha50,
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
   Button_Hog8Wmode8 {
-    fill[0].color: colors.colors.white
+    fill[0].color: colors.colors.white100
   }
 }
 
@@ -83,10 +83,10 @@ DangerVariant = Danger_ilCJZ2iWgF {
 PrimaryVariant = Primary_lxKygAff4u {
   left: 1046px,
   top: 688px,
-  fill[0].color: colors.colors.neutral40,
-  shadow[0].drop-shadow.color: colors.colors.neutral30,
+  fill[0].color: colors.colors.black40,
+  shadow[0].drop-shadow.color: colors.colors.black30,
   shadow[0].inner-shadow.blur-radius: 0.5px,
-  shadow[0].inner-shadow.color: colors.colors.neutral30,
+  shadow[0].inner-shadow.color: colors.colors.black30,
   shadow[0].inner-shadow.offset: [0px, 1px],
   shadow[0].inner-shadow.style: .normal,
   shadow[1]: .nil
@@ -96,10 +96,10 @@ PrimaryVariant = Primary_lxKygAff4u {
 ButtonS28Variant = ButtonS28_vpRhoz6wi3 {
   left: 960px,
   top: 687.5px,
-  fill[0].color: colors.colors.neutral90,
-  shadow[0].drop-shadow.color: colors.colors.neutral80,
+  fill[0].color: colors.colors.black90,
+  shadow[0].drop-shadow.color: colors.colors.black80,
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: colors.colors.neutral80,
+  shadow[0].inner-shadow.color: colors.colors.black80,
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal
 }

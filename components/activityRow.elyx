@@ -16,7 +16,7 @@ ActivityDot_0f7NVNh = shape {
   name: "Activity Dot",
   width: 8px,
   height: 8px,
-  fill: Colors.colors.primary,
+  fill: Colors.colors.blue,
   type: .ellipse
 }
 
@@ -28,7 +28,7 @@ ActivityCopy_zRPSoiA = frame {
 
 ActivityTitle_9XlhOnW = text {
   name: "Event",
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Event",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -37,7 +37,7 @@ ActivityTitle_9XlhOnW = text {
 
 ActivityTime_dwkCnRe = text {
   name: "Date",
-  fill: Colors.colors.textDarkSecondary,
+  fill: Colors.colors.blackAlpha70,
   contents: "Date",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

@@ -8,17 +8,17 @@ export button_43RxZnGr30 = frame {
   left: 962px,
   top: 689px,
   height: Spacing.spacing.heightM,
-  layout: {justify-content: .space-between, align-items: .center},
+  layout: {justify-content: .center, align-items: .center},
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(2.58%, Colors.colors.white), stop(100%, Colors.colors.neutral95)]
+      stops: [stop(2.58%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
     }
   },
-  border: {color: Colors.colors.neutral-alpha25, width: 0.5px},
+  border: {color: Colors.colors.blackAlpha25, width: 0.5px},
   shadow: {
     drop-shadow: {
-      color: Colors.colors.neutral-alpha10,
+      color: Colors.colors.blackAlpha10,
       offset: point(0px, 2px),
       blur-radius: 2px,
       spread: 0px,
@@ -36,7 +36,7 @@ Button = text {
   left: 12px,
   top: 9.5px,
   width: .auto,
-  fill: Colors.colors.neutral20,
+  fill: Colors.colors.black20,
   contents: "Button",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -48,11 +48,11 @@ Button = text {
 ButtonVariant_V = button_43RxZnGr30 {
   left: 1072px,
   top: 689px,
-  border[0].color: Colors.colors.neutral20,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.neutral40,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.neutral30,
+  border[0].color: Colors.colors.black20,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.highlight,
+  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
@@ -69,7 +69,7 @@ ButtonVariant_T = button_43RxZnGr30 {
   fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
   fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.highlight,
+  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
@@ -82,10 +82,10 @@ ButtonVariant_T = button_43RxZnGr30 {
 ButtonVariant_s = button_43RxZnGr30 {
   left: 962px,
   top: 769px,
-  fill[0].color: Colors.colors.neutral90,
-  shadow[0].drop-shadow.color: Colors.colors.neutral80,
+  fill[0].color: Colors.colors.black90,
+  shadow[0].drop-shadow.color: Colors.colors.black80,
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: Colors.colors.neutral80,
+  shadow[0].inner-shadow.color: Colors.colors.black80,
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal
 }
@@ -94,11 +94,11 @@ ButtonVariant_s = button_43RxZnGr30 {
 ButtonVariant_E = button_43RxZnGr30 {
   left: 1072px,
   top: 769px,
-  border[0].color: Colors.colors.neutral30,
-  fill[0].color: Colors.colors.neutral40,
-  shadow[0].drop-shadow.color: Colors.colors.neutral30,
+  border[0].color: Colors.colors.black30,
+  fill[0].color: Colors.colors.black40,
+  shadow[0].drop-shadow.color: Colors.colors.black30,
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: Colors.colors.neutral30,
+  shadow[0].inner-shadow.color: Colors.colors.black30,
   shadow[0].inner-shadow.offset: [0px, 3px],
 
   Button {
