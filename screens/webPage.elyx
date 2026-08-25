@@ -1,5 +1,5 @@
-import "images/background/horizon.jpg" as horizon
 import "blocks/headerWeb.elyx" as headerWeb
+import "images/background/desert.png" as desert
 
 export SignInScreen_gw2k2sYoRZ = frame {
   name: "Sign In Screen",
@@ -8,7 +8,7 @@ export SignInScreen_gw2k2sYoRZ = frame {
   width: 1580px,
   height: 960px,
   layout: {direction: .column, align-items: .center, item-gap: 48px},
-  fill: {image: {ref: horizon}},
+  fill: {image: {ref: desert}},
   padding: 24px,
   children: [HeaderWeb_SsrjVMJvR3, HeaderWeb_yyFAd5la8T]
 }

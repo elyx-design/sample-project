@@ -13,7 +13,7 @@ export textField_vGl5JUl04s = frame {
   layout: {align-items: .center},
   fill: Colors.colors.white100,
   border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
-  corner-radius: Radius.radius.s,
+  corner-radius: Radius.radius.max,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
   children: Label

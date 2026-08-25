@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "components/avatarGroup.elyx" as profileGroup
 import "components/logo.elyx" as logo
-import "images/background/horizon.jpg" as horizon
+import "images/background/desert.png" as desert
 
 export SignInScreen_uAwbWmooF0 = frame {
   name: "Sign In Screen",
@@ -12,7 +12,7 @@ export SignInScreen_uAwbWmooF0 = frame {
   width: 1280px,
   height: 960px,
   layout: {direction: .column, align-items: .center, item-gap: 48px},
-  fill: {image: {ref: horizon}},
+  fill: {image: {ref: desert}},
   padding-top: 0px,
   children: GroupedStack_pB84n1ORbr
 }
