@@ -3,7 +3,7 @@ import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
 import "components/brand.elyx" as brand
 import "components/button.elyx" as button
-import "components/userAvatar.elyx" as userAvatar
+import "components/avatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
 
 export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
@@ -60,7 +60,6 @@ HeaderWebVariant = Header_YoW7I9TfdY {
   left: 512px,
   top: 572px,
   height: spacing.spacing.heightG,
-  overrides: [insert(layer, after = layer_IZeMbQZvJt), remove(GroupedStack_s6neGdYpQr)]
 }
 
 @variant("Menu (icon)")
@@ -128,7 +127,6 @@ chevrondown12svg = icon {
   contents: chevrondown122
 }
 
-layer = userAvatar.userAvatarVariant2 {left: 1511px, top: 578px}
 
 layer_IZeMbQZvJt = frame {
   name: "Frame",

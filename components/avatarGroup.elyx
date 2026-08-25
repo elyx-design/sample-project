@@ -1,0 +1,317 @@
+import "tokens/colors.elyx" as colors
+import "components/avatar.elyx" as userAvatar
+import "images/profile/007.jpg" as module
+import "images/profile/006.jpg" as module2
+import "images/profile/001.jpg" as module3
+import "images/profile/003.jpg" as module4
+
+export profileGroup_yzgf0sKCPf = frame {
+  name: "profileGroup",
+  left: 484px,
+  top: 511px,
+  width: 140px,
+  layout: {align-items: .center},
+  children: GroupedStack_OfeQSGHwlq
+}
+
+GroupedStack_OfeQSGHwlq = frame {
+  name: "avatar group",
+  left: 0px,
+  top: 0px,
+  width: 140px,
+  height: 36px,
+  children: [layer_V, layer_tn, layer_l, layer_Q, layer_DE]
+}
+
+layer_V = userAvatar.AvatarSVariant {
+  name: "Photo5",
+  left: 104px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module4
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+layer_tn = userAvatar.AvatarSVariant {
+  name: "Photo4",
+  left: 78px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module3
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+layer_l = userAvatar.AvatarSVariant {
+  name: "Photo3",
+  left: 52px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module2
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+layer_Q = userAvatar.AvatarSVariant {
+  name: "Photo2",
+  left: 26px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+layer_DE = userAvatar.AvatarSVariant {
+  name: "Photo1",
+  left: 0px,
+  top: 0px,
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+@variant("profileGroup Label Right")
+profileGroupVariant = profileGroup_yzgf0sKCPf {
+  left: 484px,
+  top: 595px,
+  width: .auto,
+  layout.item-gap: 8px,
+  overrides: [
+    insert(avatargroup_J, after = .nil),
+    insert(layer, after = avatargroup_J),
+    remove(GroupedStack_OfeQSGHwlq)
+  ]
+}
+
+@variant("profileGroup Label bottom")
+profileGroupLabelRight = profileGroup_yzgf0sKCPf {
+  left: 487.3293px,
+  top: 679px,
+  width: .auto,
+  layout.direction: .column,
+  layout.item-gap: 8px,
+  overrides: [
+    insert(avatargroup_V, after = .nil),
+    insert(Frame, after = avatargroup_V),
+    remove(GroupedStack_OfeQSGHwlq)
+  ]
+}
+
+Frame = frame {
+  name: "Frame",
+  left: 148px,
+  top: 9.5px,
+  layout: {justify-content: .center, align-items: .center},
+  children: textLayer_7
+}
+
+textLayer_7 = text {
+  name: "+28",
+  left: 0px,
+  top: 0px,
+  width: .auto,
+  height: 17px,
+  fill: colors.colors.black20,
+  contents: "+28"
+}
+
+layer = frame {
+  name: "Frame",
+  left: 148px,
+  top: 9.5px,
+  layout: {justify-content: .center, align-items: .center},
+  children: textLayer
+}
+
+textLayer = text {
+  name: "+28",
+  left: 0px,
+  top: 0px,
+  width: .auto,
+  height: 17px,
+  fill: colors.colors.black20,
+  contents: "+28"
+}
+
+layer_s = userAvatar.AvatarSVariant {left: 830px, top: 673px}
+
+avatargroup_V = frame {
+  name: "avatar group",
+  left: 0px,
+  top: 0px,
+  width: 140px,
+  height: 36px,
+  children: [Photo5_g, Photo4_c, Photo3_w, Photo2_I, Photo1_f]
+}
+
+Photo5_g = userAvatar.AvatarSVariant {
+  name: "Photo5",
+  left: 104px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module4
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo4_c = userAvatar.AvatarSVariant {
+  name: "Photo4",
+  left: 78px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module3
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo3_w = userAvatar.AvatarSVariant {
+  name: "Photo3",
+  left: 52px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module2
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo2_I = userAvatar.AvatarSVariant {
+  name: "Photo2",
+  left: 26px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo1_f = userAvatar.AvatarSVariant {
+  name: "Photo1",
+  left: 0px,
+  top: 0px,
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+avatargroup_J = frame {
+  name: "avatar group",
+  left: 0px,
+  top: 0px,
+  width: 140px,
+  height: 36px,
+  children: [Photo5_z, Photo4_H, Photo3_T, Photo2_w, Photo1_M]
+}
+
+Photo5_z = userAvatar.AvatarSVariant {
+  name: "Photo5",
+  left: 104px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module4
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo4_H = userAvatar.AvatarSVariant {
+  name: "Photo4",
+  left: 78px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module3
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo3_T = userAvatar.AvatarSVariant {
+  name: "Photo3",
+  left: 52px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module2
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo2_w = userAvatar.AvatarSVariant {
+  name: "Photo2",
+  left: 26px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo1_M = userAvatar.AvatarSVariant {
+  name: "Photo1",
+  left: 0px,
+  top: 0px,
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}

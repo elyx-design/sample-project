@@ -1,0 +1,153 @@
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/radius.elyx" as Radius
+import "images/profile/005.jpg" as module4
+
+export userAvatar_mKGJ6R7 = frame {
+  name: "Avatar S",
+  left: -94px,
+  top: 10px,
+  width: 36px,
+  height: 36px,
+  layout: {justify-content: .center, align-items: .center},
+  corner-radius: Radius.radius.max,
+  overflow: .visible,
+  children: [Ellipse_9bQZpYxKwR, AvatarInitials_F4uGTp6, statusonline_aL82ghuez5]
+}
+
+Ellipse_9bQZpYxKwR = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 36px,
+  height: 36px,
+  ignore-stack: .true,
+  fill: Colors.colors.black90,
+  border: {color: Colors.colors.white100, width: 2px},
+  type: .ellipse
+}
+
+AvatarInitials_F4uGTp6 = text {
+  name: "Avatar Initials",
+  left: 10px,
+  top: 10.5px,
+  width: 16px,
+  height: 15px,
+  fill: Colors.colors.black20,
+  contents: "JC",
+  font-size: Typography.typography.labelM,
+  font-family: "Inter",
+  font-style: "SemiBold"
+}
+
+statusonline_aL82ghuez5 = Ellipse_4OkVFaGU2Y {
+  name: "status (online)",
+  left: 26.85px,
+  top: 26.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
+
+export Ellipse_4OkVFaGU2Y = shape {
+  name: "Avatar Satus (online)",
+  left: -94px,
+  top: -72.12px,
+  width: 8px,
+  height: 8px,
+  fill: rgb(0%, 92.12%, 0%),
+  border: {color: Colors.colors.white100, position: .outside},
+  type: .ellipse
+}
+
+@variant(Away)
+statusonlineVariant = Ellipse_4OkVFaGU2Y {
+  left: -58px,
+  top: -72px,
+  fill[0].color: rgb(100%, 65.3497%, 0%)
+}
+
+@variant("Avatar S (Photo)")
+AvatarSVariant = userAvatar_mKGJ6R7 {
+  left: -40px,
+  top: 10px,
+  overrides: [
+    insert(bg_e, after = .nil),
+    remove(AvatarInitials_F4uGTp6),
+    remove(Ellipse_9bQZpYxKwR)
+  ]
+}
+
+export AvatarM_ej3y9t9gG9 = frame {
+  name: "Avatar M",
+  left: -94px,
+  top: 94px,
+  width: 72px,
+  height: 72px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  children: [bg_3215z21ZmM, LargeAvatarInitials_aSqGwd9dLG, statusonline_b8jSnQus5L]
+}
+
+bg_3215z21ZmM = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 72px,
+  height: 72px,
+  ignore-stack: .true,
+  fill: Colors.colors.black90,
+  border: {color: Colors.colors.white100, width: 2px},
+  type: .ellipse
+}
+
+LargeAvatarInitials_aSqGwd9dLG = text {
+  name: "Large Avatar Initials",
+  left: 21.5px,
+  fill: Colors.colors.black20,
+  contents: "JC",
+  font-size: 22,
+  font-family: "Inter",
+  font-style: "SemiBold"
+}
+
+statusonline_b8jSnQus5L = Ellipse_4OkVFaGU2Y {
+  name: "status (online)",
+  left: 56.85px,
+  top: 56.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
+
+@variant("Avatar M Variant")
+AvatarMVariant = AvatarM_ej3y9t9gG9 {
+  left: -4px,
+  top: 94px,
+  overrides: [
+    insert(bg, after = .nil),
+    remove(LargeAvatarInitials_aSqGwd9dLG),
+    remove(bg_3215z21ZmM)
+  ]
+}
+
+bg = shape {
+  name: "bg photo",
+  left: 0px,
+  top: 0px,
+  width: 72px,
+  height: 72px,
+  ignore-stack: .true,
+  fill: {image: {ref: module4}},
+  border: {color: Colors.colors.white100, width: 2px},
+  type: .ellipse
+}
+
+bg_e = shape {
+  name: "bg photo",
+  left: 0px,
+  top: 0px,
+  width: 36px,
+  height: 36px,
+  ignore-stack: .true,
+  fill: {image: {ref: module4}},
+  border: {color: Colors.colors.white100, width: 2px},
+  type: .ellipse
+}

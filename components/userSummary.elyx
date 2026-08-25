@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
-import "components/userAvatar.elyx" as userAvatar
+import "components/avatar.elyx" as userAvatar
 
 export userSummary_3nStch3 = frame {
   name: "userSummary",

@@ -1,20 +1,20 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
-import "images/background/rose.jpg" as rose
 import "images/background/nightMountain.jpg" as nightMountain
+import "images/background/sand-horizon.png" as sandhorizon
 
-layer = cardBackground.cardBackground_zXouRyz {
+export cardBackgroundSolid_hxqOj5bsxM = cardBackground.cardBackground_zXouRyz {
   left: 693px,
   top: 267px,
   width: 373px,
   height: 471px,
-  fill[0].image.ref: rose,
+  fill[0].image.ref: sandhorizon,
   layout.justify-content: .end,
-  overrides: [insert(layer_j, after = .nil)]
+  overrides: [insert(headerleft_7QHPCJD5at, after = .nil)]
 }
 
-layer_j = header.header_Pp67Y8c {
+headerleft_7QHPCJD5at = header.header_Pp67Y8c {
   left: 768px,
   top: 512px,
 

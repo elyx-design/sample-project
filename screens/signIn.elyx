@@ -1,7 +1,7 @@
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "components/userGroup.elyx" as profileGroup
+import "components/avatarGroup.elyx" as profileGroup
 import "components/logo.elyx" as logo
 import "images/background/horizon.jpg" as horizon
 

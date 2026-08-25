@@ -3,7 +3,7 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "components/statusBadge.elyx" as statusBadge
-import "components/userAvatar.elyx" as userAvatar
+import "components/avatar.elyx" as userAvatar
 import "components/statTile.elyx" as statTile
 import "components/header.elyx" as header
 
@@ -28,7 +28,6 @@ ProfileHero__BlDB8H = frame {
   children: [layer, ProfileCopy_L4BIoK0]
 }
 
-layer = userAvatar.userAvatarVariant_P {left: 62px, top: 101px}
 
 ProfileCopy_L4BIoK0 = frame {
   name: "Profile Copy",
