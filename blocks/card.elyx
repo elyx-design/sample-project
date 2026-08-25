@@ -1,7 +1,6 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
-import "components/tagsTransparent.elyx" as tagsTransparent
 import "images/background/rose.jpg" as rose
 import "images/background/nightMountain.jpg" as nightMountain
 
@@ -12,7 +11,7 @@ layer = cardBackground.cardBackground_zXouRyz {
   height: 471px,
   fill[0].image.ref: rose,
   layout.justify-content: .end,
-  overrides: [insert(layer_j, after = .nil), insert(GroupedStack, after = layer_j)]
+  overrides: [insert(layer_j, after = .nil)]
 }
 
 layer_j = header.header_Pp67Y8c {
@@ -30,16 +29,6 @@ layer_j = header.header_Pp67Y8c {
   }
 }
 
-GroupedStack = frame {
-  name: "Grouped Stack",
-  width: 100%,
-  layout: {item-gap: 4px},
-  overflow: .visible,
-  children: TagIconandLabel
-}
-
-TagIconandLabel = tagsTransparent.TagIconandLabel_ICjERGypJV {left: 832px, top: 704px}
-
 cardBackgroundSolid = cardBackground.cardBackground_zXouRyz {
   left: 1189.18px,
   top: 267px,
@@ -47,24 +36,8 @@ cardBackgroundSolid = cardBackground.cardBackground_zXouRyz {
   height: 480px,
   fill[0].image.ref: nightMountain,
   layout.justify-content: .end,
-  overrides: [
-    insert(headerleft, after = .nil),
-    insert(GroupedStack_M, after = headerleft),
-    insert(ButtonM36, after = GroupedStack_M)
-  ]
+  overrides: [insert(headerleft, after = .nil)]
 }
-
-ButtonM36 = group {name: "button.button_43RxZnGr30", left: 0px, top: 729px, width: 100%}
-
-GroupedStack_M = frame {
-  name: "Grouped Stack",
-  width: 100%,
-  layout: {item-gap: 4px},
-  overflow: .visible,
-}
-
-LabelandClose = tagsTransparent.TagIconandLabel_ICjERGypJV {left: 832px, top: 700px}
-
 
 headerleft = header.header_Pp67Y8c {
   left: 768px,
