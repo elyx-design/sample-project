@@ -1,0 +1,100 @@
+import "images/brand/haze-wordmark.svg" as hazewordmark
+import "images/brand/haze-icon.svg" as hazeicon
+
+export logoandicon_LKlgCoSHoQ = frame {
+  name: "logo and icon L (36)",
+  left: 695px,
+  top: 418px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 12px},
+  children: [hazeiconsvg_1KxH04UdZP, hazewordmarksvg_w0aoGQSgUb]
+}
+
+hazeiconsvg_1KxH04UdZP = icon {
+  name: "haze-icon.svg",
+  left: 0px,
+  top: 0px,
+  width: 36px,
+  height: 36px,
+  contents: hazeicon
+}
+
+hazewordmarksvg_w0aoGQSgUb = icon {
+  name: "haze-wordmark.svg",
+  left: 76px,
+  top: 13px,
+  width: 66px,
+  height: 22.6851px,
+  contents: hazewordmark
+}
+
+@variant("logo and icon M (24)")
+logoandiconGVariant = logoandicon_LKlgCoSHoQ {
+  left: 504px,
+  top: 418px,
+  height: 24px,
+  layout.item-gap: 8px,
+
+  hazewordmarksvg_w0aoGQSgUb {
+    width: 48px,
+    height: 16.5px
+  }
+
+  hazeiconsvg_1KxH04UdZP {
+    width: 24px,
+    height: 24px
+  }
+}
+
+@variant("logo and icon XL (48)")
+logoandiconM24_D = logoandicon_LKlgCoSHoQ {
+  left: 945px,
+  top: 418px,
+  height: 48px,
+  layout.item-gap: 16px,
+
+  hazewordmarksvg_w0aoGQSgUb {
+    width: 102px,
+    height: 35.06px
+  }
+
+  hazeiconsvg_1KxH04UdZP {
+    width: 48px,
+    height: 48px
+  }
+}
+
+@variant("logo and icon XXL (80)")
+logoandiconXL48 = logoandicon_LKlgCoSHoQ {
+  left: 1193.3px,
+  top: 421.78px,
+  height: 80px,
+  layout.item-gap: 24px,
+
+  hazewordmarksvg_w0aoGQSgUb {
+    width: 172px,
+    height: 59.12px
+  }
+
+  hazeiconsvg_1KxH04UdZP {
+    width: 80px,
+    height: 80px
+  }
+}
+
+@variant("logo and icon S (16)")
+logoandiconM24 = logoandicon_LKlgCoSHoQ {
+  left: 323px,
+  top: 418px,
+  height: 16px,
+  layout.item-gap: 6px,
+
+  hazewordmarksvg_w0aoGQSgUb {
+    width: 34px,
+    height: 11.6875px
+  }
+
+  hazeiconsvg_1KxH04UdZP {
+    width: 16px,
+    height: 16px
+  }
+}

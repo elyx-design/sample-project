@@ -27,7 +27,7 @@ UserCopy_NGAEIPi = frame {
 
 UserName_9ZA9Ann = text {
   name: "User Name",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Jason Chen",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

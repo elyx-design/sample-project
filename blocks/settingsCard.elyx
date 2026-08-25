@@ -32,7 +32,7 @@ densityRow = frame {
 
 densityLabel = text {
   name: "Density Label",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Interface density",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -71,7 +71,7 @@ notificationCopy = frame {
 
 notificationTitle = text {
   name: "Notification Title",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Email notifications",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

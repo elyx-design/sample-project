@@ -1,4 +1,3 @@
-// Define segmented control variants and states here.
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
@@ -9,7 +8,7 @@ export segmentedControl_MnqIo7BFFj = frame {
   left: 623px,
   top: 656px,
   width: 100%,
-  height: Spacing.spacing.controlHeight,
+  height: Spacing.spacing.heightM,
   layout: {justify-content: .center, align-items: .center},
   fill: Colors.colors.secondary,
   corner-radius: Radius.radius.s,
@@ -31,7 +30,7 @@ export Frame_l = frame {
   height: 28px,
   layout: {justify-content: .center, align-items: .center},
   fill: .white,
-  border: {color: Colors.colors.textFieldBorder, width: 0.5px, position: .outside},
+  border: {color: Colors.colors.neutral-alpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
       color: rgb(0%, 0%, 0%, 10%),
@@ -51,7 +50,7 @@ Item_P = text {
   name: "Item",
   left: 0px,
   top: 0px,
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Item",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

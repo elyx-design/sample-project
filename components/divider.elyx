@@ -1,0 +1,21 @@
+import "tokens/colors.elyx" as colors
+
+export Frame_6xqUCdEwZT = frame {
+  name: "divider",
+  left: 583px,
+  top: 589px,
+  layout: {justify-content: .center, align-items: .center},
+  padding-top: 8px,
+  padding-bottom: 8px,
+  children: Rectangle_Conokr0G5J
+}
+
+Rectangle_Conokr0G5J = shape {
+  name: "Rectangle",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 0.5px,
+  fill: colors.colors.neutral-alpha25,
+  type: .rect
+}

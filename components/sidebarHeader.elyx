@@ -2,6 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
+import "components/icon.elyx" as icon2
 
 export sidebarHeader_XE3kaHH = frame {
   name: "sidebarHeader",
@@ -9,41 +10,39 @@ export sidebarHeader_XE3kaHH = frame {
   top: 16px,
   width: .auto,
   height: .auto,
-  layout: {align-items: .center, item-gap: 10},
+  layout: {align-items: .center, item-gap: 10px},
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
-  children: [WorkspaceMark_2CifZgS, WorkspaceMeta_rdsbtAB]
+  children: [hazeiconsvg_K4eab6fNaY, WorkspaceMeta_rdsbtAB]
 }
 
-WorkspaceMark_2CifZgS = shape {
-  name: "Workspace Mark",
+hazeiconsvg_K4eab6fNaY = icon2.hazeiconsvg_BZW5Sgs8Uh {
+  left: -146.1657px,
+  top: -135px,
   width: 32px,
-  height: 32px,
-  corner-radius: 9px,
-  type: .rect,
-  fill: Colors.colors.primary
+  height: 32px
 }
 
 WorkspaceMeta_rdsbtAB = frame {
   name: "Workspace Meta",
-  layout: {direction: .column, justify-content: .center, item-gap: 4},
+  layout: {direction: .column, justify-content: .center, item-gap: 4px},
   children: [WorkspaceName_e17G8jV, WorkspacePlan_PrRcOKW]
 }
 
 WorkspaceName_e17G8jV = text {
-  name: "Workspace Name",
-  contents: "Acme Design",
-  font-family: "Inter",
+  name: "Haze",
+  fill: Colors.colors.neutral20,
+  contents: "Haze",
   font-size: Typography.typography.labelML,
-  font-style: "SemiBold",
-  fill: Colors.colors.textDark
+  font-family: "Inter",
+  font-style: "SemiBold"
 }
 
 WorkspacePlan_PrRcOKW = text {
   name: "Workspace Plan",
+  fill: Colors.colors.textDarkSecondary,
   contents: "Team plan",
-  font-family: "Inter",
   font-size: Typography.typography.labelM,
-  font-style: "Regular",
-  fill: Colors.colors.textDarkSecondary
+  font-family: "Inter",
+  font-style: "Regular"
 }

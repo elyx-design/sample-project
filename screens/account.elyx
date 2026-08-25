@@ -21,13 +21,21 @@ export account_LEZl5tsouT = frame {
   children: [sidebar, contentShell]
 }
 
-sidebar = sidebar2.sidebar_QjenIug {left: 0px, top: 0px, width: 20%, height: 100%}
+sidebar = sidebar2.sidebar_QjenIug {
+  left: 0px,
+  top: 0px,
+  width: 20%,
+
+  sidebar2.GroupedStack_flp7iRt.sidebarHeader_TIJYWa6.sidebarHeader2.WorkspaceMark_2CifZgS {
+    fill[0].color: Colors.colors.neutral40
+  }
+}
 
 contentShell = frame {
   name: "Content Shell",
   width: 100%,
   height: 100%,
-  layout: {direction: .column, item-gap: 20},
+  layout: {direction: .column, item-gap: 20px},
   padding: 40px,
   children: [layer, layer_d, mainGrid]
 }
@@ -52,7 +60,7 @@ layer_d = pageTabs2.pageTabs_e60eQaG {left: 426px, top: 158px}
 mainGrid = frame {
   name: "Main Grid",
   width: 100%,
-  layout: {item-gap: 20},
+  layout: {item-gap: 20px},
   overflow: .visible,
   children: [primaryColumn, secondaryColumn]
 }
@@ -60,12 +68,19 @@ mainGrid = frame {
 primaryColumn = frame {
   name: "Primary Column",
   width: 100%,
-  layout: {direction: .column, item-gap: 20},
+  layout: {direction: .column, item-gap: 20px},
   overflow: .visible,
   children: [profileCard_G, layer_f, securityCard_F]
 }
 
-profileCard_G = profileCard.profileCard_vlvneaI {left: 0px, top: 0px}
+profileCard_G = profileCard.profileCard_vlvneaI {
+  left: 0px,
+  top: 0px,
+
+  profileCard.ProfileHero__BlDB8H.layer {
+    fill[0].color: Colors.colors.neutral40
+  }
+}
 
 layer_f = SettingsCard.settingsCard_myBFBNhjqy {left: 0px, top: 216px}
 
@@ -74,22 +89,37 @@ securityCard_F = securityCard.securityCard_HT5T2Qj {left: 0px, top: 263px}
 secondaryColumn = frame {
   name: "Secondary Column",
   width: 33%,
-  layout: {direction: .column, item-gap: 20},
+  layout: {direction: .column, item-gap: 20px},
   overflow: .visible,
   children: [planCard, activityCard]
 }
 
 planCard = planCard2.planCard_LTK7mFiyqR {left: 0px, top: 0px}
 
-activityCard = activityCard2.activityCard_Qrr8IWU {left: 0px, top: 433px}
+activityCard = activityCard2.activityCard_Qrr8IWU {
+  left: 0px,
+  top: 433px,
+
+  activityCard2.activityRow_v.activityRow.ActivityDot_0f7NVNh {
+    fill[0].color: Colors.colors.neutral40
+  }
+
+  activityCard2.activityRow_a.activityRow.ActivityDot_0f7NVNh {
+    fill[0].color: Colors.colors.neutral40
+  }
+
+  activityCard2.activityRow_2.activityRow.ActivityDot_0f7NVNh {
+    fill[0].color: Colors.colors.neutral40
+  }
+}
 
 statTile = frame {
   name: "Stat Tile",
   left: 1500px,
   top: 80px,
   width: 100%,
-  visible: .false,
-  layout: {direction: .column, item-gap: 5},
+  display: .hidden,
+  layout: {direction: .column, item-gap: 5px},
   fill: rgb(96.58%, 96.58%, 96.58%),
   corner-radius: 12px,
   padding: 12px,
@@ -98,7 +128,7 @@ statTile = frame {
 
 statValue = text {
   name: "Stat Value",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "0",
   font-size: 18,
   font-family: "Inter",
@@ -118,8 +148,8 @@ featureRow = frame {
   name: "Feature Row",
   left: 1500px,
   top: 180px,
-  visible: .false,
-  layout: {align-items: .center, item-gap: 8},
+  display: .hidden,
+  layout: {align-items: .center, item-gap: 8px},
   children: [featureDot, featureLabel]
 }
 
@@ -145,8 +175,8 @@ usageMeter = frame {
   left: 1500px,
   top: 240px,
   width: 100%,
-  visible: .false,
-  layout: {direction: .column, item-gap: 8},
+  display: .hidden,
+  layout: {direction: .column, item-gap: 8px},
   children: [usageMeta, usageTrack]
 }
 
@@ -159,7 +189,7 @@ usageMeta = frame {
 
 usageLabel = text {
   name: "Usage Label",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Usage",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -196,8 +226,8 @@ activityRow = frame {
   left: 1500px,
   top: 320px,
   width: 100%,
-  visible: .false,
-  layout: {item-gap: 10},
+  display: .hidden,
+  layout: {item-gap: 10px},
   children: [activityDot, activityCopy]
 }
 
@@ -211,13 +241,13 @@ activityDot = shape {
 
 activityCopy = frame {
   name: "Activity Copy",
-  layout: {direction: .column, item-gap: 4},
+  layout: {direction: .column, item-gap: 4px},
   children: [activityTitle, activityTime]
 }
 
 activityTitle = text {
   name: "Activity Title",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Activity",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
@@ -238,14 +268,14 @@ sectionHeader = frame {
   left: 1500px,
   top: 400px,
   width: 100%,
-  visible: .false,
-  layout: {direction: .column, item-gap: 5},
+  display: .hidden,
+  layout: {direction: .column, item-gap: 5px},
   children: [sectionTitle, sectionDescription]
 }
 
 sectionTitle = text {
   name: "Section Title",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Section",
   font-size: 16,
   font-family: "Inter",
@@ -266,7 +296,7 @@ settingRow = frame {
   left: 1500px,
   top: 480px,
   width: 100%,
-  visible: .false,
+  display: .hidden,
   layout: {justify-content: .space-between, align-items: .center},
   fill: rgb(96.58%, 96.58%, 96.58%),
   corner-radius: 12px,
@@ -276,13 +306,13 @@ settingRow = frame {
 
 settingCopy = frame {
   name: "Setting Copy",
-  layout: {direction: .column, item-gap: 4},
+  layout: {direction: .column, item-gap: 4px},
   children: [settingTitle, settingDescription]
 }
 
 settingTitle = text {
   name: "Setting Title",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Setting",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -311,7 +341,7 @@ settingAction = frame {
 
 settingActionLabel = text {
   name: "Setting Action Label",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Manage",
   font-size: Typography.typography.labelM,
   font-family: "Inter",

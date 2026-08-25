@@ -1,30 +1,31 @@
-import "components/iconButton.elyx" as iconButton
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
+import "icons/24 pixels/calendar-24.svg" as calendar24
 
 export sidebarItem_GirPBI3vMI = frame {
   name: "sidebarItem",
   left: 16px,
   top: 453px,
   width: 100%,
-  height: Spacing.spacing.controlHeight,
+  height: Spacing.spacing.heightM,
   layout: {align-items: .center, item-gap: Spacing.spacing.s},
   fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   corner-radius: Radius.radius.s,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
-  children: [ButtonIconM24_e0j2UAH, Overview_OasUNsl]
+  children: [calendar24svg_X9IF3sCgsd, Overview_OasUNsl]
 }
 
-ButtonIconM24_e0j2UAH = iconButton.iconButton_gqojFFCYlK {
-  left: 135px,
-  top: 535px,
-
-  iconButton.defaultsvg {
-    fill[0].color: rgb(25%, 25%, 25%)
-  }
+calendar24svg_X9IF3sCgsd = icon {
+  name: "calendar-24.svg",
+  left: -1px,
+  top: 450px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.neutral20,
+  contents: calendar24
 }
 
 Overview_OasUNsl = text {
@@ -32,7 +33,7 @@ Overview_OasUNsl = text {
   left: 0px,
   top: 0px,
   height: .auto,
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -43,14 +44,8 @@ Overview_OasUNsl = text {
 sidebarItemVariant_Q = sidebarItem_GirPBI3vMI {
   left: 16px,
   top: 533px,
-  fill[0].color: Colors.colors.primary,
-  fill[0].visible: .nil,
-
-  Overview_OasUNsl {
-    fill[0].color: Colors.colors.textLight
-  }
-
-  ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    fill[0].color: Colors.colors.textLight
-  }
+  border[0].color: Colors.colors.neutral-alpha10,
+  border[0].width: 0.5px,
+  fill[0].color: Colors.colors.neutral90,
+  fill[0].visible: .nil
 }

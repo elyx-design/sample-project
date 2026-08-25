@@ -1,0 +1,124 @@
+import "tokens/colors.elyx" as Colors
+import "tokens/typography.elyx" as Typography
+import "tokens/spacing.elyx" as Spacing
+import "tokens/radius.elyx" as Radius
+
+export button_43RxZnGr30 = frame {
+  name: "Button M (36)",
+  left: 962px,
+  top: 689px,
+  height: Spacing.spacing.heightM,
+  layout: {justify-content: .space-between, align-items: .center},
+  fill: {
+    linear-gradient: {
+      angle: 180deg,
+      stops: [stop(2.58%, Colors.colors.white), stop(100%, Colors.colors.neutral95)]
+    }
+  },
+  border: {color: Colors.colors.neutral-alpha25, width: 0.5px},
+  shadow: {
+    drop-shadow: {
+      color: Colors.colors.neutral-alpha10,
+      offset: point(0px, 2px),
+      blur-radius: 2px,
+      spread: 0px,
+      style: .smooth
+    }
+  },
+  corner-radius: Radius.radius.s,
+  padding-left: Spacing.spacing.paddingM,
+  padding-right: Spacing.spacing.paddingM,
+  children: Button
+}
+
+Button = text {
+  name: "Button",
+  left: 12px,
+  top: 9.5px,
+  width: .auto,
+  fill: Colors.colors.neutral20,
+  contents: "Button",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Medium",
+  align: .center
+}
+
+@variant(Primary)
+ButtonVariant_V = button_43RxZnGr30 {
+  left: 1072px,
+  top: 689px,
+  border[0].color: Colors.colors.neutral20,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.neutral40,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.neutral30,
+  shadow[1].inner-shadow.blur-radius: 0.5px,
+  shadow[1].inner-shadow.color: Colors.colors.highlight,
+  shadow[1].inner-shadow.offset: [0px, 1px],
+  shadow[1].inner-shadow.spread: 0px,
+
+  Button {
+    fill[0].color: Colors.colors.textLight
+  }
+}
+
+@variant(Danger)
+ButtonVariant_T = button_43RxZnGr30 {
+  left: 1181px,
+  top: 689px,
+  border[0].color: Colors.colors.red50,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
+  shadow[1].inner-shadow.blur-radius: 0.5px,
+  shadow[1].inner-shadow.color: Colors.colors.highlight,
+  shadow[1].inner-shadow.offset: [0px, 1.5px],
+  shadow[1].inner-shadow.spread: 0px,
+
+  Button {
+    fill[0].color: Colors.colors.textLight
+  }
+}
+
+@variant(Pressed)
+ButtonVariant_s = button_43RxZnGr30 {
+  left: 962px,
+  top: 769px,
+  fill[0].color: Colors.colors.neutral90,
+  shadow[0].drop-shadow.color: Colors.colors.neutral80,
+  shadow[0].inner-shadow.blur-radius: 3px,
+  shadow[0].inner-shadow.color: Colors.colors.neutral80,
+  shadow[0].inner-shadow.offset: [0px, 3px],
+  shadow[0].inner-shadow.style: .normal
+}
+
+@variant("Primary Pressed")
+ButtonVariant_E = button_43RxZnGr30 {
+  left: 1072px,
+  top: 769px,
+  border[0].color: Colors.colors.neutral30,
+  fill[0].color: Colors.colors.neutral40,
+  shadow[0].drop-shadow.color: Colors.colors.neutral30,
+  shadow[0].inner-shadow.blur-radius: 3px,
+  shadow[0].inner-shadow.color: Colors.colors.neutral30,
+  shadow[0].inner-shadow.offset: [0px, 3px],
+
+  Button {
+    fill[0].color: Colors.colors.textLight
+  }
+}
+
+@variant("Danger Pressed")
+Danger = button_43RxZnGr30 {
+  left: 1181px,
+  top: 769px,
+  border[0].color: Colors.colors.red50,
+  fill[0].color: Colors.colors.red60,
+  shadow[0].drop-shadow.color: Colors.colors.red50,
+  shadow[0].inner-shadow.blur-radius: 3px,
+  shadow[0].inner-shadow.color: Colors.colors.red50,
+  shadow[0].inner-shadow.offset: [0px, 3px],
+  shadow[0].inner-shadow.style: .normal,
+
+  Button {
+    fill[0].color: Colors.colors.textLight
+  }
+}

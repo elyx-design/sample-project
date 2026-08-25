@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>profile-24</title>
+    <g id="profile-24" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+        <path d="M6,20 C6,18.1362337 6,18.2043505 6.30448187,17.4692663 C6.7104577,16.4891539 7.48915392,15.7104577 8.46926627,15.3044819 C9.20435053,15 10.1362337,15 12,15 C13.8637663,15 14.7956495,15 15.5307337,15.3044819 C16.5108461,15.7104577 17.2895423,16.4891539 17.6955181,17.4692663 C18,18.2043505 18,18.1362337 18,20" id="Path" stroke="#000000"></path>
+        <circle id="Oval" stroke="#000000" cx="12" cy="8.5" r="3.5"></circle>
+    </g>
+</svg>

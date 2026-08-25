@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>exit</title>
+    <g id="exit" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0.9,15.1 L0.9,13.7 C0.9,12.0198425 0.9,11.1797637 1.22698043,10.5380285 C1.51460055,9.97354222 1.97354222,9.51460055 2.5380285,9.22698043 C3.17976372,8.9 4.01984248,8.9 5.7,8.9 L10.1,8.9 C11.7801575,8.9 12.6202363,8.9 13.2619715,9.22698043 C13.8264578,9.51460055 14.2853994,9.97354222 14.5730196,10.5380285 C14.9,11.1797637 14.9,12.0198425 14.9,13.7 L14.9,15.1" id="Path" stroke="#000000" stroke-width="1.5" transform="translate(7.9, 12) scale(-1, 1) rotate(90) translate(-7.9, -12)"></path>
+        <g id="Group" stroke-width="1" fill-rule="evenodd" transform="translate(4, 5)" stroke="#000000">
+            <line x1="5" y1="7" x2="16" y2="7" id="Path-2" stroke-width="1.5"></line>
+            <line x1="16" y1="7" x2="12" y2="3" id="Path-3" stroke-width="1.5"></line>
+            <line x1="16" y1="7" x2="12" y2="11" id="Path-4" stroke-width="1.5"></line>
+        </g>
+    </g>
+</svg>

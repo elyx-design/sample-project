@@ -1,0 +1,188 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/spacing.elyx" as spacing
+import "tokens/colors.elyx" as colors
+import "components/brand.elyx" as brand
+import "components/button M.elyx" as button
+import "components/userAvatar.elyx" as userAvatar
+import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
+
+export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
+  name: "HeaderWeb",
+  left: 512px,
+  top: 456px,
+  width: 1024px,
+  height: 68px,
+  padding-top: 0px,
+  padding-left: spacing.spacing.paddingL,
+  padding-bottom: 0px,
+  padding-right: spacing.spacing.paddingL,
+  layout.align-items: .center,
+  layout.direction: .row,
+  layout.item-gap: 20px,
+  layout.justify-content: .space-between,
+  overrides: [
+    insert(logoandiconL32_V3HRZT46je, after = .nil),
+    insert(layer_IZeMbQZvJt, after = logoandiconL32_V3HRZT46je),
+    insert(GroupedStack_s6neGdYpQr, after = layer_IZeMbQZvJt)
+  ]
+}
+
+export Menu_NptvsRIaJB = frame {
+  name: "Menu",
+  left: 191px,
+  top: 456px,
+  width: .auto,
+  layout: {justify-content: .center, align-items: .center},
+  children: Menu_d104U3BrCB
+}
+
+Menu_d104U3BrCB = text {
+  name: "Menu",
+  left: 0px,
+  top: 0px,
+  fill: colors.colors.neutral20,
+  contents: "Menu",
+  font-style: "Medium"
+}
+
+@variant("Menu Variant")
+MenuVariant = Menu_NptvsRIaJB {
+  left: 191px,
+  top: 521px,
+
+  Menu_d104U3BrCB {
+    fill[0].color: colors.colors.neutral-alpha50
+  }
+}
+
+@variant("HeaderWeb Logged in")
+HeaderWebVariant = Header_YoW7I9TfdY {
+  left: 512px,
+  top: 572px,
+  height: spacing.spacing.heightG,
+  overrides: [insert(layer, after = layer_IZeMbQZvJt), remove(GroupedStack_s6neGdYpQr)]
+}
+
+@variant("Menu (icon)")
+MenuVariant2 = Menu_NptvsRIaJB {
+  left: 275px,
+  top: 456px,
+  layout.item-gap: 2px,
+  overrides: [insert(chevrondown12svg, after = Menu_d104U3BrCB)]
+}
+
+@variant("Menu Variant")
+MenuVariant_T = Menu_NptvsRIaJB {
+  left: 275px,
+  top: 521.6479px,
+  layout.item-gap: 2px,
+  overrides: [insert(chevrondown12svg_p, after = Menu_d104U3BrCB)],
+
+  Menu_d104U3BrCB {
+    fill[0].color: colors.colors.neutral-alpha50
+  }
+}
+
+GroupedStack_s6neGdYpQr = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 16px},
+  children: [Menu_ufNhOkr09F, PrimaryM_TNPWRcxiAf]
+}
+
+Menu_ufNhOkr09F = Menu_NptvsRIaJB {
+  left: 1101px,
+  top: 505px,
+
+  Menu_d104U3BrCB {
+    contents: "Sign In"
+  }
+}
+
+PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
+  left: 867px,
+  top: 498px,
+
+  button.Button {
+    contents: "Join the Circle"
+  }
+}
+
+chevrondown12svg_p = icon {
+  name: "chevron-down-12.svg",
+  left: 278px,
+  top: 460px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.neutral-alpha50,
+  contents: chevrondown122
+}
+
+chevrondown12svg = icon {
+  name: "chevron-down-12.svg",
+  left: 297px,
+  top: 460px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.neutral20,
+  contents: chevrondown122
+}
+
+layer = userAvatar.userAvatarVariant2 {left: 1511px, top: 578px}
+
+layer_IZeMbQZvJt = frame {
+  name: "Frame",
+  left: 0px,
+  top: 27.5px,
+  width: .auto,
+  height: 17px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 20px},
+  children: [
+    MenuVariant_0TK5hfhPhi,
+    MenuVariant_sjfcG4QdSJ,
+    MenuVariant_1tlOsP5uEb,
+    MenuVariant_CWSCQz5wR7
+  ]
+}
+
+MenuVariant_0TK5hfhPhi = MenuVariant2 {
+  left: 0px,
+  top: 0px,
+  height: 17px,
+
+  Menu_d104U3BrCB {
+    contents: "Product"
+  }
+}
+
+MenuVariant_sjfcG4QdSJ = MenuVariant {
+  left: 58px,
+  top: 0px,
+  height: 17px,
+
+  Menu_d104U3BrCB {
+    contents: "Pricing"
+  }
+}
+
+MenuVariant_1tlOsP5uEb = MenuVariant {
+  left: 78px,
+  top: 20px,
+  height: 17px,
+
+  Menu_d104U3BrCB {
+    contents: "Blog"
+  }
+}
+
+MenuVariant_CWSCQz5wR7 = MenuVariant {
+  left: 128px,
+  top: 20px,
+  height: 17px,
+
+  Menu_d104U3BrCB {
+    contents: "Help Center"
+  }
+}
+
+logoandiconL32_V3HRZT46je = brand.logoandicon_LKlgCoSHoQ {left: 681px, top: 458px}

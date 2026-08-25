@@ -1,0 +1,40 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "components/button M.elyx" as button
+import "images/background/sand-waves.jpg" as sandwaves
+import "components/header.elyx" as header
+
+layer = cardBackground.cardBackground_zXouRyz {
+  left: 693px,
+  top: 267px,
+  width: 373px,
+  height: 471px,
+  fill[0].image.ref: sandwaves,
+  layout.justify-content: .end,
+  overrides: [insert(layer_j, after = .nil), insert(layer_M, after = layer_j)]
+}
+
+layer_M = button.button_43RxZnGr30 {
+  left: 0px,
+  top: 729px,
+  width: 100%,
+
+  button.Button {
+    contents: "sdfsdfsdf"
+  }
+}
+
+layer_j = header.header_Pp67Y8c {
+  left: 768px,
+  top: 512px,
+
+  header.Description_7ZfScLC {
+    contents: "The desert stretches beyond the edge of sight, endless and still.\nBy day it burns gold, by night it turns to silver under the stars.\nHere, time slows down and the world feels vast, quiet, and untouched.",
+    fill[0].color: colors.colors.white
+  }
+
+  header.Title_ZIlZq9y {
+    contents: "Where the Silence Lives",
+    fill[0].color: colors.colors.white
+  }
+}

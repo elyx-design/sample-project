@@ -3,7 +3,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 
 export header_Pp67Y8c = frame {
-  name: "header",
+  name: "header (left)",
   left: 20px,
   top: 20px,
   width: 100%,
@@ -14,7 +14,7 @@ export header_Pp67Y8c = frame {
 
 Title_ZIlZq9y = text {
   name: "Title",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Title",
   font-size: 20,
   font-family: "Inter",
@@ -28,4 +28,19 @@ Description_7ZfScLC = text {
   font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
+}
+
+@variant("header (center)")
+headerVariant = header_Pp67Y8c {
+  left: 20px,
+  top: 117px,
+  layout.align-items: .center,
+
+  Description_7ZfScLC {
+    align: .center
+  }
+
+  Title_ZIlZq9y {
+    align: .center
+  }
 }

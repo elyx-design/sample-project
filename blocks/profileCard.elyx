@@ -1,7 +1,7 @@
 import "components/cardBackground.elyx" as cardBackground
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "tokens/spacing.elyx" as Spacing
 import "components/statusBadge.elyx" as statusBadge
 import "components/userAvatar.elyx" as userAvatar
 import "components/statTile.elyx" as statTile
@@ -11,6 +11,8 @@ export profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
   name: "profileCard",
   left: 0px,
   top: 0px,
+  border[0].color: Colors.colors.neutral-alpha25,
+  border[0].position: .inside,
   overrides: [
     insert(ProfileCardHeader_J4GZIkC, after = .nil),
     insert(ProfileHero__BlDB8H, after = ProfileCardHeader_J4GZIkC),
@@ -22,7 +24,7 @@ ProfileHero__BlDB8H = frame {
   name: "Profile Hero",
   top: -7px,
   width: 100%,
-  layout: {align-items: .center, item-gap: 16},
+  layout: {align-items: .center, item-gap: 16px},
   children: [layer, ProfileCopy_L4BIoK0]
 }
 
@@ -31,13 +33,13 @@ layer = userAvatar.userAvatarVariant_P {left: 62px, top: 101px}
 ProfileCopy_L4BIoK0 = frame {
   name: "Profile Copy",
   width: 100%,
-  layout: {direction: .column, item-gap: 5},
+  layout: {direction: .column, item-gap: 5px},
   children: [ProfileName_t5aftmC, ProfileRole_q2YZxwP]
 }
 
 ProfileName_t5aftmC = text {
   name: "Profile Name",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Jason Chen",
   font-size: Typography.typography.labelL,
   font-family: "Inter",

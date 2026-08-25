@@ -1,8 +1,9 @@
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
+import "tokens/colors.elyx" as colors
 
 export cardBackground_zXouRyz = frame {
-  name: "cardBackground",
+  name: "cardBackground (Solid)",
   left: 80px,
   top: 467px,
   width: 100%,
@@ -11,7 +12,33 @@ export cardBackground_zXouRyz = frame {
   min-height: 60px,
   layout: {direction: .column, item-gap: Spacing.spacing.paddingXL},
   fill: .white,
-  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  corner-radius: Radius.radius.l,
+  border: {color: colors.colors.neutral-alpha25, width: 0.5px, position: .outside},
+  shadow: {
+    drop-shadow: {
+      color: colors.colors.neutral-alpha10,
+      offset: point(0px, 5px),
+      blur-radius: 5px,
+      spread: 0px
+    }
+  },
+  corner-radius: Radius.radius.xl,
   padding: Spacing.spacing.xl
+}
+
+@variant("cardBackground (Transparent)")
+cardBackgroundSolidVariant = cardBackground_zXouRyz {
+  left: 80px,
+  top: 575px,
+  fill[0].color: colors.colors.highlight,
+  filter[0].radius: 40px,
+  filter[0].type: .background-blur
+}
+
+@variant("cardBackground (None)")
+cardBackgroundSolidVariant_o = cardBackground_zXouRyz {
+  left: 80px,
+  top: 683px,
+  border[0]: .nil,
+  fill[0]: .nil,
+  shadow[0]: .nil
 }

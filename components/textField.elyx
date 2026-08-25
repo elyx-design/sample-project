@@ -1,26 +1,18 @@
-// Define text field variants and states here.
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
+import "icons/24 pixels/calendar-24.svg" as calendar24
 
 export textField_vGl5JUl04s = frame {
   name: "Text Field",
   left: 869px,
   top: 770px,
   width: 100%,
-  height: Spacing.spacing.controlHeight,
+  height: Spacing.spacing.heightM,
   layout: {align-items: .center},
-  fill: {linear-gradient: {angle: 0deg, stops: [stop(0%, .white), stop(100%, rgb(98%, 98%, 98%))]}},
-  border: Colors.colors.textFieldBorder,
-  shadow: {
-    inner-shadow: {
-      color: rgb(0%, 0%, 0%, 10%),
-      offset: point(0px, 1px),
-      blur-radius: 2px,
-      spread: 0px
-    }
-  },
+  fill: Colors.colors.white,
+  border: {color: Colors.colors.neutral-alpha25, width: 0.5px, position: .outside},
   corner-radius: Radius.radius.s,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
@@ -31,7 +23,7 @@ Label = text {
   name: "Label",
   left: 0px,
   top: 0px,
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -44,7 +36,7 @@ TextFieldVariant_L = textField_vGl5JUl04s {
   top: 850px,
 
   Label {
-    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 40%)
+    fill[0].color: Colors.colors.neutral80
   }
 }
 
@@ -52,20 +44,112 @@ TextFieldVariant_L = textField_vGl5JUl04s {
 TextFieldVariant = textField_vGl5JUl04s {
   left: 869px,
   top: 930px,
-  border[0].color: Colors.colors.primary,
+  border[0].color: Colors.colors.neutral20,
   border[0].position: .center,
-  border[0].width: 2
+  border[0].width: 1.5px
 }
 
 @variant(Error)
 Focussed = textField_vGl5JUl04s {
   left: 869px,
   top: 1010px,
-  border[0].color: Colors.colors.danger,
+  border[0].color: Colors.colors.red70,
   border[0].position: .center,
-  border[0].width: 2,
+  border[0].width: 1.5px,
 
   Label {
-    fill[0].color: Colors.colors.danger
+    fill[0].color: Colors.colors.red70
   }
+}
+
+@variant("Text Field (Icon)")
+Placeholder = textField_vGl5JUl04s {
+  left: 989.73px,
+  top: 770px,
+  padding-left: 8px,
+  padding-right: 8px,
+  layout.item-gap: 4px,
+  overrides: [insert(create24svg, after = .nil)]
+}
+
+@variant("Placeholder (Icon)")
+TextFieldIcon = textField_vGl5JUl04s {
+  left: 988.65px,
+  top: 850px,
+  padding-left: 8px,
+  padding-right: 8px,
+  layout.item-gap: 4px,
+  overrides: [insert(create24svg_k, after = .nil)],
+
+  Label {
+    fill[0].color: Colors.colors.neutral80
+  }
+}
+
+create24svg_k = icon {
+  name: "create-24.svg",
+  left: 981px,
+  top: 782px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.neutral20,
+  contents: calendar24
+}
+
+create24svg = icon {
+  name: "create-24.svg",
+  left: 981px,
+  top: 782px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.neutral20,
+  contents: calendar24
+}
+
+@variant("Focused (Icon)")
+PlaceholderIcon = textField_vGl5JUl04s {
+  left: 987.9291px,
+  top: 930px,
+  padding-left: 8px,
+  padding-right: 8px,
+  border[0].color: Colors.colors.neutral20,
+  border[0].width: 1.5px,
+  layout.item-gap: 4px,
+  overrides: [insert(create24svg_H, after = .nil)]
+}
+
+@variant("Error (Icon)")
+PlaceholderIcon_f = textField_vGl5JUl04s {
+  left: 988.2896px,
+  top: 1010px,
+  padding-left: 8px,
+  padding-right: 8px,
+  border[0].color: Colors.colors.red70,
+  border[0].width: 1.5px,
+  layout.item-gap: 4px,
+  overrides: [insert(create24svg_d, after = .nil)],
+
+  Label {
+    fill[0].color: Colors.colors.red70
+  }
+}
+
+create24svg_H = icon {
+  name: "create-24.svg",
+  left: 981px,
+  top: 782px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.neutral20,
+  contents: calendar24
+}
+
+create24svg_d = icon {
+  name: "create-24.svg",
+  left: 981px,
+  top: 782px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.red70,
+  contents: calendar24
 }

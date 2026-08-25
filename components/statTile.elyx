@@ -21,7 +21,7 @@ export statTile_BwT4HpE = frame {
       }
     }
   ],
-  border: Colors.colors.textFieldBorder,
+  border: Colors.colors.neutral-alpha25,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
   children: [StatValue_PPgC1JG, StatLabel_zJ4gqsc]
@@ -29,7 +29,7 @@ export statTile_BwT4HpE = frame {
 
 StatValue_PPgC1JG = text {
   name: "16",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "16",
   font-size: Typography.typography.labelXL,
   font-family: "Inter",

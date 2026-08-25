@@ -3,7 +3,7 @@ import "../tokens/colors.elyx" as Colors
 import "../tokens/typography.elyx" as Typography
 import "../tokens/spacing.elyx" as Spacing
 import "../tokens/radius.elyx" as Radius
-import "./iconButton.elyx" as iconButton
+import "./logo.elyx" as iconButton
 
 export listRow_Gz4ibpIzuN = frame {
   name: "Row",
@@ -39,7 +39,7 @@ Item_e_R_O_9 = text {
   font-style: "Regular",
   line-height: 0,
   letter-spacing: 0,
-  fill: Colors.colors.textDark
+  fill: Colors.colors.neutral20
 }
 
 Item_e_O = text {

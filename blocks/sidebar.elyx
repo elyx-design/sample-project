@@ -1,12 +1,14 @@
 import "components/sidebarItem.elyx" as sidebarItem
+import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as Spacing
 import "components/sidebarHeader.elyx" as sidebarHeader2
 import "components/userSummary.elyx" as userSummary2
-import "icons/layout-panel-top.svg" as layoutpaneltop
-import "icons/folder.svg" as folder
-import "icons/contact.svg" as contact
-import "icons/receipt-text.svg" as receipttext
-import "icons/user-round.svg" as userround
+import "components/cardBackground.elyx" as cardBackground
+import "icons/24 pixels/home-24.svg" as home24
+import "icons/24 pixels/chat.svg" as chat
+import "icons/24 pixels/doc.svg" as doc
+import "icons/24 pixels/cloud-24.svg" as cloud24
+import "icons/24 pixels/bag-24.svg" as bag24
 
 export sidebar_QjenIug = frame {
   name: "sidebar",
@@ -17,7 +19,6 @@ export sidebar_QjenIug = frame {
   layout: {direction: .column, justify-content: .space-between},
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  border-sides: .right,
   padding: Spacing.spacing.paddingM,
   children: [GroupedStack_flp7iRt, userSummary_RP1JqZ1]
 }
@@ -34,7 +35,7 @@ sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {left: 0px, top: 16
 GroupedStack_Wkqkg47 = frame {
   name: "Grouped Stack",
   width: 100%,
-  layout: {direction: .column, item-gap: 2},
+  layout: {direction: .column, item-gap: 2px},
   children: [
     sidebarItem_xGhzXG3,
     sidebarItem_CGF_zna,
@@ -51,10 +52,6 @@ sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_GirPBI3vMI {
   sidebarItem.Overview_OasUNsl {
     contents: "Overview"
   }
-
-  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    contents: layoutpaneltop
-  }
 }
 
 sidebarItem_CGF_zna = sidebarItem.sidebarItem_GirPBI3vMI {
@@ -63,10 +60,6 @@ sidebarItem_CGF_zna = sidebarItem.sidebarItem_GirPBI3vMI {
 
   sidebarItem.Overview_OasUNsl {
     contents: "Projects"
-  }
-
-  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    contents: folder
   }
 }
 
@@ -77,10 +70,6 @@ sidebarItem_aqkFtkF = sidebarItem.sidebarItem_GirPBI3vMI {
   sidebarItem.Overview_OasUNsl {
     contents: "Members"
   }
-
-  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    contents: contact
-  }
 }
 
 sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_GirPBI3vMI {
@@ -89,10 +78,6 @@ sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_GirPBI3vMI {
 
   sidebarItem.Overview_OasUNsl {
     contents: "Billing"
-  }
-
-  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    contents: receipttext
   }
 }
 
@@ -103,10 +88,116 @@ sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
   sidebarItem.Overview_OasUNsl {
     contents: "Account"
   }
-
-  sidebarItem.ButtonIconM24_e0j2UAH.iconButton.defaultsvg {
-    contents: userround
-  }
 }
 
 userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {left: 0px, top: 1241px}
+
+export sideBar_xy3AK6H6s8 = cardBackground.cardBackgroundSolidVariant_o {
+  name: "sideBar",
+  left: 297px,
+  top: -7px,
+  width: .auto,
+  padding-top: 8px,
+  padding-left: 8px,
+  padding-bottom: 8px,
+  padding-right: 8px,
+  layout.item-gap: Spacing.spacing.heightM,
+  overrides: [
+    insert(sidebarHeader_ENiocaFFtM, after = .nil),
+    insert(Menu_kyNuR0df4b, after = sidebarHeader_ENiocaFFtM)
+  ]
+}
+
+Menu_kyNuR0df4b = frame {
+  name: "Menu",
+  width: 100%,
+  layout: {direction: .column, item-gap: 12px},
+  overflow: .visible,
+  children: [
+    sidebarItem_MdZAfxU8r7,
+    sidebarItem_u8reTu0LfB,
+    sidebarItem_WqMsLQOZBI,
+    sidebarItem_Ngvb741Oem,
+    sidebarItem_FQCI0OhATX,
+    sidebarItem_Gv85kN8ZjX
+  ]
+}
+
+sidebarItem_MdZAfxU8r7 = sidebarItem.sidebarItem_GirPBI3vMI {
+  left: 34.59px,
+  top: 57.76px,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Application"
+  }
+
+  sidebarItem.calendar24svg_X9IF3sCgsd {
+    contents: home24
+  }
+}
+
+sidebarItem_u8reTu0LfB = sidebarItem.sidebarItem_GirPBI3vMI {
+  left: 54.59px,
+  top: 77.76px,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Campaign"
+  }
+}
+
+sidebarItem_WqMsLQOZBI = sidebarItem.sidebarItemVariant_Q {
+  left: 74.59px,
+  top: 97.76px,
+  overflow: .visible,
+  border[0].color: colors.colors.neutral-alpha25,
+  border[0].position: .outside,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Messaging"
+  }
+
+  sidebarItem.calendar24svg_X9IF3sCgsd {
+    contents: chat
+  }
+}
+
+sidebarItem_Ngvb741Oem = sidebarItem.sidebarItem_GirPBI3vMI {
+  left: 74.59px,
+  top: 97.76px,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Reports"
+  }
+
+  sidebarItem.calendar24svg_X9IF3sCgsd {
+    contents: doc
+  }
+}
+
+sidebarItem_FQCI0OhATX = sidebarItem.sidebarItem_GirPBI3vMI {
+  left: 74.59px,
+  top: 169.76px,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Library"
+  }
+
+  sidebarItem.calendar24svg_X9IF3sCgsd {
+    contents: cloud24
+  }
+}
+
+sidebarItem_Gv85kN8ZjX = sidebarItem.sidebarItem_GirPBI3vMI {
+  left: 74.59px,
+  top: 205.76px,
+
+  sidebarItem.Overview_OasUNsl {
+    contents: "Sales"
+  }
+
+  sidebarItem.calendar24svg_X9IF3sCgsd {
+    contents: bag24
+  }
+}
+
+sidebarHeader_ENiocaFFtM = sidebarHeader2.sidebarHeader_XE3kaHH {left: 280px, top: -16px}

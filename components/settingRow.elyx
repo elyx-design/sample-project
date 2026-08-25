@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
-import "components/button.elyx" as button
+import "components/button M.elyx" as button
 
 export settingRow_HQWVNjz = frame {
   name: "settingRow",
@@ -11,7 +11,7 @@ export settingRow_HQWVNjz = frame {
   width: .auto,
   height: 59px,
   layout: {justify-content: .space-between, align-items: .center},
-  fill: Colors.colors.tertiary,
+  fill: Colors.colors.neutral95,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
   children: [SettingCopy_xBFnq12, layer]
@@ -19,13 +19,13 @@ export settingRow_HQWVNjz = frame {
 
 SettingCopy_xBFnq12 = frame {
   name: "Setting Copy",
-  layout: {direction: .column, item-gap: 4},
+  layout: {direction: .column, item-gap: 4px},
   children: [SettingTitle_2TQqRLX, SettingDescription_FnvoRLz]
 }
 
 SettingTitle_2TQqRLX = text {
   name: "Label",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Label",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

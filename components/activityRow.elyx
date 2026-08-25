@@ -22,13 +22,13 @@ ActivityDot_0f7NVNh = shape {
 
 ActivityCopy_zRPSoiA = frame {
   name: "Activity Copy",
-  layout: {direction: .column, item-gap: 4},
+  layout: {direction: .column, item-gap: 4px},
   children: [ActivityTitle_9XlhOnW, ActivityTime_dwkCnRe]
 }
 
 ActivityTitle_9XlhOnW = text {
   name: "Event",
-  fill: Colors.colors.textDark,
+  fill: Colors.colors.neutral20,
   contents: "Event",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

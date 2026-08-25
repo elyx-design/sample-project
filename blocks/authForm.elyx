@@ -1,37 +1,87 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
-import "tokens/radius.elyx" as Radius
-import "components/button.elyx" as Button
+import "components/button M.elyx" as Button
 import "components/checkbox.elyx" as Checkbox
 import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
+import "components/cardBackground.elyx" as cardBackground
+import "icons/24 pixels/mail-24.svg" as mail24
+import "icons/24 pixels/padlock-24.svg" as padlock24
 
-export authForm_3fiPvBqdA9 = frame {
-  name: "Auth Form",
-  left: 80px,
-  top: 80px,
-  width: 100%,
-  height: .auto,
-  layout: {direction: .column, item-gap: Spacing.spacing.xl},
-  fill: .white,
-  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  shadow: {
-    drop-shadow: {
-      color: rgb(0%, 0%, 0%, 5%),
-      offset: point(0px, 10px),
-      blur-radius: 20px,
-      spread: 0px,
-      style: .smooth
-    }
-  },
-  corner-radius: Radius.radius.l,
-  padding: Spacing.spacing.paddingXL,
-  children: [layer_2, fields, optionsRow, submitButton]
+export cardBackgroundSolid_gpNRKSrmXr = cardBackground.cardBackgroundSolidVariant {
+  name: "AuthForm",
+  left: 39px,
+  top: 21px,
+  overrides: [
+    insert(header_oYCF44WvTm, after = .nil),
+    insert(Fields_J3gpijrROD, after = header_oYCF44WvTm),
+    insert(Options_aJ9ehahXHq, after = Fields_J3gpijrROD),
+    insert(PrimaryM_cvjxe6VGaM, after = Options_aJ9ehahXHq)
+  ]
 }
 
-layer_2 = header2.header_Pp67Y8c {
+PrimaryM_cvjxe6VGaM = Button.ButtonVariant_V {
+  width: 100%,
+
+  Button.Button {
+    contents: "Sign in"
+  }
+}
+
+Options_aJ9ehahXHq = frame {
+  name: "Options",
+  left: -33px,
+  top: 62.75px,
+  width: 100%,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [Toggle_WRveQrGdLu, RememberLabel_PDIjOANzy7]
+}
+
+Toggle_WRveQrGdLu = Checkbox.Frame_P {left: 127px, top: 285px}
+
+RememberLabel_PDIjOANzy7 = text {
+  name: "Remember Label",
+  fill: Colors.colors.neutral20,
+  contents: "Remember me",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+Fields_J3gpijrROD = frame {
+  name: "Fields",
   left: 0px,
+  top: 42.75px,
+  width: 100%,
+  layout: {direction: .column, item-gap: Spacing.spacing.m},
+  overflow: .visible,
+  children: [Placeholder_B9MWgiGhhw, Placeholder_hfV3SUGjjy]
+}
+
+Placeholder_B9MWgiGhhw = TextField.TextFieldIcon {
+  TextField.Label {
+    contents: "Email address"
+  }
+
+  TextField.create24svg_k {
+    contents: mail24
+  }
+}
+
+Placeholder_hfV3SUGjjy = TextField.TextFieldIcon {
+  TextField.Label {
+    contents: "Password"
+  }
+
+  TextField.create24svg_k {
+    contents: padlock24
+  }
+}
+
+header_oYCF44WvTm = header2.headerVariant {
+  left: -33px,
   top: 120px,
 
   header2.Description_7ZfScLC {
@@ -40,53 +90,5 @@ layer_2 = header2.header_Pp67Y8c {
 
   header2.Title_ZIlZq9y {
     contents: "Sign In"
-  }
-}
-
-fields = frame {
-  name: "Fields",
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.spacing.m},
-  children: [emailField, passwordField]
-}
-
-emailField = TextField.TextFieldVariant_L {
-  TextField.Label {
-    contents: "Email address"
-  }
-}
-
-passwordField = TextField.TextFieldVariant_L {
-  TextField.Label {
-    contents: "Password"
-  }
-}
-
-optionsRow = frame {
-  name: "Options",
-  left: 0px,
-  top: 181px,
-  width: 100%,
-  height: .auto,
-  layout: {align-items: .center, item-gap: 8},
-  children: [layer, rememberLabel]
-}
-
-layer = Checkbox.Frame_P {left: 127px, top: 285px}
-
-rememberLabel = text {
-  name: "Remember Label",
-  fill: Colors.colors.textDark,
-  contents: "Remember me",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
-}
-
-submitButton = Button.ButtonVariant_V {
-  width: 100%,
-
-  Button.Button {
-    contents: "Sign in"
   }
 }

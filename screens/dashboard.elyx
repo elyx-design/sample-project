@@ -1,0 +1,23 @@
+import "tokens/colors.elyx" as colors
+import "blocks/sidebar.elyx" as sidebar
+import "components/cardBackground.elyx" as cardBackground
+
+export SignInScreen_8cf4C95IUT = frame {
+  name: "Dashboard",
+  left: 53px,
+  top: 133px,
+  width: 1291px,
+  height: 803px,
+  layout: {direction: .row},
+  fill: colors.colors.neutral95,
+  padding: 8px,
+  children: [sideBar_fTyCwX7uzk, cardBackgroundSolid_W7nA5JjfFV]
+}
+
+sideBar_fTyCwX7uzk = sidebar.sideBar_xy3AK6H6s8 {left: 559.5px, top: 24px, width: 263px}
+
+cardBackgroundSolid_W7nA5JjfFV = cardBackground.cardBackground_zXouRyz {
+  left: 926px,
+  top: 0px,
+  height: 100%
+}

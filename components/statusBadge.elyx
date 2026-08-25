@@ -8,7 +8,7 @@ export statusBadge_3ac5QoB = frame {
   left: 461px,
   top: 1px,
   width: .auto,
-  height: Spacing.spacing.controlHeight,
+  height: Spacing.spacing.heightM,
   layout: {justify-content: .center, align-items: .center},
   fill: rgb(81.8%, 94.6067%, 83.9155%),
   corner-radius: Radius.radius.max,

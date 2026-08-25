@@ -1,6 +1,5 @@
-// Define icon-only button variants and states here.
-import "../icons/default.svg" as default
-import "../tokens/colors.elyx" as Colors
+import "tokens/colors.elyx" as Colors
+import "icons/logo.svg" as logo
 
 export iconButton_gqojFFCYlK = frame {
   name: "Button Icon M (24)",
@@ -9,38 +8,69 @@ export iconButton_gqojFFCYlK = frame {
   width: .auto,
   height: .auto,
   layout: {direction: .column, justify-content: .center, align-items: .center},
+  fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   corner-radius: 0px,
-  fill: {color: oklch(84.52%, 0, 0deg), visible: .false},
   children: defaultsvg
 }
 
 defaultsvg = icon {
   name: "default.svg",
-  contents: default,
   left: -0.17px,
   top: -1.2357px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.textDark
+  fill: Colors.colors.neutral20,
+  contents: logo
 }
 
 @variant("Button Icon S (16)")
 ButtonIconMVariant_N = iconButton_gqojFFCYlK {
   left: 260px,
   top: 519px,
-  overrides: [set(defaultsvg, "width", 16px), set(defaultsvg, "height", 16px)]
+
+  defaultsvg {
+    left: -4.17px,
+    top: -5.2357px,
+    width: 16px,
+    height: 16px
+  }
 }
 
 @variant("Button Icon L (32)")
 ButtonIconMVariant_3 = iconButton_gqojFFCYlK {
   left: 428px,
   top: 519px,
-  overrides: [set(defaultsvg, "width", 32px), set(defaultsvg, "height", 32px)]
+
+  defaultsvg {
+    left: 3.83px,
+    top: 2.76px,
+    width: 32px,
+    height: 32px
+  }
 }
 
 @variant("Button Icon XL (48)")
 ButtonIconL32 = iconButton_gqojFFCYlK {
   left: 524px,
   top: 519px,
-  overrides: [set(defaultsvg, "width", 48px), set(defaultsvg, "height", 48px)]
+
+  defaultsvg {
+    left: 11.83px,
+    top: 10.76px,
+    width: 48px,
+    height: 48px
+  }
+}
+
+@variant("Button Icon XXL (80)")
+ButtonIconXL48 = iconButton_gqojFFCYlK {
+  left: 636px,
+  top: 519px,
+
+  defaultsvg {
+    left: 11.83px,
+    top: 10.76px,
+    width: 80px,
+    height: 80px
+  }
 }

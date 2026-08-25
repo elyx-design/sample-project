@@ -1,73 +1,259 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
-import "images/031.jpg" as module
+import "images/profile/005.jpg" as module4
 
 export userAvatar_mKGJ6R7 = frame {
   name: "userAvatar",
-  left: 12px,
+  left: -94px,
   top: 10px,
   width: 36px,
   height: 36px,
   layout: {justify-content: .center, align-items: .center},
   corner-radius: Radius.radius.max,
-  fill: rgb(65.32%, 82.7695%, 99.9886%),
-  children: AvatarInitials_F4uGTp6
+  overflow: .visible,
+  children: [Ellipse_9bQZpYxKwR, AvatarInitials_F4uGTp6]
+}
+
+Ellipse_9bQZpYxKwR = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 36px,
+  height: 36px,
+  ignore-stack: .true,
+  fill: Colors.colors.neutral90,
+  border: {color: Colors.colors.white, width: 2px},
+  type: .ellipse
 }
 
 AvatarInitials_F4uGTp6 = text {
   name: "Avatar Initials",
+  left: 10px,
+  top: 10.5px,
+  width: 16px,
+  height: 15px,
+  fill: Colors.colors.neutral20,
   contents: "JC",
-  font-family: "Inter",
   font-size: Typography.typography.labelM,
-  font-style: "SemiBold",
-  fill: Colors.colors.textDark
-}
-
-@variant(PhotoM)
-userAvatarVariant_A = userAvatar_mKGJ6R7 {
-  left: 132px,
-  top: 10px,
-  overrides: [
-    remove(AvatarInitials_F4uGTp6),
-    set("fill[0].image.ref", module),
-    set("fill[0].image.sizing", .fill)
-  ]
+  font-family: "Inter",
+  font-style: "SemiBold"
 }
 
 @variant(userAvatarL)
 userAvatarVariant_P = userAvatar_mKGJ6R7 {
-  left: 12px,
+  left: -94px,
   top: 94px,
+  width: 72px,
+  height: 72px,
   overrides: [
-    insert(LargeAvatarInitials_MsmHoiQ, {after: .nil}),
-    remove(AvatarInitials_F4uGTp6),
-    set("width", 72px),
-    set("height", 72px),
-    set("corner-radius", 16)
-  ]
+    insert(LargeAvatarInitials_MsmHoiQ, after = Ellipse_9bQZpYxKwR),
+    remove(AvatarInitials_F4uGTp6)
+  ],
+
+  Ellipse_9bQZpYxKwR {
+    width: 72px,
+    height: 72px
+  }
 }
 
 LargeAvatarInitials_MsmHoiQ = text {
   name: "Large Avatar Initials",
-  contents: "JC",
   left: 21.5px,
-  font-family: "Inter",
+  fill: Colors.colors.neutral20,
+  contents: "JC",
   font-size: 22,
-  font-style: "SemiBold",
-  fill: Colors.colors.textDark
+  font-family: "Inter",
+  font-style: "SemiBold"
 }
 
 @variant(PhotoL)
 PhotoM = userAvatar_mKGJ6R7 {
-  left: 132px,
+  left: 117px,
   top: 94px,
+  width: 72px,
+  height: 72px,
+  overrides: [insert(bg, after = .nil), remove(AvatarInitials_F4uGTp6), remove(Ellipse_9bQZpYxKwR)]
+}
+
+@variant("PhotoM (status)")
+userAvatarVariant2 = userAvatar_mKGJ6R7 {
+  left: 135px,
+  top: 10px,
   overrides: [
+    insert(bg_C, after = .nil),
+    insert(statusonline_C, after = bg_C),
     remove(AvatarInitials_F4uGTp6),
-    set("width", 72px),
-    set("height", 72px),
-    set("corner-radius", 16),
-    set("fill[0].image.ref", module),
-    set("fill[0].image.sizing", .fill)
+    remove(Ellipse_9bQZpYxKwR)
   ]
+}
+
+@variant(PhotoM)
+userAvatarVariant_O = userAvatar_mKGJ6R7 {
+  left: 69px,
+  top: 10px,
+  overrides: [
+    insert(bg_3, after = .nil),
+    remove(AvatarInitials_F4uGTp6),
+    remove(Ellipse_9bQZpYxKwR)
+  ]
+}
+
+@variant("userAvatar (status)")
+userAvatarVariant = userAvatar_mKGJ6R7 {
+  left: -30.01px,
+  top: 10px,
+  overrides: [insert(statusonline_OJRbI1Uijs, after = AvatarInitials_F4uGTp6)]
+}
+
+@variant("userAvatarL (status)")
+userAvatarL = userAvatar_mKGJ6R7 {
+  left: 2px,
+  top: 94px,
+  width: 72px,
+  height: 72px,
+  overrides: [
+    insert(LargeAvatarInitials, after = Ellipse_9bQZpYxKwR),
+    insert(statusonline_k, after = LargeAvatarInitials),
+    remove(AvatarInitials_F4uGTp6)
+  ],
+
+  Ellipse_9bQZpYxKwR {
+    width: 72px,
+    height: 72px
+  }
+}
+
+export Frame_NrNl4oYiZm = frame {
+  name: "User (right)",
+  left: 12px,
+  top: 274px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 12px},
+  children: UserName_BTTiME53Br
+}
+
+UserName_BTTiME53Br = text {
+  name: "User Name",
+  left: 53px,
+  top: 10px,
+  fill: .black,
+  contents: "User Name"
+}
+
+export Ellipse_4OkVFaGU2Y = shape {
+  name: "status (online)",
+  left: -94px,
+  top: -72.12px,
+  width: 8px,
+  height: 8px,
+  fill: rgb(0%, 92.12%, 0%),
+  border: {color: Colors.colors.white, position: .outside},
+  type: .ellipse
+}
+
+@variant("status (away)")
+statusonlineVariant = Ellipse_4OkVFaGU2Y {
+  left: -58px,
+  top: -72px,
+  fill[0].color: rgb(100%, 65.3497%, 0%)
+}
+
+statusonline_OJRbI1Uijs = Ellipse_4OkVFaGU2Y {
+  left: 26.85px,
+  top: 26.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
+
+statusonline_k = Ellipse_4OkVFaGU2Y {
+  left: 57.85px,
+  top: 57.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
+
+LargeAvatarInitials = text {
+  name: "Large Avatar Initials",
+  left: 21.5px,
+  fill: Colors.colors.neutral20,
+  contents: "JC",
+  font-size: 22,
+  font-family: "Inter",
+  font-style: "SemiBold"
+}
+
+statusonline_C = Ellipse_4OkVFaGU2Y {
+  left: 26.85px,
+  top: 26.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
+
+@variant("PhotoL (status)")
+PhotoL = userAvatar_mKGJ6R7 {
+  left: 217px,
+  top: 94px,
+  width: 72px,
+  height: 72px,
+  overrides: [
+    insert(bg_n, after = .nil),
+    insert(statusonline_J, after = bg_n),
+    remove(AvatarInitials_F4uGTp6),
+    remove(Ellipse_9bQZpYxKwR)
+  ]
+}
+
+statusonline_J = Ellipse_4OkVFaGU2Y {
+  left: 57.85px,
+  top: 57.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
+
+bg_n = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 72px,
+  height: 72px,
+  ignore-stack: .true,
+  fill: {image: {ref: module4}},
+  border: {color: Colors.colors.white, width: 2px},
+  type: .ellipse
+}
+
+bg = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 72px,
+  height: 72px,
+  ignore-stack: .true,
+  fill: {image: {ref: module4}},
+  border: {color: Colors.colors.white, width: 2px},
+  type: .ellipse
+}
+
+bg_3 = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 36px,
+  height: 36px,
+  ignore-stack: .true,
+  fill: {image: {ref: module4}},
+  border: {color: Colors.colors.white, width: 2px},
+  type: .ellipse
+}
+
+bg_C = shape {
+  name: "bg",
+  left: 0px,
+  top: 0px,
+  width: 36px,
+  height: 36px,
+  ignore-stack: .true,
+  fill: {image: {ref: module4}},
+  border: {color: Colors.colors.white, width: 2px},
+  type: .ellipse
 }
