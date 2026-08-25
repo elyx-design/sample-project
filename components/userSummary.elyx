@@ -1,8 +1,8 @@
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/avatar.elyx" as userAvatar
+import "components/header.elyx" as header
 
 export userSummary_3nStch3 = frame {
   name: "userSummary",
@@ -13,31 +13,83 @@ export userSummary_3nStch3 = frame {
   layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
   fill: Colors.colors.tertiary,
   corner-radius: Radius.radius.m,
-  padding: Spacing.spacing.paddingM,
-
+  padding: Spacing.spacing.paddingM
 }
 
-
-UserCopy_NGAEIPi = frame {
-  name: "User Copy",
-  layout: {direction: .column, item-gap: 4},
-  children: [UserName_9ZA9Ann, UserEmail_Gl6zsNE]
+export UserSummaryS_clM0CpDw4i = frame {
+  name: "User Summary S",
+  height: Spacing.spacing.heightM,
+  layout: {align-items: .center, item-gap: 12px},
+  children: [AvatarSPhoto_aTBp6lpaL0, HeaderSLeft_v1iI8KgpFk]
 }
 
-UserName_9ZA9Ann = text {
-  name: "User Name",
-  fill: Colors.colors.black20,
-  contents: "Jason Chen",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Medium"
+AvatarSPhoto_aTBp6lpaL0 = userAvatar.AvatarSVariant {
+  name: "Avatar S (Photo)",
+  left: -7.5px,
+  top: 28px
 }
 
-UserEmail_Gl6zsNE = text {
-  name: "User Email",
-  fill: Colors.colors.blackAlpha70,
-  contents: "jason@acme.design",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
-  font-style: "Regular"
+HeaderSLeft_v1iI8KgpFk = header.HeaderSLeft_nBOG31rNTk {
+  name: "Header S (Left)",
+  left: -8.5px,
+  top: -18px,
+
+  header.UserEmail_wCqcy5VUFs {
+    contents: "nora@mail.com"
+  }
+
+  header.UserName_Qkcl7dWEIn {
+    contents: "Nora Harper"
+  }
+}
+
+@variant("User Summary S (Center)")
+UserSummarySVariant = UserSummaryS_clM0CpDw4i {
+  left: 140px,
+  top: -18px,
+  height: .auto,
+  layout.direction: .column,
+
+  @use-variant(header.HeaderSLeftVariant)
+  HeaderSLeft_v1iI8KgpFk {}
+}
+
+export UserSummaryM_3TgjJsJRgL = frame {
+  name: "User Summary M",
+  left: -67px,
+  top: 192px,
+  height: 72px,
+  layout: {justify-content: .end, align-items: .center, item-gap: 20px},
+  children: [AvatarMVariant_96PsSx7qfC, HeaderMLeft_U02Hb8hK7v]
+}
+
+AvatarMVariant_96PsSx7qfC = userAvatar.AvatarMVariant {
+  name: "Avatar M Variant",
+  left: 0px,
+  top: 0px
+}
+
+HeaderMLeft_U02Hb8hK7v = header.header_Pp67Y8c {
+  name: "Header M (Left)",
+  left: 83px,
+  top: 10px,
+
+  header.Description_7ZfScLC {
+    contents: "nora@mail.com"
+  }
+
+  header.Title_ZIlZq9y {
+    contents: "Nora Harper"
+  }
+}
+
+@variant("User Summary M Variant")
+UserSummaryMVariant = UserSummaryM_3TgjJsJRgL {
+  left: 229px,
+  top: 192px,
+  height: .auto,
+  layout.direction: .column,
+
+  @use-variant(header.headerVariant)
+  HeaderMLeft_U02Hb8hK7v {}
 }

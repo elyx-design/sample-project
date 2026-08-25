@@ -2,6 +2,8 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
+import "icons/24 pixels/close-24.svg" as close24
+import "icons/20 pixels/close-20.svg" as close20
 
 export button_43RxZnGr30 = frame {
   name: "Button M (36)",
@@ -25,9 +27,9 @@ export button_43RxZnGr30 = frame {
       style: .smooth
     }
   },
-  corner-radius: Radius.radius.s,
-  padding-left: Spacing.spacing.paddingM,
-  padding-right: Spacing.spacing.paddingM,
+  corner-radius: Radius.radius.max,
+  padding-left: 16px,
+  padding-right: 16px,
   children: Button
 }
 
@@ -128,7 +130,7 @@ export ButtonX28_unc1oz6mM6 = frame {
   left: 962px,
   top: 917px,
   height: 28px,
-  layout: {justify-content: .space-between, align-items: .center},
+  layout: {justify-content: .center, align-items: .center},
   fill: {
     linear-gradient: {
       angle: 180deg,
@@ -145,8 +147,8 @@ export ButtonX28_unc1oz6mM6 = frame {
       style: .smooth
     }
   },
-  corner-radius: 10px,
-  padding: [0px, 8px],
+  corner-radius: Radius.radius.max,
+  padding: [0px, 12px],
   children: Button_2BBvydtXMm
 }
 
@@ -239,4 +241,52 @@ ButtonS28Variant_t = ButtonX28_unc1oz6mM6 {
   Button_2BBvydtXMm {
     fill[0].color: Colors.colors.white100
   }
+}
+
+@variant(Icon)
+ButtonM36Variant_h = button_43RxZnGr30 {left: 1348px, top: 689px}
+
+@variant(Icon)
+ButtonM36Variant = button_43RxZnGr30 {
+  left: 1291px,
+  top: 689px,
+  width: Spacing.spacing.heightM,
+  border[0].visible: .false,
+  fill[0].color: Colors.colors.whiteAlpha50,
+  filter[0].radius: 40px,
+  filter[0].type: .background-blur,
+  overrides: [insert(close24svg, after = .nil), remove(Button)],
+  shadow[0]: .nil
+}
+
+@variant(Icon)
+ButtonS28Variant_X = ButtonX28_unc1oz6mM6 {
+  left: 1210px,
+  top: 917px,
+  width: Spacing.spacing.heightS,
+  border[0].visible: .false,
+  fill[0].color: Colors.colors.whiteAlpha50,
+  filter[0].radius: 40px,
+  filter[0].type: .background-blur,
+  overrides: [insert(close20svg, after = .nil), remove(Button_2BBvydtXMm)],
+  shadow[0]: .nil
+}
+
+close20svg = icon {
+  name: "close-20.svg",
+  left: 1211px,
+  top: 918px,
+  width: 20px,
+  height: 20px,
+  contents: close20
+}
+
+close24svg = icon {
+  name: "close-24.svg",
+  left: 1387px,
+  top: 682px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.black20,
+  contents: close24
 }

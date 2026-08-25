@@ -1,14 +1,13 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "tokens/spacing.elyx" as Spacing
 
 export header_Pp67Y8c = frame {
-  name: "header (left)",
+  name: "Header M (Left)",
   left: 20px,
   top: 20px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: Spacing.spacing.s},
+  layout: {direction: .column, item-gap: 2px},
   children: [Title_ZIlZq9y, Description_7ZfScLC]
 }
 
@@ -32,7 +31,7 @@ Description_7ZfScLC = text {
   line-height: 1.5
 }
 
-@variant("header (center)")
+@variant("Header M (Center)")
 headerVariant = header_Pp67Y8c {
   left: 20px,
   top: 117px,
@@ -44,6 +43,50 @@ headerVariant = header_Pp67Y8c {
   }
 
   Title_ZIlZq9y {
+    align: .center
+  }
+}
+
+export HeaderSLeft_nBOG31rNTk = frame {
+  name: "Header S (Left)",
+  left: -267.28px,
+  top: 29px,
+  height: 36px,
+  layout: {direction: .column, item-gap: 2px},
+  children: [UserName_Qkcl7dWEIn, UserEmail_wCqcy5VUFs]
+}
+
+UserName_Qkcl7dWEIn = text {
+  name: "Title",
+  width: 100%,
+  fill: Colors.colors.black20,
+  contents: "Title",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "SemiBold"
+}
+
+UserEmail_wCqcy5VUFs = text {
+  name: "Subtitle",
+  width: 100%,
+  fill: Colors.colors.blackAlpha70,
+  contents: "Subtitle",
+  font-size: Typography.typography.labelM,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+@variant("Header S (Center)")
+HeaderSLeftVariant = HeaderSLeft_nBOG31rNTk {
+  left: -267.28px,
+  top: 113px,
+  layout.align-items: .center,
+
+  UserEmail_wCqcy5VUFs {
+    align: .center
+  }
+
+  UserName_Qkcl7dWEIn {
     align: .center
   }
 }

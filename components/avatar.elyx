@@ -23,7 +23,7 @@ Ellipse_9bQZpYxKwR = shape {
   height: 36px,
   ignore-stack: .true,
   fill: Colors.colors.black90,
-  border: {color: Colors.colors.white100, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -84,6 +84,7 @@ export AvatarM_ej3y9t9gG9 = frame {
   width: 72px,
   height: 72px,
   layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
   children: [bg_3215z21ZmM, LargeAvatarInitials_aSqGwd9dLG, statusonline_b8jSnQus5L]
 }
 
@@ -95,7 +96,7 @@ bg_3215z21ZmM = shape {
   height: 72px,
   ignore-stack: .true,
   fill: Colors.colors.black90,
-  border: {color: Colors.colors.white100, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -121,6 +122,7 @@ statusonline_b8jSnQus5L = Ellipse_4OkVFaGU2Y {
 AvatarMVariant = AvatarM_ej3y9t9gG9 {
   left: -4px,
   top: 94px,
+  layout.include-borders: .true,
   overrides: [
     insert(bg, after = .nil),
     remove(LargeAvatarInitials_aSqGwd9dLG),
@@ -136,7 +138,7 @@ bg = shape {
   height: 72px,
   ignore-stack: .true,
   fill: {image: {ref: module4}},
-  border: {color: Colors.colors.white100, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -148,6 +150,6 @@ bg_e = shape {
   height: 36px,
   ignore-stack: .true,
   fill: {image: {ref: module4}},
-  border: {color: Colors.colors.white100, width: 2px},
+  border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }

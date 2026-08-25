@@ -22,7 +22,7 @@ export cardBackground_zXouRyz = frame {
     }
   },
   corner-radius: Radius.radius.xl,
-  padding: Spacing.spacing.xl
+  padding: 24px
 }
 
 @variant("cardBackground (Transparent)")

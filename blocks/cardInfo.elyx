@@ -1,0 +1,136 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "components/header.elyx" as header
+import "images/background/nightMountain.jpg" as nightMountain
+import "components/userSummary.elyx" as userSummary
+import "components/tag.elyx" as tag
+import "components/button.elyx" as button
+
+export cardBackgroundSolid_hxqOj5bsxM = cardBackground.cardBackground_zXouRyz {
+  name: "cardBackground (Solid)",
+  left: 693px,
+  top: 267px,
+  width: 370px,
+  height: 470px,
+  fill[0].image.ref: nightMountain,
+  layout.item-gap: 20px,
+  layout.justify-content: .space-between,
+  overrides: [
+    insert(GroupedStack_v1Q1kr3Cok, after = .nil),
+    insert(GroupedStack_Xx90H5VoHZ, after = GroupedStack_v1Q1kr3Cok)
+  ]
+}
+
+GroupedStack_Xx90H5VoHZ = frame {
+  name: "Footer",
+  width: 100%,
+  layout: {direction: .column, item-gap: 32px},
+  children: [GroupedStack_2Kp3S7oMTn, ButtonM36_zR4KGcaKIy]
+}
+
+GroupedStack_2Kp3S7oMTn = frame {
+  name: "Info",
+  width: 100%,
+  layout: {direction: .column, item-gap: 16px},
+  children: [HeaderMLeft_hJkABIkbNb, GroupedStack_v9ldFLzvZ6]
+}
+
+HeaderMLeft_hJkABIkbNb = header.header_Pp67Y8c {
+  name: "Header M (Left)",
+  left: 768px,
+  top: 512px,
+
+  header.Description_7ZfScLC {
+    contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure.",
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  header.Title_ZIlZq9y {
+    contents: "A Breathtaking Escape",
+    fill[0].color: colors.colors.white100
+  }
+}
+
+GroupedStack_v9ldFLzvZ6 = frame {
+  name: "Tags",
+  width: 100%,
+  layout: {item-gap: 8px},
+  children: [TagTransparent_kd02OYI9lI, TagTransparent_1U3VeFBgq3, TagTransparent_jGUzhscTvO]
+}
+
+TagTransparent_kd02OYI9lI = tag.TagTransparentVariant {
+  name: "Icon and Label",
+  left: 765px,
+  top: 726px,
+
+  tag.Tag_gKZPtXRbSo {
+    contents: "4,2",
+    fill[0].color: colors.colors.white100
+  }
+
+  tag.star24svg {
+    fill[0].color: colors.colors.white100
+  }
+}
+
+TagTransparent_1U3VeFBgq3 = tag.Frame_EkvUQb0wU7 {
+  name: "Tag (Transparent)",
+  left: 785px,
+  top: 746px,
+
+  tag.Tag_gKZPtXRbSo {
+    contents: "Thriller",
+    fill[0].color: colors.colors.white100
+  }
+}
+
+TagTransparent_jGUzhscTvO = tag.Frame_EkvUQb0wU7 {
+  name: "Tag (Transparent)",
+  left: 785px,
+  top: 827.25px,
+
+  tag.Tag_gKZPtXRbSo {
+    contents: "Drama",
+    fill[0].color: colors.colors.white100
+  }
+}
+
+ButtonM36_zR4KGcaKIy = button.button_43RxZnGr30 {
+  name: "Button M (36)",
+  left: 0px,
+  top: 165px,
+
+  button.Button {
+    contents: "Read full review"
+  }
+}
+
+GroupedStack_v1Q1kr3Cok = frame {
+  name: "Top",
+  width: 100%,
+  layout: {justify-content: .space-between, item-gap: 20px},
+  overflow: .visible,
+  children: [UserSummaryS_hvtjNfK8hg, Icon_7SEczsI9Lh]
+}
+
+UserSummaryS_hvtjNfK8hg = userSummary.UserSummaryS_clM0CpDw4i {
+  name: "User Summary S",
+  left: 786px,
+  top: 143px,
+  overflow: .visible,
+
+  userSummary.HeaderSLeft_v1iI8KgpFk.header.UserEmail_wCqcy5VUFs {
+    contents: "Writer",
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  userSummary.HeaderSLeft_v1iI8KgpFk.header.UserName_Qkcl7dWEIn {
+    fill[0].color: colors.colors.white100
+  }
+
+  userSummary.AvatarSPhoto_aTBp6lpaL0.userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Icon_7SEczsI9Lh = button.ButtonS28Variant_X {name: "Icon", left: 1097px, top: 291px}

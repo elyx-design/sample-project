@@ -1,9 +1,6 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as Spacing
-import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "components/statusBadge.elyx" as statusBadge
-import "components/avatar.elyx" as userAvatar
 import "components/statTile.elyx" as statTile
 import "components/header.elyx" as header
 
@@ -11,7 +8,6 @@ export profileCard_vlvneaI = cardBackground.cardBackground_zXouRyz {
   name: "profileCard",
   left: 0px,
   top: 0px,
-  border[0].color: Colors.colors.blackAlpha25,
   border[0].position: .inside,
   overrides: [
     insert(ProfileCardHeader_J4GZIkC, after = .nil),
@@ -24,34 +20,7 @@ ProfileHero__BlDB8H = frame {
   name: "Profile Hero",
   top: -7px,
   width: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: [layer, ProfileCopy_L4BIoK0]
-}
-
-
-ProfileCopy_L4BIoK0 = frame {
-  name: "Profile Copy",
-  width: 100%,
-  layout: {direction: .column, item-gap: 5px},
-  children: [ProfileName_t5aftmC, ProfileRole_q2YZxwP]
-}
-
-ProfileName_t5aftmC = text {
-  name: "Profile Name",
-  fill: Colors.colors.black20,
-  contents: "Jason Chen",
-  font-size: Typography.typography.labelL,
-  font-family: "Inter",
-  font-style: "SemiBold"
-}
-
-ProfileRole_q2YZxwP = text {
-  name: "Profile Role",
-  fill: Colors.colors.blackAlpha70,
-  contents: "Design lead at Acme Design",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  layout: {align-items: .center, item-gap: 16px}
 }
 
 ProfileStats_uRSls4V = frame {

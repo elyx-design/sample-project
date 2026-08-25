@@ -1,0 +1,218 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "components/button.elyx" as button
+import "components/userSummary.elyx" as userSummary
+import "images/background/dots.jpg" as dots
+import "components/avatarGroup.elyx" as avatarGroup
+
+export SocialCard_QzfezrXgSp = cardBackground.cardBackground_zXouRyz {
+  name: "Social Card",
+  left: 186px,
+  top: 176px,
+  width: 317px,
+  height: 441px,
+  padding-top: 0px,
+  padding-left: 0px,
+  padding-bottom: 0px,
+  padding-right: 0px,
+  fill[0].color: colors.colors.black95,
+  layout.align-items: .center,
+  layout.item-gap: 16px,
+  layout.justify-content: .space-between,
+  overrides: [
+    insert(GroupedStack_1gmgOy2Wt0, after = .nil),
+    insert(GroupedStack_Xn7zNLiGaY, after = GroupedStack_1gmgOy2Wt0)
+  ]
+}
+
+layer_z = button.ButtonX28_unc1oz6mM6 {name: "Button S (28)", left: 1318px, top: 603px}
+
+layer = userSummary.UserSummaryM_3TgjJsJRgL {
+  name: "User Summary M",
+  left: 1187.73px,
+  top: 318.4px,
+  width: 88px
+}
+
+GroupedStack_Xn7zNLiGaY = frame {
+  name: "Footer",
+  width: 100%,
+  height: 64px,
+  layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
+  overflow: .visible,
+  padding-left: 16px,
+  padding-right: 16px,
+  children: [profileGroup_j6LSOW6AIt, Primary_74gHxo0W69]
+}
+
+profileGroup_j6LSOW6AIt = avatarGroup.profileGroup_yzgf0sKCPf {
+  name: "profileGroup",
+  left: 20px,
+  top: 383px
+}
+
+Primary_74gHxo0W69 = button.ButtonVariant_V {
+  name: "Primary",
+  left: 151.5px,
+  top: 160px,
+
+  button.Button {
+    contents: "Follow"
+  }
+}
+
+GroupedStack_1gmgOy2Wt0 = frame {
+  name: "Card info",
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .end, item-gap: 32px},
+  fill: {image: {ref: dots}},
+  border: {color: colors.colors.blackAlpha10, visible: .false, width: 0.5px, position: .outside},
+  corner-radius: 16px,
+  padding: 24px,
+  children: [ButtonS28_7z0LRwMve3, GroupedStack_LpEL83fLPt]
+}
+
+ButtonS28_7z0LRwMve3 = button.ButtonS28Variant_X {
+  name: "Close",
+  left: 526px,
+  top: 225px,
+  fill[0].color: colors.colors.blackAlpha10
+}
+
+GroupedStack_LpEL83fLPt = frame {
+  name: "Info",
+  width: 100%,
+  height: 100%,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 32px
+  },
+  children: [Top_wPxvHpn4An, Numbers_2h6p4T8WDv]
+}
+
+Top_wPxvHpn4An = frame {
+  name: "Top",
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  children: [UserSummaryMVariant_4jTKstXxp9, Text_wKxCFaXkez]
+}
+
+UserSummaryMVariant_4jTKstXxp9 = userSummary.UserSummaryMVariant {
+  name: "User Summary M Variant",
+  left: 0px,
+  top: 160px,
+  width: 100%,
+
+  userSummary.HeaderMLeft_U02Hb8hK7v.header.Description_7ZfScLC {
+    contents: "@noraharper"
+  }
+}
+
+Text_wKxCFaXkez = text {
+  name: "Text",
+  left: 0px,
+  top: 160px,
+  width: 100%,
+  fill: colors.colors.blackAlpha70,
+  contents: "I love good coffee, long conversations, and finding beauty in the little things.",
+  font-size: 12,
+  line-height: 1.5,
+  align: .center
+}
+
+Numbers_2h6p4T8WDv = frame {
+  name: "Numbers",
+  width: 100%,
+  layout: {justify-content: .space-evenly, align-items: .center, item-gap: 24px},
+  children: [Frame_idU9ivzkve, Frame_f19XiX2clb, Frame_JLl0cA51NO]
+}
+
+Frame_idU9ivzkve = frame {
+  name: "Frame",
+  left: 49px,
+  top: 367px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
+  children: [textLayer_XiDxtu7sg1, Following_utufdejOHW]
+}
+
+textLayer_XiDxtu7sg1 = text {
+  name: "169",
+  left: 16.5px,
+  top: 0px,
+  fill: .black,
+  contents: "169",
+  font-size: 16,
+  font-style: "Bold",
+  align: .center
+}
+
+Following_utufdejOHW = text {
+  name: "Following",
+  left: 0px,
+  top: 18px,
+  fill: .black,
+  contents: "Following",
+  font-size: 12,
+  align: .center
+}
+
+Frame_f19XiX2clb = frame {
+  name: "Frame",
+  left: 69px,
+  top: 387px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
+  children: [textLayer_gJs8FKmZ0L, Following_ybbl7Cjm5f]
+}
+
+textLayer_gJs8FKmZ0L = text {
+  name: "169",
+  left: 16.5px,
+  top: 0px,
+  fill: .black,
+  contents: "18k",
+  font-size: 16,
+  font-style: "Bold",
+  align: .center
+}
+
+Following_ybbl7Cjm5f = text {
+  name: "Following",
+  left: 0px,
+  top: 18px,
+  fill: .black,
+  contents: "Followers",
+  font-size: 12,
+  align: .center
+}
+
+Frame_JLl0cA51NO = frame {
+  name: "Frame",
+  left: 89px,
+  top: 407px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
+  children: [textLayer_fIJ2S3H2rj, Following_ZUTSdWOGml]
+}
+
+textLayer_fIJ2S3H2rj = text {
+  name: "169",
+  left: 16.5px,
+  top: 0px,
+  fill: .black,
+  contents: "1.2k",
+  font-size: 16,
+  font-style: "Bold",
+  align: .center
+}
+
+Following_ZUTSdWOGml = text {
+  name: "Following",
+  left: 0px,
+  top: 18px,
+  fill: .black,
+  contents: "Posts",
+  font-size: 12,
+  align: .center
+}

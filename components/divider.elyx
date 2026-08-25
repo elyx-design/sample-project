@@ -1,16 +1,17 @@
 import "tokens/colors.elyx" as colors
 
-export Frame_6xqUCdEwZT = frame {
-  name: "divider",
-  left: 583px,
-  top: 589px,
+export Divider_97GT5IGMgL = frame {
+  name: "Divider",
+  left: 878px,
+  top: 552px,
+  width: 16px,
   layout: {justify-content: .center, align-items: .center},
   padding-top: 8px,
   padding-bottom: 8px,
-  children: Rectangle_Conokr0G5J
+  children: Rectangle_RlFhJcHgz0
 }
 
-Rectangle_Conokr0G5J = shape {
+Rectangle_RlFhJcHgz0 = shape {
   name: "Rectangle",
   left: 0px,
   top: 0px,

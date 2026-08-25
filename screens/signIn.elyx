@@ -1,7 +1,6 @@
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "components/avatarGroup.elyx" as profileGroup
 import "components/logo.elyx" as logo
 import "images/background/horizon.jpg" as horizon
 
@@ -14,7 +13,7 @@ export SignInScreen_uAwbWmooF0 = frame {
   layout: {direction: .column, align-items: .center, item-gap: 48px},
   fill: {image: {ref: horizon}},
   padding-top: 0px,
-  children: GroupedStack_pB84n1ORbr
+  children: [GroupedStack_pB84n1ORbr, FooterLinks_iuOfIBy5o9]
 }
 
 GroupedStack_pB84n1ORbr = frame {
@@ -25,20 +24,20 @@ GroupedStack_pB84n1ORbr = frame {
   height: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 32px},
   overflow: .visible,
-  children: [AuthForm_v090GRX1No, profileGroupLabelbottom_f8AoX6uV3c, FooterLinks_f1lwzGUqx7]
+  children: AuthForm_XfZtHIfR8O
 }
 
-AuthForm_v090GRX1No = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
-  left: 435px,
-  top: -3px,
+AuthForm_XfZtHIfR8O = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
+  name: "AuthForm",
+  left: 525px,
+  top: 126px,
   width: 32.1875%,
   min-width: 360px,
   min-height: 6%,
-  overrides: [insert(Frame_KYE9GJHJZa, after = .nil)],
+  overrides: [insert(Frame_g9BtBzmGAd, after = .nil)],
 
   AuthForm.PrimaryM_cvjxe6VGaM.Button.Button {
-    contents: "Join the Circle",
-    align: .center
+    contents: "Join the Circle"
   }
 
   AuthForm.header_oYCF44WvTm.header2.Description_7ZfScLC {
@@ -50,27 +49,17 @@ AuthForm_v090GRX1No = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
   }
 }
 
-profileGroupLabelbottom_f8AoX6uV3c = profileGroup.profileGroupLabelRight {
-  left: 714px,
-  top: 932px,
-
-  profileGroup.Frame.textLayer_7 {
-    contents: "+428 online",
-    fill[0].color: Colors.colors.white100
-  }
-}
-
-FooterLinks_f1lwzGUqx7 = frame {
+FooterLinks_iuOfIBy5o9 = frame {
   name: "Footer Links",
   left: 569.5px,
-  top: 766.5px,
+  top: 294px,
   width: 141px,
   height: 15px,
   layout: {align-items: .center, item-gap: 18px},
-  children: [Privacy_giaKGHaFOQ, Terms_uB09gLkpSv, Help_3ZaUcFS0gG]
+  children: [Privacy_oO6XLpPKVH, Terms_hZHVtFTwG9, Help_EMM1UvFR6p]
 }
 
-Privacy_giaKGHaFOQ = text {
+Privacy_oO6XLpPKVH = text {
   name: "Privacy",
   fill: Colors.colors.white100,
   contents: "Privacy",
@@ -79,7 +68,7 @@ Privacy_giaKGHaFOQ = text {
   font-style: "Regular"
 }
 
-Terms_uB09gLkpSv = text {
+Terms_hZHVtFTwG9 = text {
   name: "Terms",
   fill: Colors.colors.white100,
   contents: "Terms",
@@ -88,7 +77,7 @@ Terms_uB09gLkpSv = text {
   font-style: "Regular"
 }
 
-Help_3ZaUcFS0gG = text {
+Help_EMM1UvFR6p = text {
   name: "Help",
   fill: Colors.colors.white100,
   contents: "Help",
@@ -97,34 +86,35 @@ Help_3ZaUcFS0gG = text {
   font-style: "Regular"
 }
 
-Frame_KYE9GJHJZa = frame {
+Frame_g9BtBzmGAd = frame {
   name: "Frame",
   left: 0px,
   top: -20px,
   width: 100%,
   height: 140px,
   layout: {direction: .column, justify-content: .center, align-items: .stretch},
-  children: ButtonIconXXL80_G7KXvxJT86
+  children: ButtonIconXXL80_Je37pucgIE
 }
 
-ButtonIconXXL80_G7KXvxJT86 = logo.ButtonIconXL48 {
+ButtonIconXXL80_Je37pucgIE = logo.ButtonIconXL48 {
+  name: "Button Icon XXL (80)",
   left: 0px,
   top: 0px,
   width: 80px,
   height: 80px,
-  overrides: [insert(Frame_SQgSgWr7Bw, after = .nil), remove(logo.defaultsvg)]
+  overrides: [insert(Frame_qItbIagyzl, after = .nil), remove(logo.defaultsvg)]
 }
 
-Frame_SQgSgWr7Bw = frame {
+Frame_qItbIagyzl = frame {
   name: "Frame",
   left: -323px,
   top: -40px,
   width: 503.75%,
   layout: {direction: .column, justify-content: .center, align-items: .center},
-  children: defaultsvg_xcpfvBhquS
+  children: defaultsvg_h1XJJcujWt
 }
 
-defaultsvg_xcpfvBhquS = icon {
+defaultsvg_h1XJJcujWt = icon {
   name: "default.svg",
   left: 0px,
   top: 0px,

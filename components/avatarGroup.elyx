@@ -11,6 +11,7 @@ export profileGroup_yzgf0sKCPf = frame {
   top: 511px,
   width: 140px,
   layout: {align-items: .center},
+  overflow: .visible,
   children: GroupedStack_OfeQSGHwlq
 }
 
@@ -20,6 +21,7 @@ GroupedStack_OfeQSGHwlq = frame {
   top: 0px,
   width: 140px,
   height: 36px,
+  overflow: .visible,
   children: [layer_V, layer_tn, layer_l, layer_Q, layer_DE]
 }
 
@@ -107,35 +109,17 @@ profileGroupVariant = profileGroup_yzgf0sKCPf {
 }
 
 @variant("profileGroup Label bottom")
-profileGroupLabelRight = profileGroup_yzgf0sKCPf {
+profileGroupLabelbottom_uuBCQBPIGh = profileGroup_yzgf0sKCPf {
   left: 487.3293px,
   top: 679px,
   width: .auto,
   layout.direction: .column,
   layout.item-gap: 8px,
   overrides: [
-    insert(avatargroup_V, after = .nil),
-    insert(Frame, after = avatargroup_V),
+    insert(avatargroup_PMFARLtmys, after = .nil),
+    insert(Frame_czczziH5wc, after = avatargroup_PMFARLtmys),
     remove(GroupedStack_OfeQSGHwlq)
   ]
-}
-
-Frame = frame {
-  name: "Frame",
-  left: 148px,
-  top: 9.5px,
-  layout: {justify-content: .center, align-items: .center},
-  children: textLayer_7
-}
-
-textLayer_7 = text {
-  name: "+28",
-  left: 0px,
-  top: 0px,
-  width: .auto,
-  height: 17px,
-  fill: colors.colors.black20,
-  contents: "+28"
 }
 
 layer = frame {
@@ -156,18 +140,23 @@ textLayer = text {
   contents: "+28"
 }
 
-layer_s = userAvatar.AvatarSVariant {left: 830px, top: 673px}
-
-avatargroup_V = frame {
+avatargroup_PMFARLtmys = frame {
   name: "avatar group",
   left: 0px,
   top: 0px,
   width: 140px,
   height: 36px,
-  children: [Photo5_g, Photo4_c, Photo3_w, Photo2_I, Photo1_f]
+  overflow: .visible,
+  children: [
+    Photo5_fBnyYRJS4i,
+    Photo4_RNRKXPP8gA,
+    Photo3_0aHj3lFM7Z,
+    Photo2_iP17o8hjlk,
+    Photo1_P7OymuGtix
+  ]
 }
 
-Photo5_g = userAvatar.AvatarSVariant {
+Photo5_fBnyYRJS4i = userAvatar.AvatarSVariant {
   name: "Photo5",
   left: 104px,
   top: 0px,
@@ -182,7 +171,7 @@ Photo5_g = userAvatar.AvatarSVariant {
   }
 }
 
-Photo4_c = userAvatar.AvatarSVariant {
+Photo4_RNRKXPP8gA = userAvatar.AvatarSVariant {
   name: "Photo4",
   left: 78px,
   top: 0px,
@@ -197,7 +186,7 @@ Photo4_c = userAvatar.AvatarSVariant {
   }
 }
 
-Photo3_w = userAvatar.AvatarSVariant {
+Photo3_0aHj3lFM7Z = userAvatar.AvatarSVariant {
   name: "Photo3",
   left: 52px,
   top: 0px,
@@ -212,7 +201,7 @@ Photo3_w = userAvatar.AvatarSVariant {
   }
 }
 
-Photo2_I = userAvatar.AvatarSVariant {
+Photo2_iP17o8hjlk = userAvatar.AvatarSVariant {
   name: "Photo2",
   left: 26px,
   top: 0px,
@@ -227,7 +216,119 @@ Photo2_I = userAvatar.AvatarSVariant {
   }
 }
 
-Photo1_f = userAvatar.AvatarSVariant {
+Photo1_P7OymuGtix = userAvatar.AvatarSVariant {
+  name: "Photo1",
+  left: 0px,
+  top: 0px,
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Frame_czczziH5wc = frame {
+  name: "Frame",
+  left: 148px,
+  top: 9.5px,
+  layout: {justify-content: .center, align-items: .center},
+  children: textLayer_dV81HeiWgb
+}
+
+textLayer_dV81HeiWgb = text {
+  name: "+28",
+  left: 0px,
+  top: 0px,
+  width: .auto,
+  height: 17px,
+  fill: colors.colors.black20,
+  contents: "+28"
+}
+
+@variant("profileGroup Variant")
+profileGroupVariant_d = profileGroup_yzgf0sKCPf {
+  left: 484px,
+  top: 788px,
+  layout.align-items: .start,
+  layout.direction: .column,
+  layout.item-gap: 4px,
+  overrides: [
+    insert(Frame, after = .nil),
+    insert(avatargroup, after = Frame),
+    remove(GroupedStack_OfeQSGHwlq)
+  ]
+}
+
+avatargroup = frame {
+  name: "avatar group",
+  left: 0px,
+  top: 0px,
+  width: 140px,
+  height: 36px,
+  overflow: .visible,
+  children: [Photo5, Photo4, Photo3, Photo2, Photo1]
+}
+
+Photo5 = userAvatar.AvatarSVariant {
+  name: "Photo5",
+  left: 104px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module4
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo4 = userAvatar.AvatarSVariant {
+  name: "Photo4",
+  left: 78px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module3
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo3 = userAvatar.AvatarSVariant {
+  name: "Photo3",
+  left: 52px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module2
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo2 = userAvatar.AvatarSVariant {
+  name: "Photo2",
+  left: 26px,
+  top: 0px,
+  ignore-stack: .true,
+
+  userAvatar.bg_e {
+    fill[0].image.ref: module
+  }
+
+  userAvatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Photo1 = userAvatar.AvatarSVariant {
   name: "Photo1",
   left: 0px,
   top: 0px,
@@ -243,6 +344,7 @@ avatargroup_J = frame {
   top: 0px,
   width: 140px,
   height: 36px,
+  overflow: .visible,
   children: [Photo5_z, Photo4_H, Photo3_T, Photo2_w, Photo1_M]
 }
 
@@ -314,4 +416,23 @@ Photo1_M = userAvatar.AvatarSVariant {
   userAvatar.statusonline_aL82ghuez5 {
     display: .hidden
   }
+}
+
+Frame = frame {
+  name: "Frame",
+  left: 65px,
+  top: 9.5px,
+  layout: {justify-content: .center, align-items: .center},
+  children: textLayer_s
+}
+
+textLayer_s = text {
+  name: "+28",
+  left: 0px,
+  top: 0px,
+  width: .auto,
+  height: 17px,
+  fill: colors.colors.black20,
+  contents: "Title:",
+  font-style: "SemiBold"
 }
