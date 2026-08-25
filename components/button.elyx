@@ -61,7 +61,7 @@ ButtonVariant_V = button_43RxZnGr30 {
   shadow[1].inner-shadow.spread: 0px,
 
   Button {
-    fill[0].color: Colors.colors.textLight
+    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 
@@ -78,7 +78,7 @@ ButtonVariant_T = button_43RxZnGr30 {
   shadow[1].inner-shadow.spread: 0px,
 
   Button {
-    fill[0].color: Colors.colors.textLight
+    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 
@@ -106,7 +106,7 @@ ButtonVariant_E = button_43RxZnGr30 {
   shadow[0].inner-shadow.offset: [0px, 3px],
 
   Button {
-    fill[0].color: Colors.colors.textLight
+    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 
@@ -123,7 +123,7 @@ Danger = button_43RxZnGr30 {
   shadow[0].inner-shadow.style: .normal,
 
   Button {
-    fill[0].color: Colors.colors.textLight
+    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 

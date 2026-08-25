@@ -54,7 +54,7 @@ export profileTab_iALjnpOMsR = frame {
 
 ProfileTabLabel = text {
   name: "Profile Tab Label",
-  fill: Colors.colors.textLight,
+  fill: rgb(98.9987%, 98.9987%, 98.9987%),
   contents: "Profile",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

@@ -11,7 +11,7 @@ export statTile_BwT4HpE = frame {
   height: .auto,
   layout: {direction: .column, item-gap: 5},
   fill: [
-    Colors.colors.tertiary,
+    rgb(94.9997%, 94.9997%, 94.9997%),
     {
       radial-gradient: {
         at: point(1.1671%, -0.4195%),

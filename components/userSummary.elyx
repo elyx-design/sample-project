@@ -11,7 +11,7 @@ export userSummary_3nStch3 = frame {
   width: 100%,
   height: .auto,
   layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
-  fill: Colors.colors.tertiary,
+  fill: rgb(94.9997%, 94.9997%, 94.9997%),
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM
 }

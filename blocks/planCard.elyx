@@ -27,7 +27,7 @@ PlanHeader_QvgQJ1C = frame {
 
 PlanName_81UA3to = text {
   name: "Plan Name",
-  fill: Colors.colors.textLight,
+  fill: rgb(98.9987%, 98.9987%, 98.9987%),
   contents: "Team",
   font-size: 20,
   font-family: "Inter",
@@ -45,7 +45,7 @@ layer = statusBadge.statusBadgeVariant_5 {
 
 PlanPrice_ZJx9H3J = text {
   name: "Plan Price",
-  fill: Colors.colors.textLightSecondary,
+  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
   contents: "$24 per member / month",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -74,7 +74,7 @@ FeatureDot_cJ3_jml = shape {
 
 FeatureLabel_532ZQB6 = text {
   name: "Feature Label",
-  fill: Colors.colors.textLightSecondary,
+  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
   contents: "Unlimited projects",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -97,7 +97,7 @@ FeatureDot__qUChf5 = shape {
 
 FeatureLabel_UVzHWnL = text {
   name: "Feature Label",
-  fill: Colors.colors.textLightSecondary,
+  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
   contents: "Shared components",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
@@ -120,7 +120,7 @@ FeatureDot_yv3GLSN = shape {
 
 FeatureLabel_0yZ827Q = text {
   name: "Feature Label",
-  fill: Colors.colors.textLightSecondary,
+  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
   contents: "Priority support",
   font-size: Typography.typography.labelML,
   font-family: "Inter",

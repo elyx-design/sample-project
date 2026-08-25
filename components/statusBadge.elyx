@@ -32,6 +32,6 @@ statusBadgeVariant_5 = statusBadge_3ac5QoB {
   fill[0].color: rgb(98.82%, 98.82%, 98.82%, 20%),
 
   ProfileBadgeLabel_fs2wPy7 {
-    fill[0].color: Colors.colors.textLight
+    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }

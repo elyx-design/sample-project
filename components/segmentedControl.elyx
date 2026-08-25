@@ -9,7 +9,7 @@ export segmentedControl_MnqIo7BFFj = frame {
   width: 100%,
   height: Spacing.spacing.heightM,
   layout: {justify-content: .center, align-items: .center},
-  fill: Colors.colors.secondary,
+  fill: rgb(89.84%, 89.84%, 89.84%),
   corner-radius: Radius.radius.max,
   padding: 4px,
   children: [layer, Selected, Selected_D]

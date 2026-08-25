@@ -131,7 +131,7 @@ featureDot = shape {
 
 featureLabel = text {
   name: "Feature Label",
-  fill: Colors.colors.textLightSecondary,
+  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
   contents: "Feature",
   font-size: Typography.typography.labelM,
   font-family: "Inter",
