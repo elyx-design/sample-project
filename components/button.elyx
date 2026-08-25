@@ -22,9 +22,9 @@ export button_43RxZnGr30 = frame {
   border: {color: Colors.colors.blackAlpha25, width: 0.5px},
   shadow: {
     drop-shadow: {
-      color: Colors.colors.blackAlpha10,
-      offset: point(0px, 2px),
-      blur-radius: 2px,
+      color: Colors.colors.blackAlpha05,
+      offset: point(0px, 1px),
+      blur-radius: 1px,
       spread: 0px,
       style: .smooth
     }
@@ -142,9 +142,9 @@ export ButtonX28_unc1oz6mM6 = frame {
   border: {color: Colors.colors.blackAlpha25, width: 0.5px},
   shadow: {
     drop-shadow: {
-      color: rgb(0%, 0%, 0%, 10%),
-      offset: point(0px, 2px),
-      blur-radius: 2px,
+      color: Colors.colors.blackAlpha05,
+      offset: point(0px, 1px),
+      blur-radius: 1px,
       spread: 0px,
       style: .smooth
     }
@@ -324,4 +324,24 @@ calendar24svg = icon {
   height: 24px,
   fill: Colors.colors.black20,
   contents: calendar24
+}
+
+@variant("Primary rounded")
+ButtonS28Variant_5 = ButtonX28_unc1oz6mM6 {
+  left: 1304px,
+  top: 917px,
+  width: Spacing.spacing.heightS,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  overrides: [insert(trash20svg_z, after = .nil), remove(Button_2BBvydtXMm)]
+}
+
+trash20svg_z = icon {
+  name: "trash-20.svg",
+  left: 1248px,
+  top: 918px,
+  width: 20px,
+  height: 20px,
+  fill: Colors.colors.white100,
+  contents: trash20
 }

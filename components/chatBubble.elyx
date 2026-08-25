@@ -1,0 +1,71 @@
+import "components/avatar.elyx" as avatar
+import "tokens/colors.elyx" as colors
+import "tokens/radius.elyx" as radius
+import "images/profile/005.jpg" as module3
+import "tokens/spacing.elyx" as spacing
+import "images/profile/001.jpg" as module2
+
+export ChatBubble_Rb2QJd9jzc = frame {
+  name: "Chat Bubble",
+  left: 602px,
+  top: 476px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [AvatarSPhoto_MIH7WKKzVs, Frame_iMg8dwYyHE]
+}
+
+AvatarSPhoto_MIH7WKKzVs = avatar.AvatarSVariant {
+  name: "Avatar S (Photo)",
+  left: 0px,
+  top: 0px,
+
+  avatar.bg_e {
+    fill[0].image.ref: module2
+  }
+
+  avatar.statusonline_aL82ghuez5 {
+    display: .hidden
+  }
+}
+
+Frame_iMg8dwYyHE = frame {
+  name: "Frame",
+  left: 65px,
+  top: 0px,
+  width: .auto,
+  height: spacing.spacing.heightM,
+  layout: {justify-content: .center, align-items: .center},
+  fill: colors.colors.white100,
+  corner-radius: radius.radius.max,
+  padding-left: 12px,
+  padding-right: 12px,
+  children: Chattext_chDa6dS3AP
+}
+
+Chattext_chDa6dS3AP = text {
+  name: "Chat text",
+  left: 0px,
+  top: 0px,
+  fill: .black,
+  contents: "Chat text"
+}
+
+@variant(User)
+ChatBubbleVariant = ChatBubble_Rb2QJd9jzc {
+  left: 602px,
+  top: 560px,
+  overflow: .visible,
+  overrides: [move(Frame_iMg8dwYyHE, after = .nil)],
+
+  AvatarSPhoto_MIH7WKKzVs.avatar.bg_e {
+    fill[0].image.ref: module3
+  }
+
+  Frame_iMg8dwYyHE {
+    fill[0].color: colors.colors.black20
+  }
+
+  Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+    fill[0].color: colors.colors.white100
+  }
+}

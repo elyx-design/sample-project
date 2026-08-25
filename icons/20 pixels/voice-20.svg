@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>voice-20</title>
+    <g id="voice-20" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+        <line x1="5.5" y1="7" x2="5.5" y2="13.9851549" id="Path-13" stroke="#000000"></line>
+        <line x1="11.5" y1="5" x2="11.5" y2="16" id="Path-15" stroke="#000000"></line>
+        <line x1="8.5" y1="9" x2="8.5" y2="11.9851549" id="Path-14" stroke="#000000"></line>
+        <line x1="14.5" y1="8" x2="14.5" y2="12.9851549" id="Path-16" stroke="#000000"></line>
+    </g>
+</svg>

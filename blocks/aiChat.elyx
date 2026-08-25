@@ -1,0 +1,72 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/radius.elyx" as radius
+import "blocks/textBox.elyx" as textBox
+import "components/chatBubble.elyx" as chatBubble
+import "components/appTopBar.elyx" as appTopBar
+
+export AiChat_DK44ShHBd2 = cardBackground.cardBackgroundSolidVariant {
+  name: "Ai Chat",
+  left: 544px,
+  top: 368px,
+  width: 550px,
+  height: 628px,
+  padding-top: 0px,
+  padding-left: 0px,
+  padding-bottom: 0px,
+  padding-right: 0px,
+  layout.align-items: .stretch,
+  layout.item-gap: 20px,
+  layout.justify-content: .space-between,
+  overrides: [
+    insert(AppTopBar_xpVFAA82Vy, after = .nil),
+    insert(GroupedStack_B4eyO98vxR, after = AppTopBar_xpVFAA82Vy),
+    insert(chatBox_Ehj1d8ou8r, after = GroupedStack_B4eyO98vxR)
+  ]
+}
+
+chatBox_Ehj1d8ou8r = textBox.cardBackgroundSolid_kEwO8GJ2Nk {
+  name: "chatBox",
+  left: 0px,
+  top: 1178px,
+  width: 100%,
+  corner-radius: radius.radius.m,
+  shadow[0].drop-shadow.visible: .false
+}
+
+GroupedStack_B4eyO98vxR = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, align-items: .stretch, item-gap: 24px},
+  overflow: .visible,
+  padding-left: 12px,
+  padding-right: 12px,
+  children: [User_7aEuDqbz16, Text_UPbcWrIgNf]
+}
+
+User_7aEuDqbz16 = chatBubble.ChatBubbleVariant {
+  name: "User",
+  left: 1066px,
+  top: 464px,
+  layout.justify-content: .end,
+
+  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+    contents: "RAM or processor for video editing?"
+  }
+}
+
+Text_UPbcWrIgNf = text {
+  name: "Text",
+  left: 0px,
+  top: 299px,
+  width: 100%,
+  fill: .black,
+  contents: "For video editing, both matter, but the answer depends on your workflow.\n\nRAM helps most when you're working with multiple applications open, editing high-resolution footage, or using large project files. If you frequently run out of memory, editing becomes slow and choppy.\n\nWhat resolution do you typically work with?",
+  line-height: 1.5
+}
+
+AppTopBar_xpVFAA82Vy = appTopBar.AppTopBar_ePXqYpgrNQ {
+  name: "App Top Bar",
+  left: 598px,
+  top: 208px,
+  fill[0].visible: .false
+}
