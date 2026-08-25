@@ -122,3 +122,121 @@ Danger = button_43RxZnGr30 {
     fill[0].color: Colors.colors.textLight
   }
 }
+
+export ButtonX28_unc1oz6mM6 = frame {
+  name: "Button S (28)",
+  left: 962px,
+  top: 917px,
+  height: 28px,
+  layout: {justify-content: .space-between, align-items: .center},
+  fill: {
+    linear-gradient: {
+      angle: 180deg,
+      stops: [stop(0%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
+    }
+  },
+  border: {color: Colors.colors.blackAlpha25, width: 0.5px},
+  shadow: {
+    drop-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 2px),
+      blur-radius: 2px,
+      spread: 0px,
+      style: .smooth
+    }
+  },
+  corner-radius: 10px,
+  padding: [0px, 8px],
+  children: Button_2BBvydtXMm
+}
+
+Button_2BBvydtXMm = text {
+  name: "Button",
+  left: 8px,
+  top: 6.5px,
+  width: .auto,
+  fill: Colors.colors.black20,
+  contents: "Button",
+  font-size: 12,
+  font-family: "Inter",
+  font-style: "Medium",
+  align: .center
+}
+
+@variant("Danger Pressed")
+ButtonS28Variant2 = ButtonX28_unc1oz6mM6 {
+  left: 1127px,
+  top: 993px,
+  fill[0].color: Colors.colors.red60,
+  shadow[0].drop-shadow.color: Colors.colors.red50,
+  shadow[0].inner-shadow.blur-radius: 3px,
+  shadow[0].inner-shadow.color: Colors.colors.red50,
+  shadow[0].inner-shadow.offset: [0px, 3px],
+  shadow[0].inner-shadow.style: .normal,
+
+  Button_2BBvydtXMm {
+    fill[0].color: Colors.colors.white100
+  }
+}
+
+@variant(Danger)
+ButtonS28Variant_I = ButtonX28_unc1oz6mM6 {
+  left: 1127px,
+  top: 917px,
+  border[0].color: Colors.colors.red50,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
+  shadow[1].inner-shadow.blur-radius: 0.5px,
+  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.offset: [0px, 1.5px],
+  shadow[1].inner-shadow.spread: 0px,
+
+  Button_2BBvydtXMm {
+    fill[0].color: Colors.colors.white100
+  }
+}
+
+@variant(Pressed)
+ButtonS28Variant = ButtonX28_unc1oz6mM6 {
+  left: 962px,
+  top: 993px,
+  fill[0].color: Colors.colors.black90,
+  shadow[0].drop-shadow.color: Colors.colors.black80,
+  shadow[0].inner-shadow.blur-radius: 3px,
+  shadow[0].inner-shadow.color: Colors.colors.black80,
+  shadow[0].inner-shadow.offset: [0px, 3px],
+  shadow[0].inner-shadow.style: .normal
+}
+
+@variant(Primary)
+PrimaryS_bwovCsQN9N = ButtonX28_unc1oz6mM6 {
+  left: 1045px,
+  top: 917px,
+  border[1].color: Colors.colors.black20,
+  border[1].width: 0.5px,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  shadow[1].inner-shadow.blur-radius: 0.5px,
+  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.offset: [0px, 1px],
+  shadow[1].inner-shadow.spread: 0px,
+
+  Button_2BBvydtXMm {
+    fill[0].color: Colors.colors.white100
+  }
+}
+
+@variant("Primary Pressed")
+ButtonS28Variant_t = ButtonX28_unc1oz6mM6 {
+  left: 1045px,
+  top: 993px,
+  fill[0].color: Colors.colors.black40,
+  shadow[0].drop-shadow.color: Colors.colors.black30,
+  shadow[0].inner-shadow.blur-radius: 3px,
+  shadow[0].inner-shadow.color: Colors.colors.black30,
+  shadow[0].inner-shadow.offset: [0px, 3px],
+
+  Button_2BBvydtXMm {
+    fill[0].color: Colors.colors.white100
+  }
+}

@@ -14,10 +14,9 @@ export userSummary_3nStch3 = frame {
   fill: Colors.colors.tertiary,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
-  children: [userAvatar_1, UserCopy_NGAEIPi]
+
 }
 
-userAvatar_1 = userAvatar.userAvatarVariant_A {left: 12px, top: 10px}
 
 UserCopy_NGAEIPi = frame {
   name: "User Copy",

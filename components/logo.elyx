@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "icons/logo.svg" as logo
 
 export iconButton_gqojFFCYlK = frame {
-  name: "Button Icon M (24)",
+  name: "Logo M (24)",
   left: 340px,
   top: 519px,
   width: .auto,
@@ -23,7 +23,7 @@ defaultsvg = icon {
   contents: logo
 }
 
-@variant("Button Icon S (16)")
+@variant("Logo S (16)")
 ButtonIconMVariant_N = iconButton_gqojFFCYlK {
   left: 260px,
   top: 519px,
@@ -36,7 +36,7 @@ ButtonIconMVariant_N = iconButton_gqojFFCYlK {
   }
 }
 
-@variant("Button Icon L (32)")
+@variant("Logo L (32)")
 ButtonIconMVariant_3 = iconButton_gqojFFCYlK {
   left: 428px,
   top: 519px,
@@ -49,7 +49,7 @@ ButtonIconMVariant_3 = iconButton_gqojFFCYlK {
   }
 }
 
-@variant("Button Icon XL (48)")
+@variant("Logo XL (48)")
 ButtonIconL32 = iconButton_gqojFFCYlK {
   left: 524px,
   top: 519px,

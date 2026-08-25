@@ -2,7 +2,6 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "blocks/settingsCard.elyx" as SettingsCard
-import "components/header.elyx" as header
 import "components/pageTabs.elyx" as pageTabs2
 import "blocks/profileCard.elyx" as profileCard
 import "blocks/securityCard.elyx" as securityCard
@@ -27,7 +26,6 @@ sidebar = sidebar2.sidebar_QjenIug {
   width: 20%,
 
   sidebar2.GroupedStack_flp7iRt.sidebarHeader_TIJYWa6.sidebarHeader2.WorkspaceMark_2CifZgS {
-    fill[0].color: Colors.colors.black40
   }
 }
 
@@ -37,23 +35,8 @@ contentShell = frame {
   height: 100%,
   layout: {direction: .column, item-gap: 20px},
   padding: 40px,
-  children: [layer, layer_d, mainGrid]
 }
 
-layer = header.header_Pp67Y8c {
-  name: "Top Bar",
-  left: 40px,
-  top: 40px,
-
-  header.Description_7ZfScLC {
-    contents: "Manage profile details, workspace access, billing, and security settings."
-  }
-
-  header.Title_ZIlZq9y {
-    contents: "Account",
-    font-size: 24
-  }
-}
 
 layer_d = pageTabs2.pageTabs_e60eQaG {left: 426px, top: 158px}
 

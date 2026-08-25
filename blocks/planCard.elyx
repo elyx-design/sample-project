@@ -3,7 +3,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/statusBadge.elyx" as statusBadge
-import "components/button M.elyx" as button
+import "components/button.elyx" as button
 
 export planCard_LTK7mFiyqR = frame {
   name: "planCard",

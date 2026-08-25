@@ -2,7 +2,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "screens/account.elyx" as account
 import "blocks/profileCard.elyx" as profileCard
-import "components/button M.elyx" as button
+import "components/button.elyx" as button
 
 Welcome = frame {
   name: "Welcome",

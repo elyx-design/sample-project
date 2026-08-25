@@ -2,7 +2,7 @@ import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
 import "components/brand.elyx" as brand
-import "components/button M.elyx" as button
+import "components/button.elyx" as button
 import "components/userAvatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
 

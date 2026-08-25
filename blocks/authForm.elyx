@@ -1,7 +1,7 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
-import "components/button M.elyx" as Button
+import "components/button.elyx" as Button
 import "components/checkbox.elyx" as Checkbox
 import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2

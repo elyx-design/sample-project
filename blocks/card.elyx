@@ -1,6 +1,5 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
-import "components/button M.elyx" as button
 import "components/header.elyx" as header
 import "components/tagsTransparent.elyx" as tagsTransparent
 import "images/background/rose.jpg" as rose
@@ -13,21 +12,7 @@ layer = cardBackground.cardBackground_zXouRyz {
   height: 471px,
   fill[0].image.ref: rose,
   layout.justify-content: .end,
-  overrides: [
-    insert(layer_j, after = .nil),
-    insert(GroupedStack, after = layer_j),
-    insert(layer_M, after = GroupedStack)
-  ]
-}
-
-layer_M = button.button_43RxZnGr30 {
-  left: 0px,
-  top: 729px,
-  width: 100%,
-
-  button.Button {
-    contents: "sdfsdfsdf"
-  }
+  overrides: [insert(layer_j, after = .nil), insert(GroupedStack, after = layer_j)]
 }
 
 layer_j = header.header_Pp67Y8c {
@@ -69,27 +54,17 @@ cardBackgroundSolid = cardBackground.cardBackground_zXouRyz {
   ]
 }
 
-ButtonM36 = button.button_43RxZnGr30 {
-  left: 0px,
-  top: 729px,
-  width: 100%,
-
-  button.Button {
-    contents: "sdfsdfsdf"
-  }
-}
+ButtonM36 = group {name: "button.button_43RxZnGr30", left: 0px, top: 729px, width: 100%}
 
 GroupedStack_M = frame {
   name: "Grouped Stack",
   width: 100%,
   layout: {item-gap: 4px},
   overflow: .visible,
-  children: [LabelandClose, layer_4]
 }
 
 LabelandClose = tagsTransparent.TagIconandLabel_ICjERGypJV {left: 832px, top: 700px}
 
-layer_4 = tagsTransparent.TagTransparentVariant_q {left: 1322px, top: 645px}
 
 headerleft = header.header_Pp67Y8c {
   left: 768px,
