@@ -1,6 +1,8 @@
 import "blocks/playbackControl.elyx" as playbackControl
 import "tokens/colors.elyx" as colors
-import "images/background/rally.jpg" as rally
+import "images/background/liveEvent.jpg" as liveEvent
+import "components/header.elyx" as header
+import "components/tag.elyx" as tag
 
 export VideoPlayer_7IHVyFXn8z = frame {
   name: "Video Player",
@@ -8,19 +10,65 @@ export VideoPlayer_7IHVyFXn8z = frame {
   top: 405px,
   width: 640px,
   height: 420px,
-  layout: {align-items: .end},
+  layout: {direction: .column, justify-content: .space-between},
   fill: [
-    {image: {ref: rally}},
+    {image: {ref: liveEvent}},
     {
       linear-gradient: {
         from: point(50%, 70.4884%),
         to: point(50%, 100%),
-        stops: [stop(0%, .transparent), stop(100%, rgb(0%, 0%, 0%, 30%))]
+        stops: [stop(0%, .transparent), stop(100%, rgb(0%, 0%, 0%, 50%))]
+      }
+    },
+    {
+      linear-gradient: {
+        from: point(50%, 0%),
+        to: point(50%, 24.4%),
+        stops: [stop(0%, rgb(0%, 0%, 0%, 50%)), stop(97.76%, .transparent)]
       }
     }
   ],
   padding: 24px,
-  children: PlaybackControl_ajqA0M9W3s
+  children: [GroupedStack_R6YKIBc1DT, PlaybackControl_ajqA0M9W3s]
+}
+
+GroupedStack_R6YKIBc1DT = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {justify-content: .space-between},
+  children: [HeaderSLeft_kdOlA7xbFG, Status_mmQ1DabaWR]
+}
+
+HeaderSLeft_kdOlA7xbFG = header.HeaderSLeft_nBOG31rNTk {
+  name: "Header S (Left)",
+  left: 501px,
+  top: 250px,
+
+  header.UserEmail_wCqcy5VUFs {
+    contents: "Live from the dunes: Stage 3",
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  header.UserName_Qkcl7dWEIn {
+    contents: "Endless Dunes",
+    fill[0].color: colors.colors.white100
+  }
+}
+
+Status_mmQ1DabaWR = tag.TagLabelandClose_b20EZ2tde1 {
+  name: "Status",
+  left: 806px,
+  top: 450px,
+  fill[0].color: rgb(0%, 100%, 43.07%, 54%),
+
+  tag.Tag_gKZPtXRbSo {
+    contents: "Live",
+    fill[0].color: colors.colors.white100
+  }
+
+  tag.star24svg_QJRb7jssmb {
+    fill[0].color: .lime
+  }
 }
 
 PlaybackControl_ajqA0M9W3s = playbackControl.PlaybackControl_YxsKbPQMe8 {
