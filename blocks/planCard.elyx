@@ -79,7 +79,7 @@ TagTransparent_vakzscXaBV = tag.TagTransparentVariant {
   left: 67px,
   top: 37px,
   border[0].visible: .false,
-  fill[0].color: rgb(90.2878%, 81.125%, 100%),
+  fill[0].color: rgb(90.2878%, 81.12%, 100%),
 
   tag.Tag_gKZPtXRbSo {
     contents: "Best!"
@@ -123,7 +123,7 @@ textLayer_QpGiRL9Axb = text {
   left: 40px,
   top: 132px,
   height: 22px,
-  fill: Colors.colors.black80,
+  fill: Colors.colors.blackAlpha50,
   contents: "/Month",
   font-size: 14,
   font-family: "Inter",

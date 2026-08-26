@@ -407,7 +407,7 @@ Frame_i = frame {
   },
   filter: {type: .background-blur, radius: 40px},
   corner-radius: 24px,
-  padding: 12px,
+  padding: [12px, 12px, 12px, 4px],
   children: [planCard_R, planCard_H, planCard_O]
 }
 
@@ -429,6 +429,10 @@ planCard_R = planCard.planCard_LTK7mFiyqR {
 
   planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
     overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT {
+    overrides: [remove(planCard.direct24svg_n2DErcwc3b)]
   }
 }
 
