@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pen-20</title>
+    <g id="pen-20" stroke="none" fill="none">
+        <path d="M9.14644661,15.1464466 C12.350912,15.1464466 14.9486444,14.0871757 14.9486444,10.8827103 C14.9486444,7.67824498 10.5969961,3.14644661 9.14644661,3.14644661 C7.69589716,3.14644661 3.34424881,7.67824498 3.34424881,10.8827103 C3.34424881,14.0871757 5.94198125,15.1464466 9.14644661,15.1464466 Z" id="Oval" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(9.1464, 9.1464) scale(-1, 1) rotate(45) translate(-9.1464, -9.1464)"></path>
+        <line x1="7.37867966" y1="4.37867966" x2="7.37867966" y2="10.3786797" id="Path-44" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(7.3787, 7.3787) scale(-1, 1) rotate(45) translate(-7.3787, -7.3787)"></line>
+        <path d="M9.85355339,11.3535534 C10.6819805,11.3535534 11.3535534,10.6819805 11.3535534,9.85355339 C11.3535534,9.02512627 10.6819805,8.35355339 9.85355339,8.35355339 C9.02512627,8.35355339 8.35355339,9.02512627 8.35355339,9.85355339 C8.35355339,10.6819805 9.02512627,11.3535534 9.85355339,11.3535534 Z" id="Oval" fill="#000000" fill-rule="evenodd" transform="translate(9.8536, 9.8536) scale(-1, 1) rotate(45) translate(-9.8536, -9.8536)"></path>
+        <line x1="13.0585331" y1="15.3409618" x2="18.0585331" y2="15.3409618" id="Path-46" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(15.5585, 15.341) scale(-1, 1) rotate(45) translate(-15.5585, -15.341)"></line>
+    </g>
+</svg>

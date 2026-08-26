@@ -10,7 +10,8 @@ import "components/logo.elyx" as logo
 import "blocks/authForm.elyx" as AuthForm
 import "images/background/sand.png" as sand
 import "blocks/aiChat.elyx" as aiChat
-import "blocks/toolbar.elyx" as toolbar
+import "blocks/toolbarAudio.elyx" as toolbar
+import "blocks/tollbarCreate.elyx" as tollbarCreate
 
 Welcome = frame {
   name: "Welcome",
@@ -245,7 +246,7 @@ Frame = frame {
   width: 2399px,
   height: 1492px,
   fill: {image: {ref: sand}},
-  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w]
+  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_d]
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 244px, top: 184px}
@@ -285,10 +286,21 @@ layer_1 = aiChat.AiChat_DK44ShHBd2 {
   left: 979px,
   top: 184px,
   width: 490px,
-  height: 650px
+  height: 650px,
+
+  aiChat.AppTopBar_xpVFAA82Vy.appTopBar.Title_M1uSFbT37W.NewAiChat_WzpulaBhIr {
+    contents: "Video Editing"
+  }
 }
 
-layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {name: "Toolbar (audio)", left: 979px, top: 870px}
+layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
+  name: "Toolbar (audio)",
+  left: 244px,
+  top: 124px,
+  width: 322px
+}
+
+layer_d = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 585px, top: 124px}
 
 Frame_g9BtBzmGAd = frame {
   name: "Frame",

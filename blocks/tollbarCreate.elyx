@@ -1,0 +1,164 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/spacing.elyx" as spacing
+import "images/ai/orb.png" as orb
+import "components/button.elyx" as button
+import "icons/20 pixels/pointer-20.svg" as pointer20
+import "icons/12 pixels/chevron-down-12.svg" as chevrondown12
+import "icons/20 pixels/frame-20.svg" as frame20
+import "icons/20 pixels/shape-20.svg" as shape20
+import "icons/20 pixels/text-20.svg" as text20
+import "icons/20 pixels/chat-20.svg" as chat20
+import "icons/20 pixels/image-20.svg" as image20
+import "icons/20 pixels/code-20.svg" as code20
+
+export ToolbarCreate_WBWllCttV6 = cardBackground.cardBackgroundSolidVariant_B {
+  name: "Toolbar Create",
+  left: 488px,
+  top: 479px,
+  width: 348px,
+  height: spacing.spacing.heightM,
+  min-width: .nil,
+  min-height: .nil,
+  padding-top: 0px,
+  padding-left: 6px,
+  padding-bottom: 0px,
+  padding-right: 6px,
+  layout.align-items: .center,
+  layout.direction: .row,
+  layout.item-gap: 8px,
+  overrides: [
+    insert(orbpng_4P25I3Jkox, after = .nil),
+    insert(Icon_53BY8bEPob, after = orbpng_4P25I3Jkox),
+    insert(GroupedStack_jUxEUCsfJc, after = Icon_53BY8bEPob),
+    insert(GroupedStack_3UK616dRMq, after = GroupedStack_jUxEUCsfJc),
+    insert(Icon_ENIC5JcboE, after = GroupedStack_3UK616dRMq),
+    insert(Icon_eAjebhoSuL, after = Icon_ENIC5JcboE),
+    insert(Icon_dsfGLTWCNd, after = Icon_eAjebhoSuL),
+    insert(Icon_9Z7AkMf50M, after = Icon_dsfGLTWCNd),
+    insert(Icon_7TJ0RCVeUL, after = Icon_9Z7AkMf50M)
+  ]
+}
+
+orbpng_4P25I3Jkox = shape {
+  name: "orb.png",
+  left: 37.85px,
+  top: 7.33px,
+  width: 24px,
+  height: 24px,
+  fill: {image: {ref: orb}},
+  type: .rect
+}
+
+Icon_dsfGLTWCNd = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 626px,
+  top: 542px,
+
+  button.trash20svg_W {
+    contents: chat20
+  }
+}
+
+Icon_eAjebhoSuL = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 606px,
+  top: 522px,
+
+  button.trash20svg_W {
+    contents: text20
+  }
+}
+
+GroupedStack_3UK616dRMq = frame {
+  name: "Grouped Stack",
+  left: 110.5px,
+  top: 20px,
+  height: 100%,
+  layout: {align-items: .center},
+  children: [Icon_j3D7L2HaNa, chevrondown12svg_QVr2OiJKAr]
+}
+
+Icon_j3D7L2HaNa = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 566px,
+  top: 482px,
+
+  button.trash20svg_W {
+    contents: shape20
+  }
+}
+
+chevrondown12svg_QVr2OiJKAr = icon {
+  name: "chevron-down-12.svg",
+  left: 549px,
+  top: 493px,
+  width: 12px,
+  height: 12px,
+  contents: chevrondown12
+}
+
+Icon_9Z7AkMf50M = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 666px,
+  top: 582px,
+
+  button.trash20svg_W {
+    contents: code20
+  }
+}
+
+Icon_ENIC5JcboE = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 646px,
+  top: 562px,
+
+  button.trash20svg_W {
+    contents: image20
+  }
+}
+
+GroupedStack_jUxEUCsfJc = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center},
+  children: [Icon_gGmfHo5IjR, chevrondown12svg_BGGw852dsg]
+}
+
+Icon_gGmfHo5IjR = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 566px,
+  top: 482px,
+
+  button.trash20svg_W {
+    contents: pointer20
+  }
+}
+
+chevrondown12svg_BGGw852dsg = icon {
+  name: "chevron-down-12.svg",
+  left: 549px,
+  top: 493px,
+  width: 12px,
+  height: 12px,
+  contents: chevrondown12
+}
+
+Icon_53BY8bEPob = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 586px,
+  top: 502px,
+
+  button.trash20svg_W {
+    contents: frame20
+  }
+}
+
+Icon_7TJ0RCVeUL = button.ButtonS28Variant_X {
+  name: "Close",
+  left: 686px,
+  top: 602px,
+
+  button.trash20svg_W {
+    contents: code20
+  }
+}

@@ -2,6 +2,8 @@ import "components/audioBar.elyx" as audioBar
 import "tokens/spacing.elyx" as spacing
 import "components/button.elyx" as button
 import "components/cardBackground.elyx" as cardBackground
+import "icons/20 pixels/play-20.svg" as play20
+import "icons/20 pixels/star-20.svg" as star20
 
 export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
   name: "Toolbar (audio)",
@@ -16,8 +18,8 @@ export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
   padding-right: 4px,
   layout.align-items: .center,
   layout.direction: .row,
-  layout.item-gap: 12px,
-  layout.justify-content: .center,
+  layout.item-gap: 20px,
+  layout.justify-content: .space-between,
   overrides: [
     insert(GroupedStack_i4crOHtTlb, after = .nil),
     insert(Close_EYg7HfYapC, after = GroupedStack_i4crOHtTlb)
@@ -30,7 +32,17 @@ GroupedStack_i4crOHtTlb = frame {
   name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [AudioBar_9RsV8DSxFJ, Tools_Zeh2Ix47Qp]
+  children: [Primaryrounded_YMDvd7YAnF, AudioBar_9RsV8DSxFJ, Tools_Zeh2Ix47Qp]
+}
+
+Primaryrounded_YMDvd7YAnF = button.ButtonS28Variant_5 {
+  name: "Primary rounded",
+  left: 0px,
+  top: 4px,
+
+  button.trash20svg_z {
+    contents: play20
+  }
 }
 
 AudioBar_9RsV8DSxFJ = audioBar.AudioBar_c3wtjdhX1X {name: "Audio Bar", left: 863px, top: 837px}
@@ -38,10 +50,18 @@ AudioBar_9RsV8DSxFJ = audioBar.AudioBar_c3wtjdhX1X {name: "Audio Bar", left: 863
 Tools_Zeh2Ix47Qp = frame {
   name: "Tools",
   height: 100%,
-  layout: {align-items: .center},
-  children: [Icon_L08VERZ26t, Icon_gcEBtbFoWa]
+  layout: {align-items: .center, item-gap: 4px},
+  children: [Icon_GIIMxS9hgD, Icon_gcEBtbFoWa]
 }
 
-Icon_L08VERZ26t = button.ButtonS28Variant_7 {name: "Icon", left: 178px, top: 0px}
+Icon_GIIMxS9hgD = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 218px,
+  top: 40px,
+
+  button.trash20svg_W {
+    contents: star20
+  }
+}
 
 Icon_gcEBtbFoWa = button.ButtonS28Variant_7 {name: "Icon", left: 198px, top: 20px}
