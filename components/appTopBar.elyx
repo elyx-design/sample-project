@@ -23,14 +23,14 @@ export AppTopBar_ePXqYpgrNQ = frame {
   },
   padding-left: 0px,
   padding-right: 16px,
-  children: [GroupedStack_qpUipcPHaP, GroupedStack_Fgx2a3Au78]
+  children: [GroupedStack_qpUipcPHaP, Title_M1uSFbT37W, GroupedStack_Fgx2a3Au78]
 }
 
 GroupedStack_qpUipcPHaP = frame {
   name: "Left",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [trafficLightsvg_MU52G7ky4p, Title_M1uSFbT37W]
+  children: trafficLightsvg_MU52G7ky4p
 }
 
 trafficLightsvg_MU52G7ky4p = icon {
@@ -44,6 +44,8 @@ trafficLightsvg_MU52G7ky4p = icon {
 
 Title_M1uSFbT37W = frame {
   name: "Title",
+  left: 88px,
+  top: 0px,
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
   children: [NewAiChat_WzpulaBhIr, chevrondown12svg_eRLZPmBMpe]

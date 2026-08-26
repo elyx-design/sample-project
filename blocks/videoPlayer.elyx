@@ -8,7 +8,7 @@ export VideoPlayer_7IHVyFXn8z = frame {
   name: "Video Player",
   left: 368px,
   top: 405px,
-  width: 640px,
+  width: 643px,
   height: 420px,
   layout: {direction: .column, justify-content: .space-between},
   fill: [
@@ -28,7 +28,7 @@ export VideoPlayer_7IHVyFXn8z = frame {
       }
     }
   ],
-  padding: 24px,
+  padding: 12px,
   children: [GroupedStack_R6YKIBc1DT, PlaybackControl_ajqA0M9W3s]
 }
 

@@ -1,10 +1,95 @@
-import "images/background/black.jpg" as black
+import "blocks/videoPlayer.elyx" as videoPlayer
+import "tokens/colors.elyx" as colors
+import "blocks/chatWindow.elyx" as chatWindow
+import "components/appTopBar.elyx" as appTopBar
+import "images/background/desert.png" as desert
 
-Frame = frame {
+LiveEvent = frame {
+  name: "Live Event",
+  left: -76.9999px,
+  top: -8px,
+  width: 1415px,
+  height: 925px,
+  fill: {image: {ref: desert}},
+  children: Frame_r
+}
+
+Frame_r = frame {
   name: "Frame",
-  left: 107px,
-  top: 210px,
-  width: 1032px,
-  height: 635px,
-  fill: {image: {ref: black}}
+  left: 226.9999px,
+  top: 219px,
+  width: 962px,
+  height: 488px,
+  layout: {direction: .column},
+  shadow: {
+    drop-shadow: {
+      color: colors.colors.blackAlpha10,
+      offset: point(0px, 5px),
+      blur-radius: 5px,
+      spread: 0px
+    }
+  },
+  corner-radius: 24px,
+  children: [layer_z, Frame_Z]
+}
+
+layer_z = appTopBar.AppTopBar_ePXqYpgrNQ {
+  name: "App Top Bar",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+
+  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_P2GwpzaI0X {
+    overrides: [remove(appTopBar.button.trash20svg_W)]
+  }
+
+  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_WGyKEBetto {
+    overrides: [remove(appTopBar.button.trash20svg_W)]
+  }
+
+  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_2vNLtoDNUm {
+    overrides: [remove(appTopBar.button.trash20svg_W)]
+  }
+
+  appTopBar.Title_M1uSFbT37W {
+    overrides: [remove(appTopBar.chevrondown12svg_eRLZPmBMpe)]
+  }
+
+  appTopBar.Title_M1uSFbT37W.NewAiChat_WzpulaBhIr {
+    contents: "RideCast"
+  }
+}
+
+Frame_Z = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {justify-content: .space-between},
+  children: [layer, layer_5]
+}
+
+layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+  name: "Video Player",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%
+}
+
+layer_5 = chatWindow.ChatWindow_J7FxeHn6Zh {
+  name: "Chat Window",
+  left: 640px,
+  top: 0px,
+  width: 32.6%,
+  height: 100%,
+
+  chatWindow.Chat_rw4c7WJOMr.User_y4nVb60Ht8.chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+    contents: "This heat is brutal"
+  }
+
+  chatWindow.Chat_rw4c7WJOMr.ChatBubble_w7rHdo4Xzi.chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+    contents: "They just hit the final dune!"
+  }
 }

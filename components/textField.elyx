@@ -3,6 +3,8 @@ import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "icons/24 pixels/calendar-24.svg" as calendar24
+import "components/button.elyx" as button
+import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 
 export textField_vGl5JUl04s = frame {
   name: "Text Field",
@@ -152,4 +154,46 @@ create24svg_d = icon {
   height: 24px,
   fill: Colors.colors.red70,
   contents: calendar24
+}
+
+@variant("Text Field (button)")
+TextFieldVariant_w = textField_vGl5JUl04s {
+  left: 1139px,
+  top: 770px,
+  padding-right: 4px,
+  layout.justify-content: .space-between,
+  overrides: [insert(layer, after = Label)]
+}
+
+@variant("Text Field, Placeholder (button)")
+TextFieldbutton = textField_vGl5JUl04s {
+  left: 1142.4px,
+  top: 850px,
+  padding-right: 4px,
+  layout.justify-content: .space-between,
+  overrides: [insert(Primaryrounded, after = Label)],
+
+  Label {
+    fill[0].color: Colors.colors.black80
+  }
+}
+
+Primaryrounded = button.ButtonS28Variant_5 {
+  name: "Primary rounded",
+  left: 52.3381px,
+  top: 5.85px,
+
+  button.trash20svg_z {
+    contents: arrowUp20
+  }
+}
+
+layer = button.ButtonS28Variant_5 {
+  name: "Primary rounded",
+  left: 52.3381px,
+  top: 5.85px,
+
+  button.trash20svg_z {
+    contents: arrowUp20
+  }
 }
