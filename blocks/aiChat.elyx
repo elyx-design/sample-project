@@ -3,6 +3,7 @@ import "tokens/radius.elyx" as radius
 import "blocks/textBox.elyx" as textBox
 import "components/chatBubble.elyx" as chatBubble
 import "components/appTopBar.elyx" as appTopBar
+import "icons/24 pixels/robot-24.svg" as robot24
 
 export AiChat_DK44ShHBd2 = cardBackground.cardBackgroundSolidVariant {
   name: "Ai Chat",
@@ -19,31 +20,49 @@ export AiChat_DK44ShHBd2 = cardBackground.cardBackgroundSolidVariant {
   layout.justify-content: .space-between,
   overrides: [
     insert(AppTopBar_xpVFAA82Vy, after = .nil),
-    insert(GroupedStack_B4eyO98vxR, after = AppTopBar_xpVFAA82Vy),
-    insert(chatBox_Ehj1d8ou8r, after = GroupedStack_B4eyO98vxR)
+    insert(GroupedStack_mRtZgIziU3, after = AppTopBar_xpVFAA82Vy)
   ]
 }
 
-chatBox_Ehj1d8ou8r = textBox.cardBackgroundSolid_kEwO8GJ2Nk {
-  name: "chatBox",
-  left: 0px,
-  top: 1178px,
-  width: 100%,
-  corner-radius: radius.radius.m,
-  shadow[0].drop-shadow.visible: .false
+AppTopBar_xpVFAA82Vy = appTopBar.AppTopBar_ePXqYpgrNQ {
+  name: "App Top Bar",
+  left: 598px,
+  top: 208px,
+  fill[0].visible: .false
 }
 
-GroupedStack_B4eyO98vxR = frame {
+GroupedStack_mRtZgIziU3 = frame {
+  name: "Chat",
+  width: 100%,
+  height: 100%,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .stretch,
+    item-gap: 20px
+  },
+  padding: [48px, 12px, 12px],
+  children: [GroupedStack_v5YeDmjPaA, chatBox_8CHJtT5EBm]
+}
+
+GroupedStack_v5YeDmjPaA = frame {
+  name: "chat",
+  width: 100%,
+  layout: {direction: .column, item-gap: 20px},
+  children: [GroupedStack_s1knnuFu9M, layer_OoM9oz4uq7]
+}
+
+GroupedStack_s1knnuFu9M = frame {
   name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
   padding-left: 12px,
   padding-right: 12px,
-  children: [User_7aEuDqbz16, Text_UPbcWrIgNf]
+  children: [User_dronh23C7d, Text_ctWSRNMl7J]
 }
 
-User_7aEuDqbz16 = chatBubble.ChatBubbleVariant {
+User_dronh23C7d = chatBubble.ChatBubbleVariant {
   name: "User",
   left: 1066px,
   top: 464px,
@@ -54,7 +73,7 @@ User_7aEuDqbz16 = chatBubble.ChatBubbleVariant {
   }
 }
 
-Text_UPbcWrIgNf = text {
+Text_ctWSRNMl7J = text {
   name: "Text",
   left: 0px,
   top: 299px,
@@ -64,9 +83,32 @@ Text_UPbcWrIgNf = text {
   line-height: 1.5
 }
 
-AppTopBar_xpVFAA82Vy = appTopBar.AppTopBar_ePXqYpgrNQ {
-  name: "App Top Bar",
-  left: 598px,
-  top: 208px,
-  fill[0].visible: .false
+layer_OoM9oz4uq7 = frame {
+  name: "Frame",
+  left: 0px,
+  top: 227px,
+  width: 24px,
+  height: 24px,
+  layout: {justify-content: .center, align-items: .center},
+  overflow: .visible,
+  padding-left: 20px,
+  children: robot24svg_RnpQd1RuHa
+}
+
+robot24svg_RnpQd1RuHa = icon {
+  name: "robot-24.svg",
+  left: 0px,
+  top: 0px,
+  width: 526px,
+  height: 24px,
+  contents: robot24
+}
+
+chatBox_8CHJtT5EBm = textBox.cardBackgroundSolid_kEwO8GJ2Nk {
+  name: "chatBox",
+  left: 0px,
+  top: 1178px,
+  width: 100%,
+  corner-radius: radius.radius.m,
+  shadow[0].drop-shadow.visible: .false
 }

@@ -221,12 +221,7 @@ Finallyistheexis = text {
   font-style: "Regular"
 }
 
-Screen = account.account_LEZl5tsouT {
-  name: "Screen",
-  doc: "A screen bringing it all together, containing both blocks and components.",
-  left: 647px,
-  top: 757px
-}
+Screen = account.account_LEZl5tsouT {name: "Screen", left: 841px, top: 757px}
 
 Component = button.ButtonVariant_V {
   name: "Component",
@@ -249,7 +244,7 @@ Frame = frame {
   width: 2399px,
   height: 1492px,
   fill: {image: {ref: sand}},
-  children: [layer, layer_3, layer_6, AuthForm_e, layer_W]
+  children: [layer, layer_3, layer_6, AuthForm_e, layer_1]
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 244px, top: 184px}
@@ -284,17 +279,12 @@ AuthForm_e = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
   }
 }
 
-layer_W = aiChat.AiChat_DK44ShHBd2 {
+layer_1 = aiChat.AiChat_DK44ShHBd2 {
   name: "Ai Chat",
   left: 979px,
   top: 184px,
-  width: 480px,
-  height: 562px,
-  overrides: [
-    insert(GroupedStack_f, after = aiChat.AppTopBar_xpVFAA82Vy),
-    remove(aiChat.chatBox_Ehj1d8ou8r),
-    remove(aiChat.GroupedStack_B4eyO98vxR)
-  ]
+  width: 490px,
+  height: 650px
 }
 
 Frame_g9BtBzmGAd = frame {
@@ -308,57 +298,3 @@ Frame_g9BtBzmGAd = frame {
 }
 
 ButtonIconXXL80_Je37pucgIE = logo.ButtonIconXL48 {name: "Button Icon XXL (80)", left: 0px, top: 0px}
-
-GroupedStack_f = frame {
-  name: "Grouped Stack",
-  width: 100%,
-  height: 100%,
-  layout: {
-    direction: .column,
-    justify-content: .space-between,
-    align-items: .stretch,
-    item-gap: 20px
-  },
-  padding: [40px, 16px, 16px],
-  children: [GroupedStack_B4eyO98vxR, chatBox_Ehj1d8ou8r]
-}
-
-GroupedStack_B4eyO98vxR = frame {
-  name: "Grouped Stack",
-  width: 100%,
-  layout: {direction: .column, align-items: .stretch, item-gap: 24px},
-  overflow: .visible,
-  padding-left: 12px,
-  padding-right: 12px,
-  children: [User_7aEuDqbz16, Text_UPbcWrIgNf]
-}
-
-User_7aEuDqbz16 = aiChat.chatBubble.ChatBubbleVariant {
-  name: "User",
-  left: 1066px,
-  top: 464px,
-  layout.justify-content: .end,
-
-  aiChat.chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
-    contents: "RAM or processor for video editing?"
-  }
-}
-
-Text_UPbcWrIgNf = text {
-  name: "Text",
-  left: 0px,
-  top: 299px,
-  width: 100%,
-  fill: .black,
-  contents: "For video editing, both matter, but the answer depends on your workflow.\n\nRAM helps most when you're working with multiple applications open, editing high-resolution footage, or using large project files. If you frequently run out of memory, editing becomes slow and choppy.\n\nWhat resolution do you typically work with?",
-  line-height: 1.5
-}
-
-chatBox_Ehj1d8ou8r = aiChat.textBox.cardBackgroundSolid_kEwO8GJ2Nk {
-  name: "chatBox",
-  left: 0px,
-  top: 1178px,
-  width: 100%,
-  corner-radius: Radius.radius.m,
-  shadow[0].drop-shadow.visible: .false
-}
