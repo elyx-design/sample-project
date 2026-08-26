@@ -64,35 +64,44 @@ GroupedStack_cwbemj4954 = frame {
   children: [Icon_2vNLtoDNUm, Icon_WGyKEBetto, Icon_P2GwpzaI0X]
 }
 
-Icon_2vNLtoDNUm = button.ButtonS28Variant_0 {
+Icon_2vNLtoDNUm = button.ButtonS28Variant_7 {
   name: "Icon",
   left: 884px,
   top: 540px,
+  border[0].color: .black,
   border[0].visible: .false,
   shadow[0].drop-shadow.visible: .false,
 
-  button.trash20svg {
+  button.trash20svg_W {
     contents: database20
+  }
+
+  button.trash20svg {
   }
 }
 
-Icon_WGyKEBetto = button.ButtonS28Variant_0 {
+Icon_WGyKEBetto = button.ButtonS28Variant_7 {
   name: "Icon",
   left: 904px,
   top: 560px,
+  border[0].color: .black,
   border[0].visible: .false,
   shadow[0].drop-shadow.visible: .false
 }
 
-Icon_P2GwpzaI0X = button.ButtonS28Variant_0 {
+Icon_P2GwpzaI0X = button.ButtonS28Variant_7 {
   name: "Icon",
   left: 932px,
   top: 560px,
+  border[0].color: .black,
   border[0].visible: .false,
   shadow[0].drop-shadow.visible: .false,
 
-  button.trash20svg {
+  button.trash20svg_W {
     contents: more20
+  }
+
+  button.trash20svg {
   }
 }
 

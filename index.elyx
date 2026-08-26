@@ -10,6 +10,7 @@ import "components/logo.elyx" as logo
 import "blocks/authForm.elyx" as AuthForm
 import "images/background/sand.png" as sand
 import "blocks/aiChat.elyx" as aiChat
+import "blocks/toolbar.elyx" as toolbar
 
 Welcome = frame {
   name: "Welcome",
@@ -244,7 +245,7 @@ Frame = frame {
   width: 2399px,
   height: 1492px,
   fill: {image: {ref: sand}},
-  children: [layer, layer_3, layer_6, AuthForm_e, layer_1]
+  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w]
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 244px, top: 184px}
@@ -286,6 +287,8 @@ layer_1 = aiChat.AiChat_DK44ShHBd2 {
   width: 490px,
   height: 650px
 }
+
+layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {name: "Toolbar (audio)", left: 979px, top: 870px}
 
 Frame_g9BtBzmGAd = frame {
   name: "Frame",

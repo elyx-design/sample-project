@@ -1,0 +1,466 @@
+import "tokens/colors.elyx" as colors
+import "tokens/spacing.elyx" as spacing
+import "tokens/radius.elyx" as radius
+
+export AudioBar_c3wtjdhX1X = frame {
+  name: "Audio Bar",
+  left: 755px,
+  top: 591px,
+  width: .auto,
+  height: spacing.spacing.heightS,
+  layout: {align-items: .center, item-gap: 8px},
+  fill: colors.colors.white100,
+  corner-radius: radius.radius.max,
+  padding-left: 12px,
+  padding-right: 12px,
+  children: [textLayer_k0DMadujGR, Audiotrack_tdDo4cfW62]
+}
+
+textLayer_k0DMadujGR = text {
+  name: "0:00",
+  left: 0px,
+  top: 0px,
+  fill: .black,
+  contents: "0:00",
+  font-size: 12
+}
+
+Audiotrack_tdDo4cfW62 = frame {
+  name: "Audio track",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 2px},
+  children: [
+    Rectangle_pAGR6kdOCe,
+    Rectangle_aYsiS9USNs,
+    Rectangle_WVB6jbAuo2,
+    Rectangle_4rKn7vmrC3,
+    Rectangle_rT3fNTKv0j,
+    Rectangle_DpiyxhV1fK,
+    Rectangle_oJOgXKXL4P,
+    Rectangle_QqsjKg6CEW,
+    Rectangle_4Otbsrvcgr,
+    Rectangle_5MKO6OGY1c,
+    Rectangle_g4PFRhPbay,
+    Rectangle_X3DTZEwVos,
+    Rectangle_65gGCZPiZe,
+    Rectangle_yszJA3wMAa,
+    Rectangle_zo18SImi6a,
+    Rectangle_7Rlnnf2R2l,
+    Rectangle_XcziOGPLB7,
+    Rectangle_Rk56XaTcM6,
+    Rectangle_o4coXbq9ve,
+    Rectangle_Jro8daQqaF,
+    Rectangle_A6RF8iSelR,
+    Rectangle_ij4hq4pO7a,
+    Rectangle_OAsHbGA5G0,
+    Rectangle_QKabShRDiO,
+    Rectangle_P62RHo3hU4,
+    Rectangle_vLELqWTEZg,
+    Rectangle_vbIsJCmRAV,
+    Rectangle_jXQ24GGBUv,
+    Rectangle_En0LD0RICc,
+    Rectangle_Dg6TzEkwVy,
+    Rectangle_pH7OnL8aoy,
+    Rectangle_1nZwzcj3yw,
+    Rectangle_Im9K3IZ8w4,
+    Rectangle_QO2DpRmEV7,
+    Rectangle_FcDKO2FtWl,
+    Rectangle_v1WyQZ6k5c
+  ]
+}
+
+Rectangle_pAGR6kdOCe = shape {
+  name: "Rectangle",
+  left: 46px,
+  top: 24.5px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_aYsiS9USNs = shape {
+  name: "Rectangle",
+  left: 66px,
+  top: 43.5px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_WVB6jbAuo2 = shape {
+  name: "Rectangle",
+  left: 86px,
+  top: 117px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_4rKn7vmrC3 = shape {
+  name: "Rectangle",
+  left: 90px,
+  top: 63px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_rT3fNTKv0j = shape {
+  name: "Rectangle",
+  left: 94px,
+  top: 62px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_DpiyxhV1fK = shape {
+  name: "Rectangle",
+  left: 98px,
+  top: 57px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_oJOgXKXL4P = shape {
+  name: "Rectangle",
+  left: 102px,
+  top: 56px,
+  width: 1px,
+  height: 4px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_QqsjKg6CEW = shape {
+  name: "Rectangle",
+  left: 106px,
+  top: 54px,
+  width: 1px,
+  height: 6px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_4Otbsrvcgr = shape {
+  name: "Rectangle",
+  left: 110px,
+  top: 51px,
+  width: 1px,
+  height: 10px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_5MKO6OGY1c = shape {
+  name: "Rectangle",
+  left: 114px,
+  top: 47px,
+  width: 1px,
+  height: 14px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_g4PFRhPbay = shape {
+  name: "Rectangle",
+  left: 118px,
+  top: 48px,
+  width: 1px,
+  height: 8px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_X3DTZEwVos = shape {
+  name: "Rectangle",
+  left: 122px,
+  top: 52px,
+  width: 1px,
+  height: 4px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_65gGCZPiZe = shape {
+  name: "Rectangle",
+  left: 126px,
+  top: 55px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_yszJA3wMAa = shape {
+  name: "Rectangle",
+  left: 130px,
+  top: 56px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_zo18SImi6a = shape {
+  name: "Rectangle",
+  left: 150px,
+  top: 82px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_7Rlnnf2R2l = shape {
+  name: "Rectangle",
+  left: 170px,
+  top: 102px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_XcziOGPLB7 = shape {
+  name: "Rectangle",
+  left: 173px,
+  top: 102px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_Rk56XaTcM6 = shape {
+  name: "Rectangle",
+  left: 176px,
+  top: 95px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_o4coXbq9ve = shape {
+  name: "Rectangle",
+  left: 179px,
+  top: 68.5px,
+  width: 1px,
+  height: 4px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_Jro8daQqaF = shape {
+  name: "Rectangle",
+  left: 182px,
+  top: 86px,
+  width: 1px,
+  height: 3px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_A6RF8iSelR = shape {
+  name: "Rectangle",
+  left: 185px,
+  top: 86.5px,
+  width: 1px,
+  height: 3px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_ij4hq4pO7a = shape {
+  name: "Rectangle",
+  left: 205px,
+  top: 101.5px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_OAsHbGA5G0 = shape {
+  name: "Rectangle",
+  left: 208px,
+  top: 109.5px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_QKabShRDiO = shape {
+  name: "Rectangle",
+  left: 211px,
+  top: 102.5px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_P62RHo3hU4 = shape {
+  name: "Rectangle",
+  left: 214px,
+  top: 78px,
+  width: 1px,
+  height: 3px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_vLELqWTEZg = shape {
+  name: "Rectangle",
+  left: 217px,
+  top: 101.5px,
+  width: 1px,
+  height: 2px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_vbIsJCmRAV = shape {
+  name: "Rectangle",
+  left: 220px,
+  top: 89.5px,
+  width: 1px,
+  height: 3px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_jXQ24GGBUv = shape {
+  name: "Rectangle",
+  left: 223px,
+  top: 72.5px,
+  width: 1px,
+  height: 5px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_En0LD0RICc = shape {
+  name: "Rectangle",
+  left: 226px,
+  top: 90px,
+  width: 1px,
+  height: 3px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_Dg6TzEkwVy = shape {
+  name: "Rectangle",
+  left: 229px,
+  top: 110px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_pH7OnL8aoy = shape {
+  name: "Rectangle",
+  left: 232px,
+  top: 110px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_1nZwzcj3yw = shape {
+  name: "Rectangle",
+  left: 235px,
+  top: 110px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_Im9K3IZ8w4 = shape {
+  name: "Rectangle",
+  left: 255px,
+  top: 130px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_QO2DpRmEV7 = shape {
+  name: "Rectangle",
+  left: 258px,
+  top: 130px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_FcDKO2FtWl = shape {
+  name: "Rectangle",
+  left: 261px,
+  top: 130px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}
+
+Rectangle_v1WyQZ6k5c = shape {
+  name: "Rectangle",
+  left: 264px,
+  top: 130px,
+  width: 1px,
+  height: 1px,
+  fill: colors.colors.black20,
+  corner-radius: radius.radius.max,
+  type: .rect
+}

@@ -42,3 +42,20 @@ cardBackgroundSolidVariant_o = cardBackground_zXouRyz {
   fill[0]: .nil,
   shadow[0]: .nil
 }
+
+@variant("Transparent (full radius)")
+cardBackgroundSolidVariant_B = cardBackground_zXouRyz {
+  left: 275px,
+  top: 575px,
+  corner-radius: Radius.radius.max,
+  fill[0].color: colors.colors.whiteAlpha50,
+  filter[0].radius: 40px,
+  filter[0].type: .background-blur
+}
+
+@variant("Solid (full radius)")
+cardBackgroundSolidVariant_t = cardBackground_zXouRyz {
+  left: 275.05px,
+  top: 467px,
+  corner-radius: Radius.radius.max
+}
