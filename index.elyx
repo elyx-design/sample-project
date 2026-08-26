@@ -4,18 +4,22 @@ import "screens/account.elyx" as account
 import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
 import "blocks/cardProfile.elyx" as profileCard
+import "blocks/planCard.elyx" as planCard
 import "blocks/cardSocial.elyx" as cardSocial
 import "blocks/cardInfo.elyx" as cardInfo
 import "blocks/menuList.elyx" as menuList
 import "components/logo.elyx" as logo
 import "blocks/authForm.elyx" as AuthForm
 import "blocks/aiChat.elyx" as aiChat
+import "images/ai/orb.png" as orb
 import "components/appTopBar.elyx" as appTopBar
 import "blocks/toolbarAudio.elyx" as toolbar
 import "blocks/tollbarCreate.elyx" as tollbarCreate
 import "blocks/chatWindow.elyx" as chatWindow
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "images/background/desert.png" as desert
+import "icons/24 pixels/dashboard.svg" as dashboard
+import "icons/24 pixels/processor.svg" as processor
 
 Welcome = frame {
   name: "Welcome",
@@ -250,7 +254,7 @@ Frame = frame {
   width: 2399px,
   height: 1492px,
   fill: {image: {ref: desert}},
-  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_N, Frame_y]
+  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_N, Frame_y, Frame_i]
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 244px, top: 184px}
@@ -288,7 +292,7 @@ AuthForm_e = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
 layer_1 = aiChat.AiChat_DK44ShHBd2 {
   name: "Ai Chat",
   left: 979px,
-  top: 678px,
+  top: 730px,
   width: 408px,
   height: 562px,
 
@@ -303,17 +307,17 @@ layer_1 = aiChat.AiChat_DK44ShHBd2 {
 
 layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
   name: "Toolbar (audio)",
-  left: 1411.45px,
-  top: 678px,
+  left: 1411px,
+  top: 1224px,
   width: 322px
 }
 
-layer_N = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 1411px, top: 738px}
+layer_N = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 1411px, top: 1284px}
 
 Frame_y = frame {
   name: "Frame",
-  left: 979px,
-  top: 184px,
+  left: 1411px,
+  top: 730px,
   width: 816px,
   height: 470px,
   layout: {direction: .column},
@@ -386,6 +390,159 @@ layer_5 = chatWindow.ChatWindow_J7FxeHn6Zh {
   }
 }
 
+Frame_i = frame {
+  name: "Frame",
+  left: 979px,
+  top: 184px,
+  layout: {justify-content: .center, align-items: .center},
+  fill: colors.colors.whiteAlpha50,
+  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  shadow: {
+    drop-shadow: {
+      color: colors.colors.blackAlpha10,
+      offset: point(0px, 5px),
+      blur-radius: 5px,
+      spread: 0px
+    }
+  },
+  filter: {type: .background-blur, radius: 40px},
+  corner-radius: 24px,
+  padding: 12px,
+  children: [planCard_R, planCard_H, planCard_O]
+}
+
+planCard_R = planCard.planCard_LTK7mFiyqR {
+  name: "planCard",
+  left: 0px,
+  top: 0px,
+  width: 320px,
+  height: 100%,
+  fill[0].visible: .false,
+
+  planCard.layer_Z.button.Button {
+    contents: "Register for free!"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.GroupedStack_o4NcMhJdgN.PlanPrice_ZJx9H3J {
+    contents: "$0"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
+    overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  }
+}
+
+planCard_H = planCard.planCard_LTK7mFiyqR {
+  name: "planCard",
+  left: 420px,
+  top: 0.9999px,
+  width: 380px,
+  height: 498px,
+  corner-radius: [20px, 0px, 0px, 20px],
+
+  @use-variant(button.ButtonVariant_V)
+  planCard.layer_Z {}
+
+  planCard.layer_Z.button.Button {
+    contents: "Get Started"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3 {
+    overrides: [
+      insert(FeatureRow_doWHbnbzF0, after = planCard.FeatureRow_doWHbnbzF0),
+      insert(FeatureRow_QoAeQFDdmk, after = FeatureRow_doWHbnbzF0)
+    ]
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0.Basicexportoptions_NPd1l59Z9w {
+    contents: "Advanced export options"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS.FeatureLabel_7Fcm4yTYnx {
+    contents: "Priority email support"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX.FeatureLabel_Y5ohvNoMbc {
+    contents: "Up to 5 users"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b.FeatureLabel_532ZQB6 {
+    contents: "Unlimited projects"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.Text_2UgTFIXDd4 {
+    contents: "Best option!\nFor professionals who need more room to work."
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.PlanName_81UA3to {
+    contents: "Pro"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT.direct24svg_n2DErcwc3b {
+    contents: dashboard,
+    left: 6px,
+    top: 33px
+  }
+}
+
+planCard_O = planCard.planCard_LTK7mFiyqR {
+  name: "planCard",
+  left: 840px,
+  top: 0px,
+  width: 380px,
+  height: 100%,
+  corner-radius: [0px, 20px, 20px, 0px],
+
+  planCard.layer_Z.button.Button {
+    contents: "Contact sales"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3 {
+    overrides: [
+      insert(FeatureRow_rLZZCQqFxW, after = planCard.FeatureRow_doWHbnbzF0),
+      insert(FeatureRow_k4ZVO09kwe, after = FeatureRow_rLZZCQqFxW)
+    ]
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0.Basicexportoptions_NPd1l59Z9w {
+    contents: "Custom integrations"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS.FeatureLabel_7Fcm4yTYnx {
+    contents: "Dedicated support"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX.FeatureLabel_Y5ohvNoMbc {
+    contents: "Unlimited users"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b.FeatureLabel_532ZQB6 {
+    contents: "Everything in Pro"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.Text_2UgTFIXDd4 {
+    contents: "For companies.\nTeams that need scale and control."
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.GroupedStack_o4NcMhJdgN.PlanPrice_ZJx9H3J {
+    contents: "$29"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
+    overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.PlanName_81UA3to {
+    contents: "Business"
+  }
+
+  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT.direct24svg_n2DErcwc3b {
+    contents: processor,
+    left: 6px,
+    top: 33px
+  }
+}
+
 Frame_g9BtBzmGAd = frame {
   name: "Frame",
   left: 0px,
@@ -396,4 +553,123 @@ Frame_g9BtBzmGAd = frame {
   children: ButtonIconXXL80_Je37pucgIE
 }
 
-ButtonIconXXL80_Je37pucgIE = logo.ButtonIconXL48 {name: "Button Icon XXL (80)", left: 0px, top: 0px}
+ButtonIconXXL80_Je37pucgIE = logo.ButtonIconXL48 {
+  name: "Button Icon XXL (80)",
+  left: 0px,
+  top: 0px,
+  overrides: [insert(orbpng, after = .nil), remove(logo.defaultsvg)]
+}
+
+FeatureRow_k4ZVO09kwe = frame {
+  name: "Feature Row",
+  left: 80px,
+  top: 155px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_oakpMqVJgc, GBstorage_TMNZDY6ong]
+}
+
+dot20svg_oakpMqVJgc = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: planCard.dot12
+}
+
+GBstorage_TMNZDY6ong = text {
+  name: "2 GB storage",
+  fill: colors.colors.black40,
+  contents: "Admin controls and permissions",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+FeatureRow_rLZZCQqFxW = frame {
+  name: "Feature Row",
+  left: 60px,
+  top: 135px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_TW68FbkSOU, GBstorage_VYRdKEykZZ]
+}
+
+dot20svg_TW68FbkSOU = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: planCard.dot12
+}
+
+GBstorage_VYRdKEykZZ = text {
+  name: "2 GB storage",
+  fill: colors.colors.black40,
+  contents: "1 TB storage",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+FeatureRow_QoAeQFDdmk = frame {
+  name: "Feature Row",
+  left: 80px,
+  top: 155px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_SMzyH8A9vz, GBstorage_js9Pcjk9V3]
+}
+
+dot20svg_SMzyH8A9vz = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: planCard.dot12
+}
+
+GBstorage_js9Pcjk9V3 = text {
+  name: "2 GB storage",
+  fill: colors.colors.black40,
+  contents: "Version history",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+FeatureRow_doWHbnbzF0 = frame {
+  name: "Feature Row",
+  left: 60px,
+  top: 135px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_XKe72G7Hvi, Basicexportoptions_NPd1l59Z9w]
+}
+
+dot20svg_XKe72G7Hvi = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: planCard.dot12
+}
+
+Basicexportoptions_NPd1l59Z9w = text {
+  name: "2 GB storage",
+  fill: colors.colors.black40,
+  contents: "100 GB storage",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+orbpng = shape {
+  name: "orb.png",
+  left: 47.0654px,
+  top: 64.07px,
+  width: 80px,
+  height: 80px,
+  fill: {image: {ref: orb}},
+  type: .rect
+}

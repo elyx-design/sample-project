@@ -1,135 +1,264 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
-import "components/statusBadge.elyx" as statusBadge
 import "components/button.elyx" as button
+import "icons/24 pixels/direct-24.svg" as direct24
+import "icons/12 pixels/dot-12.svg" as dot12
+import "components/tag.elyx" as tag
 
 export planCard_LTK7mFiyqR = frame {
   name: "planCard",
   left: 0px,
   top: 0px,
   width: 100%,
-  height: .auto,
-  layout: {direction: .column, item-gap: Spacing.spacing.l},
-  fill: rgb(9.9186%, 11.53%, 13.12%),
+  height: 425px,
+  layout: {direction: .column, justify-content: .space-between, item-gap: 48px},
+  fill: Colors.colors.white100,
   corner-radius: Radius.radius.l,
-  padding: Spacing.spacing.paddingXL,
-  children: [PlanHeader_QvgQJ1C, PlanPrice_ZJx9H3J, PlanFeatures_1JNxLt3, layer_Z]
+  padding: 24px,
+  children: [GroupedStack_8RgNvW1K7p, layer_Z]
+}
+
+GroupedStack_8RgNvW1K7p = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 48px},
+  overflow: .visible,
+  children: [GroupedStack_v7dOnTlCXG, GroupedStack_1qB1LWpCrk]
+}
+
+GroupedStack_v7dOnTlCXG = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {align-items: .center, item-gap: 12px},
+  overflow: .visible,
+  children: [layer_jRUrdXyqNT, PlanHeader_QvgQJ1C]
+}
+
+layer_jRUrdXyqNT = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 40px,
+  height: 40px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  fill: Colors.colors.black20,
+  corner-radius: 8px,
+  children: direct24svg_n2DErcwc3b
+}
+
+direct24svg_n2DErcwc3b = icon {
+  name: "direct-24.svg",
+  left: 2px,
+  top: 29px,
+  width: 32px,
+  height: 32px,
+  fill: Colors.colors.white100,
+  contents: direct24
 }
 
 PlanHeader_QvgQJ1C = frame {
   name: "Plan Header",
   width: 100%,
   layout: {justify-content: .space-between, align-items: .center},
-  children: [PlanName_81UA3to, layer]
+  overflow: .visible,
+  children: [PlanName_81UA3to, TagTransparent_vakzscXaBV]
 }
 
 PlanName_81UA3to = text {
-  name: "Plan Name",
-  fill: rgb(98.9987%, 98.9987%, 98.9987%),
-  contents: "Team",
+  name: "Starter",
+  fill: Colors.colors.black20,
+  contents: "Starter",
   font-size: 20,
   font-family: "Inter",
   font-style: "Bold"
 }
 
-layer = statusBadge.statusBadgeVariant_5 {
-  left: 176px,
-  top: 16px,
+TagTransparent_vakzscXaBV = tag.TagTransparentVariant {
+  name: "Icon and Label",
+  left: 67px,
+  top: 37px,
+  border[0].visible: .false,
+  fill[0].color: rgb(90.2878%, 81.125%, 100%),
 
-  statusBadge.ProfileBadgeLabel_fs2wPy7 {
-    contents: "Active"
+  tag.Tag_gKZPtXRbSo {
+    contents: "Best!"
   }
 }
 
+GroupedStack_1qB1LWpCrk = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 24px},
+  children: [GroupedStack_AcjlTuALWG, PlanFeatures_1JNxLt3]
+}
+
+GroupedStack_AcjlTuALWG = frame {
+  name: "Grouped Stack",
+  left: 24px,
+  top: 112px,
+  width: 100%,
+  layout: {direction: .column, item-gap: 8px},
+  children: [GroupedStack_o4NcMhJdgN, Text_2UgTFIXDd4]
+}
+
+GroupedStack_o4NcMhJdgN = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {align-items: .end, item-gap: 4px},
+  children: [PlanPrice_ZJx9H3J, textLayer_QpGiRL9Axb]
+}
+
 PlanPrice_ZJx9H3J = text {
-  name: "Plan Price",
-  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
-  contents: "$24 per member / month",
-  font-size: Typography.typography.labelML,
+  name: "$12",
+  fill: Colors.colors.black20,
+  contents: "$12",
+  font-size: 40,
   font-family: "Inter",
-  font-style: "Regular"
+  font-style: "Light"
+}
+
+textLayer_QpGiRL9Axb = text {
+  name: "/Month",
+  left: 40px,
+  top: 132px,
+  height: 22px,
+  fill: Colors.colors.black80,
+  contents: "/Month",
+  font-size: 14,
+  font-family: "Inter",
+  font-style: "SemiBold"
+}
+
+Text_2UgTFIXDd4 = text {
+  name: "Free forever.\nFor in",
+  left: 20px,
+  top: 262px,
+  fill: Colors.colors.black40,
+  contents: "Free forever.\nFor individuals getting started.",
+  font-style: "Regular",
+  line-height: 1.5
 }
 
 PlanFeatures_1JNxLt3 = frame {
   name: "Plan Features",
-  layout: {direction: .column, item-gap: 8},
-  children: [FeatureRow_o9Ggn3b, FeatureRow_u37z9ce, FeatureRow_v8_jXKC]
+  left: 24px,
+  top: 250px,
+  layout: {direction: .column, item-gap: 8px},
+  children: [
+    FeatureRow_o9Ggn3b,
+    FeatureRow_vhCwOoGdUX,
+    FeatureRow_H8LMonj7HS,
+    FeatureRow_doWHbnbzF0
+  ]
 }
 
 FeatureRow_o9Ggn3b = frame {
   name: "Feature Row",
-  layout: {align-items: .center, item-gap: 8},
-  children: [FeatureDot_cJ3_jml, FeatureLabel_532ZQB6]
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_UBu1JJ3Mhz, FeatureLabel_532ZQB6]
 }
 
-FeatureDot_cJ3_jml = shape {
-  name: "Feature Dot",
-  width: 6px,
-  height: 6px,
-  fill: Colors.colors.blue,
-  type: .ellipse
+dot20svg_UBu1JJ3Mhz = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: dot12
 }
 
 FeatureLabel_532ZQB6 = text {
-  name: "Feature Label",
-  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
-  contents: "Unlimited projects",
+  name: "Up to 3 projects",
+  fill: Colors.colors.black40,
+  contents: "Up to 3 projects",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
 
-FeatureRow_u37z9ce = frame {
+FeatureRow_vhCwOoGdUX = frame {
   name: "Feature Row",
-  layout: {align-items: .center, item-gap: 8},
-  children: [FeatureDot__qUChf5, FeatureLabel_UVzHWnL]
+  left: 20px,
+  top: 70px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_EGkYUT8Q6S, FeatureLabel_Y5ohvNoMbc]
 }
 
-FeatureDot__qUChf5 = shape {
-  name: "Feature Dot",
-  width: 6px,
-  height: 6px,
-  fill: Colors.colors.blue,
-  type: .ellipse
+dot20svg_EGkYUT8Q6S = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: dot12
 }
 
-FeatureLabel_UVzHWnL = text {
-  name: "Feature Label",
-  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
-  contents: "Shared components",
+FeatureLabel_Y5ohvNoMbc = text {
+  name: "Community support",
+  fill: Colors.colors.black40,
+  contents: "Community support",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
 
-FeatureRow_v8_jXKC = frame {
+FeatureRow_H8LMonj7HS = frame {
   name: "Feature Row",
-  layout: {align-items: .center, item-gap: 8},
-  children: [FeatureDot_yv3GLSN, FeatureLabel_0yZ827Q]
+  left: 20px,
+  top: 95px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_fb1dOX04vs, FeatureLabel_7Fcm4yTYnx]
 }
 
-FeatureDot_yv3GLSN = shape {
-  name: "Feature Dot",
-  width: 6px,
-  height: 6px,
-  fill: Colors.colors.blue,
-  type: .ellipse
+dot20svg_fb1dOX04vs = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: dot12
 }
 
-FeatureLabel_0yZ827Q = text {
-  name: "Feature Label",
-  fill: rgb(98.82%, 98.82%, 98.82%, 80%),
-  contents: "Priority support",
+FeatureLabel_7Fcm4yTYnx = text {
+  name: "Basic export options",
+  fill: Colors.colors.black40,
+  contents: "Basic export options",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+FeatureRow_doWHbnbzF0 = frame {
+  name: "Feature Row",
+  left: 40px,
+  top: 115px,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [dot20svg_XKe72G7Hvi, Basicexportoptions_NPd1l59Z9w]
+}
+
+dot20svg_XKe72G7Hvi = icon {
+  name: "dot-20.svg",
+  left: 4px,
+  top: 4px,
+  width: 12px,
+  height: 12px,
+  contents: dot12
+}
+
+Basicexportoptions_NPd1l59Z9w = text {
+  name: "2 GB storage",
+  fill: Colors.colors.black40,
+  contents: "2 GB storage",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
 }
 
 layer_Z = button.button_43RxZnGr30 {
-  left: 145px,
-  top: 122px,
+  name: "Button M (36)",
+  left: 24px,
+  top: 390px,
 
   button.Button {
     contents: "Manage Plan"

@@ -83,12 +83,5 @@ layer_5 = chatWindow.ChatWindow_J7FxeHn6Zh {
   left: 640px,
   top: 0px,
   width: 32.6%,
-  height: 100%,
-
-  chatWindow.Chat_rw4c7WJOMr.User_y4nVb60Ht8.chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
-    contents: "This heat is brutal"
-  }
-
-  chatWindow.Chat_rw4c7WJOMr.ChatBubble_w7rHdo4Xzi.chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
-  }
+  height: 100%
 }
