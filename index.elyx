@@ -246,7 +246,7 @@ Frame = frame {
   width: 2399px,
   height: 1492px,
   fill: {image: {ref: sand}},
-  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_d]
+  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_N]
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 244px, top: 184px}
@@ -300,7 +300,7 @@ layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
   width: 322px
 }
 
-layer_d = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 585px, top: 124px}
+layer_N = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 585px, top: 124px}
 
 Frame_g9BtBzmGAd = frame {
   name: "Frame",

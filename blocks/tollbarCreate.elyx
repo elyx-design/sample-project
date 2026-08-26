@@ -159,6 +159,5 @@ Icon_7TJ0RCVeUL = button.ButtonS28Variant_X {
   top: 602px,
 
   button.trash20svg_W {
-    contents: code20
   }
 }
