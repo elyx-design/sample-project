@@ -1,0 +1,10 @@
+import "images/background/black.jpg" as black
+
+Frame = frame {
+  name: "Frame",
+  left: 107px,
+  top: 210px,
+  width: 1032px,
+  height: 635px,
+  fill: {image: {ref: black}}
+}

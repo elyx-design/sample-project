@@ -1,0 +1,51 @@
+import "blocks/playbackControl.elyx" as playbackControl
+import "tokens/colors.elyx" as colors
+import "images/background/rally.jpg" as rally
+
+export VideoPlayer_7IHVyFXn8z = frame {
+  name: "Video Player",
+  left: 368px,
+  top: 405px,
+  width: 640px,
+  height: 420px,
+  layout: {align-items: .end},
+  fill: [
+    {image: {ref: rally}},
+    {
+      linear-gradient: {
+        from: point(50%, 70.4884%),
+        to: point(50%, 100%),
+        stops: [stop(0%, .transparent), stop(100%, rgb(0%, 0%, 0%, 30%))]
+      }
+    }
+  ],
+  padding: 24px,
+  children: PlaybackControl_ajqA0M9W3s
+}
+
+PlaybackControl_ajqA0M9W3s = playbackControl.PlaybackControl_YxsKbPQMe8 {
+  name: "Playback Control",
+  left: 0px,
+  top: 809px,
+  width: 100%,
+
+  playbackControl.GroupedStack_rdVoRETh1T.Icon_clXC1PW6fA.button.trash20svg_W {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  playbackControl.GroupedStack_rdVoRETh1T.Icon_teDPq1aBTb.button.trash20svg_W {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  playbackControl.GroupedStack_rdVoRETh1T.Icon_4slh7sL8pH.button.trash20svg_W {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  playbackControl.Text_wZsdhlOFZW {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  playbackControl.GroupedStack_q0ILkfiHMO.Icon_5hh58LFCp5.button.trash20svg_W {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+}

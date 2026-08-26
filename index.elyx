@@ -1,6 +1,7 @@
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "screens/account.elyx" as account
+import "tokens/colors.elyx" as colors
 import "blocks/cardProfile.elyx" as profileCard
 import "components/button.elyx" as button
 import "blocks/cardSocial.elyx" as cardSocial
@@ -8,7 +9,6 @@ import "blocks/cardInfo.elyx" as cardInfo
 import "blocks/menuList.elyx" as menuList
 import "components/logo.elyx" as logo
 import "blocks/authForm.elyx" as AuthForm
-import "images/background/sand.png" as sand
 import "blocks/aiChat.elyx" as aiChat
 import "blocks/toolbarAudio.elyx" as toolbar
 import "blocks/tollbarCreate.elyx" as tollbarCreate
@@ -245,7 +245,7 @@ Frame = frame {
   top: 2155px,
   width: 2399px,
   height: 1492px,
-  fill: {image: {ref: sand}},
+  fill: colors.colors.black90,
   children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_N]
 }
 
@@ -288,19 +288,19 @@ layer_1 = aiChat.AiChat_DK44ShHBd2 {
   width: 490px,
   height: 650px,
 
-  aiChat.AppTopBar_xpVFAA82Vy.appTopBar.Title_M1uSFbT37W.NewAiChat_WzpulaBhIr {
-    contents: "Video Editing"
+  aiChat.AppTopBar_xpVFAA82Vy {
+    fill[0].visible: .nil
   }
 }
 
 layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
   name: "Toolbar (audio)",
-  left: 244px,
-  top: 124px,
+  left: 979px,
+  top: 858px,
   width: 322px
 }
 
-layer_N = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 585px, top: 124px}
+layer_N = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 979px, top: 918px}
 
 Frame_g9BtBzmGAd = frame {
   name: "Frame",

@@ -3,13 +3,14 @@ import "icons/12 pixels/chevron-down-12.svg" as chevrondown12
 import "components/button.elyx" as button
 import "icons/20 pixels/more-20.svg" as more20
 import "icons/20 pixels/database-20.svg" as database20
+import "images/ai/trafficLight.svg" as trafficLight
 
 export AppTopBar_ePXqYpgrNQ = frame {
   name: "App Top Bar",
   left: 707px,
   top: 518px,
-  width: 347px,
-  height: 56px,
+  width: 424px,
+  height: 40px,
   layout: {justify-content: .space-between, align-items: .center},
   fill: colors.colors.white100,
   shadow: {
@@ -20,9 +21,25 @@ export AppTopBar_ePXqYpgrNQ = frame {
       spread: 0px
     }
   },
-  padding-left: 16px,
+  padding-left: 0px,
   padding-right: 16px,
-  children: [Title_M1uSFbT37W, GroupedStack_Fgx2a3Au78]
+  children: [GroupedStack_qpUipcPHaP, GroupedStack_Fgx2a3Au78]
+}
+
+GroupedStack_qpUipcPHaP = frame {
+  name: "Left",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 4px},
+  children: [trafficLightsvg_MU52G7ky4p, Title_M1uSFbT37W]
+}
+
+trafficLightsvg_MU52G7ky4p = icon {
+  name: "trafficLight.svg",
+  left: 11px,
+  top: 14.5px,
+  width: 84px,
+  height: 40px,
+  contents: trafficLight
 }
 
 Title_M1uSFbT37W = frame {
@@ -54,7 +71,7 @@ GroupedStack_Fgx2a3Au78 = frame {
   name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 32px},
-  children: [GroupedStack_cwbemj4954, Icon_DCV3I9sMvW]
+  children: GroupedStack_cwbemj4954
 }
 
 GroupedStack_cwbemj4954 = frame {
@@ -74,9 +91,6 @@ Icon_2vNLtoDNUm = button.ButtonS28Variant_7 {
 
   button.trash20svg_W {
     contents: database20
-  }
-
-  button.trash20svg {
   }
 }
 
@@ -100,9 +114,4 @@ Icon_P2GwpzaI0X = button.ButtonS28Variant_7 {
   button.trash20svg_W {
     contents: more20
   }
-
-  button.trash20svg {
-  }
 }
-
-Icon_DCV3I9sMvW = button.ButtonS28Variant_X {name: "Close", left: 960px, top: 560px}

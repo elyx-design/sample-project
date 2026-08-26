@@ -1,0 +1,95 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/spacing.elyx" as spacing
+import "components/slider.elyx" as slider
+import "components/button.elyx" as button
+import "icons/20 pixels/play-20.svg" as play20
+import "icons/20 pixels/more-20.svg" as more20
+import "icons/20 pixels/heart-20.svg" as heart20
+import "icons/20 pixels/settings-20.svg" as settings20
+
+export PlaybackControl_YxsKbPQMe8 = cardBackground.cardBackgroundSolidVariant_o {
+  name: "Playback Control",
+  left: 669px,
+  top: 522px,
+  width: 359px,
+  height: spacing.spacing.heightS,
+  min-height: .nil,
+  padding-top: 0px,
+  padding-left: 0px,
+  padding-bottom: 0px,
+  padding-right: 0px,
+  layout.align-items: .center,
+  layout.direction: .row,
+  layout.item-gap: 12px,
+  overrides: [
+    insert(GroupedStack_q0ILkfiHMO, after = .nil),
+    insert(Text_wZsdhlOFZW, after = GroupedStack_q0ILkfiHMO),
+    insert(GroupedStack_rdVoRETh1T, after = Text_wZsdhlOFZW)
+  ]
+}
+
+GroupedStack_rdVoRETh1T = frame {
+  name: "Tools",
+  height: 100%,
+  layout: {align-items: .center},
+  children: [Icon_4slh7sL8pH, Icon_teDPq1aBTb, Icon_clXC1PW6fA]
+}
+
+Icon_4slh7sL8pH = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 264.5px,
+  top: 8.5px,
+
+  button.trash20svg_W {
+    contents: settings20
+  }
+}
+
+Icon_teDPq1aBTb = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 284.5px,
+  top: 28.5px,
+
+  button.trash20svg_W {
+    contents: heart20
+  }
+}
+
+Icon_clXC1PW6fA = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 284.5px,
+  top: 28.5px,
+
+  button.trash20svg_W {
+    contents: more20
+  }
+}
+
+Text_wZsdhlOFZW = text {
+  name: "Text",
+  left: 722px,
+  top: 543px,
+  fill: .black,
+  contents: "0:00 / 32:46",
+  font-size: 12
+}
+
+GroupedStack_q0ILkfiHMO = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  height: 100%,
+  layout: {align-items: .center, item-gap: 2px},
+  children: [Icon_5hh58LFCp5, Slider_QNPbheVsY9]
+}
+
+Icon_5hh58LFCp5 = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 737px,
+  top: 580px,
+
+  button.trash20svg_W {
+    contents: play20
+  }
+}
+
+Slider_QNPbheVsY9 = slider.Slider_23xVCqJ85q {name: "Slider", left: 0px, top: 636px, width: 100%}
