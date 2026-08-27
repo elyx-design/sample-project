@@ -1,0 +1,115 @@
+import "components/thumbnailImage.elyx" as thumbnailImage
+import "images/thumbnails/thumb07.jpg" as thumb07
+import "images/thumbnails/thumb03.jpg" as thumb03
+import "images/thumbnails/thumb04.jpg" as thumb04
+import "images/thumbnails/thumb05.jpg" as thumb05
+import "images/thumbnails/thumb06.jpg" as thumb06
+import "images/thumbnails/thumb08.jpg" as thumb08
+import "images/thumbnails/thumb09.jpg" as thumb09
+
+export ImageGallery_GtwQ9FgVmL = frame {
+  name: "Image Gallery",
+  left: 438px,
+  top: 310px,
+  width: 556px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 2px},
+  children: [Frame_WudjtipEop, Frame_gKgiUol8gH, Frame_PuQDZckL9T]
+}
+
+Frame_WudjtipEop = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  children: [ThumbnailImage_RRjJxUn79S, ThumbnailImage_lRArBZphTR, ThumbnailImage_IJc7gbbjIi]
+}
+
+ThumbnailImage_RRjJxUn79S = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb08
+}
+
+ThumbnailImage_lRArBZphTR = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%
+}
+
+ThumbnailImage_IJc7gbbjIi = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb03
+}
+
+Frame_gKgiUol8gH = frame {
+  name: "Frame",
+  left: 0px,
+  top: 159px,
+  width: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  children: [ThumbnailImage_rhdmA2yFU8, ThumbnailImage_Tax0BI0J9n, ThumbnailImage_wvYu3x1xqi]
+}
+
+ThumbnailImage_rhdmA2yFU8 = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb04
+}
+
+ThumbnailImage_Tax0BI0J9n = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb05
+}
+
+ThumbnailImage_wvYu3x1xqi = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb06
+}
+
+Frame_PuQDZckL9T = frame {
+  name: "Frame",
+  left: 0px,
+  top: 179px,
+  width: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  children: [ThumbnailImage_ojWbhgsSeP, ThumbnailImage_pOxPFqic6Z, ThumbnailImage_W3IdzAi9Kc]
+}
+
+ThumbnailImage_ojWbhgsSeP = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb07
+}
+
+ThumbnailImage_pOxPFqic6Z = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb05
+}
+
+ThumbnailImage_W3IdzAi9Kc = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+  name: "Thumbnail Image",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].image.ref: thumb09
+}

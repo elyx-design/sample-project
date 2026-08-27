@@ -1,48 +1,26 @@
-import "tokens/radius.elyx" as radius
-import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as Colors
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "components/slider.elyx" as slider
 import "components/timelineRuler.elyx" as timelineRuler
 import "components/videoTrack.elyx" as videoTrack
-import "components/appTopBar.elyx" as appTopBar
 import "components/mediaTrack.elyx" as mediaTrack
-import "images/background/sand.png" as sand
-
-Frame_a = frame {
-  name: "Frame",
-  left: -38px,
-  top: -2px,
-  width: 1540px,
-  height: 1074px,
-  fill: {image: {ref: sand}},
-  children: layer_6
-}
-
-layer_6 = cardBackground.cardBackground_zXouRyz {
-  name: "cardBackground (Solid)",
-  left: 238px,
-  top: 83px,
-  width: 66.5584%,
-  height: 778px,
-  padding-top: 0px,
-  padding-left: 0px,
-  padding-bottom: 0px,
-  padding-right: 0px,
-  layout.item-gap: 0,
-  overrides: [
-    insert(AppTopBar, after = .nil),
-    insert(VideoPlayer, after = AppTopBar),
-    insert(Timeline_v, after = VideoPlayer)
-  ]
-}
+import "images/background/bird.jpg" as bird
+import "blocks/imageGallery.elyx" as imageGallery
+import "images/thumbnails/thumb08.jpg" as thumb08
+import "icons/20 pixels/image-20.svg" as image20
+import "images/thumbnails/thumb02.jpg" as thumb02
+import "icons/20 pixels/video-20.svg" as video20
+import "icons/20 pixels/pen-20.svg" as pen20
+import "icons/20 pixels/pointer-20.svg" as pointer20
+import "icons/24 pixels/music-24.svg" as music24
+import "icons/24 pixels/text-24.svg" as text24
 
 Frame = frame {
   name: "Frame",
-  left: 771px,
-  top: 1557px,
-  width: 941px,
-  height: 724px,
+  left: -214px,
+  top: -105px,
+  width: 1112px,
+  height: 710px,
   layout: {direction: .column, align-items: .center},
   shadow: {
     drop-shadow: {
@@ -52,23 +30,132 @@ Frame = frame {
       spread: 0px
     }
   },
-  corner-radius: radius.radius.xl,
+  corner-radius: 0px,
   corner-smoothing: 0.5,
-  children: [layer_u, layer, Timeline]
+  children: [Frame_P, Timeline]
 }
 
-layer_u = appTopBar.AppTopBar_ePXqYpgrNQ {name: "App Top Bar", left: 0px, top: 17.5px, width: 100%}
+Frame_P = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  layout: {justify-content: .end, align-items: .end, item-gap: 2px},
+  fill: Colors.colors.black20,
+  children: [layer, layer_E]
+}
 
 layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   name: "Video Player",
-  left: 0px,
+  left: -3772px,
   top: 0px,
-  width: 100%,
+  width: 60%,
+  height: 100%,
+  fill[0].image.ref: bird,
   fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
+
+  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_rdVoRETh1T.Icon_teDPq1aBTb.button.trash20svg_W {
+    contents: pen20
+  }
+
+  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_rdVoRETh1T.Icon_4slh7sL8pH.button.trash20svg_W {
+    contents: pointer20
+  }
 
   @use-variant(slider.SliderVariant)
   videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_q0ILkfiHMO.Slider_QNPbheVsY9 {
     
+  }
+
+  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserEmail_wCqcy5VUFs {
+    contents: "4K landscape film, cinematic 21:9"
+  }
+
+  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserName_Qkcl7dWEIn {
+    contents: "Wings of the Wild"
+  }
+}
+
+layer_E = imageGallery.ImageGallery_GtwQ9FgVmL {
+  name: "Image Gallery",
+  left: 20px,
+  top: 56px,
+  width: 40%,
+  height: 360px,
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Red-flanked Bluetail"
+  }
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: video20
+  }
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z {
+    fill[0].image.ref: thumb02
+  }
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Orange Bird"
+  }
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: video20
+  }
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Great Horned Owl"
+  }
+
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: image20
+  }
+
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Blue-and-yellow Macaw"
+  }
+
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: image20
+  }
+
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Bald Eagle.wave"
+  }
+
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: video20
+  }
+
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Northern Cardinal\nBody Red"
+  }
+
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: image20
+  }
+
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Toco Toucan"
+  }
+
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: video20
+  }
+
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Eurasian Blue"
+  }
+
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: video20
+  }
+
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.Imagename_jOw4WJEFHF {
+    contents: "Lilac"
+  }
+
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+    contents: video20
   }
 }
 
@@ -116,6 +203,7 @@ Tracks = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 8px},
+  padding: [24px, 0px],
   children: [GroupedStack, layer_VS, VideoTrack]
 }
 
@@ -131,14 +219,38 @@ layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7941px,
   top: 763px,
-  width: 273px
+  width: 273px,
+
+  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_hFB8lsQn1p {
+    fill[0].image.ref: bird
+  }
+
+  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_TwaVf7x47r {
+    fill[0].image.ref: bird
+  }
+
+  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_6Anu8dt4m4 {
+    fill[0].image.ref: bird
+  }
 }
 
 VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7961px,
   top: 783px,
-  width: 273px
+  width: 273px,
+
+  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_hFB8lsQn1p {
+    fill[0].image.ref: thumb08
+  }
+
+  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_TwaVf7x47r {
+    fill[0].image.ref: thumb08
+  }
+
+  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_6Anu8dt4m4 {
+    fill[0].image.ref: thumb08
+  }
 }
 
 layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
@@ -146,7 +258,15 @@ layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
   left: 4241.5px,
   top: 788px,
   width: 477px,
-  fill[0].color: rgb(100%, 41.19%, 100%)
+  fill[0].color: rgb(100%, 41.19%, 100%),
+
+  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
+    contents: "tropical_ambience.mp3"
+  }
+
+  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.direct24svg_srC1L2hQr9 {
+    contents: music24
+  }
 }
 
 VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
@@ -154,7 +274,15 @@ VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
   left: -13207.5px,
   top: 808px,
   width: 584px,
-  fill[0].color: rgb(0%, 98.76%, 100%)
+  fill[0].color: rgb(0%, 98.76%, 100%),
+
+  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
+    contents: "Birds in Their Element"
+  }
+
+  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.direct24svg_srC1L2hQr9 {
+    contents: text24
+  }
 }
 
 module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
@@ -212,23 +340,6 @@ module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
   }
 }
 
-VideoPlayer = videoPlayer.VideoPlayer_7IHVyFXn8z {
-  name: "Video Player",
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
-
-  videoPlayer.PlaybackControl_ajqA0M9W3s {
-    corner-radius: 24px
-  }
-
-  @use-variant(slider.SliderVariant)
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_q0ILkfiHMO.Slider_QNPbheVsY9 {
-    
-  }
-}
-
 module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
   name: "module",
   left: 326.508px,
@@ -238,62 +349,4 @@ module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
   timelineRuler.textLayer_odBUA3ZxP6 {
     contents: "9"
   }
-}
-
-Timeline_v = frame {
-  name: "Timeline",
-  width: 100%,
-  height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 8px},
-  fill: Colors.colors.black20,
-  padding-top: 8px,
-  children: [TimelineRuler, Tracks_g]
-}
-
-TimelineRuler = timelineRuler.TimelineRuler_7EHDtEgmPY {
-  name: "Timeline Ruler",
-  left: 0px,
-  top: 442.5px
-}
-
-Tracks_g = frame {
-  name: "Tracks",
-  width: 100%,
-  height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 8px},
-  padding-top: 24px,
-  children: [GroupedStack_q, VideoTrack_K, VideoTrack_n]
-}
-
-GroupedStack_q = frame {
-  name: "Grouped Stack",
-  width: 100%,
-  layout: {align-items: .center, item-gap: 8px},
-  padding-left: 80px,
-  children: [VideoTrack_v, VideoTrack_Z]
-}
-
-VideoTrack_v = videoTrack.VideoTrack_oikz8bvb8Z {
-  name: "Video Track",
-  left: 7941px,
-  top: 763px,
-  width: 29.9%
-}
-
-VideoTrack_Z = videoTrack.VideoTrack_oikz8bvb8Z {
-  name: "Video Track",
-  left: 7961px,
-  top: 783px,
-  width: 29.9%
-}
-
-VideoTrack_K = mediaTrack.VideoTrack_SXeZ1r8lmI {name: "Video Track", left: 4241.5px, top: 788px}
-
-VideoTrack_n = mediaTrack.VideoTrack_SXeZ1r8lmI {name: "Video Track", left: -13207.5px, top: 808px}
-
-AppTopBar = appTopBar.AppTopBar_ePXqYpgrNQ {
-  name: "App Top Bar",
-  left: 0px,
-  top: 17.5px,
-  width: 100%
 }

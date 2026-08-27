@@ -1,13 +1,13 @@
 import "tokens/colors.elyx" as colors
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown12
-import "images/ai/trafficLight.svg" as trafficLight
+import "components/button.elyx" as button
 
 export AppTopBar_ePXqYpgrNQ = frame {
-  name: "App Top Bar",
+  name: "App Top Bar (light)",
   left: 707px,
   top: 518px,
   width: 417px,
-  height: 40px,
+  height: 48px,
   layout: {justify-content: .space-between, align-items: .center},
   fill: colors.colors.white100,
   shadow: {
@@ -18,25 +18,8 @@ export AppTopBar_ePXqYpgrNQ = frame {
       spread: 0px
     }
   },
-  padding-left: 0px,
-  padding-right: 72px,
-  children: [GroupedStack_qpUipcPHaP, Title_M1uSFbT37W]
-}
-
-GroupedStack_qpUipcPHaP = frame {
-  name: "Left",
-  height: 100%,
-  layout: {align-items: .center, item-gap: 4px},
-  children: trafficLightsvg_MU52G7ky4p
-}
-
-trafficLightsvg_MU52G7ky4p = icon {
-  name: "trafficLight.svg",
-  left: 11px,
-  top: 14.5px,
-  width: 84px,
-  height: 40px,
-  contents: trafficLight
+  padding: [0px, 20px],
+  children: [Title_M1uSFbT37W, GroupedStack_5wzShorcNs]
 }
 
 Title_M1uSFbT37W = frame {
@@ -45,16 +28,16 @@ Title_M1uSFbT37W = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  layout: {align-items: .center, item-gap: 4px},
   children: [NewAiChat_WzpulaBhIr, chevrondown12svg_eRLZPmBMpe]
 }
 
 NewAiChat_WzpulaBhIr = text {
-  name: "New Ai Chat",
+  name: "File Name",
   left: 0px,
   top: 0px,
   fill: .black,
-  contents: "New Ai Chat",
+  contents: "File Name",
   font-style: "SemiBold"
 }
 
@@ -65,4 +48,31 @@ chevrondown12svg_eRLZPmBMpe = icon {
   width: 12px,
   height: 12px,
   contents: chevrondown12
+}
+
+GroupedStack_5wzShorcNs = frame {
+  name: "Right",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 16px},
+  children: [GroupedStack_XpqkU0zEE8, Primary_RO7ljR3X40]
+}
+
+GroupedStack_XpqkU0zEE8 = frame {
+  name: "Tools",
+  height: 100%,
+  layout: {align-items: .center},
+  children: [Icon_iGRBSIf0Fg, Icon_9mAHYYe2nV, Icon_fMEe296VCC]
+}
+
+Icon_iGRBSIf0Fg = button.ButtonS28Variant_7 {name: "Icon", left: 287px, top: 21px}
+
+Icon_9mAHYYe2nV = button.ButtonS28Variant_7 {name: "Icon", left: 307px, top: 41px}
+
+Icon_fMEe296VCC = button.ButtonS28Variant_7 {name: "Icon", left: 335px, top: 41px}
+
+Primary_RO7ljR3X40 = button.PrimaryS_bwovCsQN9N {
+  name: "Primary",
+  left: 606px,
+  top: 542px,
+  width: 62px
 }

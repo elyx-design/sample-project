@@ -28,7 +28,7 @@ export VideoPlayer_7IHVyFXn8z = frame {
       }
     }
   ],
-  padding: 12px,
+  padding: 20px,
   children: [GroupedStack_R6YKIBc1DT, PlaybackControl_ajqA0M9W3s]
 }
 

@@ -18,7 +18,7 @@ export VideoTrack_SXeZ1r8lmI = frame {
 GroupedStack_md0TiVD0Q9 = frame {
   name: "Grouped Stack",
   height: 100%,
-  layout: {align-items: .center, item-gap: 4px},
+  layout: {align-items: .center},
   children: [handle_tjiMVlGnIE, GroupedStack_8jIVI4WWex]
 }
 

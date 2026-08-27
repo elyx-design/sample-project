@@ -1,0 +1,53 @@
+import "tokens/colors.elyx" as colors
+import "images/thumbnails/thumb01.jpg" as thumb01
+import "icons/20 pixels/heart-20.svg" as heart20
+
+export ThumbnailImage_Bv4oCgAbjK = frame {
+  name: "Thumbnail Image",
+  left: 555px,
+  top: 395px,
+  width: 160px,
+  height: 120px,
+  layout: {direction: .column, justify-content: .space-between},
+  fill: [
+    {image: {ref: thumb01}},
+    {
+      linear-gradient: {
+        from: point(50%, 50%),
+        to: point(50%, 90.21%),
+        stops: [stop(0%, rgb(8.6275%, 8.6275%, 8.6275%, 0%)), stop(100%, colors.colors.black20)]
+      }
+    }
+  ],
+  padding: 12px,
+  children: [Frame_knRpLk4dgQ, Imagename_jOw4WJEFHF]
+}
+
+Frame_knRpLk4dgQ = frame {
+  name: "Frame",
+  left: 0px,
+  top: 12px,
+  width: 100%,
+  layout: {justify-content: .end, align-items: .center},
+  children: heart20svg_0Rw3zJS0s6
+}
+
+heart20svg_0Rw3zJS0s6 = icon {
+  name: "heart-20.svg",
+  left: 0px,
+  top: 0px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.whiteAlpha70,
+  contents: heart20
+}
+
+Imagename_jOw4WJEFHF = text {
+  name: "Image name",
+  left: 0px,
+  top: 197px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Image name",
+  font-size: 12
+}

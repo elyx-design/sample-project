@@ -12,7 +12,6 @@ import "components/logo.elyx" as logo
 import "blocks/authForm.elyx" as AuthForm
 import "blocks/aiChat.elyx" as aiChat
 import "images/ai/orb.png" as orb
-import "components/appTopBar.elyx" as appTopBar
 import "blocks/toolbarAudio.elyx" as toolbar
 import "blocks/tollbarCreate.elyx" as tollbarCreate
 import "blocks/chatWindow.elyx" as chatWindow
@@ -254,7 +253,7 @@ Frame = frame {
   width: 2399px,
   height: 1492px,
   fill: {image: {ref: desert}},
-  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, layer_N, Frame_y, Frame_i]
+  children: [layer, layer_3, layer_6, AuthForm_e, layer_1, layer_w, Frame_y, Frame_i, layer_9]
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 244px, top: 184px}
@@ -295,13 +294,10 @@ layer_1 = aiChat.AiChat_DK44ShHBd2 {
   top: 730px,
   width: 408px,
   height: 562px,
+  overrides: [remove(aiChat.AppTopBar_xpVFAA82Vy)],
 
   aiChat.GroupedStack_mRtZgIziU3.GroupedStack_v5YeDmjPaA {
     overflow: .visible
-  }
-
-  aiChat.AppTopBar_xpVFAA82Vy {
-    fill[0].visible: .nil
   }
 }
 
@@ -311,8 +307,6 @@ layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
   top: 1224px,
   width: 322px
 }
-
-layer_N = tollbarCreate.ToolbarCreate_WBWllCttV6 {name: "Toolbar Create", left: 1411px, top: 1284px}
 
 Frame_y = frame {
   name: "Frame",
@@ -330,34 +324,7 @@ Frame_y = frame {
     }
   },
   corner-radius: 24px,
-  children: [layer_z, Frame_Z]
-}
-
-layer_z = appTopBar.AppTopBar_ePXqYpgrNQ {
-  name: "App Top Bar",
-  left: 0px,
-  top: 0px,
-  width: 100%,
-
-  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_P2GwpzaI0X.button.trash20svg_W {
-
-  }
-
-  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_WGyKEBetto.button.trash20svg_W {
-
-  }
-
-  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_2vNLtoDNUm.button.trash20svg_W {
-
-  }
-
-  appTopBar.Title_M1uSFbT37W {
-    overrides: [remove(appTopBar.chevrondown12svg_eRLZPmBMpe)]
-  }
-
-  appTopBar.Title_M1uSFbT37W.NewAiChat_WzpulaBhIr {
-
-  }
+  children: Frame_Z
 }
 
 Frame_Z = frame {
@@ -545,6 +512,13 @@ planCard_O = planCard.planCard_LTK7mFiyqR {
     left: 6px,
     top: 33px
   }
+}
+
+layer_9 = tollbarCreate.ToolbarCreate_WBWllCttV6 {
+  name: "Toolbar Create",
+  left: 1411px,
+  top: 1284px,
+  width: 379px
 }
 
 Frame_g9BtBzmGAd = frame {

@@ -1,7 +1,6 @@
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "tokens/colors.elyx" as colors
 import "blocks/chatWindow.elyx" as chatWindow
-import "components/appTopBar.elyx" as appTopBar
 import "images/background/desert.png" as desert
 
 LiveEvent = frame {
@@ -30,34 +29,7 @@ Frame_r = frame {
     }
   },
   corner-radius: 24px,
-  children: [layer_z, Frame_Z]
-}
-
-layer_z = appTopBar.AppTopBar_ePXqYpgrNQ {
-  name: "App Top Bar",
-  left: 0px,
-  top: 0px,
-  width: 100%,
-
-  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_P2GwpzaI0X {
-   
-  }
-
-  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_WGyKEBetto {
-    
-  }
-
-  appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_2vNLtoDNUm {
-    
-  }
-
-  appTopBar.Title_M1uSFbT37W {
-    overrides: [remove(appTopBar.chevrondown12svg_eRLZPmBMpe)]
-  }
-
-  appTopBar.Title_M1uSFbT37W.NewAiChat_WzpulaBhIr {
-    contents: "RideCast"
-  }
+  children: Frame_Z
 }
 
 Frame_Z = frame {
