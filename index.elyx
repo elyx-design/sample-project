@@ -3,12 +3,10 @@ import "tokens/radius.elyx" as Radius
 import "screens/account.elyx" as account
 import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
-import "blocks/cardProfile.elyx" as profileCard
+import "blocks/cardAbout.elyx" as profileCard
 import "blocks/cardSocial.elyx" as cardSocial
 import "blocks/cardInfo.elyx" as cardInfo
 import "blocks/menuList.elyx" as menuList
-import "components/logo.elyx" as logo
-import "blocks/authForm.elyx" as AuthForm
 import "blocks/aiChat.elyx" as aiChat
 import "blocks/toolbarAudio.elyx" as toolbar
 import "blocks/tollbarCreate.elyx" as tollbarCreate
@@ -249,7 +247,7 @@ Frame = frame {
   width: 2399px,
   height: 2010px,
   fill: {image: {ref: desert}},
-  children: [layer_3, layer_6, AuthForm_e, layer_1, layer_w, Frame_y, layer_9, layer]
+  children: [layer_3, layer_6, layer_1, layer_w, Frame_y, layer_9, layer]
 }
 
 layer_3 = cardInfo.cardBackgroundSolid_hxqOj5bsxM {
@@ -259,28 +257,6 @@ layer_3 = cardInfo.cardBackgroundSolid_hxqOj5bsxM {
 }
 
 layer_6 = menuList.MenuList_6OjbR9CAsW {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
-
-AuthForm_e = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
-  name: "AuthForm",
-  left: 585px,
-  top: 1317px,
-  width: 15.43%,
-  min-width: 360px,
-  min-height: 6%,
-  overrides: [insert(Frame_g9BtBzmGAd, after = .nil)],
-
-  AuthForm.PrimaryM_cvjxe6VGaM.Button.Button {
-    contents: "Join the Circle"
-  }
-
-  AuthForm.header_oYCF44WvTm.header2.Description_7ZfScLC {
-    contents: "Use your account to find your friends"
-  }
-
-  AuthForm.header_oYCF44WvTm.header2.Title_ZIlZq9y {
-    contents: "Sign in to connect"
-  }
-}
 
 layer_1 = aiChat.AiChat_DK44ShHBd2 {
   name: "Ai Chat",
@@ -359,21 +335,3 @@ layer_9 = tollbarCreate.ToolbarCreate_WBWllCttV6 {
 }
 
 layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 228px, top: 820px}
-
-Frame_g9BtBzmGAd = frame {
-  name: "Frame",
-  left: 0px,
-  top: -20px,
-  width: 100%,
-  height: 140px,
-  layout: {direction: .column, justify-content: .center, align-items: .stretch},
-  children: [layer_h, ButtonIconXXL80_Je37pucgIE]
-}
-
-layer_h = logo.ButtonIconXL48 {name: "Button Icon XL (80)", left: 490px, top: 3563px}
-
-ButtonIconXXL80_Je37pucgIE = logo.ButtonIconXL48 {
-  name: "Button Icon XL (80)",
-  left: 0px,
-  top: 0px,
-}

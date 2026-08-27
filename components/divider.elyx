@@ -1,5 +1,6 @@
 import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as spacing
+import "tokens/radius.elyx" as radius
 
 export Divider_97GT5IGMgL = frame {
   name: "Divider (White)",
@@ -18,7 +19,8 @@ Rectangle_RlFhJcHgz0 = shape {
   top: 0px,
   width: 100%,
   height: 0.5px,
-  fill: colors.colors.blackAlpha10,
+  fill: colors.colors.blackAlpha25,
+  corner-radius: radius.radius.max,
   type: .rect
 }
 
@@ -39,6 +41,7 @@ Rectangle_cqxTCYitOK = shape {
   top: 0px,
   width: 0.5px,
   height: 100%,
-  fill: colors.colors.blackAlpha10,
+  fill: colors.colors.blackAlpha25,
+  corner-radius: radius.radius.max,
   type: .rect
 }

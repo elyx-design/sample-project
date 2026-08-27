@@ -4,6 +4,7 @@ import "blocks/planCard.elyx" as planCard
 import "icons/24 pixels/dashboard.svg" as dashboard
 import "icons/24 pixels/processor.svg" as processor
 import "components/header.elyx" as header
+import "images/background/whiteWave.jpg" as whiteWave
 
 PricingPage = frame {
   name: "Pricing Page",
@@ -11,7 +12,7 @@ PricingPage = frame {
   top: 163px,
   width: 1415px,
   height: 925px,
-  fill: colors.colors.black90,
+  fill: {image: {ref: whiteWave}},
   children: [Frame, layer_o]
 }
 
@@ -175,11 +176,11 @@ layer_o = header.headerVariant {
   width: .auto,
 
   header.Description_7ZfScLC {
-    contents: "A subtitle for the pricing page saying why this is a worth product to pay"
+    contents: "Flexible pricing for individuals, professionals, and growing teams."
   }
 
   header.Title_ZIlZq9y {
-    contents: "This is a text for the pricing page"
+    contents: "Choose the plan that fits your work"
   }
 }
 

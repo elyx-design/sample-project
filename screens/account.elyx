@@ -3,11 +3,15 @@ import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "blocks/settingsCard.elyx" as SettingsCard
 import "components/pageTabs.elyx" as pageTabs2
-import "blocks/cardProfile.elyx" as profileCard
+import "blocks/cardAbout.elyx" as profileCard
 import "blocks/securityCard.elyx" as securityCard
 import "blocks/sidebar.elyx" as sidebar2
 import "blocks/planCard.elyx" as planCard2
 import "blocks/activityCard.elyx" as activityCard2
+import "blocks/cardSocial.elyx" as cardSocial
+import "blocks/headerWeb.elyx" as headerWeb
+import "images/background/wood.jpg" as wood
+import "blocks/productCard.elyx" as productCard
 
 export account_LEZl5tsouT = frame {
   name: "Account Screen",
@@ -323,4 +327,58 @@ settingActionLabel = text {
   font-size: Typography.typography.labelM,
   font-family: "Inter",
   font-style: "Medium"
+}
+
+Frame = frame {
+  name: "Frame",
+  left: -2399px,
+  top: -509px,
+  width: 1564px,
+  height: 1405px,
+  layout: {direction: .column, align-items: .center, item-gap: 64px},
+  fill: {image: {ref: wood}},
+  padding-top: 24px,
+  padding-bottom: 24px,
+  children: [layer_l, Frame_F]
+}
+
+layer_l = headerWeb.Header_YoW7I9TfdY {name: "HeaderWeb", left: -2541px, top: -821px}
+
+Frame_F = frame {
+  name: "Frame",
+  left: 270px,
+  top: 156px,
+  width: 1024px,
+  layout: {item-gap: 24px},
+  overflow: .visible,
+  children: [layer, Frame_H]
+}
+
+layer = cardSocial.SocialCard_QzfezrXgSp {
+  name: "Social Card",
+  left: 0px,
+  top: 0px,
+
+  cardSocial.GroupedStack_1gmgOy2Wt0.GroupedStack_CzQMt15d8V {
+    overrides: [remove(cardSocial.Close_EIAQCGPEGW), remove(cardSocial.Icon_VkGiO7tulw)]
+  }
+}
+
+Frame_H = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, item-gap: 24px},
+  overflow: .visible,
+  children: [layer_0, layer_O]
+}
+
+layer_0 = profileCard.profileCard_vlvneaI {name: "profileCard", left: 0px, top: 0px, width: 100%}
+
+layer_O = productCard.cardBackgroundSolid_MeUe9s7jIe {
+  name: "Product Card",
+  left: 0px,
+  top: -317px,
+  width: 100%
 }

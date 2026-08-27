@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="84px" height="40px" viewBox="0 0 84 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Traffic Light</title>
-    <g id="Traffic-Light" stroke="none" fill="none" fill-rule="evenodd" stroke-opacity="0.15" stroke-width="0.5">
-        <circle id="Expand" stroke="#000000" fill="#35C759" cx="64" cy="20" r="6.75"></circle>
-        <circle id="Minimize" stroke="#000000" fill="#FAC800" cx="42" cy="20" r="6.75"></circle>
-        <circle id="Close" stroke="#000000" fill="#FF5C60" cx="19" cy="20" r="6.75"></circle>
-    </g>
-</svg>

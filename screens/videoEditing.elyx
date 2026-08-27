@@ -3,8 +3,8 @@ import "blocks/videoPlayer.elyx" as videoPlayer
 import "components/slider.elyx" as slider
 import "components/timelineRuler.elyx" as timelineRuler
 import "components/videoTrack.elyx" as videoTrack
-import "components/mediaTrack.elyx" as mediaTrack
 import "images/background/bird.jpg" as bird
+import "components/mediaTrack.elyx" as mediaTrack
 import "blocks/imageGallery.elyx" as imageGallery
 import "images/thumbnails/thumb08.jpg" as thumb08
 import "icons/20 pixels/image-20.svg" as image20
@@ -88,7 +88,7 @@ VideoEditing = frame {
   name: "Video Editing",
   left: -689px,
   top: -230px,
-  width: 1018px,
+  width: 1184px,
   height: 701px,
   layout: {justify-content: .center},
   children: [layer_L, Frame]

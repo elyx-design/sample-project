@@ -4,20 +4,19 @@ import "components/button.elyx" as button
 import "components/userSummary.elyx" as userSummary
 import "images/background/dots.jpg" as dots
 import "components/avatarGroup.elyx" as avatarGroup
+import "icons/20 pixels/heart-20.svg" as heart20
+import "icons/20 pixels/star-20.svg" as star20
 
-export SocialCard_QzfezrXgSp = cardBackground.cardBackground_zXouRyz {
+export SocialCard_QzfezrXgSp = cardBackground.cardBackgroundSolidVariant {
   name: "Social Card",
   left: 186px,
   top: 176px,
   width: 317px,
-  height: 441px,
+  height: 427px,
   padding-top: 0px,
   padding-left: 0px,
   padding-bottom: 0px,
   padding-right: 0px,
-  fill[0].color: colors.colors.whiteAlpha50,
-  filter[0].radius: 40px,
-  filter[0].type: .background-blur,
   layout.align-items: .center,
   layout.item-gap: 16px,
   layout.justify-content: .space-between,
@@ -66,15 +65,42 @@ GroupedStack_1gmgOy2Wt0 = frame {
   name: "Card info",
   width: 100%,
   height: 100%,
-  layout: {direction: .column, align-items: .end, item-gap: 32px},
+  layout: {direction: .column, align-items: .end, item-gap: 24px},
   fill: {image: {ref: dots}},
   border: {color: colors.colors.blackAlpha10, visible: .false, width: 0.5px, position: .outside},
   corner-radius: 16px,
   padding: 24px,
-  children: [ButtonS28_7z0LRwMve3, GroupedStack_LpEL83fLPt]
+  children: [GroupedStack_CzQMt15d8V, GroupedStack_LpEL83fLPt]
 }
 
-ButtonS28_7z0LRwMve3 = button.ButtonS28Variant_X {
+GroupedStack_CzQMt15d8V = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {justify-content: .end, align-items: .end, item-gap: 8px},
+  children: [Icon_VkGiO7tulw, Icon_NbaFVQqXgU, Close_EIAQCGPEGW]
+}
+
+Icon_VkGiO7tulw = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 245.81px,
+  top: 37.5995px,
+
+  button.trash20svg_W {
+    contents: star20
+  }
+}
+
+Icon_NbaFVQqXgU = button.ButtonS28Variant_7 {
+  name: "Icon",
+  left: 265.81px,
+  top: 57.5995px,
+
+  button.trash20svg_W {
+    contents: heart20
+  }
+}
+
+Close_EIAQCGPEGW = button.ButtonS28Variant_X {
   name: "Close",
   left: 526px,
   top: 225px,

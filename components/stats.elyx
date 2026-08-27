@@ -1,0 +1,191 @@
+import "components/divider.elyx" as divider
+import "tokens/colors.elyx" as colors
+
+export Stats_SAGlIolZIe = frame {
+  name: "Stats",
+  left: 396px,
+  top: 630px,
+  width: 1011.3979px,
+  layout: {direction: .column, justify-content: .center, item-gap: 8px},
+  children: [DividerWhite_BvfgQ0x6CS, Frame_JZbGEcdAyx, DividerWhite_Wbr0ZiRmxz]
+}
+
+DividerWhite_BvfgQ0x6CS = divider.Divider_97GT5IGMgL {
+  name: "Divider (White)",
+  left: 0px,
+  top: 0px,
+  width: 100%
+}
+
+Frame_JZbGEcdAyx = frame {
+  name: "Frame",
+  left: 0px,
+  top: 74px,
+  width: 100%,
+  layout: {justify-content: .space-around, item-gap: 24px},
+  children: [
+    Frame_v3hR4sAYg5,
+    Dividervertical_9c0N5aibGz,
+    Frame_K3EsLWJmUO,
+    Dividervertical_kxWxSCimLZ,
+    Frame_ySVSgouDo5,
+    Dividervertical_tyQgNFTlxv,
+    Frame_tiqgxwz6GB
+  ]
+}
+
+Frame_v3hR4sAYg5 = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  children: [textLayer_F84E4Z85em, Livrosem20_OIV9rtYiSu]
+}
+
+textLayer_F84E4Z85em = text {
+  name: "41",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill: colors.colors.black20,
+  contents: "41",
+  font-size: 32,
+  align: .center
+}
+
+Livrosem20_OIV9rtYiSu = text {
+  name: "Books",
+  left: 0px,
+  top: 39px,
+  width: 100%,
+  fill: colors.colors.blackAlpha25,
+  contents: "Books",
+  font-size: 14,
+  font-style: "SemiBold",
+  align: .center
+}
+
+Dividervertical_9c0N5aibGz = divider.Div_JPakkrqBxW {
+  name: "Divider (vertical)",
+  left: 20px,
+  top: 701px,
+  width: 100%
+}
+
+Frame_K3EsLWJmUO = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  children: [k_EhK2oSOZeY, PagesRead_jDu4nkUS3l]
+}
+
+k_EhK2oSOZeY = text {
+  name: "11k",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill: colors.colors.black20,
+  contents: "11k",
+  font-size: 32,
+  align: .center
+}
+
+PagesRead_jDu4nkUS3l = text {
+  name: "Pages",
+  left: 0px,
+  top: 39px,
+  width: 100%,
+  fill: colors.colors.blackAlpha25,
+  contents: "Pages",
+  font-size: 14,
+  font-style: "SemiBold",
+  align: .center
+}
+
+Dividervertical_kxWxSCimLZ = divider.Div_JPakkrqBxW {
+  name: "Divider (vertical)",
+  left: 0px,
+  top: 681px,
+  width: 100%
+}
+
+Frame_ySVSgouDo5 = frame {
+  name: "Frame",
+  left: 0px,
+  top: 40px,
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  children: [textLayer_ME8HoqBeUD, AvrRating_35SpwnbsZt]
+}
+
+textLayer_ME8HoqBeUD = text {
+  name: "4.2",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill: colors.colors.black20,
+  contents: "4.2",
+  font-size: 32,
+  align: .center
+}
+
+AvrRating_35SpwnbsZt = text {
+  name: "Rating",
+  left: 0px,
+  top: 39px,
+  width: 100%,
+  fill: colors.colors.blackAlpha25,
+  contents: "Rating",
+  font-size: 14,
+  font-style: "SemiBold",
+  align: .center
+}
+
+Dividervertical_tyQgNFTlxv = divider.Div_JPakkrqBxW {
+  name: "Divider (vertical)",
+  left: 20px,
+  top: 701px,
+  width: 100%
+}
+
+Frame_tiqgxwz6GB = frame {
+  name: "Frame",
+  left: 20px,
+  top: 60px,
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  children: [textLayer_7a3ZYOUe22, AvrRating_323yTc7AQH]
+}
+
+textLayer_7a3ZYOUe22 = text {
+  name: "9",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill: colors.colors.black20,
+  contents: "9",
+  font-size: 32,
+  align: .center
+}
+
+AvrRating_323yTc7AQH = text {
+  name: "Shelves",
+  left: 0px,
+  top: 39px,
+  width: 100%,
+  fill: colors.colors.blackAlpha25,
+  contents: "Shelves",
+  font-size: 14,
+  font-style: "SemiBold",
+  align: .center
+}
+
+DividerWhite_Wbr0ZiRmxz = divider.Divider_97GT5IGMgL {
+  name: "Divider (White)",
+  left: 20px,
+  top: 20px,
+  width: 100%
+}

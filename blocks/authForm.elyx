@@ -8,79 +8,30 @@ import "components/header.elyx" as header2
 import "components/cardBackground.elyx" as cardBackground
 import "icons/24 pixels/mail-24.svg" as mail24
 import "icons/24 pixels/padlock-24.svg" as padlock24
+import "components/logo.elyx" as logo
 
 export cardBackgroundSolid_gpNRKSrmXr = cardBackground.cardBackgroundSolidVariant {
   name: "AuthForm",
   left: 39px,
   top: 21px,
+  padding-top: 48px,
+  layout.align-items: .center,
+  layout.item-gap: 48px,
   overrides: [
-    insert(header_oYCF44WvTm, after = .nil),
-    insert(Fields_J3gpijrROD, after = header_oYCF44WvTm),
-    insert(Options_aJ9ehahXHq, after = Fields_J3gpijrROD),
-    insert(PrimaryM_cvjxe6VGaM, after = Options_aJ9ehahXHq)
+    insert(LogoS24_y3g3YnmxnC, after = .nil),
+    insert(GroupedStack_b0SW5OArkc, after = LogoS24_y3g3YnmxnC)
   ]
 }
 
-PrimaryM_cvjxe6VGaM = Button.ButtonVariant_V {
+GroupedStack_b0SW5OArkc = frame {
+  name: "Content",
   width: 100%,
-
-  Button.Button {
-    contents: "Sign in"
-  }
+  layout: {direction: .column, align-items: .center, item-gap: 20px},
+  children: [HeaderMCenter_3ypV6y80Ob, Fields_XaJ8fJSB8R, Options_Oj9DIMpYDw, Primary_3lXmMxE1bk]
 }
 
-Options_aJ9ehahXHq = frame {
-  name: "Options",
-  left: -33px,
-  top: 62.75px,
-  width: 100%,
-  height: .auto,
-  layout: {align-items: .center, item-gap: 8px},
-  children: [Toggle_WRveQrGdLu, RememberLabel_PDIjOANzy7]
-}
-
-Toggle_WRveQrGdLu = Checkbox.Frame_P {left: 127px, top: 285px}
-
-RememberLabel_PDIjOANzy7 = text {
-  name: "Remember Label",
-  fill: Colors.colors.black20,
-  contents: "Remember me",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
-}
-
-Fields_J3gpijrROD = frame {
-  name: "Fields",
-  left: 0px,
-  top: 42.75px,
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.spacing.m},
-  overflow: .visible,
-  children: [Placeholder_B9MWgiGhhw, Placeholder_hfV3SUGjjy]
-}
-
-Placeholder_B9MWgiGhhw = TextField.TextFieldIcon {
-  TextField.Label {
-    contents: "Email address"
-  }
-
-  TextField.create24svg_k {
-    contents: mail24
-  }
-}
-
-Placeholder_hfV3SUGjjy = TextField.TextFieldIcon {
-  TextField.Label {
-    contents: "Password"
-  }
-
-  TextField.create24svg_k {
-    contents: padlock24
-  }
-}
-
-header_oYCF44WvTm = header2.headerVariant {
+HeaderMCenter_3ypV6y80Ob = header2.headerVariant {
+  name: "Header M (Center)",
   left: -33px,
   top: 120px,
 
@@ -92,3 +43,69 @@ header_oYCF44WvTm = header2.headerVariant {
     contents: "Sign In"
   }
 }
+
+Fields_XaJ8fJSB8R = frame {
+  name: "Fields",
+  left: 0px,
+  top: 42.75px,
+  width: 100%,
+  layout: {direction: .column, item-gap: Spacing.spacing.m},
+  overflow: .visible,
+  children: [PlaceholderIcon_bJlHc6HdT3, PlaceholderIcon_7KEgapI9ft]
+}
+
+PlaceholderIcon_bJlHc6HdT3 = TextField.TextFieldIcon {
+  name: "Placeholder (Icon)",
+
+  TextField.Label {
+    contents: "Email address"
+  }
+
+  TextField.create24svg_k {
+    contents: mail24
+  }
+}
+
+PlaceholderIcon_7KEgapI9ft = TextField.TextFieldIcon {
+  name: "Placeholder (Icon)",
+
+  TextField.Label {
+    contents: "Password"
+  }
+
+  TextField.create24svg_k {
+    contents: padlock24
+  }
+}
+
+Options_Oj9DIMpYDw = frame {
+  name: "Options",
+  left: -33px,
+  top: 62.75px,
+  width: 100%,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [Toggle_vKaSzAuznI, RememberLabel_Mburgp9oBk]
+}
+
+Toggle_vKaSzAuznI = Checkbox.Frame_P {name: "Toggle", left: 127px, top: 285px}
+
+RememberLabel_Mburgp9oBk = text {
+  name: "Remember Label",
+  fill: Colors.colors.black20,
+  contents: "Remember me",
+  font-size: Typography.typography.labelML,
+  font-family: "Inter",
+  font-style: "Regular"
+}
+
+Primary_3lXmMxE1bk = Button.ButtonVariant_V {
+  name: "Primary",
+  width: 100%,
+
+  Button.Button {
+    contents: "Sign in"
+  }
+}
+
+LogoS24_y3g3YnmxnC = logo.ButtonIconXL48 {name: "Button Icon XL (80)", left: 351px, top: 15px}

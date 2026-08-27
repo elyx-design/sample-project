@@ -1,0 +1,145 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "images/misc/book1.png" as book1
+import "components/slider.elyx" as slider
+
+export cardBackgroundSolid_MeUe9s7jIe = cardBackground.cardBackground_zXouRyz {
+  name: "Product Card",
+  left: 140px,
+  top: 134px,
+  width: 565px,
+  layout.direction: .row,
+  layout.item-gap: 20px,
+  overrides: [
+    insert(book1png_5WKLFQSeHs, after = .nil),
+    insert(GroupedStack_iigKZjZVS6, after = book1png_5WKLFQSeHs)
+  ]
+}
+
+GroupedStack_iigKZjZVS6 = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, item-gap: 16px},
+  children: [Text_dhOnMd2nDQ, GroupedStack_rXdP0M90Cz, layer_OysMAZRDRZ, GroupedStack_iaZBymztXh]
+}
+
+Text_dhOnMd2nDQ = text {
+  name: "Text",
+  left: 0px,
+  top: 62px,
+  fill: colors.colors.blackAlpha25,
+  contents: "Page 214 of 344",
+  font-size: 12,
+  font-style: "SemiBold"
+}
+
+GroupedStack_rXdP0M90Cz = frame {
+  name: "Author",
+  width: 100%,
+  layout: {direction: .column, item-gap: 4px},
+  children: [Text_PDADJXXB19, Text_7W8VkGS5qo]
+}
+
+Text_PDADJXXB19 = text {
+  name: "Text",
+  left: 864px,
+  top: 413px,
+  fill: .black,
+  contents: "Hidden Treasures",
+  font-size: 28,
+  font-style: "SemiBold"
+}
+
+Text_7W8VkGS5qo = text {
+  name: "Text",
+  left: 844px,
+  top: 393px,
+  fill: colors.colors.blackAlpha50,
+  contents: "by Eric Mateo",
+  font-size: 14,
+  font-style: "SemiBold"
+}
+
+layer_OysMAZRDRZ = frame {
+  name: "Frame",
+  left: 0px,
+  top: 98px,
+  width: 100%,
+  height: 33px,
+  layout: {direction: .column, justify-content: .center, item-gap: 4px},
+  children: [GroupedStack_WMsAEHpASp, Slider_75Gh9EfwB5]
+}
+
+GroupedStack_WMsAEHpASp = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {item-gap: 12px},
+  children: [Text_44VLt1cTsX, Text_VisIWELcEt]
+}
+
+Text_44VLt1cTsX = text {
+  name: "Text",
+  left: 0px,
+  top: 16px,
+  width: 100%,
+  height: 17px,
+  fill: colors.colors.blackAlpha50,
+  contents: "Progress",
+  font-size: 12,
+  font-style: "SemiBold"
+}
+
+Text_VisIWELcEt = text {
+  name: "Text",
+  left: 20px,
+  top: 36px,
+  width: .auto,
+  height: 17px,
+  fill: colors.colors.blackAlpha50,
+  contents: "42%",
+  font-size: 12,
+  font-style: "SemiBold",
+  align: .right
+}
+
+Slider_75Gh9EfwB5 = slider.Slider_23xVCqJ85q {name: "Slider", left: 0px, top: 0px, width: 100%}
+
+GroupedStack_iaZBymztXh = frame {
+  name: "Notes",
+  width: 100%,
+  layout: {direction: .column, item-gap: 8px},
+  children: [Text_AuIsU93dcQ, Text_8hdD9fYPsD]
+}
+
+Text_AuIsU93dcQ = text {
+  name: "Text",
+  left: 652px,
+  top: 688px,
+  fill: .black,
+  contents: "Notes",
+  font-size: 12,
+  font-style: "SemiBold"
+}
+
+Text_8hdD9fYPsD = text {
+  name: "Text",
+  left: 0px,
+  top: 708px,
+  width: 100%,
+  fill: .black,
+  contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter.",
+  font-size: 12,
+  font-style: "Regular",
+  line-height: 1.5
+}
+
+book1png_5WKLFQSeHs = shape {
+  name: "book1.png",
+  left: 54.0156px,
+  top: 49px,
+  width: 144px,
+  height: 196px,
+  fill: {image: {ref: book1}},
+  type: .rect
+}
