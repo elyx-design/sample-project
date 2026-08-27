@@ -1,0 +1,62 @@
+import "components/product.elyx" as product
+import "tokens/colors.elyx" as colors
+import "components/tag.elyx" as tag
+
+export Frame_52yyDIfE8A = frame {
+  name: "Product Info",
+  left: -167px,
+  top: 300px,
+  layout: {direction: .column, justify-content: .center, item-gap: 20px},
+  overflow: .visible,
+  children: [Product_GC0ZTYHiG1, GroupedStack_eaALrce3Cz]
+}
+
+Product_GC0ZTYHiG1 = product.Frame_p5lb0Fok5v {name: "Product", left: 0px, top: 0px, width: 100%}
+
+GroupedStack_eaALrce3Cz = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 12px},
+  overflow: .visible,
+  children: [GroupedStack_cnFQRvC8hV, IconandLabel_lrjc2EBEzo]
+}
+
+GroupedStack_cnFQRvC8hV = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 4px},
+  children: [ProductName_jJiiEYjEVj, Subtitle_8OnRopnmJX]
+}
+
+ProductName_jJiiEYjEVj = text {
+  name: "Product Name",
+  left: 0px,
+  top: 344px,
+  width: 100%,
+  fill: .black,
+  contents: "Product Name",
+  font-size: 18,
+  font-style: "SemiBold"
+}
+
+Subtitle_8OnRopnmJX = text {
+  name: "Subtitle",
+  left: 0px,
+  top: 364px,
+  width: 100%,
+  fill: colors.colors.blackAlpha70,
+  contents: "Subtitle",
+  font-size: 14,
+  font-style: "Medium"
+}
+
+IconandLabel_lrjc2EBEzo = tag.TagTransparentVariant {
+  name: "Icon and Label",
+  left: 18.2196px,
+  top: 229.1186px,
+  fill[0].color: rgb(100%, 83.1373%, 28.6275%, 50%),
+
+  tag.Tag_gKZPtXRbSo {
+    contents: "4.5"
+  }
+}

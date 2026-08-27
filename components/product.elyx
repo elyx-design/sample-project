@@ -1,0 +1,94 @@
+import "images/misc/book1.png" as book1
+import "images/misc/book2.png" as book2
+import "images/misc/book3.png" as book3
+import "images/misc/book4.png" as book4
+import "images/misc/book5.png" as book5
+
+export Frame_p5lb0Fok5v = frame {
+  name: "Product",
+  left: 409.71px,
+  top: 494px,
+  width: .auto,
+  height: 211px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: book1png_QYfzTFLsES
+}
+
+book1png_QYfzTFLsES = shape {
+  name: "book1.png",
+  left: 51.0859px,
+  top: 72px,
+  width: 155px,
+  height: 211px,
+  fill: {image: {ref: book1}},
+  type: .rect
+}
+
+@variant("Product 5")
+ProductVariant_p = Frame_p5lb0Fok5v {
+  left: 1162px,
+  top: 494px,
+  overrides: [insert(book5png, after = .nil), remove(book1png_QYfzTFLsES)]
+}
+
+@variant("Product 4")
+ProductVariant3 = Frame_p5lb0Fok5v {
+  left: 976.71px,
+  top: 494px,
+  overrides: [insert(book4png, after = .nil), remove(book1png_QYfzTFLsES)]
+}
+
+@variant("Product 3")
+ProductVariant2 = Frame_p5lb0Fok5v {
+  left: 780px,
+  top: 494px,
+  overrides: [insert(book3png, after = .nil), remove(book1png_QYfzTFLsES)]
+}
+
+@variant("Product 2")
+ProductVariant = Frame_p5lb0Fok5v {
+  left: 594.71px,
+  top: 494px,
+  overrides: [insert(book2png, after = .nil), remove(book1png_QYfzTFLsES)]
+}
+
+book2png = shape {
+  name: "book2.png",
+  left: 10.85px,
+  top: -5315.57px,
+  width: 155px,
+  height: 212px,
+  fill: {image: {ref: book2}},
+  type: .rect
+}
+
+book4png = shape {
+  name: "book4.png",
+  left: 46.17px,
+  top: 26.7px,
+  width: 155px,
+  height: 211px,
+  fill: {image: {ref: book4}},
+  type: .rect
+}
+
+book3png = shape {
+  name: "book3.png",
+  left: 20.8567px,
+  top: 23.0153px,
+  width: 155px,
+  height: 211px,
+  fill: {image: {ref: book3}},
+  type: .rect
+}
+
+book5png = shape {
+  name: "book5.png",
+  left: 62.03px,
+  top: 19.46px,
+  width: 155px,
+  height: 211px,
+  fill: {image: {ref: book5}},
+  type: .rect
+}

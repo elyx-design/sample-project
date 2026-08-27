@@ -1,0 +1,138 @@
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "components/product.elyx" as product
+import "blocks/productInfo.elyx" as productInfo
+
+export ProductGallery_ZemQVvDdPm = cardBackground.cardBackgroundSolidVariant_o {
+  name: "Product Gallery",
+  left: 177px,
+  top: 240px,
+  width: 888px,
+  overflow: .visible,
+  padding-top: 12px,
+  padding-left: 0px,
+  padding-bottom: 12px,
+  padding-right: 0px,
+  layout.item-gap: 20px,
+  overrides: [
+    insert(Title_zj6bz1wvCw, after = .nil),
+    insert(GroupedStack_qc45FWeuhH, after = Title_zj6bz1wvCw)
+  ]
+}
+
+GroupedStack_qc45FWeuhH = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  height: .auto,
+  layout: {justify-content: .space-between, item-gap: 20px},
+  overflow: .visible,
+  children: [
+    ProductInfo_iKbIuHTpmu,
+    ProductInfo_zOHrymIxFN,
+    ProductInfo_b3BtwOLAJq,
+    ProductInfo_g8PWi0Sk2i
+  ]
+}
+
+ProductInfo_iKbIuHTpmu = productInfo.Frame_52yyDIfE8A {
+  name: "Product Info",
+  left: -167px,
+  top: 300px,
+  width: .auto,
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+    contents: "by Alicia Puma"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+    contents: "Design",
+    width: 155px
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+    overflow: .visible
+  }
+
+  @use-variant(product.ProductVariant_p)
+  productInfo.Product_GC0ZTYHiG1 {}
+}
+
+ProductInfo_zOHrymIxFN = productInfo.Frame_52yyDIfE8A {
+  name: "Product Info",
+  left: -147px,
+  top: 320px,
+  width: .auto,
+
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.Tag_gKZPtXRbSo {
+    contents: "4.2"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+    contents: "by Alice Sherman"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+    contents: "The Delicious Book of Candy",
+    width: 155px
+  }
+
+  @use-variant(product.ProductVariant3)
+  productInfo.Product_GC0ZTYHiG1 {}
+}
+
+ProductInfo_b3BtwOLAJq = productInfo.Frame_52yyDIfE8A {
+  name: "Product Info",
+  left: 77px,
+  top: 320px,
+  width: .auto,
+
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.Tag_gKZPtXRbSo {
+    contents: "3.9"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+    contents: "by Eric Mateo"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+    contents: "Sea Life",
+    width: 155px
+  }
+
+  @use-variant(product.ProductVariant2)
+  productInfo.Product_GC0ZTYHiG1 {}
+}
+
+ProductInfo_g8PWi0Sk2i = productInfo.Frame_52yyDIfE8A {
+  name: "Product Info",
+  left: 301px,
+  top: 320px,
+  width: .auto,
+
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.Tag_gKZPtXRbSo {
+    contents: "4.8"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+    contents: "by Elena Marsh"
+  }
+
+  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+    contents: "Widlife",
+    width: 155px
+  }
+
+  @use-variant(product.ProductVariant)
+  productInfo.Product_GC0ZTYHiG1 {}
+}
+
+Title_zj6bz1wvCw = text {
+  name: "Title",
+  left: 380px,
+  top: 176.5px,
+  fill: colors.colors.black20,
+  contents: "Reading Next",
+  font-size: 20,
+  font-family: "Inter",
+  font-style: "SemiBold"
+}

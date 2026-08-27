@@ -34,37 +34,25 @@ activityRow_2 = activityRow.activityRow_ZaTUcpO {
   left: 18px,
   top: 81px,
 
-  activityRow.ActivityCopy_zRPSoiA.ActivityTime_dwkCnRe {
-    contents: "24 days ago"
-  }
 
-  activityRow.ActivityCopy_zRPSoiA.ActivityTitle_9XlhOnW {
-    contents: "Password changed"
-  }
+
+  
 }
 
 activityRow_a = activityRow.activityRow_ZaTUcpO {
   left: 38px,
   top: 101px,
 
-  activityRow.ActivityCopy_zRPSoiA.ActivityTime_dwkCnRe {
-    contents: "June 14"
-  }
+  
 
-  activityRow.ActivityCopy_zRPSoiA.ActivityTitle_9XlhOnW {
-    contents: "New member invited"
-  }
+  
 }
 
 activityRow_v = activityRow.activityRow_ZaTUcpO {
   left: 38px,
   top: 151px,
 
-  activityRow.ActivityCopy_zRPSoiA.ActivityTime_dwkCnRe {
-    contents: "June 6"
-  }
+ 
 
-  activityRow.ActivityCopy_zRPSoiA.ActivityTitle_9XlhOnW {
-    contents: "Billing email updated"
-  }
+ 
 }

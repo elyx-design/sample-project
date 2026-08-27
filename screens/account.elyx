@@ -1,98 +1,14 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
-import "blocks/settingsCard.elyx" as SettingsCard
-import "components/pageTabs.elyx" as pageTabs2
 import "blocks/cardAbout.elyx" as profileCard
-import "blocks/securityCard.elyx" as securityCard
-import "blocks/sidebar.elyx" as sidebar2
-import "blocks/planCard.elyx" as planCard2
-import "blocks/activityCard.elyx" as activityCard2
+import "components/divider.elyx" as divider
+import "components/activityRow.elyx" as activityRow2
 import "blocks/cardSocial.elyx" as cardSocial
 import "blocks/headerWeb.elyx" as headerWeb
 import "images/background/wood.jpg" as wood
 import "blocks/productCard.elyx" as productCard
-
-export account_LEZl5tsouT = frame {
-  name: "Account Screen",
-  left: 1334px,
-  top: 80px,
-  width: 1280px,
-  height: 960px,
-  layout: {direction: .row},
-  fill: rgb(95.8%, 97%, 98.2%),
-  children: [sidebar, contentShell]
-}
-
-sidebar = sidebar2.sidebar_QjenIug {name: "sidebar", left: 0px, top: 0px, width: 20%}
-
-contentShell = frame {
-  name: "Content Shell",
-  width: 100%,
-  height: 100%,
-  layout: {direction: .column, item-gap: 20px},
-  padding: 40px
-}
-
-layer_d = pageTabs2.pageTabs_e60eQaG {name: "pageTabs", left: -502px, top: 630px}
-
-mainGrid = frame {
-  name: "Main Grid",
-  width: 100%,
-  layout: {item-gap: 20px},
-  overflow: .visible,
-  children: [primaryColumn, secondaryColumn]
-}
-
-primaryColumn = frame {
-  name: "Primary Column",
-  width: 100%,
-  layout: {direction: .column, item-gap: 20px},
-  overflow: .visible,
-  children: [profileCard_G, layer_f, securityCard_F]
-}
-
-profileCard_G = profileCard.profileCard_vlvneaI {name: "profileCard", left: 0px, top: 0px}
-
-layer_f = SettingsCard.settingsCard_myBFBNhjqy {name: "Settings Card", left: 0px, top: 216px}
-
-securityCard_F = securityCard.securityCard_HT5T2Qj {name: "securityCard", left: 0px, top: 263px}
-
-secondaryColumn = frame {
-  name: "Secondary Column",
-  width: 33%,
-  layout: {direction: .column, item-gap: 20px},
-  overflow: .visible,
-  children: [planCard, activityCard]
-}
-
-planCard = planCard2.planCard_LTK7mFiyqR {
-  name: "planCard",
-  left: 0px,
-  top: 0px,
-
-  planCard2.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.TagTransparent_vakzscXaBV {
-    display: .hidden
-  }
-}
-
-activityCard = activityCard2.activityCard_Qrr8IWU {
-  name: "activityCard",
-  left: 0px,
-  top: 433px,
-
-  activityCard2.activityRow_v.activityRow.ActivityDot_0f7NVNh {
-    fill[0].color: Colors.colors.black40
-  }
-
-  activityCard2.activityRow_a.activityRow.ActivityDot_0f7NVNh {
-    fill[0].color: Colors.colors.black40
-  }
-
-  activityCard2.activityRow_2.activityRow.ActivityDot_0f7NVNh {
-    fill[0].color: Colors.colors.black40
-  }
-}
+import "blocks/productGallery.elyx" as productGallery
 
 statTile = frame {
   name: "Stat Tile",
@@ -331,10 +247,10 @@ settingActionLabel = text {
 
 Frame = frame {
   name: "Frame",
-  left: -2399px,
+  left: -2572px,
   top: -509px,
-  width: 1564px,
-  height: 1405px,
+  width: 1910px,
+  height: 1903px,
   layout: {direction: .column, align-items: .center, item-gap: 64px},
   fill: {image: {ref: wood}},
   padding-top: 24px,
@@ -348,7 +264,8 @@ Frame_F = frame {
   name: "Frame",
   left: 270px,
   top: 156px,
-  width: 1024px,
+  width: 1080px,
+  height: 1109px,
   layout: {item-gap: 24px},
   overflow: .visible,
   children: [layer, Frame_H]
@@ -371,7 +288,7 @@ Frame_H = frame {
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 24px},
   overflow: .visible,
-  children: [layer_0, layer_O]
+  children: [layer_0, layer_O, layer_U, DividerWhite, layer_y]
 }
 
 layer_0 = profileCard.profileCard_vlvneaI {name: "profileCard", left: 0px, top: 0px, width: 100%}
@@ -382,3 +299,25 @@ layer_O = productCard.cardBackgroundSolid_MeUe9s7jIe {
   top: -317px,
   width: 100%
 }
+
+layer_U = productGallery.ProductGallery_ZemQVvDdPm {
+  name: "Product Gallery",
+  left: 0px,
+  top: -444px,
+  width: 100%,
+
+  productGallery.DividerWhite_TtAzllhBWz.divider.Rectangle_RlFhJcHgz0 {
+
+  }
+}
+
+DividerWhite = divider.Divider_97GT5IGMgL {
+  name: "Divider (White)",
+  left: 20px,
+  top: 308px,
+  width: 100%,
+  padding-top: 8px,
+  padding-bottom: 8px
+}
+
+layer_y = activityRow2.activityRow_ZaTUcpO {name: "activityRow", left: 0px, top: 266px, width: 100%}

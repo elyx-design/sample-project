@@ -1,45 +1,43 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "tokens/spacing.elyx" as Spacing
+import "components/tag.elyx" as tag
 
 export activityRow_ZaTUcpO = frame {
   name: "activityRow",
-  left: 18px,
-  top: 81px,
-  width: 100%,
+  left: -117px,
+  top: -17px,
+  width: 643.5px,
   height: .auto,
-  layout: {align-items: .center, item-gap: Spacing.spacing.m},
-  children: [ActivityDot_0f7NVNh, ActivityCopy_zRPSoiA]
-}
-
-ActivityDot_0f7NVNh = shape {
-  name: "Activity Dot",
-  width: 8px,
-  height: 8px,
-  fill: Colors.colors.blue,
-  type: .ellipse
-}
-
-ActivityCopy_zRPSoiA = frame {
-  name: "Activity Copy",
-  layout: {direction: .column, item-gap: 4px},
-  children: [ActivityTitle_9XlhOnW, ActivityTime_dwkCnRe]
+  layout: {align-items: .center, item-gap: 32px},
+  overflow: .visible,
+  children: [ActivityTitle_9XlhOnW, ActivityTime_dwkCnRe, TagTransparent_7nWvl7H322]
 }
 
 ActivityTitle_9XlhOnW = text {
-  name: "Event",
-  fill: Colors.colors.black20,
-  contents: "Event",
+  name: "2 Days",
+  left: 0px,
+  top: 0px,
+  fill: Colors.colors.blackAlpha50,
+  contents: "2 Days",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "SemiBold"
 }
 
 ActivityTime_dwkCnRe = text {
-  name: "Date",
+  name: "Rated The Weight of ",
+  left: 0px,
+  top: 0px,
+  width: 100%,
   fill: Colors.colors.blackAlpha70,
-  contents: "Date",
+  contents: "Rated The Weight of Light — \"tender from start to finish\"",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
   font-style: "Regular"
+}
+
+TagTransparent_7nWvl7H322 = tag.Frame_EkvUQb0wU7 {
+  name: "Tag (Transparent)",
+  left: 47.5px,
+  top: 2.25px
 }

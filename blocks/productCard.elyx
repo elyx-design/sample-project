@@ -1,7 +1,7 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
-import "images/misc/book1.png" as book1
 import "components/slider.elyx" as slider
+import "components/product.elyx" as product
 
 export cardBackgroundSolid_MeUe9s7jIe = cardBackground.cardBackground_zXouRyz {
   name: "Product Card",
@@ -11,8 +11,8 @@ export cardBackgroundSolid_MeUe9s7jIe = cardBackground.cardBackground_zXouRyz {
   layout.direction: .row,
   layout.item-gap: 20px,
   overrides: [
-    insert(book1png_5WKLFQSeHs, after = .nil),
-    insert(GroupedStack_iigKZjZVS6, after = book1png_5WKLFQSeHs)
+    insert(Product_Al6k6nvbNM, after = .nil),
+    insert(GroupedStack_iigKZjZVS6, after = Product_Al6k6nvbNM)
   ]
 }
 
@@ -134,12 +134,4 @@ Text_8hdD9fYPsD = text {
   line-height: 1.5
 }
 
-book1png_5WKLFQSeHs = shape {
-  name: "book1.png",
-  left: 54.0156px,
-  top: 49px,
-  width: 144px,
-  height: 196px,
-  fill: {image: {ref: book1}},
-  type: .rect
-}
+Product_Al6k6nvbNM = product.Frame_p5lb0Fok5v {name: "Product", left: -63px, top: -86px}

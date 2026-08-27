@@ -224,7 +224,7 @@ Finallyistheexis = text {
   font-style: "Regular"
 }
 
-Screen = account.account_LEZl5tsouT {name: "Screen", left: 841px, top: 757px}
+
 
 Component = button.ButtonVariant_V {
   name: "Component",
