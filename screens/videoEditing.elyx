@@ -14,13 +14,103 @@ import "icons/20 pixels/pen-20.svg" as pen20
 import "icons/20 pixels/pointer-20.svg" as pointer20
 import "icons/24 pixels/music-24.svg" as music24
 import "icons/24 pixels/text-24.svg" as text24
+import "blocks/sidebar.elyx" as sidebar
+import "icons/24 pixels/notes-24.svg" as notes24
+import "components/playHead.elyx" as playHead
+
+module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 306.508px,
+  top: 555px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "8"
+  }
+}
+
+module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 197.2858px,
+  top: 535px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "6"
+  }
+}
+
+module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 133px,
+  top: 535px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "5"
+  }
+}
+
+module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 58px,
+  top: 535px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "4"
+  }
+}
+
+module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 217.2858px,
+  top: 555px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "7"
+  }
+}
+
+module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 326.508px,
+  top: 575px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "9"
+  }
+}
+
+VideoEditing = frame {
+  name: "Video Editing",
+  left: -689px,
+  top: -230px,
+  width: 1018px,
+  height: 701px,
+  layout: {justify-content: .center},
+  children: [layer_L, Frame]
+}
+
+layer_L = sidebar.sidebarVariant {
+  name: "sidebar (Contracted)",
+  left: 0px,
+  top: 0px,
+  height: 100%,
+
+  sidebar.GroupedStack_C.GroupedStack.Icon.button.calendar24svg_0 {
+    contents: notes24
+  }
+}
 
 Frame = frame {
   name: "Frame",
-  left: -214px,
-  top: -105px,
-  width: 1112px,
-  height: 710px,
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
   layout: {direction: .column, align-items: .center},
   shadow: {
     drop-shadow: {
@@ -32,13 +122,14 @@ Frame = frame {
   },
   corner-radius: 0px,
   corner-smoothing: 0.5,
-  children: [Frame_P, Timeline]
+  children: [Video, Timeline]
 }
 
-Frame_P = frame {
-  name: "Frame",
+Video = frame {
+  name: "Video",
   left: 0px,
   top: 0px,
+  height: 60%,
   layout: {justify-content: .end, align-items: .end, item-gap: 2px},
   fill: Colors.colors.black20,
   children: [layer, layer_E]
@@ -73,14 +164,18 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserName_Qkcl7dWEIn {
     contents: "Wings of the Wild"
   }
+
+  videoPlayer.GroupedStack_R6YKIBc1DT.Status_mmQ1DabaWR {
+    display: .hidden
+  }
 }
 
 layer_E = imageGallery.ImageGallery_GtwQ9FgVmL {
   name: "Image Gallery",
   left: 20px,
-  top: 56px,
+  top: 0px,
   width: 40%,
-  height: 360px,
+  height: 100%,
 
   imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Imagename_jOw4WJEFHF {
     contents: "Red-flanked Bluetail"
@@ -174,6 +269,7 @@ layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
   left: 0px,
   top: 442.5px,
   width: 100%,
+  overflow: .visible,
   padding-left: 24px,
   padding-right: 0px,
   overrides: [
@@ -182,7 +278,8 @@ layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
     insert(module_YWpHWOKFmU, after = module_Kax64eo5pN),
     insert(module_x9fTjghOGA, after = module_YWpHWOKFmU),
     insert(module_oAd49AzLxr, after = module_x9fTjghOGA),
-    insert(module_WhzRk9ByAT, after = module_oAd49AzLxr)
+    insert(module_WhzRk9ByAT, after = module_oAd49AzLxr),
+    insert(layer_O, after = module_WhzRk9ByAT)
   ],
 
   timelineRuler.module_1r90h9aJDj.textLayer_odBUA3ZxP6 {
@@ -219,7 +316,7 @@ layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7941px,
   top: 763px,
-  width: 273px,
+  width: 23.6364%,
 
   videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_hFB8lsQn1p {
     fill[0].image.ref: bird
@@ -238,7 +335,7 @@ VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7961px,
   top: 783px,
-  width: 273px,
+  width: 23.6364%,
 
   videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_hFB8lsQn1p {
     fill[0].image.ref: thumb08
@@ -257,7 +354,7 @@ layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
   name: "Video Track",
   left: 4241.5px,
   top: 788px,
-  width: 477px,
+  width: 48.3773%,
   fill[0].color: rgb(100%, 41.19%, 100%),
 
   mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
@@ -273,7 +370,7 @@ VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
   name: "Video Track",
   left: -13207.5px,
   top: 808px,
-  width: 584px,
+  width: 59.2292%,
   fill[0].color: rgb(0%, 98.76%, 100%),
 
   mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
@@ -285,68 +382,10 @@ VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
   }
 }
 
-module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
-  left: 306.508px,
-  top: 555px,
-  width: 100%,
-
-  timelineRuler.textLayer_odBUA3ZxP6 {
-    contents: "8"
-  }
-}
-
-module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
-  left: 197.2858px,
-  top: 535px,
-  width: 100%,
-
-  timelineRuler.textLayer_odBUA3ZxP6 {
-    contents: "6"
-  }
-}
-
-module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
-  left: 133px,
-  top: 535px,
-  width: 100%,
-
-  timelineRuler.textLayer_odBUA3ZxP6 {
-    contents: "5"
-  }
-}
-
-module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
-  left: 58px,
-  top: 535px,
-  width: 100%,
-
-  timelineRuler.textLayer_odBUA3ZxP6 {
-    contents: "4"
-  }
-}
-
-module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
-  left: 217.2858px,
-  top: 555px,
-  width: 100%,
-
-  timelineRuler.textLayer_odBUA3ZxP6 {
-    contents: "7"
-  }
-}
-
-module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
-  left: 326.508px,
-  top: 575px,
-  width: 100%,
-
-  timelineRuler.textLayer_odBUA3ZxP6 {
-    contents: "9"
-  }
+layer_O = playHead.Frame_kFEBYnH2MI {
+  name: "Play Head",
+  left: 385px,
+  top: -5px,
+  height: 281px,
+  ignore-stack: .true
 }

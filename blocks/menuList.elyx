@@ -1,5 +1,6 @@
 import "components/listRow.elyx" as ListRow
 import "tokens/colors.elyx" as colors
+import "icons/20 pixels/activity-20.svg" as activity20
 import "components/cardBackground.elyx" as cardBackground
 import "components/userSummary.elyx" as userSummary
 import "components/divider.elyx" as divider
@@ -10,7 +11,7 @@ import "icons/24 pixels/ellipsis-horizontal-24.svg" as ellipsishorizontal24
 import "icons/20 pixels/database-20.svg" as database20
 import "icons/20 pixels/settings-20.svg" as settings20
 import "icons/20 pixels/notes-20.svg" as notes20
-import "icons/20 pixels/activity-20.svg" as activity20
+import "icons/20 pixels/chat-20.svg" as chat20
 
 export MenuList_6OjbR9CAsW = cardBackground.cardBackground_zXouRyz {
   name: "Menu List",
@@ -88,11 +89,14 @@ Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
   top: 0px,
 
   ListRow.GroupedStack.Item_e_R_O_9 {
-    contents: "Manage Profile"
+    contents: "Comments"
+  }
+
+  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+    contents: chat20
   }
 
   ListRow.Item_e_O {
-    display: .hidden
   }
 }
 
@@ -106,11 +110,11 @@ Selected_rskLcIWzCu = ListRow.RowVariant_7 {
   }
 
   ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    contents: activity20
+
   }
 
   ListRow.Item_e_O {
-    display: .hidden
+
   }
 }
 
@@ -123,12 +127,16 @@ Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
     contents: "Notes"
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
     contents: notes20
   }
 
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+    
+  }
+
   ListRow.Item_e_O {
-    display: .hidden
+    
   }
 }
 
@@ -152,12 +160,16 @@ Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
     contents: "Database"
   }
 
+  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+    contents: notes20
+  }
+
   ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    contents: database20
+    
   }
 
   ListRow.Item_e_O {
-    display: .hidden
+    
   }
 }
 
@@ -170,12 +182,16 @@ Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
     contents: "Settings"
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
     contents: settings20
   }
 
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+    
+  }
+
   ListRow.Item_e_O {
-    display: .hidden
+   
   }
 }
 

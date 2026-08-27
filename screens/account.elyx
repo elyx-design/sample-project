@@ -20,7 +20,7 @@ export account_LEZl5tsouT = frame {
   children: [sidebar, contentShell]
 }
 
-sidebar = sidebar2.sidebar_QjenIug {left: 0px, top: 0px, width: 20%}
+sidebar = sidebar2.sidebar_QjenIug {name: "sidebar", left: 0px, top: 0px, width: 20%}
 
 contentShell = frame {
   name: "Content Shell",
@@ -30,7 +30,7 @@ contentShell = frame {
   padding: 40px
 }
 
-layer_d = pageTabs2.pageTabs_e60eQaG {left: -502px, top: 630px}
+layer_d = pageTabs2.pageTabs_e60eQaG {name: "pageTabs", left: -502px, top: 630px}
 
 mainGrid = frame {
   name: "Main Grid",
@@ -48,11 +48,11 @@ primaryColumn = frame {
   children: [profileCard_G, layer_f, securityCard_F]
 }
 
-profileCard_G = profileCard.profileCard_vlvneaI {left: 0px, top: 0px}
+profileCard_G = profileCard.profileCard_vlvneaI {name: "profileCard", left: 0px, top: 0px}
 
-layer_f = SettingsCard.settingsCard_myBFBNhjqy {left: 0px, top: 216px}
+layer_f = SettingsCard.settingsCard_myBFBNhjqy {name: "Settings Card", left: 0px, top: 216px}
 
-securityCard_F = securityCard.securityCard_HT5T2Qj {left: 0px, top: 263px}
+securityCard_F = securityCard.securityCard_HT5T2Qj {name: "securityCard", left: 0px, top: 263px}
 
 secondaryColumn = frame {
   name: "Secondary Column",
@@ -62,9 +62,18 @@ secondaryColumn = frame {
   children: [planCard, activityCard]
 }
 
-planCard = planCard2.planCard_LTK7mFiyqR {left: 0px, top: 0px}
+planCard = planCard2.planCard_LTK7mFiyqR {
+  name: "planCard",
+  left: 0px,
+  top: 0px,
+
+  planCard2.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.TagTransparent_vakzscXaBV {
+    display: .hidden
+  }
+}
 
 activityCard = activityCard2.activityCard_Qrr8IWU {
+  name: "activityCard",
   left: 0px,
   top: 433px,
 

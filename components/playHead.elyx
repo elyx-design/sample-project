@@ -1,0 +1,45 @@
+import "tokens/colors.elyx" as colors
+
+export Frame_kFEBYnH2MI = frame {
+  name: "Play Head",
+  left: 670px,
+  top: 469px,
+  width: 12px,
+  height: 74px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  padding-top: 12px,
+  children: [Rectangle_fbB02n1chM, Ellipse_gF0x43ObsE]
+}
+
+Rectangle_fbB02n1chM = shape {
+  name: "Rectangle",
+  left: 6px,
+  top: 0px,
+  width: 2px,
+  height: 100%,
+  fill: [
+    rgb(80.39%, 96.47%, 0%),
+    {
+      linear-gradient: {
+        from: point(50%, 88.7466%),
+        to: point(50%, 100%),
+        stops: [stop(0%, .transparent), stop(100%, colors.colors.black20)]
+      }
+    }
+  ],
+  border: {color: colors.colors.blackAlpha70, width: 0.5px, position: .outside},
+  type: .rect
+}
+
+Ellipse_gF0x43ObsE = shape {
+  name: "Ellipse",
+  left: 0px,
+  top: 0px,
+  width: 12px,
+  height: 12px,
+  ignore-stack: .true,
+  fill: colors.colors.blackAlpha70,
+  border: {color: rgb(83.5294%, 96.0784%, 0%), width: 2px},
+  type: .ellipse
+}

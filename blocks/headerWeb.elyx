@@ -1,7 +1,7 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
-import "components/brand.elyx" as brand
+
 import "components/button.elyx" as button
 import "components/avatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
@@ -21,9 +21,7 @@ export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
   overrides: [
-    insert(logoandiconL32_V3HRZT46je, after = .nil),
-    insert(layer_IZeMbQZvJt, after = logoandiconL32_V3HRZT46je),
-    insert(GroupedStack_s6neGdYpQr, after = layer_IZeMbQZvJt)
+  
   ]
 }
 
@@ -183,4 +181,4 @@ MenuVariant_CWSCQz5wR7 = MenuVariant {
   }
 }
 
-logoandiconL32_V3HRZT46je = brand.logoandicon_LKlgCoSHoQ {left: 681px, top: 458px}
+

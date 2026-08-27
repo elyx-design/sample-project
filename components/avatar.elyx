@@ -1,7 +1,7 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
-import "images/profile/005.jpg" as module4
+import "images/profileImgs/005.jpg" as module
 
 export userAvatar_mKGJ6R7 = frame {
   name: "Avatar S",
@@ -137,7 +137,7 @@ bg = shape {
   width: 72px,
   height: 72px,
   ignore-stack: .true,
-  fill: {image: {ref: module4}},
+  fill: {image: {ref: module}},
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }
@@ -149,7 +149,7 @@ bg_e = shape {
   width: 36px,
   height: 36px,
   ignore-stack: .true,
-  fill: {image: {ref: module4}},
+  fill: {image: {ref: module}},
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }

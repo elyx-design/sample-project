@@ -6,7 +6,7 @@ import "icons/20 pixels/more-20.svg" as more20
 import "icons/20 pixels/search-20.svg" as search20
 import "icons/20 pixels/voice-20.svg" as voice20
 import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
-import "images/ai/orb.png" as orb
+import "components/logo.elyx" as logo
 
 export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
   name: "chatBox",
@@ -114,18 +114,10 @@ GroupedStack_b3NQe9yEtF = frame {
   name: "Grouped Stack",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
-  children: [orbpng_oaP3PpXKe9, Text_DHf9m5IpDV]
+  children: [LogoS24_XRD2oCsk6v, Text_DHf9m5IpDV]
 }
 
-orbpng_oaP3PpXKe9 = shape {
-  name: "orb.png",
-  left: 19.0599px,
-  top: 17.1983px,
-  width: 24px,
-  height: 24px,
-  fill: {image: {ref: orb}},
-  type: .rect
-}
+LogoS24_XRD2oCsk6v = logo.iconButton_gqojFFCYlK {name: "Logo S (24)", left: 657px, top: 485px}
 
 Text_DHf9m5IpDV = text {
   name: "Text",

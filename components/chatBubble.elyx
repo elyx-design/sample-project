@@ -1,9 +1,9 @@
 import "components/avatar.elyx" as avatar
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
-import "images/profile/005.jpg" as module3
+import "images/profileImgs/005.jpg" as module
 import "tokens/spacing.elyx" as spacing
-import "images/profile/001.jpg" as module2
+import "images/profileImgs/001.jpg" as module4
 
 export ChatBubble_Rb2QJd9jzc = frame {
   name: "Chat Bubble",
@@ -20,7 +20,7 @@ AvatarSPhoto_MIH7WKKzVs = avatar.AvatarSVariant {
   top: 0px,
 
   avatar.bg_e {
-    fill[0].image.ref: module2
+    fill[0].image.ref: module4
   }
 
   avatar.statusonline_aL82ghuez5 {
@@ -54,11 +54,10 @@ Chattext_chDa6dS3AP = text {
 ChatBubbleVariant = ChatBubble_Rb2QJd9jzc {
   left: 602px,
   top: 560px,
-  overflow: .visible,
   overrides: [move(Frame_iMg8dwYyHE, after = .nil)],
 
   AvatarSPhoto_MIH7WKKzVs.avatar.bg_e {
-    fill[0].image.ref: module3
+    fill[0].image.ref: module
   }
 
   Frame_iMg8dwYyHE {

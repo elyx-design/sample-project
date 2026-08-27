@@ -1,8 +1,7 @@
-import "tokens/colors.elyx" as Colors
-import "icons/logo.svg" as logo
+import "images/misc/logo.png" as logo2
 
 export iconButton_gqojFFCYlK = frame {
-  name: "Logo M (24)",
+  name: "Logo S (24)",
   left: 340px,
   top: 519px,
   width: .auto,
@@ -10,67 +9,62 @@ export iconButton_gqojFFCYlK = frame {
   layout: {direction: .column, justify-content: .center, align-items: .center},
   fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   corner-radius: 0px,
-  children: defaultsvg
+  children: logopng_sc1aSOCPki
 }
 
-defaultsvg = icon {
-  name: "default.svg",
-  left: -0.17px,
-  top: -1.2357px,
+logopng_sc1aSOCPki = shape {
+  name: "logo.png",
+  left: 0px,
+  top: 80px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.black20,
-  contents: logo
+  fill: {image: {ref: logo2}},
+  type: .rect
 }
 
-@variant("Logo S (16)")
-ButtonIconMVariant_N = iconButton_gqojFFCYlK {
-  left: 260px,
-  top: 519px,
-
-  defaultsvg {
-    left: -4.17px,
-    top: -5.2357px,
-    width: 16px,
-    height: 16px
-  }
-}
-
-@variant("Logo L (32)")
-ButtonIconMVariant_3 = iconButton_gqojFFCYlK {
-  left: 428px,
-  top: 519px,
-
-  defaultsvg {
-    left: 3.83px,
-    top: 2.76px,
-    width: 32px,
-    height: 32px
-  }
-}
-
-@variant("Logo XL (48)")
+@variant("Logo X (48)")
 ButtonIconL32 = iconButton_gqojFFCYlK {
-  left: 524px,
+  left: 490px,
   top: 519px,
-
-  defaultsvg {
-    left: 11.83px,
-    top: 10.76px,
-    width: 48px,
-    height: 48px
-  }
+  overrides: [insert(logopng_o, after = .nil), remove(logopng_sc1aSOCPki)]
 }
 
-@variant("Button Icon XXL (80)")
+@variant("Button Icon XL (80)")
 ButtonIconXL48 = iconButton_gqojFFCYlK {
   left: 636px,
   top: 519px,
+  overrides: [insert(logopng_H, after = .nil), remove(logopng_sc1aSOCPki)]
+}
 
-  defaultsvg {
-    left: 11.83px,
-    top: 10.76px,
-    width: 80px,
-    height: 80px
+logopng_H = shape {
+  name: "logo.png",
+  left: 0px,
+  top: 80px,
+  width: 80px,
+  height: 80px,
+  fill: {image: {ref: logo2}},
+  type: .rect
+}
+
+logopng_o = shape {
+  name: "logo.png",
+  left: 0px,
+  top: 56px,
+  width: 48px,
+  height: 48px,
+  fill: {image: {ref: logo2}},
+  type: .rect
+}
+
+@variant("Logo M (36)")
+LogoM24Variant = iconButton_gqojFFCYlK {
+  left: 409px,
+  top: 519px,
+  width: 36px,
+  height: 36px,
+
+  logopng_sc1aSOCPki {
+    width: 36px,
+    height: 36px
   }
 }

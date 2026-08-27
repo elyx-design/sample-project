@@ -1,6 +1,5 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
-import "images/ai/orb.png" as orb
 import "components/button.elyx" as button
 import "icons/20 pixels/pointer-20.svg" as pointer20
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown12
@@ -20,7 +19,7 @@ export ToolbarCreate_WBWllCttV6 = cardBackground.cardBackgroundSolidVariant_B {
   min-width: .nil,
   min-height: .nil,
   padding-top: 0px,
-  padding-left: 6px,
+  padding-left: 12px,
   padding-bottom: 0px,
   padding-right: 4px,
   layout.align-items: .center,
@@ -28,20 +27,9 @@ export ToolbarCreate_WBWllCttV6 = cardBackground.cardBackgroundSolidVariant_B {
   layout.item-gap: 8px,
   layout.justify-content: .space-between,
   overrides: [
-    insert(orbpng_4P25I3Jkox, after = .nil),
-    insert(GroupedStack_n9gWay5BJG, after = orbpng_4P25I3Jkox),
+    insert(GroupedStack_n9gWay5BJG, after = .nil),
     insert(Icon_7TJ0RCVeUL, after = GroupedStack_n9gWay5BJG)
   ]
-}
-
-orbpng_4P25I3Jkox = shape {
-  name: "orb.png",
-  left: 37.85px,
-  top: 7.33px,
-  width: 24px,
-  height: 24px,
-  fill: {image: {ref: orb}},
-  type: .rect
 }
 
 Icon_7TJ0RCVeUL = button.ButtonS28Variant_X {name: "Close", left: 686px, top: 602px}

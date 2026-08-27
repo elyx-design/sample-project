@@ -61,7 +61,8 @@ ButtonVariant_V = button_43RxZnGr30 {
   shadow[1].inner-shadow.spread: 0px,
 
   Button {
-    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
+    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%),
+    left: 16px
   }
 }
 
@@ -365,4 +366,50 @@ trash20svg_W = icon {
   height: 20px,
   fill: Colors.colors.black20,
   contents: trash20
+}
+
+@variant("Primary Rounded")
+Primary = button_43RxZnGr30 {
+  left: 1405px,
+  top: 689px,
+  width: Spacing.spacing.heightM,
+  border[0].color: Colors.colors.black20,
+  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
+  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  overrides: [insert(calendar24svg_I, after = .nil), remove(Button)],
+  shadow[1].inner-shadow.blur-radius: 0.5px,
+  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.offset: [0px, 1px],
+  shadow[1].inner-shadow.spread: 0px
+}
+
+@variant(Icon)
+PrimaryRounded = button_43RxZnGr30 {
+  left: 1462px,
+  top: 690.056px,
+  width: Spacing.spacing.heightM,
+  border[0]: .nil,
+  fill[0]: .nil,
+  overrides: [insert(calendar24svg_0, after = .nil), remove(Button)],
+  shadow[0]: .nil
+}
+
+calendar24svg_0 = icon {
+  name: "calendar-24.svg",
+  left: 1397px,
+  top: 701px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.black20,
+  contents: calendar24
+}
+
+calendar24svg_I = icon {
+  name: "calendar-24.svg",
+  left: 1397px,
+  top: 701px,
+  width: 24px,
+  height: 24px,
+  fill: Colors.colors.white100,
+  contents: calendar24
 }

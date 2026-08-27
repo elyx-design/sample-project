@@ -62,7 +62,7 @@ Rectangle_nNmoTVYunh = shape {
   top: 0px,
   width: 1px,
   height: 3px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   corner-radius: radius.radius.max,
   type: .rect
 }
@@ -73,7 +73,7 @@ Rectangle_zZuXPus2Av = shape {
   top: 0px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   corner-radius: radius.radius.max,
   type: .rect
 }
@@ -84,7 +84,7 @@ Rectangle_XbCl5AZs9K = shape {
   top: 0.39px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   corner-radius: radius.radius.max,
   type: .rect
 }
@@ -95,7 +95,7 @@ Rectangle_b9AGSxdSy2 = shape {
   top: 0.78px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   corner-radius: radius.radius.max,
   type: .rect
 }
@@ -106,7 +106,7 @@ Rectangle_Zcx3XuP496 = shape {
   top: 1.17px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   corner-radius: radius.radius.max,
   type: .rect
 }
@@ -117,7 +117,7 @@ Rectangle_BzhuJ02AJm = shape {
   top: 1.56px,
   width: 1px,
   height: 1px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   corner-radius: radius.radius.max,
   type: .rect
 }
@@ -128,18 +128,8 @@ textLayer_odBUA3ZxP6 = text {
   right: 50.63px,
   width: .auto,
   height: 15px,
-  fill: colors.colors.whiteAlpha25,
+  fill: colors.colors.whiteAlpha50,
   contents: "0",
   font-size: 10,
   align: .center
-}
-
-Rectangle_U = shape {
-  name: "Rectangle",
-  left: 622px,
-  top: 596px,
-  width: 35px,
-  height: 17px,
-  fill: colors.colors.whiteAlpha10,
-  type: .rect
 }

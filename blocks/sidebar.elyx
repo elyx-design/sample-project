@@ -3,12 +3,18 @@ import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as Spacing
 import "components/sidebarHeader.elyx" as sidebarHeader2
 import "components/userSummary.elyx" as userSummary2
+import "components/avatar.elyx" as avatar
 import "components/cardBackground.elyx" as cardBackground
 import "icons/24 pixels/home-24.svg" as home24
 import "icons/24 pixels/chat.svg" as chat
 import "icons/24 pixels/doc.svg" as doc
 import "icons/24 pixels/cloud-24.svg" as cloud24
 import "icons/24 pixels/bag-24.svg" as bag24
+import "components/button.elyx" as button
+import "icons/24 pixels/create-24.svg" as create24
+import "icons/24 pixels/folder-24.svg" as folder24
+import "icons/24 pixels/history-24.svg" as history24
+import "components/logo.elyx" as logo
 
 export sidebar_QjenIug = frame {
   name: "sidebar",
@@ -30,7 +36,12 @@ GroupedStack_flp7iRt = frame {
   children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
 }
 
-sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {left: 0px, top: 16px, width: 100%}
+sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {
+  name: "sidebarHeader",
+  left: 0px,
+  top: 16px,
+  width: 100%
+}
 
 GroupedStack_Wkqkg47 = frame {
   name: "Grouped Stack",
@@ -46,6 +57,7 @@ GroupedStack_Wkqkg47 = frame {
 }
 
 sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 0px,
   top: 453px,
 
@@ -55,6 +67,7 @@ sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_CGF_zna = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 20px,
   top: 473px,
 
@@ -64,6 +77,7 @@ sidebarItem_CGF_zna = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_aqkFtkF = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 40px,
   top: 493px,
 
@@ -73,6 +87,7 @@ sidebarItem_aqkFtkF = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 60px,
   top: 513px,
 
@@ -82,6 +97,7 @@ sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
+  name: "Selected",
   left: 20px,
   top: 473px,
 
@@ -90,7 +106,7 @@ sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
   }
 }
 
-userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {left: 0px, top: 1241px}
+userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {name: "userSummary", left: 0px, top: 1241px}
 
 export sideBar_xy3AK6H6s8 = cardBackground.cardBackgroundSolidVariant_o {
   name: "sideBar",
@@ -124,6 +140,7 @@ Menu_kyNuR0df4b = frame {
 }
 
 sidebarItem_MdZAfxU8r7 = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 34.59px,
   top: 57.76px,
 
@@ -137,6 +154,7 @@ sidebarItem_MdZAfxU8r7 = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_u8reTu0LfB = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 54.59px,
   top: 77.76px,
 
@@ -146,6 +164,7 @@ sidebarItem_u8reTu0LfB = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_WqMsLQOZBI = sidebarItem.sidebarItemVariant_Q {
+  name: "Selected",
   left: 74.59px,
   top: 97.76px,
   overflow: .visible,
@@ -162,6 +181,7 @@ sidebarItem_WqMsLQOZBI = sidebarItem.sidebarItemVariant_Q {
 }
 
 sidebarItem_Ngvb741Oem = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 74.59px,
   top: 97.76px,
 
@@ -175,6 +195,7 @@ sidebarItem_Ngvb741Oem = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_FQCI0OhATX = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 74.59px,
   top: 169.76px,
 
@@ -188,6 +209,7 @@ sidebarItem_FQCI0OhATX = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarItem_Gv85kN8ZjX = sidebarItem.sidebarItem_GirPBI3vMI {
+  name: "sidebarItem",
   left: 74.59px,
   top: 205.76px,
 
@@ -200,4 +222,95 @@ sidebarItem_Gv85kN8ZjX = sidebarItem.sidebarItem_GirPBI3vMI {
   }
 }
 
-sidebarHeader_ENiocaFFtM = sidebarHeader2.sidebarHeader_XE3kaHH {left: 280px, top: -16px}
+sidebarHeader_ENiocaFFtM = sidebarHeader2.sidebarHeader_XE3kaHH {
+  name: "sidebarHeader",
+  left: 280px,
+  top: -16px
+}
+
+@variant("sidebar (Contracted)")
+sidebarVariant = sidebar_QjenIug {
+  left: 539.2797px,
+  top: 0px,
+  width: 60px,
+  height: 456px,
+  padding-top: 20px,
+  padding-left: 12px,
+  padding-bottom: 20px,
+  padding-right: 12px,
+  border[0].visible: .false,
+  overrides: [
+    insert(GroupedStack_C, after = .nil),
+    insert(layer_0, after = GroupedStack_C),
+    remove(userSummary_RP1JqZ1),
+    remove(GroupedStack_flp7iRt)
+  ]
+}
+
+layer_0 = avatar.AvatarSVariant {name: "Avatar S (Photo)", left: 550px, top: 402px}
+
+GroupedStack_C = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, item-gap: 24px},
+  children: [layer_P, GroupedStack]
+}
+
+layer_P = logo.LogoM24Variant {name: "Logo M (36)", left: 0px, top: 278px}
+
+GroupedStack = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 8px},
+  children: [layer, Icon_2, Icon_C, Icon_L, Icon]
+}
+
+layer = button.PrimaryRounded {
+  name: "Icon",
+  left: 8.72px,
+  top: 108px,
+
+  button.calendar24svg_0 {
+    contents: home24
+  }
+}
+
+Icon_2 = button.PrimaryRounded {
+  name: "Icon",
+  left: 28.72px,
+  top: 128px,
+
+  button.calendar24svg_0 {
+    contents: create24
+  }
+}
+
+Icon_C = button.PrimaryRounded {
+  name: "Icon",
+  left: 28.72px,
+  top: 128px,
+
+  button.calendar24svg_0 {
+    contents: folder24
+  }
+}
+
+Icon_L = button.PrimaryRounded {
+  name: "Icon",
+  left: 28.72px,
+  top: 164px,
+
+  button.calendar24svg_0 {
+    contents: cloud24
+  }
+}
+
+Icon = button.PrimaryRounded {
+  name: "Icon",
+  left: 28.72px,
+  top: 128px,
+
+  button.calendar24svg_0 {
+    contents: history24
+  }
+}

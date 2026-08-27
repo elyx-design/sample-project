@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
-import "components/icon.elyx" as icon2
+
 
 export sidebarHeader_XE3kaHH = frame {
   name: "sidebarHeader",
@@ -13,15 +13,10 @@ export sidebarHeader_XE3kaHH = frame {
   layout: {align-items: .center, item-gap: 10px},
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
-  children: [hazeiconsvg_K4eab6fNaY, WorkspaceMeta_rdsbtAB]
+
 }
 
-hazeiconsvg_K4eab6fNaY = icon2.hazeiconsvg_BZW5Sgs8Uh {
-  left: -146.1657px,
-  top: -135px,
-  width: 32px,
-  height: 32px
-}
+
 
 WorkspaceMeta_rdsbtAB = frame {
   name: "Workspace Meta",

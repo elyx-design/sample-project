@@ -1,7 +1,7 @@
 import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
-import "images/background/rally.jpg" as rally
 import "tokens/radius.elyx" as radius
+import "images/background/bird.jpg" as bird
 
 export VideoTrack_oikz8bvb8Z = frame {
   name: "Video Track",
@@ -10,7 +10,7 @@ export VideoTrack_oikz8bvb8Z = frame {
   width: 475px,
   height: spacing.spacing.heightG,
   layout: {justify-content: .space-evenly, align-items: .center},
-  fill: rgb(67.48%, 100%, 0%),
+  fill: rgb(83.53%, 96.25%, 0%),
   corner-radius: 8px,
   padding: [4px, 0px],
   children: [handle_Layj0z4Nv8, GroupedStack_Q4wEWSNt4H, handle_2fQ263mXIk]
@@ -52,7 +52,7 @@ Rectangle_6Anu8dt4m4 = shape {
   top: 0px,
   width: 100%,
   height: spacing.spacing.heightG,
-  fill: {image: {ref: rally}},
+  fill: {image: {ref: bird}},
   type: .rect
 }
 
@@ -62,7 +62,7 @@ Rectangle_TwaVf7x47r = shape {
   top: 20px,
   width: 100%,
   height: spacing.spacing.heightG,
-  fill: {image: {ref: rally}},
+  fill: {image: {ref: bird}},
   type: .rect
 }
 
@@ -72,7 +72,7 @@ Rectangle_hFB8lsQn1p = shape {
   top: 40px,
   width: 100%,
   height: spacing.spacing.heightG,
-  fill: {image: {ref: rally}},
+  fill: {image: {ref: bird}},
   type: .rect
 }
 

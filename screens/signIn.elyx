@@ -105,33 +105,7 @@ Frame_g9BtBzmGAd = frame {
   width: 100%,
   height: 140px,
   layout: {direction: .column, justify-content: .center, align-items: .stretch},
-  children: ButtonIconXXL80_Je37pucgIE
+  children: LogoS24_r03IuT0MJP
 }
 
-ButtonIconXXL80_Je37pucgIE = logo.ButtonIconXL48 {
-  name: "Button Icon XXL (80)",
-  left: 0px,
-  top: 0px,
-  width: 80px,
-  height: 80px,
-  overrides: [insert(Frame_qItbIagyzl, after = .nil), remove(logo.defaultsvg)]
-}
-
-Frame_qItbIagyzl = frame {
-  name: "Frame",
-  left: -323px,
-  top: -40px,
-  width: 503.75%,
-  layout: {direction: .column, justify-content: .center, align-items: .center},
-  children: defaultsvg_h1XJJcujWt
-}
-
-defaultsvg_h1XJJcujWt = icon {
-  name: "default.svg",
-  left: 0px,
-  top: 0px,
-  width: 80px,
-  height: 80px,
-  fill: Colors.colors.black20,
-  contents: logo.logo
-}
+LogoS24_r03IuT0MJP = logo.ButtonIconXL48 {name: "Button Icon XL (80)", left: 769px, top: 438px}
