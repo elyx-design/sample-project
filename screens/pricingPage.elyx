@@ -3,15 +3,16 @@ import "components/appTopBar.elyx" as appTopBar
 import "blocks/planCard.elyx" as planCard
 import "icons/24 pixels/dashboard.svg" as dashboard
 import "icons/24 pixels/processor.svg" as processor
+import "components/header.elyx" as header
 
-LiveEvent = frame {
-  name: "Live Event",
+PricingPage = frame {
+  name: "Pricing Page",
   left: 130.5px,
   top: 163px,
   width: 1415px,
   height: 925px,
   fill: colors.colors.black90,
-  children: Frame
+  children: [Frame, layer_o]
 }
 
 Frame = frame {
@@ -164,6 +165,21 @@ planCard_O = planCard.planCard_LTK7mFiyqR {
     contents: processor,
     left: 6px,
     top: 33px
+  }
+}
+
+layer_o = header.headerVariant {
+  name: "Header M (Center)",
+  left: 472.5px,
+  top: 121px,
+  width: .auto,
+
+  header.Description_7ZfScLC {
+    contents: "A subtitle for the pricing page saying why this is a worth product to pay"
+  }
+
+  header.Title_ZIlZq9y {
+    contents: "This is a text for the pricing page"
   }
 }
 

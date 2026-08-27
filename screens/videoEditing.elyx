@@ -1,0 +1,299 @@
+import "tokens/radius.elyx" as radius
+import "components/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as Colors
+import "blocks/videoPlayer.elyx" as videoPlayer
+import "components/slider.elyx" as slider
+import "components/timelineRuler.elyx" as timelineRuler
+import "components/videoTrack.elyx" as videoTrack
+import "components/appTopBar.elyx" as appTopBar
+import "components/mediaTrack.elyx" as mediaTrack
+import "images/background/sand.png" as sand
+
+Frame_a = frame {
+  name: "Frame",
+  left: -38px,
+  top: -2px,
+  width: 1540px,
+  height: 1074px,
+  fill: {image: {ref: sand}},
+  children: layer_6
+}
+
+layer_6 = cardBackground.cardBackground_zXouRyz {
+  name: "cardBackground (Solid)",
+  left: 238px,
+  top: 83px,
+  width: 66.5584%,
+  height: 778px,
+  padding-top: 0px,
+  padding-left: 0px,
+  padding-bottom: 0px,
+  padding-right: 0px,
+  layout.item-gap: 0,
+  overrides: [
+    insert(AppTopBar, after = .nil),
+    insert(VideoPlayer, after = AppTopBar),
+    insert(Timeline_v, after = VideoPlayer)
+  ]
+}
+
+Frame = frame {
+  name: "Frame",
+  left: 771px,
+  top: 1557px,
+  width: 941px,
+  height: 724px,
+  layout: {direction: .column, align-items: .center},
+  shadow: {
+    drop-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 5px),
+      blur-radius: 5px,
+      spread: 0px
+    }
+  },
+  corner-radius: radius.radius.xl,
+  corner-smoothing: 0.5,
+  children: [layer_u, layer, Timeline]
+}
+
+layer_u = appTopBar.AppTopBar_ePXqYpgrNQ {name: "App Top Bar", left: 0px, top: 17.5px, width: 100%}
+
+layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+  name: "Video Player",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
+
+  @use-variant(slider.SliderVariant)
+  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_q0ILkfiHMO.Slider_QNPbheVsY9 {
+    
+  }
+}
+
+Timeline = frame {
+  name: "Timeline",
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  fill: Colors.colors.black20,
+  padding-top: 8px,
+  children: [layer_j, Tracks]
+}
+
+layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
+  name: "Timeline Ruler",
+  left: 0px,
+  top: 442.5px,
+  width: 100%,
+  padding-left: 24px,
+  padding-right: 0px,
+  overrides: [
+    insert(module_1r90h9aJDj, after = timelineRuler.module_1r90h9aJDj),
+    insert(module_Kax64eo5pN, after = module_1r90h9aJDj),
+    insert(module_YWpHWOKFmU, after = module_Kax64eo5pN),
+    insert(module_x9fTjghOGA, after = module_YWpHWOKFmU),
+    insert(module_oAd49AzLxr, after = module_x9fTjghOGA),
+    insert(module_WhzRk9ByAT, after = module_oAd49AzLxr)
+  ],
+
+  timelineRuler.module_1r90h9aJDj.textLayer_odBUA3ZxP6 {
+    contents: "3"
+  }
+
+  timelineRuler.module_MT5vhsabW0.textLayer_odBUA3ZxP6 {
+    contents: "2"
+  }
+
+  timelineRuler.module_521cwUq48R.textLayer_odBUA3ZxP6 {
+    contents: "1"
+  }
+}
+
+Tracks = frame {
+  name: "Tracks",
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  children: [GroupedStack, layer_VS, VideoTrack]
+}
+
+GroupedStack = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {align-items: .center, item-gap: 8px},
+  padding-left: 80px,
+  children: [layer_f, VideoTrack_u]
+}
+
+layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
+  name: "Video Track",
+  left: 7941px,
+  top: 763px,
+  width: 273px
+}
+
+VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
+  name: "Video Track",
+  left: 7961px,
+  top: 783px,
+  width: 273px
+}
+
+layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
+  name: "Video Track",
+  left: 4241.5px,
+  top: 788px,
+  width: 477px,
+  fill[0].color: rgb(100%, 41.19%, 100%)
+}
+
+VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
+  name: "Video Track",
+  left: -13207.5px,
+  top: 808px,
+  width: 584px,
+  fill[0].color: rgb(0%, 98.76%, 100%)
+}
+
+module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 306.508px,
+  top: 555px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "8"
+  }
+}
+
+module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 197.2858px,
+  top: 535px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "6"
+  }
+}
+
+module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 133px,
+  top: 535px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "5"
+  }
+}
+
+module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 58px,
+  top: 535px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "4"
+  }
+}
+
+module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 217.2858px,
+  top: 555px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "7"
+  }
+}
+
+VideoPlayer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+  name: "Video Player",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
+
+  videoPlayer.PlaybackControl_ajqA0M9W3s {
+    corner-radius: 24px
+  }
+
+  @use-variant(slider.SliderVariant)
+  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_q0ILkfiHMO.Slider_QNPbheVsY9 {
+    
+  }
+}
+
+module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
+  name: "module",
+  left: 326.508px,
+  top: 575px,
+  width: 100%,
+
+  timelineRuler.textLayer_odBUA3ZxP6 {
+    contents: "9"
+  }
+}
+
+Timeline_v = frame {
+  name: "Timeline",
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  fill: Colors.colors.black20,
+  padding-top: 8px,
+  children: [TimelineRuler, Tracks_g]
+}
+
+TimelineRuler = timelineRuler.TimelineRuler_7EHDtEgmPY {
+  name: "Timeline Ruler",
+  left: 0px,
+  top: 442.5px
+}
+
+Tracks_g = frame {
+  name: "Tracks",
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  padding-top: 24px,
+  children: [GroupedStack_q, VideoTrack_K, VideoTrack_n]
+}
+
+GroupedStack_q = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {align-items: .center, item-gap: 8px},
+  padding-left: 80px,
+  children: [VideoTrack_v, VideoTrack_Z]
+}
+
+VideoTrack_v = videoTrack.VideoTrack_oikz8bvb8Z {
+  name: "Video Track",
+  left: 7941px,
+  top: 763px,
+  width: 29.9%
+}
+
+VideoTrack_Z = videoTrack.VideoTrack_oikz8bvb8Z {
+  name: "Video Track",
+  left: 7961px,
+  top: 783px,
+  width: 29.9%
+}
+
+VideoTrack_K = mediaTrack.VideoTrack_SXeZ1r8lmI {name: "Video Track", left: 4241.5px, top: 788px}
+
+VideoTrack_n = mediaTrack.VideoTrack_SXeZ1r8lmI {name: "Video Track", left: -13207.5px, top: 808px}
+
+AppTopBar = appTopBar.AppTopBar_ePXqYpgrNQ {
+  name: "App Top Bar",
+  left: 0px,
+  top: 17.5px,
+  width: 100%
+}

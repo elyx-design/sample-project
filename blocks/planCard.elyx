@@ -5,6 +5,7 @@ import "components/button.elyx" as button
 import "icons/24 pixels/direct-24.svg" as direct24
 import "icons/12 pixels/dot-12.svg" as dot12
 import "components/tag.elyx" as tag
+import "images/background/dots.jpg" as dots
 
 export planCard_LTK7mFiyqR = frame {
   name: "planCard",
@@ -13,7 +14,7 @@ export planCard_LTK7mFiyqR = frame {
   width: 100%,
   height: 425px,
   layout: {direction: .column, justify-content: .space-between, item-gap: 48px},
-  fill: Colors.colors.white100,
+  fill: {image: {ref: dots}},
   corner-radius: Radius.radius.l,
   padding: 24px,
   children: [GroupedStack_8RgNvW1K7p, layer_Z]
@@ -60,7 +61,7 @@ direct24svg_n2DErcwc3b = icon {
 PlanHeader_QvgQJ1C = frame {
   name: "Plan Header",
   width: 100%,
-  layout: {justify-content: .space-between, align-items: .center},
+  layout: {align-items: .center, item-gap: 16px},
   overflow: .visible,
   children: [PlanName_81UA3to, TagTransparent_vakzscXaBV]
 }

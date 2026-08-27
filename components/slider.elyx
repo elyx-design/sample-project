@@ -26,3 +26,27 @@ slider_vMtvuimTJT = shape {
   corner-radius: radius.radius.max,
   type: .rect
 }
+
+@variant("Slider thumb")
+SliderVariant = Slider_23xVCqJ85q {
+  left: 702px,
+  top: 591px,
+  overflow: .visible,
+  overrides: [insert(Ellipse, after = slider_vMtvuimTJT)],
+
+  slider_vMtvuimTJT {
+    corner-radius: [999px, 0px, 0px, 999px]
+  }
+}
+
+Ellipse = shape {
+  name: "Ellipse",
+  left: 56.98px,
+  top: -3.0789px,
+  width: 10px,
+  height: 10px,
+  fill: colors.colors.whiteAlpha50,
+  border: {color: colors.colors.whiteAlpha70, width: 2px},
+  filter: {type: .background-blur, radius: 40px},
+  type: .ellipse
+}

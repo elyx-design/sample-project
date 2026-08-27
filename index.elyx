@@ -340,15 +340,15 @@ layer_z = appTopBar.AppTopBar_ePXqYpgrNQ {
   width: 100%,
 
   appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_P2GwpzaI0X.button.trash20svg_W {
-    display: .hidden
+
   }
 
   appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_WGyKEBetto.button.trash20svg_W {
-    display: .hidden
+
   }
 
   appTopBar.GroupedStack_Fgx2a3Au78.GroupedStack_cwbemj4954.Icon_2vNLtoDNUm.button.trash20svg_W {
-    display: .hidden
+
   }
 
   appTopBar.Title_M1uSFbT37W {
@@ -356,7 +356,7 @@ layer_z = appTopBar.AppTopBar_ePXqYpgrNQ {
   }
 
   appTopBar.Title_M1uSFbT37W.NewAiChat_WzpulaBhIr {
-    contents: "RideCast"
+
   }
 }
 

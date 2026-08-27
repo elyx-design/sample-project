@@ -1,0 +1,90 @@
+import "tokens/spacing.elyx" as spacing
+import "icons/24 pixels/direct-24.svg" as direct24
+import "tokens/colors.elyx" as colors
+
+export VideoTrack_SXeZ1r8lmI = frame {
+  name: "Video Track",
+  left: 639.5px,
+  top: 518px,
+  width: 361px,
+  height: spacing.spacing.heightM,
+  layout: {justify-content: .space-between, align-items: .center},
+  fill: rgb(67.48%, 100%, 0%),
+  corner-radius: 8px,
+  padding: [4px, 0px],
+  children: [GroupedStack_md0TiVD0Q9, handle_n70EJtu1KB]
+}
+
+GroupedStack_md0TiVD0Q9 = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 4px},
+  children: [handle_tjiMVlGnIE, GroupedStack_8jIVI4WWex]
+}
+
+handle_tjiMVlGnIE = frame {
+  name: "handle",
+  left: 281px,
+  top: 24px,
+  width: 12px,
+  height: 100%,
+  layout: {justify-content: .center, align-items: .center},
+  children: Rectangle_Yf2tiQKCBX
+}
+
+Rectangle_Yf2tiQKCBX = shape {
+  name: "Rectangle",
+  left: 932px,
+  top: 532px,
+  width: 2px,
+  height: 16px,
+  fill: rgb(0%, 0%, 0%, 25%),
+  corner-radius: 999px,
+  type: .rect
+}
+
+GroupedStack_8jIVI4WWex = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 4px},
+  children: [direct24svg_srC1L2hQr9, Text_zUhul68a5E]
+}
+
+direct24svg_srC1L2hQr9 = icon {
+  name: "direct-24.svg",
+  left: 810px,
+  top: 522px,
+  width: 24px,
+  height: 24px,
+  fill: colors.colors.blackAlpha50,
+  contents: direct24
+}
+
+Text_zUhul68a5E = text {
+  name: "Track name",
+  left: 263px,
+  top: 553px,
+  fill: colors.colors.blackAlpha50,
+  contents: "Track name",
+  font-size: 12,
+  font-style: "SemiBold"
+}
+
+handle_n70EJtu1KB = frame {
+  name: "handle",
+  width: 12px,
+  height: 100%,
+  layout: {justify-content: .center, align-items: .center},
+  children: Rectangle_CHICkZNoS6
+}
+
+Rectangle_CHICkZNoS6 = shape {
+  name: "Rectangle",
+  left: 932px,
+  top: 532px,
+  width: 2px,
+  height: 16px,
+  fill: rgb(0%, 0%, 0%, 25%),
+  corner-radius: 999px,
+  type: .rect
+}

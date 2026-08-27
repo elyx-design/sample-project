@@ -16,5 +16,7 @@ export colors = tokens {
   blackAlpha50: rgb(0%, 0%, 0%, 50%),
   whiteAlpha70: rgb(100%, 100%, 100%, 70%),
   whiteAlpha50: rgb(100%, 100%, 100%, 50%),
-  blackAlpha05: rgb(0%, 0%, 0%, 5%)
+  blackAlpha05: rgb(0%, 0%, 0%, 5%),
+  whiteAlpha25: rgb(100%, 100%, 100%, 25%),
+  whiteAlpha10: rgb(100%, 100%, 100%, 10%)
 }
