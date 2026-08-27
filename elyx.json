@@ -1,23 +1,12 @@
 {
-  "colorSpace": "sRGB",
-  "colorDepth": "RGBA8",
-  "colorEncoding": "rgb",
-  "paths": {
-    "fontsDir": "resources/fonts",
-    "imagesDir": "resources/images"
-  },
-  "lookupPaths": {
-    "fonts": [
-      "fonts"
-    ],
-    "images": [
-      "icons"
-    ]
+  "color": {
+    "space": "sRGB",
+    "depth": "RGBA8",
+    "encoding": "rgb"
   },
   "git": {
     "flow": "relaxed"
   },
-  "ignorePaths": [],
   "defaults": {
     "text": {
       "font": {
@@ -27,5 +16,22 @@
       "fontSize": 14,
       "fontWeight": 400
     }
+  },
+  "assets": {
+    "fonts": {
+      "writePath": "resources/fonts",
+      "additionalSourcePaths": [
+        "fonts"
+      ]
+    },
+    "images": {
+      "writePath": "resources/images",
+      "additionalSourcePaths": [
+        "icons"
+      ]
+    }
+  },
+  "files": {
+    "exclude": []
   }
 }
