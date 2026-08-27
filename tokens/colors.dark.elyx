@@ -1,0 +1,21 @@
+import "tokens/colors.elyx" as colors
+
+@context(theme="dark")
+__file__
+
+export colors_C = colors.colors {
+  white100: rgb(8.61%, 8.61%, 8.61%),
+  blackAlpha25: rgb(100%, 100%, 100%, 25%),
+  black20: .white,
+  blackAlpha70: rgb(100%, 100%, 100%, 70%),
+  black90: rgb(17.92%, 17.92%, 17.92%),
+  black40: rgb(74.32%, 74.32%, 74.32%),
+  black30: rgb(87.0588%, 87.0588%, 87.0588%),
+  black80: rgb(28.06%, 28.06%, 28.06%),
+  black95: rgb(13.73%, 13.73%, 13.73%),
+  blackAlpha10: rgb(100%, 100%, 100%, 10%),
+  blackAlpha50: rgb(100%, 100%, 100%, 50%),
+  whiteAlpha70: rgb(0%, 0%, 0%, 70%),
+  whiteAlpha50: rgb(0%, 0%, 0%, 50%),
+  blackAlpha05: rgb(100%, 100%, 100%, 5%)
+}
