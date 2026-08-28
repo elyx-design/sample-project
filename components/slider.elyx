@@ -25,7 +25,7 @@ track = shape {
   type: .rect
 }
 
-@variant("Slider thumb")
+@variant
 thumb = base {
   left: 702px,
   top: 591px,

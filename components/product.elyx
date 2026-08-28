@@ -23,28 +23,28 @@ coverOne = shape {
   type: .rect
 }
 
-@variant("Product 5")
+@variant
 productFive = product {
   left: 1162px,
   top: 494px,
   overrides: [insert(coverFive, after = .nil), remove(coverOne)]
 }
 
-@variant("Product 4")
+@variant
 productFour = product {
   left: 976.71px,
   top: 494px,
   overrides: [insert(coverFour, after = .nil), remove(coverOne)]
 }
 
-@variant("Product 3")
+@variant
 productThree = product {
   left: 780px,
   top: 494px,
   overrides: [insert(coverThree, after = .nil), remove(coverOne)]
 }
 
-@variant("Product 2")
+@variant
 productTwo = product {
   left: 594.71px,
   top: 494px,

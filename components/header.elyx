@@ -28,7 +28,7 @@ mediumSubtitle = text {
   line-height: 1.5
 }
 
-@variant("Header M (Center)")
+@variant
 mediumCenter = mediumLeft {
   left: 20px,
   top: 117px,
@@ -71,7 +71,7 @@ smallSubtitle = text {
   font-style: "Regular"
 }
 
-@variant("Header S (Center)")
+@variant
 smallCenter = smallLeft {
   left: -267.28px,
   top: 113px,
@@ -113,7 +113,7 @@ largeSubtitle = text {
   line-height: 1.5
 }
 
-@variant("Header M (Left) Variant")
+@variant
 largeCenter = largeLeft {
   left: 287.708px,
   top: 166.3172px,

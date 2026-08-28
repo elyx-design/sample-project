@@ -34,7 +34,7 @@ export sidebar = cardBackground.base {
   overrides: [insert(Content, after = .nil), insert(CardUpgrade, after = Content)]
 }
 
-@variant("sidebar (Contracted)")
+@variant
 compact = frame {
   left: 539.2797px,
   top: 0px,
@@ -136,7 +136,7 @@ text2 = text {
   font-style: "Regular"
 }
 
-@variant("Frame Variant")
+@variant
 selected = sideBarMenu {
   left: -354px,
   top: 76px,

@@ -44,7 +44,7 @@ label = text {
   font-style: "SemiBold"
 }
 
-@variant("Menu Variant")
+@variant
 mutedMenu = menu {
   left: 191px,
   top: 521px,
@@ -54,7 +54,7 @@ mutedMenu = menu {
   }
 }
 
-@variant("Logged in")
+@variant
 loggedInHeader = siteHeader {
   left: 512px,
   top: 572px,
@@ -65,7 +65,7 @@ loggedInHeader = siteHeader {
   ]
 }
 
-@variant("Menu (icon)")
+@variant
 iconMenu = menu {
   left: 275px,
   top: 456px,
@@ -73,7 +73,7 @@ iconMenu = menu {
   overrides: [insert(chevron, after = label)]
 }
 
-@variant("Menu Variant")
+@variant
 mutedIconMenu = menu {
   left: 275px,
   top: 521.6479px,
@@ -206,7 +206,7 @@ layer_j = iconMenu {
 
 layer = avatar.smallPhoto {left: 1255px, top: 577px}
 
-@variant("No background")
+@variant
 SiteHeaderVariant = siteHeader {
   left: 512px,
   top: 688px,
@@ -324,7 +324,7 @@ Primary = button.mediumPrimary {
   }
 }
 
-@variant("Logged in")
+@variant
 SiteHeaderVariant_R = siteHeader {
   left: 512px,
   top: 804px,

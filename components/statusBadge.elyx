@@ -23,7 +23,7 @@ label = text {
   font-style: "Medium"
 }
 
-@variant("statusBadge Variant")
+@variant
 dark = base {
   left: 461px,
   top: 76px,

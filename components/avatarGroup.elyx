@@ -88,7 +88,7 @@ baseFirstPhoto = userAvatar.smallPhoto {
   }
 }
 
-@variant("profileGroup Label Right")
+@variant
 labelRight = base {
   left: 484px,
   top: 595px,
@@ -101,7 +101,7 @@ labelRight = base {
   ]
 }
 
-@variant("profileGroup Label bottom")
+@variant
 labelBottom = base {
   left: 487.3293px,
   top: 679px,
@@ -227,7 +227,7 @@ bottomCountText = text {
   contents: "+28"
 }
 
-@variant("profileGroup Variant")
+@variant
 labelTop = base {
   left: 484px,
   top: 788px,

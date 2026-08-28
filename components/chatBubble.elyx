@@ -41,7 +41,7 @@ message = frame {
 
 messageText = text {left: 0px, top: 0px, fill: .black, contents: "Chat text"}
 
-@variant(User)
+@variant
 user = base {
   left: 602px,
   top: 560px,

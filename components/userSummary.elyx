@@ -37,7 +37,7 @@ HeaderSLeft_v1iI8KgpFk = header.smallLeft {
   }
 }
 
-@variant("User Summary S (Center)")
+@variant
 UserSummarySVariant = UserSummaryS_clM0CpDw4i {
   left: 140px,
   top: -18px,
@@ -72,7 +72,7 @@ HeaderMLeft_U02Hb8hK7v = header.mediumLeft {
   }
 }
 
-@variant("User Summary M Variant")
+@variant
 UserSummaryMVariant = UserSummaryM_3TgjJsJRgL {
   left: 229px,
   top: 192px,

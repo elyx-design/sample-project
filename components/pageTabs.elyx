@@ -56,7 +56,7 @@ label = text {
   font-style: "Medium"
 }
 
-@variant("Profile Tab Variant")
+@variant
 inactiveTab = selectedTab {
   left: 154px,
   top: 217px,

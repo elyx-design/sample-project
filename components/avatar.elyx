@@ -49,10 +49,10 @@ export status = shape {
   type: .ellipse
 }
 
-@variant(Away)
+@variant
 statusAway = status {left: -58px, top: -72px, fill[0].color: rgb(100%, 65.3497%, 0%)}
 
-@variant("Avatar S (Photo)")
+@variant
 smallPhoto = small {
   left: -40px,
   top: 10px,
@@ -91,7 +91,7 @@ mediumInitials = text {
 
 mediumStatus = status {left: 56.85px, top: 56.83px, ignore-stack: .true, border[0].width: 2px}
 
-@variant("Avatar M Variant")
+@variant
 mediumPhoto = medium {
   left: -4px,
   top: 94px,

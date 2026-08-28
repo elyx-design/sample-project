@@ -36,5 +36,5 @@ label = text {
   font-style: "Regular"
 }
 
-@variant(Selected)
+@variant
 selected = base {left: 862px, top: 679px, fill[0].color: Colors.colors.black95}

@@ -31,7 +31,7 @@ label = text {
   font-style: "Regular"
 }
 
-@variant(Placeholder)
+@variant
 placeholder = base {
   left: 869px,
   top: 850px,
@@ -41,7 +41,7 @@ placeholder = base {
   }
 }
 
-@variant(Focussed)
+@variant
 focused = base {
   left: 869px,
   top: 930px,
@@ -50,7 +50,7 @@ focused = base {
   border[0].width: 1.5px
 }
 
-@variant(Error)
+@variant
 error = base {
   left: 869px,
   top: 1010px,
@@ -63,7 +63,7 @@ error = base {
   }
 }
 
-@variant("Text Field (Icon)")
+@variant
 withIcon = base {
   left: 989.73px,
   top: 770px,
@@ -73,7 +73,7 @@ withIcon = base {
   overrides: [insert(defaultIcon, after = .nil)]
 }
 
-@variant("Placeholder (Icon)")
+@variant
 iconPlaceholder = base {
   left: 988.65px,
   top: 850px,
@@ -105,7 +105,7 @@ defaultIcon = icon {
   contents: calendar24
 }
 
-@variant("Focused (Icon)")
+@variant
 iconFocused = base {
   left: 987.9291px,
   top: 930px,
@@ -117,7 +117,7 @@ iconFocused = base {
   overrides: [insert(focusedIcon, after = .nil)]
 }
 
-@variant("Error (Icon)")
+@variant
 iconError = base {
   left: 988.2896px,
   top: 1010px,
@@ -151,7 +151,7 @@ errorIcon = icon {
   contents: calendar24
 }
 
-@variant("Text Field (button)")
+@variant
 withButton = base {
   left: 1139px,
   top: 770px,
@@ -160,7 +160,7 @@ withButton = base {
   overrides: [insert(submitButton, after = label)]
 }
 
-@variant("Text Field, Placeholder (button)")
+@variant
 buttonPlaceholder = base {
   left: 1142.4px,
   top: 850px,

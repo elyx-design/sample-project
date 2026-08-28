@@ -58,7 +58,7 @@ label = text {
   font-style: "Medium"
 }
 
-@variant("Inactive (M)")
+@variant
 mediumInactive = mediumSelected {
   left: 623px,
   top: 812px,
@@ -70,7 +70,7 @@ mediumInactive = mediumSelected {
   }
 }
 
-@variant("Segmented Control S")
+@variant
 small = medium {
   left: 913px,
   top: 656px,
@@ -86,7 +86,7 @@ small = medium {
   middleSegment {}
 }
 
-@variant("Inactive (S)")
+@variant
 smallInactive = mediumSelected {
   left: 726px,
   top: 812px,
@@ -98,7 +98,7 @@ smallInactive = mediumSelected {
   shadow[0]: .nil
 }
 
-@variant("Selected (S)")
+@variant
 smallSelected = mediumSelected {
   left: 726px,
   top: 736px,

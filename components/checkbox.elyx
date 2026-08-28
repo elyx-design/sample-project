@@ -42,7 +42,7 @@ knob = frame {
   corner-radius: Radius.radius.max
 }
 
-@variant(Off)
+@variant
 off = on {
   left: 839px,
   top: 674px,
@@ -50,5 +50,5 @@ off = on {
   layout.justify-content: .start
 }
 
-@variant(Mixed)
+@variant
 mixed = on {left: 919px, top: 674px, layout.justify-content: .center}

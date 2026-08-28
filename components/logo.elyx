@@ -20,14 +20,14 @@ smallArtwork = shape {
   type: .rect
 }
 
-@variant("Logo X (48)")
+@variant
 large = small {
   left: 490px,
   top: 519px,
   overrides: [insert(largeArtwork, after = .nil), remove(smallArtwork)]
 }
 
-@variant("Button Icon XL (80)")
+@variant
 extraLarge = small {
   left: 636px,
   top: 519px,
@@ -52,7 +52,7 @@ largeArtwork = shape {
   type: .rect
 }
 
-@variant("Logo M (36)")
+@variant
 medium = small {
   left: 409px,
   top: 519px,
