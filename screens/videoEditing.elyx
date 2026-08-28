@@ -18,7 +18,7 @@ import "blocks/sidebar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 
-module_oAd49AzLxr = timelineRuler.timeMarker {
+marker8 = timelineRuler.timeMarker {
   name: "Time Marker 8",
   left: 306.508px,
   top: 555px,
@@ -29,7 +29,7 @@ module_oAd49AzLxr = timelineRuler.timeMarker {
   }
 }
 
-module_YWpHWOKFmU = timelineRuler.timeMarker {
+marker6 = timelineRuler.timeMarker {
   name: "Time Marker 6",
   left: 197.2858px,
   top: 535px,
@@ -40,7 +40,7 @@ module_YWpHWOKFmU = timelineRuler.timeMarker {
   }
 }
 
-module_Kax64eo5pN = timelineRuler.timeMarker {
+marker5 = timelineRuler.timeMarker {
   name: "Time Marker 5",
   left: 133px,
   top: 535px,
@@ -51,7 +51,7 @@ module_Kax64eo5pN = timelineRuler.timeMarker {
   }
 }
 
-module_1r90h9aJDj = timelineRuler.timeMarker {
+marker4 = timelineRuler.timeMarker {
   name: "Time Marker 4",
   left: 58px,
   top: 535px,
@@ -62,7 +62,7 @@ module_1r90h9aJDj = timelineRuler.timeMarker {
   }
 }
 
-module_x9fTjghOGA = timelineRuler.timeMarker {
+marker7 = timelineRuler.timeMarker {
   name: "Time Marker 7",
   left: 217.2858px,
   top: 555px,
@@ -73,7 +73,7 @@ module_x9fTjghOGA = timelineRuler.timeMarker {
   }
 }
 
-module_WhzRk9ByAT = timelineRuler.timeMarker {
+marker9 = timelineRuler.timeMarker {
   name: "Time Marker 9",
   left: 326.508px,
   top: 575px,
@@ -84,17 +84,17 @@ module_WhzRk9ByAT = timelineRuler.timeMarker {
   }
 }
 
-VideoEditing = frame {
+videoEditing = frame {
   name: "Video Editing",
   left: -689px,
   top: -230px,
   width: 1184px,
   height: 701px,
   layout: {justify-content: .center},
-  children: [layer_L, Frame]
+  children: [editingSidebar, workspace]
 }
 
-layer_L = sidebar.compact {
+editingSidebar = sidebar.compact {
   name: "Editing Sidebar",
   left: 0px,
   top: 0px,
@@ -105,7 +105,7 @@ layer_L = sidebar.compact {
   }
 }
 
-Frame = frame {
+workspace = frame {
   name: "Editor Workspace",
   left: 0px,
   top: 0px,
@@ -122,20 +122,20 @@ Frame = frame {
   },
   corner-radius: 0px,
   corner-smoothing: 0.5,
-  children: [Video, Timeline]
+  children: [preview, timeline]
 }
 
-Video = frame {
+preview = frame {
   name: "Video",
   left: 0px,
   top: 0px,
   height: 60%,
   layout: {justify-content: .end, align-items: .end, item-gap: 2px},
   fill: Colors.colors.black20,
-  children: [layer, layer_E]
+  children: [player, gallery]
 }
 
-layer = videoPlayer.videoPlayer {
+player = videoPlayer.videoPlayer {
   name: "Video Player",
   left: -3772px,
   top: 0px,
@@ -168,7 +168,7 @@ layer = videoPlayer.videoPlayer {
   }
 }
 
-layer_E = imageGallery.imageGallery {
+gallery = imageGallery.imageGallery {
   name: "Image Gallery",
   left: 20px,
   top: 0px,
@@ -252,17 +252,17 @@ layer_E = imageGallery.imageGallery {
   }
 }
 
-Timeline = frame {
+timeline = frame {
   name: "Timeline",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 8px},
   fill: Colors.colors.black20,
   padding-top: 8px,
-  children: [layer_j, Tracks]
+  children: [ruler, tracks]
 }
 
-layer_j = timelineRuler.timelineRuler {
+ruler = timelineRuler.timelineRuler {
   name: "Timeline Ruler",
   left: 0px,
   top: 442.5px,
@@ -271,13 +271,13 @@ layer_j = timelineRuler.timelineRuler {
   padding-left: 24px,
   padding-right: 0px,
   overrides: [
-    insert(module_1r90h9aJDj, after = timelineRuler.marker3),
-    insert(module_Kax64eo5pN, after = module_1r90h9aJDj),
-    insert(module_YWpHWOKFmU, after = module_Kax64eo5pN),
-    insert(module_x9fTjghOGA, after = module_YWpHWOKFmU),
-    insert(module_oAd49AzLxr, after = module_x9fTjghOGA),
-    insert(module_WhzRk9ByAT, after = module_oAd49AzLxr),
-    insert(layer_O, after = module_WhzRk9ByAT)
+    insert(marker4, after = timelineRuler.marker3),
+    insert(marker5, after = marker4),
+    insert(marker6, after = marker5),
+    insert(marker7, after = marker6),
+    insert(marker8, after = marker7),
+    insert(marker9, after = marker8),
+    insert(timelinePlayHead, after = marker9)
   ],
 
   timelineRuler.marker3.label {
@@ -293,24 +293,24 @@ layer_j = timelineRuler.timelineRuler {
   }
 }
 
-Tracks = frame {
+tracks = frame {
   name: "Tracks",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 8px},
   padding: [24px, 0px],
-  children: [GroupedStack, layer_VS, VideoTrack]
+  children: [videoTrackRow, audioTrack, titleTrack]
 }
 
-GroupedStack = frame {
+videoTrackRow = frame {
   name: "Video Track Row",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
   padding-left: 80px,
-  children: [layer_f, VideoTrack_u]
+  children: [birdTrack, thumbnailTrack]
 }
 
-layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
+birdTrack = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7941px,
   top: 763px,
@@ -329,7 +329,7 @@ layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
   }
 }
 
-VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
+thumbnailTrack = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7961px,
   top: 783px,
@@ -348,7 +348,7 @@ VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
   }
 }
 
-layer_VS = mediaTrack.track {
+audioTrack = mediaTrack.track {
   name: "Audio Track",
   left: 4241.5px,
   top: 788px,
@@ -364,7 +364,7 @@ layer_VS = mediaTrack.track {
   }
 }
 
-VideoTrack = mediaTrack.track {
+titleTrack = mediaTrack.track {
   name: "Title Track",
   left: -13207.5px,
   top: 808px,
@@ -380,7 +380,7 @@ VideoTrack = mediaTrack.track {
   }
 }
 
-layer_O = playHead.playHead {
+timelinePlayHead = playHead.playHead {
   name: "Play Head",
   left: 385px,
   top: -5px,
