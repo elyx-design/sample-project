@@ -170,86 +170,86 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   }
 }
 
-layer_E = imageGallery.ImageGallery_GtwQ9FgVmL {
+layer_E = imageGallery.imageGallery {
   name: "Image Gallery",
   left: 20px,
   top: 0px,
   width: 40%,
   height: 100%,
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.imageName {
+  imageGallery.bottomRow.bottomRight.thumbnailImage.imageName {
     contents: "Red-flanked Bluetail"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.actions.favoriteIcon {
+  imageGallery.bottomRow.bottomRight.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z {
+  imageGallery.bottomRow.bottomCenter {
     fill[0].image.ref: thumb02
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.imageName {
+  imageGallery.bottomRow.bottomCenter.thumbnailImage.imageName {
     contents: "Orange Bird"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.actions.favoriteIcon {
+  imageGallery.bottomRow.bottomCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.imageName {
+  imageGallery.bottomRow.bottomLeft.thumbnailImage.imageName {
     contents: "Great Horned Owl"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.actions.favoriteIcon {
+  imageGallery.bottomRow.bottomLeft.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.imageName {
+  imageGallery.middleRow.middleRight.thumbnailImage.imageName {
     contents: "Blue-and-yellow Macaw"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.actions.favoriteIcon {
+  imageGallery.middleRow.middleRight.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.imageName {
+  imageGallery.middleRow.middleCenter.thumbnailImage.imageName {
     contents: "Bald Eagle.wave"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.actions.favoriteIcon {
+  imageGallery.middleRow.middleCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.imageName {
+  imageGallery.middleRow.middleLeft.thumbnailImage.imageName {
     contents: "Northern Cardinal\nBody Red"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.actions.favoriteIcon {
+  imageGallery.middleRow.middleLeft.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.imageName {
+  imageGallery.topRow.topRight.thumbnailImage.imageName {
     contents: "Toco Toucan"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.actions.favoriteIcon {
+  imageGallery.topRow.topRight.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.imageName {
+  imageGallery.topRow.topCenter.thumbnailImage.imageName {
     contents: "Eurasian Blue"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.actions.favoriteIcon {
+  imageGallery.topRow.topCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.imageName {
+  imageGallery.topRow.topLeft.thumbnailImage.imageName {
     contents: "Lilac"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.actions.favoriteIcon {
+  imageGallery.topRow.topLeft.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 }

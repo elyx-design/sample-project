@@ -7,27 +7,27 @@ import "images/thumbnails/thumb06.jpg" as thumb06
 import "images/thumbnails/thumb08.jpg" as thumb08
 import "images/thumbnails/thumb09.jpg" as thumb09
 
-export ImageGallery_GtwQ9FgVmL = frame {
+export imageGallery = frame {
   name: "Image Gallery",
   left: 438px,
   top: 310px,
   width: 585px,
   height: 444px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 2px},
-  children: [Frame_WudjtipEop, Frame_gKgiUol8gH, Frame_PuQDZckL9T]
+  children: [topRow, middleRow, bottomRow]
 }
 
-Frame_WudjtipEop = frame {
+topRow = frame {
   name: "Top Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   layout: {justify-content: .center, align-items: .center, item-gap: 2px},
-  children: [ThumbnailImage_RRjJxUn79S, ThumbnailImage_lRArBZphTR, ThumbnailImage_IJc7gbbjIi]
+  children: [topLeft, topCenter, topRight]
 }
 
-ThumbnailImage_RRjJxUn79S = thumbnailImage.thumbnailImage {
+topLeft = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -36,7 +36,7 @@ ThumbnailImage_RRjJxUn79S = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb08
 }
 
-ThumbnailImage_lRArBZphTR = thumbnailImage.thumbnailImage {
+topCenter = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -44,7 +44,7 @@ ThumbnailImage_lRArBZphTR = thumbnailImage.thumbnailImage {
   height: 100%
 }
 
-ThumbnailImage_IJc7gbbjIi = thumbnailImage.thumbnailImage {
+topRight = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -53,17 +53,17 @@ ThumbnailImage_IJc7gbbjIi = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb03
 }
 
-Frame_gKgiUol8gH = frame {
+middleRow = frame {
   name: "Middle Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   layout: {justify-content: .center, align-items: .center, item-gap: 2px},
-  children: [ThumbnailImage_rhdmA2yFU8, ThumbnailImage_Tax0BI0J9n, ThumbnailImage_wvYu3x1xqi]
+  children: [middleLeft, middleCenter, middleRight]
 }
 
-ThumbnailImage_rhdmA2yFU8 = thumbnailImage.thumbnailImage {
+middleLeft = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -72,7 +72,7 @@ ThumbnailImage_rhdmA2yFU8 = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb04
 }
 
-ThumbnailImage_Tax0BI0J9n = thumbnailImage.thumbnailImage {
+middleCenter = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -81,7 +81,7 @@ ThumbnailImage_Tax0BI0J9n = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb05
 }
 
-ThumbnailImage_wvYu3x1xqi = thumbnailImage.thumbnailImage {
+middleRight = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -90,17 +90,17 @@ ThumbnailImage_wvYu3x1xqi = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb06
 }
 
-Frame_PuQDZckL9T = frame {
+bottomRow = frame {
   name: "Bottom Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   layout: {justify-content: .center, align-items: .center, item-gap: 2px},
-  children: [ThumbnailImage_ojWbhgsSeP, ThumbnailImage_pOxPFqic6Z, ThumbnailImage_W3IdzAi9Kc]
+  children: [bottomLeft, bottomCenter, bottomRight]
 }
 
-ThumbnailImage_ojWbhgsSeP = thumbnailImage.thumbnailImage {
+bottomLeft = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -109,7 +109,7 @@ ThumbnailImage_ojWbhgsSeP = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb07
 }
 
-ThumbnailImage_pOxPFqic6Z = thumbnailImage.thumbnailImage {
+bottomCenter = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -118,7 +118,7 @@ ThumbnailImage_pOxPFqic6Z = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb05
 }
 
-ThumbnailImage_W3IdzAi9Kc = thumbnailImage.thumbnailImage {
+bottomRight = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
