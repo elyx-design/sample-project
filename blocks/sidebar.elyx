@@ -17,7 +17,7 @@ import "icons/24 pixels/history-24.svg" as history24
 import "components/logo.elyx" as logo
 
 export sidebar_QjenIug = frame {
-  name: "sidebar",
+  name: "Account Sidebar",
   left: 0px,
   top: 0px,
   width: .auto,
@@ -37,7 +37,7 @@ GroupedStack_flp7iRt = frame {
 }
 
 sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {
-  name: "sidebarHeader",
+  name: "Workspace Header",
   left: 0px,
   top: 16px,
   width: 100%
@@ -109,7 +109,7 @@ sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
 userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {name: "User Summary", left: 0px, top: 1241px}
 
 export sideBar_xy3AK6H6s8 = cardBackground.cardBackgroundSolidVariant_o {
-  name: "sideBar",
+  name: "App Sidebar",
   left: 297px,
   top: -7px,
   width: .auto,
@@ -125,7 +125,7 @@ export sideBar_xy3AK6H6s8 = cardBackground.cardBackgroundSolidVariant_o {
 }
 
 Menu_kyNuR0df4b = frame {
-  name: "Menu",
+  name: "App Navigation",
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
   overflow: .visible,
@@ -223,7 +223,7 @@ sidebarItem_Gv85kN8ZjX = sidebarItem.sidebarItem_GirPBI3vMI {
 }
 
 sidebarHeader_ENiocaFFtM = sidebarHeader2.sidebarHeader_XE3kaHH {
-  name: "sidebarHeader",
+  name: "Workspace Header",
   left: 280px,
   top: -16px
 }

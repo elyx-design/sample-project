@@ -77,7 +77,7 @@ Icon_650qPmwIPa = button.ButtonS28Variant_7 {
 }
 
 chevrondown12svg_WAhL2Xn3jT = icon {
-  name: "chevron-down-12.svg",
+  name: "Pointer Menu Chevron",
   left: 549px,
   top: 493px,
   width: 12px,
@@ -105,7 +105,7 @@ Icon_HMJYV6zIOg = button.ButtonS28Variant_7 {
 }
 
 chevrondown12svg_3TeWdYmPSh = icon {
-  name: "chevron-down-12.svg",
+  name: "Shape Menu Chevron",
   left: 549px,
   top: 493px,
   width: 12px,

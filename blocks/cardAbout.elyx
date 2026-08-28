@@ -21,7 +21,7 @@ export profileCard_vlvneaI = cardBackground.cardBackgroundSolidVariant {
 }
 
 layer_QyZ45sYn9t = frame {
-  name: "text",
+  name: "Profile Content",
   left: 0px,
   top: 0px,
   width: 100%,

@@ -2,7 +2,7 @@ import "blocks/headerWeb.elyx" as headerWeb
 import "tokens/colors.elyx" as colors
 
 export SignInScreen_gw2k2sYoRZ = frame {
-  name: "Sign In Screen",
+  name: "Web Page",
   left: 197px,
   top: 145.5px,
   width: 1580px,

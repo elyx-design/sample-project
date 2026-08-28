@@ -23,7 +23,7 @@ export AppTopBar_ePXqYpgrNQ = frame {
 }
 
 Title_M1uSFbT37W = frame {
-  name: "Title",
+  name: "File Selector",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -42,7 +42,7 @@ NewAiChat_WzpulaBhIr = text {
 }
 
 chevrondown12svg_eRLZPmBMpe = icon {
-  name: "chevron-down-12.svg",
+  name: "File Menu Chevron",
   left: 789px,
   top: 545px,
   width: 12px,
@@ -51,7 +51,7 @@ chevrondown12svg_eRLZPmBMpe = icon {
 }
 
 GroupedStack_5wzShorcNs = frame {
-  name: "Right",
+  name: "Top Bar Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [GroupedStack_XpqkU0zEE8, Primary_RO7ljR3X40]
@@ -71,7 +71,7 @@ Icon_9mAHYYe2nV = button.ButtonS28Variant_7 {name: "Icon", left: 307px, top: 41p
 Icon_fMEe296VCC = button.ButtonS28Variant_7 {name: "Icon", left: 335px, top: 41px}
 
 Primary_RO7ljR3X40 = button.PrimaryS_bwovCsQN9N {
-  name: "Primary",
+  name: "Primary Button",
   left: 606px,
   top: 542px,
   width: 62px

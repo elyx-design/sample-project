@@ -20,7 +20,7 @@ export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
   overrides: [
-  
+
   ]
 }
 
@@ -87,6 +87,7 @@ GroupedStack_s6neGdYpQr = frame {
 }
 
 Menu_ufNhOkr09F = Menu_NptvsRIaJB {
+  name: "Sign In Link",
   left: 1101px,
   top: 505px,
 
@@ -96,6 +97,7 @@ Menu_ufNhOkr09F = Menu_NptvsRIaJB {
 }
 
 PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
+  name: "Join the Circle Button",
   left: 867px,
   top: 498px,
 
@@ -105,7 +107,7 @@ PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
 }
 
 chevrondown12svg_p = icon {
-  name: "chevron-down-12.svg",
+  name: "Menu Chevron",
   left: 278px,
   top: 460px,
   width: 12px,
@@ -115,7 +117,7 @@ chevrondown12svg_p = icon {
 }
 
 chevrondown12svg = icon {
-  name: "chevron-down-12.svg",
+  name: "Menu Chevron",
   left: 297px,
   top: 460px,
   width: 12px,
@@ -140,6 +142,7 @@ layer_IZeMbQZvJt = frame {
 }
 
 MenuVariant_0TK5hfhPhi = MenuVariant2 {
+  name: "Product Menu",
   left: 0px,
   top: 0px,
   height: 17px,
@@ -150,6 +153,7 @@ MenuVariant_0TK5hfhPhi = MenuVariant2 {
 }
 
 MenuVariant_sjfcG4QdSJ = MenuVariant {
+  name: "Pricing Link",
   left: 58px,
   top: 0px,
   height: 17px,
@@ -160,6 +164,7 @@ MenuVariant_sjfcG4QdSJ = MenuVariant {
 }
 
 MenuVariant_1tlOsP5uEb = MenuVariant {
+  name: "Blog Link",
   left: 78px,
   top: 20px,
   height: 17px,
@@ -170,6 +175,7 @@ MenuVariant_1tlOsP5uEb = MenuVariant {
 }
 
 MenuVariant_CWSCQz5wR7 = MenuVariant {
+  name: "Help Center Link",
   left: 128px,
   top: 20px,
   height: 17px,

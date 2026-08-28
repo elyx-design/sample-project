@@ -36,7 +36,7 @@ layer = userSummary.UserSummaryM_3TgjJsJRgL {
 }
 
 GroupedStack_Xn7zNLiGaY = frame {
-  name: "Footer",
+  name: "Social Footer",
   width: 100%,
   height: .auto,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
@@ -62,7 +62,7 @@ Primary_74gHxo0W69 = button.ButtonVariant_V {
 }
 
 GroupedStack_1gmgOy2Wt0 = frame {
-  name: "Card info",
+  name: "Card Content",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .end, item-gap: 24px},
@@ -108,7 +108,7 @@ Close_EIAQCGPEGW = button.ButtonS28Variant_X {
 }
 
 GroupedStack_LpEL83fLPt = frame {
-  name: "Info",
+  name: "Profile Info",
   width: 100%,
   height: 100%,
   layout: {
@@ -121,14 +121,14 @@ GroupedStack_LpEL83fLPt = frame {
 }
 
 Top_wPxvHpn4An = frame {
-  name: "Top",
+  name: "Profile Summary",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 16px},
   children: [UserSummaryMVariant_4jTKstXxp9, Text_wKxCFaXkez]
 }
 
 UserSummaryMVariant_4jTKstXxp9 = userSummary.UserSummaryMVariant {
-  name: "User Summary M Variant",
+  name: "Profile Identity",
   left: 0px,
   top: 160px,
   width: 100%,
@@ -151,7 +151,7 @@ Text_wKxCFaXkez = text {
 }
 
 Numbers_2h6p4T8WDv = frame {
-  name: "Numbers",
+  name: "Profile Stats",
   width: 100%,
   layout: {justify-content: .space-evenly, align-items: .center, item-gap: 24px},
   children: [Frame_idU9ivzkve, Frame_f19XiX2clb, Frame_JLl0cA51NO]
@@ -166,7 +166,7 @@ Frame_idU9ivzkve = frame {
 }
 
 textLayer_XiDxtu7sg1 = text {
-  name: "169",
+  name: "Following Count",
   left: 16.5px,
   top: 0px,
   fill: .black,
@@ -177,7 +177,7 @@ textLayer_XiDxtu7sg1 = text {
 }
 
 Following_utufdejOHW = text {
-  name: "Following",
+  name: "Following Label",
   left: 0px,
   top: 18px,
   fill: .black,
@@ -195,7 +195,7 @@ Frame_f19XiX2clb = frame {
 }
 
 textLayer_gJs8FKmZ0L = text {
-  name: "169",
+  name: "Follower Count",
   left: 16.5px,
   top: 0px,
   fill: .black,
@@ -206,7 +206,7 @@ textLayer_gJs8FKmZ0L = text {
 }
 
 Following_ybbl7Cjm5f = text {
-  name: "Following",
+  name: "Followers Label",
   left: 0px,
   top: 18px,
   fill: .black,
@@ -224,7 +224,7 @@ Frame_JLl0cA51NO = frame {
 }
 
 textLayer_fIJ2S3H2rj = text {
-  name: "169",
+  name: "Post Count",
   left: 16.5px,
   top: 0px,
   fill: .black,
@@ -235,7 +235,7 @@ textLayer_fIJ2S3H2rj = text {
 }
 
 Following_ZUTSdWOGml = text {
-  name: "Following",
+  name: "Posts Label",
   left: 0px,
   top: 18px,
   fill: .black,

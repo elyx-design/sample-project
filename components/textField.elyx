@@ -89,7 +89,7 @@ TextFieldIcon = textField_vGl5JUl04s {
 }
 
 create24svg_k = icon {
-  name: "create-24.svg",
+  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -99,7 +99,7 @@ create24svg_k = icon {
 }
 
 create24svg = icon {
-  name: "create-24.svg",
+  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -137,7 +137,7 @@ PlaceholderIcon_f = textField_vGl5JUl04s {
 }
 
 create24svg_H = icon {
-  name: "create-24.svg",
+  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -147,7 +147,7 @@ create24svg_H = icon {
 }
 
 create24svg_d = icon {
-  name: "create-24.svg",
+  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -179,7 +179,7 @@ TextFieldbutton = textField_vGl5JUl04s {
 }
 
 Primaryrounded = button.ButtonS28Variant_5 {
-  name: "Primary rounded",
+  name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 
@@ -189,7 +189,7 @@ Primaryrounded = button.ButtonS28Variant_5 {
 }
 
 layer = button.ButtonS28Variant_5 {
-  name: "Primary rounded",
+  name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 

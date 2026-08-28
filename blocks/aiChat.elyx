@@ -32,7 +32,7 @@ AppTopBar_xpVFAA82Vy = appTopBar.AppTopBar_ePXqYpgrNQ {
 }
 
 GroupedStack_mRtZgIziU3 = frame {
-  name: "Chat",
+  name: "Chat Body",
   width: 100%,
   height: 100%,
   layout: {
@@ -46,14 +46,14 @@ GroupedStack_mRtZgIziU3 = frame {
 }
 
 GroupedStack_v5YeDmjPaA = frame {
-  name: "chat",
+  name: "Message Area",
   width: 100%,
   layout: {direction: .column, item-gap: 20px},
   children: [GroupedStack_s1knnuFu9M, layer_OoM9oz4uq7]
 }
 
 GroupedStack_s1knnuFu9M = frame {
-  name: "Conversation",
+  name: "Message Thread",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
@@ -63,7 +63,7 @@ GroupedStack_s1knnuFu9M = frame {
 }
 
 User_dronh23C7d = chatBubble.ChatBubbleVariant {
-  name: "User",
+  name: "User Message",
   left: 1066px,
   top: 464px,
   layout.justify-content: .end,
@@ -96,7 +96,7 @@ layer_OoM9oz4uq7 = frame {
 }
 
 robot24svg_RnpQd1RuHa = icon {
-  name: "robot-24.svg",
+  name: "Assistant Icon",
   left: 0px,
   top: 0px,
   width: 526px,
@@ -105,7 +105,7 @@ robot24svg_RnpQd1RuHa = icon {
 }
 
 chatBox_8CHJtT5EBm = textBox.cardBackgroundSolid_kEwO8GJ2Nk {
-  name: "chatBox",
+  name: "Chat Input",
   left: 0px,
   top: 1178px,
   width: 100%,

@@ -17,7 +17,7 @@ export AudioBar_c3wtjdhX1X = frame {
 }
 
 textLayer_k0DMadujGR = text {
-  name: "0:00",
+  name: "Timecode",
   left: 0px,
   top: 0px,
   fill: .black,
@@ -26,7 +26,7 @@ textLayer_k0DMadujGR = text {
 }
 
 Audiotrack_tdDo4cfW62 = frame {
-  name: "Audio track",
+  name: "Track Label",
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
   children: [

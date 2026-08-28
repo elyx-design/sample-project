@@ -5,7 +5,7 @@ import "tokens/radius.elyx" as Radius
 import "icons/20 pixels/activity-20.svg" as activity20
 
 export listRow_Gz4ibpIzuN = frame {
-  name: "Row",
+  name: "List Row",
   left: 862px,
   top: 603px,
   width: 100%,
@@ -25,7 +25,7 @@ GroupedStack = frame {
 }
 
 activity20svg_JJO2oRwBLY = icon {
-  name: "activity-20.svg",
+  name: "Row Icon",
   left: 0px,
   top: 0px,
   width: 20px,
@@ -34,7 +34,7 @@ activity20svg_JJO2oRwBLY = icon {
 }
 
 Item_e_R_O_9 = text {
-  name: "Item",
+  name: "Row Label",
   left: 87px,
   top: 6.5px,
   width: .auto,

@@ -17,7 +17,7 @@ export Slider_23xVCqJ85q = frame {
 }
 
 slider_vMtvuimTJT = shape {
-  name: "slider",
+  name: "Slider Track",
   left: 0px,
   top: 0px,
   width: 40%,
@@ -40,7 +40,7 @@ SliderVariant = Slider_23xVCqJ85q {
 }
 
 Ellipse = shape {
-  name: "Ellipse",
+  name: "Slider Thumb",
   left: 56.98px,
   top: -3.0789px,
   width: 10px,

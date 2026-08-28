@@ -22,7 +22,7 @@ export cardBackgroundSolid_hxqOj5bsxM = cardBackground.cardBackground_zXouRyz {
 }
 
 GroupedStack_Xx90H5VoHZ = frame {
-  name: "Footer",
+  name: "Review Footer",
   width: 100%,
   layout: {direction: .column, item-gap: 32px},
   children: [GroupedStack_2Kp3S7oMTn, ButtonM36_zR4KGcaKIy]
@@ -36,7 +36,7 @@ GroupedStack_2Kp3S7oMTn = frame {
 }
 
 HeaderMLeft_hJkABIkbNb = header.header_Pp67Y8c {
-  name: "Header M (Left)",
+  name: "Review Header",
   left: 768px,
   top: 512px,
 
@@ -59,7 +59,7 @@ GroupedStack_v9ldFLzvZ6 = frame {
 }
 
 TagTransparent_kd02OYI9lI = tag.TagTransparentVariant {
-  name: "Icon and Label",
+  name: "Rating Tag",
   left: 765px,
   top: 726px,
 
@@ -74,7 +74,7 @@ TagTransparent_kd02OYI9lI = tag.TagTransparentVariant {
 }
 
 TagTransparent_1U3VeFBgq3 = tag.Frame_EkvUQb0wU7 {
-  name: "Tag (Transparent)",
+  name: "Thriller Tag",
   left: 785px,
   top: 746px,
 
@@ -85,7 +85,7 @@ TagTransparent_1U3VeFBgq3 = tag.Frame_EkvUQb0wU7 {
 }
 
 TagTransparent_jGUzhscTvO = tag.Frame_EkvUQb0wU7 {
-  name: "Tag (Transparent)",
+  name: "Drama Tag",
   left: 785px,
   top: 827.25px,
 
@@ -96,7 +96,7 @@ TagTransparent_jGUzhscTvO = tag.Frame_EkvUQb0wU7 {
 }
 
 ButtonM36_zR4KGcaKIy = button.button_43RxZnGr30 {
-  name: "Button M (36)",
+  name: "Read Full Review Button",
   left: 0px,
   top: 165px,
 
@@ -106,7 +106,7 @@ ButtonM36_zR4KGcaKIy = button.button_43RxZnGr30 {
 }
 
 GroupedStack_v1Q1kr3Cok = frame {
-  name: "Top",
+  name: "Review Author",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 20px},
   overflow: .visible,

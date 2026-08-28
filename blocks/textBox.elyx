@@ -9,7 +9,7 @@ import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "components/logo.elyx" as logo
 
 export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
-  name: "chatBox",
+  name: "Chat Input",
   left: 511px,
   top: 471px,
   width: 462px,
@@ -35,7 +35,7 @@ GroupedStack_r8fn3VtZgV = frame {
 }
 
 Left_piKXpcEizh = frame {
-  name: "Left",
+  name: "Attachment Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -53,7 +53,7 @@ Icon_3KhD1tJCaV = button.ButtonS28Variant_0 {
 }
 
 ButtonS28_Shpp3Pqg3i = button.ButtonX28_unc1oz6mM6 {
-  name: "Button S (28)",
+  name: "Model Selector",
   left: 694px,
   top: 768px,
 
@@ -83,7 +83,7 @@ Icon_XwaE41lB4a = button.ButtonS28Variant_0 {
 }
 
 Right_m38ayLrToC = frame {
-  name: "Right",
+  name: "Message Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,

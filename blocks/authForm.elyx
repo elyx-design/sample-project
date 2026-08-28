@@ -11,7 +11,7 @@ import "icons/24 pixels/padlock-24.svg" as padlock24
 import "components/logo.elyx" as logo
 
 export cardBackgroundSolid_gpNRKSrmXr = cardBackground.cardBackgroundSolidVariant {
-  name: "AuthForm",
+  name: "Sign In Form",
   left: 39px,
   top: 21px,
   padding-top: 48px,
@@ -45,7 +45,7 @@ HeaderMCenter_3ypV6y80Ob = header2.headerVariant {
 }
 
 Fields_XaJ8fJSB8R = frame {
-  name: "Fields",
+  name: "Credential Fields",
   left: 0px,
   top: 42.75px,
   width: 100%,
@@ -55,7 +55,7 @@ Fields_XaJ8fJSB8R = frame {
 }
 
 PlaceholderIcon_bJlHc6HdT3 = TextField.TextFieldIcon {
-  name: "Placeholder (Icon)",
+  name: "Email Field",
 
   TextField.Label {
     contents: "Email address"
@@ -67,7 +67,7 @@ PlaceholderIcon_bJlHc6HdT3 = TextField.TextFieldIcon {
 }
 
 PlaceholderIcon_7KEgapI9ft = TextField.TextFieldIcon {
-  name: "Placeholder (Icon)",
+  name: "Password Field",
 
   TextField.Label {
     contents: "Password"
@@ -88,7 +88,7 @@ Options_Oj9DIMpYDw = frame {
   children: [Toggle_vKaSzAuznI, RememberLabel_Mburgp9oBk]
 }
 
-Toggle_vKaSzAuznI = Checkbox.Frame_P {name: "Toggle", left: 127px, top: 285px}
+Toggle_vKaSzAuznI = Checkbox.Frame_P {name: "Remember Me Toggle", left: 127px, top: 285px}
 
 RememberLabel_Mburgp9oBk = text {
   name: "Remember Label",
@@ -100,7 +100,7 @@ RememberLabel_Mburgp9oBk = text {
 }
 
 Primary_3lXmMxE1bk = Button.ButtonVariant_V {
-  name: "Primary",
+  name: "Sign In Button",
   width: 100%,
 
   Button.Button {
@@ -108,4 +108,4 @@ Primary_3lXmMxE1bk = Button.ButtonVariant_V {
   }
 }
 
-LogoS24_y3g3YnmxnC = logo.ButtonIconXL48 {name: "Button Icon XL (80)", left: 351px, top: 15px}
+LogoS24_y3g3YnmxnC = logo.ButtonIconXL48 {name: "Sign In Logo", left: 351px, top: 15px}

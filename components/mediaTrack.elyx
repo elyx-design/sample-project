@@ -51,7 +51,7 @@ GroupedStack_8jIVI4WWex = frame {
 }
 
 direct24svg_srC1L2hQr9 = icon {
-  name: "direct-24.svg",
+  name: "Track Type Icon",
   left: 810px,
   top: 522px,
   width: 24px,
@@ -61,7 +61,7 @@ direct24svg_srC1L2hQr9 = icon {
 }
 
 Text_zUhul68a5E = text {
-  name: "Track name",
+  name: "Track Name",
   left: 263px,
   top: 553px,
   fill: colors.colors.blackAlpha50,
