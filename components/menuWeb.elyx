@@ -1,14 +1,14 @@
 import "tokens/colors.elyx" as colors
 
-Frame = frame {
+menuItem = frame {
   name: "Menu Item",
   left: 708px,
   top: 502px,
   layout: {justify-content: .center, align-items: .center, item-gap: 8px},
-  children: Selected
+  children: label
 }
 
-Selected = text {
+label = text {
   name: "Selected",
   left: 47.25px,
   top: 1.25px,
@@ -17,7 +17,7 @@ Selected = text {
   font-size: 12
 }
 
-layer = text {
+selected = text {
   name: "Selected",
   left: 643.25px,
   top: 533.5px,
@@ -28,4 +28,4 @@ layer = text {
   font-size: 12
 }
 
-Menu = text {name: "Menu", left: 697px, top: 617px, fill: .black, contents: "Menu", font-size: 12}
+menu = text {name: "Menu", left: 697px, top: 617px, fill: .black, contents: "Menu", font-size: 12}
