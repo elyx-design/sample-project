@@ -18,68 +18,68 @@ import "blocks/sidebar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 
-module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
+module_oAd49AzLxr = timelineRuler.timeMarker {
   name: "Time Marker 8",
   left: 306.508px,
   top: 555px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "8"
   }
 }
 
-module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
+module_YWpHWOKFmU = timelineRuler.timeMarker {
   name: "Time Marker 6",
   left: 197.2858px,
   top: 535px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "6"
   }
 }
 
-module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
+module_Kax64eo5pN = timelineRuler.timeMarker {
   name: "Time Marker 5",
   left: 133px,
   top: 535px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "5"
   }
 }
 
-module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
+module_1r90h9aJDj = timelineRuler.timeMarker {
   name: "Time Marker 4",
   left: 58px,
   top: 535px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "4"
   }
 }
 
-module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
+module_x9fTjghOGA = timelineRuler.timeMarker {
   name: "Time Marker 7",
   left: 217.2858px,
   top: 555px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "7"
   }
 }
 
-module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
+module_WhzRk9ByAT = timelineRuler.timeMarker {
   name: "Time Marker 9",
   left: 326.508px,
   top: 575px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "9"
   }
 }
@@ -264,7 +264,7 @@ Timeline = frame {
   children: [layer_j, Tracks]
 }
 
-layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
+layer_j = timelineRuler.timelineRuler {
   name: "Timeline Ruler",
   left: 0px,
   top: 442.5px,
@@ -273,7 +273,7 @@ layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
   padding-left: 24px,
   padding-right: 0px,
   overrides: [
-    insert(module_1r90h9aJDj, after = timelineRuler.module_1r90h9aJDj),
+    insert(module_1r90h9aJDj, after = timelineRuler.marker3),
     insert(module_Kax64eo5pN, after = module_1r90h9aJDj),
     insert(module_YWpHWOKFmU, after = module_Kax64eo5pN),
     insert(module_x9fTjghOGA, after = module_YWpHWOKFmU),
@@ -282,15 +282,15 @@ layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
     insert(layer_O, after = module_WhzRk9ByAT)
   ],
 
-  timelineRuler.module_1r90h9aJDj.textLayer_odBUA3ZxP6 {
+  timelineRuler.marker3.label {
     contents: "3"
   }
 
-  timelineRuler.module_MT5vhsabW0.textLayer_odBUA3ZxP6 {
+  timelineRuler.marker2.label {
     contents: "2"
   }
 
-  timelineRuler.module_521cwUq48R.textLayer_odBUA3ZxP6 {
+  timelineRuler.marker1.label {
     contents: "1"
   }
 }
