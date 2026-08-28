@@ -87,7 +87,7 @@ notificationText = text {
   font-style: "Regular"
 }
 
-notificationToggle = Checkbox.Frame_P {}
+notificationToggle = Checkbox.on {}
 
 nameField = TextField.textField_vGl5JUl04s {
   left: 0px,

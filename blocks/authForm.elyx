@@ -88,7 +88,7 @@ Options_Oj9DIMpYDw = frame {
   children: [Toggle_vKaSzAuznI, RememberLabel_Mburgp9oBk]
 }
 
-Toggle_vKaSzAuznI = Checkbox.Frame_P {name: "Remember Me Toggle", left: 127px, top: 285px}
+Toggle_vKaSzAuznI = Checkbox.on {name: "Remember Me Toggle", left: 127px, top: 285px}
 
 RememberLabel_Mburgp9oBk = text {
   name: "Remember Label",
