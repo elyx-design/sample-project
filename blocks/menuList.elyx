@@ -131,12 +131,7 @@ Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
   ListRow.Item_e_O {}
 }
 
-Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {
-  name: "Menu Divider",
-  left: 0px,
-  top: 0px,
-  width: 100%
-}
+Divider_7bOUsmBic5 = divider.horizontal {name: "Menu Divider", left: 0px, top: 0px, width: 100%}
 
 Menu_Z86v8Yz2p0 = frame {
   name: "Workspace Menu",

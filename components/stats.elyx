@@ -10,7 +10,7 @@ export Stats_SAGlIolZIe = frame {
   children: [DividerWhite_BvfgQ0x6CS, Frame_JZbGEcdAyx, DividerWhite_Wbr0ZiRmxz]
 }
 
-DividerWhite_BvfgQ0x6CS = divider.Divider_97GT5IGMgL {
+DividerWhite_BvfgQ0x6CS = divider.horizontal {
   name: "Divider (White)",
   left: 0px,
   top: 0px,
@@ -66,7 +66,7 @@ Livrosem20_OIV9rtYiSu = text {
   align: .center
 }
 
-Dividervertical_9c0N5aibGz = divider.Div_JPakkrqBxW {
+Dividervertical_9c0N5aibGz = divider.vertical {
   name: "Divider (vertical)",
   left: 20px,
   top: 701px,
@@ -105,7 +105,7 @@ PagesRead_jDu4nkUS3l = text {
   align: .center
 }
 
-Dividervertical_kxWxSCimLZ = divider.Div_JPakkrqBxW {
+Dividervertical_kxWxSCimLZ = divider.vertical {
   name: "Divider (vertical)",
   left: 0px,
   top: 681px,
@@ -144,7 +144,7 @@ AvrRating_35SpwnbsZt = text {
   align: .center
 }
 
-Dividervertical_tyQgNFTlxv = divider.Div_JPakkrqBxW {
+Dividervertical_tyQgNFTlxv = divider.vertical {
   name: "Divider (vertical)",
   left: 20px,
   top: 701px,
@@ -183,7 +183,7 @@ AvrRating_323yTc7AQH = text {
   align: .center
 }
 
-DividerWhite_Wbr0ZiRmxz = divider.Divider_97GT5IGMgL {
+DividerWhite_Wbr0ZiRmxz = divider.horizontal {
   name: "Divider (White)",
   left: 20px,
   top: 20px,
