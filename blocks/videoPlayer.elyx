@@ -4,7 +4,7 @@ import "images/background/liveEvent.jpg" as liveEvent
 import "components/header.elyx" as header
 import "components/tag.elyx" as tag
 
-export VideoPlayer_7IHVyFXn8z = frame {
+export videoPlayer = frame {
   name: "Video Player",
   left: 368px,
   top: 405px,
@@ -29,17 +29,17 @@ export VideoPlayer_7IHVyFXn8z = frame {
     }
   ],
   padding: 20px,
-  children: [GroupedStack_R6YKIBc1DT, PlaybackControl_ajqA0M9W3s]
+  children: [headerRow, controls]
 }
 
-GroupedStack_R6YKIBc1DT = frame {
+headerRow = frame {
   name: "Video Header",
   width: 100%,
   layout: {justify-content: .space-between},
-  children: [HeaderSLeft_kdOlA7xbFG, Status_mmQ1DabaWR]
+  children: [eventHeader, liveStatus]
 }
 
-HeaderSLeft_kdOlA7xbFG = header.smallLeft {
+eventHeader = header.smallLeft {
   name: "Header S (Left)",
   left: 501px,
   top: 250px,
@@ -55,7 +55,7 @@ HeaderSLeft_kdOlA7xbFG = header.smallLeft {
   }
 }
 
-Status_mmQ1DabaWR = tag.status {
+liveStatus = tag.status {
   name: "Status",
   left: 806px,
   top: 450px,
@@ -71,7 +71,7 @@ Status_mmQ1DabaWR = tag.status {
   }
 }
 
-PlaybackControl_ajqA0M9W3s = playbackControl.playbackControl {
+controls = playbackControl.playbackControl {
   name: "Playback Control",
   left: 0px,
   top: 809px,

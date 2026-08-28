@@ -135,7 +135,7 @@ Video = frame {
   children: [layer, layer_E]
 }
 
-layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+layer = videoPlayer.videoPlayer {
   name: "Video Player",
   left: -3772px,
   top: 0px,
@@ -144,26 +144,26 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   fill[0].image.ref: bird,
   fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
 
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.tools.likeButton.button.smallIconGlyph {
+  videoPlayer.controls.playbackControl.tools.likeButton.button.smallIconGlyph {
     contents: pen20
   }
 
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.tools.settingsButton.button.smallIconGlyph {
+  videoPlayer.controls.playbackControl.tools.settingsButton.button.smallIconGlyph {
     contents: pointer20
   }
 
   @use-variant(slider.thumb)
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.scrubber.progressSlider {}
+  videoPlayer.controls.playbackControl.scrubber.progressSlider {}
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.smallSubtitle {
+  videoPlayer.headerRow.eventHeader.header.smallSubtitle {
     contents: "4K landscape film, cinematic 21:9"
   }
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.smallTitle {
+  videoPlayer.headerRow.eventHeader.header.smallTitle {
     contents: "Wings of the Wild"
   }
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.Status_mmQ1DabaWR {
+  videoPlayer.headerRow.liveStatus {
     display: .hidden
   }
 }

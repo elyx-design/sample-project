@@ -42,7 +42,7 @@ Frame_Z = frame {
   children: [layer, layer_5]
 }
 
-layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+layer = videoPlayer.videoPlayer {
   name: "Video Player",
   left: 0px,
   top: 0px,
