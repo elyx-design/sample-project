@@ -3,28 +3,25 @@ import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
 import "components/product.elyx" as product
 
-export cardBackgroundSolid_MeUe9s7jIe = cardBackground.base {
+export productCard = cardBackground.base {
   name: "Product Card",
   left: 140px,
   top: 134px,
   width: 565px,
   layout.direction: .row,
   layout.item-gap: 20px,
-  overrides: [
-    insert(Product_Al6k6nvbNM, after = .nil),
-    insert(GroupedStack_iigKZjZVS6, after = Product_Al6k6nvbNM)
-  ]
+  overrides: [insert(productPreview, after = .nil), insert(bookDetails, after = productPreview)]
 }
 
-GroupedStack_iigKZjZVS6 = frame {
+bookDetails = frame {
   name: "Book Details",
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 16px},
-  children: [Text_dhOnMd2nDQ, GroupedStack_rXdP0M90Cz, layer_OysMAZRDRZ, GroupedStack_iaZBymztXh]
+  children: [pageProgress, bookInfo, readingProgress, notes]
 }
 
-Text_dhOnMd2nDQ = text {
+pageProgress = text {
   name: "Page Progress",
   left: 0px,
   top: 62px,
@@ -34,14 +31,14 @@ Text_dhOnMd2nDQ = text {
   font-style: "SemiBold"
 }
 
-GroupedStack_rXdP0M90Cz = frame {
+bookInfo = frame {
   name: "Author",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
-  children: [Text_PDADJXXB19, Text_7W8VkGS5qo]
+  children: [title, author]
 }
 
-Text_PDADJXXB19 = text {
+title = text {
   name: "Book Title",
   left: 864px,
   top: 413px,
@@ -51,7 +48,7 @@ Text_PDADJXXB19 = text {
   font-style: "SemiBold"
 }
 
-Text_7W8VkGS5qo = text {
+author = text {
   name: "Book Author",
   left: 844px,
   top: 393px,
@@ -61,24 +58,24 @@ Text_7W8VkGS5qo = text {
   font-style: "SemiBold"
 }
 
-layer_OysMAZRDRZ = frame {
+readingProgress = frame {
   name: "Reading Progress",
   left: 0px,
   top: 98px,
   width: 100%,
   height: 33px,
   layout: {direction: .column, justify-content: .center, item-gap: 4px},
-  children: [GroupedStack_WMsAEHpASp, Slider_75Gh9EfwB5]
+  children: [progressLabels, progressSlider]
 }
 
-GroupedStack_WMsAEHpASp = frame {
+progressLabels = frame {
   name: "Progress Labels",
   width: 100%,
   layout: {item-gap: 12px},
-  children: [Text_44VLt1cTsX, Text_VisIWELcEt]
+  children: [progressLabel, progressValue]
 }
 
-Text_44VLt1cTsX = text {
+progressLabel = text {
   name: "Progress Label",
   left: 0px,
   top: 16px,
@@ -90,7 +87,7 @@ Text_44VLt1cTsX = text {
   font-style: "SemiBold"
 }
 
-Text_VisIWELcEt = text {
+progressValue = text {
   name: "Progress Value",
   left: 20px,
   top: 36px,
@@ -103,16 +100,16 @@ Text_VisIWELcEt = text {
   align: .right
 }
 
-Slider_75Gh9EfwB5 = slider.base {name: "Slider", left: 0px, top: 0px, width: 100%}
+progressSlider = slider.base {name: "Slider", left: 0px, top: 0px, width: 100%}
 
-GroupedStack_iaZBymztXh = frame {
+notes = frame {
   name: "Notes",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
-  children: [Text_AuIsU93dcQ, Text_8hdD9fYPsD]
+  children: [notesLabel, notesBody]
 }
 
-Text_AuIsU93dcQ = text {
+notesLabel = text {
   name: "Notes Label",
   left: 652px,
   top: 688px,
@@ -122,7 +119,7 @@ Text_AuIsU93dcQ = text {
   font-style: "SemiBold"
 }
 
-Text_8hdD9fYPsD = text {
+notesBody = text {
   name: "Notes Body",
   left: 0px,
   top: 708px,
@@ -134,4 +131,4 @@ Text_8hdD9fYPsD = text {
   line-height: 1.5
 }
 
-Product_Al6k6nvbNM = product.product {name: "Product", left: -63px, top: -86px}
+productPreview = product.product {name: "Product", left: -63px, top: -86px}

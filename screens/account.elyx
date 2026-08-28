@@ -312,25 +312,25 @@ layer_0 = profileCard.profileCard {
   }
 }
 
-layer_O = productCard.cardBackgroundSolid_MeUe9s7jIe {
+layer_O = productCard.productCard {
   name: "Product Card",
   left: 0px,
   top: -317px,
   width: 100%,
 
-  productCard.GroupedStack_iigKZjZVS6.GroupedStack_iaZBymztXh.Text_8hdD9fYPsD {
+  productCard.bookDetails.notes.notesBody {
     contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter of the book. It is amazing!"
   }
 
-  productCard.GroupedStack_iigKZjZVS6.layer_OysMAZRDRZ.Slider_75Gh9EfwB5 {
+  productCard.bookDetails.readingProgress.progressSlider {
     fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 25%)
   }
 
-  productCard.GroupedStack_iigKZjZVS6.layer_OysMAZRDRZ.Slider_75Gh9EfwB5.slider.track {
+  productCard.bookDetails.readingProgress.progressSlider.slider.track {
     fill[0].color: rgb(29.8%, 50.98%, 18.0392%)
   }
 
-  productCard.GroupedStack_iigKZjZVS6.Text_dhOnMd2nDQ {
+  productCard.bookDetails.pageProgress {
     fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 50%)
   }
 }
