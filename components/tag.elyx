@@ -27,7 +27,7 @@ label = text {
   fill: colors.colors.blackAlpha50,
   contents: "Label",
   font-size: 12,
-  font-style: "SemiBold"
+  font-style: "Bold"
 }
 
 @variant("Label and Close")

@@ -288,7 +288,7 @@ Text = text {
 GroupedStack_C = frame {
   name: "Grouped Stack",
   height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: 20px},
   children: [Menu, MenuVariant, MenuVariant_9, MenuVariant_N]
 }
 
@@ -379,44 +379,6 @@ SiteHeaderVariant_R = siteHeader {
   shadow[0]: .nil
 }
 
-mutedChevron = icon {
-  name: "Menu Chevron",
-  left: 278px,
-  top: 460px,
-  width: 12px,
-  height: 12px,
-  fill: colors.colors.blackAlpha50,
-  contents: chevrondown122
-}
-
-chevron = icon {
-  name: "Menu Chevron",
-  left: 297px,
-  top: 460px,
-  width: 12px,
-  height: 12px,
-  fill: colors.colors.black20,
-  contents: chevrondown122
-}
-
-GroupedStack_wdgnFUsBsn = frame {
-  name: "Grouped Stack",
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
-}
-
-LogoM36_5rZb7ha4WK = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
-
-Text_cS4xjtHDcz = text {
-  name: "Text",
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
-
 Content_0 = frame {
   name: "Content",
   left: 602px,
@@ -450,7 +412,7 @@ Text_p = text {
 GroupedStack_1 = frame {
   name: "Grouped Stack",
   height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: 20px},
   children: [Menu_z, MenuVariant_l, MenuVariant_8, MenuVariant_nx]
 }
 
@@ -546,10 +508,30 @@ DividerWhite_r = divider.horizontal {
   }
 }
 
+mutedChevron = icon {
+  name: "Menu Chevron",
+  left: 278px,
+  top: 460px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.blackAlpha50,
+  contents: chevrondown122
+}
+
+chevron = icon {
+  name: "Menu Chevron",
+  left: 297px,
+  top: 460px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.black20,
+  contents: chevrondown122
+}
+
 GroupedStack_3pPDzjFuot = frame {
   name: "Grouped Stack",
   height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: 20px},
   children: [Menu_AxqK14iupG, Menu_BUggW5sq6e, Menu_cVkjoKXmFQ, Menu_oqJJaNTT2Y]
 }
 
@@ -591,4 +573,22 @@ Menu_oqJJaNTT2Y = mutedIconMenu {
   label {
     contents: "Resources"
   }
+}
+
+GroupedStack_wdgnFUsBsn = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 16px},
+  children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
+}
+
+LogoM36_5rZb7ha4WK = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+
+Text_cS4xjtHDcz = text {
+  name: "Text",
+  left: -340px,
+  top: 503px,
+  fill: .black,
+  contents: "Overleaf",
+  font-style: "Bold"
 }

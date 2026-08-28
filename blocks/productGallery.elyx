@@ -3,16 +3,12 @@ import "tokens/colors.elyx" as colors
 import "components/product.elyx" as product
 import "blocks/productInfo.elyx" as productInfo
 
-export productGallery = cardBackground.none {
+export productGallery = cardBackground.base {
   name: "Product Gallery",
   left: 177px,
   top: 240px,
   width: 888px,
   overflow: .visible,
-  padding-top: 12px,
-  padding-left: 0px,
-  padding-bottom: 12px,
-  padding-right: 0px,
   layout.item-gap: 20px,
   overrides: [insert(title, after = .nil), insert(productList, after = title)]
 }
