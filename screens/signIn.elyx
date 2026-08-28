@@ -27,7 +27,7 @@ GroupedStack_pB84n1ORbr = frame {
   children: [AuthForm_j40iQAKlB1, profileGroup_LYFcdFxyNU, FooterLinks_iuOfIBy5o9]
 }
 
-AuthForm_j40iQAKlB1 = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
+AuthForm_j40iQAKlB1 = AuthForm.signInForm {
   name: "Sign In Form",
   left: 373px,
   top: 389px,
