@@ -53,7 +53,7 @@ ProductInfo_iKbIuHTpmu = productInfo.Frame_52yyDIfE8A {
     overflow: .visible
   }
 
-  @use-variant(product.ProductVariant_p)
+  @use-variant(product.productFive)
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
@@ -76,7 +76,7 @@ ProductInfo_zOHrymIxFN = productInfo.Frame_52yyDIfE8A {
     width: 155px
   }
 
-  @use-variant(product.ProductVariant3)
+  @use-variant(product.productFour)
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
@@ -99,7 +99,7 @@ ProductInfo_b3BtwOLAJq = productInfo.Frame_52yyDIfE8A {
     width: 155px
   }
 
-  @use-variant(product.ProductVariant2)
+  @use-variant(product.productThree)
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
@@ -122,7 +122,7 @@ ProductInfo_g8PWi0Sk2i = productInfo.Frame_52yyDIfE8A {
     width: 155px
   }
 
-  @use-variant(product.ProductVariant)
+  @use-variant(product.productTwo)
   productInfo.Product_GC0ZTYHiG1 {}
 }
 

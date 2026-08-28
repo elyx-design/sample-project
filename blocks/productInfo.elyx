@@ -11,7 +11,7 @@ export Frame_52yyDIfE8A = frame {
   children: [Product_GC0ZTYHiG1, GroupedStack_eaALrce3Cz]
 }
 
-Product_GC0ZTYHiG1 = product.Frame_p5lb0Fok5v {name: "Product", left: 0px, top: 0px, width: 100%}
+Product_GC0ZTYHiG1 = product.product {name: "Product", left: 0px, top: 0px, width: 100%}
 
 GroupedStack_eaALrce3Cz = frame {
   name: "Product Details",

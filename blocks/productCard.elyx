@@ -134,4 +134,4 @@ Text_8hdD9fYPsD = text {
   line-height: 1.5
 }
 
-Product_Al6k6nvbNM = product.Frame_p5lb0Fok5v {name: "Product", left: -63px, top: -86px}
+Product_Al6k6nvbNM = product.product {name: "Product", left: -63px, top: -86px}
