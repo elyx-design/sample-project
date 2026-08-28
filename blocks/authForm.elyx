@@ -30,16 +30,16 @@ GroupedStack_b0SW5OArkc = frame {
   children: [HeaderMCenter_3ypV6y80Ob, Fields_XaJ8fJSB8R, Options_Oj9DIMpYDw, Primary_3lXmMxE1bk]
 }
 
-HeaderMCenter_3ypV6y80Ob = header2.headerVariant {
+HeaderMCenter_3ypV6y80Ob = header2.mediumCenter {
   name: "Header M (Center)",
   left: -33px,
   top: 120px,
 
-  header2.Description_7ZfScLC {
+  header2.mediumSubtitle {
     contents: "Use your account to continue."
   }
 
-  header2.Title_ZIlZq9y {
+  header2.mediumTitle {
     contents: "Sign In"
   }
 }

@@ -25,16 +25,16 @@ export UserSummaryS_clM0CpDw4i = frame {
 
 AvatarSPhoto_aTBp6lpaL0 = userAvatar.smallPhoto {name: "Avatar S (Photo)", left: -7.5px, top: 28px}
 
-HeaderSLeft_v1iI8KgpFk = header.HeaderSLeft_nBOG31rNTk {
+HeaderSLeft_v1iI8KgpFk = header.smallLeft {
   name: "Header S (Left)",
   left: -8.5px,
   top: -18px,
 
-  header.UserEmail_wCqcy5VUFs {
+  header.smallSubtitle {
     contents: "nora@mail.com"
   }
 
-  header.UserName_Qkcl7dWEIn {
+  header.smallTitle {
     contents: "Nora Harper",
     font-style: "Bold"
   }
@@ -47,7 +47,7 @@ UserSummarySVariant = UserSummaryS_clM0CpDw4i {
   height: .auto,
   layout.direction: .column,
 
-  @use-variant(header.HeaderSLeftVariant)
+  @use-variant(header.smallCenter)
   HeaderSLeft_v1iI8KgpFk {}
 }
 
@@ -62,16 +62,16 @@ export UserSummaryM_3TgjJsJRgL = frame {
 
 AvatarMVariant_96PsSx7qfC = userAvatar.mediumPhoto {name: "User Avatar", left: 0px, top: 0px}
 
-HeaderMLeft_U02Hb8hK7v = header.header_Pp67Y8c {
+HeaderMLeft_U02Hb8hK7v = header.mediumLeft {
   name: "Header M (Left)",
   left: 83px,
   top: 10px,
 
-  header.Description_7ZfScLC {
+  header.mediumSubtitle {
     contents: "nora@mail.com"
   }
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "Nora Harper",
     font-style: "Bold"
   }
@@ -84,6 +84,6 @@ UserSummaryMVariant = UserSummaryM_3TgjJsJRgL {
   height: .auto,
   layout.direction: .column,
 
-  @use-variant(header.headerVariant)
+  @use-variant(header.mediumCenter)
   HeaderMLeft_U02Hb8hK7v {}
 }

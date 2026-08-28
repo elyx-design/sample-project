@@ -225,17 +225,17 @@ planCard_O = planCard.planCard_LTK7mFiyqR {
   }
 }
 
-layer_o = header.headerVariant {
+layer_o = header.mediumCenter {
   name: "Pricing Header",
   left: 472.5px,
   top: 121px,
   width: .auto,
 
-  header.Description_7ZfScLC {
+  header.mediumSubtitle {
     contents: "Flexible pricing for individuals, professionals, and growing teams."
   }
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "Choose the plan that fits your work"
   }
 }

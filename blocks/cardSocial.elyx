@@ -129,7 +129,7 @@ UserSummaryMVariant_4jTKstXxp9 = userSummary.UserSummaryMVariant {
   top: 160px,
   width: 100%,
 
-  userSummary.HeaderMLeft_U02Hb8hK7v.header.Description_7ZfScLC {
+  userSummary.HeaderMLeft_U02Hb8hK7v.header.mediumSubtitle {
     contents: "@noraharper"
   }
 }

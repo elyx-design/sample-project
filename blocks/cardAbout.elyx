@@ -42,13 +42,13 @@ ProfileCardHeader_eBqPR0vCMr = frame {
   children: HeaderMLeft_mkvAlK9gg7
 }
 
-HeaderMLeft_mkvAlK9gg7 = header.header_Pp67Y8c {
+HeaderMLeft_mkvAlK9gg7 = header.mediumLeft {
   name: "Header M (Left)",
   left: 56px,
   top: 2px,
-  overrides: [remove(header.Description_7ZfScLC)],
+  overrides: [remove(header.mediumSubtitle)],
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "Public Profile"
   }
 }

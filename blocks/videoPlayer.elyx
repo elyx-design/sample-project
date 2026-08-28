@@ -39,17 +39,17 @@ GroupedStack_R6YKIBc1DT = frame {
   children: [HeaderSLeft_kdOlA7xbFG, Status_mmQ1DabaWR]
 }
 
-HeaderSLeft_kdOlA7xbFG = header.HeaderSLeft_nBOG31rNTk {
+HeaderSLeft_kdOlA7xbFG = header.smallLeft {
   name: "Header S (Left)",
   left: 501px,
   top: 250px,
 
-  header.UserEmail_wCqcy5VUFs {
+  header.smallSubtitle {
     contents: "Live from the dunes: Stage 3",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  header.UserName_Qkcl7dWEIn {
+  header.smallTitle {
     contents: "Endless Dunes",
     fill[0].color: colors.colors.white100
   }

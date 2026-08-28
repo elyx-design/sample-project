@@ -17,15 +17,15 @@ export activityCard_Qrr8IWU = frame {
   children: [layer, activityRow_2, activityRow_a, activityRow_v]
 }
 
-layer = header.header_Pp67Y8c {
+layer = header.mediumLeft {
   left: 35px,
   top: 453px,
 
-  header.Description_7ZfScLC {
+  header.mediumSubtitle {
     contents: "Security and account events"
   }
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "Recent activity"
   }
 }

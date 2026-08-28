@@ -35,17 +35,17 @@ GroupedStack_2Kp3S7oMTn = frame {
   children: [HeaderMLeft_hJkABIkbNb, GroupedStack_v9ldFLzvZ6]
 }
 
-HeaderMLeft_hJkABIkbNb = header.header_Pp67Y8c {
+HeaderMLeft_hJkABIkbNb = header.mediumLeft {
   name: "Review Header",
   left: 768px,
   top: 512px,
 
-  header.Description_7ZfScLC {
+  header.mediumSubtitle {
     contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure.",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "A Breathtaking Escape",
     fill[0].color: colors.colors.white100
   }
@@ -119,12 +119,12 @@ UserSummaryS_hvtjNfK8hg = userSummary.UserSummaryS_clM0CpDw4i {
   top: 143px,
   overflow: .visible,
 
-  userSummary.HeaderSLeft_v1iI8KgpFk.header.UserEmail_wCqcy5VUFs {
+  userSummary.HeaderSLeft_v1iI8KgpFk.header.smallSubtitle {
     contents: "Writer",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  userSummary.HeaderSLeft_v1iI8KgpFk.header.UserName_Qkcl7dWEIn {
+  userSummary.HeaderSLeft_v1iI8KgpFk.header.smallTitle {
     fill[0].color: colors.colors.white100
   }
 

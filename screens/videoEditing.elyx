@@ -157,11 +157,11 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
     
   }
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserEmail_wCqcy5VUFs {
+  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.smallSubtitle {
     contents: "4K landscape film, cinematic 21:9"
   }
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserName_Qkcl7dWEIn {
+  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.smallTitle {
     contents: "Wings of the Wild"
   }
 

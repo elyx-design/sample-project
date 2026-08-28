@@ -98,15 +98,15 @@ nameField = TextField.textField_vGl5JUl04s {
   }
 }
 
-header = header2.header_Pp67Y8c {
+header = header2.mediumLeft {
   left: 0px,
   top: 80px,
 
-  header2.Description_7ZfScLC {
+  header2.mediumSubtitle {
     contents: "Manage your profile and preferences."
   }
 
-  header2.Title_ZIlZq9y {
+  header2.mediumTitle {
     contents: "Account"
   }
 }

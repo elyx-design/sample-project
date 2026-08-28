@@ -2,15 +2,15 @@ import "components/cardBackground.elyx" as cardBackground
 import "components/header.elyx" as header2
 import "components/settingRow.elyx" as settingRow
 
-header_HZdRlZc = header2.header_Pp67Y8c {
+header_HZdRlZc = header2.mediumLeft {
   left: 0px,
   top: 532px,
 
-  header2.Description_7ZfScLC {
+  header2.mediumSubtitle {
     contents: "Review sign-in methods and active protections."
   }
 
-  header2.Title_ZIlZq9y {
+  header2.mediumTitle {
     contents: "Security"
   }
 }
