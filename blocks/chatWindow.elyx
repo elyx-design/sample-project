@@ -2,7 +2,7 @@ import "components/chatBubble.elyx" as chatBubble
 import "tokens/colors.elyx" as colors
 import "components/textField.elyx" as textField
 
-export ChatWindow_J7FxeHn6Zh = frame {
+export chatWindow = frame {
   name: "Chat Window",
   left: 659px,
   top: 241px,
@@ -12,19 +12,19 @@ export ChatWindow_J7FxeHn6Zh = frame {
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
   padding: [24px, 12px, 12px],
-  children: [Chat_rw4c7WJOMr, TextFieldPlaceholderbutton_zceWXdSr8m]
+  children: [messageThread, messageField]
 }
 
-Chat_rw4c7WJOMr = frame {
+messageThread = frame {
   name: "Message Thread",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
-  children: [User_y4nVb60Ht8, GroupedStack_9ZE1MpDskD]
+  children: [userMessage, replyMessages]
 }
 
-User_y4nVb60Ht8 = chatBubble.user {
+userMessage = chatBubble.user {
   name: "User Message",
   left: 1px,
   top: 0px,
@@ -35,15 +35,15 @@ User_y4nVb60Ht8 = chatBubble.user {
   }
 }
 
-GroupedStack_9ZE1MpDskD = frame {
+replyMessages = frame {
   name: "Reply Messages",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 8px},
   overflow: .visible,
-  children: [ChatBubble_w7rHdo4Xzi, ChatBubble_SIFYrR62A7]
+  children: [firstReply, secondReply]
 }
 
-ChatBubble_w7rHdo4Xzi = chatBubble.base {
+firstReply = chatBubble.base {
   name: "First Reply",
   left: 0px,
   top: 74px,
@@ -55,7 +55,7 @@ ChatBubble_w7rHdo4Xzi = chatBubble.base {
   }
 }
 
-ChatBubble_SIFYrR62A7 = chatBubble.base {
+secondReply = chatBubble.base {
   name: "Second Reply",
   left: 20px,
   top: 94px,
@@ -67,7 +67,7 @@ ChatBubble_SIFYrR62A7 = chatBubble.base {
   }
 }
 
-TextFieldPlaceholderbutton_zceWXdSr8m = textField.buttonPlaceholder {
+messageField = textField.buttonPlaceholder {
   name: "Message Field",
   left: 827px,
   top: 524px,

@@ -50,7 +50,7 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   height: 100%
 }
 
-layer_5 = chatWindow.ChatWindow_J7FxeHn6Zh {
+layer_5 = chatWindow.chatWindow {
   name: "Chat Window",
   left: 640px,
   top: 0px,
