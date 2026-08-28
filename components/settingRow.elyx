@@ -5,7 +5,6 @@ import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 
 export settingRow = frame {
-  name: "Setting Row",
   left: 20px,
   top: 92px,
   width: .auto,
@@ -17,14 +16,9 @@ export settingRow = frame {
   children: [copy, action]
 }
 
-copy = frame {
-  name: "Setting Copy",
-  layout: {direction: .column, item-gap: 4px},
-  children: [title, description]
-}
+copy = frame {layout: {direction: .column, item-gap: 4px}, children: [title, description]}
 
 title = text {
-  name: "Label",
   fill: Colors.colors.black20,
   contents: "Label",
   font-size: Typography.typography.labelML,
@@ -33,7 +27,6 @@ title = text {
 }
 
 description = text {
-  name: "Subtitle",
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
   font-size: Typography.typography.labelM,

@@ -8,7 +8,6 @@ import "icons/24 pixels/calendar-24.svg" as calendar24
 import "icons/20 pixels/trash-20.svg" as trash20
 
 export medium = frame {
-  name: "Button M (36)",
   left: 962px,
   top: 689px,
   height: Spacing.spacing.heightM,
@@ -36,7 +35,6 @@ export medium = frame {
 }
 
 mediumLabel = text {
-  name: "Button Label",
   left: 12px,
   top: 9.5px,
   width: .auto,
@@ -129,7 +127,6 @@ mediumDangerPressed = medium {
 }
 
 export small = frame {
-  name: "Button S (28)",
   left: 962px,
   top: 917px,
   height: 28px,
@@ -156,7 +153,6 @@ export small = frame {
 }
 
 smallLabel = text {
-  name: "Button Label",
   left: 8px,
   top: 6.5px,
   width: .auto,
@@ -289,7 +285,6 @@ smallClose = small {
 }
 
 smallBackgroundIcon = icon {
-  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -299,7 +294,6 @@ smallBackgroundIcon = icon {
 }
 
 mediumCloseIcon = icon {
-  name: "Close Icon",
   left: 1387px,
   top: 682px,
   width: 24px,
@@ -308,17 +302,9 @@ mediumCloseIcon = icon {
   contents: close24
 }
 
-smallCloseIcon = icon {
-  name: "Close Icon",
-  left: 1211px,
-  top: 918px,
-  width: 20px,
-  height: 20px,
-  contents: close20
-}
+smallCloseIcon = icon {left: 1211px, top: 918px, width: 20px, height: 20px, contents: close20}
 
 mediumIconGlyph = icon {
-  name: "Button Icon",
   left: 1353px,
   top: 705px,
   width: 24px,
@@ -338,7 +324,6 @@ smallPrimaryRounded = small {
 }
 
 smallPrimaryRoundedIcon = icon {
-  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -359,7 +344,6 @@ smallIcon = small {
 }
 
 smallIconGlyph = icon {
-  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -395,7 +379,6 @@ mediumPlainIcon = medium {
 }
 
 mediumPlainIconGlyph = icon {
-  name: "Button Icon",
   left: 1397px,
   top: 701px,
   width: 24px,
@@ -405,7 +388,6 @@ mediumPlainIconGlyph = icon {
 }
 
 mediumPrimaryRoundedIcon = icon {
-  name: "Button Icon",
   left: 1397px,
   top: 701px,
   width: 24px,

@@ -8,7 +8,6 @@ import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "icons/24 pixels/search-24.svg" as search24
 
 export base = frame {
-  name: "Text Field",
   left: 869px,
   top: 770px,
   width: 100%,
@@ -23,7 +22,6 @@ export base = frame {
 }
 
 label = text {
-  name: "Label",
   left: 0px,
   top: 0px,
   fill: Colors.colors.black20,
@@ -90,7 +88,6 @@ iconPlaceholder = base {
 }
 
 placeholderIcon = icon {
-  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -100,7 +97,6 @@ placeholderIcon = icon {
 }
 
 defaultIcon = icon {
-  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -138,7 +134,6 @@ iconError = base {
 }
 
 focusedIcon = icon {
-  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -148,7 +143,6 @@ focusedIcon = icon {
 }
 
 errorIcon = icon {
-  name: "Field Icon",
   left: 981px,
   top: 782px,
   width: 24px,
@@ -180,7 +174,6 @@ buttonPlaceholder = base {
 }
 
 placeholderButton = button.smallPrimaryRounded {
-  name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 
@@ -190,7 +183,6 @@ placeholderButton = button.smallPrimaryRounded {
 }
 
 submitButton = button.smallPrimaryRounded {
-  name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 

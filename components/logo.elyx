@@ -1,7 +1,6 @@
 import "images/misc/logo.png" as logo2
 
 export small = frame {
-  name: "Logo S (24)",
   left: 340px,
   top: 519px,
   width: .auto,
@@ -13,7 +12,6 @@ export small = frame {
 }
 
 smallArtwork = shape {
-  name: "Logo Artwork",
   left: 0px,
   top: 80px,
   width: 24px,
@@ -37,7 +35,6 @@ extraLarge = small {
 }
 
 extraLargeArtwork = shape {
-  name: "Logo Artwork",
   left: 0px,
   top: 80px,
   width: 80px,
@@ -47,7 +44,6 @@ extraLargeArtwork = shape {
 }
 
 largeArtwork = shape {
-  name: "Logo Artwork",
   left: 0px,
   top: 56px,
   width: 48px,

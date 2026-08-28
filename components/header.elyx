@@ -2,7 +2,6 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 
 export mediumLeft = frame {
-  name: "Header M (Left)",
   left: 20px,
   top: 20px,
   width: 100%,
@@ -12,7 +11,6 @@ export mediumLeft = frame {
 }
 
 mediumTitle = text {
-  name: "Title",
   fill: Colors.colors.black20,
   contents: "Title",
   font-size: 20,
@@ -21,7 +19,6 @@ mediumTitle = text {
 }
 
 mediumSubtitle = text {
-  name: "Subtitle",
   width: 100%,
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
@@ -48,7 +45,6 @@ mediumCenter = mediumLeft {
 }
 
 export smallLeft = frame {
-  name: "Header S (Left)",
   left: -267.28px,
   top: 29px,
   width: 99px,
@@ -58,7 +54,6 @@ export smallLeft = frame {
 }
 
 smallTitle = text {
-  name: "Title",
   width: 100%,
   fill: Colors.colors.black20,
   contents: "Title",
@@ -68,7 +63,6 @@ smallTitle = text {
 }
 
 smallSubtitle = text {
-  name: "Subtitle",
   width: 100%,
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
@@ -93,7 +87,6 @@ smallCenter = smallLeft {
 }
 
 export largeLeft = frame {
-  name: "Header M (Left)",
   left: 287.708px,
   top: 21.3172px,
   width: 100%,
@@ -103,7 +96,6 @@ export largeLeft = frame {
 }
 
 largeTitle = text {
-  name: "Title",
   fill: Colors.colors.black20,
   contents: "Title",
   font-size: 56,
@@ -112,7 +104,6 @@ largeTitle = text {
 }
 
 largeSubtitle = text {
-  name: "Subtitle",
   width: 100%,
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",

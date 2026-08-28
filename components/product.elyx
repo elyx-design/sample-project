@@ -5,7 +5,6 @@ import "images/misc/book4.png" as book4
 import "images/misc/book5.png" as book5
 
 export product = frame {
-  name: "Product",
   left: 409.71px,
   top: 494px,
   width: .auto,
@@ -16,7 +15,6 @@ export product = frame {
 }
 
 coverOne = shape {
-  name: "Book Cover",
   left: 51.0859px,
   top: 72px,
   width: 155px,
@@ -54,9 +52,8 @@ productTwo = product {
 }
 
 coverTwo = shape {
-  name: "Book Cover",
   left: 10.85px,
-  top: -5315.57px,
+  top: -5315.5698px,
   width: 155px,
   height: 212px,
   fill: {image: {ref: book2}},
@@ -64,7 +61,6 @@ coverTwo = shape {
 }
 
 coverFour = shape {
-  name: "Book Cover",
   left: 46.17px,
   top: 26.7px,
   width: 155px,
@@ -74,7 +70,6 @@ coverFour = shape {
 }
 
 coverThree = shape {
-  name: "Book Cover",
   left: 20.8567px,
   top: 23.0153px,
   width: 155px,
@@ -84,7 +79,6 @@ coverThree = shape {
 }
 
 coverFive = shape {
-  name: "Book Cover",
   left: 62.03px,
   top: 19.46px,
   width: 155px,

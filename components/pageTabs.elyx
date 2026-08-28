@@ -4,7 +4,6 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
 export pageTabs = frame {
-  name: "Page Tabs",
   left: 40px,
   top: 110px,
   width: 100%,
@@ -17,10 +16,9 @@ export pageTabs = frame {
   children: [profileTab, accessTab, billingTab]
 }
 
-profileTab = selectedTab {name: "Profile Tab", left: 46px, top: 23px}
+profileTab = selectedTab {left: 46px, top: 23px}
 
 accessTab = inactiveTab {
-  name: "Access Tab",
   left: 66px,
   top: 43px,
 
@@ -30,7 +28,6 @@ accessTab = inactiveTab {
 }
 
 billingTab = inactiveTab {
-  name: "Billing Tab",
   left: 138px,
   top: 43px,
 
@@ -40,7 +37,6 @@ billingTab = inactiveTab {
 }
 
 export selectedTab = frame {
-  name: "Profile Tab",
   left: 40px,
   top: 217px,
   width: .auto,
@@ -53,7 +49,6 @@ export selectedTab = frame {
 }
 
 label = text {
-  name: "Profile Tab Label",
   fill: rgb(98.9987%, 98.9987%, 98.9987%),
   contents: "Profile",
   font-size: Typography.typography.labelML,

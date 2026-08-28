@@ -9,7 +9,6 @@ import "components/textField.elyx" as textField
 import "components/divider.elyx" as divider
 
 export siteHeader = cardBackground.solidFullRadius {
-  name: "Site Header",
   left: 512px,
   top: 456px,
   width: 1024px,
@@ -30,7 +29,6 @@ export siteHeader = cardBackground.solidFullRadius {
 }
 
 export menu = frame {
-  name: "Menu",
   left: 191px,
   top: 456px,
   width: .auto,
@@ -39,7 +37,6 @@ export menu = frame {
 }
 
 label = text {
-  name: "Menu",
   left: 0px,
   top: 0px,
   fill: colors.colors.black20,
@@ -89,14 +86,12 @@ mutedIconMenu = menu {
 }
 
 headerActions = frame {
-  name: "Header Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: signInLink
 }
 
 signInLink = menu {
-  name: "Sign In Link",
   left: 1101px,
   top: 505px,
 
@@ -106,7 +101,6 @@ signInLink = menu {
 }
 
 primaryNavigation = frame {
-  name: "Primary Navigation",
   left: 0px,
   top: 27.5px,
   width: .auto,
@@ -116,7 +110,6 @@ primaryNavigation = frame {
 }
 
 productMenu = iconMenu {
-  name: "Product Menu",
   left: 0px,
   top: 0px,
   height: 17px,
@@ -127,7 +120,6 @@ productMenu = iconMenu {
 }
 
 pricingLink = mutedMenu {
-  name: "Pricing Link",
   left: 58px,
   top: 0px,
   height: 17px,
@@ -138,7 +130,6 @@ pricingLink = mutedMenu {
 }
 
 blogLink = mutedMenu {
-  name: "Blog Link",
   left: 78px,
   top: 20px,
   height: 17px,
@@ -149,7 +140,6 @@ blogLink = mutedMenu {
 }
 
 helpCenterLink = mutedMenu {
-  name: "Help Center Link",
   left: 128px,
   top: 20px,
   height: 17px,
@@ -160,14 +150,12 @@ helpCenterLink = mutedMenu {
 }
 
 GroupedStack_MQJzIUvAcJ = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [Menu_9eKNms0xIQ, Primary_wXpMXTnHzx]
 }
 
 Menu_9eKNms0xIQ = menu {
-  name: "Menu",
   left: 1545px,
   top: 483px,
 
@@ -177,7 +165,6 @@ Menu_9eKNms0xIQ = menu {
 }
 
 Primary_wXpMXTnHzx = button.mediumPrimary {
-  name: "Primary",
   left: 751px,
   top: 475px,
 
@@ -187,14 +174,12 @@ Primary_wXpMXTnHzx = button.mediumPrimary {
 }
 
 GroupedStack = frame {
-  name: "Logged in",
   height: 100%,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
   children: [layer_h, GroupedStack_K]
 }
 
 layer_h = textField.iconPlaceholder {
-  name: "Placeholder (Icon)",
   left: -90.12px,
   top: 16px,
   width: 180px,
@@ -205,14 +190,12 @@ layer_h = textField.iconPlaceholder {
 }
 
 GroupedStack_K = frame {
-  name: "Account",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [layer_j, layer]
 }
 
 layer_j = iconMenu {
-  name: "Menu (icon)",
   left: 1478px,
   top: 606px,
 
@@ -221,7 +204,7 @@ layer_j = iconMenu {
   }
 }
 
-layer = avatar.smallPhoto {name: "Avatar S (Photo)", left: 1255px, top: 577px}
+layer = avatar.smallPhoto {left: 1255px, top: 577px}
 
 @variant("No background")
 SiteHeaderVariant = siteHeader {
@@ -245,7 +228,6 @@ SiteHeaderVariant = siteHeader {
 }
 
 DividerWhite = divider.horizontal {
-  name: "Divider (White)",
   left: 615px,
   top: 752px,
   width: 100%,
@@ -258,7 +240,6 @@ DividerWhite = divider.horizontal {
 }
 
 GroupedStack_J = frame {
-  name: "Content",
   width: 100%,
   height: 100%,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
@@ -268,32 +249,22 @@ GroupedStack_J = frame {
 }
 
 GroupedStack_y = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [LogoM36, Text]
 }
 
-LogoM36 = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+LogoM36 = logo.medium {left: 596px, top: 481px}
 
-Text = text {
-  name: "Text",
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
+Text = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
 
 GroupedStack_C = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
   children: [Menu, MenuVariant, MenuVariant_9, MenuVariant_N]
 }
 
 Menu = menu {
-  name: "Menu",
   left: 357.9778px,
   top: 33.5256px,
 
@@ -303,7 +274,6 @@ Menu = menu {
 }
 
 MenuVariant = mutedMenu {
-  name: "Menu Variant",
   left: 377.9778px,
   top: 53.5256px,
 
@@ -313,7 +283,6 @@ MenuVariant = mutedMenu {
 }
 
 MenuVariant_9 = mutedMenu {
-  name: "Menu Variant",
   left: 397.9778px,
   top: 73.5256px,
 
@@ -323,7 +292,6 @@ MenuVariant_9 = mutedMenu {
 }
 
 MenuVariant_N = mutedIconMenu {
-  name: "Menu Variant",
   left: 417.9778px,
   top: 93.5256px,
 
@@ -333,14 +301,12 @@ MenuVariant_N = mutedIconMenu {
 }
 
 GroupedStack_R = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [Menu_A, Primary]
 }
 
 Menu_A = menu {
-  name: "Menu",
   left: 1545px,
   top: 483px,
 
@@ -350,7 +316,6 @@ Menu_A = menu {
 }
 
 Primary = button.mediumPrimary {
-  name: "Primary",
   left: 751px,
   top: 475px,
 
@@ -380,7 +345,6 @@ SiteHeaderVariant_R = siteHeader {
 }
 
 Content_0 = frame {
-  name: "Content",
   left: 602px,
   top: 0px,
   width: 100%,
@@ -392,32 +356,22 @@ Content_0 = frame {
 }
 
 GroupedStack_7 = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [LogoM36_R, Text_p]
 }
 
-LogoM36_R = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+LogoM36_R = logo.medium {left: 596px, top: 481px}
 
-Text_p = text {
-  name: "Text",
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
+Text_p = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
 
 GroupedStack_1 = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
   children: [Menu_z, MenuVariant_l, MenuVariant_8, MenuVariant_nx]
 }
 
 Menu_z = menu {
-  name: "Menu",
   left: 357.9778px,
   top: 33.5256px,
 
@@ -427,7 +381,6 @@ Menu_z = menu {
 }
 
 MenuVariant_l = mutedMenu {
-  name: "Menu Variant",
   left: 377.9778px,
   top: 53.5256px,
 
@@ -437,7 +390,6 @@ MenuVariant_l = mutedMenu {
 }
 
 MenuVariant_8 = mutedMenu {
-  name: "Menu Variant",
   left: 397.9778px,
   top: 73.5256px,
 
@@ -447,7 +399,6 @@ MenuVariant_8 = mutedMenu {
 }
 
 MenuVariant_nx = mutedIconMenu {
-  name: "Menu Variant",
   left: 417.9778px,
   top: 93.5256px,
 
@@ -457,7 +408,6 @@ MenuVariant_nx = mutedIconMenu {
 }
 
 Right_c = frame {
-  name: "Logged in",
   left: 361.69px,
   top: 0px,
   height: 100%,
@@ -466,7 +416,6 @@ Right_c = frame {
 }
 
 PlaceholderIcon_t = textField.iconPlaceholder {
-  name: "Placeholder (Icon)",
   left: -90.12px,
   top: 16px,
   width: 180px,
@@ -477,14 +426,12 @@ PlaceholderIcon_t = textField.iconPlaceholder {
 }
 
 Account_E = frame {
-  name: "Account",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [Menuicon_3, AvatarSPhoto_m]
 }
 
 Menuicon_3 = iconMenu {
-  name: "Menu (icon)",
   left: 1478px,
   top: 606px,
 
@@ -493,10 +440,9 @@ Menuicon_3 = iconMenu {
   }
 }
 
-AvatarSPhoto_m = avatar.smallPhoto {name: "Avatar S (Photo)", left: 1255px, top: 577px}
+AvatarSPhoto_m = avatar.smallPhoto {left: 1255px, top: 577px}
 
 DividerWhite_r = divider.horizontal {
-  name: "Divider (White)",
   left: 576.72px,
   top: 718.25px,
   width: 100%,
@@ -509,7 +455,6 @@ DividerWhite_r = divider.horizontal {
 }
 
 chevron = icon {
-  name: "Menu Chevron",
   left: 297px,
   top: 460px,
   width: 12px,
@@ -519,7 +464,6 @@ chevron = icon {
 }
 
 mutedChevron = icon {
-  name: "Menu Chevron",
   left: 278px,
   top: 460px,
   width: 12px,
@@ -529,16 +473,14 @@ mutedChevron = icon {
 }
 
 GroupedStack_wdgnFUsBsn = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
 }
 
-LogoM36_5rZb7ha4WK = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+LogoM36_5rZb7ha4WK = logo.medium {left: 596px, top: 481px}
 
 Text_cS4xjtHDcz = text {
-  name: "Text",
   left: -340px,
   top: 503px,
   fill: .black,
@@ -547,14 +489,12 @@ Text_cS4xjtHDcz = text {
 }
 
 GroupedStack_3pPDzjFuot = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
   children: [Menu_AxqK14iupG, Menu_BUggW5sq6e, Menu_cVkjoKXmFQ, Menu_oqJJaNTT2Y]
 }
 
 Menu_AxqK14iupG = menu {
-  name: "Menu",
   left: 357.9778px,
   top: 33.5256px,
 
@@ -564,7 +504,6 @@ Menu_AxqK14iupG = menu {
 }
 
 Menu_BUggW5sq6e = mutedMenu {
-  name: "Menu Variant",
   left: 377.9778px,
   top: 53.5256px,
 
@@ -574,7 +513,6 @@ Menu_BUggW5sq6e = mutedMenu {
 }
 
 Menu_cVkjoKXmFQ = mutedMenu {
-  name: "Menu Variant",
   left: 397.9778px,
   top: 73.5256px,
 
@@ -584,7 +522,6 @@ Menu_cVkjoKXmFQ = mutedMenu {
 }
 
 Menu_oqJJaNTT2Y = mutedIconMenu {
-  name: "Menu Variant",
   left: 417.9778px,
   top: 93.5256px,
 

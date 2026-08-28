@@ -3,7 +3,6 @@ import "tokens/colors.elyx" as colors
 import "components/tag.elyx" as tag
 
 export productInfo = frame {
-  name: "Product Info",
   left: -167px,
   top: 300px,
   layout: {direction: .column, justify-content: .center, item-gap: 20px},
@@ -11,10 +10,9 @@ export productInfo = frame {
   children: [productPreview, productDetails]
 }
 
-productPreview = product.product {name: "Product", left: 0px, top: 0px, width: 100%}
+productPreview = product.product {left: 0px, top: 0px, width: 100%}
 
 productDetails = frame {
-  name: "Product Details",
   width: 100%,
   layout: {direction: .column, item-gap: 16px},
   overflow: .visible,
@@ -22,14 +20,12 @@ productDetails = frame {
 }
 
 productCopy = frame {
-  name: "Product Copy",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   children: [productName, subtitle]
 }
 
 productName = text {
-  name: "Product Name",
   left: 0px,
   top: 344px,
   width: 100%,
@@ -40,7 +36,6 @@ productName = text {
 }
 
 subtitle = text {
-  name: "Subtitle",
   left: 0px,
   top: 364px,
   width: 100%,
@@ -51,7 +46,6 @@ subtitle = text {
 }
 
 ratingTag = tag.iconAndLabel {
-  name: "Icon and Label",
   left: 18.2196px,
   top: 229.1186px,
   fill[0].color: rgb(100%, 83.1373%, 28.6275%, 50%),

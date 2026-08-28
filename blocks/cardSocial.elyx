@@ -8,7 +8,6 @@ import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/star-20.svg" as star20
 
 export socialCard = cardBackground.transparent {
-  name: "Social Card",
   left: 186px,
   top: 176px,
   width: 317px,
@@ -23,17 +22,11 @@ export socialCard = cardBackground.transparent {
   overrides: [insert(cardContent, after = .nil), insert(socialFooter, after = cardContent)]
 }
 
-smallButton = button.small {name: "Button S (28)", left: 1318px, top: 603px}
+smallButton = button.small {left: 1318px, top: 603px}
 
-mediumSummary = userSummary.UserSummaryM_3TgjJsJRgL {
-  name: "User Summary M",
-  left: 1187.73px,
-  top: 318.4px,
-  width: 88px
-}
+mediumSummary = userSummary.UserSummaryM_3TgjJsJRgL {left: 1187.73px, top: 318.4px, width: 88px}
 
 socialFooter = frame {
-  name: "Social Footer",
   width: 100%,
   height: .auto,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
@@ -42,10 +35,9 @@ socialFooter = frame {
   children: [followerAvatars, followButton]
 }
 
-followerAvatars = avatarGroup.base {name: "Follower Avatars", left: 20px, top: 383px}
+followerAvatars = avatarGroup.base {left: 20px, top: 383px}
 
 followButton = button.mediumPrimary {
-  name: "Follow Button",
   left: 151.5px,
   top: 160px,
 
@@ -55,7 +47,6 @@ followButton = button.mediumPrimary {
 }
 
 cardContent = frame {
-  name: "Card Content",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .end, item-gap: 24px},
@@ -67,14 +58,12 @@ cardContent = frame {
 }
 
 cardActions = frame {
-  name: "Card Actions",
   width: 100%,
   layout: {justify-content: .end, align-items: .end, item-gap: 8px},
   children: [favoriteButton, likeButton, closeButton]
 }
 
 favoriteButton = button.smallIcon {
-  name: "Favorite Button",
   left: 245.81px,
   top: 37.5995px,
 
@@ -84,7 +73,6 @@ favoriteButton = button.smallIcon {
 }
 
 likeButton = button.smallIcon {
-  name: "Like Button",
   left: 265.81px,
   top: 57.5995px,
 
@@ -93,15 +81,9 @@ likeButton = button.smallIcon {
   }
 }
 
-closeButton = button.smallClose {
-  name: "Close",
-  left: 526px,
-  top: 225px,
-  fill[0].color: colors.colors.blackAlpha10
-}
+closeButton = button.smallClose {left: 526px, top: 225px, fill[0].color: colors.colors.blackAlpha10}
 
 profileInfo = frame {
-  name: "Profile Info",
   width: 100%,
   height: 100%,
   layout: {
@@ -114,14 +96,12 @@ profileInfo = frame {
 }
 
 profileSummary = frame {
-  name: "Profile Summary",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 16px},
   children: [profileIdentity, bio]
 }
 
 profileIdentity = userSummary.UserSummaryMVariant {
-  name: "Profile Identity",
   left: 0px,
   top: 160px,
   width: 100%,
@@ -132,7 +112,6 @@ profileIdentity = userSummary.UserSummaryMVariant {
 }
 
 bio = text {
-  name: "Bio",
   left: 0px,
   top: 160px,
   width: 100%,
@@ -144,14 +123,12 @@ bio = text {
 }
 
 profileStats = frame {
-  name: "Profile Stats",
   width: 100%,
   layout: {justify-content: .space-evenly, align-items: .center, item-gap: 24px},
   children: [followingStat, followersStat, postsStat]
 }
 
 followingStat = frame {
-  name: "Following Stat",
   left: 49px,
   top: 367px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
@@ -159,7 +136,6 @@ followingStat = frame {
 }
 
 followingCount = text {
-  name: "Following Count",
   left: 16.5px,
   top: 0px,
   fill: .black,
@@ -170,7 +146,6 @@ followingCount = text {
 }
 
 followingLabel = text {
-  name: "Following Label",
   left: 0px,
   top: 18px,
   fill: .black,
@@ -180,7 +155,6 @@ followingLabel = text {
 }
 
 followersStat = frame {
-  name: "Followers Stat",
   left: 69px,
   top: 387px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
@@ -188,7 +162,6 @@ followersStat = frame {
 }
 
 followerCount = text {
-  name: "Follower Count",
   left: 16.5px,
   top: 0px,
   fill: .black,
@@ -199,7 +172,6 @@ followerCount = text {
 }
 
 followersLabel = text {
-  name: "Followers Label",
   left: 0px,
   top: 18px,
   fill: .black,
@@ -209,7 +181,6 @@ followersLabel = text {
 }
 
 postsStat = frame {
-  name: "Posts Stat",
   left: 89px,
   top: 407px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
@@ -217,7 +188,6 @@ postsStat = frame {
 }
 
 postCount = text {
-  name: "Post Count",
   left: 16.5px,
   top: 0px,
   fill: .black,
@@ -228,7 +198,6 @@ postCount = text {
 }
 
 postsLabel = text {
-  name: "Posts Label",
   left: 0px,
   top: 18px,
   fill: .black,

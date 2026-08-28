@@ -8,7 +8,6 @@ import "images/thumbnails/thumb08.jpg" as thumb08
 import "images/thumbnails/thumb09.jpg" as thumb09
 
 export imageGallery = frame {
-  name: "Image Gallery",
   left: 438px,
   top: 310px,
   width: 585px,
@@ -18,7 +17,6 @@ export imageGallery = frame {
 }
 
 topRow = frame {
-  name: "Top Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -28,7 +26,6 @@ topRow = frame {
 }
 
 topLeft = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -36,16 +33,9 @@ topLeft = thumbnailImage.thumbnailImage {
   fill[0].image.ref: thumb08
 }
 
-topCenter = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  height: 100%
-}
+topCenter = thumbnailImage.thumbnailImage {left: 0px, top: 0px, width: 100%, height: 100%}
 
 topRight = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -54,7 +44,6 @@ topRight = thumbnailImage.thumbnailImage {
 }
 
 middleRow = frame {
-  name: "Middle Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -64,7 +53,6 @@ middleRow = frame {
 }
 
 middleLeft = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -73,7 +61,6 @@ middleLeft = thumbnailImage.thumbnailImage {
 }
 
 middleCenter = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -82,7 +69,6 @@ middleCenter = thumbnailImage.thumbnailImage {
 }
 
 middleRight = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -91,7 +77,6 @@ middleRight = thumbnailImage.thumbnailImage {
 }
 
 bottomRow = frame {
-  name: "Bottom Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -101,7 +86,6 @@ bottomRow = frame {
 }
 
 bottomLeft = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -110,7 +94,6 @@ bottomLeft = thumbnailImage.thumbnailImage {
 }
 
 bottomCenter = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -119,7 +102,6 @@ bottomCenter = thumbnailImage.thumbnailImage {
 }
 
 bottomRight = thumbnailImage.thumbnailImage {
-  name: "Thumbnail Image",
   left: 0px,
   top: 0px,
   width: 100%,

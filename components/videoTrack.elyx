@@ -4,7 +4,6 @@ import "tokens/radius.elyx" as radius
 import "images/background/bird.jpg" as bird
 
 export VideoTrack_oikz8bvb8Z = frame {
-  name: "Video Track",
   left: 639px,
   top: 492px,
   width: 475px,
@@ -17,7 +16,6 @@ export VideoTrack_oikz8bvb8Z = frame {
 }
 
 handle_Layj0z4Nv8 = frame {
-  name: "Start Trim Handle",
   left: 281px,
   top: 24px,
   width: 12px,
@@ -27,7 +25,6 @@ handle_Layj0z4Nv8 = frame {
 }
 
 Rectangle_2lJBGBujeM = shape {
-  name: "Start Grip",
   left: 932px,
   top: 532px,
   width: 2px,
@@ -38,7 +35,6 @@ Rectangle_2lJBGBujeM = shape {
 }
 
 GroupedStack_Q4wEWSNt4H = frame {
-  name: "Clip Strip",
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: 1px},
@@ -47,7 +43,6 @@ GroupedStack_Q4wEWSNt4H = frame {
 }
 
 Rectangle_6Anu8dt4m4 = shape {
-  name: "Clip Thumbnail",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -57,7 +52,6 @@ Rectangle_6Anu8dt4m4 = shape {
 }
 
 Rectangle_TwaVf7x47r = shape {
-  name: "Clip Thumbnail",
   left: 0px,
   top: 20px,
   width: 100%,
@@ -67,7 +61,6 @@ Rectangle_TwaVf7x47r = shape {
 }
 
 Rectangle_hFB8lsQn1p = shape {
-  name: "Clip Thumbnail",
   left: 20px,
   top: 40px,
   width: 100%,
@@ -77,7 +70,6 @@ Rectangle_hFB8lsQn1p = shape {
 }
 
 handle_2fQ263mXIk = frame {
-  name: "End Trim Handle",
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
@@ -85,7 +77,6 @@ handle_2fQ263mXIk = frame {
 }
 
 Rectangle_pAIkI3WK3m = shape {
-  name: "End Grip",
   left: 932px,
   top: 532px,
   width: 2px,

@@ -4,7 +4,6 @@ import "tokens/radius.elyx" as Radius
 import "images/profileImgs/005.jpg" as module
 
 export small = frame {
-  name: "Avatar S",
   left: -94px,
   top: 10px,
   width: 36px,
@@ -16,7 +15,6 @@ export small = frame {
 }
 
 smallBackground = shape {
-  name: "Avatar Background",
   left: 0px,
   top: 0px,
   width: 36px,
@@ -28,7 +26,6 @@ smallBackground = shape {
 }
 
 smallInitials = text {
-  name: "Avatar Initials",
   left: 10px,
   top: 10.5px,
   width: 16px,
@@ -40,16 +37,9 @@ smallInitials = text {
   font-style: "SemiBold"
 }
 
-smallStatus = status {
-  name: "Online Status",
-  left: 26.85px,
-  top: 26.83px,
-  ignore-stack: .true,
-  border[0].width: 2px
-}
+smallStatus = status {left: 26.85px, top: 26.83px, ignore-stack: .true, border[0].width: 2px}
 
 export status = shape {
-  name: "Avatar Status",
   left: -94px,
   top: -72.12px,
   width: 8px,
@@ -70,7 +60,6 @@ smallPhoto = small {
 }
 
 export medium = frame {
-  name: "Avatar M",
   left: -94px,
   top: 94px,
   width: 72px,
@@ -81,7 +70,6 @@ export medium = frame {
 }
 
 mediumBackground = shape {
-  name: "Avatar Background",
   left: 0px,
   top: 0px,
   width: 72px,
@@ -93,7 +81,6 @@ mediumBackground = shape {
 }
 
 mediumInitials = text {
-  name: "Large Avatar Initials",
   left: 21.5px,
   fill: Colors.colors.black20,
   contents: "JC",
@@ -102,13 +89,7 @@ mediumInitials = text {
   font-style: "SemiBold"
 }
 
-mediumStatus = status {
-  name: "Online Status",
-  left: 56.85px,
-  top: 56.83px,
-  ignore-stack: .true,
-  border[0].width: 2px
-}
+mediumStatus = status {left: 56.85px, top: 56.83px, ignore-stack: .true, border[0].width: 2px}
 
 @variant("Avatar M Variant")
 mediumPhoto = medium {
@@ -119,7 +100,6 @@ mediumPhoto = medium {
 }
 
 mediumImage = shape {
-  name: "Avatar Photo",
   left: 0px,
   top: 0px,
   width: 72px,
@@ -131,7 +111,6 @@ mediumImage = shape {
 }
 
 smallImage = shape {
-  name: "Avatar Photo",
   left: 0px,
   top: 0px,
   width: 36px,

@@ -4,7 +4,6 @@ import "components/slider.elyx" as slider
 import "components/product.elyx" as product
 
 export productCard = cardBackground.base {
-  name: "Product Card",
   left: 140px,
   top: 134px,
   width: 565px,
@@ -14,7 +13,6 @@ export productCard = cardBackground.base {
 }
 
 bookDetails = frame {
-  name: "Book Details",
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 16px},
@@ -22,7 +20,6 @@ bookDetails = frame {
 }
 
 pageProgress = text {
-  name: "Page Progress",
   left: 0px,
   top: 62px,
   fill: colors.colors.blackAlpha25,
@@ -32,14 +29,12 @@ pageProgress = text {
 }
 
 bookInfo = frame {
-  name: "Author",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   children: [title, author]
 }
 
 title = text {
-  name: "Book Title",
   left: 864px,
   top: 413px,
   fill: .black,
@@ -49,7 +44,6 @@ title = text {
 }
 
 author = text {
-  name: "Book Author",
   left: 844px,
   top: 393px,
   fill: colors.colors.blackAlpha50,
@@ -59,7 +53,6 @@ author = text {
 }
 
 readingProgress = frame {
-  name: "Reading Progress",
   left: 0px,
   top: 98px,
   width: 100%,
@@ -69,14 +62,12 @@ readingProgress = frame {
 }
 
 progressLabels = frame {
-  name: "Progress Labels",
   width: 100%,
   layout: {item-gap: 12px},
   children: [progressLabel, progressValue]
 }
 
 progressLabel = text {
-  name: "Progress Label",
   left: 0px,
   top: 16px,
   width: 100%,
@@ -88,7 +79,6 @@ progressLabel = text {
 }
 
 progressValue = text {
-  name: "Progress Value",
   left: 20px,
   top: 36px,
   width: .auto,
@@ -100,17 +90,15 @@ progressValue = text {
   align: .right
 }
 
-progressSlider = slider.base {name: "Slider", left: 0px, top: 0px, width: 100%}
+progressSlider = slider.base {left: 0px, top: 0px, width: 100%}
 
 notes = frame {
-  name: "Notes",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   children: [notesLabel, notesBody]
 }
 
 notesLabel = text {
-  name: "Notes Label",
   left: 652px,
   top: 688px,
   fill: .black,
@@ -120,7 +108,6 @@ notesLabel = text {
 }
 
 notesBody = text {
-  name: "Notes Body",
   left: 0px,
   top: 708px,
   width: 100%,
@@ -131,4 +118,4 @@ notesBody = text {
   line-height: 1.5
 }
 
-productPreview = product.product {name: "Product", left: -63px, top: -86px}
+productPreview = product.product {left: -63px, top: -86px}

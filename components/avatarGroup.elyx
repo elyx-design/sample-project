@@ -6,7 +6,6 @@ import "images/profileImgs/003.jpg" as module7
 import "images/profileImgs/004.jpg" as module8
 
 export base = frame {
-  name: "Avatar Group",
   left: 484px,
   top: 511px,
   width: 140px,
@@ -16,7 +15,6 @@ export base = frame {
 }
 
 baseStack = frame {
-  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -26,7 +24,6 @@ baseStack = frame {
 }
 
 baseFifthPhoto = userAvatar.smallPhoto {
-  name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
@@ -41,7 +38,6 @@ baseFifthPhoto = userAvatar.smallPhoto {
 }
 
 baseFourthPhoto = userAvatar.smallPhoto {
-  name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
@@ -56,7 +52,6 @@ baseFourthPhoto = userAvatar.smallPhoto {
 }
 
 baseThirdPhoto = userAvatar.smallPhoto {
-  name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
@@ -71,7 +66,6 @@ baseThirdPhoto = userAvatar.smallPhoto {
 }
 
 baseSecondPhoto = userAvatar.smallPhoto {
-  name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
@@ -86,7 +80,6 @@ baseSecondPhoto = userAvatar.smallPhoto {
 }
 
 baseFirstPhoto = userAvatar.smallPhoto {
-  name: "Photo1",
   left: 0px,
   top: 0px,
 
@@ -123,7 +116,6 @@ labelBottom = base {
 }
 
 rightCount = frame {
-  name: "Right Count Label",
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
@@ -131,7 +123,6 @@ rightCount = frame {
 }
 
 rightCountText = text {
-  name: "+28",
   left: 0px,
   top: 0px,
   width: .auto,
@@ -141,7 +132,6 @@ rightCountText = text {
 }
 
 bottomStack = frame {
-  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -157,7 +147,6 @@ bottomStack = frame {
 }
 
 bottomFifthPhoto = userAvatar.smallPhoto {
-  name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
@@ -172,7 +161,6 @@ bottomFifthPhoto = userAvatar.smallPhoto {
 }
 
 bottomFourthPhoto = userAvatar.smallPhoto {
-  name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
@@ -187,7 +175,6 @@ bottomFourthPhoto = userAvatar.smallPhoto {
 }
 
 bottomThirdPhoto = userAvatar.smallPhoto {
-  name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
@@ -202,7 +189,6 @@ bottomThirdPhoto = userAvatar.smallPhoto {
 }
 
 bottomSecondPhoto = userAvatar.smallPhoto {
-  name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
@@ -217,7 +203,6 @@ bottomSecondPhoto = userAvatar.smallPhoto {
 }
 
 bottomFirstPhoto = userAvatar.smallPhoto {
-  name: "Photo1",
   left: 0px,
   top: 0px,
 
@@ -227,7 +212,6 @@ bottomFirstPhoto = userAvatar.smallPhoto {
 }
 
 bottomCount = frame {
-  name: "Bottom Count Label",
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
@@ -235,7 +219,6 @@ bottomCount = frame {
 }
 
 bottomCountText = text {
-  name: "+28",
   left: 0px,
   top: 0px,
   width: .auto,
@@ -255,7 +238,6 @@ labelTop = base {
 }
 
 topStack = frame {
-  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -265,7 +247,6 @@ topStack = frame {
 }
 
 topFifthPhoto = userAvatar.smallPhoto {
-  name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
@@ -280,7 +261,6 @@ topFifthPhoto = userAvatar.smallPhoto {
 }
 
 topFourthPhoto = userAvatar.smallPhoto {
-  name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
@@ -295,7 +275,6 @@ topFourthPhoto = userAvatar.smallPhoto {
 }
 
 topThirdPhoto = userAvatar.smallPhoto {
-  name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
@@ -310,7 +289,6 @@ topThirdPhoto = userAvatar.smallPhoto {
 }
 
 topSecondPhoto = userAvatar.smallPhoto {
-  name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
@@ -325,7 +303,6 @@ topSecondPhoto = userAvatar.smallPhoto {
 }
 
 topFirstPhoto = userAvatar.smallPhoto {
-  name: "Photo1",
   left: 0px,
   top: 0px,
 
@@ -335,7 +312,6 @@ topFirstPhoto = userAvatar.smallPhoto {
 }
 
 rightStack = frame {
-  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -345,7 +321,6 @@ rightStack = frame {
 }
 
 rightFifthPhoto = userAvatar.smallPhoto {
-  name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
@@ -360,7 +335,6 @@ rightFifthPhoto = userAvatar.smallPhoto {
 }
 
 rightFourthPhoto = userAvatar.smallPhoto {
-  name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
@@ -375,7 +349,6 @@ rightFourthPhoto = userAvatar.smallPhoto {
 }
 
 rightThirdPhoto = userAvatar.smallPhoto {
-  name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
@@ -390,7 +363,6 @@ rightThirdPhoto = userAvatar.smallPhoto {
 }
 
 rightSecondPhoto = userAvatar.smallPhoto {
-  name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
@@ -405,7 +377,6 @@ rightSecondPhoto = userAvatar.smallPhoto {
 }
 
 rightFirstPhoto = userAvatar.smallPhoto {
-  name: "Photo1",
   left: 0px,
   top: 0px,
 
@@ -415,7 +386,6 @@ rightFirstPhoto = userAvatar.smallPhoto {
 }
 
 title = frame {
-  name: "Group Title Label",
   left: 65px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
@@ -423,7 +393,6 @@ title = frame {
 }
 
 titleText = text {
-  name: "+28",
   left: 0px,
   top: 0px,
   width: .auto,

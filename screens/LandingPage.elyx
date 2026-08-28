@@ -10,7 +10,6 @@ import "icons/20 pixels/arrowDown-20.svg" as arrowDown20
 import "icons/24 pixels/mug-24.svg" as mug24
 
 LandingPage = frame {
-  name: "Frame",
   left: -5px,
   top: 137px,
   width: 1605px,
@@ -28,7 +27,6 @@ LandingPage = frame {
 }
 
 top = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 96px},
   overflow: .visible,
@@ -36,7 +34,6 @@ top = frame {
 }
 
 siteHeader_3 = siteHeader.siteHeader {
-  name: "Site Header",
   left: 388.5px,
   top: 145px,
   width: 60%,
@@ -49,7 +46,6 @@ siteHeader_3 = siteHeader.siteHeader {
 }
 
 Copy = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 32px},
   overflow: .visible,
@@ -57,7 +53,6 @@ Copy = frame {
 }
 
 largeLeft = header.largeCenter {
-  name: "Header M (Left) Variant",
   left: 1840px,
   top: 449px,
   width: 44.0752%,
@@ -72,7 +67,6 @@ largeLeft = header.largeCenter {
 }
 
 frame2 = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {justify-content: .center, align-items: .center, item-gap: 20px},
   overflow: .visible,
@@ -80,7 +74,6 @@ frame2 = frame {
 }
 
 medium = button.medium {
-  name: "Button M (36)",
   left: 733px,
   top: 353px,
 
@@ -90,7 +83,6 @@ medium = button.medium {
 }
 
 text3 = text {
-  name: "Watch Demo",
   left: 854px,
   top: 477px,
   fill: colors.colors.blackAlpha50,
@@ -99,7 +91,6 @@ text3 = text {
 }
 
 frame3 = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 32px},
   overflow: .visible,
@@ -107,7 +98,6 @@ frame3 = frame {
 }
 
 bottom = frame {
-  name: "Grouped Stack",
   left: 311px,
   top: 840px,
   width: 60%,
@@ -118,7 +108,6 @@ bottom = frame {
 }
 
 layer1 = frame {
-  name: "Frame",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -132,17 +121,9 @@ layer1 = frame {
   children: [shape1, smallLeft]
 }
 
-shape1 = icon {
-  name: "direct-24.svg",
-  left: 644px,
-  top: 704px,
-  width: 40px,
-  height: 40px,
-  contents: direct24
-}
+shape1 = icon {left: 644px, top: 704px, width: 40px, height: 40px, contents: direct24}
 
 smallLeft = header.smallLeft {
-  name: "Header S (Left)",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -159,7 +140,6 @@ smallLeft = header.smallLeft {
 }
 
 layer2 = frame {
-  name: "Frame",
   left: 20px,
   top: 0px,
   width: 100%,
@@ -173,17 +153,9 @@ layer2 = frame {
   children: [shape2, smallLeft_2]
 }
 
-shape2 = icon {
-  name: "direct-24.svg",
-  left: 648px,
-  top: 708px,
-  width: 40px,
-  height: 40px,
-  contents: activity
-}
+shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: activity}
 
 smallLeft_2 = header.smallLeft {
-  name: "Header S (Left)",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -199,7 +171,6 @@ smallLeft_2 = header.smallLeft {
 }
 
 layer3 = frame {
-  name: "Frame",
   left: 354.6666px,
   top: 0px,
   width: 100%,
@@ -213,17 +184,9 @@ layer3 = frame {
   children: [shape3, smallLeft_3]
 }
 
-shape3 = icon {
-  name: "direct-24.svg",
-  left: 655px,
-  top: 715px,
-  width: 40px,
-  height: 40px,
-  contents: mug24
-}
+shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug24}
 
 smallLeft_3 = header.smallLeft {
-  name: "Header S (Left)",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -239,7 +202,6 @@ smallLeft_3 = header.smallLeft {
 }
 
 base = tag.iconAndLabel {
-  name: "Icon and Label",
   left: 774px,
   top: 1091px,
   border[0].visible: .false,

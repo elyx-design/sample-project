@@ -5,7 +5,6 @@ import "components/header.elyx" as header
 import "components/tag.elyx" as tag
 
 export videoPlayer = frame {
-  name: "Video Player",
   left: 368px,
   top: 405px,
   width: 643px,
@@ -33,14 +32,12 @@ export videoPlayer = frame {
 }
 
 headerRow = frame {
-  name: "Video Header",
   width: 100%,
   layout: {justify-content: .space-between},
   children: [eventHeader, liveStatus]
 }
 
 eventHeader = header.smallLeft {
-  name: "Header S (Left)",
   left: 501px,
   top: 250px,
 
@@ -56,7 +53,6 @@ eventHeader = header.smallLeft {
 }
 
 liveStatus = tag.status {
-  name: "Status",
   left: 806px,
   top: 450px,
   fill[0].color: rgb(0%, 100%, 43.07%, 54%),
@@ -72,7 +68,6 @@ liveStatus = tag.status {
 }
 
 controls = playbackControl.playbackControl {
-  name: "Playback Control",
   left: 0px,
   top: 809px,
   width: 100%,

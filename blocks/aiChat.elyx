@@ -6,7 +6,6 @@ import "components/appTopBar.elyx" as appTopBar
 import "icons/24 pixels/robot-24.svg" as robot24
 
 export aiChat = cardBackground.transparent {
-  name: "Ai Chat",
   left: 544px,
   top: 368px,
   width: 550px,
@@ -21,10 +20,9 @@ export aiChat = cardBackground.transparent {
   overrides: [insert(topBar, after = .nil), insert(chatBody, after = topBar)]
 }
 
-topBar = appTopBar.appTopBar {name: "App Top Bar", left: 598px, top: 208px, fill[0].visible: .false}
+topBar = appTopBar.appTopBar {left: 598px, top: 208px, fill[0].visible: .false}
 
 chatBody = frame {
-  name: "Chat Body",
   width: 100%,
   height: 100%,
   layout: {
@@ -38,14 +36,12 @@ chatBody = frame {
 }
 
 messageArea = frame {
-  name: "Message Area",
   width: 100%,
   layout: {direction: .column, item-gap: 20px},
   children: [messageThread, assistantAvatar]
 }
 
 messageThread = frame {
-  name: "Message Thread",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
@@ -55,7 +51,6 @@ messageThread = frame {
 }
 
 userMessage = chatBubble.user {
-  name: "User Message",
   left: 1066px,
   top: 464px,
   layout.justify-content: .end,
@@ -66,7 +61,6 @@ userMessage = chatBubble.user {
 }
 
 assistantResponse = text {
-  name: "Assistant Response",
   left: 0px,
   top: 299px,
   width: 100%,
@@ -76,7 +70,6 @@ assistantResponse = text {
 }
 
 assistantAvatar = frame {
-  name: "Assistant Avatar",
   left: 0px,
   top: 227px,
   width: 24px,
@@ -87,17 +80,9 @@ assistantAvatar = frame {
   children: assistantIcon
 }
 
-assistantIcon = icon {
-  name: "Assistant Icon",
-  left: 0px,
-  top: 0px,
-  width: 526px,
-  height: 24px,
-  contents: robot24
-}
+assistantIcon = icon {left: 0px, top: 0px, width: 526px, height: 24px, contents: robot24}
 
 chatInput = textBox.chatInput {
-  name: "Chat Input",
   left: 0px,
   top: 1178px,
   width: 100%,

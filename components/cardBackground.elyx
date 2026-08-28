@@ -3,7 +3,6 @@ import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 
 export base = frame {
-  name: "Card Background",
   left: 80px,
   top: 467px,
   width: 100%,

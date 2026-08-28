@@ -20,7 +20,6 @@ import "icons/24 pixels/settings-24.svg" as settings24
 import "blocks/cardUpgrade.elyx" as cardUpgrade
 
 export sidebar = cardBackground.base {
-  name: "App Sidebar",
   left: -123px,
   top: 0px,
   width: .auto,
@@ -37,7 +36,6 @@ export sidebar = cardBackground.base {
 
 @variant("sidebar (Contracted)")
 compact = frame {
-  name: "sidebar (Contracted)",
   left: 539.2797px,
   top: 0px,
   width: 60px,
@@ -50,23 +48,20 @@ compact = frame {
 }
 
 compactContent = frame {
-  name: "Compact Sidebar Content",
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 24px},
   children: [compactLogo, compactNavigation]
 }
 
-compactLogo = logo.medium {name: "Logo M (36)", left: 0px, top: 278px}
+compactLogo = logo.medium {left: 0px, top: 278px}
 
 compactNavigation = frame {
-  name: "Compact Navigation",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   children: [home, create, folder, cloud, history]
 }
 
 home = button.mediumPlainIcon {
-  name: "Home Button",
   left: 8.72px,
   top: 108px,
 
@@ -76,7 +71,6 @@ home = button.mediumPlainIcon {
 }
 
 create = button.mediumPlainIcon {
-  name: "Create Button",
   left: 28.72px,
   top: 128px,
 
@@ -86,7 +80,6 @@ create = button.mediumPlainIcon {
 }
 
 folder = button.mediumPlainIcon {
-  name: "Folder Button",
   left: 28.72px,
   top: 128px,
 
@@ -96,7 +89,6 @@ folder = button.mediumPlainIcon {
 }
 
 cloud = button.mediumPlainIcon {
-  name: "Cloud Button",
   left: 28.72px,
   top: 164px,
 
@@ -106,7 +98,6 @@ cloud = button.mediumPlainIcon {
 }
 
 history = button.mediumPlainIcon {
-  name: "History Button",
   left: 28.72px,
   top: 128px,
 
@@ -115,10 +106,9 @@ history = button.mediumPlainIcon {
   }
 }
 
-profileAvatar = avatar.smallPhoto {name: "Avatar S (Photo)", left: 550px, top: 402px}
+profileAvatar = avatar.smallPhoto {left: 550px, top: 402px}
 
 export sideBarMenu = frame {
-  name: "Frame",
   left: -354px,
   top: 0px,
   width: 152px,
@@ -130,7 +120,6 @@ export sideBarMenu = frame {
 }
 
 shape1 = icon {
-  name: "activity.svg",
   left: 0px,
   top: 0px,
   width: 24px,
@@ -140,7 +129,6 @@ shape1 = icon {
 }
 
 text2 = text {
-  name: "Menu",
   left: 31px,
   top: 7px,
   fill: colors.colors.black20,
@@ -165,7 +153,6 @@ selected = sideBarMenu {
 }
 
 CardUpgrade = cardUpgrade.CardUpgrade {
-  name: "Frame",
   left: 0px,
   top: -177px,
   width: 100%,
@@ -176,7 +163,6 @@ CardUpgrade = cardUpgrade.CardUpgrade {
 }
 
 Content = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, item-gap: 24px},
   overflow: .visible,
@@ -186,7 +172,6 @@ Content = frame {
 }
 
 frame3 = frame {
-  name: "Grouped Stack",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -197,7 +182,6 @@ frame3 = frame {
 }
 
 frame1 = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {align-items: .center, item-gap: 12px},
   overflow: .visible,
@@ -205,19 +189,11 @@ frame1 = frame {
   children: [small, text1]
 }
 
-small = logo.medium {name: "Logo M (36)", left: 118px, top: -37px}
+small = logo.medium {left: 118px, top: -37px}
 
-text1 = text {
-  name: "Text",
-  left: 198px,
-  top: 36px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "SemiBold"
-}
+text1 = text {left: 198px, top: 36px, fill: .black, contents: "Overleaf", font-style: "SemiBold"}
 
 horizontal = divider.horizontal {
-  name: "Divider (White)",
   left: 0px,
   top: 66px,
   width: 100%,
@@ -225,10 +201,9 @@ horizontal = divider.horizontal {
   padding-bottom: 0px
 }
 
-Selector_2 = selector.Selector {name: "Frame", left: 0px, top: 121px, width: 100%}
+Selector_2 = selector.Selector {left: 0px, top: 121px, width: 100%}
 
 frame2 = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   overflow: .visible,
@@ -236,7 +211,6 @@ frame2 = frame {
 }
 
 sideBarMenu_2 = sideBarMenu {
-  name: "Frame",
   left: 0px,
   top: 34px,
   width: 100%,
@@ -251,7 +225,6 @@ sideBarMenu_2 = sideBarMenu {
 }
 
 sideBarMenu_3 = selected {
-  name: "Frame Variant",
   left: 0px,
   top: 54px,
   width: 100%,
@@ -266,7 +239,6 @@ sideBarMenu_3 = selected {
 }
 
 sideBarMenu_4 = sideBarMenu {
-  name: "Frame",
   left: 0px,
   top: 74px,
   width: 100%,
@@ -277,7 +249,6 @@ sideBarMenu_4 = sideBarMenu {
 }
 
 sideBarMenu_5 = sideBarMenu {
-  name: "Frame",
   left: 20px,
   top: 94px,
   width: 100%,
@@ -292,7 +263,6 @@ sideBarMenu_5 = sideBarMenu {
 }
 
 sideBarMenu_6 = sideBarMenu {
-  name: "Frame",
   left: 20px,
   top: 134px,
   width: 100%,

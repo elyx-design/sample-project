@@ -5,7 +5,6 @@ import "components/avatarGroup.elyx" as profileGroup
 import "images/background/desert.png" as desert
 
 export signInScreen = frame {
-  name: "Sign In Screen",
   left: -16px,
   top: 147px,
   width: 1280px,
@@ -17,7 +16,6 @@ export signInScreen = frame {
 }
 
 content = frame {
-  name: "Sign In Content",
   left: 0px,
   top: 0px,
   width: 1280px,
@@ -27,10 +25,9 @@ content = frame {
   children: [signInForm, activeUsers, footerLinks]
 }
 
-signInForm = AuthForm.signInForm {name: "Sign In Form", left: 373px, top: 389px, width: 32%}
+signInForm = AuthForm.signInForm {left: 373px, top: 389px, width: 32%}
 
 activeUsers = profileGroup.labelBottom {
-  name: "Active Users",
   left: 600px,
   top: 962px,
 
@@ -41,7 +38,6 @@ activeUsers = profileGroup.labelBottom {
 }
 
 footerLinks = frame {
-  name: "Footer Links",
   left: 569.5px,
   top: 0px,
   width: 141px,
@@ -51,7 +47,6 @@ footerLinks = frame {
 }
 
 privacy = text {
-  name: "Privacy",
   fill: Colors.colors.white100,
   contents: "Privacy",
   font-size: Typography.typography.labelM,
@@ -60,7 +55,6 @@ privacy = text {
 }
 
 terms = text {
-  name: "Terms",
   fill: Colors.colors.white100,
   contents: "Terms",
   font-size: Typography.typography.labelM,
@@ -69,7 +63,6 @@ terms = text {
 }
 
 help = text {
-  name: "Help",
   fill: Colors.colors.white100,
   contents: "Help",
   font-size: Typography.typography.labelM,

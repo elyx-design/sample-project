@@ -3,7 +3,6 @@ import "tokens/spacing.elyx" as spacing
 import "tokens/radius.elyx" as radius
 
 export horizontal = frame {
-  name: "Divider (White)",
   left: 878px,
   top: 552px,
   width: 16px,
@@ -14,7 +13,6 @@ export horizontal = frame {
 }
 
 horizontalLine = shape {
-  name: "Divider Line",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -25,7 +23,6 @@ horizontalLine = shape {
 }
 
 export vertical = frame {
-  name: "Divider (vertical)",
   left: 919px,
   top: 552px,
   height: spacing.spacing.heightM,
@@ -36,7 +33,6 @@ export vertical = frame {
 }
 
 verticalLine = shape {
-  name: "Vertical Divider Line",
   left: 0px,
   top: 0px,
   width: 0.5px,

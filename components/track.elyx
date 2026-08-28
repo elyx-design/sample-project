@@ -4,7 +4,6 @@ import "tokens/colors.elyx" as colors
 import "icons/24 pixels/calendar-24.svg" as calendar24
 
 export track = frame {
-  name: "Video Track",
   left: 639.5px,
   top: 518px,
   width: 361px,
@@ -18,7 +17,6 @@ export track = frame {
 }
 
 content = frame {
-  name: "Track Content",
   width: 100%,
   height: 100%,
   layout: {justify-content: .space-between, align-items: .center},
@@ -26,7 +24,6 @@ content = frame {
 }
 
 left = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center},
   overflow: .visible,
@@ -34,7 +31,6 @@ left = frame {
 }
 
 startHandle = frame {
-  name: "Start Trim Handle",
   left: 281px,
   top: 24px,
   width: 12px,
@@ -44,7 +40,6 @@ startHandle = frame {
 }
 
 startGrip = shape {
-  name: "Start Grip",
   left: 932px,
   top: 532px,
   width: 2px,
@@ -55,14 +50,12 @@ startGrip = shape {
 }
 
 label = frame {
-  name: "Track Label",
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
   children: [typeIcon, trackName]
 }
 
 typeIcon = icon {
-  name: "Track Type Icon",
   left: 810px,
   top: 522px,
   width: 24px,
@@ -72,7 +65,6 @@ typeIcon = icon {
 }
 
 trackName = text {
-  name: "Track Name",
   left: 263px,
   top: 553px,
   fill: colors.colors.black20,
@@ -82,7 +74,6 @@ trackName = text {
 }
 
 label_2 = frame {
-  name: "Track Label",
   left: 128px,
   top: 20px,
   height: 100%,
@@ -91,7 +82,6 @@ label_2 = frame {
 }
 
 typeIcon_2 = icon {
-  name: "Track Type Icon",
   left: 810px,
   top: 522px,
   width: 24px,
@@ -101,7 +91,6 @@ typeIcon_2 = icon {
 }
 
 trackName_2 = text {
-  name: "8 Jul",
   left: 263px,
   top: 553px,
   fill: colors.colors.blackAlpha25,
@@ -111,7 +100,6 @@ trackName_2 = text {
 }
 
 endHandle = frame {
-  name: "End Trim Handle",
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
@@ -119,7 +107,6 @@ endHandle = frame {
 }
 
 endGrip = shape {
-  name: "End Grip",
   left: 932px,
   top: 532px,
   width: 2px,
