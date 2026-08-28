@@ -71,29 +71,29 @@ Status_mmQ1DabaWR = tag.status {
   }
 }
 
-PlaybackControl_ajqA0M9W3s = playbackControl.PlaybackControl_YxsKbPQMe8 {
+PlaybackControl_ajqA0M9W3s = playbackControl.playbackControl {
   name: "Playback Control",
   left: 0px,
   top: 809px,
   width: 100%,
 
-  playbackControl.GroupedStack_rdVoRETh1T.Icon_clXC1PW6fA.button.smallIconGlyph {
+  playbackControl.tools.moreButton.button.smallIconGlyph {
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  playbackControl.GroupedStack_rdVoRETh1T.Icon_teDPq1aBTb.button.smallIconGlyph {
+  playbackControl.tools.likeButton.button.smallIconGlyph {
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  playbackControl.GroupedStack_rdVoRETh1T.Icon_4slh7sL8pH.button.smallIconGlyph {
+  playbackControl.tools.settingsButton.button.smallIconGlyph {
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  playbackControl.Text_wZsdhlOFZW {
+  playbackControl.playbackTime {
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  playbackControl.GroupedStack_q0ILkfiHMO.Icon_5hh58LFCp5.button.smallIconGlyph {
+  playbackControl.scrubber.playButton.button.smallIconGlyph {
     fill[0].color: colors.colors.whiteAlpha70
   }
 }

@@ -7,7 +7,7 @@ import "icons/20 pixels/more-20.svg" as more20
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/settings-20.svg" as settings20
 
-export PlaybackControl_YxsKbPQMe8 = cardBackground.none {
+export playbackControl = cardBackground.none {
   name: "Playback Control",
   left: 669px,
   top: 522px,
@@ -22,20 +22,20 @@ export PlaybackControl_YxsKbPQMe8 = cardBackground.none {
   layout.direction: .row,
   layout.item-gap: 12px,
   overrides: [
-    insert(GroupedStack_q0ILkfiHMO, after = .nil),
-    insert(Text_wZsdhlOFZW, after = GroupedStack_q0ILkfiHMO),
-    insert(GroupedStack_rdVoRETh1T, after = Text_wZsdhlOFZW)
+    insert(scrubber, after = .nil),
+    insert(playbackTime, after = scrubber),
+    insert(tools, after = playbackTime)
   ]
 }
 
-GroupedStack_rdVoRETh1T = frame {
+tools = frame {
   name: "Tools",
   height: 100%,
   layout: {align-items: .center},
-  children: [Icon_4slh7sL8pH, Icon_teDPq1aBTb, Icon_clXC1PW6fA]
+  children: [settingsButton, likeButton, moreButton]
 }
 
-Icon_4slh7sL8pH = button.smallIcon {
+settingsButton = button.smallIcon {
   name: "Settings Button",
   left: 264.5px,
   top: 8.5px,
@@ -45,7 +45,7 @@ Icon_4slh7sL8pH = button.smallIcon {
   }
 }
 
-Icon_teDPq1aBTb = button.smallIcon {
+likeButton = button.smallIcon {
   name: "Like Button",
   left: 284.5px,
   top: 28.5px,
@@ -55,7 +55,7 @@ Icon_teDPq1aBTb = button.smallIcon {
   }
 }
 
-Icon_clXC1PW6fA = button.smallIcon {
+moreButton = button.smallIcon {
   name: "More Button",
   left: 284.5px,
   top: 28.5px,
@@ -65,7 +65,7 @@ Icon_clXC1PW6fA = button.smallIcon {
   }
 }
 
-Text_wZsdhlOFZW = text {
+playbackTime = text {
   name: "Playback Time",
   left: 722px,
   top: 543px,
@@ -74,15 +74,15 @@ Text_wZsdhlOFZW = text {
   font-size: 12
 }
 
-GroupedStack_q0ILkfiHMO = frame {
+scrubber = frame {
   name: "Playback Scrubber",
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
-  children: [Icon_5hh58LFCp5, Slider_QNPbheVsY9]
+  children: [playButton, progressSlider]
 }
 
-Icon_5hh58LFCp5 = button.smallIcon {
+playButton = button.smallIcon {
   name: "Play Button",
   left: 737px,
   top: 580px,
@@ -92,4 +92,4 @@ Icon_5hh58LFCp5 = button.smallIcon {
   }
 }
 
-Slider_QNPbheVsY9 = slider.base {name: "Slider", left: 0px, top: 636px, width: 100%}
+progressSlider = slider.base {name: "Slider", left: 0px, top: 636px, width: 100%}
