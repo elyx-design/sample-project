@@ -63,7 +63,7 @@ Text_pliu07xLCQ = text {
   line-height: 1.5
 }
 
-Stats_IM8Fu5LkU6 = stats.Stats_SAGlIolZIe {
+Stats_IM8Fu5LkU6 = stats.stats {
   name: "Stats",
   left: 0px,
   top: 157px,
@@ -72,19 +72,19 @@ Stats_IM8Fu5LkU6 = stats.Stats_SAGlIolZIe {
   padding-left: 24px,
   padding-bottom: 20px,
   padding-right: 24px,
-  overrides: [remove(stats.DividerWhite_Wbr0ZiRmxz), remove(stats.DividerWhite_BvfgQ0x6CS)],
+  overrides: [remove(stats.bottomDivider), remove(stats.topDivider)],
 
-  stats.Frame_JZbGEcdAyx.Dividervertical_tyQgNFTlxv {
+  stats.row.ratingDivider {
     top: 0px,
     height: 100%
   }
 
-  stats.Frame_JZbGEcdAyx.Dividervertical_kxWxSCimLZ {
+  stats.row.pagesDivider {
     top: 0px,
     height: 100%
   }
 
-  stats.Frame_JZbGEcdAyx.Dividervertical_9c0N5aibGz {
+  stats.row.booksDivider {
     top: 0px,
     height: 100%
   }

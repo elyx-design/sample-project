@@ -295,19 +295,19 @@ layer_0 = profileCard.profileCard_vlvneaI {
   width: 100%,
   fill[0].color: rgb(29.8456%, 50.9697%, 17.88%, 50%),
 
-  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_tiqgxwz6GB.AvrRating_323yTc7AQH {
+  profileCard.Stats_IM8Fu5LkU6.stats.row.shelves.shelvesLabel {
     fill[0].color: Colors.colors.blackAlpha50
   }
 
-  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_ySVSgouDo5.AvrRating_35SpwnbsZt {
+  profileCard.Stats_IM8Fu5LkU6.stats.row.rating.ratingLabel {
     fill[0].color: Colors.colors.blackAlpha50
   }
 
-  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_K3EsLWJmUO.PagesRead_jDu4nkUS3l {
+  profileCard.Stats_IM8Fu5LkU6.stats.row.pages.pagesLabel {
     fill[0].color: Colors.colors.blackAlpha50
   }
 
-  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_v3hR4sAYg5.Livrosem20_OIV9rtYiSu {
+  profileCard.Stats_IM8Fu5LkU6.stats.row.books.booksLabel {
     fill[0].color: Colors.colors.blackAlpha50
   }
 }
