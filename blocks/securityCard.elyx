@@ -16,7 +16,7 @@ header_HZdRlZc = header2.header_Pp67Y8c {
 }
 
 export securityCard_HT5T2Qj = cardBackground.cardBackground_zXouRyz {
-  name: "securityCard",
+  name: "Security Card",
   left: 0px,
   top: 263px,
   width: 100%,
@@ -29,6 +29,7 @@ export securityCard_HT5T2Qj = cardBackground.cardBackground_zXouRyz {
 }
 
 settingRow_O = settingRow.settingRow_HQWVNjz {
+  name: "Password Setting",
   left: 0px,
   top: 92px,
   width: 100%,
@@ -48,6 +49,7 @@ settingRow_O = settingRow.settingRow_HQWVNjz {
 }
 
 settingRow_u = settingRow.settingRow_HQWVNjz {
+  name: "Two-Factor Authentication Setting",
   left: 20px,
   top: 112px,
   width: 100%,

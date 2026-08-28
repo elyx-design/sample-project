@@ -16,7 +16,7 @@ export Frame_p5lb0Fok5v = frame {
 }
 
 book1png_QYfzTFLsES = shape {
-  name: "book1.png",
+  name: "Book Cover",
   left: 51.0859px,
   top: 72px,
   width: 155px,
@@ -54,7 +54,7 @@ ProductVariant = Frame_p5lb0Fok5v {
 }
 
 book2png = shape {
-  name: "book2.png",
+  name: "Book Cover",
   left: 10.85px,
   top: -5315.57px,
   width: 155px,
@@ -64,7 +64,7 @@ book2png = shape {
 }
 
 book4png = shape {
-  name: "book4.png",
+  name: "Book Cover",
   left: 46.17px,
   top: 26.7px,
   width: 155px,
@@ -74,7 +74,7 @@ book4png = shape {
 }
 
 book3png = shape {
-  name: "book3.png",
+  name: "Book Cover",
   left: 20.8567px,
   top: 23.0153px,
   width: 155px,
@@ -84,7 +84,7 @@ book3png = shape {
 }
 
 book5png = shape {
-  name: "book5.png",
+  name: "Book Cover",
   left: 62.03px,
   top: 19.46px,
   width: 155px,

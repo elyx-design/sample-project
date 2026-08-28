@@ -1,7 +1,7 @@
 import "tokens/colors.elyx" as colors
 
 Frame = frame {
-  name: "Frame",
+  name: "Menu Item",
   left: 708px,
   top: 502px,
   layout: {justify-content: .center, align-items: .center, item-gap: 8px},

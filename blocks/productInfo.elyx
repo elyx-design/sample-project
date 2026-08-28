@@ -14,7 +14,7 @@ export Frame_52yyDIfE8A = frame {
 Product_GC0ZTYHiG1 = product.Frame_p5lb0Fok5v {name: "Product", left: 0px, top: 0px, width: 100%}
 
 GroupedStack_eaALrce3Cz = frame {
-  name: "Grouped Stack",
+  name: "Product Details",
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
   overflow: .visible,
@@ -22,7 +22,7 @@ GroupedStack_eaALrce3Cz = frame {
 }
 
 GroupedStack_cnFQRvC8hV = frame {
-  name: "Grouped Stack",
+  name: "Product Copy",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   children: [ProductName_jJiiEYjEVj, Subtitle_8OnRopnmJX]

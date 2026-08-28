@@ -17,7 +17,7 @@ export cardBackgroundSolid_MeUe9s7jIe = cardBackground.cardBackground_zXouRyz {
 }
 
 GroupedStack_iigKZjZVS6 = frame {
-  name: "Grouped Stack",
+  name: "Book Details",
   width: 100%,
   height: 100%,
   layout: {direction: .column, item-gap: 16px},
@@ -25,7 +25,7 @@ GroupedStack_iigKZjZVS6 = frame {
 }
 
 Text_dhOnMd2nDQ = text {
-  name: "Text",
+  name: "Page Progress",
   left: 0px,
   top: 62px,
   fill: colors.colors.blackAlpha25,
@@ -42,7 +42,7 @@ GroupedStack_rXdP0M90Cz = frame {
 }
 
 Text_PDADJXXB19 = text {
-  name: "Text",
+  name: "Book Title",
   left: 864px,
   top: 413px,
   fill: .black,
@@ -52,7 +52,7 @@ Text_PDADJXXB19 = text {
 }
 
 Text_7W8VkGS5qo = text {
-  name: "Text",
+  name: "Book Author",
   left: 844px,
   top: 393px,
   fill: colors.colors.blackAlpha50,
@@ -62,7 +62,7 @@ Text_7W8VkGS5qo = text {
 }
 
 layer_OysMAZRDRZ = frame {
-  name: "Frame",
+  name: "Reading Progress",
   left: 0px,
   top: 98px,
   width: 100%,
@@ -72,14 +72,14 @@ layer_OysMAZRDRZ = frame {
 }
 
 GroupedStack_WMsAEHpASp = frame {
-  name: "Grouped Stack",
+  name: "Progress Labels",
   width: 100%,
   layout: {item-gap: 12px},
   children: [Text_44VLt1cTsX, Text_VisIWELcEt]
 }
 
 Text_44VLt1cTsX = text {
-  name: "Text",
+  name: "Progress Label",
   left: 0px,
   top: 16px,
   width: 100%,
@@ -91,7 +91,7 @@ Text_44VLt1cTsX = text {
 }
 
 Text_VisIWELcEt = text {
-  name: "Text",
+  name: "Progress Value",
   left: 20px,
   top: 36px,
   width: .auto,
@@ -113,7 +113,7 @@ GroupedStack_iaZBymztXh = frame {
 }
 
 Text_AuIsU93dcQ = text {
-  name: "Text",
+  name: "Notes Label",
   left: 652px,
   top: 688px,
   fill: .black,
@@ -123,7 +123,7 @@ Text_AuIsU93dcQ = text {
 }
 
 Text_8hdD9fYPsD = text {
-  name: "Text",
+  name: "Notes Body",
   left: 0px,
   top: 708px,
   width: 100%,

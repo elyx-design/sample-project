@@ -5,7 +5,7 @@ import "tokens/radius.elyx" as Radius
 
 
 export sidebarHeader_XE3kaHH = frame {
-  name: "sidebarHeader",
+  name: "Workspace Header",
   left: 16px,
   top: 16px,
   width: .auto,

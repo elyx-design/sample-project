@@ -33,7 +33,7 @@ export MenuList_6OjbR9CAsW = cardBackground.cardBackground_zXouRyz {
 }
 
 layer_pYDBDO3QeP = frame {
-  name: "Top",
+  name: "Menu Header",
   left: 0px,
   top: 108.5px,
   width: 100%,
@@ -70,21 +70,21 @@ SegmentedControl_FHdeL5SuEV = segmentedControl.SegmentedControlMVariant {
 }
 
 GroupedStack_Wtlz5W8Cmm = frame {
-  name: "Grouped Stack",
+  name: "Menu Sections",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   children: [Menu_OmCVZ7XoTy, Divider_7bOUsmBic5, Menu_Z86v8Yz2p0]
 }
 
 Menu_OmCVZ7XoTy = frame {
-  name: "Menu",
+  name: "Collaboration Menu",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   children: [Row_dpI5iHhQJU, Selected_rskLcIWzCu, Row_uaorkPnJJf]
 }
 
 Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
-  name: "Row",
+  name: "Comments Row",
   left: 0px,
   top: 0px,
 
@@ -101,7 +101,7 @@ Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
 }
 
 Selected_rskLcIWzCu = ListRow.RowVariant_7 {
-  name: "Selected",
+  name: "Activity Row",
   left: 20px,
   top: 20px,
 
@@ -119,7 +119,7 @@ Selected_rskLcIWzCu = ListRow.RowVariant_7 {
 }
 
 Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
-  name: "Row",
+  name: "Notes Row",
   left: 20px,
   top: 56px,
 
@@ -140,10 +140,10 @@ Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
   }
 }
 
-Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {name: "Divider", left: 0px, top: 0px, width: 100%}
+Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {name: "Menu Divider", left: 0px, top: 0px, width: 100%}
 
 Menu_Z86v8Yz2p0 = frame {
-  name: "Menu",
+  name: "Workspace Menu",
   left: 36px,
   top: 243px,
   width: 100%,
@@ -152,7 +152,7 @@ Menu_Z86v8Yz2p0 = frame {
 }
 
 Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
-  name: "Row",
+  name: "Database Row",
   left: 0px,
   top: 0px,
 
@@ -174,7 +174,7 @@ Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
 }
 
 Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
-  name: "Row",
+  name: "Settings Row",
   left: 20px,
   top: 56px,
 
@@ -196,17 +196,17 @@ Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
 }
 
 GroupedStack_PhTktSdJeE = frame {
-  name: "Footer",
+  name: "Footer Actions",
   width: 100%,
   layout: {justify-content: .space-between},
   padding: 16px,
   children: [ButtonM36_QkDpQUOUSJ, GroupedStack_TEA9Nb4ecN]
 }
 
-ButtonM36_QkDpQUOUSJ = button.ButtonVariant_T {name: "Danger", left: 213px, top: 242px}
+ButtonM36_QkDpQUOUSJ = button.ButtonVariant_T {name: "Danger Button", left: 213px, top: 242px}
 
 GroupedStack_TEA9Nb4ecN = frame {
-  name: "Right",
+  name: "Secondary Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -214,7 +214,7 @@ GroupedStack_TEA9Nb4ecN = frame {
 }
 
 Icon_aibAeY7M3f = button.ButtonM36Variant_h {
-  name: "Icon",
+  name: "Share Button",
   left: 233px,
   top: 262px,
 
@@ -224,7 +224,7 @@ Icon_aibAeY7M3f = button.ButtonM36Variant_h {
 }
 
 Icon_kecQYvY0Mv = button.ButtonM36Variant_h {
-  name: "Icon",
+  name: "More Button",
   left: 253px,
   top: 282px,
 

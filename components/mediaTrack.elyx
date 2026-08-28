@@ -16,14 +16,14 @@ export VideoTrack_SXeZ1r8lmI = frame {
 }
 
 GroupedStack_md0TiVD0Q9 = frame {
-  name: "Grouped Stack",
+  name: "Track Content",
   height: 100%,
   layout: {align-items: .center},
   children: [handle_tjiMVlGnIE, GroupedStack_8jIVI4WWex]
 }
 
 handle_tjiMVlGnIE = frame {
-  name: "handle",
+  name: "Start Trim Handle",
   left: 281px,
   top: 24px,
   width: 12px,
@@ -33,7 +33,7 @@ handle_tjiMVlGnIE = frame {
 }
 
 Rectangle_Yf2tiQKCBX = shape {
-  name: "Rectangle",
+  name: "Start Grip",
   left: 932px,
   top: 532px,
   width: 2px,
@@ -44,14 +44,14 @@ Rectangle_Yf2tiQKCBX = shape {
 }
 
 GroupedStack_8jIVI4WWex = frame {
-  name: "Grouped Stack",
+  name: "Track Label",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
   children: [direct24svg_srC1L2hQr9, Text_zUhul68a5E]
 }
 
 direct24svg_srC1L2hQr9 = icon {
-  name: "direct-24.svg",
+  name: "Track Type Icon",
   left: 810px,
   top: 522px,
   width: 24px,
@@ -61,7 +61,7 @@ direct24svg_srC1L2hQr9 = icon {
 }
 
 Text_zUhul68a5E = text {
-  name: "Track name",
+  name: "Track Name",
   left: 263px,
   top: 553px,
   fill: colors.colors.blackAlpha50,
@@ -71,7 +71,7 @@ Text_zUhul68a5E = text {
 }
 
 handle_n70EJtu1KB = frame {
-  name: "handle",
+  name: "End Trim Handle",
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
@@ -79,7 +79,7 @@ handle_n70EJtu1KB = frame {
 }
 
 Rectangle_CHICkZNoS6 = shape {
-  name: "Rectangle",
+  name: "End Grip",
   left: 932px,
   top: 532px,
   width: 2px,

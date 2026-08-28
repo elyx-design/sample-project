@@ -5,7 +5,7 @@ import "components/avatar.elyx" as userAvatar
 import "components/header.elyx" as header
 
 export userSummary_3nStch3 = frame {
-  name: "userSummary",
+  name: "User Summary",
   left: 16px,
   top: 888px,
   width: 100%,
@@ -65,7 +65,7 @@ export UserSummaryM_3TgjJsJRgL = frame {
 }
 
 AvatarMVariant_96PsSx7qfC = userAvatar.AvatarMVariant {
-  name: "Avatar M Variant",
+  name: "User Avatar",
   left: 0px,
   top: 0px
 }

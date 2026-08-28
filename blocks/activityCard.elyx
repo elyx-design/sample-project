@@ -4,7 +4,7 @@ import "components/header.elyx" as header
 import "components/activityRow.elyx" as activityRow
 
 export activityCard_Qrr8IWU = frame {
-  name: "activityCard",
+  name: "Activity Card",
   left: 0px,
   top: 433px,
   width: 100%,
@@ -36,23 +36,23 @@ activityRow_2 = activityRow.activityRow_ZaTUcpO {
 
 
 
-  
 }
 
 activityRow_a = activityRow.activityRow_ZaTUcpO {
   left: 38px,
   top: 101px,
 
-  
 
-  
+
+
+
 }
 
 activityRow_v = activityRow.activityRow_ZaTUcpO {
   left: 38px,
   top: 151px,
 
- 
 
- 
+
+
 }

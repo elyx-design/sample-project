@@ -36,7 +36,7 @@ Welcome = frame {
 }
 
 GroupedStack = frame {
-  name: "Grouped Stack",
+  name: "Intro Copy",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   corner-radius: 0px,
@@ -45,7 +45,7 @@ GroupedStack = frame {
 }
 
 WelcometotheElyx = text {
-  name: "Welcome to the Elyx ",
+  name: "Welcome Heading",
   left: 0px,
   top: 0px,
   fill: rgb(27.3%, 20.74%, 2.7%),
@@ -56,7 +56,7 @@ WelcometotheElyx = text {
 }
 
 Thisdocumentcontai = text {
-  name: "This document contai",
+  name: "Welcome Description",
   left: 20px,
   top: 20px,
   fill: rgb(27.45%, 20.78%, 2.7451%),
@@ -67,7 +67,7 @@ Thisdocumentcontai = text {
 }
 
 Asyoucanseeinth = text {
-  name: "As you can see in th",
+  name: "Project Structure Overview",
   left: 0px,
   top: 40px,
   width: 100%,
@@ -79,14 +79,14 @@ Asyoucanseeinth = text {
 }
 
 GroupedStack_T = frame {
-  name: "Grouped Stack",
+  name: "Scaffold Sections",
   width: 100%,
   layout: {item-gap: 20px},
   children: [Frame_J, Frame_j, Frame_K]
 }
 
 Frame_J = frame {
-  name: "Frame",
+  name: "Components Overview Card",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -100,7 +100,7 @@ Frame_J = frame {
 }
 
 COMPONENTS = text {
-  name: "COMPONENTS",
+  name: "Components Label",
   left: 69px,
   top: 45px,
   fill: rgb(62%, 38.23%, 0%),
@@ -112,7 +112,7 @@ COMPONENTS = text {
 }
 
 Componentsarethes = text {
-  name: "Components are the s",
+  name: "Components Description",
   left: 0px,
   top: 65px,
   width: 100%,
@@ -124,7 +124,7 @@ Componentsarethes = text {
 }
 
 Frame_j = frame {
-  name: "Frame",
+  name: "Blocks Overview Card",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -138,7 +138,7 @@ Frame_j = frame {
 }
 
 BLOCKS = text {
-  name: "BLOCKS",
+  name: "Blocks Label",
   left: 162.6667px,
   top: -17px,
   fill: rgb(62%, 38.23%, 0%),
@@ -150,7 +150,7 @@ BLOCKS = text {
 }
 
 Ifcomponentsareat = text {
-  name: "If components are at",
+  name: "Blocks Description",
   left: 0px,
   top: 71px,
   width: 100%,
@@ -162,7 +162,7 @@ Ifcomponentsareat = text {
 }
 
 Frame_K = frame {
-  name: "Frame",
+  name: "Screens Overview Card",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -176,7 +176,7 @@ Frame_K = frame {
 }
 
 SCREENS = text {
-  name: "SCREENS",
+  name: "Screens Label",
   left: 162.6667px,
   top: -25.5px,
   fill: rgb(62%, 38.23%, 0%),
@@ -188,7 +188,7 @@ SCREENS = text {
 }
 
 Screenswouldbethi = text {
-  name: "Screens would be thi",
+  name: "Screens Description",
   left: 54px,
   top: 0px,
   width: 100%,
@@ -201,7 +201,7 @@ Screenswouldbethi = text {
 }
 
 Alsointheproject = text {
-  name: "Also in the project ",
+  name: "Asset Folders Description",
   left: 20px,
   top: 60px,
   width: 100%,
@@ -213,7 +213,7 @@ Alsointheproject = text {
 }
 
 Finallyistheexis = text {
-  name: "Finally, is the exis",
+  name: "Tokens Folder Description",
   left: 20px,
   top: 301px,
   width: 100%,
@@ -223,8 +223,6 @@ Finallyistheexis = text {
   font-family: "Inter",
   font-style: "Regular"
 }
-
-
 
 Component = button.ButtonVariant_V {
   name: "Component",
@@ -241,7 +239,7 @@ Block = profileCard.profileCard_vlvneaI {
 }
 
 Frame = frame {
-  name: "Frame",
+  name: "Showcase Canvas",
   left: 282px,
   top: 2190px,
   width: 2399px,
@@ -251,7 +249,7 @@ Frame = frame {
 }
 
 layer_3 = cardInfo.cardBackgroundSolid_hxqOj5bsxM {
-  name: "cardBackground (Solid)",
+  name: "Review Card",
   left: 585px,
   top: 823px
 }
@@ -279,7 +277,7 @@ layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
 }
 
 Frame_y = frame {
-  name: "Frame",
+  name: "Live Event Preview",
   left: 1411px,
   top: 1369px,
   width: 816px,
@@ -298,7 +296,7 @@ Frame_y = frame {
 }
 
 Frame_Z = frame {
-  name: "Frame",
+  name: "Video Chat Layout",
   left: 0px,
   top: 0px,
   width: 100%,

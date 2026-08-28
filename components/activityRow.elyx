@@ -4,7 +4,7 @@ import "components/tag.elyx" as tag
 import "components/divider.elyx" as divider
 
 export activityRow_ZaTUcpO = frame {
-  name: "activityRow",
+  name: "Activity Row",
   left: -117px,
   top: -17px,
   width: 640px,
@@ -15,7 +15,7 @@ export activityRow_ZaTUcpO = frame {
 }
 
 GroupedStack_cnBluZ7u0I = frame {
-  name: "Grouped Stack",
+  name: "Activity Content",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -26,14 +26,14 @@ GroupedStack_cnBluZ7u0I = frame {
 }
 
 GroupedStack_e9HzR7GXlD = frame {
-  name: "Grouped Stack",
+  name: "Activity Details",
   height: 100%,
   layout: {align-items: .center},
   children: [GroupedStack_mcK4tU66QQ, GroupedStack_tRl1ourATY]
 }
 
 GroupedStack_mcK4tU66QQ = frame {
-  name: "Left",
+  name: "Activity Date",
   width: 96px,
   height: 100%,
   layout: {align-items: .center, item-gap: 32px},
@@ -41,7 +41,7 @@ GroupedStack_mcK4tU66QQ = frame {
 }
 
 ActivityTitle_9XlhOnW = text {
-  name: "2 Days",
+  name: "Date Label",
   left: 0px,
   top: 0px,
   width: 96px,
@@ -53,14 +53,14 @@ ActivityTitle_9XlhOnW = text {
 }
 
 GroupedStack_tRl1ourATY = frame {
-  name: "Grouped Stack",
+  name: "Activity Description",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
   children: [ActivityTime_dwkCnRe, Rated_h5p1S8iL1u]
 }
 
 ActivityTime_dwkCnRe = text {
-  name: "Rated:",
+  name: "Activity Verb",
   left: 79px,
   top: 5.5px,
   width: .auto,
@@ -72,7 +72,7 @@ ActivityTime_dwkCnRe = text {
 }
 
 Rated_h5p1S8iL1u = text {
-  name: "The Weight of Light ",
+  name: "Activity Detail",
   left: 99px,
   top: 25.5px,
   width: .auto,

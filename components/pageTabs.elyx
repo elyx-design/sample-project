@@ -4,7 +4,7 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
 export pageTabs_e60eQaG = frame {
-  name: "pageTabs",
+  name: "Page Tabs",
   left: 40px,
   top: 110px,
   width: 100%,
@@ -20,7 +20,7 @@ export pageTabs_e60eQaG = frame {
 layer = profileTab_iALjnpOMsR {name: "Profile Tab", left: 46px, top: 23px}
 
 ProfileTab_n = ProfileTabVariant_Z {
-  name: "Profile Tab Variant",
+  name: "Access Tab",
   left: 66px,
   top: 43px,
 
@@ -30,7 +30,7 @@ ProfileTab_n = ProfileTabVariant_Z {
 }
 
 ProfileTab_O = ProfileTabVariant_Z {
-  name: "Profile Tab Variant",
+  name: "Billing Tab",
   left: 138px,
   top: 43px,
 

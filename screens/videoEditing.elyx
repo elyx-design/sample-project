@@ -19,7 +19,7 @@ import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 
 module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
+  name: "Time Marker 8",
   left: 306.508px,
   top: 555px,
   width: 100%,
@@ -30,7 +30,7 @@ module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
 }
 
 module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
+  name: "Time Marker 6",
   left: 197.2858px,
   top: 535px,
   width: 100%,
@@ -41,7 +41,7 @@ module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
 }
 
 module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
+  name: "Time Marker 5",
   left: 133px,
   top: 535px,
   width: 100%,
@@ -52,7 +52,7 @@ module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
 }
 
 module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
+  name: "Time Marker 4",
   left: 58px,
   top: 535px,
   width: 100%,
@@ -63,7 +63,7 @@ module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
 }
 
 module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
+  name: "Time Marker 7",
   left: 217.2858px,
   top: 555px,
   width: 100%,
@@ -74,7 +74,7 @@ module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
 }
 
 module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
-  name: "module",
+  name: "Time Marker 9",
   left: 326.508px,
   top: 575px,
   width: 100%,
@@ -95,7 +95,7 @@ VideoEditing = frame {
 }
 
 layer_L = sidebar.sidebarVariant {
-  name: "sidebar (Contracted)",
+  name: "Editing Sidebar",
   left: 0px,
   top: 0px,
   height: 100%,
@@ -106,7 +106,7 @@ layer_L = sidebar.sidebarVariant {
 }
 
 Frame = frame {
-  name: "Frame",
+  name: "Editor Workspace",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -305,7 +305,7 @@ Tracks = frame {
 }
 
 GroupedStack = frame {
-  name: "Grouped Stack",
+  name: "Video Track Row",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
   padding-left: 80px,
@@ -351,7 +351,7 @@ VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
 }
 
 layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
-  name: "Video Track",
+  name: "Audio Track",
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
@@ -367,7 +367,7 @@ layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
 }
 
 VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
-  name: "Video Track",
+  name: "Title Track",
   left: -13207.5px,
   top: 808px,
   width: 59.2292%,

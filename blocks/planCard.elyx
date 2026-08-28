@@ -8,7 +8,7 @@ import "components/tag.elyx" as tag
 import "images/background/dots.jpg" as dots
 
 export planCard_LTK7mFiyqR = frame {
-  name: "planCard",
+  name: "Plan Card",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -21,7 +21,7 @@ export planCard_LTK7mFiyqR = frame {
 }
 
 GroupedStack_8RgNvW1K7p = frame {
-  name: "Grouped Stack",
+  name: "Plan Content",
   width: 100%,
   layout: {direction: .column, item-gap: 48px},
   overflow: .visible,
@@ -29,7 +29,7 @@ GroupedStack_8RgNvW1K7p = frame {
 }
 
 GroupedStack_v7dOnTlCXG = frame {
-  name: "Grouped Stack",
+  name: "Plan Summary",
   width: 100%,
   layout: {align-items: .center, item-gap: 12px},
   overflow: .visible,
@@ -37,7 +37,7 @@ GroupedStack_v7dOnTlCXG = frame {
 }
 
 layer_jRUrdXyqNT = frame {
-  name: "Frame",
+  name: "Plan Icon",
   left: 0px,
   top: 0px,
   width: 40px,
@@ -49,7 +49,7 @@ layer_jRUrdXyqNT = frame {
 }
 
 direct24svg_n2DErcwc3b = icon {
-  name: "direct-24.svg",
+  name: "Plan Glyph",
   left: 2px,
   top: 29px,
   width: 32px,
@@ -88,14 +88,14 @@ TagTransparent_vakzscXaBV = tag.TagTransparentVariant {
 }
 
 GroupedStack_1qB1LWpCrk = frame {
-  name: "Grouped Stack",
+  name: "Plan Details",
   width: 100%,
   layout: {direction: .column, item-gap: 24px},
   children: [GroupedStack_AcjlTuALWG, PlanFeatures_1JNxLt3]
 }
 
 GroupedStack_AcjlTuALWG = frame {
-  name: "Grouped Stack",
+  name: "Pricing Copy",
   left: 24px,
   top: 112px,
   width: 100%,
@@ -104,14 +104,14 @@ GroupedStack_AcjlTuALWG = frame {
 }
 
 GroupedStack_o4NcMhJdgN = frame {
-  name: "Grouped Stack",
+  name: "Price Row",
   width: 100%,
   layout: {align-items: .end, item-gap: 4px},
   children: [PlanPrice_ZJx9H3J, textLayer_QpGiRL9Axb]
 }
 
 PlanPrice_ZJx9H3J = text {
-  name: "$12",
+  name: "Plan Price",
   fill: Colors.colors.black20,
   contents: "$12",
   font-size: 40,
@@ -120,7 +120,7 @@ PlanPrice_ZJx9H3J = text {
 }
 
 textLayer_QpGiRL9Axb = text {
-  name: "/Month",
+  name: "Billing Period",
   left: 40px,
   top: 132px,
   height: 22px,
@@ -132,7 +132,7 @@ textLayer_QpGiRL9Axb = text {
 }
 
 Text_2UgTFIXDd4 = text {
-  name: "Free forever.\nFor in",
+  name: "Plan Description",
   left: 20px,
   top: 262px,
   fill: Colors.colors.black40,
@@ -155,13 +155,13 @@ PlanFeatures_1JNxLt3 = frame {
 }
 
 FeatureRow_o9Ggn3b = frame {
-  name: "Feature Row",
+  name: "Projects Feature",
   layout: {align-items: .center, item-gap: 8px},
   children: [dot20svg_UBu1JJ3Mhz, FeatureLabel_532ZQB6]
 }
 
 dot20svg_UBu1JJ3Mhz = icon {
-  name: "dot-20.svg",
+  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -179,7 +179,7 @@ FeatureLabel_532ZQB6 = text {
 }
 
 FeatureRow_vhCwOoGdUX = frame {
-  name: "Feature Row",
+  name: "Support Feature",
   left: 20px,
   top: 70px,
   layout: {align-items: .center, item-gap: 8px},
@@ -187,7 +187,7 @@ FeatureRow_vhCwOoGdUX = frame {
 }
 
 dot20svg_EGkYUT8Q6S = icon {
-  name: "dot-20.svg",
+  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -205,7 +205,7 @@ FeatureLabel_Y5ohvNoMbc = text {
 }
 
 FeatureRow_H8LMonj7HS = frame {
-  name: "Feature Row",
+  name: "Export Feature",
   left: 20px,
   top: 95px,
   layout: {align-items: .center, item-gap: 8px},
@@ -213,7 +213,7 @@ FeatureRow_H8LMonj7HS = frame {
 }
 
 dot20svg_fb1dOX04vs = icon {
-  name: "dot-20.svg",
+  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -231,7 +231,7 @@ FeatureLabel_7Fcm4yTYnx = text {
 }
 
 FeatureRow_doWHbnbzF0 = frame {
-  name: "Feature Row",
+  name: "Storage Feature",
   left: 40px,
   top: 115px,
   layout: {align-items: .center, item-gap: 8px},
@@ -239,7 +239,7 @@ FeatureRow_doWHbnbzF0 = frame {
 }
 
 dot20svg_XKe72G7Hvi = icon {
-  name: "dot-20.svg",
+  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -257,7 +257,7 @@ Basicexportoptions_NPd1l59Z9w = text {
 }
 
 layer_Z = button.button_43RxZnGr30 {
-  name: "Button M (36)",
+  name: "Manage Plan Button",
   left: 24px,
   top: 390px,
 

@@ -9,7 +9,7 @@ import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "components/logo.elyx" as logo
 
 export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
-  name: "chatBox",
+  name: "Chat Input",
   left: 511px,
   top: 471px,
   width: 462px,
@@ -27,7 +27,7 @@ export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
 }
 
 GroupedStack_r8fn3VtZgV = frame {
-  name: "Grouped Stack",
+  name: "Input Actions",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 8px},
   overflow: .visible,
@@ -35,7 +35,7 @@ GroupedStack_r8fn3VtZgV = frame {
 }
 
 Left_piKXpcEizh = frame {
-  name: "Left",
+  name: "Attachment Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -43,7 +43,7 @@ Left_piKXpcEizh = frame {
 }
 
 Icon_3KhD1tJCaV = button.ButtonS28Variant_0 {
-  name: "Icon",
+  name: "Add Button",
   left: 654px,
   top: 728px,
 
@@ -53,7 +53,7 @@ Icon_3KhD1tJCaV = button.ButtonS28Variant_0 {
 }
 
 ButtonS28_Shpp3Pqg3i = button.ButtonX28_unc1oz6mM6 {
-  name: "Button S (28)",
+  name: "Model Selector",
   left: 694px,
   top: 768px,
 
@@ -63,7 +63,7 @@ ButtonS28_Shpp3Pqg3i = button.ButtonX28_unc1oz6mM6 {
 }
 
 Icon_I0hFPNgQeU = button.ButtonS28Variant_0 {
-  name: "Icon",
+  name: "Search Button",
   left: 674px,
   top: 748px,
 
@@ -73,7 +73,7 @@ Icon_I0hFPNgQeU = button.ButtonS28Variant_0 {
 }
 
 Icon_XwaE41lB4a = button.ButtonS28Variant_0 {
-  name: "Icon",
+  name: "More Button",
   left: 694px,
   top: 768px,
 
@@ -83,7 +83,7 @@ Icon_XwaE41lB4a = button.ButtonS28Variant_0 {
 }
 
 Right_m38ayLrToC = frame {
-  name: "Right",
+  name: "Message Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -91,7 +91,7 @@ Right_m38ayLrToC = frame {
 }
 
 Icon_LMHih4IBDW = button.ButtonS28Variant_0 {
-  name: "Icon",
+  name: "Voice Button",
   left: 714px,
   top: 788px,
 
@@ -101,7 +101,7 @@ Icon_LMHih4IBDW = button.ButtonS28Variant_0 {
 }
 
 Primaryrounded_mAqw08qHjT = button.ButtonS28Variant_5 {
-  name: "Primary rounded",
+  name: "Send Button",
   left: 734px,
   top: 808px,
 
@@ -111,7 +111,7 @@ Primaryrounded_mAqw08qHjT = button.ButtonS28Variant_5 {
 }
 
 GroupedStack_b3NQe9yEtF = frame {
-  name: "Grouped Stack",
+  name: "Prompt Header",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
   children: [LogoS24_XRD2oCsk6v, Text_DHf9m5IpDV]
@@ -120,7 +120,7 @@ GroupedStack_b3NQe9yEtF = frame {
 LogoS24_XRD2oCsk6v = logo.iconButton_gqojFFCYlK {name: "Logo S (24)", left: 657px, top: 485px}
 
 Text_DHf9m5IpDV = text {
-  name: "Text",
+  name: "Prompt Placeholder",
   left: 633px,
   top: 581px,
   fill: colors.colors.black80,

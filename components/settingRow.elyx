@@ -5,7 +5,7 @@ import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 
 export settingRow_HQWVNjz = frame {
-  name: "settingRow",
+  name: "Setting Row",
   left: 20px,
   top: 92px,
   width: .auto,

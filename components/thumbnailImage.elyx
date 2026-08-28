@@ -24,7 +24,7 @@ export ThumbnailImage_Bv4oCgAbjK = frame {
 }
 
 Frame_knRpLk4dgQ = frame {
-  name: "Frame",
+  name: "Thumbnail Actions",
   left: 0px,
   top: 12px,
   width: 100%,
@@ -33,7 +33,7 @@ Frame_knRpLk4dgQ = frame {
 }
 
 heart20svg_0Rw3zJS0s6 = icon {
-  name: "heart-20.svg",
+  name: "Favorite Icon",
   left: 0px,
   top: 0px,
   width: 20px,
@@ -43,7 +43,7 @@ heart20svg_0Rw3zJS0s6 = icon {
 }
 
 Imagename_jOw4WJEFHF = text {
-  name: "Image name",
+  name: "Image Name",
   left: 0px,
   top: 197px,
   width: 100%,

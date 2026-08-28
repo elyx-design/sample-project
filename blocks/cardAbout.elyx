@@ -4,7 +4,7 @@ import "components/header.elyx" as header
 import "components/stats.elyx" as stats
 
 export profileCard_vlvneaI = cardBackground.cardBackgroundSolidVariant {
-  name: "profileCard",
+  name: "Profile Card",
   left: 0px,
   top: 0px,
   width: 519px,
@@ -21,7 +21,7 @@ export profileCard_vlvneaI = cardBackground.cardBackgroundSolidVariant {
 }
 
 layer_QyZ45sYn9t = frame {
-  name: "text",
+  name: "Profile Content",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -54,7 +54,7 @@ HeaderMLeft_mkvAlK9gg7 = header.header_Pp67Y8c {
 }
 
 Text_pliu07xLCQ = text {
-  name: "Text",
+  name: "Profile Bio",
   left: 0px,
   top: 0px,
   width: 100%,

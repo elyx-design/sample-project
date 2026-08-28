@@ -14,7 +14,7 @@ LiveEvent = frame {
 }
 
 Frame_r = frame {
-  name: "Frame",
+  name: "Event Panel",
   left: 226.9999px,
   top: 219px,
   width: 962px,
@@ -33,7 +33,7 @@ Frame_r = frame {
 }
 
 Frame_Z = frame {
-  name: "Frame",
+  name: "Video Chat Layout",
   left: 0px,
   top: 0px,
   width: 100%,

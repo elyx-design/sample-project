@@ -6,7 +6,7 @@ import "images/profileImgs/003.jpg" as module7
 import "images/profileImgs/004.jpg" as module8
 
 export profileGroup_yzgf0sKCPf = frame {
-  name: "profileGroup",
+  name: "Avatar Group",
   left: 484px,
   top: 511px,
   width: 140px,
@@ -16,7 +16,7 @@ export profileGroup_yzgf0sKCPf = frame {
 }
 
 GroupedStack_OfeQSGHwlq = frame {
-  name: "avatar group",
+  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -123,7 +123,7 @@ profileGroupLabelbottom_uuBCQBPIGh = profileGroup_yzgf0sKCPf {
 }
 
 layer = frame {
-  name: "Frame",
+  name: "Right Count Label",
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
@@ -141,7 +141,7 @@ textLayer = text {
 }
 
 avatargroup_PMFARLtmys = frame {
-  name: "avatar group",
+  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -227,7 +227,7 @@ Photo1_P7OymuGtix = userAvatar.AvatarSVariant {
 }
 
 Frame_czczziH5wc = frame {
-  name: "Frame",
+  name: "Bottom Count Label",
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
@@ -259,7 +259,7 @@ profileGroupVariant_d = profileGroup_yzgf0sKCPf {
 }
 
 avatargroup = frame {
-  name: "avatar group",
+  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -339,7 +339,7 @@ Photo1 = userAvatar.AvatarSVariant {
 }
 
 avatargroup_J = frame {
-  name: "avatar group",
+  name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
@@ -419,7 +419,7 @@ Photo1_M = userAvatar.AvatarSVariant {
 }
 
 Frame = frame {
-  name: "Frame",
+  name: "Group Title Label",
   left: 65px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},

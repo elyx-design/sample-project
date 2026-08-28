@@ -29,7 +29,7 @@ AvatarSPhoto_MIH7WKKzVs = avatar.AvatarSVariant {
 }
 
 Frame_iMg8dwYyHE = frame {
-  name: "Frame",
+  name: "Message Bubble",
   left: 65px,
   top: 0px,
   width: .auto,

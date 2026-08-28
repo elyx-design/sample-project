@@ -29,14 +29,14 @@ export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
 Close_EYg7HfYapC = button.ButtonS28Variant_X {name: "Close", left: 218px, top: 40px}
 
 GroupedStack_i4crOHtTlb = frame {
-  name: "Grouped Stack",
+  name: "Audio Controls",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
   children: [Primaryrounded_YMDvd7YAnF, AudioBar_9RsV8DSxFJ, Tools_Zeh2Ix47Qp]
 }
 
 Primaryrounded_YMDvd7YAnF = button.ButtonS28Variant_5 {
-  name: "Primary rounded",
+  name: "Play Button",
   left: 0px,
   top: 4px,
 
@@ -55,7 +55,7 @@ Tools_Zeh2Ix47Qp = frame {
 }
 
 Icon_GIIMxS9hgD = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Favorite Button",
   left: 218px,
   top: 40px,
 
@@ -64,4 +64,4 @@ Icon_GIIMxS9hgD = button.ButtonS28Variant_7 {
   }
 }
 
-Icon_gcEBtbFoWa = button.ButtonS28Variant_7 {name: "Icon", left: 198px, top: 20px}
+Icon_gcEBtbFoWa = button.ButtonS28Variant_7 {name: "More Button", left: 198px, top: 20px}

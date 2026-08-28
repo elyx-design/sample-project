@@ -1,13 +1,12 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
-
 import "components/button.elyx" as button
 import "components/avatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
 
 export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
-  name: "HeaderWeb",
+  name: "Site Header",
   left: 512px,
   top: 456px,
   width: 1024px,
@@ -21,7 +20,7 @@ export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
   overrides: [
-  
+
   ]
 }
 
@@ -81,13 +80,14 @@ MenuVariant_T = Menu_NptvsRIaJB {
 }
 
 GroupedStack_s6neGdYpQr = frame {
-  name: "Grouped Stack",
+  name: "Header Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [Menu_ufNhOkr09F, PrimaryM_TNPWRcxiAf]
 }
 
 Menu_ufNhOkr09F = Menu_NptvsRIaJB {
+  name: "Sign In Link",
   left: 1101px,
   top: 505px,
 
@@ -97,6 +97,7 @@ Menu_ufNhOkr09F = Menu_NptvsRIaJB {
 }
 
 PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
+  name: "Join the Circle Button",
   left: 867px,
   top: 498px,
 
@@ -106,7 +107,7 @@ PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
 }
 
 chevrondown12svg_p = icon {
-  name: "chevron-down-12.svg",
+  name: "Menu Chevron",
   left: 278px,
   top: 460px,
   width: 12px,
@@ -116,7 +117,7 @@ chevrondown12svg_p = icon {
 }
 
 chevrondown12svg = icon {
-  name: "chevron-down-12.svg",
+  name: "Menu Chevron",
   left: 297px,
   top: 460px,
   width: 12px,
@@ -125,9 +126,8 @@ chevrondown12svg = icon {
   contents: chevrondown122
 }
 
-
 layer_IZeMbQZvJt = frame {
-  name: "Frame",
+  name: "Primary Navigation",
   left: 0px,
   top: 27.5px,
   width: .auto,
@@ -142,6 +142,7 @@ layer_IZeMbQZvJt = frame {
 }
 
 MenuVariant_0TK5hfhPhi = MenuVariant2 {
+  name: "Product Menu",
   left: 0px,
   top: 0px,
   height: 17px,
@@ -152,6 +153,7 @@ MenuVariant_0TK5hfhPhi = MenuVariant2 {
 }
 
 MenuVariant_sjfcG4QdSJ = MenuVariant {
+  name: "Pricing Link",
   left: 58px,
   top: 0px,
   height: 17px,
@@ -162,6 +164,7 @@ MenuVariant_sjfcG4QdSJ = MenuVariant {
 }
 
 MenuVariant_1tlOsP5uEb = MenuVariant {
+  name: "Blog Link",
   left: 78px,
   top: 20px,
   height: 17px,
@@ -172,6 +175,7 @@ MenuVariant_1tlOsP5uEb = MenuVariant {
 }
 
 MenuVariant_CWSCQz5wR7 = MenuVariant {
+  name: "Help Center Link",
   left: 128px,
   top: 20px,
   height: 17px,
@@ -180,5 +184,3 @@ MenuVariant_CWSCQz5wR7 = MenuVariant {
     contents: "Help Center"
   }
 }
-
-

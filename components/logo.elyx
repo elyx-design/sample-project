@@ -13,7 +13,7 @@ export iconButton_gqojFFCYlK = frame {
 }
 
 logopng_sc1aSOCPki = shape {
-  name: "logo.png",
+  name: "Logo Artwork",
   left: 0px,
   top: 80px,
   width: 24px,
@@ -37,7 +37,7 @@ ButtonIconXL48 = iconButton_gqojFFCYlK {
 }
 
 logopng_H = shape {
-  name: "logo.png",
+  name: "Logo Artwork",
   left: 0px,
   top: 80px,
   width: 80px,
@@ -47,7 +47,7 @@ logopng_H = shape {
 }
 
 logopng_o = shape {
-  name: "logo.png",
+  name: "Logo Artwork",
   left: 0px,
   top: 56px,
   width: 48px,

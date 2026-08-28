@@ -14,7 +14,7 @@ export Divider_97GT5IGMgL = frame {
 }
 
 Rectangle_RlFhJcHgz0 = shape {
-  name: "Rectangle",
+  name: "Divider Line",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -36,7 +36,7 @@ export Div_JPakkrqBxW = frame {
 }
 
 Rectangle_cqxTCYitOK = shape {
-  name: "Rectangle",
+  name: "Vertical Divider Line",
   left: 0px,
   top: 0px,
   width: 0.5px,

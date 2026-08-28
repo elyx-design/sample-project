@@ -48,7 +48,7 @@ TagLabelandClose_b20EZ2tde1 = Frame_EkvUQb0wU7 {
 }
 
 star24svg_QJRb7jssmb = icon {
-  name: "star-24.svg",
+  name: "Status Icon",
   left: 525px,
   top: 635px,
   width: 20px,
@@ -57,7 +57,7 @@ star24svg_QJRb7jssmb = icon {
 }
 
 star24svg_r006HhubFR = icon {
-  name: "star-24.svg",
+  name: "Close Icon",
   left: 525px,
   top: 635px,
   width: 20px,
@@ -76,7 +76,7 @@ TagTransparentVariant = Frame_EkvUQb0wU7 {
 }
 
 star24svg = icon {
-  name: "star-24.svg",
+  name: "Tag Icon",
   left: 525px,
   top: 635px,
   width: 20px,

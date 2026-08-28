@@ -16,7 +16,7 @@ export userAvatar_mKGJ6R7 = frame {
 }
 
 Ellipse_9bQZpYxKwR = shape {
-  name: "bg",
+  name: "Avatar Background",
   left: 0px,
   top: 0px,
   width: 36px,
@@ -41,7 +41,7 @@ AvatarInitials_F4uGTp6 = text {
 }
 
 statusonline_aL82ghuez5 = Ellipse_4OkVFaGU2Y {
-  name: "status (online)",
+  name: "Online Status",
   left: 26.85px,
   top: 26.83px,
   ignore-stack: .true,
@@ -49,7 +49,7 @@ statusonline_aL82ghuez5 = Ellipse_4OkVFaGU2Y {
 }
 
 export Ellipse_4OkVFaGU2Y = shape {
-  name: "Avatar Satus (online)",
+  name: "Avatar Status",
   left: -94px,
   top: -72.12px,
   width: 8px,
@@ -89,7 +89,7 @@ export AvatarM_ej3y9t9gG9 = frame {
 }
 
 bg_3215z21ZmM = shape {
-  name: "bg",
+  name: "Avatar Background",
   left: 0px,
   top: 0px,
   width: 72px,
@@ -111,7 +111,7 @@ LargeAvatarInitials_aSqGwd9dLG = text {
 }
 
 statusonline_b8jSnQus5L = Ellipse_4OkVFaGU2Y {
-  name: "status (online)",
+  name: "Online Status",
   left: 56.85px,
   top: 56.83px,
   ignore-stack: .true,
@@ -131,7 +131,7 @@ AvatarMVariant = AvatarM_ej3y9t9gG9 {
 }
 
 bg = shape {
-  name: "bg photo",
+  name: "Avatar Photo",
   left: 0px,
   top: 0px,
   width: 72px,
@@ -143,7 +143,7 @@ bg = shape {
 }
 
 bg_e = shape {
-  name: "bg photo",
+  name: "Avatar Photo",
   left: 0px,
   top: 0px,
   width: 36px,

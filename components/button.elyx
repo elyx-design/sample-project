@@ -36,7 +36,7 @@ export button_43RxZnGr30 = frame {
 }
 
 Button = text {
-  name: "Button",
+  name: "Button Label",
   left: 12px,
   top: 9.5px,
   width: .auto,
@@ -156,7 +156,7 @@ export ButtonX28_unc1oz6mM6 = frame {
 }
 
 Button_2BBvydtXMm = text {
-  name: "Button",
+  name: "Button Label",
   left: 8px,
   top: 6.5px,
   width: .auto,
@@ -289,7 +289,7 @@ ButtonS28Variant_X = ButtonX28_unc1oz6mM6 {
 }
 
 trash20svg = icon {
-  name: "trash-20.svg",
+  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -299,7 +299,7 @@ trash20svg = icon {
 }
 
 close24svg = icon {
-  name: "close-24.svg",
+  name: "Close Icon",
   left: 1387px,
   top: 682px,
   width: 24px,
@@ -309,7 +309,7 @@ close24svg = icon {
 }
 
 close20svg = icon {
-  name: "close-20.svg",
+  name: "Close Icon",
   left: 1211px,
   top: 918px,
   width: 20px,
@@ -318,7 +318,7 @@ close20svg = icon {
 }
 
 calendar24svg = icon {
-  name: "calendar-24.svg",
+  name: "Button Icon",
   left: 1353px,
   top: 705px,
   width: 24px,
@@ -338,7 +338,7 @@ ButtonS28Variant_5 = ButtonX28_unc1oz6mM6 {
 }
 
 trash20svg_z = icon {
-  name: "trash-20.svg",
+  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -359,7 +359,7 @@ ButtonS28Variant_7 = ButtonX28_unc1oz6mM6 {
 }
 
 trash20svg_W = icon {
-  name: "trash-20.svg",
+  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -395,7 +395,7 @@ PrimaryRounded = button_43RxZnGr30 {
 }
 
 calendar24svg_0 = icon {
-  name: "calendar-24.svg",
+  name: "Button Icon",
   left: 1397px,
   top: 701px,
   width: 24px,
@@ -405,7 +405,7 @@ calendar24svg_0 = icon {
 }
 
 calendar24svg_I = icon {
-  name: "calendar-24.svg",
+  name: "Button Icon",
   left: 1397px,
   top: 701px,
   width: 24px,

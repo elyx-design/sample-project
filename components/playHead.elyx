@@ -13,7 +13,7 @@ export Frame_kFEBYnH2MI = frame {
 }
 
 Rectangle_fbB02n1chM = shape {
-  name: "Rectangle",
+  name: "Playhead Line",
   left: 6px,
   top: 0px,
   width: 2px,
@@ -33,7 +33,7 @@ Rectangle_fbB02n1chM = shape {
 }
 
 Ellipse_gF0x43ObsE = shape {
-  name: "Ellipse",
+  name: "Playhead Handle",
   left: 0px,
   top: 0px,
   width: 12px,

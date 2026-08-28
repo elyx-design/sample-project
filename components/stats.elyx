@@ -18,7 +18,7 @@ DividerWhite_BvfgQ0x6CS = divider.Divider_97GT5IGMgL {
 }
 
 Frame_JZbGEcdAyx = frame {
-  name: "Frame",
+  name: "Stats Row",
   left: 0px,
   top: 74px,
   width: 100%,
@@ -35,7 +35,7 @@ Frame_JZbGEcdAyx = frame {
 }
 
 Frame_v3hR4sAYg5 = frame {
-  name: "Frame",
+  name: "Books Stat",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -74,7 +74,7 @@ Dividervertical_9c0N5aibGz = divider.Div_JPakkrqBxW {
 }
 
 Frame_K3EsLWJmUO = frame {
-  name: "Frame",
+  name: "Pages Stat",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -113,7 +113,7 @@ Dividervertical_kxWxSCimLZ = divider.Div_JPakkrqBxW {
 }
 
 Frame_ySVSgouDo5 = frame {
-  name: "Frame",
+  name: "Rating Stat",
   left: 0px,
   top: 40px,
   width: 100%,
@@ -152,7 +152,7 @@ Dividervertical_tyQgNFTlxv = divider.Div_JPakkrqBxW {
 }
 
 Frame_tiqgxwz6GB = frame {
-  name: "Frame",
+  name: "Shelves Stat",
   left: 20px,
   top: 60px,
   width: 100%,
