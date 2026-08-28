@@ -265,12 +265,7 @@ layer_1 = aiChat.aiChat {
   }
 }
 
-layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
-  name: "Toolbar (audio)",
-  left: 1411px,
-  top: 1863px,
-  width: 322px
-}
+layer_w = toolbar.audioToolbar {name: "Toolbar (audio)", left: 1411px, top: 1863px, width: 322px}
 
 Frame_y = frame {
   name: "Live Event Preview",
