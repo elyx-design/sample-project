@@ -2,7 +2,7 @@ import "components/cardBackground.elyx" as cardBackground
 import "components/header.elyx" as header2
 import "components/settingRow.elyx" as settingRow
 
-header_HZdRlZc = header2.mediumLeft {
+header = header2.mediumLeft {
   left: 0px,
   top: 532px,
 
@@ -15,20 +15,20 @@ header_HZdRlZc = header2.mediumLeft {
   }
 }
 
-export securityCard_HT5T2Qj = cardBackground.base {
+export securityCard = cardBackground.base {
   name: "Security Card",
   left: 0px,
   top: 263px,
   width: 100%,
   height: .auto,
   overrides: [
-    insert(header_HZdRlZc, after = .nil),
-    insert(settingRow_O, after = header_HZdRlZc),
-    insert(settingRow_u, after = settingRow_O)
+    insert(header, after = .nil),
+    insert(password, after = header),
+    insert(twoFactorAuthentication, after = password)
   ]
 }
 
-settingRow_O = settingRow.settingRow {
+password = settingRow.settingRow {
   name: "Password Setting",
   left: 0px,
   top: 92px,
@@ -48,7 +48,7 @@ settingRow_O = settingRow.settingRow {
   }
 }
 
-settingRow_u = settingRow.settingRow {
+twoFactorAuthentication = settingRow.settingRow {
   name: "Two-Factor Authentication Setting",
   left: 20px,
   top: 112px,
