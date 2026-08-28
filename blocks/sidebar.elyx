@@ -16,7 +16,7 @@ import "icons/24 pixels/folder-24.svg" as folder24
 import "icons/24 pixels/history-24.svg" as history24
 import "components/logo.elyx" as logo
 
-export sidebar_QjenIug = frame {
+export accountSidebar = frame {
   name: "Account Sidebar",
   left: 0px,
   top: 0px,
@@ -26,37 +26,31 @@ export sidebar_QjenIug = frame {
   fill: .white,
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   padding: Spacing.spacing.paddingM,
-  children: [GroupedStack_flp7iRt, userSummary_RP1JqZ1]
+  children: [main, userSummary]
 }
 
-GroupedStack_flp7iRt = frame {
+main = frame {
   name: "Sidebar Main",
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.spacing.s},
-  children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
+  children: [accountHeader, accountNavigation]
 }
 
-sidebarHeader_TIJYWa6 = sidebarHeader2.workspaceHeader {
+accountHeader = sidebarHeader2.workspaceHeader {
   name: "Workspace Header",
   left: 0px,
   top: 16px,
   width: 100%
 }
 
-GroupedStack_Wkqkg47 = frame {
+accountNavigation = frame {
   name: "Account Navigation",
   width: 100%,
   layout: {direction: .column, item-gap: 2px},
-  children: [
-    sidebarItem_xGhzXG3,
-    sidebarItem_CGF_zna,
-    sidebarItem_aqkFtkF,
-    sidebarItem_R0PMT7_,
-    sidebarItemVariant_o8wJnAA
-  ]
+  children: [overview, projects, members, billing, account]
 }
 
-sidebarItem_xGhzXG3 = sidebarItem.base {
+overview = sidebarItem.base {
   name: "Overview Item",
   left: 0px,
   top: 453px,
@@ -66,7 +60,7 @@ sidebarItem_xGhzXG3 = sidebarItem.base {
   }
 }
 
-sidebarItem_CGF_zna = sidebarItem.base {
+projects = sidebarItem.base {
   name: "Projects Item",
   left: 20px,
   top: 473px,
@@ -76,7 +70,7 @@ sidebarItem_CGF_zna = sidebarItem.base {
   }
 }
 
-sidebarItem_aqkFtkF = sidebarItem.base {
+members = sidebarItem.base {
   name: "Members Item",
   left: 40px,
   top: 493px,
@@ -86,7 +80,7 @@ sidebarItem_aqkFtkF = sidebarItem.base {
   }
 }
 
-sidebarItem_R0PMT7_ = sidebarItem.base {
+billing = sidebarItem.base {
   name: "Billing Item",
   left: 60px,
   top: 513px,
@@ -96,7 +90,7 @@ sidebarItem_R0PMT7_ = sidebarItem.base {
   }
 }
 
-sidebarItemVariant_o8wJnAA = sidebarItem.selected {
+account = sidebarItem.selected {
   name: "Account Item",
   left: 20px,
   top: 473px,
@@ -106,13 +100,9 @@ sidebarItemVariant_o8wJnAA = sidebarItem.selected {
   }
 }
 
-userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {
-  name: "User Summary",
-  left: 0px,
-  top: 1241px
-}
+userSummary = userSummary2.userSummary_3nStch3 {name: "User Summary", left: 0px, top: 1241px}
 
-export sideBar_xy3AK6H6s8 = cardBackground.none {
+export appSidebar = cardBackground.none {
   name: "App Sidebar",
   left: 297px,
   top: -7px,
@@ -122,28 +112,18 @@ export sideBar_xy3AK6H6s8 = cardBackground.none {
   padding-bottom: 8px,
   padding-right: 8px,
   layout.item-gap: Spacing.spacing.heightM,
-  overrides: [
-    insert(sidebarHeader_ENiocaFFtM, after = .nil),
-    insert(Menu_kyNuR0df4b, after = sidebarHeader_ENiocaFFtM)
-  ]
+  overrides: [insert(appHeader, after = .nil), insert(appNavigation, after = appHeader)]
 }
 
-Menu_kyNuR0df4b = frame {
+appNavigation = frame {
   name: "App Navigation",
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
   overflow: .visible,
-  children: [
-    sidebarItem_MdZAfxU8r7,
-    sidebarItem_u8reTu0LfB,
-    sidebarItem_WqMsLQOZBI,
-    sidebarItem_Ngvb741Oem,
-    sidebarItem_FQCI0OhATX,
-    sidebarItem_Gv85kN8ZjX
-  ]
+  children: [application, campaign, messaging, reports, library, sales]
 }
 
-sidebarItem_MdZAfxU8r7 = sidebarItem.base {
+application = sidebarItem.base {
   name: "Application Item",
   left: 34.59px,
   top: 57.76px,
@@ -157,7 +137,7 @@ sidebarItem_MdZAfxU8r7 = sidebarItem.base {
   }
 }
 
-sidebarItem_u8reTu0LfB = sidebarItem.base {
+campaign = sidebarItem.base {
   name: "Campaign Item",
   left: 54.59px,
   top: 77.76px,
@@ -167,7 +147,7 @@ sidebarItem_u8reTu0LfB = sidebarItem.base {
   }
 }
 
-sidebarItem_WqMsLQOZBI = sidebarItem.selected {
+messaging = sidebarItem.selected {
   name: "Messaging Item",
   left: 74.59px,
   top: 97.76px,
@@ -184,7 +164,7 @@ sidebarItem_WqMsLQOZBI = sidebarItem.selected {
   }
 }
 
-sidebarItem_Ngvb741Oem = sidebarItem.base {
+reports = sidebarItem.base {
   name: "Reports Item",
   left: 74.59px,
   top: 97.76px,
@@ -198,7 +178,7 @@ sidebarItem_Ngvb741Oem = sidebarItem.base {
   }
 }
 
-sidebarItem_FQCI0OhATX = sidebarItem.base {
+library = sidebarItem.base {
   name: "Library Item",
   left: 74.59px,
   top: 169.76px,
@@ -212,7 +192,7 @@ sidebarItem_FQCI0OhATX = sidebarItem.base {
   }
 }
 
-sidebarItem_Gv85kN8ZjX = sidebarItem.base {
+sales = sidebarItem.base {
   name: "Sales Item",
   left: 74.59px,
   top: 205.76px,
@@ -226,14 +206,10 @@ sidebarItem_Gv85kN8ZjX = sidebarItem.base {
   }
 }
 
-sidebarHeader_ENiocaFFtM = sidebarHeader2.workspaceHeader {
-  name: "Workspace Header",
-  left: 280px,
-  top: -16px
-}
+appHeader = sidebarHeader2.workspaceHeader {name: "Workspace Header", left: 280px, top: -16px}
 
 @variant("sidebar (Contracted)")
-sidebarVariant = sidebar_QjenIug {
+compact = accountSidebar {
   left: 539.2797px,
   top: 0px,
   width: 60px,
@@ -244,32 +220,32 @@ sidebarVariant = sidebar_QjenIug {
   padding-right: 12px,
   border[0].visible: .false,
   overrides: [
-    insert(GroupedStack_C, after = .nil),
-    insert(layer_0, after = GroupedStack_C),
-    remove(userSummary_RP1JqZ1),
-    remove(GroupedStack_flp7iRt)
+    insert(compactContent, after = .nil),
+    insert(profileAvatar, after = compactContent),
+    remove(userSummary),
+    remove(main)
   ]
 }
 
-layer_0 = avatar.smallPhoto {name: "Avatar S (Photo)", left: 550px, top: 402px}
+profileAvatar = avatar.smallPhoto {name: "Avatar S (Photo)", left: 550px, top: 402px}
 
-GroupedStack_C = frame {
+compactContent = frame {
   name: "Compact Sidebar Content",
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 24px},
-  children: [layer_P, GroupedStack]
+  children: [compactLogo, compactNavigation]
 }
 
-layer_P = logo.medium {name: "Logo M (36)", left: 0px, top: 278px}
+compactLogo = logo.medium {name: "Logo M (36)", left: 0px, top: 278px}
 
-GroupedStack = frame {
+compactNavigation = frame {
   name: "Compact Navigation",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
-  children: [layer, Icon_2, Icon_C, Icon_L, Icon]
+  children: [home, create, folder, cloud, history]
 }
 
-layer = button.mediumPlainIcon {
+home = button.mediumPlainIcon {
   name: "Home Button",
   left: 8.72px,
   top: 108px,
@@ -279,7 +255,7 @@ layer = button.mediumPlainIcon {
   }
 }
 
-Icon_2 = button.mediumPlainIcon {
+create = button.mediumPlainIcon {
   name: "Create Button",
   left: 28.72px,
   top: 128px,
@@ -289,7 +265,7 @@ Icon_2 = button.mediumPlainIcon {
   }
 }
 
-Icon_C = button.mediumPlainIcon {
+folder = button.mediumPlainIcon {
   name: "Folder Button",
   left: 28.72px,
   top: 128px,
@@ -299,7 +275,7 @@ Icon_C = button.mediumPlainIcon {
   }
 }
 
-Icon_L = button.mediumPlainIcon {
+cloud = button.mediumPlainIcon {
   name: "Cloud Button",
   left: 28.72px,
   top: 164px,
@@ -309,7 +285,7 @@ Icon_L = button.mediumPlainIcon {
   }
 }
 
-Icon = button.mediumPlainIcon {
+history = button.mediumPlainIcon {
   name: "History Button",
   left: 28.72px,
   top: 128px,

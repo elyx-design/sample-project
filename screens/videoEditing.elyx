@@ -94,13 +94,13 @@ VideoEditing = frame {
   children: [layer_L, Frame]
 }
 
-layer_L = sidebar.sidebarVariant {
+layer_L = sidebar.compact {
   name: "Editing Sidebar",
   left: 0px,
   top: 0px,
   height: 100%,
 
-  sidebar.GroupedStack_C.GroupedStack.Icon.button.mediumPlainIconGlyph {
+  sidebar.compactContent.compactNavigation.history.button.mediumPlainIconGlyph {
     contents: notes24
   }
 }

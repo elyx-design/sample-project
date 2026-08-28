@@ -14,6 +14,6 @@ export SignInScreen_8cf4C95IUT = frame {
   children: [sideBar_fTyCwX7uzk, cardBackgroundSolid_W7nA5JjfFV]
 }
 
-sideBar_fTyCwX7uzk = sidebar.sideBar_xy3AK6H6s8 {left: 559.5px, top: 24px, width: 263px}
+sideBar_fTyCwX7uzk = sidebar.appSidebar {left: 559.5px, top: 24px, width: 263px}
 
 cardBackgroundSolid_W7nA5JjfFV = cardBackground.base {left: 926px, top: 0px, height: 100%}
