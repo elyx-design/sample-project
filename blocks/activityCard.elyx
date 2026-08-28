@@ -17,42 +17,21 @@ export activityCard_Qrr8IWU = frame {
   children: [layer, activityRow_2, activityRow_a, activityRow_v]
 }
 
-layer = header.header_Pp67Y8c {
+layer = header.mediumLeft {
   left: 35px,
   top: 453px,
 
-  header.Description_7ZfScLC {
+  header.mediumSubtitle {
     contents: "Security and account events"
   }
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "Recent activity"
   }
 }
 
-activityRow_2 = activityRow.activityRow_ZaTUcpO {
-  left: 18px,
-  top: 81px,
+activityRow_2 = activityRow.activityRow {left: 18px, top: 81px}
 
+activityRow_a = activityRow.activityRow {left: 38px, top: 101px}
 
-
-}
-
-activityRow_a = activityRow.activityRow_ZaTUcpO {
-  left: 38px,
-  top: 101px,
-
-
-
-
-
-}
-
-activityRow_v = activityRow.activityRow_ZaTUcpO {
-  left: 38px,
-  top: 151px,
-
-
-
-
-}
+activityRow_v = activityRow.activityRow {left: 38px, top: 151px}

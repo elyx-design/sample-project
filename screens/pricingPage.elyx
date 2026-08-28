@@ -6,17 +6,17 @@ import "icons/24 pixels/processor.svg" as processor
 import "components/header.elyx" as header
 import "images/background/whiteWave.jpg" as whiteWave
 
-PricingPage = frame {
+pricingPage = frame {
   name: "Pricing Page",
   left: 130.5px,
   top: 163px,
   width: 1415px,
   height: 925px,
   fill: {image: {ref: whiteWave}},
-  children: [Frame, layer_o]
+  children: [pricingCards, pricingHeader]
 }
 
-Frame = frame {
+pricingCards = frame {
   name: "Pricing Cards",
   left: 125.5px,
   top: 202px,
@@ -34,10 +34,10 @@ Frame = frame {
   filter: {type: .background-blur, radius: 40px},
   corner-radius: 24px,
   padding: 12px,
-  children: [layer, planCard_H, planCard_O]
+  children: [freePlan, proPlan, businessPlan]
 }
 
-layer = planCard.planCard_LTK7mFiyqR {
+freePlan = planCard.planCard {
   name: "Free Plan",
   left: 0px,
   top: 0px,
@@ -45,24 +45,24 @@ layer = planCard.planCard_LTK7mFiyqR {
   height: 100%,
   fill[0].visible: .false,
 
-  planCard.layer_Z.button.Button {
+  planCard.manageButton.button.mediumLabel {
     contents: "Register for free!"
   }
 
-  planCard.layer_Z {
+  planCard.manageButton {
     name: "Register Button"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.GroupedStack_o4NcMhJdgN.PlanPrice_ZJx9H3J {
+  planCard.planContent.planDetails.pricingCopy.priceRow.price {
     contents: "$0"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
-    overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  planCard.planContent.planSummary.planHeader {
+    overrides: [remove(planCard.badge)]
   }
 }
 
-planCard_H = planCard.planCard_LTK7mFiyqR {
+proPlan = planCard.planCard {
   name: "Pro Plan",
   left: 420px,
   top: 0.9999px,
@@ -70,78 +70,78 @@ planCard_H = planCard.planCard_LTK7mFiyqR {
   height: 498px,
   corner-radius: [20px, 0px, 0px, 20px],
 
-  @use-variant(appTopBar.button.ButtonVariant_V)
-  planCard.layer_Z {}
+  @use-variant(appTopBar.button.mediumPrimary)
+  planCard.manageButton {}
 
-  planCard.layer_Z.button.Button {
+  planCard.manageButton.button.mediumLabel {
     contents: "Get Started"
   }
 
-  planCard.layer_Z {
+  planCard.manageButton {
     name: "Get Started Button"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3 {
+  planCard.planContent.planDetails.features {
     overrides: [
-      insert(FeatureRow_doWHbnbzF0, after = planCard.FeatureRow_doWHbnbzF0),
-      insert(FeatureRow_QoAeQFDdmk, after = FeatureRow_doWHbnbzF0)
+      insert(proStorageFeature, after = planCard.storageFeature),
+      insert(versionHistoryFeature, after = proStorageFeature)
     ]
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0.Basicexportoptions_NPd1l59Z9w {
+  planCard.planContent.planDetails.features.storageFeature.storageLabel {
     name: "Advanced Export Label",
     contents: "Advanced export options"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0 {
+  planCard.planContent.planDetails.features.storageFeature {
     name: "Advanced Export Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS.FeatureLabel_7Fcm4yTYnx {
+  planCard.planContent.planDetails.features.exportFeature.exportLabel {
     name: "Priority Support Label",
     contents: "Priority email support"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS {
+  planCard.planContent.planDetails.features.exportFeature {
     name: "Priority Support Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX.FeatureLabel_Y5ohvNoMbc {
+  planCard.planContent.planDetails.features.supportFeature.supportLabel {
     name: "User Limit Label",
     contents: "Up to 5 users"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX {
+  planCard.planContent.planDetails.features.supportFeature {
     name: "User Limit Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b.FeatureLabel_532ZQB6 {
+  planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
     name: "Unlimited Projects Label",
     contents: "Unlimited projects"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b {
+  planCard.planContent.planDetails.features.projectsFeature {
     name: "Unlimited Projects Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.Text_2UgTFIXDd4 {
+  planCard.planContent.planDetails.pricingCopy.description {
     name: "Pro Plan Description",
     contents: "Best option!\nFor professionals who need more room to work."
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.PlanName_81UA3to {
+  planCard.planContent.planSummary.planHeader.planName {
     name: "Pro Plan Name",
     contents: "Pro"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT.direct24svg_n2DErcwc3b {
+  planCard.planContent.planSummary.planIcon.planGlyph {
     contents: dashboard,
     left: 6px,
     top: 33px
   }
 }
 
-planCard_O = planCard.planCard_LTK7mFiyqR {
+businessPlan = planCard.planCard {
   name: "Business Plan",
   left: 840px,
   top: 0px,
@@ -149,106 +149,106 @@ planCard_O = planCard.planCard_LTK7mFiyqR {
   height: 100%,
   corner-radius: [0px, 20px, 20px, 0px],
 
-  planCard.layer_Z.button.Button {
+  planCard.manageButton.button.mediumLabel {
     contents: "Contact sales"
   }
 
-  planCard.layer_Z {
+  planCard.manageButton {
     name: "Contact Sales Button"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3 {
+  planCard.planContent.planDetails.features {
     overrides: [
-      insert(FeatureRow_rLZZCQqFxW, after = planCard.FeatureRow_doWHbnbzF0),
-      insert(FeatureRow_k4ZVO09kwe, after = FeatureRow_rLZZCQqFxW)
+      insert(businessStorageFeature, after = planCard.storageFeature),
+      insert(adminControlsFeature, after = businessStorageFeature)
     ]
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0.Basicexportoptions_NPd1l59Z9w {
+  planCard.planContent.planDetails.features.storageFeature.storageLabel {
     name: "Custom Integrations Label",
     contents: "Custom integrations"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0 {
+  planCard.planContent.planDetails.features.storageFeature {
     name: "Custom Integrations Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS.FeatureLabel_7Fcm4yTYnx {
+  planCard.planContent.planDetails.features.exportFeature.exportLabel {
     name: "Dedicated Support Label",
     contents: "Dedicated support"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS {
+  planCard.planContent.planDetails.features.exportFeature {
     name: "Dedicated Support Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX.FeatureLabel_Y5ohvNoMbc {
+  planCard.planContent.planDetails.features.supportFeature.supportLabel {
     name: "Unlimited Users Label",
     contents: "Unlimited users"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX {
+  planCard.planContent.planDetails.features.supportFeature {
     name: "Unlimited Users Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b.FeatureLabel_532ZQB6 {
+  planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
     name: "Included Plan Label",
     contents: "Everything in Pro"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b {
+  planCard.planContent.planDetails.features.projectsFeature {
     name: "Included Plan Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.Text_2UgTFIXDd4 {
+  planCard.planContent.planDetails.pricingCopy.description {
     name: "Business Plan Description",
     contents: "For companies.\nTeams that need scale and control."
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.GroupedStack_o4NcMhJdgN.PlanPrice_ZJx9H3J {
+  planCard.planContent.planDetails.pricingCopy.priceRow.price {
     contents: "$29"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
-    overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  planCard.planContent.planSummary.planHeader {
+    overrides: [remove(planCard.badge)]
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.PlanName_81UA3to {
+  planCard.planContent.planSummary.planHeader.planName {
     name: "Business Plan Name",
     contents: "Business"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT.direct24svg_n2DErcwc3b {
+  planCard.planContent.planSummary.planIcon.planGlyph {
     contents: processor,
     left: 6px,
     top: 33px
   }
 }
 
-layer_o = header.headerVariant {
+pricingHeader = header.mediumCenter {
   name: "Pricing Header",
   left: 472.5px,
   top: 121px,
   width: .auto,
 
-  header.Description_7ZfScLC {
+  header.mediumSubtitle {
     contents: "Flexible pricing for individuals, professionals, and growing teams."
   }
 
-  header.Title_ZIlZq9y {
+  header.mediumTitle {
     contents: "Choose the plan that fits your work"
   }
 }
 
-FeatureRow_rLZZCQqFxW = frame {
+businessStorageFeature = frame {
   name: "Storage Feature",
   left: 60px,
   top: 135px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_TW68FbkSOU, GBstorage_VYRdKEykZZ]
+  children: [businessStorageBullet, businessStorageLabel]
 }
 
-dot20svg_TW68FbkSOU = icon {
+businessStorageBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -257,7 +257,7 @@ dot20svg_TW68FbkSOU = icon {
   contents: planCard.dot12
 }
 
-GBstorage_VYRdKEykZZ = text {
+businessStorageLabel = text {
   name: "Storage Feature Label",
   fill: colors.colors.black40,
   contents: "1 TB storage",
@@ -266,15 +266,15 @@ GBstorage_VYRdKEykZZ = text {
   font-style: "Regular"
 }
 
-FeatureRow_QoAeQFDdmk = frame {
+versionHistoryFeature = frame {
   name: "Version History Feature",
   left: 80px,
   top: 155px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_SMzyH8A9vz, GBstorage_js9Pcjk9V3]
+  children: [versionHistoryBullet, versionHistoryLabel]
 }
 
-dot20svg_SMzyH8A9vz = icon {
+versionHistoryBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -283,7 +283,7 @@ dot20svg_SMzyH8A9vz = icon {
   contents: planCard.dot12
 }
 
-GBstorage_js9Pcjk9V3 = text {
+versionHistoryLabel = text {
   name: "Version History Label",
   fill: colors.colors.black40,
   contents: "Version history",
@@ -292,15 +292,15 @@ GBstorage_js9Pcjk9V3 = text {
   font-style: "Regular"
 }
 
-FeatureRow_k4ZVO09kwe = frame {
+adminControlsFeature = frame {
   name: "Admin Controls Feature",
   left: 80px,
   top: 155px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_oakpMqVJgc, GBstorage_TMNZDY6ong]
+  children: [adminControlsBullet, adminControlsLabel]
 }
 
-dot20svg_oakpMqVJgc = icon {
+adminControlsBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -309,7 +309,7 @@ dot20svg_oakpMqVJgc = icon {
   contents: planCard.dot12
 }
 
-GBstorage_TMNZDY6ong = text {
+adminControlsLabel = text {
   name: "Admin Controls Label",
   fill: colors.colors.black40,
   contents: "Admin controls and permissions",
@@ -318,15 +318,15 @@ GBstorage_TMNZDY6ong = text {
   font-style: "Regular"
 }
 
-FeatureRow_doWHbnbzF0 = frame {
+proStorageFeature = frame {
   name: "Storage Feature",
   left: 60px,
   top: 135px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_XKe72G7Hvi, Basicexportoptions_NPd1l59Z9w]
+  children: [proStorageBullet, proStorageLabel]
 }
 
-dot20svg_XKe72G7Hvi = icon {
+proStorageBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -335,7 +335,7 @@ dot20svg_XKe72G7Hvi = icon {
   contents: planCard.dot12
 }
 
-Basicexportoptions_NPd1l59Z9w = text {
+proStorageLabel = text {
   name: "Storage Feature Label",
   fill: colors.colors.black40,
   contents: "100 GB storage",

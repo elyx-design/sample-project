@@ -6,7 +6,7 @@ import "components/textField.elyx" as TextField
 import "components/header.elyx" as header2
 import "components/cardBackground.elyx" as cardBackground
 
-export settingsCard_myBFBNhjqy = cardBackground.cardBackground_zXouRyz {
+export settingsCard = cardBackground.base {
   name: "Settings Card",
   left: 111px,
   top: 192px,
@@ -39,16 +39,16 @@ densityLabel = text {
   font-style: "Medium"
 }
 
-densityControl = SegmentedControl.segmentedControl_MnqIo7BFFj {
-  SegmentedControl.Selected_D.Item_P {
+densityControl = SegmentedControl.medium {
+  SegmentedControl.trailingSegment.label {
     contents: "High"
   }
 
-  SegmentedControl.Selected.Item_P {
+  SegmentedControl.middleSegment.label {
     contents: "Default"
   }
 
-  SegmentedControl.layer.Item_P {
+  SegmentedControl.leadingSegment.label {
     contents: "Low"
   }
 }
@@ -87,26 +87,26 @@ notificationText = text {
   font-style: "Regular"
 }
 
-notificationToggle = Checkbox.Frame_P {}
+notificationToggle = Checkbox.on {}
 
-nameField = TextField.textField_vGl5JUl04s {
+nameField = TextField.base {
   left: 0px,
   top: 115px,
 
-  TextField.Label {
+  TextField.label {
     contents: "Jason Chen"
   }
 }
 
-header = header2.header_Pp67Y8c {
+header = header2.mediumLeft {
   left: 0px,
   top: 80px,
 
-  header2.Description_7ZfScLC {
+  header2.mediumSubtitle {
     contents: "Manage your profile and preferences."
   }
 
-  header2.Title_ZIlZq9y {
+  header2.mediumTitle {
     contents: "Account"
   }
 }

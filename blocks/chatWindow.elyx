@@ -2,7 +2,7 @@ import "components/chatBubble.elyx" as chatBubble
 import "tokens/colors.elyx" as colors
 import "components/textField.elyx" as textField
 
-export ChatWindow_J7FxeHn6Zh = frame {
+export chatWindow = frame {
   name: "Chat Window",
   left: 659px,
   top: 241px,
@@ -12,67 +12,67 @@ export ChatWindow_J7FxeHn6Zh = frame {
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
   padding: [24px, 12px, 12px],
-  children: [Chat_rw4c7WJOMr, TextFieldPlaceholderbutton_zceWXdSr8m]
+  children: [messageThread, messageField]
 }
 
-Chat_rw4c7WJOMr = frame {
+messageThread = frame {
   name: "Message Thread",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
-  children: [User_y4nVb60Ht8, GroupedStack_9ZE1MpDskD]
+  children: [userMessage, replyMessages]
 }
 
-User_y4nVb60Ht8 = chatBubble.ChatBubbleVariant {
+userMessage = chatBubble.user {
   name: "User Message",
   left: 1px,
   top: 0px,
   layout.justify-content: .end,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "This heat is brutal"
   }
 }
 
-GroupedStack_9ZE1MpDskD = frame {
+replyMessages = frame {
   name: "Reply Messages",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 8px},
   overflow: .visible,
-  children: [ChatBubble_w7rHdo4Xzi, ChatBubble_SIFYrR62A7]
+  children: [firstReply, secondReply]
 }
 
-ChatBubble_w7rHdo4Xzi = chatBubble.ChatBubble_Rb2QJd9jzc {
+firstReply = chatBubble.base {
   name: "First Reply",
   left: 0px,
   top: 74px,
   layout.justify-content: .start,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "Yeah, it true!",
     fill[0].color: colors.colors.white100
   }
 }
 
-ChatBubble_SIFYrR62A7 = chatBubble.ChatBubble_Rb2QJd9jzc {
+secondReply = chatBubble.base {
   name: "Second Reply",
   left: 20px,
   top: 94px,
   layout.justify-content: .start,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "Incredible pace out there",
     fill[0].color: colors.colors.white100
   }
 }
 
-TextFieldPlaceholderbutton_zceWXdSr8m = textField.TextFieldbutton {
+messageField = textField.buttonPlaceholder {
   name: "Message Field",
   left: 827px,
   top: 524px,
 
-  textField.Label {
+  textField.label {
     contents: "Write a message"
   }
 }

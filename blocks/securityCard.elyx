@@ -2,68 +2,68 @@ import "components/cardBackground.elyx" as cardBackground
 import "components/header.elyx" as header2
 import "components/settingRow.elyx" as settingRow
 
-header_HZdRlZc = header2.header_Pp67Y8c {
+header = header2.mediumLeft {
   left: 0px,
   top: 532px,
 
-  header2.Description_7ZfScLC {
+  header2.mediumSubtitle {
     contents: "Review sign-in methods and active protections."
   }
 
-  header2.Title_ZIlZq9y {
+  header2.mediumTitle {
     contents: "Security"
   }
 }
 
-export securityCard_HT5T2Qj = cardBackground.cardBackground_zXouRyz {
+export securityCard = cardBackground.base {
   name: "Security Card",
   left: 0px,
   top: 263px,
   width: 100%,
   height: .auto,
   overrides: [
-    insert(header_HZdRlZc, after = .nil),
-    insert(settingRow_O, after = header_HZdRlZc),
-    insert(settingRow_u, after = settingRow_O)
+    insert(header, after = .nil),
+    insert(password, after = header),
+    insert(twoFactorAuthentication, after = password)
   ]
 }
 
-settingRow_O = settingRow.settingRow_HQWVNjz {
+password = settingRow.settingRow {
   name: "Password Setting",
   left: 0px,
   top: 92px,
   width: 100%,
   height: .auto,
 
-  settingRow.layer.button.Button {
+  settingRow.action.button.mediumLabel {
     contents: "Change"
   }
 
-  settingRow.SettingCopy_xBFnq12.SettingDescription_FnvoRLz {
+  settingRow.copy.description {
     contents: "Last changed 23 days ago."
   }
 
-  settingRow.SettingCopy_xBFnq12.SettingTitle_2TQqRLX {
+  settingRow.copy.title {
     contents: "Password"
   }
 }
 
-settingRow_u = settingRow.settingRow_HQWVNjz {
+twoFactorAuthentication = settingRow.settingRow {
   name: "Two-Factor Authentication Setting",
   left: 20px,
   top: 112px,
   width: 100%,
   height: .auto,
 
-  settingRow.layer.button.Button {
+  settingRow.action.button.mediumLabel {
     contents: "Manage"
   }
 
-  settingRow.SettingCopy_xBFnq12.SettingDescription_FnvoRLz {
+  settingRow.copy.description {
     contents: "Enabled for all workspace admins."
   }
 
-  settingRow.SettingCopy_xBFnq12.SettingTitle_2TQqRLX {
+  settingRow.copy.title {
     contents: "Two-factor authentication"
   }
 }

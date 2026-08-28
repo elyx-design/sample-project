@@ -4,7 +4,7 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 
-export settingRow_HQWVNjz = frame {
+export settingRow = frame {
   name: "Setting Row",
   left: 20px,
   top: 92px,
@@ -14,16 +14,16 @@ export settingRow_HQWVNjz = frame {
   fill: Colors.colors.black95,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
-  children: [SettingCopy_xBFnq12, layer]
+  children: [copy, action]
 }
 
-SettingCopy_xBFnq12 = frame {
+copy = frame {
   name: "Setting Copy",
   layout: {direction: .column, item-gap: 4px},
-  children: [SettingTitle_2TQqRLX, SettingDescription_FnvoRLz]
+  children: [title, description]
 }
 
-SettingTitle_2TQqRLX = text {
+title = text {
   name: "Label",
   fill: Colors.colors.black20,
   contents: "Label",
@@ -32,7 +32,7 @@ SettingTitle_2TQqRLX = text {
   font-style: "Medium"
 }
 
-SettingDescription_FnvoRLz = text {
+description = text {
   name: "Subtitle",
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
@@ -41,11 +41,11 @@ SettingDescription_FnvoRLz = text {
   font-style: "Regular"
 }
 
-layer = button.button_43RxZnGr30 {
+action = button.medium {
   left: 500px,
   top: 105px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Label"
   }
 }

@@ -1,7 +1,7 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
 
-Frame = frame {
+anchor = frame {
   name: "Toggle Anchor",
   left: 2003px,
   top: 1069px,
@@ -11,7 +11,7 @@ Frame = frame {
   border: rgb(79.9972%, 79.9972%, 79.9972%)
 }
 
-export Frame_P = frame {
+export on = frame {
   name: "Toggle",
   left: 759px,
   top: 674px,
@@ -27,10 +27,10 @@ export Frame_P = frame {
   border: {color: Colors.colors.black20, width: 0.5px},
   corner-radius: Radius.radius.max,
   padding: 3px,
-  children: Frame_H
+  children: knob
 }
 
-Frame_H = frame {
+knob = frame {
   name: "Toggle Knob",
   left: 23px,
   top: 3px,
@@ -46,7 +46,7 @@ Frame_H = frame {
 }
 
 @variant(Off)
-FrameVariant_d = Frame_P {
+off = on {
   left: 839px,
   top: 674px,
   fill[0].linear-gradient.stops[0].position: 0%,
@@ -54,4 +54,4 @@ FrameVariant_d = Frame_P {
 }
 
 @variant(Mixed)
-FrameVariant = Frame_P {left: 919px, top: 674px, layout.justify-content: .center}
+mixed = on {left: 919px, top: 674px, layout.justify-content: .center}

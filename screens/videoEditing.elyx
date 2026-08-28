@@ -18,94 +18,94 @@ import "blocks/sidebar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 
-module_oAd49AzLxr = timelineRuler.module_pm4nfIp1OC {
+marker8 = timelineRuler.timeMarker {
   name: "Time Marker 8",
   left: 306.508px,
   top: 555px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "8"
   }
 }
 
-module_YWpHWOKFmU = timelineRuler.module_pm4nfIp1OC {
+marker6 = timelineRuler.timeMarker {
   name: "Time Marker 6",
   left: 197.2858px,
   top: 535px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "6"
   }
 }
 
-module_Kax64eo5pN = timelineRuler.module_pm4nfIp1OC {
+marker5 = timelineRuler.timeMarker {
   name: "Time Marker 5",
   left: 133px,
   top: 535px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "5"
   }
 }
 
-module_1r90h9aJDj = timelineRuler.module_pm4nfIp1OC {
+marker4 = timelineRuler.timeMarker {
   name: "Time Marker 4",
   left: 58px,
   top: 535px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "4"
   }
 }
 
-module_x9fTjghOGA = timelineRuler.module_pm4nfIp1OC {
+marker7 = timelineRuler.timeMarker {
   name: "Time Marker 7",
   left: 217.2858px,
   top: 555px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "7"
   }
 }
 
-module_WhzRk9ByAT = timelineRuler.module_pm4nfIp1OC {
+marker9 = timelineRuler.timeMarker {
   name: "Time Marker 9",
   left: 326.508px,
   top: 575px,
   width: 100%,
 
-  timelineRuler.textLayer_odBUA3ZxP6 {
+  timelineRuler.label {
     contents: "9"
   }
 }
 
-VideoEditing = frame {
+videoEditing = frame {
   name: "Video Editing",
   left: -689px,
   top: -230px,
   width: 1184px,
   height: 701px,
   layout: {justify-content: .center},
-  children: [layer_L, Frame]
+  children: [editingSidebar, workspace]
 }
 
-layer_L = sidebar.sidebarVariant {
+editingSidebar = sidebar.compact {
   name: "Editing Sidebar",
   left: 0px,
   top: 0px,
   height: 100%,
 
-  sidebar.GroupedStack_C.GroupedStack.Icon.button.calendar24svg_0 {
+  sidebar.compactContent.compactNavigation.history.button.mediumPlainIconGlyph {
     contents: notes24
   }
 }
 
-Frame = frame {
+workspace = frame {
   name: "Editor Workspace",
   left: 0px,
   top: 0px,
@@ -122,20 +122,20 @@ Frame = frame {
   },
   corner-radius: 0px,
   corner-smoothing: 0.5,
-  children: [Video, Timeline]
+  children: [preview, timeline]
 }
 
-Video = frame {
+preview = frame {
   name: "Video",
   left: 0px,
   top: 0px,
   height: 60%,
   layout: {justify-content: .end, align-items: .end, item-gap: 2px},
   fill: Colors.colors.black20,
-  children: [layer, layer_E]
+  children: [player, gallery]
 }
 
-layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+player = videoPlayer.videoPlayer {
   name: "Video Player",
   left: -3772px,
   top: 0px,
@@ -144,127 +144,125 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   fill[0].image.ref: bird,
   fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
 
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_rdVoRETh1T.Icon_teDPq1aBTb.button.trash20svg_W {
+  videoPlayer.controls.playbackControl.tools.likeButton.button.smallIconGlyph {
     contents: pen20
   }
 
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_rdVoRETh1T.Icon_4slh7sL8pH.button.trash20svg_W {
+  videoPlayer.controls.playbackControl.tools.settingsButton.button.smallIconGlyph {
     contents: pointer20
   }
 
-  @use-variant(slider.SliderVariant)
-  videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_q0ILkfiHMO.Slider_QNPbheVsY9 {
-    
-  }
+  @use-variant(slider.thumb)
+  videoPlayer.controls.playbackControl.scrubber.progressSlider {}
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserEmail_wCqcy5VUFs {
+  videoPlayer.headerRow.eventHeader.header.smallSubtitle {
     contents: "4K landscape film, cinematic 21:9"
   }
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.HeaderSLeft_kdOlA7xbFG.header.UserName_Qkcl7dWEIn {
+  videoPlayer.headerRow.eventHeader.header.smallTitle {
     contents: "Wings of the Wild"
   }
 
-  videoPlayer.GroupedStack_R6YKIBc1DT.Status_mmQ1DabaWR {
+  videoPlayer.headerRow.liveStatus {
     display: .hidden
   }
 }
 
-layer_E = imageGallery.ImageGallery_GtwQ9FgVmL {
+gallery = imageGallery.imageGallery {
   name: "Image Gallery",
   left: 20px,
   top: 0px,
   width: 40%,
   height: 100%,
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.bottomRow.bottomRight.thumbnailImage.imageName {
     contents: "Red-flanked Bluetail"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.bottomRow.bottomRight.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z {
+  imageGallery.bottomRow.bottomCenter {
     fill[0].image.ref: thumb02
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.bottomRow.bottomCenter.thumbnailImage.imageName {
     contents: "Orange Bird"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.bottomRow.bottomCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.bottomRow.bottomLeft.thumbnailImage.imageName {
     contents: "Great Horned Owl"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.bottomRow.bottomLeft.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.middleRow.middleRight.thumbnailImage.imageName {
     contents: "Blue-and-yellow Macaw"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.middleRow.middleRight.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.middleRow.middleCenter.thumbnailImage.imageName {
     contents: "Bald Eagle.wave"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.middleRow.middleCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.middleRow.middleLeft.thumbnailImage.imageName {
     contents: "Northern Cardinal\nBody Red"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.middleRow.middleLeft.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.topRow.topRight.thumbnailImage.imageName {
     contents: "Toco Toucan"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.topRow.topRight.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.topRow.topCenter.thumbnailImage.imageName {
     contents: "Eurasian Blue"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.topRow.topCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.topRow.topLeft.thumbnailImage.imageName {
     contents: "Lilac"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.topRow.topLeft.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 }
 
-Timeline = frame {
+timeline = frame {
   name: "Timeline",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 8px},
   fill: Colors.colors.black20,
   padding-top: 8px,
-  children: [layer_j, Tracks]
+  children: [ruler, tracks]
 }
 
-layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
+ruler = timelineRuler.timelineRuler {
   name: "Timeline Ruler",
   left: 0px,
   top: 442.5px,
@@ -273,46 +271,46 @@ layer_j = timelineRuler.TimelineRuler_7EHDtEgmPY {
   padding-left: 24px,
   padding-right: 0px,
   overrides: [
-    insert(module_1r90h9aJDj, after = timelineRuler.module_1r90h9aJDj),
-    insert(module_Kax64eo5pN, after = module_1r90h9aJDj),
-    insert(module_YWpHWOKFmU, after = module_Kax64eo5pN),
-    insert(module_x9fTjghOGA, after = module_YWpHWOKFmU),
-    insert(module_oAd49AzLxr, after = module_x9fTjghOGA),
-    insert(module_WhzRk9ByAT, after = module_oAd49AzLxr),
-    insert(layer_O, after = module_WhzRk9ByAT)
+    insert(marker4, after = timelineRuler.marker3),
+    insert(marker5, after = marker4),
+    insert(marker6, after = marker5),
+    insert(marker7, after = marker6),
+    insert(marker8, after = marker7),
+    insert(marker9, after = marker8),
+    insert(timelinePlayHead, after = marker9)
   ],
 
-  timelineRuler.module_1r90h9aJDj.textLayer_odBUA3ZxP6 {
+  timelineRuler.marker3.label {
     contents: "3"
   }
 
-  timelineRuler.module_MT5vhsabW0.textLayer_odBUA3ZxP6 {
+  timelineRuler.marker2.label {
     contents: "2"
   }
 
-  timelineRuler.module_521cwUq48R.textLayer_odBUA3ZxP6 {
+  timelineRuler.marker1.label {
     contents: "1"
   }
 }
 
-Tracks = frame {
+tracks = frame {
   name: "Tracks",
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 8px},
   padding: [24px, 0px],
-  children: [GroupedStack, layer_VS, VideoTrack]
+  children: [videoTrackRow, audioTrack, titleTrack]
 }
 
-GroupedStack = frame {
+videoTrackRow = frame {
   name: "Video Track Row",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
   padding-left: 80px,
-  children: [layer_f, VideoTrack_u]
+  children: [birdTrack, thumbnailTrack]
 }
 
-layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
+birdTrack = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7941px,
   top: 763px,
@@ -331,7 +329,7 @@ layer_f = videoTrack.VideoTrack_oikz8bvb8Z {
   }
 }
 
-VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
+thumbnailTrack = videoTrack.VideoTrack_oikz8bvb8Z {
   name: "Video Track",
   left: 7961px,
   top: 783px,
@@ -350,39 +348,39 @@ VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
   }
 }
 
-layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
+audioTrack = mediaTrack.track {
   name: "Audio Track",
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
   fill[0].color: rgb(100%, 41.19%, 100%),
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
+  mediaTrack.content.label.trackName {
     contents: "tropical_ambience.mp3"
   }
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.direct24svg_srC1L2hQr9 {
+  mediaTrack.content.label.typeIcon {
     contents: music24
   }
 }
 
-VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
+titleTrack = mediaTrack.track {
   name: "Title Track",
   left: -13207.5px,
   top: 808px,
   width: 59.2292%,
   fill[0].color: rgb(0%, 98.76%, 100%),
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
+  mediaTrack.content.label.trackName {
     contents: "Birds in Their Element"
   }
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.direct24svg_srC1L2hQr9 {
+  mediaTrack.content.label.typeIcon {
     contents: text24
   }
 }
 
-layer_O = playHead.Frame_kFEBYnH2MI {
+timelinePlayHead = playHead.playHead {
   name: "Play Head",
   left: 385px,
   top: -5px,

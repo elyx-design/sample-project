@@ -1,6 +1,6 @@
 import "images/misc/logo.png" as logo2
 
-export iconButton_gqojFFCYlK = frame {
+export small = frame {
   name: "Logo S (24)",
   left: 340px,
   top: 519px,
@@ -9,10 +9,10 @@ export iconButton_gqojFFCYlK = frame {
   layout: {direction: .column, justify-content: .center, align-items: .center},
   fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   corner-radius: 0px,
-  children: logopng_sc1aSOCPki
+  children: smallArtwork
 }
 
-logopng_sc1aSOCPki = shape {
+smallArtwork = shape {
   name: "Logo Artwork",
   left: 0px,
   top: 80px,
@@ -23,20 +23,20 @@ logopng_sc1aSOCPki = shape {
 }
 
 @variant("Logo X (48)")
-ButtonIconL32 = iconButton_gqojFFCYlK {
+large = small {
   left: 490px,
   top: 519px,
-  overrides: [insert(logopng_o, after = .nil), remove(logopng_sc1aSOCPki)]
+  overrides: [insert(largeArtwork, after = .nil), remove(smallArtwork)]
 }
 
 @variant("Button Icon XL (80)")
-ButtonIconXL48 = iconButton_gqojFFCYlK {
+extraLarge = small {
   left: 636px,
   top: 519px,
-  overrides: [insert(logopng_H, after = .nil), remove(logopng_sc1aSOCPki)]
+  overrides: [insert(extraLargeArtwork, after = .nil), remove(smallArtwork)]
 }
 
-logopng_H = shape {
+extraLargeArtwork = shape {
   name: "Logo Artwork",
   left: 0px,
   top: 80px,
@@ -46,7 +46,7 @@ logopng_H = shape {
   type: .rect
 }
 
-logopng_o = shape {
+largeArtwork = shape {
   name: "Logo Artwork",
   left: 0px,
   top: 56px,
@@ -57,13 +57,13 @@ logopng_o = shape {
 }
 
 @variant("Logo M (36)")
-LogoM24Variant = iconButton_gqojFFCYlK {
+medium = small {
   left: 409px,
   top: 519px,
   width: 36px,
   height: 36px,
 
-  logopng_sc1aSOCPki {
+  smallArtwork {
     width: 36px,
     height: 36px
   }

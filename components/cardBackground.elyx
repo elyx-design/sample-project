@@ -2,7 +2,7 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 
-export cardBackground_zXouRyz = frame {
+export base = frame {
   name: "Card Background",
   left: 80px,
   top: 467px,
@@ -26,7 +26,7 @@ export cardBackground_zXouRyz = frame {
 }
 
 @variant("cardBackground (Transparent)")
-cardBackgroundSolidVariant = cardBackground_zXouRyz {
+transparent = base {
   left: 80px,
   top: 575px,
   fill[0].color: colors.colors.whiteAlpha50,
@@ -35,16 +35,10 @@ cardBackgroundSolidVariant = cardBackground_zXouRyz {
 }
 
 @variant("cardBackground (None)")
-cardBackgroundSolidVariant_o = cardBackground_zXouRyz {
-  left: 80px,
-  top: 683px,
-  border[0]: .nil,
-  fill[0]: .nil,
-  shadow[0]: .nil
-}
+none = base {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
 
 @variant("Transparent (full radius)")
-cardBackgroundSolidVariant_B = cardBackground_zXouRyz {
+transparentFullRadius = base {
   left: 275px,
   top: 575px,
   corner-radius: Radius.radius.max,
@@ -54,8 +48,4 @@ cardBackgroundSolidVariant_B = cardBackground_zXouRyz {
 }
 
 @variant("Solid (full radius)")
-cardBackgroundSolidVariant_t = cardBackground_zXouRyz {
-  left: 275.05px,
-  top: 467px,
-  corner-radius: Radius.radius.max
-}
+solidFullRadius = base {left: 275.05px, top: 467px, corner-radius: Radius.radius.max}

@@ -14,7 +14,7 @@ import "blocks/chatWindow.elyx" as chatWindow
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "images/background/desert.png" as desert
 
-Welcome = frame {
+welcome = frame {
   name: "Welcome",
   left: 0px,
   top: 2px,
@@ -32,19 +32,25 @@ Welcome = frame {
   },
   corner-radius: Radius.radius.l,
   padding: [40px, 60px],
-  children: [GroupedStack, Asyoucanseeinth, GroupedStack_T, Alsointheproject, Finallyistheexis]
+  children: [
+    introCopy,
+    projectStructureOverview,
+    scaffoldSections,
+    assetFoldersDescription,
+    tokensFolderDescription
+  ]
 }
 
-GroupedStack = frame {
+introCopy = frame {
   name: "Intro Copy",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   corner-radius: 0px,
   padding: 0px,
-  children: [WelcometotheElyx, Thisdocumentcontai]
+  children: [welcomeHeading, welcomeDescription]
 }
 
-WelcometotheElyx = text {
+welcomeHeading = text {
   name: "Welcome Heading",
   left: 0px,
   top: 0px,
@@ -55,7 +61,7 @@ WelcometotheElyx = text {
   font-style: "Regular"
 }
 
-Thisdocumentcontai = text {
+welcomeDescription = text {
   name: "Welcome Description",
   left: 20px,
   top: 20px,
@@ -66,7 +72,7 @@ Thisdocumentcontai = text {
   font-style: "Regular"
 }
 
-Asyoucanseeinth = text {
+projectStructureOverview = text {
   name: "Project Structure Overview",
   left: 0px,
   top: 40px,
@@ -78,14 +84,14 @@ Asyoucanseeinth = text {
   font-style: "Regular"
 }
 
-GroupedStack_T = frame {
+scaffoldSections = frame {
   name: "Scaffold Sections",
   width: 100%,
   layout: {item-gap: 20px},
-  children: [Frame_J, Frame_j, Frame_K]
+  children: [componentsCard, blocksCard, screensCard]
 }
 
-Frame_J = frame {
+componentsCard = frame {
   name: "Components Overview Card",
   left: 0px,
   top: 0px,
@@ -96,10 +102,10 @@ Frame_J = frame {
   border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: Radius.radius.s,
   padding: 16px,
-  children: [COMPONENTS, Componentsarethes]
+  children: [componentsLabel, componentsDescription]
 }
 
-COMPONENTS = text {
+componentsLabel = text {
   name: "Components Label",
   left: 69px,
   top: 45px,
@@ -111,7 +117,7 @@ COMPONENTS = text {
   letter-spacing: 5%
 }
 
-Componentsarethes = text {
+componentsDescription = text {
   name: "Components Description",
   left: 0px,
   top: 65px,
@@ -123,7 +129,7 @@ Componentsarethes = text {
   font-style: "Regular"
 }
 
-Frame_j = frame {
+blocksCard = frame {
   name: "Blocks Overview Card",
   left: 0px,
   top: 0px,
@@ -134,10 +140,10 @@ Frame_j = frame {
   border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: Radius.radius.s,
   padding: 16px,
-  children: [BLOCKS, Ifcomponentsareat]
+  children: [blocksLabel, blocksDescription]
 }
 
-BLOCKS = text {
+blocksLabel = text {
   name: "Blocks Label",
   left: 162.6667px,
   top: -17px,
@@ -149,7 +155,7 @@ BLOCKS = text {
   letter-spacing: 5%
 }
 
-Ifcomponentsareat = text {
+blocksDescription = text {
   name: "Blocks Description",
   left: 0px,
   top: 71px,
@@ -161,7 +167,7 @@ Ifcomponentsareat = text {
   font-style: "Regular"
 }
 
-Frame_K = frame {
+screensCard = frame {
   name: "Screens Overview Card",
   left: 0px,
   top: 0px,
@@ -172,10 +178,10 @@ Frame_K = frame {
   border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: Radius.radius.s,
   padding: 16px,
-  children: [SCREENS, Screenswouldbethi]
+  children: [screensLabel, screensDescription]
 }
 
-SCREENS = text {
+screensLabel = text {
   name: "Screens Label",
   left: 162.6667px,
   top: -25.5px,
@@ -187,7 +193,7 @@ SCREENS = text {
   letter-spacing: 5%
 }
 
-Screenswouldbethi = text {
+screensDescription = text {
   name: "Screens Description",
   left: 54px,
   top: 0px,
@@ -200,7 +206,7 @@ Screenswouldbethi = text {
   font-style: "Regular"
 }
 
-Alsointheproject = text {
+assetFoldersDescription = text {
   name: "Asset Folders Description",
   left: 20px,
   top: 60px,
@@ -212,7 +218,7 @@ Alsointheproject = text {
   font-style: "Regular"
 }
 
-Finallyistheexis = text {
+tokensFolderDescription = text {
   name: "Tokens Folder Description",
   left: 20px,
   top: 301px,
@@ -224,59 +230,55 @@ Finallyistheexis = text {
   font-style: "Regular"
 }
 
-Component = button.ButtonVariant_V {
+componentExample = button.mediumPrimary {
   name: "Component",
   doc: "A simple button as a component.",
   left: 16px,
   top: 757px
 }
 
-Block = profileCard.profileCard_vlvneaI {
+blockExample = profileCard.profileCard {
   name: "Block",
   doc: "A profile section as a block, containing multiple components.",
   left: 223px,
   top: 757px
 }
 
-Frame = frame {
+showcase = frame {
   name: "Showcase Canvas",
   left: 282px,
   top: 2190px,
   width: 2399px,
   height: 2010px,
   fill: {image: {ref: desert}},
-  children: [layer_3, layer_6, layer_1, layer_w, Frame_y, layer_9, layer]
+  children: [reviewCard, menu, chat, audioToolbar, liveEventPreview, createToolbar, socialCard]
 }
 
-layer_3 = cardInfo.cardBackgroundSolid_hxqOj5bsxM {
-  name: "Review Card",
-  left: 585px,
-  top: 823px
-}
+reviewCard = cardInfo.reviewCard {name: "Review Card", left: 585px, top: 823px}
 
-layer_6 = menuList.MenuList_6OjbR9CAsW {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
+menu = menuList.menuList {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
 
-layer_1 = aiChat.AiChat_DK44ShHBd2 {
+chat = aiChat.aiChat {
   name: "Ai Chat",
   left: 979px,
   top: 1369px,
   width: 408px,
   height: 562px,
-  overrides: [remove(aiChat.AppTopBar_xpVFAA82Vy)],
+  overrides: [remove(aiChat.topBar)],
 
-  aiChat.GroupedStack_mRtZgIziU3.GroupedStack_v5YeDmjPaA {
+  aiChat.chatBody.messageArea {
     overflow: .visible
   }
 }
 
-layer_w = toolbar.Toolbaraudio_qGGZOkqJFq {
+audioToolbar = toolbar.audioToolbar {
   name: "Toolbar (audio)",
   left: 1411px,
   top: 1863px,
   width: 322px
 }
 
-Frame_y = frame {
+liveEventPreview = frame {
   name: "Live Event Preview",
   left: 1411px,
   top: 1369px,
@@ -292,20 +294,20 @@ Frame_y = frame {
     }
   },
   corner-radius: 24px,
-  children: Frame_Z
+  children: previewLayout
 }
 
-Frame_Z = frame {
+previewLayout = frame {
   name: "Video Chat Layout",
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   layout: {justify-content: .space-between},
-  children: [VideoPlayer, layer_5]
+  children: [eventVideo, eventChat]
 }
 
-VideoPlayer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+eventVideo = videoPlayer.videoPlayer {
   name: "Video Player",
   left: 0px,
   top: 0px,
@@ -313,23 +315,23 @@ VideoPlayer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   height: 100%
 }
 
-layer_5 = chatWindow.ChatWindow_J7FxeHn6Zh {
+eventChat = chatWindow.chatWindow {
   name: "Chat Window",
   left: 640px,
   top: 0px,
   width: 32.6%,
   height: 100%,
 
-  chatWindow.Chat_rw4c7WJOMr.GroupedStack_9ZE1MpDskD {
+  chatWindow.messageThread.replyMessages {
     overflow: .visible
   }
 }
 
-layer_9 = tollbarCreate.ToolbarCreate_WBWllCttV6 {
+createToolbar = tollbarCreate.toolbarCreate {
   name: "Toolbar Create",
   left: 1411px,
   top: 1923px,
   width: 379px
 }
 
-layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 228px, top: 820px}
+socialCard = cardSocial.socialCard {name: "Social Card", left: 228px, top: 820px}

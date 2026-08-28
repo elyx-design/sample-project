@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as colors
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown12
 import "components/button.elyx" as button
 
-export AppTopBar_ePXqYpgrNQ = frame {
+export appTopBar = frame {
   name: "App Top Bar (light)",
   left: 707px,
   top: 518px,
@@ -19,20 +19,20 @@ export AppTopBar_ePXqYpgrNQ = frame {
     }
   },
   padding: [0px, 20px],
-  children: [Title_M1uSFbT37W, GroupedStack_5wzShorcNs]
+  children: [fileSelector, actions]
 }
 
-Title_M1uSFbT37W = frame {
+fileSelector = frame {
   name: "File Selector",
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [NewAiChat_WzpulaBhIr, chevrondown12svg_eRLZPmBMpe]
+  children: [fileName, chevron]
 }
 
-NewAiChat_WzpulaBhIr = text {
+fileName = text {
   name: "File Name",
   left: 0px,
   top: 0px,
@@ -41,7 +41,7 @@ NewAiChat_WzpulaBhIr = text {
   font-style: "SemiBold"
 }
 
-chevrondown12svg_eRLZPmBMpe = icon {
+chevron = icon {
   name: "File Menu Chevron",
   left: 789px,
   top: 545px,
@@ -50,29 +50,24 @@ chevrondown12svg_eRLZPmBMpe = icon {
   contents: chevrondown12
 }
 
-GroupedStack_5wzShorcNs = frame {
+actions = frame {
   name: "Top Bar Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [GroupedStack_XpqkU0zEE8, Primary_RO7ljR3X40]
+  children: [tools, primaryButton]
 }
 
-GroupedStack_XpqkU0zEE8 = frame {
+tools = frame {
   name: "Tools",
   height: 100%,
   layout: {align-items: .center},
-  children: [Icon_iGRBSIf0Fg, Icon_9mAHYYe2nV, Icon_fMEe296VCC]
+  children: [leadingTool, middleTool, trailingTool]
 }
 
-Icon_iGRBSIf0Fg = button.ButtonS28Variant_7 {name: "Icon", left: 287px, top: 21px}
+leadingTool = button.smallIcon {name: "Icon", left: 287px, top: 21px}
 
-Icon_9mAHYYe2nV = button.ButtonS28Variant_7 {name: "Icon", left: 307px, top: 41px}
+middleTool = button.smallIcon {name: "Icon", left: 307px, top: 41px}
 
-Icon_fMEe296VCC = button.ButtonS28Variant_7 {name: "Icon", left: 335px, top: 41px}
+trailingTool = button.smallIcon {name: "Icon", left: 335px, top: 41px}
 
-Primary_RO7ljR3X40 = button.PrimaryS_bwovCsQN9N {
-  name: "Primary Button",
-  left: 606px,
-  top: 542px,
-  width: 62px
-}
+primaryButton = button.smallPrimary {name: "Primary Button", left: 606px, top: 542px, width: 62px}

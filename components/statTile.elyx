@@ -3,7 +3,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
-export statTile_BwT4HpE = frame {
+export statTile = frame {
   name: "Stat Tile",
   left: 0px,
   top: 0px,
@@ -24,10 +24,10 @@ export statTile_BwT4HpE = frame {
   border: Colors.colors.blackAlpha25,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM,
-  children: [StatValue_PPgC1JG, StatLabel_zJ4gqsc]
+  children: [value, label]
 }
 
-StatValue_PPgC1JG = text {
+value = text {
   name: "Stat Value",
   fill: Colors.colors.black20,
   contents: "16",
@@ -36,7 +36,7 @@ StatValue_PPgC1JG = text {
   font-style: "SemiBold"
 }
 
-StatLabel_zJ4gqsc = text {
+label = text {
   name: "Stat Label",
   fill: Colors.colors.blackAlpha70,
   contents: "Label",

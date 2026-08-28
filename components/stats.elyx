@@ -1,49 +1,36 @@
 import "components/divider.elyx" as divider
 import "tokens/colors.elyx" as colors
 
-export Stats_SAGlIolZIe = frame {
+export stats = frame {
   name: "Stats",
   left: 396px,
   top: 630px,
   width: 1011.3979px,
   layout: {direction: .column, justify-content: .center, item-gap: 8px},
-  children: [DividerWhite_BvfgQ0x6CS, Frame_JZbGEcdAyx, DividerWhite_Wbr0ZiRmxz]
+  children: [topDivider, row, bottomDivider]
 }
 
-DividerWhite_BvfgQ0x6CS = divider.Divider_97GT5IGMgL {
-  name: "Divider (White)",
-  left: 0px,
-  top: 0px,
-  width: 100%
-}
+topDivider = divider.horizontal {name: "Divider (White)", left: 0px, top: 0px, width: 100%}
 
-Frame_JZbGEcdAyx = frame {
+row = frame {
   name: "Stats Row",
   left: 0px,
   top: 74px,
   width: 100%,
   layout: {justify-content: .space-around, item-gap: 24px},
-  children: [
-    Frame_v3hR4sAYg5,
-    Dividervertical_9c0N5aibGz,
-    Frame_K3EsLWJmUO,
-    Dividervertical_kxWxSCimLZ,
-    Frame_ySVSgouDo5,
-    Dividervertical_tyQgNFTlxv,
-    Frame_tiqgxwz6GB
-  ]
+  children: [books, booksDivider, pages, pagesDivider, rating, ratingDivider, shelves]
 }
 
-Frame_v3hR4sAYg5 = frame {
+books = frame {
   name: "Books Stat",
   left: 0px,
   top: 0px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
-  children: [textLayer_F84E4Z85em, Livrosem20_OIV9rtYiSu]
+  children: [booksValue, booksLabel]
 }
 
-textLayer_F84E4Z85em = text {
+booksValue = text {
   name: "41",
   left: 0px,
   top: 0px,
@@ -54,7 +41,7 @@ textLayer_F84E4Z85em = text {
   align: .center
 }
 
-Livrosem20_OIV9rtYiSu = text {
+booksLabel = text {
   name: "Books",
   left: 0px,
   top: 39px,
@@ -66,23 +53,18 @@ Livrosem20_OIV9rtYiSu = text {
   align: .center
 }
 
-Dividervertical_9c0N5aibGz = divider.Div_JPakkrqBxW {
-  name: "Divider (vertical)",
-  left: 20px,
-  top: 701px,
-  width: 100%
-}
+booksDivider = divider.vertical {name: "Divider (vertical)", left: 20px, top: 701px, width: 100%}
 
-Frame_K3EsLWJmUO = frame {
+pages = frame {
   name: "Pages Stat",
   left: 0px,
   top: 0px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
-  children: [k_EhK2oSOZeY, PagesRead_jDu4nkUS3l]
+  children: [pagesValue, pagesLabel]
 }
 
-k_EhK2oSOZeY = text {
+pagesValue = text {
   name: "11k",
   left: 0px,
   top: 0px,
@@ -93,7 +75,7 @@ k_EhK2oSOZeY = text {
   align: .center
 }
 
-PagesRead_jDu4nkUS3l = text {
+pagesLabel = text {
   name: "Pages",
   left: 0px,
   top: 39px,
@@ -105,23 +87,18 @@ PagesRead_jDu4nkUS3l = text {
   align: .center
 }
 
-Dividervertical_kxWxSCimLZ = divider.Div_JPakkrqBxW {
-  name: "Divider (vertical)",
-  left: 0px,
-  top: 681px,
-  width: 100%
-}
+pagesDivider = divider.vertical {name: "Divider (vertical)", left: 0px, top: 681px, width: 100%}
 
-Frame_ySVSgouDo5 = frame {
+rating = frame {
   name: "Rating Stat",
   left: 0px,
   top: 40px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
-  children: [textLayer_ME8HoqBeUD, AvrRating_35SpwnbsZt]
+  children: [ratingValue, ratingLabel]
 }
 
-textLayer_ME8HoqBeUD = text {
+ratingValue = text {
   name: "4.2",
   left: 0px,
   top: 0px,
@@ -132,7 +109,7 @@ textLayer_ME8HoqBeUD = text {
   align: .center
 }
 
-AvrRating_35SpwnbsZt = text {
+ratingLabel = text {
   name: "Rating",
   left: 0px,
   top: 39px,
@@ -144,23 +121,18 @@ AvrRating_35SpwnbsZt = text {
   align: .center
 }
 
-Dividervertical_tyQgNFTlxv = divider.Div_JPakkrqBxW {
-  name: "Divider (vertical)",
-  left: 20px,
-  top: 701px,
-  width: 100%
-}
+ratingDivider = divider.vertical {name: "Divider (vertical)", left: 20px, top: 701px, width: 100%}
 
-Frame_tiqgxwz6GB = frame {
+shelves = frame {
   name: "Shelves Stat",
   left: 20px,
   top: 60px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
-  children: [textLayer_7a3ZYOUe22, AvrRating_323yTc7AQH]
+  children: [shelvesValue, shelvesLabel]
 }
 
-textLayer_7a3ZYOUe22 = text {
+shelvesValue = text {
   name: "9",
   left: 0px,
   top: 0px,
@@ -171,7 +143,7 @@ textLayer_7a3ZYOUe22 = text {
   align: .center
 }
 
-AvrRating_323yTc7AQH = text {
+shelvesLabel = text {
   name: "Shelves",
   left: 0px,
   top: 39px,
@@ -183,9 +155,4 @@ AvrRating_323yTc7AQH = text {
   align: .center
 }
 
-DividerWhite_Wbr0ZiRmxz = divider.Divider_97GT5IGMgL {
-  name: "Divider (White)",
-  left: 20px,
-  top: 20px,
-  width: 100%
-}
+bottomDivider = divider.horizontal {name: "Divider (White)", left: 20px, top: 20px, width: 100%}

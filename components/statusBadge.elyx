@@ -3,7 +3,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
-export statusBadge_3ac5QoB = frame {
+export base = frame {
   name: "Status Badge",
   left: 461px,
   top: 1px,
@@ -13,10 +13,10 @@ export statusBadge_3ac5QoB = frame {
   fill: rgb(81.8%, 94.6067%, 83.9155%),
   corner-radius: Radius.radius.max,
   padding: [6px, Spacing.spacing.paddingL],
-  children: ProfileBadgeLabel_fs2wPy7
+  children: label
 }
 
-ProfileBadgeLabel_fs2wPy7 = text {
+label = text {
   name: "Status Label",
   fill: rgb(1.85%, 26.7497%, 11.23%),
   contents: "Label",
@@ -26,12 +26,12 @@ ProfileBadgeLabel_fs2wPy7 = text {
 }
 
 @variant("statusBadge Variant")
-statusBadgeVariant_5 = statusBadge_3ac5QoB {
+dark = base {
   left: 461px,
   top: 76px,
   fill[0].color: rgb(98.82%, 98.82%, 98.82%, 20%),
 
-  ProfileBadgeLabel_fs2wPy7 {
+  label {
     fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }

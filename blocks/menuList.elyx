@@ -13,7 +13,7 @@ import "icons/20 pixels/settings-20.svg" as settings20
 import "icons/20 pixels/notes-20.svg" as notes20
 import "icons/20 pixels/chat-20.svg" as chat20
 
-export MenuList_6OjbR9CAsW = cardBackground.cardBackground_zXouRyz {
+export menuList = cardBackground.base {
   name: "Menu List",
   left: 33.25px,
   top: -48px,
@@ -26,13 +26,10 @@ export MenuList_6OjbR9CAsW = cardBackground.cardBackground_zXouRyz {
   filter[0].radius: 40px,
   filter[0].type: .background-blur,
   layout.item-gap: 0,
-  overrides: [
-    insert(layer_pYDBDO3QeP, after = .nil),
-    insert(GroupedStack_PhTktSdJeE, after = layer_pYDBDO3QeP)
-  ]
+  overrides: [insert(menuHeader, after = .nil), insert(footerActions, after = menuHeader)]
 }
 
-layer_pYDBDO3QeP = frame {
+menuHeader = frame {
   name: "Menu Header",
   left: 0px,
   top: 108.5px,
@@ -41,194 +38,173 @@ layer_pYDBDO3QeP = frame {
   fill: colors.colors.white100,
   corner-radius: 16px,
   padding: 16px,
-  children: [UserSummaryS_V7QO9s9YIs, SegmentedControl_FHdeL5SuEV, GroupedStack_Wtlz5W8Cmm]
+  children: [user, themeControl, menuSections]
 }
 
-UserSummaryS_V7QO9s9YIs = userSummary.UserSummaryS_clM0CpDw4i {
-  name: "User Summary S",
-  left: 0px,
-  top: 0px
-}
+user = userSummary.UserSummaryS_clM0CpDw4i {name: "User Summary S", left: 0px, top: 0px}
 
-SegmentedControl_FHdeL5SuEV = segmentedControl.SegmentedControlMVariant {
+themeControl = segmentedControl.small {
   name: "Segmented Control S",
   left: 0px,
   top: -17px,
   width: 100%,
 
-  segmentedControl.Selected_D.Item_P {
+  segmentedControl.trailingSegment.label {
     contents: "System"
   }
 
-  segmentedControl.Selected.Item_P {
+  segmentedControl.middleSegment.label {
     contents: "Dark"
   }
 
-  segmentedControl.layer_M.Item_P {
+  segmentedControl.smallLeadingSegment.label {
     contents: "Light"
   }
 }
 
-GroupedStack_Wtlz5W8Cmm = frame {
+menuSections = frame {
   name: "Menu Sections",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
-  children: [Menu_OmCVZ7XoTy, Divider_7bOUsmBic5, Menu_Z86v8Yz2p0]
+  children: [collaborationMenu, menuDivider, workspaceMenu]
 }
 
-Menu_OmCVZ7XoTy = frame {
+collaborationMenu = frame {
   name: "Collaboration Menu",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
-  children: [Row_dpI5iHhQJU, Selected_rskLcIWzCu, Row_uaorkPnJJf]
+  children: [commentsRow, activityRow, notesRow]
 }
 
-Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
+commentsRow = ListRow.base {
   name: "Comments Row",
   left: 0px,
   top: 0px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Comments"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: chat20
   }
 
-  ListRow.Item_e_O {
-  }
+  ListRow.Item_e_O {}
 }
 
-Selected_rskLcIWzCu = ListRow.RowVariant_7 {
+activityRow = ListRow.selected {
   name: "Activity Row",
   left: 20px,
   top: 20px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Activity"
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  }
-
-  ListRow.Item_e_O {
-
-  }
+  ListRow.Item_e_O {}
 }
 
-Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
+notesRow = ListRow.base {
   name: "Notes Row",
   left: 20px,
   top: 56px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Notes"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: notes20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    
-  }
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  ListRow.Item_e_O {
-    
-  }
+  ListRow.Item_e_O {}
 }
 
-Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {name: "Menu Divider", left: 0px, top: 0px, width: 100%}
+menuDivider = divider.horizontal {name: "Menu Divider", left: 0px, top: 0px, width: 100%}
 
-Menu_Z86v8Yz2p0 = frame {
+workspaceMenu = frame {
   name: "Workspace Menu",
   left: 36px,
   top: 243px,
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
-  children: [Row_XU5C18oI9q, Row_6PGwNMvVCy]
+  children: [databaseRow, settingsRow]
 }
 
-Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
+databaseRow = ListRow.base {
   name: "Database Row",
   left: 0px,
   top: 0px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Database"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: notes20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    
-  }
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  ListRow.Item_e_O {
-    
-  }
+  ListRow.Item_e_O {}
 }
 
-Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
+settingsRow = ListRow.base {
   name: "Settings Row",
   left: 20px,
   top: 56px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Settings"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: settings20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    
-  }
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  ListRow.Item_e_O {
-   
-  }
+  ListRow.Item_e_O {}
 }
 
-GroupedStack_PhTktSdJeE = frame {
+footerActions = frame {
   name: "Footer Actions",
   width: 100%,
   layout: {justify-content: .space-between},
   padding: 16px,
-  children: [ButtonM36_QkDpQUOUSJ, GroupedStack_TEA9Nb4ecN]
+  children: [dangerButton, secondaryActions]
 }
 
-ButtonM36_QkDpQUOUSJ = button.ButtonVariant_T {name: "Danger Button", left: 213px, top: 242px}
+dangerButton = button.mediumDanger {name: "Danger Button", left: 213px, top: 242px}
 
-GroupedStack_TEA9Nb4ecN = frame {
+secondaryActions = frame {
   name: "Secondary Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
-  children: [Icon_aibAeY7M3f, Icon_kecQYvY0Mv]
+  children: [shareButton, moreButton]
 }
 
-Icon_aibAeY7M3f = button.ButtonM36Variant_h {
+shareButton = button.mediumIcon {
   name: "Share Button",
   left: 233px,
   top: 262px,
 
-  button.calendar24svg {
+  button.mediumIconGlyph {
     contents: direct24
   }
 }
 
-Icon_kecQYvY0Mv = button.ButtonM36Variant_h {
+moreButton = button.mediumIcon {
   name: "More Button",
   left: 253px,
   top: 282px,
 
-  button.calendar24svg {
+  button.mediumIconGlyph {
     contents: ellipsishorizontal24
   }
 }

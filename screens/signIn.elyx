@@ -4,7 +4,7 @@ import "tokens/typography.elyx" as Typography
 import "components/avatarGroup.elyx" as profileGroup
 import "images/background/desert.png" as desert
 
-export SignInScreen_uAwbWmooF0 = frame {
+export signInScreen = frame {
   name: "Sign In Screen",
   left: -16px,
   top: 147px,
@@ -13,10 +13,10 @@ export SignInScreen_uAwbWmooF0 = frame {
   layout: {direction: .column, align-items: .center, item-gap: 48px},
   fill: {image: {ref: desert}},
   padding-top: 0px,
-  children: GroupedStack_pB84n1ORbr
+  children: content
 }
 
-GroupedStack_pB84n1ORbr = frame {
+content = frame {
   name: "Sign In Content",
   left: 0px,
   top: 0px,
@@ -24,38 +24,33 @@ GroupedStack_pB84n1ORbr = frame {
   height: 100%,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 32px},
   overflow: .visible,
-  children: [AuthForm_j40iQAKlB1, profileGroup_LYFcdFxyNU, FooterLinks_iuOfIBy5o9]
+  children: [signInForm, activeUsers, footerLinks]
 }
 
-AuthForm_j40iQAKlB1 = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
-  name: "Sign In Form",
-  left: 373px,
-  top: 389px,
-  width: 32%
-}
+signInForm = AuthForm.signInForm {name: "Sign In Form", left: 373px, top: 389px, width: 32%}
 
-profileGroup_LYFcdFxyNU = profileGroup.profileGroupLabelbottom_uuBCQBPIGh {
+activeUsers = profileGroup.labelBottom {
   name: "Active Users",
   left: 600px,
   top: 962px,
 
-  profileGroup.Frame_czczziH5wc.textLayer_dV81HeiWgb {
+  profileGroup.bottomCount.bottomCountText {
     contents: "+28k online",
     fill[0].color: Colors.colors.whiteAlpha70
   }
 }
 
-FooterLinks_iuOfIBy5o9 = frame {
+footerLinks = frame {
   name: "Footer Links",
   left: 569.5px,
   top: 0px,
   width: 141px,
   height: 15px,
   layout: {align-items: .center, item-gap: 18px},
-  children: [Privacy_oO6XLpPKVH, Terms_hZHVtFTwG9, Help_EMM1UvFR6p]
+  children: [privacy, terms, help]
 }
 
-Privacy_oO6XLpPKVH = text {
+privacy = text {
   name: "Privacy",
   fill: Colors.colors.white100,
   contents: "Privacy",
@@ -64,7 +59,7 @@ Privacy_oO6XLpPKVH = text {
   font-style: "Regular"
 }
 
-Terms_hZHVtFTwG9 = text {
+terms = text {
   name: "Terms",
   fill: Colors.colors.white100,
   contents: "Terms",
@@ -73,7 +68,7 @@ Terms_hZHVtFTwG9 = text {
   font-style: "Regular"
 }
 
-Help_EMM1UvFR6p = text {
+help = text {
   name: "Help",
   fill: Colors.colors.white100,
   contents: "Help",

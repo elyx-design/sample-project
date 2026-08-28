@@ -3,17 +3,17 @@ import "tokens/colors.elyx" as colors
 import "blocks/chatWindow.elyx" as chatWindow
 import "images/background/desert.png" as desert
 
-LiveEvent = frame {
+liveEvent = frame {
   name: "Live Event",
   left: -76.9999px,
   top: -8px,
   width: 1415px,
   height: 925px,
   fill: {image: {ref: desert}},
-  children: Frame_r
+  children: eventPanel
 }
 
-Frame_r = frame {
+eventPanel = frame {
   name: "Event Panel",
   left: 226.9999px,
   top: 219px,
@@ -29,20 +29,20 @@ Frame_r = frame {
     }
   },
   corner-radius: 24px,
-  children: Frame_Z
+  children: layout
 }
 
-Frame_Z = frame {
+layout = frame {
   name: "Video Chat Layout",
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   layout: {justify-content: .space-between},
-  children: [layer, layer_5]
+  children: [video, chat]
 }
 
-layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
+video = videoPlayer.videoPlayer {
   name: "Video Player",
   left: 0px,
   top: 0px,
@@ -50,7 +50,7 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
   height: 100%
 }
 
-layer_5 = chatWindow.ChatWindow_J7FxeHn6Zh {
+chat = chatWindow.chatWindow {
   name: "Chat Window",
   left: 640px,
   top: 0px,

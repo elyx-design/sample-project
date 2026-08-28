@@ -7,7 +7,7 @@ import "icons/20 pixels/close-20.svg" as close20
 import "icons/24 pixels/calendar-24.svg" as calendar24
 import "icons/20 pixels/trash-20.svg" as trash20
 
-export button_43RxZnGr30 = frame {
+export medium = frame {
   name: "Button M (36)",
   left: 962px,
   top: 689px,
@@ -32,10 +32,10 @@ export button_43RxZnGr30 = frame {
   corner-radius: Radius.radius.max,
   padding-left: 16px,
   padding-right: 16px,
-  children: Button
+  children: mediumLabel
 }
 
-Button = text {
+mediumLabel = text {
   name: "Button Label",
   left: 12px,
   top: 9.5px,
@@ -49,7 +49,7 @@ Button = text {
 }
 
 @variant(Primary)
-ButtonVariant_V = button_43RxZnGr30 {
+mediumPrimary = medium {
   left: 1072px,
   top: 689px,
   border[0].color: Colors.colors.black20,
@@ -60,14 +60,14 @@ ButtonVariant_V = button_43RxZnGr30 {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  Button {
+  mediumLabel {
     fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%),
     left: 16px
   }
 }
 
 @variant(Danger)
-ButtonVariant_T = button_43RxZnGr30 {
+mediumDanger = medium {
   left: 1181px,
   top: 689px,
   border[0].color: Colors.colors.red50,
@@ -78,13 +78,13 @@ ButtonVariant_T = button_43RxZnGr30 {
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
-  Button {
+  mediumLabel {
     fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 
 @variant(Pressed)
-ButtonVariant_s = button_43RxZnGr30 {
+mediumPressed = medium {
   left: 962px,
   top: 769px,
   fill[0].color: Colors.colors.black90,
@@ -96,7 +96,7 @@ ButtonVariant_s = button_43RxZnGr30 {
 }
 
 @variant("Primary Pressed")
-ButtonVariant_E = button_43RxZnGr30 {
+mediumPrimaryPressed = medium {
   left: 1072px,
   top: 769px,
   border[0].color: Colors.colors.black30,
@@ -106,13 +106,13 @@ ButtonVariant_E = button_43RxZnGr30 {
   shadow[0].inner-shadow.color: Colors.colors.black30,
   shadow[0].inner-shadow.offset: [0px, 3px],
 
-  Button {
+  mediumLabel {
     fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 
 @variant("Danger Pressed")
-Danger = button_43RxZnGr30 {
+mediumDangerPressed = medium {
   left: 1181px,
   top: 769px,
   border[0].color: Colors.colors.red50,
@@ -123,12 +123,12 @@ Danger = button_43RxZnGr30 {
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal,
 
-  Button {
+  mediumLabel {
     fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
   }
 }
 
-export ButtonX28_unc1oz6mM6 = frame {
+export small = frame {
   name: "Button S (28)",
   left: 962px,
   top: 917px,
@@ -152,10 +152,10 @@ export ButtonX28_unc1oz6mM6 = frame {
   },
   corner-radius: Radius.radius.max,
   padding: [0px, 12px],
-  children: Button_2BBvydtXMm
+  children: smallLabel
 }
 
-Button_2BBvydtXMm = text {
+smallLabel = text {
   name: "Button Label",
   left: 8px,
   top: 6.5px,
@@ -169,7 +169,7 @@ Button_2BBvydtXMm = text {
 }
 
 @variant("Danger Pressed")
-ButtonS28Variant2 = ButtonX28_unc1oz6mM6 {
+smallDangerPressed = small {
   left: 1127px,
   top: 993px,
   fill[0].color: Colors.colors.red60,
@@ -179,13 +179,13 @@ ButtonS28Variant2 = ButtonX28_unc1oz6mM6 {
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal,
 
-  Button_2BBvydtXMm {
+  smallLabel {
     fill[0].color: Colors.colors.white100
   }
 }
 
 @variant(Danger)
-ButtonS28Variant_I = ButtonX28_unc1oz6mM6 {
+smallDanger = small {
   left: 1127px,
   top: 917px,
   border[0].color: Colors.colors.red50,
@@ -196,13 +196,13 @@ ButtonS28Variant_I = ButtonX28_unc1oz6mM6 {
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
-  Button_2BBvydtXMm {
+  smallLabel {
     fill[0].color: Colors.colors.white100
   }
 }
 
 @variant(Pressed)
-ButtonS28Variant = ButtonX28_unc1oz6mM6 {
+smallPressed = small {
   left: 962px,
   top: 993px,
   fill[0].color: Colors.colors.black90,
@@ -214,7 +214,7 @@ ButtonS28Variant = ButtonX28_unc1oz6mM6 {
 }
 
 @variant(Primary)
-PrimaryS_bwovCsQN9N = ButtonX28_unc1oz6mM6 {
+smallPrimary = small {
   left: 1045px,
   top: 917px,
   border[1].color: Colors.colors.black20,
@@ -226,13 +226,13 @@ PrimaryS_bwovCsQN9N = ButtonX28_unc1oz6mM6 {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  Button_2BBvydtXMm {
+  smallLabel {
     fill[0].color: Colors.colors.white100
   }
 }
 
 @variant("Primary Pressed")
-ButtonS28Variant_t = ButtonX28_unc1oz6mM6 {
+smallPrimaryPressed = small {
   left: 1045px,
   top: 993px,
   fill[0].color: Colors.colors.black40,
@@ -241,21 +241,21 @@ ButtonS28Variant_t = ButtonX28_unc1oz6mM6 {
   shadow[0].inner-shadow.color: Colors.colors.black30,
   shadow[0].inner-shadow.offset: [0px, 3px],
 
-  Button_2BBvydtXMm {
+  smallLabel {
     fill[0].color: Colors.colors.white100
   }
 }
 
 @variant(Icon)
-ButtonM36Variant_h = button_43RxZnGr30 {
+mediumIcon = medium {
   left: 1348px,
   top: 689px,
   width: Spacing.spacing.heightM,
-  overrides: [insert(calendar24svg, after = .nil), remove(Button)]
+  overrides: [insert(mediumIconGlyph, after = .nil), remove(mediumLabel)]
 }
 
 @variant(Close)
-ButtonM36Variant = button_43RxZnGr30 {
+mediumClose = medium {
   left: 1291px,
   top: 689px,
   width: Spacing.spacing.heightM,
@@ -263,20 +263,20 @@ ButtonM36Variant = button_43RxZnGr30 {
   fill[0].color: Colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur,
-  overrides: [insert(close24svg, after = .nil), remove(Button)],
+  overrides: [insert(mediumCloseIcon, after = .nil), remove(mediumLabel)],
   shadow[0]: .nil
 }
 
 @variant("Icon (BG)")
-ButtonS28Variant_0 = ButtonX28_unc1oz6mM6 {
+smallIconBackground = small {
   left: 1257px,
   top: 917px,
   width: Spacing.spacing.heightS,
-  overrides: [insert(trash20svg, after = .nil), remove(Button_2BBvydtXMm)]
+  overrides: [insert(smallBackgroundIcon, after = .nil), remove(smallLabel)]
 }
 
 @variant(Close)
-ButtonS28Variant_X = ButtonX28_unc1oz6mM6 {
+smallClose = small {
   left: 1210px,
   top: 917px,
   width: Spacing.spacing.heightS,
@@ -284,11 +284,11 @@ ButtonS28Variant_X = ButtonX28_unc1oz6mM6 {
   fill[0].color: Colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur,
-  overrides: [insert(close20svg, after = .nil), remove(Button_2BBvydtXMm)],
+  overrides: [insert(smallCloseIcon, after = .nil), remove(smallLabel)],
   shadow[0]: .nil
 }
 
-trash20svg = icon {
+smallBackgroundIcon = icon {
   name: "Button Icon",
   left: 1248px,
   top: 918px,
@@ -298,7 +298,7 @@ trash20svg = icon {
   contents: trash20
 }
 
-close24svg = icon {
+mediumCloseIcon = icon {
   name: "Close Icon",
   left: 1387px,
   top: 682px,
@@ -308,7 +308,7 @@ close24svg = icon {
   contents: close24
 }
 
-close20svg = icon {
+smallCloseIcon = icon {
   name: "Close Icon",
   left: 1211px,
   top: 918px,
@@ -317,7 +317,7 @@ close20svg = icon {
   contents: close20
 }
 
-calendar24svg = icon {
+mediumIconGlyph = icon {
   name: "Button Icon",
   left: 1353px,
   top: 705px,
@@ -328,16 +328,16 @@ calendar24svg = icon {
 }
 
 @variant("Primary rounded")
-ButtonS28Variant_5 = ButtonX28_unc1oz6mM6 {
+smallPrimaryRounded = small {
   left: 1304px,
   top: 917px,
   width: Spacing.spacing.heightS,
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
-  overrides: [insert(trash20svg_z, after = .nil), remove(Button_2BBvydtXMm)]
+  overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(smallLabel)]
 }
 
-trash20svg_z = icon {
+smallPrimaryRoundedIcon = icon {
   name: "Button Icon",
   left: 1248px,
   top: 918px,
@@ -348,17 +348,17 @@ trash20svg_z = icon {
 }
 
 @variant(Icon)
-ButtonS28Variant_7 = ButtonX28_unc1oz6mM6 {
+smallIcon = small {
   left: 1353px,
   top: 917px,
   width: Spacing.spacing.heightS,
   border[0]: .nil,
   fill[0]: .nil,
-  overrides: [insert(trash20svg_W, after = .nil), remove(Button_2BBvydtXMm)],
+  overrides: [insert(smallIconGlyph, after = .nil), remove(smallLabel)],
   shadow[0]: .nil
 }
 
-trash20svg_W = icon {
+smallIconGlyph = icon {
   name: "Button Icon",
   left: 1248px,
   top: 918px,
@@ -369,14 +369,14 @@ trash20svg_W = icon {
 }
 
 @variant("Primary Rounded")
-Primary = button_43RxZnGr30 {
+mediumPrimaryRounded = medium {
   left: 1405px,
   top: 689px,
   width: Spacing.spacing.heightM,
   border[0].color: Colors.colors.black20,
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
-  overrides: [insert(calendar24svg_I, after = .nil), remove(Button)],
+  overrides: [insert(mediumPrimaryRoundedIcon, after = .nil), remove(mediumLabel)],
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
   shadow[1].inner-shadow.offset: [0px, 1px],
@@ -384,17 +384,17 @@ Primary = button_43RxZnGr30 {
 }
 
 @variant(Icon)
-PrimaryRounded = button_43RxZnGr30 {
+mediumPlainIcon = medium {
   left: 1462px,
   top: 690.056px,
   width: Spacing.spacing.heightM,
   border[0]: .nil,
   fill[0]: .nil,
-  overrides: [insert(calendar24svg_0, after = .nil), remove(Button)],
+  overrides: [insert(mediumPlainIconGlyph, after = .nil), remove(mediumLabel)],
   shadow[0]: .nil
 }
 
-calendar24svg_0 = icon {
+mediumPlainIconGlyph = icon {
   name: "Button Icon",
   left: 1397px,
   top: 701px,
@@ -404,7 +404,7 @@ calendar24svg_0 = icon {
   contents: calendar24
 }
 
-calendar24svg_I = icon {
+mediumPrimaryRoundedIcon = icon {
   name: "Button Icon",
   left: 1397px,
   top: 701px,

@@ -5,7 +5,7 @@ import "components/cardBackground.elyx" as cardBackground
 import "icons/20 pixels/play-20.svg" as play20
 import "icons/20 pixels/star-20.svg" as star20
 
-export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
+export audioToolbar = cardBackground.transparentFullRadius {
   name: "Toolbar (audio)",
   left: 828px,
   top: 798px,
@@ -20,48 +20,45 @@ export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
   layout.direction: .row,
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
-  overrides: [
-    insert(GroupedStack_i4crOHtTlb, after = .nil),
-    insert(Close_EYg7HfYapC, after = GroupedStack_i4crOHtTlb)
-  ]
+  overrides: [insert(controls, after = .nil), insert(close, after = controls)]
 }
 
-Close_EYg7HfYapC = button.ButtonS28Variant_X {name: "Close", left: 218px, top: 40px}
+close = button.smallClose {name: "Close", left: 218px, top: 40px}
 
-GroupedStack_i4crOHtTlb = frame {
+controls = frame {
   name: "Audio Controls",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [Primaryrounded_YMDvd7YAnF, AudioBar_9RsV8DSxFJ, Tools_Zeh2Ix47Qp]
+  children: [play, audio, tools]
 }
 
-Primaryrounded_YMDvd7YAnF = button.ButtonS28Variant_5 {
+play = button.smallPrimaryRounded {
   name: "Play Button",
   left: 0px,
   top: 4px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: play20
   }
 }
 
-AudioBar_9RsV8DSxFJ = audioBar.AudioBar_c3wtjdhX1X {name: "Audio Bar", left: 863px, top: 837px}
+audio = audioBar.audioBar {name: "Audio Bar", left: 863px, top: 837px}
 
-Tools_Zeh2Ix47Qp = frame {
+tools = frame {
   name: "Tools",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [Icon_GIIMxS9hgD, Icon_gcEBtbFoWa]
+  children: [favorite, more]
 }
 
-Icon_GIIMxS9hgD = button.ButtonS28Variant_7 {
+favorite = button.smallIcon {
   name: "Favorite Button",
   left: 218px,
   top: 40px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: star20
   }
 }
 
-Icon_gcEBtbFoWa = button.ButtonS28Variant_7 {name: "More Button", left: 198px, top: 20px}
+more = button.smallIcon {name: "More Button", left: 198px, top: 20px}

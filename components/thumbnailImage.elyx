@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as colors
 import "images/thumbnails/thumb01.jpg" as thumb01
 import "icons/20 pixels/heart-20.svg" as heart20
 
-export ThumbnailImage_Bv4oCgAbjK = frame {
+export thumbnailImage = frame {
   name: "Thumbnail Image",
   left: 555px,
   top: 395px,
@@ -20,19 +20,19 @@ export ThumbnailImage_Bv4oCgAbjK = frame {
     }
   ],
   padding: 12px,
-  children: [Frame_knRpLk4dgQ, Imagename_jOw4WJEFHF]
+  children: [actions, imageName]
 }
 
-Frame_knRpLk4dgQ = frame {
+actions = frame {
   name: "Thumbnail Actions",
   left: 0px,
   top: 12px,
   width: 100%,
   layout: {justify-content: .end, align-items: .center},
-  children: heart20svg_0Rw3zJS0s6
+  children: favoriteIcon
 }
 
-heart20svg_0Rw3zJS0s6 = icon {
+favoriteIcon = icon {
   name: "Favorite Icon",
   left: 0px,
   top: 0px,
@@ -42,7 +42,7 @@ heart20svg_0Rw3zJS0s6 = icon {
   contents: heart20
 }
 
-Imagename_jOw4WJEFHF = text {
+imageName = text {
   name: "Image Name",
   left: 0px,
   top: 197px,

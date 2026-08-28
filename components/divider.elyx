@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as spacing
 import "tokens/radius.elyx" as radius
 
-export Divider_97GT5IGMgL = frame {
+export horizontal = frame {
   name: "Divider (White)",
   left: 878px,
   top: 552px,
@@ -10,10 +10,10 @@ export Divider_97GT5IGMgL = frame {
   layout: {justify-content: .center, align-items: .center},
   padding-top: 4px,
   padding-bottom: 4px,
-  children: Rectangle_RlFhJcHgz0
+  children: horizontalLine
 }
 
-Rectangle_RlFhJcHgz0 = shape {
+horizontalLine = shape {
   name: "Divider Line",
   left: 0px,
   top: 0px,
@@ -24,7 +24,7 @@ Rectangle_RlFhJcHgz0 = shape {
   type: .rect
 }
 
-export Div_JPakkrqBxW = frame {
+export vertical = frame {
   name: "Divider (vertical)",
   left: 919px,
   top: 552px,
@@ -32,10 +32,10 @@ export Div_JPakkrqBxW = frame {
   layout: {justify-content: .center, align-items: .center},
   padding-left: 4px,
   padding-right: 4px,
-  children: Rectangle_cqxTCYitOK
+  children: verticalLine
 }
 
-Rectangle_cqxTCYitOK = shape {
+verticalLine = shape {
   name: "Vertical Divider Line",
   left: 0px,
   top: 0px,

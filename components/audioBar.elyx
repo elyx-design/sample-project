@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as spacing
 import "tokens/radius.elyx" as radius
 
-export AudioBar_c3wtjdhX1X = frame {
+export audioBar = frame {
   name: "Audio Bar",
   left: 755px,
   top: 591px,
@@ -13,10 +13,10 @@ export AudioBar_c3wtjdhX1X = frame {
   corner-radius: radius.radius.max,
   padding-left: 12px,
   padding-right: 12px,
-  children: [textLayer_k0DMadujGR, Audiotrack_tdDo4cfW62]
+  children: [timecode, track]
 }
 
-textLayer_k0DMadujGR = text {
+timecode = text {
   name: "Timecode",
   left: 0px,
   top: 0px,
@@ -25,51 +25,51 @@ textLayer_k0DMadujGR = text {
   font-size: 12
 }
 
-Audiotrack_tdDo4cfW62 = frame {
+track = frame {
   name: "Track Label",
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
   children: [
-    Rectangle_pAGR6kdOCe,
-    Rectangle_aYsiS9USNs,
-    Rectangle_WVB6jbAuo2,
-    Rectangle_4rKn7vmrC3,
-    Rectangle_rT3fNTKv0j,
-    Rectangle_DpiyxhV1fK,
-    Rectangle_oJOgXKXL4P,
-    Rectangle_QqsjKg6CEW,
-    Rectangle_4Otbsrvcgr,
-    Rectangle_5MKO6OGY1c,
-    Rectangle_g4PFRhPbay,
-    Rectangle_X3DTZEwVos,
-    Rectangle_65gGCZPiZe,
-    Rectangle_yszJA3wMAa,
-    Rectangle_zo18SImi6a,
-    Rectangle_7Rlnnf2R2l,
-    Rectangle_XcziOGPLB7,
-    Rectangle_Rk56XaTcM6,
-    Rectangle_o4coXbq9ve,
-    Rectangle_Jro8daQqaF,
-    Rectangle_A6RF8iSelR,
-    Rectangle_ij4hq4pO7a,
-    Rectangle_OAsHbGA5G0,
-    Rectangle_QKabShRDiO,
-    Rectangle_P62RHo3hU4,
-    Rectangle_vLELqWTEZg,
-    Rectangle_vbIsJCmRAV,
-    Rectangle_jXQ24GGBUv,
-    Rectangle_En0LD0RICc,
-    Rectangle_Dg6TzEkwVy,
-    Rectangle_pH7OnL8aoy,
-    Rectangle_1nZwzcj3yw,
-    Rectangle_Im9K3IZ8w4,
-    Rectangle_QO2DpRmEV7,
-    Rectangle_FcDKO2FtWl,
-    Rectangle_v1WyQZ6k5c
+    bar01,
+    bar02,
+    bar03,
+    bar04,
+    bar05,
+    bar06,
+    bar07,
+    bar08,
+    bar09,
+    bar10,
+    bar11,
+    bar12,
+    bar13,
+    bar14,
+    bar15,
+    bar16,
+    bar17,
+    bar18,
+    bar19,
+    bar20,
+    bar21,
+    bar22,
+    bar23,
+    bar24,
+    bar25,
+    bar26,
+    bar27,
+    bar28,
+    bar29,
+    bar30,
+    bar31,
+    bar32,
+    bar33,
+    bar34,
+    bar35,
+    bar36
   ]
 }
 
-Rectangle_pAGR6kdOCe = shape {
+bar01 = shape {
   name: "Waveform Bar",
   left: 46px,
   top: 24.5px,
@@ -80,7 +80,7 @@ Rectangle_pAGR6kdOCe = shape {
   type: .rect
 }
 
-Rectangle_aYsiS9USNs = shape {
+bar02 = shape {
   name: "Waveform Bar",
   left: 66px,
   top: 43.5px,
@@ -91,7 +91,7 @@ Rectangle_aYsiS9USNs = shape {
   type: .rect
 }
 
-Rectangle_WVB6jbAuo2 = shape {
+bar03 = shape {
   name: "Waveform Bar",
   left: 86px,
   top: 117px,
@@ -102,7 +102,7 @@ Rectangle_WVB6jbAuo2 = shape {
   type: .rect
 }
 
-Rectangle_4rKn7vmrC3 = shape {
+bar04 = shape {
   name: "Waveform Bar",
   left: 90px,
   top: 63px,
@@ -113,7 +113,7 @@ Rectangle_4rKn7vmrC3 = shape {
   type: .rect
 }
 
-Rectangle_rT3fNTKv0j = shape {
+bar05 = shape {
   name: "Waveform Bar",
   left: 94px,
   top: 62px,
@@ -124,7 +124,7 @@ Rectangle_rT3fNTKv0j = shape {
   type: .rect
 }
 
-Rectangle_DpiyxhV1fK = shape {
+bar06 = shape {
   name: "Waveform Bar",
   left: 98px,
   top: 57px,
@@ -135,7 +135,7 @@ Rectangle_DpiyxhV1fK = shape {
   type: .rect
 }
 
-Rectangle_oJOgXKXL4P = shape {
+bar07 = shape {
   name: "Waveform Bar",
   left: 102px,
   top: 56px,
@@ -146,7 +146,7 @@ Rectangle_oJOgXKXL4P = shape {
   type: .rect
 }
 
-Rectangle_QqsjKg6CEW = shape {
+bar08 = shape {
   name: "Waveform Bar",
   left: 106px,
   top: 54px,
@@ -157,7 +157,7 @@ Rectangle_QqsjKg6CEW = shape {
   type: .rect
 }
 
-Rectangle_4Otbsrvcgr = shape {
+bar09 = shape {
   name: "Waveform Bar",
   left: 110px,
   top: 51px,
@@ -168,7 +168,7 @@ Rectangle_4Otbsrvcgr = shape {
   type: .rect
 }
 
-Rectangle_5MKO6OGY1c = shape {
+bar10 = shape {
   name: "Waveform Bar",
   left: 114px,
   top: 47px,
@@ -179,7 +179,7 @@ Rectangle_5MKO6OGY1c = shape {
   type: .rect
 }
 
-Rectangle_g4PFRhPbay = shape {
+bar11 = shape {
   name: "Waveform Bar",
   left: 118px,
   top: 48px,
@@ -190,7 +190,7 @@ Rectangle_g4PFRhPbay = shape {
   type: .rect
 }
 
-Rectangle_X3DTZEwVos = shape {
+bar12 = shape {
   name: "Waveform Bar",
   left: 122px,
   top: 52px,
@@ -201,7 +201,7 @@ Rectangle_X3DTZEwVos = shape {
   type: .rect
 }
 
-Rectangle_65gGCZPiZe = shape {
+bar13 = shape {
   name: "Waveform Bar",
   left: 126px,
   top: 55px,
@@ -212,7 +212,7 @@ Rectangle_65gGCZPiZe = shape {
   type: .rect
 }
 
-Rectangle_yszJA3wMAa = shape {
+bar14 = shape {
   name: "Waveform Bar",
   left: 130px,
   top: 56px,
@@ -223,7 +223,7 @@ Rectangle_yszJA3wMAa = shape {
   type: .rect
 }
 
-Rectangle_zo18SImi6a = shape {
+bar15 = shape {
   name: "Waveform Bar",
   left: 150px,
   top: 82px,
@@ -234,7 +234,7 @@ Rectangle_zo18SImi6a = shape {
   type: .rect
 }
 
-Rectangle_7Rlnnf2R2l = shape {
+bar16 = shape {
   name: "Waveform Bar",
   left: 170px,
   top: 102px,
@@ -245,7 +245,7 @@ Rectangle_7Rlnnf2R2l = shape {
   type: .rect
 }
 
-Rectangle_XcziOGPLB7 = shape {
+bar17 = shape {
   name: "Waveform Bar",
   left: 173px,
   top: 102px,
@@ -256,7 +256,7 @@ Rectangle_XcziOGPLB7 = shape {
   type: .rect
 }
 
-Rectangle_Rk56XaTcM6 = shape {
+bar18 = shape {
   name: "Waveform Bar",
   left: 176px,
   top: 95px,
@@ -267,7 +267,7 @@ Rectangle_Rk56XaTcM6 = shape {
   type: .rect
 }
 
-Rectangle_o4coXbq9ve = shape {
+bar19 = shape {
   name: "Waveform Bar",
   left: 179px,
   top: 68.5px,
@@ -278,7 +278,7 @@ Rectangle_o4coXbq9ve = shape {
   type: .rect
 }
 
-Rectangle_Jro8daQqaF = shape {
+bar20 = shape {
   name: "Waveform Bar",
   left: 182px,
   top: 86px,
@@ -289,7 +289,7 @@ Rectangle_Jro8daQqaF = shape {
   type: .rect
 }
 
-Rectangle_A6RF8iSelR = shape {
+bar21 = shape {
   name: "Waveform Bar",
   left: 185px,
   top: 86.5px,
@@ -300,7 +300,7 @@ Rectangle_A6RF8iSelR = shape {
   type: .rect
 }
 
-Rectangle_ij4hq4pO7a = shape {
+bar22 = shape {
   name: "Waveform Bar",
   left: 205px,
   top: 101.5px,
@@ -311,7 +311,7 @@ Rectangle_ij4hq4pO7a = shape {
   type: .rect
 }
 
-Rectangle_OAsHbGA5G0 = shape {
+bar23 = shape {
   name: "Waveform Bar",
   left: 208px,
   top: 109.5px,
@@ -322,7 +322,7 @@ Rectangle_OAsHbGA5G0 = shape {
   type: .rect
 }
 
-Rectangle_QKabShRDiO = shape {
+bar24 = shape {
   name: "Waveform Bar",
   left: 211px,
   top: 102.5px,
@@ -333,7 +333,7 @@ Rectangle_QKabShRDiO = shape {
   type: .rect
 }
 
-Rectangle_P62RHo3hU4 = shape {
+bar25 = shape {
   name: "Waveform Bar",
   left: 214px,
   top: 78px,
@@ -344,7 +344,7 @@ Rectangle_P62RHo3hU4 = shape {
   type: .rect
 }
 
-Rectangle_vLELqWTEZg = shape {
+bar26 = shape {
   name: "Waveform Bar",
   left: 217px,
   top: 101.5px,
@@ -355,7 +355,7 @@ Rectangle_vLELqWTEZg = shape {
   type: .rect
 }
 
-Rectangle_vbIsJCmRAV = shape {
+bar27 = shape {
   name: "Waveform Bar",
   left: 220px,
   top: 89.5px,
@@ -366,7 +366,7 @@ Rectangle_vbIsJCmRAV = shape {
   type: .rect
 }
 
-Rectangle_jXQ24GGBUv = shape {
+bar28 = shape {
   name: "Waveform Bar",
   left: 223px,
   top: 72.5px,
@@ -377,7 +377,7 @@ Rectangle_jXQ24GGBUv = shape {
   type: .rect
 }
 
-Rectangle_En0LD0RICc = shape {
+bar29 = shape {
   name: "Waveform Bar",
   left: 226px,
   top: 90px,
@@ -388,7 +388,7 @@ Rectangle_En0LD0RICc = shape {
   type: .rect
 }
 
-Rectangle_Dg6TzEkwVy = shape {
+bar30 = shape {
   name: "Waveform Bar",
   left: 229px,
   top: 110px,
@@ -399,7 +399,7 @@ Rectangle_Dg6TzEkwVy = shape {
   type: .rect
 }
 
-Rectangle_pH7OnL8aoy = shape {
+bar31 = shape {
   name: "Waveform Bar",
   left: 232px,
   top: 110px,
@@ -410,7 +410,7 @@ Rectangle_pH7OnL8aoy = shape {
   type: .rect
 }
 
-Rectangle_1nZwzcj3yw = shape {
+bar32 = shape {
   name: "Waveform Bar",
   left: 235px,
   top: 110px,
@@ -421,7 +421,7 @@ Rectangle_1nZwzcj3yw = shape {
   type: .rect
 }
 
-Rectangle_Im9K3IZ8w4 = shape {
+bar33 = shape {
   name: "Waveform Bar",
   left: 255px,
   top: 130px,
@@ -432,7 +432,7 @@ Rectangle_Im9K3IZ8w4 = shape {
   type: .rect
 }
 
-Rectangle_QO2DpRmEV7 = shape {
+bar34 = shape {
   name: "Waveform Bar",
   left: 258px,
   top: 130px,
@@ -443,7 +443,7 @@ Rectangle_QO2DpRmEV7 = shape {
   type: .rect
 }
 
-Rectangle_FcDKO2FtWl = shape {
+bar35 = shape {
   name: "Waveform Bar",
   left: 261px,
   top: 130px,
@@ -454,7 +454,7 @@ Rectangle_FcDKO2FtWl = shape {
   type: .rect
 }
 
-Rectangle_v1WyQZ6k5c = shape {
+bar36 = shape {
   name: "Waveform Bar",
   left: 264px,
   top: 130px,

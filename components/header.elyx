@@ -1,17 +1,17 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 
-export header_Pp67Y8c = frame {
+export mediumLeft = frame {
   name: "Header M (Left)",
   left: 20px,
   top: 20px,
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: 2px},
-  children: [Title_ZIlZq9y, Description_7ZfScLC]
+  children: [mediumTitle, mediumSubtitle]
 }
 
-Title_ZIlZq9y = text {
+mediumTitle = text {
   name: "Title",
   fill: Colors.colors.black20,
   contents: "Title",
@@ -20,7 +20,7 @@ Title_ZIlZq9y = text {
   font-style: "SemiBold"
 }
 
-Description_7ZfScLC = text {
+mediumSubtitle = text {
   name: "Subtitle",
   width: 100%,
   fill: Colors.colors.blackAlpha70,
@@ -32,31 +32,31 @@ Description_7ZfScLC = text {
 }
 
 @variant("Header M (Center)")
-headerVariant = header_Pp67Y8c {
+mediumCenter = mediumLeft {
   left: 20px,
   top: 117px,
   layout.align-items: .center,
 
-  Description_7ZfScLC {
+  mediumSubtitle {
     align: .center,
     fill[0].color: rgb(9.8%, 9.8%, 9.8%, 70%)
   }
 
-  Title_ZIlZq9y {
+  mediumTitle {
     align: .center
   }
 }
 
-export HeaderSLeft_nBOG31rNTk = frame {
+export smallLeft = frame {
   name: "Header S (Left)",
   left: -267.28px,
   top: 29px,
   height: 36px,
   layout: {direction: .column, item-gap: 2px},
-  children: [UserName_Qkcl7dWEIn, UserEmail_wCqcy5VUFs]
+  children: [smallTitle, smallSubtitle]
 }
 
-UserName_Qkcl7dWEIn = text {
+smallTitle = text {
   name: "Title",
   width: 100%,
   fill: Colors.colors.black20,
@@ -66,7 +66,7 @@ UserName_Qkcl7dWEIn = text {
   font-style: "SemiBold"
 }
 
-UserEmail_wCqcy5VUFs = text {
+smallSubtitle = text {
   name: "Subtitle",
   width: 100%,
   fill: Colors.colors.blackAlpha70,
@@ -77,16 +77,16 @@ UserEmail_wCqcy5VUFs = text {
 }
 
 @variant("Header S (Center)")
-HeaderSLeftVariant = HeaderSLeft_nBOG31rNTk {
+smallCenter = smallLeft {
   left: -267.28px,
   top: 113px,
   layout.align-items: .center,
 
-  UserEmail_wCqcy5VUFs {
+  smallSubtitle {
     align: .center
   }
 
-  UserName_Qkcl7dWEIn {
+  smallTitle {
     align: .center
   }
 }

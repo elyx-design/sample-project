@@ -7,7 +7,7 @@ import "components/avatarGroup.elyx" as avatarGroup
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/star-20.svg" as star20
 
-export SocialCard_QzfezrXgSp = cardBackground.cardBackgroundSolidVariant {
+export socialCard = cardBackground.transparent {
   name: "Social Card",
   left: 186px,
   top: 176px,
@@ -20,48 +20,41 @@ export SocialCard_QzfezrXgSp = cardBackground.cardBackgroundSolidVariant {
   layout.align-items: .center,
   layout.item-gap: 16px,
   layout.justify-content: .space-between,
-  overrides: [
-    insert(GroupedStack_1gmgOy2Wt0, after = .nil),
-    insert(GroupedStack_Xn7zNLiGaY, after = GroupedStack_1gmgOy2Wt0)
-  ]
+  overrides: [insert(cardContent, after = .nil), insert(socialFooter, after = cardContent)]
 }
 
-layer_z = button.ButtonX28_unc1oz6mM6 {name: "Button S (28)", left: 1318px, top: 603px}
+smallButton = button.small {name: "Button S (28)", left: 1318px, top: 603px}
 
-layer = userSummary.UserSummaryM_3TgjJsJRgL {
+mediumSummary = userSummary.UserSummaryM_3TgjJsJRgL {
   name: "User Summary M",
   left: 1187.73px,
   top: 318.4px,
   width: 88px
 }
 
-GroupedStack_Xn7zNLiGaY = frame {
+socialFooter = frame {
   name: "Social Footer",
   width: 100%,
   height: .auto,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
   overflow: .visible,
   padding: 16px,
-  children: [profileGroup_j6LSOW6AIt, Primary_74gHxo0W69]
+  children: [followerAvatars, followButton]
 }
 
-profileGroup_j6LSOW6AIt = avatarGroup.profileGroup_yzgf0sKCPf {
-  name: "Follower Avatars",
-  left: 20px,
-  top: 383px
-}
+followerAvatars = avatarGroup.base {name: "Follower Avatars", left: 20px, top: 383px}
 
-Primary_74gHxo0W69 = button.ButtonVariant_V {
+followButton = button.mediumPrimary {
   name: "Follow Button",
   left: 151.5px,
   top: 160px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Follow"
   }
 }
 
-GroupedStack_1gmgOy2Wt0 = frame {
+cardContent = frame {
   name: "Card Content",
   width: 100%,
   height: 100%,
@@ -70,44 +63,44 @@ GroupedStack_1gmgOy2Wt0 = frame {
   border: {color: colors.colors.blackAlpha10, visible: .false, width: 0.5px, position: .outside},
   corner-radius: 16px,
   padding: 24px,
-  children: [GroupedStack_CzQMt15d8V, GroupedStack_LpEL83fLPt]
+  children: [cardActions, profileInfo]
 }
 
-GroupedStack_CzQMt15d8V = frame {
+cardActions = frame {
   name: "Card Actions",
   width: 100%,
   layout: {justify-content: .end, align-items: .end, item-gap: 8px},
-  children: [Icon_VkGiO7tulw, Icon_NbaFVQqXgU, Close_EIAQCGPEGW]
+  children: [favoriteButton, likeButton, closeButton]
 }
 
-Icon_VkGiO7tulw = button.ButtonS28Variant_7 {
+favoriteButton = button.smallIcon {
   name: "Favorite Button",
   left: 245.81px,
   top: 37.5995px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: star20
   }
 }
 
-Icon_NbaFVQqXgU = button.ButtonS28Variant_7 {
+likeButton = button.smallIcon {
   name: "Like Button",
   left: 265.81px,
   top: 57.5995px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: heart20
   }
 }
 
-Close_EIAQCGPEGW = button.ButtonS28Variant_X {
+closeButton = button.smallClose {
   name: "Close",
   left: 526px,
   top: 225px,
   fill[0].color: colors.colors.blackAlpha10
 }
 
-GroupedStack_LpEL83fLPt = frame {
+profileInfo = frame {
   name: "Profile Info",
   width: 100%,
   height: 100%,
@@ -117,28 +110,28 @@ GroupedStack_LpEL83fLPt = frame {
     align-items: .center,
     item-gap: 32px
   },
-  children: [Top_wPxvHpn4An, Numbers_2h6p4T8WDv]
+  children: [profileSummary, profileStats]
 }
 
-Top_wPxvHpn4An = frame {
+profileSummary = frame {
   name: "Profile Summary",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 16px},
-  children: [UserSummaryMVariant_4jTKstXxp9, Text_wKxCFaXkez]
+  children: [profileIdentity, bio]
 }
 
-UserSummaryMVariant_4jTKstXxp9 = userSummary.UserSummaryMVariant {
+profileIdentity = userSummary.UserSummaryMVariant {
   name: "Profile Identity",
   left: 0px,
   top: 160px,
   width: 100%,
 
-  userSummary.HeaderMLeft_U02Hb8hK7v.header.Description_7ZfScLC {
+  userSummary.HeaderMLeft_U02Hb8hK7v.header.mediumSubtitle {
     contents: "@noraharper"
   }
 }
 
-Text_wKxCFaXkez = text {
+bio = text {
   name: "Bio",
   left: 0px,
   top: 160px,
@@ -150,22 +143,22 @@ Text_wKxCFaXkez = text {
   align: .center
 }
 
-Numbers_2h6p4T8WDv = frame {
+profileStats = frame {
   name: "Profile Stats",
   width: 100%,
   layout: {justify-content: .space-evenly, align-items: .center, item-gap: 24px},
-  children: [Frame_idU9ivzkve, Frame_f19XiX2clb, Frame_JLl0cA51NO]
+  children: [followingStat, followersStat, postsStat]
 }
 
-Frame_idU9ivzkve = frame {
+followingStat = frame {
   name: "Following Stat",
   left: 49px,
   top: 367px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
-  children: [textLayer_XiDxtu7sg1, Following_utufdejOHW]
+  children: [followingCount, followingLabel]
 }
 
-textLayer_XiDxtu7sg1 = text {
+followingCount = text {
   name: "Following Count",
   left: 16.5px,
   top: 0px,
@@ -176,7 +169,7 @@ textLayer_XiDxtu7sg1 = text {
   align: .center
 }
 
-Following_utufdejOHW = text {
+followingLabel = text {
   name: "Following Label",
   left: 0px,
   top: 18px,
@@ -186,15 +179,15 @@ Following_utufdejOHW = text {
   align: .center
 }
 
-Frame_f19XiX2clb = frame {
+followersStat = frame {
   name: "Followers Stat",
   left: 69px,
   top: 387px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
-  children: [textLayer_gJs8FKmZ0L, Following_ybbl7Cjm5f]
+  children: [followerCount, followersLabel]
 }
 
-textLayer_gJs8FKmZ0L = text {
+followerCount = text {
   name: "Follower Count",
   left: 16.5px,
   top: 0px,
@@ -205,7 +198,7 @@ textLayer_gJs8FKmZ0L = text {
   align: .center
 }
 
-Following_ybbl7Cjm5f = text {
+followersLabel = text {
   name: "Followers Label",
   left: 0px,
   top: 18px,
@@ -215,15 +208,15 @@ Following_ybbl7Cjm5f = text {
   align: .center
 }
 
-Frame_JLl0cA51NO = frame {
+postsStat = frame {
   name: "Posts Stat",
   left: 89px,
   top: 407px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
-  children: [textLayer_fIJ2S3H2rj, Following_ZUTSdWOGml]
+  children: [postCount, postsLabel]
 }
 
-textLayer_fIJ2S3H2rj = text {
+postCount = text {
   name: "Post Count",
   left: 16.5px,
   top: 0px,
@@ -234,7 +227,7 @@ textLayer_fIJ2S3H2rj = text {
   align: .center
 }
 
-Following_ZUTSdWOGml = text {
+postsLabel = text {
   name: "Posts Label",
   left: 0px,
   top: 18px,

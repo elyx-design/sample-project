@@ -1,7 +1,7 @@
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
-Rectangle = shape {
+backdrop = shape {
   name: "Ruler Backdrop",
   left: 430px,
   top: 260px,
@@ -11,34 +11,34 @@ Rectangle = shape {
   type: .rect
 }
 
-export TimelineRuler_7EHDtEgmPY = frame {
+export timelineRuler = frame {
   name: "Timeline Ruler",
   left: 609px,
   top: 488px,
   width: 335px,
   layout: {justify-content: .center, align-items: .center, item-gap: 8px},
-  children: [module_xIf6oP8Ro9, module_521cwUq48R, module_MT5vhsabW0, module_1r90h9aJDj]
+  children: [marker0, marker1, marker2, marker3]
 }
 
-module_xIf6oP8Ro9 = module_pm4nfIp1OC {name: "Time Marker 0", left: 0px, top: 495px, width: 100%}
+marker0 = timeMarker {name: "Time Marker 0", left: 0px, top: 495px, width: 100%}
 
-module_521cwUq48R = module_pm4nfIp1OC {name: "Time Marker 1", left: 20px, top: 515px, width: 100%}
+marker1 = timeMarker {name: "Time Marker 1", left: 20px, top: 515px, width: 100%}
 
-module_MT5vhsabW0 = module_pm4nfIp1OC {name: "Time Marker 2", left: 29px, top: 515px, width: 100%}
+marker2 = timeMarker {name: "Time Marker 2", left: 29px, top: 515px, width: 100%}
 
-module_1r90h9aJDj = module_pm4nfIp1OC {name: "Time Marker 3", left: 38px, top: 515px, width: 100%}
+marker3 = timeMarker {name: "Time Marker 3", left: 38px, top: 515px, width: 100%}
 
-export module_pm4nfIp1OC = frame {
+export timeMarker = frame {
   name: "Time Marker",
   left: 609px,
   top: 543.2181px,
   width: 47.5px,
   height: 20px,
   layout: {direction: .column, item-gap: 3px},
-  children: [Frame_Fxo9iZeiIQ, textLayer_odBUA3ZxP6]
+  children: [ticks, label]
 }
 
-Frame_Fxo9iZeiIQ = frame {
+ticks = frame {
   name: "Tick Marks",
   top: -59.5px,
   right: 0px,
@@ -47,16 +47,16 @@ Frame_Fxo9iZeiIQ = frame {
   layout: {justify-content: .space-between, item-gap: 9.9266px},
   padding-left: 3px,
   children: [
-    Rectangle_nNmoTVYunh,
-    Rectangle_zZuXPus2Av,
-    Rectangle_XbCl5AZs9K,
-    Rectangle_b9AGSxdSy2,
-    Rectangle_Zcx3XuP496,
-    Rectangle_BzhuJ02AJm
+    majorTick,
+    firstMinorTick,
+    secondMinorTick,
+    thirdMinorTick,
+    fourthMinorTick,
+    fifthMinorTick
   ]
 }
 
-Rectangle_nNmoTVYunh = shape {
+majorTick = shape {
   name: "Major Tick",
   left: 0px,
   top: 0px,
@@ -67,7 +67,7 @@ Rectangle_nNmoTVYunh = shape {
   type: .rect
 }
 
-Rectangle_zZuXPus2Av = shape {
+firstMinorTick = shape {
   name: "Minor Tick",
   left: 11.12px,
   top: 0px,
@@ -78,7 +78,7 @@ Rectangle_zZuXPus2Av = shape {
   type: .rect
 }
 
-Rectangle_XbCl5AZs9K = shape {
+secondMinorTick = shape {
   name: "Minor Tick",
   left: 22px,
   top: 0.39px,
@@ -89,7 +89,7 @@ Rectangle_XbCl5AZs9K = shape {
   type: .rect
 }
 
-Rectangle_b9AGSxdSy2 = shape {
+thirdMinorTick = shape {
   name: "Minor Tick",
   left: 32.8778px,
   top: 0.78px,
@@ -100,7 +100,7 @@ Rectangle_b9AGSxdSy2 = shape {
   type: .rect
 }
 
-Rectangle_Zcx3XuP496 = shape {
+fourthMinorTick = shape {
   name: "Minor Tick",
   left: 43.7555px,
   top: 1.17px,
@@ -111,7 +111,7 @@ Rectangle_Zcx3XuP496 = shape {
   type: .rect
 }
 
-Rectangle_BzhuJ02AJm = shape {
+fifthMinorTick = shape {
   name: "Minor Tick",
   left: 54.63px,
   top: 1.56px,
@@ -122,7 +122,7 @@ Rectangle_BzhuJ02AJm = shape {
   type: .rect
 }
 
-textLayer_odBUA3ZxP6 = text {
+label = text {
   name: "0",
   top: 8px,
   right: 50.63px,

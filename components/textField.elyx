@@ -6,7 +6,7 @@ import "icons/24 pixels/calendar-24.svg" as calendar24
 import "components/button.elyx" as button
 import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 
-export textField_vGl5JUl04s = frame {
+export base = frame {
   name: "Text Field",
   left: 869px,
   top: 770px,
@@ -18,10 +18,10 @@ export textField_vGl5JUl04s = frame {
   corner-radius: Radius.radius.max,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
-  children: Label
+  children: label
 }
 
-Label = text {
+label = text {
   name: "Label",
   left: 0px,
   top: 0px,
@@ -33,17 +33,17 @@ Label = text {
 }
 
 @variant(Placeholder)
-TextFieldVariant_L = textField_vGl5JUl04s {
+placeholder = base {
   left: 869px,
   top: 850px,
 
-  Label {
+  label {
     fill[0].color: Colors.colors.black80
   }
 }
 
 @variant(Focussed)
-TextFieldVariant = textField_vGl5JUl04s {
+focused = base {
   left: 869px,
   top: 930px,
   border[0].color: Colors.colors.black20,
@@ -52,43 +52,43 @@ TextFieldVariant = textField_vGl5JUl04s {
 }
 
 @variant(Error)
-Focussed = textField_vGl5JUl04s {
+error = base {
   left: 869px,
   top: 1010px,
   border[0].color: Colors.colors.red70,
   border[0].position: .center,
   border[0].width: 1.5px,
 
-  Label {
+  label {
     fill[0].color: Colors.colors.red70
   }
 }
 
 @variant("Text Field (Icon)")
-Placeholder = textField_vGl5JUl04s {
+withIcon = base {
   left: 989.73px,
   top: 770px,
   padding-left: 8px,
   padding-right: 8px,
   layout.item-gap: 4px,
-  overrides: [insert(create24svg, after = .nil)]
+  overrides: [insert(defaultIcon, after = .nil)]
 }
 
 @variant("Placeholder (Icon)")
-TextFieldIcon = textField_vGl5JUl04s {
+iconPlaceholder = base {
   left: 988.65px,
   top: 850px,
   padding-left: 8px,
   padding-right: 8px,
   layout.item-gap: 4px,
-  overrides: [insert(create24svg_k, after = .nil)],
+  overrides: [insert(placeholderIcon, after = .nil)],
 
-  Label {
+  label {
     fill[0].color: Colors.colors.black80
   }
 }
 
-create24svg_k = icon {
+placeholderIcon = icon {
   name: "Field Icon",
   left: 981px,
   top: 782px,
@@ -98,7 +98,7 @@ create24svg_k = icon {
   contents: calendar24
 }
 
-create24svg = icon {
+defaultIcon = icon {
   name: "Field Icon",
   left: 981px,
   top: 782px,
@@ -109,7 +109,7 @@ create24svg = icon {
 }
 
 @variant("Focused (Icon)")
-PlaceholderIcon = textField_vGl5JUl04s {
+iconFocused = base {
   left: 987.9291px,
   top: 930px,
   padding-left: 8px,
@@ -117,11 +117,11 @@ PlaceholderIcon = textField_vGl5JUl04s {
   border[0].color: Colors.colors.black20,
   border[0].width: 1.5px,
   layout.item-gap: 4px,
-  overrides: [insert(create24svg_H, after = .nil)]
+  overrides: [insert(focusedIcon, after = .nil)]
 }
 
 @variant("Error (Icon)")
-PlaceholderIcon_f = textField_vGl5JUl04s {
+iconError = base {
   left: 988.2896px,
   top: 1010px,
   padding-left: 8px,
@@ -129,14 +129,14 @@ PlaceholderIcon_f = textField_vGl5JUl04s {
   border[0].color: Colors.colors.red70,
   border[0].width: 1.5px,
   layout.item-gap: 4px,
-  overrides: [insert(create24svg_d, after = .nil)],
+  overrides: [insert(errorIcon, after = .nil)],
 
-  Label {
+  label {
     fill[0].color: Colors.colors.red70
   }
 }
 
-create24svg_H = icon {
+focusedIcon = icon {
   name: "Field Icon",
   left: 981px,
   top: 782px,
@@ -146,7 +146,7 @@ create24svg_H = icon {
   contents: calendar24
 }
 
-create24svg_d = icon {
+errorIcon = icon {
   name: "Field Icon",
   left: 981px,
   top: 782px,
@@ -157,43 +157,43 @@ create24svg_d = icon {
 }
 
 @variant("Text Field (button)")
-TextFieldVariant_w = textField_vGl5JUl04s {
+withButton = base {
   left: 1139px,
   top: 770px,
   padding-right: 4px,
   layout.justify-content: .space-between,
-  overrides: [insert(layer, after = Label)]
+  overrides: [insert(submitButton, after = label)]
 }
 
 @variant("Text Field, Placeholder (button)")
-TextFieldbutton = textField_vGl5JUl04s {
+buttonPlaceholder = base {
   left: 1142.4px,
   top: 850px,
   padding-right: 4px,
   layout.justify-content: .space-between,
-  overrides: [insert(Primaryrounded, after = Label)],
+  overrides: [insert(placeholderButton, after = label)],
 
-  Label {
+  label {
     fill[0].color: Colors.colors.black80
   }
 }
 
-Primaryrounded = button.ButtonS28Variant_5 {
+placeholderButton = button.smallPrimaryRounded {
   name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: arrowUp20
   }
 }
 
-layer = button.ButtonS28Variant_5 {
+submitButton = button.smallPrimaryRounded {
   name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: arrowUp20
   }
 }

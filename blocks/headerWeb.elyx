@@ -5,7 +5,7 @@ import "components/button.elyx" as button
 import "components/avatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
 
-export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
+export siteHeader = cardBackground.transparent {
   name: "Site Header",
   left: 512px,
   top: 456px,
@@ -19,21 +19,19 @@ export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
   layout.direction: .row,
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
-  overrides: [
-
-  ]
+  overrides: []
 }
 
-export Menu_NptvsRIaJB = frame {
+export menu = frame {
   name: "Menu",
   left: 191px,
   top: 456px,
   width: .auto,
   layout: {justify-content: .center, align-items: .center},
-  children: Menu_d104U3BrCB
+  children: label
 }
 
-Menu_d104U3BrCB = text {
+label = text {
   name: "Menu",
   left: 0px,
   top: 0px,
@@ -43,70 +41,66 @@ Menu_d104U3BrCB = text {
 }
 
 @variant("Menu Variant")
-MenuVariant = Menu_NptvsRIaJB {
+mutedMenu = menu {
   left: 191px,
   top: 521px,
 
-  Menu_d104U3BrCB {
+  label {
     fill[0].color: colors.colors.blackAlpha50
   }
 }
 
 @variant("HeaderWeb Logged in")
-HeaderWebVariant = Header_YoW7I9TfdY {
-  left: 512px,
-  top: 572px,
-  height: spacing.spacing.heightG,
-}
+loggedInHeader = siteHeader {left: 512px, top: 572px, height: spacing.spacing.heightG}
 
 @variant("Menu (icon)")
-MenuVariant2 = Menu_NptvsRIaJB {
+iconMenu = menu {
   left: 275px,
   top: 456px,
   layout.item-gap: 2px,
-  overrides: [insert(chevrondown12svg, after = Menu_d104U3BrCB)]
+  overrides: [insert(chevron, after = label)]
 }
 
 @variant("Menu Variant")
-MenuVariant_T = Menu_NptvsRIaJB {
+mutedIconMenu = menu {
   left: 275px,
   top: 521.6479px,
   layout.item-gap: 2px,
-  overrides: [insert(chevrondown12svg_p, after = Menu_d104U3BrCB)],
+  overrides: [insert(mutedChevron, after = label)],
 
-  Menu_d104U3BrCB {
+  label {
     fill[0].color: colors.colors.blackAlpha50
   }
 }
 
-GroupedStack_s6neGdYpQr = frame {
+headerActions = frame {
   name: "Header Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [Menu_ufNhOkr09F, PrimaryM_TNPWRcxiAf]
+  children: [signInLink, joinButton]
 }
 
-Menu_ufNhOkr09F = Menu_NptvsRIaJB {
+signInLink = menu {
   name: "Sign In Link",
   left: 1101px,
   top: 505px,
 
-  Menu_d104U3BrCB {
+  label {
     contents: "Sign In"
   }
 }
 
-PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
+joinButton = button.mediumPrimary {
   name: "Join the Circle Button",
   left: 867px,
   top: 498px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Join the Circle"
   }
 }
 
-chevrondown12svg_p = icon {
+mutedChevron = icon {
   name: "Menu Chevron",
   left: 278px,
   top: 460px,
@@ -116,7 +110,7 @@ chevrondown12svg_p = icon {
   contents: chevrondown122
 }
 
-chevrondown12svg = icon {
+chevron = icon {
   name: "Menu Chevron",
   left: 297px,
   top: 460px,
@@ -126,61 +120,56 @@ chevrondown12svg = icon {
   contents: chevrondown122
 }
 
-layer_IZeMbQZvJt = frame {
+primaryNavigation = frame {
   name: "Primary Navigation",
   left: 0px,
   top: 27.5px,
   width: .auto,
   height: 17px,
   layout: {justify-content: .center, align-items: .center, item-gap: 20px},
-  children: [
-    MenuVariant_0TK5hfhPhi,
-    MenuVariant_sjfcG4QdSJ,
-    MenuVariant_1tlOsP5uEb,
-    MenuVariant_CWSCQz5wR7
-  ]
+  children: [productMenu, pricingLink, blogLink, helpCenterLink]
 }
 
-MenuVariant_0TK5hfhPhi = MenuVariant2 {
+productMenu = iconMenu {
   name: "Product Menu",
   left: 0px,
   top: 0px,
   height: 17px,
 
-  Menu_d104U3BrCB {
+  label {
     contents: "Product"
   }
 }
 
-MenuVariant_sjfcG4QdSJ = MenuVariant {
+pricingLink = mutedMenu {
   name: "Pricing Link",
   left: 58px,
   top: 0px,
   height: 17px,
 
-  Menu_d104U3BrCB {
+  label {
     contents: "Pricing"
   }
 }
 
-MenuVariant_1tlOsP5uEb = MenuVariant {
+blogLink = mutedMenu {
   name: "Blog Link",
   left: 78px,
   top: 20px,
   height: 17px,
 
-  Menu_d104U3BrCB {
+  label {
     contents: "Blog"
   }
 }
 
-MenuVariant_CWSCQz5wR7 = MenuVariant {
+helpCenterLink = mutedMenu {
   name: "Help Center Link",
   left: 128px,
   top: 20px,
   height: 17px,
 
-  Menu_d104U3BrCB {
+  label {
     contents: "Help Center"
   }
 }

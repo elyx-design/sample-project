@@ -1,9 +1,9 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
-import "components/tag.elyx" as tag
-import "components/divider.elyx" as divider
+import "components/tag.elyx" as tagComponent
+import "components/divider.elyx" as dividerComponent
 
-export activityRow_ZaTUcpO = frame {
+export activityRow = frame {
   name: "Activity Row",
   left: -117px,
   top: -17px,
@@ -11,10 +11,10 @@ export activityRow_ZaTUcpO = frame {
   height: .auto,
   layout: {direction: .column, align-items: .center, item-gap: 16px},
   overflow: .visible,
-  children: [GroupedStack_cnBluZ7u0I, DividerWhite_xGAHAgMeSS]
+  children: [content, divider]
 }
 
-GroupedStack_cnBluZ7u0I = frame {
+content = frame {
   name: "Activity Content",
   left: 0px,
   top: 0px,
@@ -22,25 +22,25 @@ GroupedStack_cnBluZ7u0I = frame {
   height: .auto,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 32px},
   overflow: .visible,
-  children: [GroupedStack_e9HzR7GXlD, TagTransparent_7nWvl7H322]
+  children: [details, tag]
 }
 
-GroupedStack_e9HzR7GXlD = frame {
+details = frame {
   name: "Activity Details",
   height: 100%,
   layout: {align-items: .center},
-  children: [GroupedStack_mcK4tU66QQ, GroupedStack_tRl1ourATY]
+  children: [date, description]
 }
 
-GroupedStack_mcK4tU66QQ = frame {
+date = frame {
   name: "Activity Date",
   width: 96px,
   height: 100%,
   layout: {align-items: .center, item-gap: 32px},
-  children: ActivityTitle_9XlhOnW
+  children: dateLabel
 }
 
-ActivityTitle_9XlhOnW = text {
+dateLabel = text {
   name: "Date Label",
   left: 0px,
   top: 0px,
@@ -52,14 +52,14 @@ ActivityTitle_9XlhOnW = text {
   font-style: "Bold"
 }
 
-GroupedStack_tRl1ourATY = frame {
+description = frame {
   name: "Activity Description",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [ActivityTime_dwkCnRe, Rated_h5p1S8iL1u]
+  children: [verb, detail]
 }
 
-ActivityTime_dwkCnRe = text {
+verb = text {
   name: "Activity Verb",
   left: 79px,
   top: 5.5px,
@@ -71,7 +71,7 @@ ActivityTime_dwkCnRe = text {
   font-style: "ExtraBold"
 }
 
-Rated_h5p1S8iL1u = text {
+detail = text {
   name: "Activity Detail",
   left: 99px,
   top: 25.5px,
@@ -83,13 +83,9 @@ Rated_h5p1S8iL1u = text {
   font-style: "Regular"
 }
 
-TagTransparent_7nWvl7H322 = tag.Frame_EkvUQb0wU7 {
-  name: "Tag (Transparent)",
-  left: 47.5px,
-  top: 2.25px
-}
+tag = tagComponent.base {name: "Tag (Transparent)", left: 47.5px, top: 2.25px}
 
-DividerWhite_xGAHAgMeSS = divider.Divider_97GT5IGMgL {
+divider = dividerComponent.horizontal {
   name: "Divider (White)",
   left: 0px,
   top: 19.25px,

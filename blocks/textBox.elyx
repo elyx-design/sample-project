@@ -8,7 +8,7 @@ import "icons/20 pixels/voice-20.svg" as voice20
 import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "components/logo.elyx" as logo
 
-export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
+export chatInput = cardBackground.base {
   name: "Chat Input",
   left: 511px,
   top: 471px,
@@ -20,106 +20,103 @@ export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
   padding-right: 16px,
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
-  overrides: [
-    insert(GroupedStack_b3NQe9yEtF, after = .nil),
-    insert(GroupedStack_r8fn3VtZgV, after = GroupedStack_b3NQe9yEtF)
-  ]
+  overrides: [insert(prompt, after = .nil), insert(actions, after = prompt)]
 }
 
-GroupedStack_r8fn3VtZgV = frame {
+actions = frame {
   name: "Input Actions",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 8px},
   overflow: .visible,
-  children: [Left_piKXpcEizh, Right_m38ayLrToC]
+  children: [attachmentActions, messageActions]
 }
 
-Left_piKXpcEizh = frame {
+attachmentActions = frame {
   name: "Attachment Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
-  children: [Icon_3KhD1tJCaV, ButtonS28_Shpp3Pqg3i, Icon_I0hFPNgQeU, Icon_XwaE41lB4a]
+  children: [add, modelSelector, search, more]
 }
 
-Icon_3KhD1tJCaV = button.ButtonS28Variant_0 {
+add = button.smallIconBackground {
   name: "Add Button",
   left: 654px,
   top: 728px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: plus20
   }
 }
 
-ButtonS28_Shpp3Pqg3i = button.ButtonX28_unc1oz6mM6 {
+modelSelector = button.small {
   name: "Model Selector",
   left: 694px,
   top: 768px,
 
-  button.Button_2BBvydtXMm {
+  button.smallLabel {
     contents: "Haze 4.8 Pro"
   }
 }
 
-Icon_I0hFPNgQeU = button.ButtonS28Variant_0 {
+search = button.smallIconBackground {
   name: "Search Button",
   left: 674px,
   top: 748px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: search20
   }
 }
 
-Icon_XwaE41lB4a = button.ButtonS28Variant_0 {
+more = button.smallIconBackground {
   name: "More Button",
   left: 694px,
   top: 768px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: more20
   }
 }
 
-Right_m38ayLrToC = frame {
+messageActions = frame {
   name: "Message Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
-  children: [Icon_LMHih4IBDW, Primaryrounded_mAqw08qHjT]
+  children: [voice, send]
 }
 
-Icon_LMHih4IBDW = button.ButtonS28Variant_0 {
+voice = button.smallIconBackground {
   name: "Voice Button",
   left: 714px,
   top: 788px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: voice20
   }
 }
 
-Primaryrounded_mAqw08qHjT = button.ButtonS28Variant_5 {
+send = button.smallPrimaryRounded {
   name: "Send Button",
   left: 734px,
   top: 808px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: arrowUp20
   }
 }
 
-GroupedStack_b3NQe9yEtF = frame {
+prompt = frame {
   name: "Prompt Header",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
-  children: [LogoS24_XRD2oCsk6v, Text_DHf9m5IpDV]
+  children: [promptLogo, placeholder]
 }
 
-LogoS24_XRD2oCsk6v = logo.iconButton_gqojFFCYlK {name: "Logo S (24)", left: 657px, top: 485px}
+promptLogo = logo.small {name: "Logo S (24)", left: 657px, top: 485px}
 
-Text_DHf9m5IpDV = text {
+placeholder = text {
   name: "Prompt Placeholder",
   left: 633px,
   top: 581px,

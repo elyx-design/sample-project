@@ -10,87 +10,84 @@ import "icons/24 pixels/mail-24.svg" as mail24
 import "icons/24 pixels/padlock-24.svg" as padlock24
 import "components/logo.elyx" as logo
 
-export cardBackgroundSolid_gpNRKSrmXr = cardBackground.cardBackgroundSolidVariant {
+export signInForm = cardBackground.transparent {
   name: "Sign In Form",
   left: 39px,
   top: 21px,
   padding-top: 48px,
   layout.align-items: .center,
   layout.item-gap: 48px,
-  overrides: [
-    insert(LogoS24_y3g3YnmxnC, after = .nil),
-    insert(GroupedStack_b0SW5OArkc, after = LogoS24_y3g3YnmxnC)
-  ]
+  overrides: [insert(signInLogo, after = .nil), insert(content, after = signInLogo)]
 }
 
-GroupedStack_b0SW5OArkc = frame {
+content = frame {
   name: "Content",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 20px},
-  children: [HeaderMCenter_3ypV6y80Ob, Fields_XaJ8fJSB8R, Options_Oj9DIMpYDw, Primary_3lXmMxE1bk]
+  children: [header, credentialFields, options, signInButton]
 }
 
-HeaderMCenter_3ypV6y80Ob = header2.headerVariant {
+header = header2.mediumCenter {
   name: "Header M (Center)",
   left: -33px,
   top: 120px,
 
-  header2.Description_7ZfScLC {
+  header2.mediumSubtitle {
     contents: "Use your account to continue."
   }
 
-  header2.Title_ZIlZq9y {
+  header2.mediumTitle {
     contents: "Sign In"
   }
 }
 
-Fields_XaJ8fJSB8R = frame {
+credentialFields = frame {
   name: "Credential Fields",
   left: 0px,
   top: 42.75px,
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.spacing.m},
   overflow: .visible,
-  children: [PlaceholderIcon_bJlHc6HdT3, PlaceholderIcon_7KEgapI9ft]
+  children: [emailField, passwordField]
 }
 
-PlaceholderIcon_bJlHc6HdT3 = TextField.TextFieldIcon {
+emailField = TextField.iconPlaceholder {
   name: "Email Field",
 
-  TextField.Label {
+  TextField.label {
     contents: "Email address"
   }
 
-  TextField.create24svg_k {
+  TextField.placeholderIcon {
     contents: mail24
   }
 }
 
-PlaceholderIcon_7KEgapI9ft = TextField.TextFieldIcon {
+passwordField = TextField.iconPlaceholder {
   name: "Password Field",
 
-  TextField.Label {
+  TextField.label {
     contents: "Password"
   }
 
-  TextField.create24svg_k {
+  TextField.placeholderIcon {
     contents: padlock24
   }
 }
 
-Options_Oj9DIMpYDw = frame {
+options = frame {
   name: "Options",
   left: -33px,
   top: 62.75px,
   width: 100%,
   height: .auto,
   layout: {align-items: .center, item-gap: 8px},
-  children: [Toggle_vKaSzAuznI, RememberLabel_Mburgp9oBk]
+  children: [rememberToggle, rememberLabel]
 }
 
-Toggle_vKaSzAuznI = Checkbox.Frame_P {name: "Remember Me Toggle", left: 127px, top: 285px}
+rememberToggle = Checkbox.on {name: "Remember Me Toggle", left: 127px, top: 285px}
 
-RememberLabel_Mburgp9oBk = text {
+rememberLabel = text {
   name: "Remember Label",
   fill: Colors.colors.black20,
   contents: "Remember me",
@@ -99,13 +96,13 @@ RememberLabel_Mburgp9oBk = text {
   font-style: "Regular"
 }
 
-Primary_3lXmMxE1bk = Button.ButtonVariant_V {
+signInButton = Button.mediumPrimary {
   name: "Sign In Button",
   width: 100%,
 
-  Button.Button {
+  Button.mediumLabel {
     contents: "Sign in"
   }
 }
 
-LogoS24_y3g3YnmxnC = logo.ButtonIconXL48 {name: "Sign In Logo", left: 351px, top: 15px}
+signInLogo = logo.extraLarge {name: "Sign In Logo", left: 351px, top: 15px}
