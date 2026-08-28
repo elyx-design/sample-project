@@ -10,7 +10,7 @@ import "icons/24 pixels/mail-24.svg" as mail24
 import "icons/24 pixels/padlock-24.svg" as padlock24
 import "components/logo.elyx" as logo
 
-export cardBackgroundSolid_gpNRKSrmXr = cardBackground.cardBackgroundSolidVariant {
+export cardBackgroundSolid_gpNRKSrmXr = cardBackground.transparent {
   name: "Sign In Form",
   left: 39px,
   top: 21px,

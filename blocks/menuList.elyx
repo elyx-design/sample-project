@@ -13,7 +13,7 @@ import "icons/20 pixels/settings-20.svg" as settings20
 import "icons/20 pixels/notes-20.svg" as notes20
 import "icons/20 pixels/chat-20.svg" as chat20
 
-export MenuList_6OjbR9CAsW = cardBackground.cardBackground_zXouRyz {
+export MenuList_6OjbR9CAsW = cardBackground.base {
   name: "Menu List",
   left: 33.25px,
   top: -48px,

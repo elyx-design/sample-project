@@ -6,7 +6,7 @@ import "components/userSummary.elyx" as userSummary
 import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
-export cardBackgroundSolid_hxqOj5bsxM = cardBackground.cardBackground_zXouRyz {
+export cardBackgroundSolid_hxqOj5bsxM = cardBackground.base {
   name: "Review Card",
   left: 693px,
   top: 267px,

@@ -8,7 +8,7 @@ import "icons/20 pixels/voice-20.svg" as voice20
 import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "components/logo.elyx" as logo
 
-export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.cardBackground_zXouRyz {
+export cardBackgroundSolid_kEwO8GJ2Nk = cardBackground.base {
   name: "Chat Input",
   left: 511px,
   top: 471px,

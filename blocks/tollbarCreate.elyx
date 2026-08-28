@@ -10,7 +10,7 @@ import "icons/20 pixels/chat-20.svg" as chat20
 import "icons/20 pixels/image-20.svg" as image20
 import "icons/20 pixels/code-20.svg" as code20
 
-export ToolbarCreate_WBWllCttV6 = cardBackground.cardBackgroundSolidVariant_B {
+export ToolbarCreate_WBWllCttV6 = cardBackground.transparentFullRadius {
   name: "Toolbar Create",
   left: 488px,
   top: 479px,

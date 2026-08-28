@@ -5,7 +5,7 @@ import "components/button.elyx" as button
 import "components/avatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
 
-export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
+export Header_YoW7I9TfdY = cardBackground.transparent {
   name: "Site Header",
   left: 512px,
   top: 456px,

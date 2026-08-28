@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "components/product.elyx" as product
 import "blocks/productInfo.elyx" as productInfo
 
-export ProductGallery_ZemQVvDdPm = cardBackground.cardBackgroundSolidVariant_o {
+export ProductGallery_ZemQVvDdPm = cardBackground.none {
   name: "Product Gallery",
   left: 177px,
   top: 240px,

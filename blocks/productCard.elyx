@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
 import "components/product.elyx" as product
 
-export cardBackgroundSolid_MeUe9s7jIe = cardBackground.cardBackground_zXouRyz {
+export cardBackgroundSolid_MeUe9s7jIe = cardBackground.base {
   name: "Product Card",
   left: 140px,
   top: 134px,

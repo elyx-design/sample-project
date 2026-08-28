@@ -5,7 +5,7 @@ import "components/cardBackground.elyx" as cardBackground
 import "icons/20 pixels/play-20.svg" as play20
 import "icons/20 pixels/star-20.svg" as star20
 
-export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
+export Toolbaraudio_qGGZOkqJFq = cardBackground.transparentFullRadius {
   name: "Toolbar (audio)",
   left: 828px,
   top: 798px,

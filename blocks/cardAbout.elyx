@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
 import "components/stats.elyx" as stats
 
-export profileCard_vlvneaI = cardBackground.cardBackgroundSolidVariant {
+export profileCard_vlvneaI = cardBackground.transparent {
   name: "Profile Card",
   left: 0px,
   top: 0px,

@@ -5,7 +5,7 @@ import "components/chatBubble.elyx" as chatBubble
 import "components/appTopBar.elyx" as appTopBar
 import "icons/24 pixels/robot-24.svg" as robot24
 
-export AiChat_DK44ShHBd2 = cardBackground.cardBackgroundSolidVariant {
+export AiChat_DK44ShHBd2 = cardBackground.transparent {
   name: "Ai Chat",
   left: 544px,
   top: 368px,

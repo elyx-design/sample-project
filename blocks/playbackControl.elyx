@@ -7,7 +7,7 @@ import "icons/20 pixels/more-20.svg" as more20
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/settings-20.svg" as settings20
 
-export PlaybackControl_YxsKbPQMe8 = cardBackground.cardBackgroundSolidVariant_o {
+export PlaybackControl_YxsKbPQMe8 = cardBackground.none {
   name: "Playback Control",
   left: 669px,
   top: 522px,

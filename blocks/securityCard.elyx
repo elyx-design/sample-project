@@ -15,7 +15,7 @@ header_HZdRlZc = header2.header_Pp67Y8c {
   }
 }
 
-export securityCard_HT5T2Qj = cardBackground.cardBackground_zXouRyz {
+export securityCard_HT5T2Qj = cardBackground.base {
   name: "Security Card",
   left: 0px,
   top: 263px,

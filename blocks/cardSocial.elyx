@@ -7,7 +7,7 @@ import "components/avatarGroup.elyx" as avatarGroup
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/star-20.svg" as star20
 
-export SocialCard_QzfezrXgSp = cardBackground.cardBackgroundSolidVariant {
+export SocialCard_QzfezrXgSp = cardBackground.transparent {
   name: "Social Card",
   left: 186px,
   top: 176px,

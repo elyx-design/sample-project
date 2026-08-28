@@ -112,7 +112,7 @@ userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {
   top: 1241px
 }
 
-export sideBar_xy3AK6H6s8 = cardBackground.cardBackgroundSolidVariant_o {
+export sideBar_xy3AK6H6s8 = cardBackground.none {
   name: "App Sidebar",
   left: 297px,
   top: -7px,
