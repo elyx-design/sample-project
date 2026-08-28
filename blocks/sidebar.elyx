@@ -1,233 +1,53 @@
-import "components/sidebarItem.elyx" as sidebarItem
-import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as Spacing
-import "components/sidebarHeader.elyx" as sidebarHeader2
-import "components/userSummary.elyx" as userSummary2
+import "tokens/colors.elyx" as colors
+import "tokens/radius.elyx" as radius
 import "components/avatar.elyx" as avatar
 import "components/cardBackground.elyx" as cardBackground
 import "icons/24 pixels/home-24.svg" as home24
-import "icons/24 pixels/chat.svg" as chat
-import "icons/24 pixels/doc.svg" as doc
 import "icons/24 pixels/cloud-24.svg" as cloud24
-import "icons/24 pixels/bag-24.svg" as bag24
 import "components/button.elyx" as button
 import "icons/24 pixels/create-24.svg" as create24
 import "icons/24 pixels/folder-24.svg" as folder24
 import "icons/24 pixels/history-24.svg" as history24
 import "components/logo.elyx" as logo
+import "icons/24 pixels/bag-24.svg" as bag24
+import "blocks/selector.elyx" as selector
+import "components/divider.elyx" as divider
+import "icons/24 pixels/activity.svg" as activity
+import "icons/24 pixels/ai.svg" as ai
+import "icons/24 pixels/notes-24.svg" as notes24
+import "icons/24 pixels/settings-24.svg" as settings24
+import "blocks/cardUpgrade.elyx" as cardUpgrade
 
-export accountSidebar = frame {
-  name: "Account Sidebar",
-  left: 0px,
+export sidebar = cardBackground.base {
+  name: "App Sidebar",
+  left: -123px,
   top: 0px,
   width: .auto,
-  height: 100%,
-  layout: {direction: .column, justify-content: .space-between},
-  fill: .white,
-  border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
-  padding: Spacing.spacing.paddingM,
-  children: [main, userSummary]
+  height: 645px,
+  padding-top: 20px,
+  padding-left: 20px,
+  padding-bottom: 20px,
+  padding-right: 20px,
+  layout.align-items: .center,
+  layout.item-gap: 16px,
+  layout.justify-content: .space-between,
+  overrides: [insert(Content, after = .nil), insert(CardUpgrade, after = Content)]
 }
-
-main = frame {
-  name: "Sidebar Main",
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.spacing.s},
-  children: [accountHeader, accountNavigation]
-}
-
-accountHeader = sidebarHeader2.workspaceHeader {
-  name: "Workspace Header",
-  left: 0px,
-  top: 16px,
-  width: 100%
-}
-
-accountNavigation = frame {
-  name: "Account Navigation",
-  width: 100%,
-  layout: {direction: .column, item-gap: 2px},
-  children: [overview, projects, members, billing, account]
-}
-
-overview = sidebarItem.base {
-  name: "Overview Item",
-  left: 0px,
-  top: 453px,
-
-  sidebarItem.label {
-    contents: "Overview"
-  }
-}
-
-projects = sidebarItem.base {
-  name: "Projects Item",
-  left: 20px,
-  top: 473px,
-
-  sidebarItem.label {
-    contents: "Projects"
-  }
-}
-
-members = sidebarItem.base {
-  name: "Members Item",
-  left: 40px,
-  top: 493px,
-
-  sidebarItem.label {
-    contents: "Members"
-  }
-}
-
-billing = sidebarItem.base {
-  name: "Billing Item",
-  left: 60px,
-  top: 513px,
-
-  sidebarItem.label {
-    contents: "Billing"
-  }
-}
-
-account = sidebarItem.selected {
-  name: "Account Item",
-  left: 20px,
-  top: 473px,
-
-  sidebarItem.label {
-    contents: "Account"
-  }
-}
-
-userSummary = userSummary2.userSummary_3nStch3 {name: "User Summary", left: 0px, top: 1241px}
-
-export appSidebar = cardBackground.none {
-  name: "App Sidebar",
-  left: 297px,
-  top: -7px,
-  width: .auto,
-  padding-top: 8px,
-  padding-left: 8px,
-  padding-bottom: 8px,
-  padding-right: 8px,
-  layout.item-gap: Spacing.spacing.heightM,
-  overrides: [insert(appHeader, after = .nil), insert(appNavigation, after = appHeader)]
-}
-
-appNavigation = frame {
-  name: "App Navigation",
-  width: 100%,
-  layout: {direction: .column, item-gap: 12px},
-  overflow: .visible,
-  children: [application, campaign, messaging, reports, library, sales]
-}
-
-application = sidebarItem.base {
-  name: "Application Item",
-  left: 34.59px,
-  top: 57.76px,
-
-  sidebarItem.label {
-    contents: "Application"
-  }
-
-  sidebarItem.icon {
-    contents: home24
-  }
-}
-
-campaign = sidebarItem.base {
-  name: "Campaign Item",
-  left: 54.59px,
-  top: 77.76px,
-
-  sidebarItem.label {
-    contents: "Campaign"
-  }
-}
-
-messaging = sidebarItem.selected {
-  name: "Messaging Item",
-  left: 74.59px,
-  top: 97.76px,
-  overflow: .visible,
-  border[0].color: colors.colors.blackAlpha25,
-  border[0].position: .outside,
-
-  sidebarItem.label {
-    contents: "Messaging"
-  }
-
-  sidebarItem.icon {
-    contents: chat
-  }
-}
-
-reports = sidebarItem.base {
-  name: "Reports Item",
-  left: 74.59px,
-  top: 97.76px,
-
-  sidebarItem.label {
-    contents: "Reports"
-  }
-
-  sidebarItem.icon {
-    contents: doc
-  }
-}
-
-library = sidebarItem.base {
-  name: "Library Item",
-  left: 74.59px,
-  top: 169.76px,
-
-  sidebarItem.label {
-    contents: "Library"
-  }
-
-  sidebarItem.icon {
-    contents: cloud24
-  }
-}
-
-sales = sidebarItem.base {
-  name: "Sales Item",
-  left: 74.59px,
-  top: 205.76px,
-
-  sidebarItem.label {
-    contents: "Sales"
-  }
-
-  sidebarItem.icon {
-    contents: bag24
-  }
-}
-
-appHeader = sidebarHeader2.workspaceHeader {name: "Workspace Header", left: 280px, top: -16px}
 
 @variant("sidebar (Contracted)")
-compact = accountSidebar {
+compact = frame {
+  name: "sidebar (Contracted)",
   left: 539.2797px,
   top: 0px,
   width: 60px,
   height: 456px,
-  padding-top: 20px,
-  padding-left: 12px,
-  padding-bottom: 20px,
-  padding-right: 12px,
-  border[0].visible: .false,
-  overrides: [
-    insert(compactContent, after = .nil),
-    insert(profileAvatar, after = compactContent),
-    remove(userSummary),
-    remove(main)
-  ]
+  layout: {direction: .column, justify-content: .space-between},
+  fill: .white,
+  border: {color: rgb(0%, 0%, 0%, 8%), visible: .false, position: .outside},
+  padding: [20px, 12px],
+  children: [compactContent, profileAvatar]
 }
-
-profileAvatar = avatar.smallPhoto {name: "Avatar S (Photo)", left: 550px, top: 402px}
 
 compactContent = frame {
   name: "Compact Sidebar Content",
@@ -292,5 +112,196 @@ history = button.mediumPlainIcon {
 
   button.mediumPlainIconGlyph {
     contents: history24
+  }
+}
+
+profileAvatar = avatar.smallPhoto {name: "Avatar S (Photo)", left: 550px, top: 402px}
+
+export sideBarMenu = frame {
+  name: "Frame",
+  left: -354px,
+  top: 0px,
+  width: 152px,
+  height: Spacing.spacing.heightM,
+  layout: {align-items: .center, item-gap: 7px},
+  padding-left: 8px,
+  padding-right: 8px,
+  children: [shape1, text2]
+}
+
+shape1 = icon {
+  name: "activity.svg",
+  left: 0px,
+  top: 0px,
+  width: 24px,
+  height: 24px,
+  fill: colors.colors.black20,
+  contents: bag24
+}
+
+text2 = text {
+  name: "Menu",
+  left: 31px,
+  top: 7px,
+  fill: colors.colors.black20,
+  contents: "Menu",
+  font-style: "Regular"
+}
+
+@variant("Frame Variant")
+selected = sideBarMenu {
+  left: -354px,
+  top: 76px,
+  corner-radius: radius.radius.max,
+  fill[0].color: colors.colors.blackAlpha05,
+
+  text2 {
+    fill[0].color: colors.colors.black20
+  }
+
+  shape1 {
+    fill[0].color: colors.colors.black20
+  }
+}
+
+CardUpgrade = cardUpgrade.CardUpgrade {
+  name: "Frame",
+  left: 0px,
+  top: -177px,
+  width: 100%,
+
+  cardUpgrade.bottom.text2 {
+    contents: "Take your work further. Pro gives you unlimited resources."
+  }
+}
+
+Content = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 24px},
+  overflow: .visible,
+  padding-left: 0px,
+  padding-right: 0px,
+  children: [frame3, Selector_2, frame2]
+}
+
+frame3 = frame {
+  name: "Grouped Stack",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 66.5px,
+  layout: {direction: .column, justify-content: .space-between, item-gap: 8px},
+  overflow: .visible,
+  children: [frame1, horizontal]
+}
+
+frame1 = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {align-items: .center, item-gap: 12px},
+  overflow: .visible,
+  padding: [8px, 0px],
+  children: [small, text1]
+}
+
+small = logo.medium {name: "Logo M (36)", left: 118px, top: -37px}
+
+text1 = text {
+  name: "Text",
+  left: 198px,
+  top: 36px,
+  fill: .black,
+  contents: "Overleaf",
+  font-style: "SemiBold"
+}
+
+horizontal = divider.horizontal {
+  name: "Divider (White)",
+  left: 0px,
+  top: 66px,
+  width: 100%,
+  padding-top: 0px,
+  padding-bottom: 0px
+}
+
+Selector_2 = selector.Selector {name: "Frame", left: 0px, top: 121px, width: 100%}
+
+frame2 = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [sideBarMenu_2, sideBarMenu_3, sideBarMenu_4, sideBarMenu_5, sideBarMenu_6]
+}
+
+sideBarMenu_2 = sideBarMenu {
+  name: "Frame",
+  left: 0px,
+  top: 34px,
+  width: 100%,
+
+  text2 {
+    contents: "Campaigns"
+  }
+
+  shape1 {
+    contents: ai
+  }
+}
+
+sideBarMenu_3 = selected {
+  name: "Frame Variant",
+  left: 0px,
+  top: 54px,
+  width: 100%,
+
+  text2 {
+    contents: "Overview"
+  }
+
+  shape1 {
+    contents: activity
+  }
+}
+
+sideBarMenu_4 = sideBarMenu {
+  name: "Frame",
+  left: 0px,
+  top: 74px,
+  width: 100%,
+
+  text2 {
+    contents: "Sales"
+  }
+}
+
+sideBarMenu_5 = sideBarMenu {
+  name: "Frame",
+  left: 20px,
+  top: 94px,
+  width: 100%,
+
+  text2 {
+    contents: "Tasks"
+  }
+
+  shape1 {
+    contents: notes24
+  }
+}
+
+sideBarMenu_6 = sideBarMenu {
+  name: "Frame",
+  left: 20px,
+  top: 134px,
+  width: 100%,
+
+  text2 {
+    contents: "Settings"
+  }
+
+  shape1 {
+    contents: settings24
   }
 }

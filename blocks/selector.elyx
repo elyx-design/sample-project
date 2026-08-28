@@ -1,0 +1,45 @@
+import "components/avatar.elyx" as avatar
+import "components/header.elyx" as header
+import "icons/24 pixels/chevron-upDown-24.svg" as chevronupDown24
+
+export Selector = frame {
+  name: "Frame",
+  left: 268px,
+  top: 443px,
+  layout: {justify-content: .space-between, align-items: .center, item-gap: 15px},
+  overflow: .visible,
+  children: [Left, shape1]
+}
+
+Left = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 15px},
+  overflow: .visible,
+  children: [small, smallLeft]
+}
+
+small = avatar.smallPhoto {name: "Avatar S (Photo)", left: 0px, top: 2px}
+
+smallLeft = header.smallLeft {
+  name: "Header S (Left)",
+  left: 51px,
+  top: 0px,
+
+  header.smallSubtitle {
+    contents: "Manager"
+  }
+
+  header.smallTitle {
+    contents: "Nora"
+  }
+}
+
+shape1 = icon {
+  name: "chevron-upDown-24.svg",
+  left: 26px,
+  top: 8px,
+  width: 24px,
+  height: 24px,
+  contents: chevronupDown24
+}

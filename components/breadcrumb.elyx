@@ -1,0 +1,36 @@
+import "icons/12 pixels/chevron-right-12.svg" as chevronright12
+import "tokens/colors.elyx" as colors
+import "components/button.elyx" as button
+import "icons/20 pixels/activity-20.svg" as activity20
+
+export breadcrumb = frame {
+  name: "Frame",
+  left: 429px,
+  top: 518px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 8px},
+  children: [small, text1, shape1, text2]
+}
+
+small = button.smallIconBackground {
+  name: "Icon (BG)",
+  left: 81px,
+  top: 14px,
+
+  button.smallBackgroundIcon {
+    contents: activity20
+  }
+}
+
+text1 = text {name: "Product", left: 0px, top: 0px, fill: .black, contents: "Product"}
+
+shape1 = icon {
+  name: "chevron-right-12.svg",
+  left: 52px,
+  top: 3px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.blackAlpha25,
+  contents: chevronright12
+}
+
+text2 = text {name: "Overview", left: 20px, top: 20px, fill: .black, contents: "Overview"}

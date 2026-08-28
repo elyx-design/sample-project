@@ -246,7 +246,7 @@ base = tag.iconAndLabel {
   fill[0].color: colors.colors.blackAlpha25,
 
   tag.label {
-    contents: "Scroldown",
+    contents: "Scroll down",
     fill[0].color: colors.colors.whiteAlpha70
   }
 

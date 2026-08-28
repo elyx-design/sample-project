@@ -1,19 +1,44 @@
 import "tokens/colors.elyx" as colors
-import "blocks/sidebar.elyx" as sidebar
 import "components/cardBackground.elyx" as cardBackground
+import "tokens/spacing.elyx" as spacing
+import "tokens/radius.elyx" as radius
+import "blocks/sideBar.elyx" as sideBar
+import "components/breadcrumb.elyx" as breadcrumb
+import "components/track.elyx" as mediaTrack
 
-export dashboard = frame {
+dashboard = frame {
   name: "Dashboard",
   left: 53px,
   top: 133px,
   width: 1291px,
-  height: 803px,
+  height: 846px,
   layout: {direction: .row},
   fill: colors.colors.black95,
-  padding: 8px,
-  children: [appSidebar, background]
+  padding: 24px,
+  children: frame1
 }
 
-appSidebar = sidebar.appSidebar {left: 559.5px, top: 24px, width: 263px}
+frame1 = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  height: 100%,
+  layout: {item-gap: 16px},
+  overflow: .visible,
+  children: [sidebar, track, background]
+}
 
-background = cardBackground.base {left: 926px, top: 0px, height: 100%}
+sidebar = sideBar.sidebar {name: "App Sidebar", left: -74px, top: 0px, width: 274px, height: 100%}
+
+track = mediaTrack.track {name: "Video Track", left: 504px, top: 544px}
+
+background = cardBackground.base {
+  name: "Card Background",
+  left: 926px,
+  top: 0px,
+  height: spacing.spacing.heightS,
+  corner-radius: radius.radius.max,
+  layout.justify-content: .center,
+  overrides: [insert(breadcrumb_2, after = .nil)]
+}
+
+breadcrumb_2 = breadcrumb.breadcrumb {name: "Frame", left: 463px, top: 361px}

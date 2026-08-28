@@ -1,0 +1,92 @@
+import "icons/24 pixels/direct-24.svg" as direct24
+import "icons/24 pixels/ellipsis-vertical-24.svg" as ellipsisvertical24
+import "tokens/colors.elyx" as colors
+import "components/button.elyx" as button
+
+export CardUpgrade = frame {
+  name: "Frame",
+  left: 228px,
+  top: 533px,
+  width: 198px,
+  height: .auto,
+  layout: {direction: .column, item-gap: 12px},
+  fill: colors.colors.black20,
+  corner-radius: 16px,
+  padding: 12px,
+  children: [top, bottom]
+}
+
+top = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  layout: {justify-content: .space-between, align-items: .center, item-gap: 62px},
+  children: [title, shape2]
+}
+
+title = frame {
+  name: "Frame",
+  left: 0px,
+  top: 24px,
+  width: 100%,
+  layout: {align-items: .center, item-gap: 8px},
+  children: [shape1, text1]
+}
+
+shape1 = icon {
+  name: "direct-24.svg",
+  left: 0px,
+  top: 0px,
+  width: 24px,
+  height: 24px,
+  fill: colors.colors.white100,
+  contents: direct24
+}
+
+text1 = text {
+  name: "Upgrade Pro",
+  left: 60px,
+  top: 15px,
+  fill: colors.colors.white100,
+  contents: "Upgrade Pro",
+  font-style: "Bold"
+}
+
+shape2 = icon {
+  name: "ellipsis-vertical-24.svg",
+  left: 178px,
+  top: 0px,
+  width: 24px,
+  height: 24px,
+  fill: colors.colors.white100,
+  contents: ellipsisvertical24
+}
+
+bottom = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, item-gap: 12px},
+  overflow: .visible,
+  children: [text2, small]
+}
+
+text2 = text {
+  name: "Take your work furth",
+  left: 0px,
+  top: 67px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha50,
+  contents: "Take your work further. Pro gives you unlimited resources, advanced tools, and priority support, all built for people who create without limits.",
+  font-size: 12
+}
+
+small = button.small {
+  name: "Button S (28)",
+  left: 330px,
+  top: 594px,
+
+  button.smallLabel {
+    contents: "Upgrade"
+  }
+}

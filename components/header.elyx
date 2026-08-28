@@ -53,7 +53,7 @@ export smallLeft = frame {
   top: 29px,
   width: 99px,
   height: .auto,
-  layout: {direction: .column, item-gap: 8px},
+  layout: {direction: .column, item-gap: 4px},
   children: [smallTitle, smallSubtitle]
 }
 

@@ -1,6 +1,7 @@
 import "tokens/spacing.elyx" as spacing
 import "icons/24 pixels/direct-24.svg" as direct24
 import "tokens/colors.elyx" as colors
+import "icons/24 pixels/calendar-24.svg" as calendar24
 
 export track = frame {
   name: "Video Track",
@@ -10,6 +11,7 @@ export track = frame {
   height: spacing.spacing.heightM,
   layout: {justify-content: .space-between, align-items: .center},
   fill: rgb(67.48%, 100%, 0%),
+  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   corner-radius: 8px,
   padding: [4px, 0px],
   children: [content, endHandle]
@@ -17,8 +19,17 @@ export track = frame {
 
 content = frame {
   name: "Track Content",
+  width: 100%,
+  height: 100%,
+  layout: {justify-content: .space-between, align-items: .center},
+  children: [left, label_2]
+}
+
+left = frame {
+  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center},
+  overflow: .visible,
   children: [startHandle, label]
 }
 
@@ -46,7 +57,7 @@ startGrip = shape {
 label = frame {
   name: "Track Label",
   height: 100%,
-  layout: {align-items: .center, item-gap: 4px},
+  layout: {align-items: .center, item-gap: 2px},
   children: [typeIcon, trackName]
 }
 
@@ -56,7 +67,7 @@ typeIcon = icon {
   top: 522px,
   width: 24px,
   height: 24px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.colors.black20,
   contents: direct24
 }
 
@@ -64,8 +75,37 @@ trackName = text {
   name: "Track Name",
   left: 263px,
   top: 553px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.colors.black20,
   contents: "Track name",
+  font-size: 12,
+  font-style: "SemiBold"
+}
+
+label_2 = frame {
+  name: "Track Label",
+  left: 128px,
+  top: 20px,
+  height: 100%,
+  layout: {align-items: .center, item-gap: 2px},
+  children: [typeIcon_2, trackName_2]
+}
+
+typeIcon_2 = icon {
+  name: "Track Type Icon",
+  left: 810px,
+  top: 522px,
+  width: 24px,
+  height: 24px,
+  fill: colors.colors.blackAlpha25,
+  contents: calendar24
+}
+
+trackName_2 = text {
+  name: "8 Jul",
+  left: 263px,
+  top: 553px,
+  fill: colors.colors.blackAlpha25,
+  contents: "8 Jul",
   font-size: 12,
   font-style: "SemiBold"
 }

@@ -4,7 +4,7 @@ import "components/slider.elyx" as slider
 import "components/timelineRuler.elyx" as timelineRuler
 import "components/videoTrack.elyx" as videoTrack
 import "images/background/bird.jpg" as bird
-import "components/mediaTrack.elyx" as mediaTrack
+import "components/track.elyx" as mediaTrack
 import "blocks/imageGallery.elyx" as imageGallery
 import "images/thumbnails/thumb08.jpg" as thumb08
 import "icons/20 pixels/image-20.svg" as image20
@@ -14,7 +14,7 @@ import "icons/20 pixels/pen-20.svg" as pen20
 import "icons/20 pixels/pointer-20.svg" as pointer20
 import "icons/24 pixels/music-24.svg" as music24
 import "icons/24 pixels/text-24.svg" as text24
-import "blocks/sidebar.elyx" as sidebar
+import "blocks/sideBar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 
@@ -161,6 +161,10 @@ player = videoPlayer.videoPlayer {
 
   videoPlayer.headerRow.eventHeader.header.smallTitle {
     contents: "Wings of the Wild"
+  }
+
+  videoPlayer.headerRow.eventHeader {
+    width: .auto
   }
 
   videoPlayer.headerRow.liveStatus {
@@ -356,11 +360,11 @@ audioTrack = mediaTrack.track {
   fill[0].color: rgb(100%, 41.19%, 100%),
 
   mediaTrack.content.label.trackName {
-    contents: "tropical_ambience.mp3"
+
   }
 
   mediaTrack.content.label.typeIcon {
-    contents: music24
+
   }
 }
 
@@ -372,11 +376,11 @@ titleTrack = mediaTrack.track {
   fill[0].color: rgb(0%, 98.76%, 100%),
 
   mediaTrack.content.label.trackName {
-    contents: "Birds in Their Element"
+
   }
 
   mediaTrack.content.label.typeIcon {
-    contents: text24
+
   }
 }
 
