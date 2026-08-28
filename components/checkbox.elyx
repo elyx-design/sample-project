@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
 
 Frame = frame {
-  name: "Frame",
+  name: "Toggle Anchor",
   left: 2003px,
   top: 1069px,
   width: 0px,
@@ -31,7 +31,7 @@ export Frame_P = frame {
 }
 
 Frame_H = frame {
-  name: "Frame",
+  name: "Toggle Knob",
   left: 23px,
   top: 3px,
   width: 14px,

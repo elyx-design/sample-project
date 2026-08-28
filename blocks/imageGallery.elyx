@@ -18,7 +18,7 @@ export ImageGallery_GtwQ9FgVmL = frame {
 }
 
 Frame_WudjtipEop = frame {
-  name: "Frame",
+  name: "Top Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -54,7 +54,7 @@ ThumbnailImage_IJc7gbbjIi = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
 }
 
 Frame_gKgiUol8gH = frame {
-  name: "Frame",
+  name: "Middle Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -91,7 +91,7 @@ ThumbnailImage_wvYu3x1xqi = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
 }
 
 Frame_PuQDZckL9T = frame {
-  name: "Frame",
+  name: "Bottom Thumbnail Row",
   left: 0px,
   top: 0px,
   width: 100%,

@@ -243,7 +243,7 @@ settingActionLabel = text {
 }
 
 Frame = frame {
-  name: "Frame",
+  name: "Account Page",
   left: -2572px,
   top: -509px,
   width: 1910px,
@@ -256,7 +256,7 @@ Frame = frame {
 }
 
 Frame_F = frame {
-  name: "Frame",
+  name: "Account Layout",
   left: 270px,
   top: 0px,
   width: 1080px,
@@ -278,7 +278,7 @@ layer = cardSocial.SocialCard_QzfezrXgSp {
 }
 
 Frame_H = frame {
-  name: "Frame",
+  name: "Account Content",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -289,7 +289,7 @@ Frame_H = frame {
 }
 
 layer_0 = profileCard.profileCard_vlvneaI {
-  name: "profileCard",
+  name: "Profile Card",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -363,7 +363,7 @@ layer_U = productGallery.ProductGallery_ZemQVvDdPm {
 }
 
 GroupedStack = frame {
-  name: "Grouped Stack",
+  name: "Activity Feed",
   left: 0px,
   top: 1124px,
   width: 100%,
@@ -375,7 +375,7 @@ GroupedStack = frame {
 }
 
 layer_9 = activityRow2.activityRow_ZaTUcpO {
-  name: "activityRow",
+  name: "Rating Activity",
   left: 0px,
   top: 1397px,
   width: 100%,
@@ -393,7 +393,7 @@ layer_9 = activityRow2.activityRow_ZaTUcpO {
 }
 
 activityRow_r = activityRow2.activityRow_ZaTUcpO {
-  name: "activityRow",
+  name: "Finished Activity",
   left: 0px,
   top: 1370px,
   width: 100%,
@@ -414,22 +414,10 @@ activityRow_r = activityRow2.activityRow_ZaTUcpO {
   activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
     contents: "5 Days"
   }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTime_dwkCnRe {
-    contents: "Finished Letters to No One"
-  }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.ActivityTime_dwkCnRe {
-    contents: "Finished Letters to No One"
-  }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
-    contents: "5 Days"
-  }
 }
 
 activityRow_G = activityRow2.activityRow_ZaTUcpO {
-  name: "activityRow",
+  name: "Reading Activity",
   left: 20px,
   top: 1390px,
   width: 100%,
@@ -450,18 +438,10 @@ activityRow_G = activityRow2.activityRow_ZaTUcpO {
   activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
     contents: "1 Week"
   }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTime_dwkCnRe {
-    contents: "Started The Quiet Life of Things"
-  }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
-    contents: "1 Week"
-  }
 }
 
 activityRow_L = activityRow2.activityRow_ZaTUcpO {
-  name: "activityRow",
+  name: "Saved Activity",
   left: 20px,
   top: 1390px,
   width: 100%,
@@ -480,14 +460,6 @@ activityRow_L = activityRow2.activityRow_ZaTUcpO {
   }
 
   activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
-    contents: "2 Weeks"
-  }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTime_dwkCnRe {
-    contents: "Added Winter Mornings to Want to read"
-  }
-
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
     contents: "2 Weeks"
   }
 }

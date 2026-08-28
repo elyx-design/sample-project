@@ -53,7 +53,7 @@ GroupedStack_v5YeDmjPaA = frame {
 }
 
 GroupedStack_s1knnuFu9M = frame {
-  name: "Grouped Stack",
+  name: "Conversation",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
@@ -74,7 +74,7 @@ User_dronh23C7d = chatBubble.ChatBubbleVariant {
 }
 
 Text_ctWSRNMl7J = text {
-  name: "Text",
+  name: "Assistant Response",
   left: 0px,
   top: 299px,
   width: 100%,
@@ -84,7 +84,7 @@ Text_ctWSRNMl7J = text {
 }
 
 layer_OoM9oz4uq7 = frame {
-  name: "Frame",
+  name: "Assistant Avatar",
   left: 0px,
   top: 227px,
   width: 24px,

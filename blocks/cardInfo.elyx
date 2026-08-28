@@ -7,7 +7,7 @@ import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
 export cardBackgroundSolid_hxqOj5bsxM = cardBackground.cardBackground_zXouRyz {
-  name: "cardBackground (Solid)",
+  name: "Review Card",
   left: 693px,
   top: 267px,
   width: 370px,
@@ -133,4 +133,4 @@ UserSummaryS_hvtjNfK8hg = userSummary.UserSummaryS_clM0CpDw4i {
   }
 }
 
-Icon_7SEczsI9Lh = button.ButtonS28Variant_X {name: "Icon", left: 1097px, top: 291px}
+Icon_7SEczsI9Lh = button.ButtonS28Variant_X {name: "Close Button", left: 1097px, top: 291px}

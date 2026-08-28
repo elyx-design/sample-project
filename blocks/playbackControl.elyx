@@ -36,7 +36,7 @@ GroupedStack_rdVoRETh1T = frame {
 }
 
 Icon_4slh7sL8pH = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Settings Button",
   left: 264.5px,
   top: 8.5px,
 
@@ -46,7 +46,7 @@ Icon_4slh7sL8pH = button.ButtonS28Variant_7 {
 }
 
 Icon_teDPq1aBTb = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Like Button",
   left: 284.5px,
   top: 28.5px,
 
@@ -56,7 +56,7 @@ Icon_teDPq1aBTb = button.ButtonS28Variant_7 {
 }
 
 Icon_clXC1PW6fA = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "More Button",
   left: 284.5px,
   top: 28.5px,
 
@@ -66,7 +66,7 @@ Icon_clXC1PW6fA = button.ButtonS28Variant_7 {
 }
 
 Text_wZsdhlOFZW = text {
-  name: "Text",
+  name: "Playback Time",
   left: 722px,
   top: 543px,
   fill: .black,
@@ -75,7 +75,7 @@ Text_wZsdhlOFZW = text {
 }
 
 GroupedStack_q0ILkfiHMO = frame {
-  name: "Grouped Stack",
+  name: "Playback Scrubber",
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
@@ -83,7 +83,7 @@ GroupedStack_q0ILkfiHMO = frame {
 }
 
 Icon_5hh58LFCp5 = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Play Button",
   left: 737px,
   top: 580px,
 

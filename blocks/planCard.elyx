@@ -21,7 +21,7 @@ export planCard_LTK7mFiyqR = frame {
 }
 
 GroupedStack_8RgNvW1K7p = frame {
-  name: "Grouped Stack",
+  name: "Plan Content",
   width: 100%,
   layout: {direction: .column, item-gap: 48px},
   overflow: .visible,
@@ -29,7 +29,7 @@ GroupedStack_8RgNvW1K7p = frame {
 }
 
 GroupedStack_v7dOnTlCXG = frame {
-  name: "Grouped Stack",
+  name: "Plan Summary",
   width: 100%,
   layout: {align-items: .center, item-gap: 12px},
   overflow: .visible,
@@ -37,7 +37,7 @@ GroupedStack_v7dOnTlCXG = frame {
 }
 
 layer_jRUrdXyqNT = frame {
-  name: "Frame",
+  name: "Plan Icon",
   left: 0px,
   top: 0px,
   width: 40px,
@@ -88,14 +88,14 @@ TagTransparent_vakzscXaBV = tag.TagTransparentVariant {
 }
 
 GroupedStack_1qB1LWpCrk = frame {
-  name: "Grouped Stack",
+  name: "Plan Details",
   width: 100%,
   layout: {direction: .column, item-gap: 24px},
   children: [GroupedStack_AcjlTuALWG, PlanFeatures_1JNxLt3]
 }
 
 GroupedStack_AcjlTuALWG = frame {
-  name: "Grouped Stack",
+  name: "Pricing Copy",
   left: 24px,
   top: 112px,
   width: 100%,
@@ -104,7 +104,7 @@ GroupedStack_AcjlTuALWG = frame {
 }
 
 GroupedStack_o4NcMhJdgN = frame {
-  name: "Grouped Stack",
+  name: "Price Row",
   width: 100%,
   layout: {align-items: .end, item-gap: 4px},
   children: [PlanPrice_ZJx9H3J, textLayer_QpGiRL9Axb]
@@ -257,7 +257,7 @@ Basicexportoptions_NPd1l59Z9w = text {
 }
 
 layer_Z = button.button_43RxZnGr30 {
-  name: "Button M (36)",
+  name: "Manage Plan Button",
   left: 24px,
   top: 390px,
 

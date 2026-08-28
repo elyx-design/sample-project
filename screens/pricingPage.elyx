@@ -17,7 +17,7 @@ PricingPage = frame {
 }
 
 Frame = frame {
-  name: "Frame",
+  name: "Pricing Cards",
   left: 125.5px,
   top: 202px,
   layout: {justify-content: .center, align-items: .center},
@@ -38,7 +38,7 @@ Frame = frame {
 }
 
 layer = planCard.planCard_LTK7mFiyqR {
-  name: "planCard",
+  name: "Free Plan",
   left: 0px,
   top: 0px,
   width: 380px,
@@ -59,7 +59,7 @@ layer = planCard.planCard_LTK7mFiyqR {
 }
 
 planCard_H = planCard.planCard_LTK7mFiyqR {
-  name: "planCard",
+  name: "Pro Plan",
   left: 420px,
   top: 0.9999px,
   width: 380px,
@@ -112,7 +112,7 @@ planCard_H = planCard.planCard_LTK7mFiyqR {
 }
 
 planCard_O = planCard.planCard_LTK7mFiyqR {
-  name: "planCard",
+  name: "Business Plan",
   left: 840px,
   top: 0px,
   width: 380px,

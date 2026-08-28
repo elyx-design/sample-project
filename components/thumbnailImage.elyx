@@ -24,7 +24,7 @@ export ThumbnailImage_Bv4oCgAbjK = frame {
 }
 
 Frame_knRpLk4dgQ = frame {
-  name: "Frame",
+  name: "Thumbnail Actions",
   left: 0px,
   top: 12px,
   width: 100%,

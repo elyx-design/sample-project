@@ -1,13 +1,12 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
-
 import "components/button.elyx" as button
 import "components/avatar.elyx" as userAvatar
 import "icons/12 pixels/chevron-down-12.svg" as chevrondown122
 
 export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
-  name: "HeaderWeb",
+  name: "Site Header",
   left: 512px,
   top: 456px,
   width: 1024px,
@@ -81,7 +80,7 @@ MenuVariant_T = Menu_NptvsRIaJB {
 }
 
 GroupedStack_s6neGdYpQr = frame {
-  name: "Grouped Stack",
+  name: "Header Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [Menu_ufNhOkr09F, PrimaryM_TNPWRcxiAf]
@@ -125,9 +124,8 @@ chevrondown12svg = icon {
   contents: chevrondown122
 }
 
-
 layer_IZeMbQZvJt = frame {
-  name: "Frame",
+  name: "Primary Navigation",
   left: 0px,
   top: 27.5px,
   width: .auto,
@@ -180,5 +178,3 @@ MenuVariant_CWSCQz5wR7 = MenuVariant {
     contents: "Help Center"
   }
 }
-
-

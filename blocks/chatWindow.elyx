@@ -36,7 +36,7 @@ User_y4nVb60Ht8 = chatBubble.ChatBubbleVariant {
 }
 
 GroupedStack_9ZE1MpDskD = frame {
-  name: "Grouped Stack",
+  name: "Replies",
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 8px},
   overflow: .visible,

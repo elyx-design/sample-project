@@ -4,7 +4,7 @@ import "components/tag.elyx" as tag
 import "components/divider.elyx" as divider
 
 export activityRow_ZaTUcpO = frame {
-  name: "activityRow",
+  name: "Activity Row",
   left: -117px,
   top: -17px,
   width: 640px,
@@ -15,7 +15,7 @@ export activityRow_ZaTUcpO = frame {
 }
 
 GroupedStack_cnBluZ7u0I = frame {
-  name: "Grouped Stack",
+  name: "Activity Content",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -26,7 +26,7 @@ GroupedStack_cnBluZ7u0I = frame {
 }
 
 GroupedStack_e9HzR7GXlD = frame {
-  name: "Grouped Stack",
+  name: "Activity Details",
   height: 100%,
   layout: {align-items: .center},
   children: [GroupedStack_mcK4tU66QQ, GroupedStack_tRl1ourATY]
@@ -53,7 +53,7 @@ ActivityTitle_9XlhOnW = text {
 }
 
 GroupedStack_tRl1ourATY = frame {
-  name: "Grouped Stack",
+  name: "Activity Description",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
   children: [ActivityTime_dwkCnRe, Rated_h5p1S8iL1u]

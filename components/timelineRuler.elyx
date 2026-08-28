@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
 Rectangle = shape {
-  name: "Rectangle",
+  name: "Ruler Backdrop",
   left: 430px,
   top: 260px,
   width: 1355px,
@@ -20,16 +20,16 @@ export TimelineRuler_7EHDtEgmPY = frame {
   children: [module_xIf6oP8Ro9, module_521cwUq48R, module_MT5vhsabW0, module_1r90h9aJDj]
 }
 
-module_xIf6oP8Ro9 = module_pm4nfIp1OC {name: "module", left: 0px, top: 495px, width: 100%}
+module_xIf6oP8Ro9 = module_pm4nfIp1OC {name: "Time Marker 0", left: 0px, top: 495px, width: 100%}
 
-module_521cwUq48R = module_pm4nfIp1OC {name: "module", left: 20px, top: 515px, width: 100%}
+module_521cwUq48R = module_pm4nfIp1OC {name: "Time Marker 1", left: 20px, top: 515px, width: 100%}
 
-module_MT5vhsabW0 = module_pm4nfIp1OC {name: "module", left: 29px, top: 515px, width: 100%}
+module_MT5vhsabW0 = module_pm4nfIp1OC {name: "Time Marker 2", left: 29px, top: 515px, width: 100%}
 
-module_1r90h9aJDj = module_pm4nfIp1OC {name: "module", left: 38px, top: 515px, width: 100%}
+module_1r90h9aJDj = module_pm4nfIp1OC {name: "Time Marker 3", left: 38px, top: 515px, width: 100%}
 
 export module_pm4nfIp1OC = frame {
-  name: "module",
+  name: "Time Marker",
   left: 609px,
   top: 543.2181px,
   width: 47.5px,
@@ -39,7 +39,7 @@ export module_pm4nfIp1OC = frame {
 }
 
 Frame_Fxo9iZeiIQ = frame {
-  name: "Frame",
+  name: "Tick Marks",
   top: -59.5px,
   right: 0px,
   width: 100%,
@@ -57,7 +57,7 @@ Frame_Fxo9iZeiIQ = frame {
 }
 
 Rectangle_nNmoTVYunh = shape {
-  name: "Rectangle",
+  name: "Major Tick",
   left: 0px,
   top: 0px,
   width: 1px,
@@ -68,7 +68,7 @@ Rectangle_nNmoTVYunh = shape {
 }
 
 Rectangle_zZuXPus2Av = shape {
-  name: "Rectangle",
+  name: "Minor Tick",
   left: 11.12px,
   top: 0px,
   width: 1px,
@@ -79,7 +79,7 @@ Rectangle_zZuXPus2Av = shape {
 }
 
 Rectangle_XbCl5AZs9K = shape {
-  name: "Rectangle",
+  name: "Minor Tick",
   left: 22px,
   top: 0.39px,
   width: 1px,
@@ -90,7 +90,7 @@ Rectangle_XbCl5AZs9K = shape {
 }
 
 Rectangle_b9AGSxdSy2 = shape {
-  name: "Rectangle",
+  name: "Minor Tick",
   left: 32.8778px,
   top: 0.78px,
   width: 1px,
@@ -101,7 +101,7 @@ Rectangle_b9AGSxdSy2 = shape {
 }
 
 Rectangle_Zcx3XuP496 = shape {
-  name: "Rectangle",
+  name: "Minor Tick",
   left: 43.7555px,
   top: 1.17px,
   width: 1px,
@@ -112,7 +112,7 @@ Rectangle_Zcx3XuP496 = shape {
 }
 
 Rectangle_BzhuJ02AJm = shape {
-  name: "Rectangle",
+  name: "Minor Tick",
   left: 54.63px,
   top: 1.56px,
   width: 1px,

@@ -33,7 +33,7 @@ export VideoPlayer_7IHVyFXn8z = frame {
 }
 
 GroupedStack_R6YKIBc1DT = frame {
-  name: "Grouped Stack",
+  name: "Video Header",
   width: 100%,
   layout: {justify-content: .space-between},
   children: [HeaderSLeft_kdOlA7xbFG, Status_mmQ1DabaWR]

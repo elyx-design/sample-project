@@ -17,7 +17,7 @@ export SignInScreen_uAwbWmooF0 = frame {
 }
 
 GroupedStack_pB84n1ORbr = frame {
-  name: "Grouped Stack",
+  name: "Sign In Content",
   left: 0px,
   top: 0px,
   width: 1280px,
@@ -28,14 +28,14 @@ GroupedStack_pB84n1ORbr = frame {
 }
 
 AuthForm_j40iQAKlB1 = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
-  name: "AuthForm",
+  name: "Sign In Form",
   left: 373px,
   top: 389px,
   width: 32%
 }
 
 profileGroup_LYFcdFxyNU = profileGroup.profileGroupLabelbottom_uuBCQBPIGh {
-  name: "profileGroup Label bottom",
+  name: "Active Users",
   left: 600px,
   top: 962px,
 

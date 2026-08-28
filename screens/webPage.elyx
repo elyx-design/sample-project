@@ -13,4 +13,4 @@ export SignInScreen_gw2k2sYoRZ = frame {
   children: HeaderWeb_SsrjVMJvR3
 }
 
-HeaderWeb_SsrjVMJvR3 = headerWeb.Header_YoW7I9TfdY {name: "HeaderWeb", left: 475px, top: 373px}
+HeaderWeb_SsrjVMJvR3 = headerWeb.Header_YoW7I9TfdY {name: "Site Header", left: 475px, top: 373px}

@@ -50,7 +50,7 @@ GroupedStack_n9gWay5BJG = frame {
 }
 
 Icon_d3HRLKsqHq = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Frame Tool",
   left: 586px,
   top: 502px,
 
@@ -60,14 +60,14 @@ Icon_d3HRLKsqHq = button.ButtonS28Variant_7 {
 }
 
 GroupedStack_1doynIV3VR = frame {
-  name: "Grouped Stack",
+  name: "Pointer Tool Menu",
   height: 100%,
   layout: {align-items: .center},
   children: [Icon_650qPmwIPa, chevrondown12svg_WAhL2Xn3jT]
 }
 
 Icon_650qPmwIPa = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Pointer Tool",
   left: 566px,
   top: 482px,
 
@@ -86,7 +86,7 @@ chevrondown12svg_WAhL2Xn3jT = icon {
 }
 
 GroupedStack_LNGQIB5TvI = frame {
-  name: "Grouped Stack",
+  name: "Shape Tool Menu",
   left: 110.5px,
   top: 20px,
   height: 100%,
@@ -95,7 +95,7 @@ GroupedStack_LNGQIB5TvI = frame {
 }
 
 Icon_HMJYV6zIOg = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Shape Tool",
   left: 566px,
   top: 482px,
 
@@ -114,7 +114,7 @@ chevrondown12svg_3TeWdYmPSh = icon {
 }
 
 Icon_67gqL7VTo8 = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Image Tool",
   left: 646px,
   top: 562px,
 
@@ -124,7 +124,7 @@ Icon_67gqL7VTo8 = button.ButtonS28Variant_7 {
 }
 
 Icon_rIRrS1H7io = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Text Tool",
   left: 606px,
   top: 522px,
 
@@ -134,7 +134,7 @@ Icon_rIRrS1H7io = button.ButtonS28Variant_7 {
 }
 
 Icon_daW7bcJBuT = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Comment Tool",
   left: 626px,
   top: 542px,
 
@@ -144,7 +144,7 @@ Icon_daW7bcJBuT = button.ButtonS28Variant_7 {
 }
 
 Icon_DtYpJAIgiY = button.ButtonS28Variant_7 {
-  name: "Icon",
+  name: "Code Tool",
   left: 666px,
   top: 582px,
 
