@@ -83,50 +83,50 @@ Menu_OmCVZ7XoTy = frame {
   children: [Row_dpI5iHhQJU, Selected_rskLcIWzCu, Row_uaorkPnJJf]
 }
 
-Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
+Row_dpI5iHhQJU = ListRow.base {
   name: "Comments Row",
   left: 0px,
   top: 0px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Comments"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: chat20
   }
 
   ListRow.Item_e_O {}
 }
 
-Selected_rskLcIWzCu = ListRow.RowVariant_7 {
+Selected_rskLcIWzCu = ListRow.selected {
   name: "Activity Row",
   left: 20px,
   top: 20px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Activity"
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
   ListRow.Item_e_O {}
 }
 
-Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
+Row_uaorkPnJJf = ListRow.base {
   name: "Notes Row",
   left: 20px,
   top: 56px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Notes"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: notes20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
   ListRow.Item_e_O {}
 }
@@ -142,38 +142,38 @@ Menu_Z86v8Yz2p0 = frame {
   children: [Row_XU5C18oI9q, Row_6PGwNMvVCy]
 }
 
-Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
+Row_XU5C18oI9q = ListRow.base {
   name: "Database Row",
   left: 0px,
   top: 0px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Database"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: notes20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
   ListRow.Item_e_O {}
 }
 
-Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
+Row_6PGwNMvVCy = ListRow.base {
   name: "Settings Row",
   left: 20px,
   top: 56px,
 
-  ListRow.GroupedStack.Item_e_R_O_9 {
+  ListRow.content.label {
     contents: "Settings"
   }
 
-  ListRow.GroupedStack.activity20svg_JJO2oRwBLY {
+  ListRow.content.icon {
     contents: settings20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
+  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
   ListRow.Item_e_O {}
 }
