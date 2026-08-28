@@ -14,7 +14,7 @@ import "icons/20 pixels/pen-20.svg" as pen20
 import "icons/20 pixels/pointer-20.svg" as pointer20
 import "icons/24 pixels/music-24.svg" as music24
 import "icons/24 pixels/text-24.svg" as text24
-import "blocks/sideBar.elyx" as sidebar
+import "blocks/sidebar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 

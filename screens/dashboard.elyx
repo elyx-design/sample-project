@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as colors
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
 import "tokens/radius.elyx" as radius
-import "blocks/sideBar.elyx" as sideBar
+import "blocks/sidebar.elyx" as sideBar
 import "components/breadcrumb.elyx" as breadcrumb
 import "components/track.elyx" as mediaTrack
 
