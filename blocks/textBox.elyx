@@ -117,7 +117,7 @@ GroupedStack_b3NQe9yEtF = frame {
   children: [LogoS24_XRD2oCsk6v, Text_DHf9m5IpDV]
 }
 
-LogoS24_XRD2oCsk6v = logo.iconButton_gqojFFCYlK {name: "Logo S (24)", left: 657px, top: 485px}
+LogoS24_XRD2oCsk6v = logo.small {name: "Logo S (24)", left: 657px, top: 485px}
 
 Text_DHf9m5IpDV = text {
   name: "Prompt Placeholder",

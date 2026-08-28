@@ -108,4 +108,4 @@ Primary_3lXmMxE1bk = Button.mediumPrimary {
   }
 }
 
-LogoS24_y3g3YnmxnC = logo.ButtonIconXL48 {name: "Sign In Logo", left: 351px, top: 15px}
+LogoS24_y3g3YnmxnC = logo.extraLarge {name: "Sign In Logo", left: 351px, top: 15px}

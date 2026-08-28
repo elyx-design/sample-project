@@ -260,7 +260,7 @@ GroupedStack_C = frame {
   children: [layer_P, GroupedStack]
 }
 
-layer_P = logo.LogoM24Variant {name: "Logo M (36)", left: 0px, top: 278px}
+layer_P = logo.medium {name: "Logo M (36)", left: 0px, top: 278px}
 
 GroupedStack = frame {
   name: "Compact Navigation",
