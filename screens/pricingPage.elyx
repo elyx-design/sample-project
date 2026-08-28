@@ -37,7 +37,7 @@ Frame = frame {
   children: [layer, planCard_H, planCard_O]
 }
 
-layer = planCard.planCard_LTK7mFiyqR {
+layer = planCard.planCard {
   name: "Free Plan",
   left: 0px,
   top: 0px,
@@ -45,24 +45,24 @@ layer = planCard.planCard_LTK7mFiyqR {
   height: 100%,
   fill[0].visible: .false,
 
-  planCard.layer_Z.button.mediumLabel {
+  planCard.manageButton.button.mediumLabel {
     contents: "Register for free!"
   }
 
-  planCard.layer_Z {
+  planCard.manageButton {
     name: "Register Button"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.GroupedStack_o4NcMhJdgN.PlanPrice_ZJx9H3J {
+  planCard.planContent.planDetails.pricingCopy.priceRow.price {
     contents: "$0"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
-    overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  planCard.planContent.planSummary.planHeader {
+    overrides: [remove(planCard.badge)]
   }
 }
 
-planCard_H = planCard.planCard_LTK7mFiyqR {
+planCard_H = planCard.planCard {
   name: "Pro Plan",
   left: 420px,
   top: 0.9999px,
@@ -71,77 +71,77 @@ planCard_H = planCard.planCard_LTK7mFiyqR {
   corner-radius: [20px, 0px, 0px, 20px],
 
   @use-variant(appTopBar.button.mediumPrimary)
-  planCard.layer_Z {}
+  planCard.manageButton {}
 
-  planCard.layer_Z.button.mediumLabel {
+  planCard.manageButton.button.mediumLabel {
     contents: "Get Started"
   }
 
-  planCard.layer_Z {
+  planCard.manageButton {
     name: "Get Started Button"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3 {
+  planCard.planContent.planDetails.features {
     overrides: [
-      insert(FeatureRow_doWHbnbzF0, after = planCard.FeatureRow_doWHbnbzF0),
+      insert(FeatureRow_doWHbnbzF0, after = planCard.storageFeature),
       insert(FeatureRow_QoAeQFDdmk, after = FeatureRow_doWHbnbzF0)
     ]
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0.Basicexportoptions_NPd1l59Z9w {
+  planCard.planContent.planDetails.features.storageFeature.storageLabel {
     name: "Advanced Export Label",
     contents: "Advanced export options"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0 {
+  planCard.planContent.planDetails.features.storageFeature {
     name: "Advanced Export Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS.FeatureLabel_7Fcm4yTYnx {
+  planCard.planContent.planDetails.features.exportFeature.exportLabel {
     name: "Priority Support Label",
     contents: "Priority email support"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS {
+  planCard.planContent.planDetails.features.exportFeature {
     name: "Priority Support Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX.FeatureLabel_Y5ohvNoMbc {
+  planCard.planContent.planDetails.features.supportFeature.supportLabel {
     name: "User Limit Label",
     contents: "Up to 5 users"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX {
+  planCard.planContent.planDetails.features.supportFeature {
     name: "User Limit Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b.FeatureLabel_532ZQB6 {
+  planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
     name: "Unlimited Projects Label",
     contents: "Unlimited projects"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b {
+  planCard.planContent.planDetails.features.projectsFeature {
     name: "Unlimited Projects Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.Text_2UgTFIXDd4 {
+  planCard.planContent.planDetails.pricingCopy.description {
     name: "Pro Plan Description",
     contents: "Best option!\nFor professionals who need more room to work."
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.PlanName_81UA3to {
+  planCard.planContent.planSummary.planHeader.planName {
     name: "Pro Plan Name",
     contents: "Pro"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT.direct24svg_n2DErcwc3b {
+  planCard.planContent.planSummary.planIcon.planGlyph {
     contents: dashboard,
     left: 6px,
     top: 33px
   }
 }
 
-planCard_O = planCard.planCard_LTK7mFiyqR {
+planCard_O = planCard.planCard {
   name: "Business Plan",
   left: 840px,
   top: 0px,
@@ -149,76 +149,76 @@ planCard_O = planCard.planCard_LTK7mFiyqR {
   height: 100%,
   corner-radius: [0px, 20px, 20px, 0px],
 
-  planCard.layer_Z.button.mediumLabel {
+  planCard.manageButton.button.mediumLabel {
     contents: "Contact sales"
   }
 
-  planCard.layer_Z {
+  planCard.manageButton {
     name: "Contact Sales Button"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3 {
+  planCard.planContent.planDetails.features {
     overrides: [
-      insert(FeatureRow_rLZZCQqFxW, after = planCard.FeatureRow_doWHbnbzF0),
+      insert(FeatureRow_rLZZCQqFxW, after = planCard.storageFeature),
       insert(FeatureRow_k4ZVO09kwe, after = FeatureRow_rLZZCQqFxW)
     ]
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0.Basicexportoptions_NPd1l59Z9w {
+  planCard.planContent.planDetails.features.storageFeature.storageLabel {
     name: "Custom Integrations Label",
     contents: "Custom integrations"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_doWHbnbzF0 {
+  planCard.planContent.planDetails.features.storageFeature {
     name: "Custom Integrations Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS.FeatureLabel_7Fcm4yTYnx {
+  planCard.planContent.planDetails.features.exportFeature.exportLabel {
     name: "Dedicated Support Label",
     contents: "Dedicated support"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_H8LMonj7HS {
+  planCard.planContent.planDetails.features.exportFeature {
     name: "Dedicated Support Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX.FeatureLabel_Y5ohvNoMbc {
+  planCard.planContent.planDetails.features.supportFeature.supportLabel {
     name: "Unlimited Users Label",
     contents: "Unlimited users"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_vhCwOoGdUX {
+  planCard.planContent.planDetails.features.supportFeature {
     name: "Unlimited Users Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b.FeatureLabel_532ZQB6 {
+  planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
     name: "Included Plan Label",
     contents: "Everything in Pro"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.PlanFeatures_1JNxLt3.FeatureRow_o9Ggn3b {
+  planCard.planContent.planDetails.features.projectsFeature {
     name: "Included Plan Feature"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.Text_2UgTFIXDd4 {
+  planCard.planContent.planDetails.pricingCopy.description {
     name: "Business Plan Description",
     contents: "For companies.\nTeams that need scale and control."
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_1qB1LWpCrk.GroupedStack_AcjlTuALWG.GroupedStack_o4NcMhJdgN.PlanPrice_ZJx9H3J {
+  planCard.planContent.planDetails.pricingCopy.priceRow.price {
     contents: "$29"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C {
-    overrides: [remove(planCard.TagTransparent_vakzscXaBV)]
+  planCard.planContent.planSummary.planHeader {
+    overrides: [remove(planCard.badge)]
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.PlanHeader_QvgQJ1C.PlanName_81UA3to {
+  planCard.planContent.planSummary.planHeader.planName {
     name: "Business Plan Name",
     contents: "Business"
   }
 
-  planCard.GroupedStack_8RgNvW1K7p.GroupedStack_v7dOnTlCXG.layer_jRUrdXyqNT.direct24svg_n2DErcwc3b {
+  planCard.planContent.planSummary.planIcon.planGlyph {
     contents: processor,
     left: 6px,
     top: 33px
