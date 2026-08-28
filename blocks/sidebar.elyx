@@ -56,52 +56,52 @@ GroupedStack_Wkqkg47 = frame {
   ]
 }
 
-sidebarItem_xGhzXG3 = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_xGhzXG3 = sidebarItem.base {
   name: "Overview Item",
   left: 0px,
   top: 453px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Overview"
   }
 }
 
-sidebarItem_CGF_zna = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_CGF_zna = sidebarItem.base {
   name: "Projects Item",
   left: 20px,
   top: 473px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Projects"
   }
 }
 
-sidebarItem_aqkFtkF = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_aqkFtkF = sidebarItem.base {
   name: "Members Item",
   left: 40px,
   top: 493px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Members"
   }
 }
 
-sidebarItem_R0PMT7_ = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_R0PMT7_ = sidebarItem.base {
   name: "Billing Item",
   left: 60px,
   top: 513px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Billing"
   }
 }
 
-sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
+sidebarItemVariant_o8wJnAA = sidebarItem.selected {
   name: "Account Item",
   left: 20px,
   top: 473px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Account"
   }
 }
@@ -143,31 +143,31 @@ Menu_kyNuR0df4b = frame {
   ]
 }
 
-sidebarItem_MdZAfxU8r7 = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_MdZAfxU8r7 = sidebarItem.base {
   name: "Application Item",
   left: 34.59px,
   top: 57.76px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Application"
   }
 
-  sidebarItem.calendar24svg_X9IF3sCgsd {
+  sidebarItem.icon {
     contents: home24
   }
 }
 
-sidebarItem_u8reTu0LfB = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_u8reTu0LfB = sidebarItem.base {
   name: "Campaign Item",
   left: 54.59px,
   top: 77.76px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Campaign"
   }
 }
 
-sidebarItem_WqMsLQOZBI = sidebarItem.sidebarItemVariant_Q {
+sidebarItem_WqMsLQOZBI = sidebarItem.selected {
   name: "Messaging Item",
   left: 74.59px,
   top: 97.76px,
@@ -175,53 +175,53 @@ sidebarItem_WqMsLQOZBI = sidebarItem.sidebarItemVariant_Q {
   border[0].color: colors.colors.blackAlpha25,
   border[0].position: .outside,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Messaging"
   }
 
-  sidebarItem.calendar24svg_X9IF3sCgsd {
+  sidebarItem.icon {
     contents: chat
   }
 }
 
-sidebarItem_Ngvb741Oem = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_Ngvb741Oem = sidebarItem.base {
   name: "Reports Item",
   left: 74.59px,
   top: 97.76px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Reports"
   }
 
-  sidebarItem.calendar24svg_X9IF3sCgsd {
+  sidebarItem.icon {
     contents: doc
   }
 }
 
-sidebarItem_FQCI0OhATX = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_FQCI0OhATX = sidebarItem.base {
   name: "Library Item",
   left: 74.59px,
   top: 169.76px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Library"
   }
 
-  sidebarItem.calendar24svg_X9IF3sCgsd {
+  sidebarItem.icon {
     contents: cloud24
   }
 }
 
-sidebarItem_Gv85kN8ZjX = sidebarItem.sidebarItem_GirPBI3vMI {
+sidebarItem_Gv85kN8ZjX = sidebarItem.base {
   name: "Sales Item",
   left: 74.59px,
   top: 205.76px,
 
-  sidebarItem.Overview_OasUNsl {
+  sidebarItem.label {
     contents: "Sales"
   }
 
-  sidebarItem.calendar24svg_X9IF3sCgsd {
+  sidebarItem.icon {
     contents: bag24
   }
 }

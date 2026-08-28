@@ -4,7 +4,7 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "icons/24 pixels/calendar-24.svg" as calendar24
 
-export sidebarItem_GirPBI3vMI = frame {
+export base = frame {
   name: "Sidebar Item",
   left: 16px,
   top: 453px,
@@ -15,10 +15,10 @@ export sidebarItem_GirPBI3vMI = frame {
   corner-radius: Radius.radius.s,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
-  children: [calendar24svg_X9IF3sCgsd, Overview_OasUNsl]
+  children: [icon, label]
 }
 
-calendar24svg_X9IF3sCgsd = icon {
+icon = icon {
   name: "Item Icon",
   left: -1px,
   top: 450px,
@@ -28,7 +28,7 @@ calendar24svg_X9IF3sCgsd = icon {
   contents: calendar24
 }
 
-Overview_OasUNsl = text {
+label = text {
   name: "Label",
   left: 0px,
   top: 0px,
@@ -41,7 +41,7 @@ Overview_OasUNsl = text {
 }
 
 @variant(Selected)
-sidebarItemVariant_Q = sidebarItem_GirPBI3vMI {
+selected = base {
   left: 16px,
   top: 533px,
   border[0].color: Colors.colors.blackAlpha10,
