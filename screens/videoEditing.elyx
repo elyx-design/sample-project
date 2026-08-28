@@ -152,7 +152,7 @@ layer = videoPlayer.VideoPlayer_7IHVyFXn8z {
     contents: pointer20
   }
 
-  @use-variant(slider.SliderVariant)
+  @use-variant(slider.thumb)
   videoPlayer.PlaybackControl_ajqA0M9W3s.playbackControl.GroupedStack_q0ILkfiHMO.Slider_QNPbheVsY9 {
     
   }

@@ -103,7 +103,7 @@ Text_VisIWELcEt = text {
   align: .right
 }
 
-Slider_75Gh9EfwB5 = slider.Slider_23xVCqJ85q {name: "Slider", left: 0px, top: 0px, width: 100%}
+Slider_75Gh9EfwB5 = slider.base {name: "Slider", left: 0px, top: 0px, width: 100%}
 
 GroupedStack_iaZBymztXh = frame {
   name: "Notes",

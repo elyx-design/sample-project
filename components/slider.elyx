@@ -1,7 +1,7 @@
 import "tokens/radius.elyx" as radius
 import "tokens/colors.elyx" as colors
 
-export Slider_23xVCqJ85q = frame {
+export base = frame {
   name: "Slider",
   left: 702px,
   top: 539px,
@@ -13,10 +13,10 @@ export Slider_23xVCqJ85q = frame {
   corner-radius: radius.radius.max,
   padding-left: 1px,
   padding-right: 1px,
-  children: slider_vMtvuimTJT
+  children: track
 }
 
-slider_vMtvuimTJT = shape {
+track = shape {
   name: "Slider Track",
   left: 0px,
   top: 0px,
@@ -28,18 +28,18 @@ slider_vMtvuimTJT = shape {
 }
 
 @variant("Slider thumb")
-SliderVariant = Slider_23xVCqJ85q {
+thumb = base {
   left: 702px,
   top: 591px,
   overflow: .visible,
-  overrides: [insert(Ellipse, after = slider_vMtvuimTJT)],
+  overrides: [insert(thumbHandle, after = track)],
 
-  slider_vMtvuimTJT {
+  track {
     corner-radius: [999px, 0px, 0px, 999px]
   }
 }
 
-Ellipse = shape {
+thumbHandle = shape {
   name: "Slider Thumb",
   left: 56.98px,
   top: -3.0789px,

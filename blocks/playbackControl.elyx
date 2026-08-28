@@ -92,4 +92,4 @@ Icon_5hh58LFCp5 = button.smallIcon {
   }
 }
 
-Slider_QNPbheVsY9 = slider.Slider_23xVCqJ85q {name: "Slider", left: 0px, top: 636px, width: 100%}
+Slider_QNPbheVsY9 = slider.base {name: "Slider", left: 0px, top: 636px, width: 100%}

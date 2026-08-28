@@ -326,7 +326,7 @@ layer_O = productCard.cardBackgroundSolid_MeUe9s7jIe {
     fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 25%)
   }
 
-  productCard.GroupedStack_iigKZjZVS6.layer_OysMAZRDRZ.Slider_75Gh9EfwB5.slider.slider_vMtvuimTJT {
+  productCard.GroupedStack_iigKZjZVS6.layer_OysMAZRDRZ.Slider_75Gh9EfwB5.slider.track {
     fill[0].color: rgb(29.8%, 50.98%, 18.0392%)
   }
 
