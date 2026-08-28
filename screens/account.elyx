@@ -242,7 +242,7 @@ settingActionLabel = text {
   font-style: "Medium"
 }
 
-Frame = frame {
+accountPage = frame {
   name: "Account Page",
   left: -2572px,
   top: -509px,
@@ -252,10 +252,10 @@ Frame = frame {
   fill: rgb(85.27%, 82.96%, 78.3387%),
   padding-top: 24px,
   padding-bottom: 24px,
-  children: Frame_F
+  children: layout
 }
 
-Frame_F = frame {
+layout = frame {
   name: "Account Layout",
   left: 270px,
   top: 0px,
@@ -263,10 +263,10 @@ Frame_F = frame {
   height: .auto,
   layout: {item-gap: 24px},
   overflow: .visible,
-  children: [layer, Frame_H]
+  children: [socialCard, content]
 }
 
-layer = cardSocial.socialCard {
+socialCard = cardSocial.socialCard {
   name: "Social Card",
   left: 0px,
   top: 0px,
@@ -277,7 +277,7 @@ layer = cardSocial.socialCard {
   }
 }
 
-Frame_H = frame {
+content = frame {
   name: "Account Content",
   left: 0px,
   top: 0px,
@@ -285,10 +285,10 @@ Frame_H = frame {
   height: .auto,
   layout: {direction: .column, justify-content: .center, item-gap: 24px},
   overflow: .visible,
-  children: [layer_0, layer_O, layer_U, GroupedStack]
+  children: [profile, product, gallery, activityFeed]
 }
 
-layer_0 = profileCard.profileCard {
+profile = profileCard.profileCard {
   name: "Profile Card",
   left: 0px,
   top: 0px,
@@ -312,7 +312,7 @@ layer_0 = profileCard.profileCard {
   }
 }
 
-layer_O = productCard.productCard {
+product = productCard.productCard {
   name: "Product Card",
   left: 0px,
   top: -317px,
@@ -335,7 +335,7 @@ layer_O = productCard.productCard {
   }
 }
 
-layer_U = productGallery.productGallery {
+gallery = productGallery.productGallery {
   name: "Product Gallery",
   left: 0px,
   top: -444px,
@@ -362,7 +362,7 @@ layer_U = productGallery.productGallery {
   }
 }
 
-GroupedStack = frame {
+activityFeed = frame {
   name: "Activity Feed",
   left: 0px,
   top: 1124px,
@@ -371,10 +371,10 @@ GroupedStack = frame {
   layout: {direction: .column, align-items: .center, item-gap: 12px},
   padding-top: 24px,
   padding-bottom: 24px,
-  children: [layer_9, activityRow_r, activityRow_G, activityRow_L]
+  children: [ratingActivity, finishedActivity, readingActivity, savedActivity]
 }
 
-layer_9 = activityRow2.activityRow {
+ratingActivity = activityRow2.activityRow {
   name: "Rating Activity",
   left: 0px,
   top: 1397px,
@@ -392,7 +392,7 @@ layer_9 = activityRow2.activityRow {
   }
 }
 
-activityRow_r = activityRow2.activityRow {
+finishedActivity = activityRow2.activityRow {
   name: "Finished Activity",
   left: 0px,
   top: 1370px,
@@ -416,7 +416,7 @@ activityRow_r = activityRow2.activityRow {
   }
 }
 
-activityRow_G = activityRow2.activityRow {
+readingActivity = activityRow2.activityRow {
   name: "Reading Activity",
   left: 20px,
   top: 1390px,
@@ -440,7 +440,7 @@ activityRow_G = activityRow2.activityRow {
   }
 }
 
-activityRow_L = activityRow2.activityRow {
+savedActivity = activityRow2.activityRow {
   name: "Saved Activity",
   left: 20px,
   top: 1390px,
