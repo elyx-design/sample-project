@@ -36,7 +36,7 @@ GroupedStack_flp7iRt = frame {
   children: [sidebarHeader_TIJYWa6, GroupedStack_Wkqkg47]
 }
 
-sidebarHeader_TIJYWa6 = sidebarHeader2.sidebarHeader_XE3kaHH {
+sidebarHeader_TIJYWa6 = sidebarHeader2.workspaceHeader {
   name: "Workspace Header",
   left: 0px,
   top: 16px,
@@ -226,7 +226,7 @@ sidebarItem_Gv85kN8ZjX = sidebarItem.sidebarItem_GirPBI3vMI {
   }
 }
 
-sidebarHeader_ENiocaFFtM = sidebarHeader2.sidebarHeader_XE3kaHH {
+sidebarHeader_ENiocaFFtM = sidebarHeader2.workspaceHeader {
   name: "Workspace Header",
   left: 280px,
   top: -16px
