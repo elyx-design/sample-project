@@ -6,17 +6,17 @@ import "icons/24 pixels/processor.svg" as processor
 import "components/header.elyx" as header
 import "images/background/whiteWave.jpg" as whiteWave
 
-PricingPage = frame {
+pricingPage = frame {
   name: "Pricing Page",
   left: 130.5px,
   top: 163px,
   width: 1415px,
   height: 925px,
   fill: {image: {ref: whiteWave}},
-  children: [Frame, layer_o]
+  children: [pricingCards, pricingHeader]
 }
 
-Frame = frame {
+pricingCards = frame {
   name: "Pricing Cards",
   left: 125.5px,
   top: 202px,
@@ -34,10 +34,10 @@ Frame = frame {
   filter: {type: .background-blur, radius: 40px},
   corner-radius: 24px,
   padding: 12px,
-  children: [layer, planCard_H, planCard_O]
+  children: [freePlan, proPlan, businessPlan]
 }
 
-layer = planCard.planCard {
+freePlan = planCard.planCard {
   name: "Free Plan",
   left: 0px,
   top: 0px,
@@ -62,7 +62,7 @@ layer = planCard.planCard {
   }
 }
 
-planCard_H = planCard.planCard {
+proPlan = planCard.planCard {
   name: "Pro Plan",
   left: 420px,
   top: 0.9999px,
@@ -83,8 +83,8 @@ planCard_H = planCard.planCard {
 
   planCard.planContent.planDetails.features {
     overrides: [
-      insert(FeatureRow_doWHbnbzF0, after = planCard.storageFeature),
-      insert(FeatureRow_QoAeQFDdmk, after = FeatureRow_doWHbnbzF0)
+      insert(proStorageFeature, after = planCard.storageFeature),
+      insert(versionHistoryFeature, after = proStorageFeature)
     ]
   }
 
@@ -141,7 +141,7 @@ planCard_H = planCard.planCard {
   }
 }
 
-planCard_O = planCard.planCard {
+businessPlan = planCard.planCard {
   name: "Business Plan",
   left: 840px,
   top: 0px,
@@ -159,8 +159,8 @@ planCard_O = planCard.planCard {
 
   planCard.planContent.planDetails.features {
     overrides: [
-      insert(FeatureRow_rLZZCQqFxW, after = planCard.storageFeature),
-      insert(FeatureRow_k4ZVO09kwe, after = FeatureRow_rLZZCQqFxW)
+      insert(businessStorageFeature, after = planCard.storageFeature),
+      insert(adminControlsFeature, after = businessStorageFeature)
     ]
   }
 
@@ -225,7 +225,7 @@ planCard_O = planCard.planCard {
   }
 }
 
-layer_o = header.mediumCenter {
+pricingHeader = header.mediumCenter {
   name: "Pricing Header",
   left: 472.5px,
   top: 121px,
@@ -240,15 +240,15 @@ layer_o = header.mediumCenter {
   }
 }
 
-FeatureRow_rLZZCQqFxW = frame {
+businessStorageFeature = frame {
   name: "Storage Feature",
   left: 60px,
   top: 135px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_TW68FbkSOU, GBstorage_VYRdKEykZZ]
+  children: [businessStorageBullet, businessStorageLabel]
 }
 
-dot20svg_TW68FbkSOU = icon {
+businessStorageBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -257,7 +257,7 @@ dot20svg_TW68FbkSOU = icon {
   contents: planCard.dot12
 }
 
-GBstorage_VYRdKEykZZ = text {
+businessStorageLabel = text {
   name: "Storage Feature Label",
   fill: colors.colors.black40,
   contents: "1 TB storage",
@@ -266,15 +266,15 @@ GBstorage_VYRdKEykZZ = text {
   font-style: "Regular"
 }
 
-FeatureRow_QoAeQFDdmk = frame {
+versionHistoryFeature = frame {
   name: "Version History Feature",
   left: 80px,
   top: 155px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_SMzyH8A9vz, GBstorage_js9Pcjk9V3]
+  children: [versionHistoryBullet, versionHistoryLabel]
 }
 
-dot20svg_SMzyH8A9vz = icon {
+versionHistoryBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -283,7 +283,7 @@ dot20svg_SMzyH8A9vz = icon {
   contents: planCard.dot12
 }
 
-GBstorage_js9Pcjk9V3 = text {
+versionHistoryLabel = text {
   name: "Version History Label",
   fill: colors.colors.black40,
   contents: "Version history",
@@ -292,15 +292,15 @@ GBstorage_js9Pcjk9V3 = text {
   font-style: "Regular"
 }
 
-FeatureRow_k4ZVO09kwe = frame {
+adminControlsFeature = frame {
   name: "Admin Controls Feature",
   left: 80px,
   top: 155px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_oakpMqVJgc, GBstorage_TMNZDY6ong]
+  children: [adminControlsBullet, adminControlsLabel]
 }
 
-dot20svg_oakpMqVJgc = icon {
+adminControlsBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -309,7 +309,7 @@ dot20svg_oakpMqVJgc = icon {
   contents: planCard.dot12
 }
 
-GBstorage_TMNZDY6ong = text {
+adminControlsLabel = text {
   name: "Admin Controls Label",
   fill: colors.colors.black40,
   contents: "Admin controls and permissions",
@@ -318,15 +318,15 @@ GBstorage_TMNZDY6ong = text {
   font-style: "Regular"
 }
 
-FeatureRow_doWHbnbzF0 = frame {
+proStorageFeature = frame {
   name: "Storage Feature",
   left: 60px,
   top: 135px,
   layout: {align-items: .center, item-gap: 8px},
-  children: [dot20svg_XKe72G7Hvi, Basicexportoptions_NPd1l59Z9w]
+  children: [proStorageBullet, proStorageLabel]
 }
 
-dot20svg_XKe72G7Hvi = icon {
+proStorageBullet = icon {
   name: "Feature Bullet",
   left: 4px,
   top: 4px,
@@ -335,7 +335,7 @@ dot20svg_XKe72G7Hvi = icon {
   contents: planCard.dot12
 }
 
-Basicexportoptions_NPd1l59Z9w = text {
+proStorageLabel = text {
   name: "Storage Feature Label",
   fill: colors.colors.black40,
   contents: "100 GB storage",
