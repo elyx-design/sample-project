@@ -96,7 +96,7 @@ assistantIcon = icon {
   contents: robot24
 }
 
-chatInput = textBox.cardBackgroundSolid_kEwO8GJ2Nk {
+chatInput = textBox.chatInput {
   name: "Chat Input",
   left: 0px,
   top: 1178px,
