@@ -2,33 +2,33 @@ import "components/product.elyx" as product
 import "tokens/colors.elyx" as colors
 import "components/tag.elyx" as tag
 
-export Frame_52yyDIfE8A = frame {
+export productInfo = frame {
   name: "Product Info",
   left: -167px,
   top: 300px,
   layout: {direction: .column, justify-content: .center, item-gap: 20px},
   overflow: .visible,
-  children: [Product_GC0ZTYHiG1, GroupedStack_eaALrce3Cz]
+  children: [productPreview, productDetails]
 }
 
-Product_GC0ZTYHiG1 = product.product {name: "Product", left: 0px, top: 0px, width: 100%}
+productPreview = product.product {name: "Product", left: 0px, top: 0px, width: 100%}
 
-GroupedStack_eaALrce3Cz = frame {
+productDetails = frame {
   name: "Product Details",
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
   overflow: .visible,
-  children: [GroupedStack_cnFQRvC8hV, IconandLabel_lrjc2EBEzo]
+  children: [productCopy, ratingTag]
 }
 
-GroupedStack_cnFQRvC8hV = frame {
+productCopy = frame {
   name: "Product Copy",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
-  children: [ProductName_jJiiEYjEVj, Subtitle_8OnRopnmJX]
+  children: [productName, subtitle]
 }
 
-ProductName_jJiiEYjEVj = text {
+productName = text {
   name: "Product Name",
   left: 0px,
   top: 344px,
@@ -39,7 +39,7 @@ ProductName_jJiiEYjEVj = text {
   font-style: "SemiBold"
 }
 
-Subtitle_8OnRopnmJX = text {
+subtitle = text {
   name: "Subtitle",
   left: 0px,
   top: 364px,
@@ -50,7 +50,7 @@ Subtitle_8OnRopnmJX = text {
   font-style: "Medium"
 }
 
-IconandLabel_lrjc2EBEzo = tag.iconAndLabel {
+ratingTag = tag.iconAndLabel {
   name: "Icon and Label",
   left: 18.2196px,
   top: 229.1186px,

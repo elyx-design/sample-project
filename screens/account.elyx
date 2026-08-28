@@ -341,19 +341,19 @@ gallery = productGallery.productGallery {
   top: -444px,
   width: 100%,
 
-  productGallery.productList.wildlifeBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.wildlifeBook.productInfo.productDetails.ratingTag {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.productList.seaLifeBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.seaLifeBook.productInfo.productDetails.ratingTag {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.productList.candyBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.candyBook.productInfo.productDetails.ratingTag {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.productList.designBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.designBook.productInfo.productDetails.ratingTag {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
