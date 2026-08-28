@@ -26,96 +26,96 @@ productList = frame {
   children: [designBook, candyBook, seaLifeBook, wildlifeBook]
 }
 
-designBook = productInfo.Frame_52yyDIfE8A {
+designBook = productInfo.productInfo {
   name: "Design Book",
   left: -167px,
   top: 300px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+  productInfo.productDetails.productCopy.subtitle {
     contents: "by Alicia Puma"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+  productInfo.productDetails.productCopy.productName {
     contents: "Design",
     width: 155px
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productInfo.productDetails.ratingTag {
     overflow: .visible
   }
 
   @use-variant(product.productFive)
-  productInfo.Product_GC0ZTYHiG1 {}
+  productInfo.productPreview {}
 }
 
-candyBook = productInfo.Frame_52yyDIfE8A {
+candyBook = productInfo.productInfo {
   name: "Candy Book",
   left: -147px,
   top: 320px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.label {
+  productInfo.productDetails.ratingTag.tag.label {
     contents: "4.2"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+  productInfo.productDetails.productCopy.subtitle {
     contents: "by Alice Sherman"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+  productInfo.productDetails.productCopy.productName {
     contents: "The Delicious Book of Candy",
     width: 155px
   }
 
   @use-variant(product.productFour)
-  productInfo.Product_GC0ZTYHiG1 {}
+  productInfo.productPreview {}
 }
 
-seaLifeBook = productInfo.Frame_52yyDIfE8A {
+seaLifeBook = productInfo.productInfo {
   name: "Sea Life Book",
   left: 77px,
   top: 320px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.label {
+  productInfo.productDetails.ratingTag.tag.label {
     contents: "3.9"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+  productInfo.productDetails.productCopy.subtitle {
     contents: "by Eric Mateo"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+  productInfo.productDetails.productCopy.productName {
     contents: "Sea Life",
     width: 155px
   }
 
   @use-variant(product.productThree)
-  productInfo.Product_GC0ZTYHiG1 {}
+  productInfo.productPreview {}
 }
 
-wildlifeBook = productInfo.Frame_52yyDIfE8A {
+wildlifeBook = productInfo.productInfo {
   name: "Wildlife Book",
   left: 301px,
   top: 320px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.label {
+  productInfo.productDetails.ratingTag.tag.label {
     contents: "4.8"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.Subtitle_8OnRopnmJX {
+  productInfo.productDetails.productCopy.subtitle {
     contents: "by Elena Marsh"
   }
 
-  productInfo.GroupedStack_eaALrce3Cz.GroupedStack_cnFQRvC8hV.ProductName_jJiiEYjEVj {
+  productInfo.productDetails.productCopy.productName {
     contents: "Widlife",
     width: 155px
   }
 
   @use-variant(product.productTwo)
-  productInfo.Product_GC0ZTYHiG1 {}
+  productInfo.productPreview {}
 }
 
 title = text {
