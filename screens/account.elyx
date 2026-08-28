@@ -335,29 +335,29 @@ layer_O = productCard.productCard {
   }
 }
 
-layer_U = productGallery.ProductGallery_ZemQVvDdPm {
+layer_U = productGallery.productGallery {
   name: "Product Gallery",
   left: 0px,
   top: -444px,
   width: 100%,
 
-  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_g8PWi0Sk2i.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.wildlifeBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_b3BtwOLAJq.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.seaLifeBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_zOHrymIxFN.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.candyBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_iKbIuHTpmu.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+  productGallery.productList.designBook.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
     fill[0].color: rgb(100%, 100%, 100%, 50%)
   }
 
-  productGallery.Title_zj6bz1wvCw {
+  productGallery.title {
     contents: "Recent activity"
   }
 }

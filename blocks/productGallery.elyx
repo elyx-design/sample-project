@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "components/product.elyx" as product
 import "blocks/productInfo.elyx" as productInfo
 
-export ProductGallery_ZemQVvDdPm = cardBackground.none {
+export productGallery = cardBackground.none {
   name: "Product Gallery",
   left: 177px,
   top: 240px,
@@ -14,27 +14,19 @@ export ProductGallery_ZemQVvDdPm = cardBackground.none {
   padding-bottom: 12px,
   padding-right: 0px,
   layout.item-gap: 20px,
-  overrides: [
-    insert(Title_zj6bz1wvCw, after = .nil),
-    insert(GroupedStack_qc45FWeuhH, after = Title_zj6bz1wvCw)
-  ]
+  overrides: [insert(title, after = .nil), insert(productList, after = title)]
 }
 
-GroupedStack_qc45FWeuhH = frame {
+productList = frame {
   name: "Product List",
   width: 100%,
   height: .auto,
   layout: {justify-content: .space-between, item-gap: 20px},
   overflow: .visible,
-  children: [
-    ProductInfo_iKbIuHTpmu,
-    ProductInfo_zOHrymIxFN,
-    ProductInfo_b3BtwOLAJq,
-    ProductInfo_g8PWi0Sk2i
-  ]
+  children: [designBook, candyBook, seaLifeBook, wildlifeBook]
 }
 
-ProductInfo_iKbIuHTpmu = productInfo.Frame_52yyDIfE8A {
+designBook = productInfo.Frame_52yyDIfE8A {
   name: "Design Book",
   left: -167px,
   top: 300px,
@@ -57,7 +49,7 @@ ProductInfo_iKbIuHTpmu = productInfo.Frame_52yyDIfE8A {
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
-ProductInfo_zOHrymIxFN = productInfo.Frame_52yyDIfE8A {
+candyBook = productInfo.Frame_52yyDIfE8A {
   name: "Candy Book",
   left: -147px,
   top: 320px,
@@ -80,7 +72,7 @@ ProductInfo_zOHrymIxFN = productInfo.Frame_52yyDIfE8A {
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
-ProductInfo_b3BtwOLAJq = productInfo.Frame_52yyDIfE8A {
+seaLifeBook = productInfo.Frame_52yyDIfE8A {
   name: "Sea Life Book",
   left: 77px,
   top: 320px,
@@ -103,7 +95,7 @@ ProductInfo_b3BtwOLAJq = productInfo.Frame_52yyDIfE8A {
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
-ProductInfo_g8PWi0Sk2i = productInfo.Frame_52yyDIfE8A {
+wildlifeBook = productInfo.Frame_52yyDIfE8A {
   name: "Wildlife Book",
   left: 301px,
   top: 320px,
@@ -126,7 +118,7 @@ ProductInfo_g8PWi0Sk2i = productInfo.Frame_52yyDIfE8A {
   productInfo.Product_GC0ZTYHiG1 {}
 }
 
-Title_zj6bz1wvCw = text {
+title = text {
   name: "Gallery Title",
   left: 380px,
   top: 176.5px,
