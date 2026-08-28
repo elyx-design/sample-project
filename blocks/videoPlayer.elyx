@@ -55,18 +55,18 @@ HeaderSLeft_kdOlA7xbFG = header.smallLeft {
   }
 }
 
-Status_mmQ1DabaWR = tag.TagLabelandClose_b20EZ2tde1 {
+Status_mmQ1DabaWR = tag.status {
   name: "Status",
   left: 806px,
   top: 450px,
   fill[0].color: rgb(0%, 100%, 43.07%, 54%),
 
-  tag.Tag_gKZPtXRbSo {
+  tag.label {
     contents: "Live",
     fill[0].color: colors.colors.white100
   }
 
-  tag.star24svg_QJRb7jssmb {
+  tag.statusIcon {
     fill[0].color: .lime
   }
 }

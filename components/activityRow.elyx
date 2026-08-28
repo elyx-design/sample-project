@@ -83,7 +83,7 @@ detail = text {
   font-style: "Regular"
 }
 
-tag = tagComponent.Frame_EkvUQb0wU7 {name: "Tag (Transparent)", left: 47.5px, top: 2.25px}
+tag = tagComponent.base {name: "Tag (Transparent)", left: 47.5px, top: 2.25px}
 
 divider = dividerComponent.horizontal {
   name: "Divider (White)",

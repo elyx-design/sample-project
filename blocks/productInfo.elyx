@@ -50,13 +50,13 @@ Subtitle_8OnRopnmJX = text {
   font-style: "Medium"
 }
 
-IconandLabel_lrjc2EBEzo = tag.TagTransparentVariant {
+IconandLabel_lrjc2EBEzo = tag.iconAndLabel {
   name: "Icon and Label",
   left: 18.2196px,
   top: 229.1186px,
   fill[0].color: rgb(100%, 83.1373%, 28.6275%, 50%),
 
-  tag.Tag_gKZPtXRbSo {
+  tag.label {
     contents: "4.5"
   }
 }

@@ -58,38 +58,38 @@ GroupedStack_v9ldFLzvZ6 = frame {
   children: [TagTransparent_kd02OYI9lI, TagTransparent_1U3VeFBgq3, TagTransparent_jGUzhscTvO]
 }
 
-TagTransparent_kd02OYI9lI = tag.TagTransparentVariant {
+TagTransparent_kd02OYI9lI = tag.iconAndLabel {
   name: "Rating Tag",
   left: 765px,
   top: 726px,
 
-  tag.Tag_gKZPtXRbSo {
+  tag.label {
     contents: "4,2",
     fill[0].color: colors.colors.white100
   }
 
-  tag.star24svg {
+  tag.icon {
     fill[0].color: colors.colors.white100
   }
 }
 
-TagTransparent_1U3VeFBgq3 = tag.Frame_EkvUQb0wU7 {
+TagTransparent_1U3VeFBgq3 = tag.base {
   name: "Thriller Tag",
   left: 785px,
   top: 746px,
 
-  tag.Tag_gKZPtXRbSo {
+  tag.label {
     contents: "Thriller",
     fill[0].color: colors.colors.white100
   }
 }
 
-TagTransparent_jGUzhscTvO = tag.Frame_EkvUQb0wU7 {
+TagTransparent_jGUzhscTvO = tag.base {
   name: "Drama Tag",
   left: 785px,
   top: 827.25px,
 
-  tag.Tag_gKZPtXRbSo {
+  tag.label {
     contents: "Drama",
     fill[0].color: colors.colors.white100
   }

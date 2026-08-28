@@ -63,7 +63,7 @@ ProductInfo_zOHrymIxFN = productInfo.Frame_52yyDIfE8A {
   top: 320px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.Tag_gKZPtXRbSo {
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.label {
     contents: "4.2"
   }
 
@@ -86,7 +86,7 @@ ProductInfo_b3BtwOLAJq = productInfo.Frame_52yyDIfE8A {
   top: 320px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.Tag_gKZPtXRbSo {
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.label {
     contents: "3.9"
   }
 
@@ -109,7 +109,7 @@ ProductInfo_g8PWi0Sk2i = productInfo.Frame_52yyDIfE8A {
   top: 320px,
   width: .auto,
 
-  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.Tag_gKZPtXRbSo {
+  productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo.tag.label {
     contents: "4.8"
   }
 

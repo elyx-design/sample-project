@@ -5,7 +5,7 @@ import "icons/20 pixels/star-20.svg" as star20
 import "icons/20 pixels/close-20.svg" as close20
 import "icons/20 pixels/status-20.svg" as status20
 
-export Frame_EkvUQb0wU7 = frame {
+export base = frame {
   name: "Tag (Transparent)",
   left: 542px,
   top: 548px,
@@ -17,10 +17,10 @@ export Frame_EkvUQb0wU7 = frame {
   corner-radius: radius.radius.max,
   padding-left: 12px,
   padding-right: 12px,
-  children: Tag_gKZPtXRbSo
+  children: label
 }
 
-Tag_gKZPtXRbSo = text {
+label = text {
   name: "Label",
   left: 0px,
   top: 0px,
@@ -31,23 +31,23 @@ Tag_gKZPtXRbSo = text {
 }
 
 @variant("Label and Close")
-TagIconandLabel_ICjERGypJV = Frame_EkvUQb0wU7 {
+labelAndClose = base {
   left: 542px,
   top: 700px,
   padding-right: 6px,
   layout.item-gap: 2px,
-  overrides: [insert(star24svg_r006HhubFR, after = Tag_gKZPtXRbSo)]
+  overrides: [insert(closeIcon, after = label)]
 }
 
 @variant(Status)
-TagLabelandClose_b20EZ2tde1 = Frame_EkvUQb0wU7 {
+status = base {
   left: 545px,
   top: 776px,
   padding-left: 4px,
-  overrides: [insert(star24svg_QJRb7jssmb, after = .nil)]
+  overrides: [insert(statusIcon, after = .nil)]
 }
 
-star24svg_QJRb7jssmb = icon {
+statusIcon = icon {
   name: "Status Icon",
   left: 525px,
   top: 635px,
@@ -56,7 +56,7 @@ star24svg_QJRb7jssmb = icon {
   contents: status20
 }
 
-star24svg_r006HhubFR = icon {
+closeIcon = icon {
   name: "Close Icon",
   left: 525px,
   top: 635px,
@@ -67,15 +67,15 @@ star24svg_r006HhubFR = icon {
 }
 
 @variant("Icon and Label")
-TagTransparentVariant = Frame_EkvUQb0wU7 {
+iconAndLabel = base {
   left: 542px,
   top: 624px,
   padding-left: 8px,
   layout.item-gap: 4px,
-  overrides: [insert(star24svg, after = .nil)]
+  overrides: [insert(icon, after = .nil)]
 }
 
-star24svg = icon {
+icon = icon {
   name: "Tag Icon",
   left: 525px,
   top: 635px,

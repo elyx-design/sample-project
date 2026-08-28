@@ -75,14 +75,14 @@ PlanName_81UA3to = text {
   font-style: "Bold"
 }
 
-TagTransparent_vakzscXaBV = tag.TagTransparentVariant {
+TagTransparent_vakzscXaBV = tag.iconAndLabel {
   name: "Icon and Label",
   left: 67px,
   top: 37px,
   border[0].visible: .false,
   fill[0].color: rgb(90.2878%, 81.12%, 100%),
 
-  tag.Tag_gKZPtXRbSo {
+  tag.label {
     contents: "Best!"
   }
 }

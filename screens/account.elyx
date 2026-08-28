@@ -380,10 +380,10 @@ layer_9 = activityRow2.activityRow {
   top: 1397px,
   width: 100%,
 
-  @use-variant(activityRow2.tagComponent.TagTransparentVariant)
+  @use-variant(activityRow2.tagComponent.iconAndLabel)
   activityRow2.content.tag {}
 
-  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.label {
     contents: "4,9"
   }
 
@@ -399,7 +399,7 @@ activityRow_r = activityRow2.activityRow {
   width: 100%,
   height: 52.5px,
 
-  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.label {
     contents: "Finished"
   }
 
@@ -423,7 +423,7 @@ activityRow_G = activityRow2.activityRow {
   width: 100%,
   height: 52.5px,
 
-  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.label {
     contents: "Reading"
   }
 
@@ -447,7 +447,7 @@ activityRow_L = activityRow2.activityRow {
   width: 100%,
   height: 52.5px,
 
-  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.label {
     contents: "Saved"
   }
 
