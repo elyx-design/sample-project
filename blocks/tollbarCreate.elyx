@@ -10,7 +10,7 @@ import "icons/20 pixels/chat-20.svg" as chat20
 import "icons/20 pixels/image-20.svg" as image20
 import "icons/20 pixels/code-20.svg" as code20
 
-export ToolbarCreate_WBWllCttV6 = cardBackground.transparentFullRadius {
+export toolbarCreate = cardBackground.transparentFullRadius {
   name: "Toolbar Create",
   left: 488px,
   top: 479px,
@@ -26,30 +26,19 @@ export ToolbarCreate_WBWllCttV6 = cardBackground.transparentFullRadius {
   layout.direction: .row,
   layout.item-gap: 8px,
   layout.justify-content: .space-between,
-  overrides: [
-    insert(GroupedStack_n9gWay5BJG, after = .nil),
-    insert(Icon_7TJ0RCVeUL, after = GroupedStack_n9gWay5BJG)
-  ]
+  overrides: [insert(tools, after = .nil), insert(close, after = tools)]
 }
 
-Icon_7TJ0RCVeUL = button.smallClose {name: "Close", left: 686px, top: 602px}
+close = button.smallClose {name: "Close", left: 686px, top: 602px}
 
-GroupedStack_n9gWay5BJG = frame {
+tools = frame {
   name: "Tools",
   height: 100%,
   layout: {align-items: .center, item-gap: 8px},
-  children: [
-    Icon_d3HRLKsqHq,
-    GroupedStack_1doynIV3VR,
-    GroupedStack_LNGQIB5TvI,
-    Icon_67gqL7VTo8,
-    Icon_rIRrS1H7io,
-    Icon_daW7bcJBuT,
-    Icon_DtYpJAIgiY
-  ]
+  children: [frameTool, pointerMenu, shapeMenu, imageTool, textTool, commentTool, codeTool]
 }
 
-Icon_d3HRLKsqHq = button.smallIcon {
+frameTool = button.smallIcon {
   name: "Frame Tool",
   left: 586px,
   top: 502px,
@@ -59,14 +48,14 @@ Icon_d3HRLKsqHq = button.smallIcon {
   }
 }
 
-GroupedStack_1doynIV3VR = frame {
+pointerMenu = frame {
   name: "Pointer Tool Menu",
   height: 100%,
   layout: {align-items: .center},
-  children: [Icon_650qPmwIPa, chevrondown12svg_WAhL2Xn3jT]
+  children: [pointerTool, pointerChevron]
 }
 
-Icon_650qPmwIPa = button.smallIcon {
+pointerTool = button.smallIcon {
   name: "Pointer Tool",
   left: 566px,
   top: 482px,
@@ -76,7 +65,7 @@ Icon_650qPmwIPa = button.smallIcon {
   }
 }
 
-chevrondown12svg_WAhL2Xn3jT = icon {
+pointerChevron = icon {
   name: "Pointer Menu Chevron",
   left: 549px,
   top: 493px,
@@ -85,16 +74,16 @@ chevrondown12svg_WAhL2Xn3jT = icon {
   contents: chevrondown12
 }
 
-GroupedStack_LNGQIB5TvI = frame {
+shapeMenu = frame {
   name: "Shape Tool Menu",
   left: 110.5px,
   top: 20px,
   height: 100%,
   layout: {align-items: .center},
-  children: [Icon_HMJYV6zIOg, chevrondown12svg_3TeWdYmPSh]
+  children: [shapeTool, shapeChevron]
 }
 
-Icon_HMJYV6zIOg = button.smallIcon {
+shapeTool = button.smallIcon {
   name: "Shape Tool",
   left: 566px,
   top: 482px,
@@ -104,7 +93,7 @@ Icon_HMJYV6zIOg = button.smallIcon {
   }
 }
 
-chevrondown12svg_3TeWdYmPSh = icon {
+shapeChevron = icon {
   name: "Shape Menu Chevron",
   left: 549px,
   top: 493px,
@@ -113,7 +102,7 @@ chevrondown12svg_3TeWdYmPSh = icon {
   contents: chevrondown12
 }
 
-Icon_67gqL7VTo8 = button.smallIcon {
+imageTool = button.smallIcon {
   name: "Image Tool",
   left: 646px,
   top: 562px,
@@ -123,7 +112,7 @@ Icon_67gqL7VTo8 = button.smallIcon {
   }
 }
 
-Icon_rIRrS1H7io = button.smallIcon {
+textTool = button.smallIcon {
   name: "Text Tool",
   left: 606px,
   top: 522px,
@@ -133,7 +122,7 @@ Icon_rIRrS1H7io = button.smallIcon {
   }
 }
 
-Icon_daW7bcJBuT = button.smallIcon {
+commentTool = button.smallIcon {
   name: "Comment Tool",
   left: 626px,
   top: 542px,
@@ -143,7 +132,7 @@ Icon_daW7bcJBuT = button.smallIcon {
   }
 }
 
-Icon_DtYpJAIgiY = button.smallIcon {
+codeTool = button.smallIcon {
   name: "Code Tool",
   left: 666px,
   top: 582px,

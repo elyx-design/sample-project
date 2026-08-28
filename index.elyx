@@ -321,7 +321,7 @@ layer_5 = chatWindow.chatWindow {
   }
 }
 
-layer_9 = tollbarCreate.ToolbarCreate_WBWllCttV6 {
+layer_9 = tollbarCreate.toolbarCreate {
   name: "Toolbar Create",
   left: 1411px,
   top: 1923px,
