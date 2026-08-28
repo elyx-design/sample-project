@@ -5,6 +5,7 @@ import "tokens/radius.elyx" as Radius
 import "icons/24 pixels/calendar-24.svg" as calendar24
 import "components/button.elyx" as button
 import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
+import "icons/24 pixels/search-24.svg" as search24
 
 export base = frame {
   name: "Text Field",
@@ -95,7 +96,7 @@ placeholderIcon = icon {
   width: 24px,
   height: 24px,
   fill: Colors.colors.black20,
-  contents: calendar24
+  contents: search24
 }
 
 defaultIcon = icon {

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>chevron-down-12</title>
-    <g id="chevron-down-12" stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
-        <g id="Group" transform="translate(6, -1) rotate(90) translate(-6, 1)translate(-2, -8)" stroke="#000000">
-            <line x1="17" y1="7" x2="14" y2="4" id="Path-3" stroke-width="1.5"></line>
-            <line x1="17" y1="7" x2="14" y2="10" id="Path-4" stroke-width="1.5"></line>
+    <g id="chevron-down-12" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(6, -1) rotate(90) translate(-6, 1)translate(-2, -8)" fill="#000000">
+            <path d="M14.5303301,3.46966991 L17.5303301,6.46966991 C17.8232233,6.76256313 17.8232233,7.23743687 17.5303301,7.53033009 L14.5303301,10.5303301 C14.2374369,10.8232233 13.7625631,10.8232233 13.4696699,10.5303301 C13.1767767,10.2374369 13.1767767,9.76256313 13.4696699,9.46966991 L15.938,6.999 L13.4696699,4.53033009 C13.1767767,4.23743687 13.1767767,3.76256313 13.4696699,3.46966991 C13.7625631,3.1767767 14.2374369,3.1767767 14.5303301,3.46966991 Z" id="Combined-Shape"></path>
         </g>
     </g>
 </svg>

@@ -16,7 +16,7 @@ productPreview = product.product {name: "Product", left: 0px, top: 0px, width: 1
 productDetails = frame {
   name: "Product Details",
   width: 100%,
-  layout: {direction: .column, item-gap: 12px},
+  layout: {direction: .column, item-gap: 16px},
   overflow: .visible,
   children: [productCopy, ratingTag]
 }

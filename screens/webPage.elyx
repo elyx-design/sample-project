@@ -1,4 +1,4 @@
-import "blocks/headerWeb.elyx" as headerWeb
+import "blocks/siteHeader.elyx" as headerWeb
 import "tokens/colors.elyx" as colors
 
 export webPage = frame {
