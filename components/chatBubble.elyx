@@ -39,10 +39,10 @@ message = frame {
   corner-radius: radius.radius.max,
   padding-left: 12px,
   padding-right: 12px,
-  children: text
+  children: messageText
 }
 
-text = text {name: "Chat text", left: 0px, top: 0px, fill: .black, contents: "Chat text"}
+messageText = text {name: "Chat text", left: 0px, top: 0px, fill: .black, contents: "Chat text"}
 
 @variant(User)
 user = base {
@@ -58,7 +58,7 @@ user = base {
     fill[0].color: colors.colors.black20
   }
 
-  message.text {
+  message.messageText {
     fill[0].color: colors.colors.white100
   }
 }

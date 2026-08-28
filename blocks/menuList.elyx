@@ -85,7 +85,7 @@ commentsRow = ListRow.base {
     contents: "Comments"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: chat20
   }
 
@@ -115,7 +115,7 @@ notesRow = ListRow.base {
     contents: "Notes"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: notes20
   }
 
@@ -144,7 +144,7 @@ databaseRow = ListRow.base {
     contents: "Database"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: notes20
   }
 
@@ -162,7 +162,7 @@ settingsRow = ListRow.base {
     contents: "Settings"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: settings20
   }
 

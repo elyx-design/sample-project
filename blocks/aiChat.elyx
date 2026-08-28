@@ -60,7 +60,7 @@ userMessage = chatBubble.user {
   top: 464px,
   layout.justify-content: .end,
 
-  chatBubble.message.text {
+  chatBubble.message.messageText {
     contents: "RAM or processor for video editing?"
   }
 }

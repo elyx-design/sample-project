@@ -72,10 +72,10 @@ iconAndLabel = base {
   top: 624px,
   padding-left: 8px,
   layout.item-gap: 4px,
-  overrides: [insert(icon, after = .nil)]
+  overrides: [insert(tagIcon, after = .nil)]
 }
 
-icon = icon {
+tagIcon = icon {
   name: "Tag Icon",
   left: 525px,
   top: 635px,

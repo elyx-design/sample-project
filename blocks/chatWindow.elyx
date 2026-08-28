@@ -30,7 +30,7 @@ userMessage = chatBubble.user {
   top: 0px,
   layout.justify-content: .end,
 
-  chatBubble.message.text {
+  chatBubble.message.messageText {
     contents: "This heat is brutal"
   }
 }
@@ -49,7 +49,7 @@ firstReply = chatBubble.base {
   top: 74px,
   layout.justify-content: .start,
 
-  chatBubble.message.text {
+  chatBubble.message.messageText {
     contents: "Yeah, it true!",
     fill[0].color: colors.colors.white100
   }
@@ -61,7 +61,7 @@ secondReply = chatBubble.base {
   top: 94px,
   layout.justify-content: .start,
 
-  chatBubble.message.text {
+  chatBubble.message.messageText {
     contents: "Incredible pace out there",
     fill[0].color: colors.colors.white100
   }

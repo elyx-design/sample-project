@@ -250,7 +250,7 @@ base = tag.iconAndLabel {
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  tag.icon {
+  tag.tagIcon {
     contents: arrowDown20,
     fill[0].color: colors.colors.whiteAlpha70
   }

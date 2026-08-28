@@ -65,7 +65,7 @@ ratingTag = tag.iconAndLabel {
     fill[0].color: colors.colors.white100
   }
 
-  tag.icon {
+  tag.tagIcon {
     fill[0].color: colors.colors.white100
   }
 }
