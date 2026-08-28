@@ -252,15 +252,15 @@ layer_3 = cardInfo.cardBackgroundSolid_hxqOj5bsxM {name: "Review Card", left: 58
 
 layer_6 = menuList.MenuList_6OjbR9CAsW {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
 
-layer_1 = aiChat.AiChat_DK44ShHBd2 {
+layer_1 = aiChat.aiChat {
   name: "Ai Chat",
   left: 979px,
   top: 1369px,
   width: 408px,
   height: 562px,
-  overrides: [remove(aiChat.AppTopBar_xpVFAA82Vy)],
+  overrides: [remove(aiChat.topBar)],
 
-  aiChat.GroupedStack_mRtZgIziU3.GroupedStack_v5YeDmjPaA {
+  aiChat.chatBody.messageArea {
     overflow: .visible
   }
 }
