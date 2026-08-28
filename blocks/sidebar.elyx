@@ -168,7 +168,7 @@ Content = frame {
   overflow: .visible,
   padding-left: 0px,
   padding-right: 0px,
-  children: [frame3, Selector_2, frame2]
+  children: [frame3, workspaceSelector, frame2]
 }
 
 frame3 = frame {
@@ -201,16 +201,16 @@ horizontal = divider.horizontal {
   padding-bottom: 0px
 }
 
-Selector_2 = selector.Selector {left: 0px, top: 121px, width: 100%}
+workspaceSelector = selector.Selector {left: 0px, top: 121px, width: 100%}
 
 frame2 = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   overflow: .visible,
-  children: [sideBarMenu_2, sideBarMenu_3, sideBarMenu_4, sideBarMenu_5, sideBarMenu_6]
+  children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem]
 }
 
-sideBarMenu_2 = sideBarMenu {
+campaignsItem = sideBarMenu {
   left: 0px,
   top: 34px,
   width: 100%,
@@ -224,7 +224,7 @@ sideBarMenu_2 = sideBarMenu {
   }
 }
 
-sideBarMenu_3 = selected {
+overviewItem = selected {
   left: 0px,
   top: 54px,
   width: 100%,
@@ -238,7 +238,7 @@ sideBarMenu_3 = selected {
   }
 }
 
-sideBarMenu_4 = sideBarMenu {
+salesItem = sideBarMenu {
   left: 0px,
   top: 74px,
   width: 100%,
@@ -248,7 +248,7 @@ sideBarMenu_4 = sideBarMenu {
   }
 }
 
-sideBarMenu_5 = sideBarMenu {
+tasksItem = sideBarMenu {
   left: 20px,
   top: 94px,
   width: 100%,
@@ -262,7 +262,7 @@ sideBarMenu_5 = sideBarMenu {
   }
 }
 
-sideBarMenu_6 = sideBarMenu {
+settingsItem = sideBarMenu {
   left: 20px,
   top: 134px,
   width: 100%,

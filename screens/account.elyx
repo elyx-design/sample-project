@@ -17,10 +17,10 @@ ProfilePage = frame {
   fill: rgb(96.61%, 94.39%, 92.0653%),
   padding-top: 0px,
   padding-bottom: 0px,
-  children: [layer, Content, layer_3]
+  children: [layer, Content, footer]
 }
 
-layer = siteHeader.SiteHeaderVariant_R {left: 0px, top: 42px, width: 100%}
+layer = siteHeader.accountHeader {left: 0px, top: 42px, width: 100%}
 
 Content = frame {
   left: 247px,
@@ -250,4 +250,4 @@ savedActivity = activityRow2.activityRow {
   }
 }
 
-layer_3 = siteFooter.siteFooter {left: 275px, top: 116px, width: 1080px, height: 246.5px}
+footer = siteFooter.siteFooter {left: 275px, top: 116px, width: 1080px, height: 246.5px}

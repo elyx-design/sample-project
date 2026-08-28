@@ -35,7 +35,7 @@ background = cardBackground.base {
   height: spacing.spacing.heightS,
   corner-radius: radius.radius.max,
   layout.justify-content: .center,
-  overrides: [insert(breadcrumb_2, after = .nil)]
+  overrides: [insert(pageBreadcrumb, after = .nil)]
 }
 
-breadcrumb_2 = breadcrumb.breadcrumb {left: 463px, top: 361px}
+pageBreadcrumb = breadcrumb.breadcrumb {left: 463px, top: 361px}

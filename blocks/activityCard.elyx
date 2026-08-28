@@ -13,7 +13,7 @@ export activityCard = frame {
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   corner-radius: Radius.radius.l,
   padding: Spacing.spacing.xl,
-  children: [layer, activityRow_2, activityRow_a, activityRow_v]
+  children: [layer, firstRow, secondRow, thirdRow]
 }
 
 layer = header.mediumLeft {
@@ -29,8 +29,8 @@ layer = header.mediumLeft {
   }
 }
 
-activityRow_2 = activityRow.activityRow {left: 0px, top: 81px, width: 100%}
+firstRow = activityRow.activityRow {left: 0px, top: 81px, width: 100%}
 
-activityRow_a = activityRow.activityRow {left: 0px, top: 101px, width: 100%}
+secondRow = activityRow.activityRow {left: 0px, top: 101px, width: 100%}
 
-activityRow_v = activityRow.activityRow {left: 0px, top: 151px, width: 100%}
+thirdRow = activityRow.activityRow {left: 0px, top: 151px, width: 100%}

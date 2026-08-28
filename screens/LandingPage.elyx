@@ -30,10 +30,10 @@ top = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 96px},
   overflow: .visible,
-  children: [siteHeader_3, Copy]
+  children: [pageHeader, Copy]
 }
 
-siteHeader_3 = siteHeader.siteHeader {
+pageHeader = siteHeader.siteHeader {
   left: 388.5px,
   top: 145px,
   width: 60%,
@@ -150,12 +150,12 @@ layer2 = frame {
   corner-radius: 16px,
   overflow: .visible,
   padding: 16px,
-  children: [shape2, smallLeft_2]
+  children: [shape2, steadyHeader]
 }
 
 shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: activity}
 
-smallLeft_2 = header.smallLeft {
+steadyHeader = header.smallLeft {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -181,12 +181,12 @@ layer3 = frame {
   corner-radius: 16px,
   overflow: .visible,
   padding: 16px,
-  children: [shape3, smallLeft_3]
+  children: [shape3, teamHeader]
 }
 
 shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug24}
 
-smallLeft_3 = header.smallLeft {
+teamHeader = header.smallLeft {
   left: 0px,
   top: 0px,
   width: 100%,
