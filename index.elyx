@@ -328,4 +328,4 @@ layer_9 = tollbarCreate.ToolbarCreate_WBWllCttV6 {
   width: 379px
 }
 
-layer = cardSocial.SocialCard_QzfezrXgSp {name: "Social Card", left: 228px, top: 820px}
+layer = cardSocial.socialCard {name: "Social Card", left: 228px, top: 820px}

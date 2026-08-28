@@ -266,14 +266,14 @@ Frame_F = frame {
   children: [layer, Frame_H]
 }
 
-layer = cardSocial.SocialCard_QzfezrXgSp {
+layer = cardSocial.socialCard {
   name: "Social Card",
   left: 0px,
   top: 0px,
   fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 50%),
 
-  cardSocial.GroupedStack_1gmgOy2Wt0.GroupedStack_CzQMt15d8V {
-    overrides: [remove(cardSocial.Close_EIAQCGPEGW), remove(cardSocial.Icon_VkGiO7tulw)]
+  cardSocial.cardContent.cardActions {
+    overrides: [remove(cardSocial.closeButton), remove(cardSocial.favoriteButton)]
   }
 }
 
