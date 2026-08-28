@@ -374,92 +374,92 @@ GroupedStack = frame {
   children: [layer_9, activityRow_r, activityRow_G, activityRow_L]
 }
 
-layer_9 = activityRow2.activityRow_ZaTUcpO {
+layer_9 = activityRow2.activityRow {
   name: "Rating Activity",
   left: 0px,
   top: 1397px,
   width: 100%,
 
-  @use-variant(activityRow2.tag.TagTransparentVariant)
-  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322 {}
+  @use-variant(activityRow2.tagComponent.TagTransparentVariant)
+  activityRow2.content.tag {}
 
-  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
     contents: "4,9"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+  activityRow2.content.details.description.verb {
     contents: "Rated"
   }
 }
 
-activityRow_r = activityRow2.activityRow_ZaTUcpO {
+activityRow_r = activityRow2.activityRow {
   name: "Finished Activity",
   left: 0px,
   top: 1370px,
   width: 100%,
   height: 52.5px,
 
-  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
     contents: "Finished"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.Rated_h5p1S8iL1u {
+  activityRow2.content.details.description.detail {
     contents: "Letters to No One"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+  activityRow2.content.details.description.verb {
     contents: "Finished"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+  activityRow2.content.details.date.dateLabel {
     contents: "5 Days"
   }
 }
 
-activityRow_G = activityRow2.activityRow_ZaTUcpO {
+activityRow_G = activityRow2.activityRow {
   name: "Reading Activity",
   left: 20px,
   top: 1390px,
   width: 100%,
   height: 52.5px,
 
-  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
     contents: "Reading"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.Rated_h5p1S8iL1u {
+  activityRow2.content.details.description.detail {
     contents: "The Quiet Life of Things"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+  activityRow2.content.details.description.verb {
     contents: "Started"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+  activityRow2.content.details.date.dateLabel {
     contents: "1 Week"
   }
 }
 
-activityRow_L = activityRow2.activityRow_ZaTUcpO {
+activityRow_L = activityRow2.activityRow {
   name: "Saved Activity",
   left: 20px,
   top: 1390px,
   width: 100%,
   height: 52.5px,
 
-  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+  activityRow2.content.tag.tagComponent.Tag_gKZPtXRbSo {
     contents: "Saved"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.Rated_h5p1S8iL1u {
+  activityRow2.content.details.description.detail {
     contents: "Winter Mornings to Want to read"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+  activityRow2.content.details.description.verb {
     contents: "Added"
   }
 
-  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+  activityRow2.content.details.date.dateLabel {
     contents: "2 Weeks"
   }
 }

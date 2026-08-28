@@ -45,7 +45,7 @@ Primaryrounded_YMDvd7YAnF = button.ButtonS28Variant_5 {
   }
 }
 
-AudioBar_9RsV8DSxFJ = audioBar.AudioBar_c3wtjdhX1X {name: "Audio Bar", left: 863px, top: 837px}
+AudioBar_9RsV8DSxFJ = audioBar.audioBar {name: "Audio Bar", left: 863px, top: 837px}
 
 Tools_Zeh2Ix47Qp = frame {
   name: "Tools",

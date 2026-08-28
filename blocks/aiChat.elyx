@@ -24,7 +24,7 @@ export AiChat_DK44ShHBd2 = cardBackground.cardBackgroundSolidVariant {
   ]
 }
 
-AppTopBar_xpVFAA82Vy = appTopBar.AppTopBar_ePXqYpgrNQ {
+AppTopBar_xpVFAA82Vy = appTopBar.appTopBar {
   name: "App Top Bar",
   left: 598px,
   top: 208px,

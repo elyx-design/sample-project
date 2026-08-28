@@ -30,29 +30,8 @@ layer = header.header_Pp67Y8c {
   }
 }
 
-activityRow_2 = activityRow.activityRow_ZaTUcpO {
-  left: 18px,
-  top: 81px,
+activityRow_2 = activityRow.activityRow {left: 18px, top: 81px}
 
+activityRow_a = activityRow.activityRow {left: 38px, top: 101px}
 
-
-}
-
-activityRow_a = activityRow.activityRow_ZaTUcpO {
-  left: 38px,
-  top: 101px,
-
-
-
-
-
-}
-
-activityRow_v = activityRow.activityRow_ZaTUcpO {
-  left: 38px,
-  top: 151px,
-
-
-
-
-}
+activityRow_v = activityRow.activityRow {left: 38px, top: 151px}
