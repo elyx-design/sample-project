@@ -50,21 +50,21 @@ UserSummaryS_V7QO9s9YIs = userSummary.UserSummaryS_clM0CpDw4i {
   top: 0px
 }
 
-SegmentedControl_FHdeL5SuEV = segmentedControl.SegmentedControlMVariant {
+SegmentedControl_FHdeL5SuEV = segmentedControl.small {
   name: "Segmented Control S",
   left: 0px,
   top: -17px,
   width: 100%,
 
-  segmentedControl.Selected_D.Item_P {
+  segmentedControl.trailingSegment.label {
     contents: "System"
   }
 
-  segmentedControl.Selected.Item_P {
+  segmentedControl.middleSegment.label {
     contents: "Dark"
   }
 
-  segmentedControl.layer_M.Item_P {
+  segmentedControl.smallLeadingSegment.label {
     contents: "Light"
   }
 }

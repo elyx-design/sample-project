@@ -2,7 +2,7 @@ import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
-export segmentedControl_MnqIo7BFFj = frame {
+export medium = frame {
   name: "Segmented Control M",
   left: 623px,
   top: 656px,
@@ -12,16 +12,16 @@ export segmentedControl_MnqIo7BFFj = frame {
   fill: rgb(89.84%, 89.84%, 89.84%),
   corner-radius: Radius.radius.max,
   padding: 4px,
-  children: [layer, Selected, Selected_D]
+  children: [leadingSegment, middleSegment, trailingSegment]
 }
 
-layer = Frame_l {name: "Selected", left: 0px, top: 10px, width: 100%}
+leadingSegment = mediumSelected {name: "Selected", left: 0px, top: 10px, width: 100%}
 
-Selected = FrameVariant_p {name: "Inactive", left: 0px, top: 30px, width: 100%}
+middleSegment = mediumInactive {name: "Inactive", left: 0px, top: 30px, width: 100%}
 
-Selected_D = FrameVariant_p {name: "Inactive", left: 0px, top: 30px, width: 100%}
+trailingSegment = mediumInactive {name: "Inactive", left: 0px, top: 30px, width: 100%}
 
-export Frame_l = frame {
+export mediumSelected = frame {
   name: "Selected M",
   left: 623px,
   top: 736px,
@@ -47,10 +47,10 @@ export Frame_l = frame {
   corner-radius: Radius.radius.max,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
-  children: Item_P
+  children: label
 }
 
-Item_P = text {
+label = text {
   name: "Segment Label",
   left: 0px,
   top: 0px,
@@ -62,35 +62,35 @@ Item_P = text {
 }
 
 @variant("Inactive (M)")
-FrameVariant_p = Frame_l {
+mediumInactive = mediumSelected {
   left: 623px,
   top: 812px,
   border[0].visible: .false,
   shadow[0].drop-shadow.visible: .false,
 
-  Item_P {
+  label {
     fill[0].color: rgb(9.8%, 9.8%, 9.8%, 80%)
   }
 }
 
 @variant("Segmented Control S")
-SegmentedControlMVariant = segmentedControl_MnqIo7BFFj {
+small = medium {
   left: 913px,
   top: 656px,
   width: .auto,
   height: .auto,
   fill[0].color: Colors.colors.black95,
-  overrides: [insert(layer_M, after = .nil), remove(layer)],
+  overrides: [insert(smallLeadingSegment, after = .nil), remove(leadingSegment)],
 
-  @use-variant(SelectedMVariant_S)
-  Selected_D {}
+  @use-variant(smallInactive)
+  trailingSegment {}
 
-  @use-variant(SelectedMVariant_S)
-  Selected {}
+  @use-variant(smallInactive)
+  middleSegment {}
 }
 
 @variant("Inactive (S)")
-SelectedMVariant_S = Frame_l {
+smallInactive = mediumSelected {
   left: 726px,
   top: 812px,
   height: .auto,
@@ -102,7 +102,7 @@ SelectedMVariant_S = Frame_l {
 }
 
 @variant("Selected (S)")
-SelectedMVariant = Frame_l {
+smallSelected = mediumSelected {
   left: 726px,
   top: 736px,
   height: .auto,
@@ -110,4 +110,4 @@ SelectedMVariant = Frame_l {
   padding-bottom: 4px
 }
 
-layer_M = SelectedMVariant {name: "Selected", left: 0px, top: 6.5px, width: 100%}
+smallLeadingSegment = smallSelected {name: "Selected", left: 0px, top: 6.5px, width: 100%}

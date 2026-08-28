@@ -39,16 +39,16 @@ densityLabel = text {
   font-style: "Medium"
 }
 
-densityControl = SegmentedControl.segmentedControl_MnqIo7BFFj {
-  SegmentedControl.Selected_D.Item_P {
+densityControl = SegmentedControl.medium {
+  SegmentedControl.trailingSegment.label {
     contents: "High"
   }
 
-  SegmentedControl.Selected.Item_P {
+  SegmentedControl.middleSegment.label {
     contents: "Default"
   }
 
-  SegmentedControl.layer.Item_P {
+  SegmentedControl.leadingSegment.label {
     contents: "Low"
   }
 }
