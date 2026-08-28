@@ -6,7 +6,7 @@ import "components/userSummary.elyx" as userSummary
 import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
-export cardBackgroundSolid_hxqOj5bsxM = cardBackground.base {
+export reviewCard = cardBackground.base {
   name: "Review Card",
   left: 693px,
   top: 267px,
@@ -15,27 +15,24 @@ export cardBackgroundSolid_hxqOj5bsxM = cardBackground.base {
   fill[0].image.ref: nightMountain,
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
-  overrides: [
-    insert(GroupedStack_v1Q1kr3Cok, after = .nil),
-    insert(GroupedStack_Xx90H5VoHZ, after = GroupedStack_v1Q1kr3Cok)
-  ]
+  overrides: [insert(reviewAuthor, after = .nil), insert(reviewFooter, after = reviewAuthor)]
 }
 
-GroupedStack_Xx90H5VoHZ = frame {
+reviewFooter = frame {
   name: "Review Footer",
   width: 100%,
   layout: {direction: .column, item-gap: 32px},
-  children: [GroupedStack_2Kp3S7oMTn, ButtonM36_zR4KGcaKIy]
+  children: [reviewInfo, readReviewButton]
 }
 
-GroupedStack_2Kp3S7oMTn = frame {
+reviewInfo = frame {
   name: "Info",
   width: 100%,
   layout: {direction: .column, item-gap: 16px},
-  children: [HeaderMLeft_hJkABIkbNb, GroupedStack_v9ldFLzvZ6]
+  children: [reviewHeader, tags]
 }
 
-HeaderMLeft_hJkABIkbNb = header.mediumLeft {
+reviewHeader = header.mediumLeft {
   name: "Review Header",
   left: 768px,
   top: 512px,
@@ -51,14 +48,14 @@ HeaderMLeft_hJkABIkbNb = header.mediumLeft {
   }
 }
 
-GroupedStack_v9ldFLzvZ6 = frame {
+tags = frame {
   name: "Tags",
   width: 100%,
   layout: {item-gap: 8px},
-  children: [TagTransparent_kd02OYI9lI, TagTransparent_1U3VeFBgq3, TagTransparent_jGUzhscTvO]
+  children: [ratingTag, thrillerTag, dramaTag]
 }
 
-TagTransparent_kd02OYI9lI = tag.iconAndLabel {
+ratingTag = tag.iconAndLabel {
   name: "Rating Tag",
   left: 765px,
   top: 726px,
@@ -73,7 +70,7 @@ TagTransparent_kd02OYI9lI = tag.iconAndLabel {
   }
 }
 
-TagTransparent_1U3VeFBgq3 = tag.base {
+thrillerTag = tag.base {
   name: "Thriller Tag",
   left: 785px,
   top: 746px,
@@ -84,7 +81,7 @@ TagTransparent_1U3VeFBgq3 = tag.base {
   }
 }
 
-TagTransparent_jGUzhscTvO = tag.base {
+dramaTag = tag.base {
   name: "Drama Tag",
   left: 785px,
   top: 827.25px,
@@ -95,7 +92,7 @@ TagTransparent_jGUzhscTvO = tag.base {
   }
 }
 
-ButtonM36_zR4KGcaKIy = button.medium {
+readReviewButton = button.medium {
   name: "Read Full Review Button",
   left: 0px,
   top: 165px,
@@ -105,15 +102,15 @@ ButtonM36_zR4KGcaKIy = button.medium {
   }
 }
 
-GroupedStack_v1Q1kr3Cok = frame {
+reviewAuthor = frame {
   name: "Review Author",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 20px},
   overflow: .visible,
-  children: [UserSummaryS_hvtjNfK8hg, Icon_7SEczsI9Lh]
+  children: [authorSummary, closeButton]
 }
 
-UserSummaryS_hvtjNfK8hg = userSummary.UserSummaryS_clM0CpDw4i {
+authorSummary = userSummary.UserSummaryS_clM0CpDw4i {
   name: "User Summary S",
   left: 786px,
   top: 143px,
@@ -133,4 +130,4 @@ UserSummaryS_hvtjNfK8hg = userSummary.UserSummaryS_clM0CpDw4i {
   }
 }
 
-Icon_7SEczsI9Lh = button.smallClose {name: "Close Button", left: 1097px, top: 291px}
+closeButton = button.smallClose {name: "Close Button", left: 1097px, top: 291px}

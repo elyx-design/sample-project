@@ -248,7 +248,7 @@ Frame = frame {
   children: [layer_3, layer_6, layer_1, layer_w, Frame_y, layer_9, layer]
 }
 
-layer_3 = cardInfo.cardBackgroundSolid_hxqOj5bsxM {name: "Review Card", left: 585px, top: 823px}
+layer_3 = cardInfo.reviewCard {name: "Review Card", left: 585px, top: 823px}
 
 layer_6 = menuList.MenuList_6OjbR9CAsW {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
 
