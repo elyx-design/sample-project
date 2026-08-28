@@ -231,7 +231,7 @@ Component = button.mediumPrimary {
   top: 757px
 }
 
-Block = profileCard.profileCard_vlvneaI {
+Block = profileCard.profileCard {
   name: "Block",
   doc: "A profile section as a block, containing multiple components.",
   left: 223px,

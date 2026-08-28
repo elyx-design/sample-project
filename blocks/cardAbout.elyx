@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
 import "components/stats.elyx" as stats
 
-export profileCard_vlvneaI = cardBackground.transparent {
+export profileCard = cardBackground.transparent {
   name: "Profile Card",
   left: 0px,
   top: 0px,
@@ -14,13 +14,10 @@ export profileCard_vlvneaI = cardBackground.transparent {
   padding-right: 0px,
   fill[0].color: rgb(100%, 83.09%, 28.6%, 50%),
   layout.item-gap: 0,
-  overrides: [
-    insert(layer_QyZ45sYn9t, after = .nil),
-    insert(Stats_IM8Fu5LkU6, after = layer_QyZ45sYn9t)
-  ]
+  overrides: [insert(content, after = .nil), insert(profileStats, after = content)]
 }
 
-layer_QyZ45sYn9t = frame {
+content = frame {
   name: "Profile Content",
   left: 0px,
   top: 0px,
@@ -30,19 +27,19 @@ layer_QyZ45sYn9t = frame {
   fill: colors.colors.white100,
   corner-radius: [0px, 0px, 24px, 24px],
   padding: 24px,
-  children: [ProfileCardHeader_eBqPR0vCMr, Text_pliu07xLCQ]
+  children: [profileHeader, bio]
 }
 
-ProfileCardHeader_eBqPR0vCMr = frame {
+profileHeader = frame {
   name: "Profile Card Header",
   left: 0px,
   top: 0px,
   width: 100%,
   layout: {justify-content: .space-between, align-items: .center},
-  children: HeaderMLeft_mkvAlK9gg7
+  children: profileTitle
 }
 
-HeaderMLeft_mkvAlK9gg7 = header.mediumLeft {
+profileTitle = header.mediumLeft {
   name: "Header M (Left)",
   left: 56px,
   top: 2px,
@@ -53,7 +50,7 @@ HeaderMLeft_mkvAlK9gg7 = header.mediumLeft {
   }
 }
 
-Text_pliu07xLCQ = text {
+bio = text {
   name: "Profile Bio",
   left: 0px,
   top: 0px,
@@ -63,7 +60,7 @@ Text_pliu07xLCQ = text {
   line-height: 1.5
 }
 
-Stats_IM8Fu5LkU6 = stats.stats {
+profileStats = stats.stats {
   name: "Stats",
   left: 0px,
   top: 157px,
