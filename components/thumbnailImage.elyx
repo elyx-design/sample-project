@@ -3,7 +3,6 @@ import "images/thumbnails/thumb01.jpg" as thumb01
 import "icons/20 pixels/heart-20.svg" as heart20
 
 export thumbnailImage = frame {
-  name: "Thumbnail Image",
   left: 555px,
   top: 395px,
   width: 160px,
@@ -24,7 +23,6 @@ export thumbnailImage = frame {
 }
 
 actions = frame {
-  name: "Thumbnail Actions",
   left: 0px,
   top: 12px,
   width: 100%,
@@ -33,7 +31,6 @@ actions = frame {
 }
 
 favoriteIcon = icon {
-  name: "Favorite Icon",
   left: 0px,
   top: 0px,
   width: 20px,
@@ -43,7 +40,6 @@ favoriteIcon = icon {
 }
 
 imageName = text {
-  name: "Image Name",
   left: 0px,
   top: 197px,
   width: 100%,

@@ -14,7 +14,6 @@ import "icons/20 pixels/notes-20.svg" as notes20
 import "icons/20 pixels/chat-20.svg" as chat20
 
 export menuList = cardBackground.base {
-  name: "Menu List",
   left: 33.25px,
   top: -48px,
   width: 287.5px,
@@ -30,7 +29,6 @@ export menuList = cardBackground.base {
 }
 
 menuHeader = frame {
-  name: "Menu Header",
   left: 0px,
   top: 108.5px,
   width: 100%,
@@ -41,10 +39,9 @@ menuHeader = frame {
   children: [user, themeControl, menuSections]
 }
 
-user = userSummary.UserSummaryS_clM0CpDw4i {name: "User Summary S", left: 0px, top: 0px}
+user = userSummary.small {left: 0px, top: 0px}
 
 themeControl = segmentedControl.small {
-  name: "Segmented Control S",
   left: 0px,
   top: -17px,
   width: 100%,
@@ -63,21 +60,18 @@ themeControl = segmentedControl.small {
 }
 
 menuSections = frame {
-  name: "Menu Sections",
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   children: [collaborationMenu, menuDivider, workspaceMenu]
 }
 
 collaborationMenu = frame {
-  name: "Collaboration Menu",
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   children: [commentsRow, activityRow, notesRow]
 }
 
 commentsRow = ListRow.base {
-  name: "Comments Row",
   left: 0px,
   top: 0px,
 
@@ -85,29 +79,21 @@ commentsRow = ListRow.base {
     contents: "Comments"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: chat20
   }
-
-  ListRow.Item_e_O {}
 }
 
 activityRow = ListRow.selected {
-  name: "Activity Row",
   left: 20px,
   top: 20px,
 
   ListRow.content.label {
     contents: "Activity"
   }
-
-  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
-
-  ListRow.Item_e_O {}
 }
 
 notesRow = ListRow.base {
-  name: "Notes Row",
   left: 20px,
   top: 56px,
 
@@ -115,19 +101,14 @@ notesRow = ListRow.base {
     contents: "Notes"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: notes20
   }
-
-  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
-
-  ListRow.Item_e_O {}
 }
 
-menuDivider = divider.horizontal {name: "Menu Divider", left: 0px, top: 0px, width: 100%}
+menuDivider = divider.horizontal {left: 0px, top: 0px, width: 100%}
 
 workspaceMenu = frame {
-  name: "Workspace Menu",
   left: 36px,
   top: 243px,
   width: 100%,
@@ -136,7 +117,6 @@ workspaceMenu = frame {
 }
 
 databaseRow = ListRow.base {
-  name: "Database Row",
   left: 0px,
   top: 0px,
 
@@ -144,17 +124,12 @@ databaseRow = ListRow.base {
     contents: "Database"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: notes20
   }
-
-  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
-
-  ListRow.Item_e_O {}
 }
 
 settingsRow = ListRow.base {
-  name: "Settings Row",
   left: 20px,
   top: 56px,
 
@@ -162,27 +137,21 @@ settingsRow = ListRow.base {
     contents: "Settings"
   }
 
-  ListRow.content.icon {
+  ListRow.content.rowIcon {
     contents: settings20
   }
-
-  ListRow.content.layer_H_9_E_y_R.iconButton.defaultsvg {}
-
-  ListRow.Item_e_O {}
 }
 
 footerActions = frame {
-  name: "Footer Actions",
   width: 100%,
   layout: {justify-content: .space-between},
   padding: 16px,
   children: [dangerButton, secondaryActions]
 }
 
-dangerButton = button.mediumDanger {name: "Danger Button", left: 213px, top: 242px}
+dangerButton = button.mediumDanger {left: 213px, top: 242px}
 
 secondaryActions = frame {
-  name: "Secondary Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -190,7 +159,6 @@ secondaryActions = frame {
 }
 
 shareButton = button.mediumIcon {
-  name: "Share Button",
   left: 233px,
   top: 262px,
 
@@ -200,7 +168,6 @@ shareButton = button.mediumIcon {
 }
 
 moreButton = button.mediumIcon {
-  name: "More Button",
   left: 253px,
   top: 282px,
 

@@ -3,7 +3,6 @@ import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 
 export base = frame {
-  name: "Card Background",
   left: 80px,
   top: 467px,
   width: 100%,
@@ -25,7 +24,7 @@ export base = frame {
   padding: 24px
 }
 
-@variant("cardBackground (Transparent)")
+@variant
 transparent = base {
   left: 80px,
   top: 575px,
@@ -34,10 +33,10 @@ transparent = base {
   filter[0].type: .background-blur
 }
 
-@variant("cardBackground (None)")
+@variant
 none = base {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
 
-@variant("Transparent (full radius)")
+@variant
 transparentFullRadius = base {
   left: 275px,
   top: 575px,
@@ -47,5 +46,5 @@ transparentFullRadius = base {
   filter[0].type: .background-blur
 }
 
-@variant("Solid (full radius)")
+@variant
 solidFullRadius = base {left: 275.05px, top: 467px, corner-radius: Radius.radius.max}

@@ -3,7 +3,6 @@ import "tokens/spacing.elyx" as spacing
 import "tokens/radius.elyx" as radius
 
 export audioBar = frame {
-  name: "Audio Bar",
   left: 755px,
   top: 591px,
   width: .auto,
@@ -16,17 +15,9 @@ export audioBar = frame {
   children: [timecode, track]
 }
 
-timecode = text {
-  name: "Timecode",
-  left: 0px,
-  top: 0px,
-  fill: .black,
-  contents: "0:00",
-  font-size: 12
-}
+timecode = text {left: 0px, top: 0px, fill: .black, contents: "0:00", font-size: 12}
 
 track = frame {
-  name: "Track Label",
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
   children: [
@@ -70,7 +61,6 @@ track = frame {
 }
 
 bar01 = shape {
-  name: "Waveform Bar",
   left: 46px,
   top: 24.5px,
   width: 1px,
@@ -81,7 +71,6 @@ bar01 = shape {
 }
 
 bar02 = shape {
-  name: "Waveform Bar",
   left: 66px,
   top: 43.5px,
   width: 1px,
@@ -92,7 +81,6 @@ bar02 = shape {
 }
 
 bar03 = shape {
-  name: "Waveform Bar",
   left: 86px,
   top: 117px,
   width: 1px,
@@ -103,7 +91,6 @@ bar03 = shape {
 }
 
 bar04 = shape {
-  name: "Waveform Bar",
   left: 90px,
   top: 63px,
   width: 1px,
@@ -114,7 +101,6 @@ bar04 = shape {
 }
 
 bar05 = shape {
-  name: "Waveform Bar",
   left: 94px,
   top: 62px,
   width: 1px,
@@ -125,7 +111,6 @@ bar05 = shape {
 }
 
 bar06 = shape {
-  name: "Waveform Bar",
   left: 98px,
   top: 57px,
   width: 1px,
@@ -136,7 +121,6 @@ bar06 = shape {
 }
 
 bar07 = shape {
-  name: "Waveform Bar",
   left: 102px,
   top: 56px,
   width: 1px,
@@ -147,7 +131,6 @@ bar07 = shape {
 }
 
 bar08 = shape {
-  name: "Waveform Bar",
   left: 106px,
   top: 54px,
   width: 1px,
@@ -158,7 +141,6 @@ bar08 = shape {
 }
 
 bar09 = shape {
-  name: "Waveform Bar",
   left: 110px,
   top: 51px,
   width: 1px,
@@ -169,7 +151,6 @@ bar09 = shape {
 }
 
 bar10 = shape {
-  name: "Waveform Bar",
   left: 114px,
   top: 47px,
   width: 1px,
@@ -180,7 +161,6 @@ bar10 = shape {
 }
 
 bar11 = shape {
-  name: "Waveform Bar",
   left: 118px,
   top: 48px,
   width: 1px,
@@ -191,7 +171,6 @@ bar11 = shape {
 }
 
 bar12 = shape {
-  name: "Waveform Bar",
   left: 122px,
   top: 52px,
   width: 1px,
@@ -202,7 +181,6 @@ bar12 = shape {
 }
 
 bar13 = shape {
-  name: "Waveform Bar",
   left: 126px,
   top: 55px,
   width: 1px,
@@ -213,7 +191,6 @@ bar13 = shape {
 }
 
 bar14 = shape {
-  name: "Waveform Bar",
   left: 130px,
   top: 56px,
   width: 1px,
@@ -224,7 +201,6 @@ bar14 = shape {
 }
 
 bar15 = shape {
-  name: "Waveform Bar",
   left: 150px,
   top: 82px,
   width: 1px,
@@ -235,7 +211,6 @@ bar15 = shape {
 }
 
 bar16 = shape {
-  name: "Waveform Bar",
   left: 170px,
   top: 102px,
   width: 1px,
@@ -246,7 +221,6 @@ bar16 = shape {
 }
 
 bar17 = shape {
-  name: "Waveform Bar",
   left: 173px,
   top: 102px,
   width: 1px,
@@ -257,7 +231,6 @@ bar17 = shape {
 }
 
 bar18 = shape {
-  name: "Waveform Bar",
   left: 176px,
   top: 95px,
   width: 1px,
@@ -268,7 +241,6 @@ bar18 = shape {
 }
 
 bar19 = shape {
-  name: "Waveform Bar",
   left: 179px,
   top: 68.5px,
   width: 1px,
@@ -279,7 +251,6 @@ bar19 = shape {
 }
 
 bar20 = shape {
-  name: "Waveform Bar",
   left: 182px,
   top: 86px,
   width: 1px,
@@ -290,7 +261,6 @@ bar20 = shape {
 }
 
 bar21 = shape {
-  name: "Waveform Bar",
   left: 185px,
   top: 86.5px,
   width: 1px,
@@ -301,7 +271,6 @@ bar21 = shape {
 }
 
 bar22 = shape {
-  name: "Waveform Bar",
   left: 205px,
   top: 101.5px,
   width: 1px,
@@ -312,7 +281,6 @@ bar22 = shape {
 }
 
 bar23 = shape {
-  name: "Waveform Bar",
   left: 208px,
   top: 109.5px,
   width: 1px,
@@ -323,7 +291,6 @@ bar23 = shape {
 }
 
 bar24 = shape {
-  name: "Waveform Bar",
   left: 211px,
   top: 102.5px,
   width: 1px,
@@ -334,7 +301,6 @@ bar24 = shape {
 }
 
 bar25 = shape {
-  name: "Waveform Bar",
   left: 214px,
   top: 78px,
   width: 1px,
@@ -345,7 +311,6 @@ bar25 = shape {
 }
 
 bar26 = shape {
-  name: "Waveform Bar",
   left: 217px,
   top: 101.5px,
   width: 1px,
@@ -356,7 +321,6 @@ bar26 = shape {
 }
 
 bar27 = shape {
-  name: "Waveform Bar",
   left: 220px,
   top: 89.5px,
   width: 1px,
@@ -367,7 +331,6 @@ bar27 = shape {
 }
 
 bar28 = shape {
-  name: "Waveform Bar",
   left: 223px,
   top: 72.5px,
   width: 1px,
@@ -378,7 +341,6 @@ bar28 = shape {
 }
 
 bar29 = shape {
-  name: "Waveform Bar",
   left: 226px,
   top: 90px,
   width: 1px,
@@ -389,7 +351,6 @@ bar29 = shape {
 }
 
 bar30 = shape {
-  name: "Waveform Bar",
   left: 229px,
   top: 110px,
   width: 1px,
@@ -400,7 +361,6 @@ bar30 = shape {
 }
 
 bar31 = shape {
-  name: "Waveform Bar",
   left: 232px,
   top: 110px,
   width: 1px,
@@ -411,7 +371,6 @@ bar31 = shape {
 }
 
 bar32 = shape {
-  name: "Waveform Bar",
   left: 235px,
   top: 110px,
   width: 1px,
@@ -422,7 +381,6 @@ bar32 = shape {
 }
 
 bar33 = shape {
-  name: "Waveform Bar",
   left: 255px,
   top: 130px,
   width: 1px,
@@ -433,7 +391,6 @@ bar33 = shape {
 }
 
 bar34 = shape {
-  name: "Waveform Bar",
   left: 258px,
   top: 130px,
   width: 1px,
@@ -444,7 +401,6 @@ bar34 = shape {
 }
 
 bar35 = shape {
-  name: "Waveform Bar",
   left: 261px,
   top: 130px,
   width: 1px,
@@ -455,7 +411,6 @@ bar35 = shape {
 }
 
 bar36 = shape {
-  name: "Waveform Bar",
   left: 264px,
   top: 130px,
   width: 1px,

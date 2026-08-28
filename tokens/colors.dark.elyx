@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 @context(theme="dark")
 __file__
 
-export colors_C = colors.colors {
+export darkColors = colors.colors {
   white100: rgb(8.61%, 8.61%, 8.61%),
   blackAlpha25: rgb(100%, 100%, 100%, 25%),
   black20: .white,

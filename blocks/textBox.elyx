@@ -9,7 +9,6 @@ import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "components/logo.elyx" as logo
 
 export chatInput = cardBackground.base {
-  name: "Chat Input",
   left: 511px,
   top: 471px,
   width: 462px,
@@ -24,7 +23,6 @@ export chatInput = cardBackground.base {
 }
 
 actions = frame {
-  name: "Input Actions",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 8px},
   overflow: .visible,
@@ -32,7 +30,6 @@ actions = frame {
 }
 
 attachmentActions = frame {
-  name: "Attachment Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -40,7 +37,6 @@ attachmentActions = frame {
 }
 
 add = button.smallIconBackground {
-  name: "Add Button",
   left: 654px,
   top: 728px,
 
@@ -50,7 +46,6 @@ add = button.smallIconBackground {
 }
 
 modelSelector = button.small {
-  name: "Model Selector",
   left: 694px,
   top: 768px,
 
@@ -60,7 +55,6 @@ modelSelector = button.small {
 }
 
 search = button.smallIconBackground {
-  name: "Search Button",
   left: 674px,
   top: 748px,
 
@@ -70,7 +64,6 @@ search = button.smallIconBackground {
 }
 
 more = button.smallIconBackground {
-  name: "More Button",
   left: 694px,
   top: 768px,
 
@@ -80,7 +73,6 @@ more = button.smallIconBackground {
 }
 
 messageActions = frame {
-  name: "Message Actions",
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
@@ -88,7 +80,6 @@ messageActions = frame {
 }
 
 voice = button.smallIconBackground {
-  name: "Voice Button",
   left: 714px,
   top: 788px,
 
@@ -98,7 +89,6 @@ voice = button.smallIconBackground {
 }
 
 send = button.smallPrimaryRounded {
-  name: "Send Button",
   left: 734px,
   top: 808px,
 
@@ -108,16 +98,14 @@ send = button.smallPrimaryRounded {
 }
 
 prompt = frame {
-  name: "Prompt Header",
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
   children: [promptLogo, placeholder]
 }
 
-promptLogo = logo.small {name: "Logo S (24)", left: 657px, top: 485px}
+promptLogo = logo.small {left: 657px, top: 485px}
 
 placeholder = text {
-  name: "Prompt Placeholder",
   left: 633px,
   top: 581px,
   fill: colors.colors.black80,

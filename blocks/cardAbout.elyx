@@ -4,7 +4,6 @@ import "components/header.elyx" as header
 import "components/stats.elyx" as stats
 
 export profileCard = cardBackground.transparent {
-  name: "Profile Card",
   left: 0px,
   top: 0px,
   width: 519px,
@@ -18,7 +17,6 @@ export profileCard = cardBackground.transparent {
 }
 
 content = frame {
-  name: "Profile Content",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -31,7 +29,6 @@ content = frame {
 }
 
 profileHeader = frame {
-  name: "Profile Card Header",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -40,7 +37,6 @@ profileHeader = frame {
 }
 
 profileTitle = header.mediumLeft {
-  name: "Header M (Left)",
   left: 56px,
   top: 2px,
   overrides: [remove(header.mediumSubtitle)],
@@ -51,7 +47,6 @@ profileTitle = header.mediumLeft {
 }
 
 bio = text {
-  name: "Profile Bio",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -61,7 +56,6 @@ bio = text {
 }
 
 profileStats = stats.stats {
-  name: "Stats",
   left: 0px,
   top: 157px,
   width: 100%,

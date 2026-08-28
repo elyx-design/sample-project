@@ -5,34 +5,26 @@ import "components/textField.elyx" as textField
 import "components/button.elyx" as button
 import "icons/24 pixels/mail-24.svg" as mail24
 
-export SiteFooter_khqGlqIYNR = frame {
-  name: "Site Footer",
+export siteFooter = frame {
   left: 452px,
   top: 450px,
   width: 1070.3755px,
   layout: {direction: .column, justify-content: .center, item-gap: 32px},
   overflow: .visible,
-  children: [DividerWhite_tmHsHpjv2V, GroupedStack_eP0nGPBE5f, bottom]
+  children: [topDivider, content, bottom]
 }
 
-DividerWhite_tmHsHpjv2V = divider.horizontal {
-  name: "Divider (White)",
-  left: 20px,
-  top: 492px,
-  width: 100%
-}
+topDivider = divider.horizontal {left: 20px, top: 492px, width: 100%}
 
-GroupedStack_eP0nGPBE5f = frame {
-  name: "Content",
+content = frame {
   width: 100%,
   height: .auto,
   layout: {justify-content: .space-between, item-gap: 63.62px},
   overflow: .visible,
-  children: [Brandcolumn_ndFJ2D97Or, Columns_6iKPIYLa0U]
+  children: [brandColumn, linkColumns]
 }
 
-Brandcolumn_ndFJ2D97Or = frame {
-  name: "Brand column",
+brandColumn = frame {
   left: 0px,
   top: 0px,
   width: 291px,
@@ -43,25 +35,22 @@ Brandcolumn_ndFJ2D97Or = frame {
 }
 
 About = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
   overflow: .visible,
-  children: [Logo_k9DmidgYua, Thoughtfullymadep_P97BnEKLF0]
+  children: [logoLockup, blurb]
 }
 
-Logo_k9DmidgYua = frame {
-  name: "Logo",
+logoLockup = frame {
   left: 0px,
   top: 0px,
   layout: {justify-content: .center, align-items: .center, item-gap: 8px},
-  children: [LogoS24_HDnSljQbIn, Text_zxpIvPo8ub]
+  children: [logoMark, logoWordmark]
 }
 
-LogoS24_HDnSljQbIn = logo.small {name: "Logo S (24)", left: 0px, top: 0px}
+logoMark = logo.small {left: 0px, top: 0px}
 
-Text_zxpIvPo8ub = text {
-  name: "Text",
+logoWordmark = text {
   left: 53px,
   top: 10px,
   width: .auto,
@@ -72,8 +61,7 @@ Text_zxpIvPo8ub = text {
   font-style: "Bold"
 }
 
-Thoughtfullymadep_P97BnEKLF0 = text {
-  name: "Thoughtfully made, p",
+blurb = text {
   left: 0px,
   top: 61px,
   width: 100%,
@@ -83,16 +71,9 @@ Thoughtfullymadep_P97BnEKLF0 = text {
   line-height: 1.5
 }
 
-frame1 = frame {
-  name: "Grouped Stack",
-  width: 100%,
-  layout: {item-gap: 8px},
-  overflow: .visible,
-  children: [base, medium]
-}
+frame1 = frame {width: 100%, layout: {item-gap: 8px}, overflow: .visible, children: [base, medium]}
 
 base = textField.iconPlaceholder {
-  name: "Placeholder (Icon)",
   left: 40px,
   top: 94.5px,
 
@@ -105,28 +86,25 @@ base = textField.iconPlaceholder {
   }
 }
 
-medium = button.medium {name: "Button M (36)", left: 396.5px, top: 0px}
+medium = button.medium {left: 396.5px, top: 0px}
 
-Columns_6iKPIYLa0U = frame {
-  name: "Columns",
+linkColumns = frame {
   left: 354.62px,
   top: 0px,
   width: 492.3755px,
   layout: {justify-content: .end, item-gap: 54.6877px},
-  children: [Column_i5WEXaGLr3, Column_HrLQO1THKj, Column_AZdMCR9Ozb]
+  children: [productColumn, companyColumn, contactColumn]
 }
 
-Column_i5WEXaGLr3 = frame {
-  name: "Column",
+productColumn = frame {
   left: 0px,
   top: 0px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
-  children: [PRODUCT_k76fkFBjVQ, GroupedStack_AIL1M6Ue7x]
+  children: [productHeading, productLinks]
 }
 
-PRODUCT_k76fkFBjVQ = text {
-  name: "PRODUCT",
+productHeading = text {
   left: 0px,
   top: 61px,
   width: 100%,
@@ -138,53 +116,33 @@ PRODUCT_k76fkFBjVQ = text {
   letter-spacing: 10%
 }
 
-GroupedStack_AIL1M6Ue7x = frame {
-  name: "Grouped Stack",
+productLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
-  children: [
-    Link_WzaWcMok5c,
-    Link_DjNtgyTb1T,
-    Link_yqosRhG2w8,
-    Link_NNYdfeznod,
-    Link_aj3tOfqK2p,
-    Link_ojunml75aD
-  ]
+  children: [howItWorksLink, pricingFooterLink, faqLink, resourcesLink, featuresLink, roadmapLink]
 }
 
-Link_WzaWcMok5c = Link_kJ8DLsgk2E {
-  name: "Link",
-  left: 788.7266px,
-  top: 522px,
-  contents: "How it works"
-}
+howItWorksLink = link {left: 788.7266px, top: 522px, contents: "How it works"}
 
-Link_DjNtgyTb1T = Link_kJ8DLsgk2E {name: "Link", left: 808.7266px, top: 542px, contents: "Pricing"}
+pricingFooterLink = link {left: 808.7266px, top: 542px, contents: "Pricing"}
 
-Link_yqosRhG2w8 = Link_kJ8DLsgk2E {name: "Link", left: 828.7266px, top: 562px, contents: "FAQ"}
+faqLink = link {left: 828.7266px, top: 562px, contents: "FAQ"}
 
-Link_NNYdfeznod = Link_kJ8DLsgk2E {
-  name: "Link",
-  left: 828.7266px,
-  top: 585px,
-  contents: "Resources"
-}
+resourcesLink = link {left: 828.7266px, top: 585px, contents: "Resources"}
 
-Link_aj3tOfqK2p = Link_kJ8DLsgk2E {name: "Link", left: 848.7266px, top: 605px, contents: "Features"}
+featuresLink = link {left: 848.7266px, top: 605px, contents: "Features"}
 
-Link_ojunml75aD = Link_kJ8DLsgk2E {name: "Link", left: 868.7266px, top: 625px, contents: "Roadmap"}
+roadmapLink = link {left: 868.7266px, top: 625px, contents: "Roadmap"}
 
-Column_HrLQO1THKj = frame {
-  name: "Column",
+companyColumn = frame {
   left: 0px,
   top: 0px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
-  children: [COMPANY_eNFAko65sP, GroupedStack_SfmEkh6oA7]
+  children: [companyHeading, companyLinks]
 }
 
-COMPANY_eNFAko65sP = text {
-  name: "COMPANY",
+companyHeading = text {
   left: 0px,
   top: 61px,
   width: 100%,
@@ -196,39 +154,31 @@ COMPANY_eNFAko65sP = text {
   letter-spacing: 10%
 }
 
-GroupedStack_SfmEkh6oA7 = frame {
-  name: "Grouped Stack",
+companyLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
-  children: [Link_C7IIyPQnZx, Link_54YwKOw2ED, Link_UWa2bYPdp4, Link_rpAVaSi7fL, Link_TrApE7cNgv]
+  children: [aboutLink, contactLink, careersLink, pressLink, ourStoryLink]
 }
 
-Link_C7IIyPQnZx = Link_kJ8DLsgk2E {name: "Link", left: 788.7266px, top: 522px, contents: "About"}
+aboutLink = link {left: 788.7266px, top: 522px, contents: "About"}
 
-Link_54YwKOw2ED = Link_kJ8DLsgk2E {name: "Link", left: 808.7266px, top: 542px, contents: "Contact"}
+contactLink = link {left: 808.7266px, top: 542px, contents: "Contact"}
 
-Link_UWa2bYPdp4 = Link_kJ8DLsgk2E {name: "Link", left: 828.7266px, top: 562px, contents: "Careers"}
+careersLink = link {left: 828.7266px, top: 562px, contents: "Careers"}
 
-Link_rpAVaSi7fL = Link_kJ8DLsgk2E {name: "Link", left: 848.7266px, top: 582px, contents: "Press"}
+pressLink = link {left: 848.7266px, top: 582px, contents: "Press"}
 
-Link_TrApE7cNgv = Link_kJ8DLsgk2E {
-  name: "Link",
-  left: 868.7266px,
-  top: 602px,
-  contents: "Our Story"
-}
+ourStoryLink = link {left: 868.7266px, top: 602px, contents: "Our Story"}
 
-Column_AZdMCR9Ozb = frame {
-  name: "Column",
+contactColumn = frame {
   left: 0px,
   top: 0px,
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
-  children: [CONTACT_QPpEU5cS4z, GroupedStack_B6DbUB7ng5]
+  children: [contactHeading, contactLinks]
 }
 
-CONTACT_QPpEU5cS4z = text {
-  name: "CONTACT",
+contactHeading = text {
   left: 0px,
   top: 61px,
   width: 100%,
@@ -240,56 +190,37 @@ CONTACT_QPpEU5cS4z = text {
   letter-spacing: 10%
 }
 
-GroupedStack_B6DbUB7ng5 = frame {
-  name: "Grouped Stack",
+contactLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
-  children: [Link_BisLzIIr1j, Link_gShhKPG1kE, Link_iOlNp1ufGp, Link_1kTJc4aMpc]
+  children: [privacyLink, termsLink, contactCareersLink, securityLink]
 }
 
-Link_BisLzIIr1j = Link_kJ8DLsgk2E {
-  name: "Link",
-  left: 788.7266px,
-  top: 522px,
-  contents: "Privacy Policy"
-}
+privacyLink = link {left: 788.7266px, top: 522px, contents: "Privacy Policy"}
 
-Link_gShhKPG1kE = Link_kJ8DLsgk2E {
-  name: "Link",
-  left: 808.7266px,
-  top: 542px,
-  contents: "Terms of Service"
-}
+termsLink = link {left: 808.7266px, top: 542px, contents: "Terms of Service"}
 
-Link_iOlNp1ufGp = Link_kJ8DLsgk2E {name: "Link", left: 828.7266px, top: 562px, contents: "Careers"}
+contactCareersLink = link {left: 828.7266px, top: 562px, contents: "Careers"}
 
-Link_1kTJc4aMpc = Link_kJ8DLsgk2E {name: "Link", left: 848.7266px, top: 582px, contents: "Security"}
+securityLink = link {left: 848.7266px, top: 582px, contents: "Security"}
 
 bottom = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, item-gap: 16px},
   overflow: .visible,
-  children: [DividerWhite_aCxV4eEe1g, copy]
+  children: [bottomDivider, copy]
 }
 
-DividerWhite_aCxV4eEe1g = divider.horizontal {
-  name: "Divider (White)",
-  left: 0px,
-  top: 472px,
-  width: 100%
-}
+bottomDivider = divider.horizontal {left: 0px, top: 472px, width: 100%}
 
 copy = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 16px},
   overflow: .visible,
-  children: [Thoughtfullymadep_P97BnEKLF1, Thoughtfullymadep_P97BnEKLF2]
+  children: [copyright, statusNote]
 }
 
-Thoughtfullymadep_P97BnEKLF1 = text {
-  name: "© 2026 Overleaf. All",
+copyright = text {
   left: 415.5687px,
   top: 1080px,
   width: .auto,
@@ -301,8 +232,7 @@ Thoughtfullymadep_P97BnEKLF1 = text {
   line-height: 1.5
 }
 
-Thoughtfullymadep_P97BnEKLF2 = text {
-  name: "All services are onl",
+statusNote = text {
   left: 435.5687px,
   top: 1100px,
   width: .auto,
@@ -314,8 +244,7 @@ Thoughtfullymadep_P97BnEKLF2 = text {
   line-height: 1.5
 }
 
-export Link_kJ8DLsgk2E = text {
-  name: "Link",
+export link = text {
   left: 113px,
   top: 488px,
   fill: .black,

@@ -2,7 +2,6 @@ import "blocks/siteHeader.elyx" as headerWeb
 import "tokens/colors.elyx" as colors
 
 export webPage = frame {
-  name: "Web Page",
   left: 197px,
   top: 145.5px,
   width: 1580px,
@@ -13,4 +12,4 @@ export webPage = frame {
   children: siteHeader
 }
 
-siteHeader = headerWeb.siteHeader {name: "Site Header", left: 475px, top: 373px}
+siteHeader = headerWeb.siteHeader {left: 475px, top: 373px}

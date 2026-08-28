@@ -7,7 +7,6 @@ import "components/header.elyx" as header
 import "images/background/whiteWave.jpg" as whiteWave
 
 pricingPage = frame {
-  name: "Pricing Page",
   left: 130.5px,
   top: 163px,
   width: 1415px,
@@ -17,7 +16,6 @@ pricingPage = frame {
 }
 
 pricingCards = frame {
-  name: "Pricing Cards",
   left: 125.5px,
   top: 202px,
   layout: {justify-content: .center, align-items: .center},
@@ -38,7 +36,6 @@ pricingCards = frame {
 }
 
 freePlan = planCard.planCard {
-  name: "Free Plan",
   left: 0px,
   top: 0px,
   width: 380px,
@@ -47,10 +44,6 @@ freePlan = planCard.planCard {
 
   planCard.manageButton.button.mediumLabel {
     contents: "Register for free!"
-  }
-
-  planCard.manageButton {
-    name: "Register Button"
   }
 
   planCard.planContent.planDetails.pricingCopy.priceRow.price {
@@ -63,7 +56,6 @@ freePlan = planCard.planCard {
 }
 
 proPlan = planCard.planCard {
-  name: "Pro Plan",
   left: 420px,
   top: 0.9999px,
   width: 380px,
@@ -77,10 +69,6 @@ proPlan = planCard.planCard {
     contents: "Get Started"
   }
 
-  planCard.manageButton {
-    name: "Get Started Button"
-  }
-
   planCard.planContent.planDetails.features {
     overrides: [
       insert(proStorageFeature, after = planCard.storageFeature),
@@ -89,48 +77,26 @@ proPlan = planCard.planCard {
   }
 
   planCard.planContent.planDetails.features.storageFeature.storageLabel {
-    name: "Advanced Export Label",
     contents: "Advanced export options"
   }
 
-  planCard.planContent.planDetails.features.storageFeature {
-    name: "Advanced Export Feature"
-  }
-
   planCard.planContent.planDetails.features.exportFeature.exportLabel {
-    name: "Priority Support Label",
     contents: "Priority email support"
   }
 
-  planCard.planContent.planDetails.features.exportFeature {
-    name: "Priority Support Feature"
-  }
-
   planCard.planContent.planDetails.features.supportFeature.supportLabel {
-    name: "User Limit Label",
     contents: "Up to 5 users"
   }
 
-  planCard.planContent.planDetails.features.supportFeature {
-    name: "User Limit Feature"
-  }
-
   planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
-    name: "Unlimited Projects Label",
     contents: "Unlimited projects"
   }
 
-  planCard.planContent.planDetails.features.projectsFeature {
-    name: "Unlimited Projects Feature"
-  }
-
   planCard.planContent.planDetails.pricingCopy.description {
-    name: "Pro Plan Description",
     contents: "Best option!\nFor professionals who need more room to work."
   }
 
   planCard.planContent.planSummary.planHeader.planName {
-    name: "Pro Plan Name",
     contents: "Pro"
   }
 
@@ -142,7 +108,6 @@ proPlan = planCard.planCard {
 }
 
 businessPlan = planCard.planCard {
-  name: "Business Plan",
   left: 840px,
   top: 0px,
   width: 380px,
@@ -153,10 +118,6 @@ businessPlan = planCard.planCard {
     contents: "Contact sales"
   }
 
-  planCard.manageButton {
-    name: "Contact Sales Button"
-  }
-
   planCard.planContent.planDetails.features {
     overrides: [
       insert(businessStorageFeature, after = planCard.storageFeature),
@@ -165,43 +126,22 @@ businessPlan = planCard.planCard {
   }
 
   planCard.planContent.planDetails.features.storageFeature.storageLabel {
-    name: "Custom Integrations Label",
     contents: "Custom integrations"
   }
 
-  planCard.planContent.planDetails.features.storageFeature {
-    name: "Custom Integrations Feature"
-  }
-
   planCard.planContent.planDetails.features.exportFeature.exportLabel {
-    name: "Dedicated Support Label",
     contents: "Dedicated support"
   }
 
-  planCard.planContent.planDetails.features.exportFeature {
-    name: "Dedicated Support Feature"
-  }
-
   planCard.planContent.planDetails.features.supportFeature.supportLabel {
-    name: "Unlimited Users Label",
     contents: "Unlimited users"
   }
 
-  planCard.planContent.planDetails.features.supportFeature {
-    name: "Unlimited Users Feature"
-  }
-
   planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
-    name: "Included Plan Label",
     contents: "Everything in Pro"
   }
 
-  planCard.planContent.planDetails.features.projectsFeature {
-    name: "Included Plan Feature"
-  }
-
   planCard.planContent.planDetails.pricingCopy.description {
-    name: "Business Plan Description",
     contents: "For companies.\nTeams that need scale and control."
   }
 
@@ -214,7 +154,6 @@ businessPlan = planCard.planCard {
   }
 
   planCard.planContent.planSummary.planHeader.planName {
-    name: "Business Plan Name",
     contents: "Business"
   }
 
@@ -226,7 +165,6 @@ businessPlan = planCard.planCard {
 }
 
 pricingHeader = header.mediumCenter {
-  name: "Pricing Header",
   left: 472.5px,
   top: 121px,
   width: .auto,
@@ -241,7 +179,6 @@ pricingHeader = header.mediumCenter {
 }
 
 businessStorageFeature = frame {
-  name: "Storage Feature",
   left: 60px,
   top: 135px,
   layout: {align-items: .center, item-gap: 8px},
@@ -249,7 +186,6 @@ businessStorageFeature = frame {
 }
 
 businessStorageBullet = icon {
-  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -258,7 +194,6 @@ businessStorageBullet = icon {
 }
 
 businessStorageLabel = text {
-  name: "Storage Feature Label",
   fill: colors.colors.black40,
   contents: "1 TB storage",
   font-size: planCard.Typography.typography.labelML,
@@ -267,7 +202,6 @@ businessStorageLabel = text {
 }
 
 versionHistoryFeature = frame {
-  name: "Version History Feature",
   left: 80px,
   top: 155px,
   layout: {align-items: .center, item-gap: 8px},
@@ -275,7 +209,6 @@ versionHistoryFeature = frame {
 }
 
 versionHistoryBullet = icon {
-  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -284,7 +217,6 @@ versionHistoryBullet = icon {
 }
 
 versionHistoryLabel = text {
-  name: "Version History Label",
   fill: colors.colors.black40,
   contents: "Version history",
   font-size: planCard.Typography.typography.labelML,
@@ -293,7 +225,6 @@ versionHistoryLabel = text {
 }
 
 adminControlsFeature = frame {
-  name: "Admin Controls Feature",
   left: 80px,
   top: 155px,
   layout: {align-items: .center, item-gap: 8px},
@@ -301,7 +232,6 @@ adminControlsFeature = frame {
 }
 
 adminControlsBullet = icon {
-  name: "Feature Bullet",
   left: 4px,
   top: 4px,
   width: 12px,
@@ -310,7 +240,6 @@ adminControlsBullet = icon {
 }
 
 adminControlsLabel = text {
-  name: "Admin Controls Label",
   fill: colors.colors.black40,
   contents: "Admin controls and permissions",
   font-size: planCard.Typography.typography.labelML,
@@ -319,24 +248,15 @@ adminControlsLabel = text {
 }
 
 proStorageFeature = frame {
-  name: "Storage Feature",
   left: 60px,
   top: 135px,
   layout: {align-items: .center, item-gap: 8px},
   children: [proStorageBullet, proStorageLabel]
 }
 
-proStorageBullet = icon {
-  name: "Feature Bullet",
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: planCard.dot12
-}
+proStorageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: planCard.dot12}
 
 proStorageLabel = text {
-  name: "Storage Feature Label",
   fill: colors.colors.black40,
   contents: "100 GB storage",
   font-size: planCard.Typography.typography.labelML,

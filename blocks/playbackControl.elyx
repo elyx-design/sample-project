@@ -8,7 +8,6 @@ import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/settings-20.svg" as settings20
 
 export playbackControl = cardBackground.none {
-  name: "Playback Control",
   left: 669px,
   top: 522px,
   width: 359px,
@@ -29,14 +28,12 @@ export playbackControl = cardBackground.none {
 }
 
 tools = frame {
-  name: "Tools",
   height: 100%,
   layout: {align-items: .center},
   children: [settingsButton, likeButton, moreButton]
 }
 
 settingsButton = button.smallIcon {
-  name: "Settings Button",
   left: 264.5px,
   top: 8.5px,
 
@@ -46,7 +43,6 @@ settingsButton = button.smallIcon {
 }
 
 likeButton = button.smallIcon {
-  name: "Like Button",
   left: 284.5px,
   top: 28.5px,
 
@@ -56,7 +52,6 @@ likeButton = button.smallIcon {
 }
 
 moreButton = button.smallIcon {
-  name: "More Button",
   left: 284.5px,
   top: 28.5px,
 
@@ -65,17 +60,9 @@ moreButton = button.smallIcon {
   }
 }
 
-playbackTime = text {
-  name: "Playback Time",
-  left: 722px,
-  top: 543px,
-  fill: .black,
-  contents: "0:00 / 32:46",
-  font-size: 12
-}
+playbackTime = text {left: 722px, top: 543px, fill: .black, contents: "0:00 / 32:46", font-size: 12}
 
 scrubber = frame {
-  name: "Playback Scrubber",
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: 2px},
@@ -83,7 +70,6 @@ scrubber = frame {
 }
 
 playButton = button.smallIcon {
-  name: "Play Button",
   left: 737px,
   top: 580px,
 
@@ -92,4 +78,4 @@ playButton = button.smallIcon {
   }
 }
 
-progressSlider = slider.base {name: "Slider", left: 0px, top: 636px, width: 100%}
+progressSlider = slider.base {left: 0px, top: 636px, width: 100%}

@@ -2,7 +2,6 @@ import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
 backdrop = shape {
-  name: "Ruler Backdrop",
   left: 430px,
   top: 260px,
   width: 1355px,
@@ -12,7 +11,6 @@ backdrop = shape {
 }
 
 export timelineRuler = frame {
-  name: "Timeline Ruler",
   left: 609px,
   top: 488px,
   width: 335px,
@@ -20,16 +18,15 @@ export timelineRuler = frame {
   children: [marker0, marker1, marker2, marker3]
 }
 
-marker0 = timeMarker {name: "Time Marker 0", left: 0px, top: 495px, width: 100%}
+marker0 = timeMarker {left: 0px, top: 495px, width: 100%}
 
-marker1 = timeMarker {name: "Time Marker 1", left: 20px, top: 515px, width: 100%}
+marker1 = timeMarker {left: 20px, top: 515px, width: 100%}
 
-marker2 = timeMarker {name: "Time Marker 2", left: 29px, top: 515px, width: 100%}
+marker2 = timeMarker {left: 29px, top: 515px, width: 100%}
 
-marker3 = timeMarker {name: "Time Marker 3", left: 38px, top: 515px, width: 100%}
+marker3 = timeMarker {left: 38px, top: 515px, width: 100%}
 
 export timeMarker = frame {
-  name: "Time Marker",
   left: 609px,
   top: 543.2181px,
   width: 47.5px,
@@ -39,7 +36,6 @@ export timeMarker = frame {
 }
 
 ticks = frame {
-  name: "Tick Marks",
   top: -59.5px,
   right: 0px,
   width: 100%,
@@ -57,7 +53,6 @@ ticks = frame {
 }
 
 majorTick = shape {
-  name: "Major Tick",
   left: 0px,
   top: 0px,
   width: 1px,
@@ -68,7 +63,6 @@ majorTick = shape {
 }
 
 firstMinorTick = shape {
-  name: "Minor Tick",
   left: 11.12px,
   top: 0px,
   width: 1px,
@@ -79,7 +73,6 @@ firstMinorTick = shape {
 }
 
 secondMinorTick = shape {
-  name: "Minor Tick",
   left: 22px,
   top: 0.39px,
   width: 1px,
@@ -90,7 +83,6 @@ secondMinorTick = shape {
 }
 
 thirdMinorTick = shape {
-  name: "Minor Tick",
   left: 32.8778px,
   top: 0.78px,
   width: 1px,
@@ -101,7 +93,6 @@ thirdMinorTick = shape {
 }
 
 fourthMinorTick = shape {
-  name: "Minor Tick",
   left: 43.7555px,
   top: 1.17px,
   width: 1px,
@@ -112,7 +103,6 @@ fourthMinorTick = shape {
 }
 
 fifthMinorTick = shape {
-  name: "Minor Tick",
   left: 54.63px,
   top: 1.56px,
   width: 1px,
@@ -123,7 +113,6 @@ fifthMinorTick = shape {
 }
 
 label = text {
-  name: "0",
   top: 8px,
   right: 50.63px,
   width: .auto,

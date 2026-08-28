@@ -7,7 +7,6 @@ import "components/header.elyx" as header2
 import "components/cardBackground.elyx" as cardBackground
 
 export settingsCard = cardBackground.base {
-  name: "Settings Card",
   left: 111px,
   top: 192px,
   width: 100%,
@@ -21,7 +20,6 @@ export settingsCard = cardBackground.base {
 }
 
 densityRow = frame {
-  name: "Density",
   left: 0px,
   top: 225px,
   width: 100%,
@@ -31,7 +29,6 @@ densityRow = frame {
 }
 
 densityLabel = text {
-  name: "Density Label",
   fill: Colors.colors.black20,
   contents: "Interface density",
   font-size: Typography.typography.labelML,
@@ -54,7 +51,6 @@ densityControl = SegmentedControl.medium {
 }
 
 notificationRow = frame {
-  name: "Notifications",
   left: 0px,
   top: 174px,
   width: 100%,
@@ -64,13 +60,11 @@ notificationRow = frame {
 }
 
 notificationCopy = frame {
-  name: "Notification Copy",
   layout: {direction: .column, item-gap: 4},
   children: [notificationTitle, notificationText]
 }
 
 notificationTitle = text {
-  name: "Notification Title",
   fill: Colors.colors.black20,
   contents: "Email notifications",
   font-size: Typography.typography.labelML,
@@ -79,7 +73,6 @@ notificationTitle = text {
 }
 
 notificationText = text {
-  name: "Notification Text",
   fill: Colors.colors.blackAlpha70,
   contents: "Receive updates about comments and mentions.",
   font-size: Typography.typography.labelM,

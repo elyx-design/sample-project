@@ -7,7 +7,6 @@ import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
 export reviewCard = cardBackground.base {
-  name: "Review Card",
   left: 693px,
   top: 267px,
   width: 370px,
@@ -19,21 +18,18 @@ export reviewCard = cardBackground.base {
 }
 
 reviewFooter = frame {
-  name: "Review Footer",
   width: 100%,
   layout: {direction: .column, item-gap: 32px},
   children: [reviewInfo, readReviewButton]
 }
 
 reviewInfo = frame {
-  name: "Info",
   width: 100%,
   layout: {direction: .column, item-gap: 16px},
   children: [reviewHeader, tags]
 }
 
 reviewHeader = header.mediumLeft {
-  name: "Review Header",
   left: 768px,
   top: 512px,
 
@@ -48,15 +44,9 @@ reviewHeader = header.mediumLeft {
   }
 }
 
-tags = frame {
-  name: "Tags",
-  width: 100%,
-  layout: {item-gap: 8px},
-  children: [ratingTag, thrillerTag, dramaTag]
-}
+tags = frame {width: 100%, layout: {item-gap: 8px}, children: [ratingTag, thrillerTag, dramaTag]}
 
 ratingTag = tag.iconAndLabel {
-  name: "Rating Tag",
   left: 765px,
   top: 726px,
 
@@ -65,13 +55,12 @@ ratingTag = tag.iconAndLabel {
     fill[0].color: colors.colors.white100
   }
 
-  tag.icon {
+  tag.tagIcon {
     fill[0].color: colors.colors.white100
   }
 }
 
 thrillerTag = tag.base {
-  name: "Thriller Tag",
   left: 785px,
   top: 746px,
 
@@ -82,7 +71,6 @@ thrillerTag = tag.base {
 }
 
 dramaTag = tag.base {
-  name: "Drama Tag",
   left: 785px,
   top: 827.25px,
 
@@ -93,7 +81,6 @@ dramaTag = tag.base {
 }
 
 readReviewButton = button.medium {
-  name: "Read Full Review Button",
   left: 0px,
   top: 165px,
 
@@ -103,31 +90,29 @@ readReviewButton = button.medium {
 }
 
 reviewAuthor = frame {
-  name: "Review Author",
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 20px},
   overflow: .visible,
   children: [authorSummary, closeButton]
 }
 
-authorSummary = userSummary.UserSummaryS_clM0CpDw4i {
-  name: "User Summary S",
+authorSummary = userSummary.small {
   left: 786px,
   top: 143px,
   overflow: .visible,
 
-  userSummary.HeaderSLeft_v1iI8KgpFk.header.smallSubtitle {
+  userSummary.smallHeader.header.smallSubtitle {
     contents: "Writer",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  userSummary.HeaderSLeft_v1iI8KgpFk.header.smallTitle {
+  userSummary.smallHeader.header.smallTitle {
     fill[0].color: colors.colors.white100
   }
 
-  userSummary.AvatarSPhoto_aTBp6lpaL0.userAvatar.smallStatus {
+  userSummary.smallAvatar.userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-closeButton = button.smallClose {name: "Close Button", left: 1097px, top: 291px}
+closeButton = button.smallClose {left: 1097px, top: 291px}

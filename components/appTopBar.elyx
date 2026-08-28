@@ -3,7 +3,6 @@ import "icons/12 pixels/chevron-down-12.svg" as chevrondown12
 import "components/button.elyx" as button
 
 export appTopBar = frame {
-  name: "App Top Bar (light)",
   left: 707px,
   top: 518px,
   width: 417px,
@@ -23,7 +22,6 @@ export appTopBar = frame {
 }
 
 fileSelector = frame {
-  name: "File Selector",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -32,42 +30,26 @@ fileSelector = frame {
   children: [fileName, chevron]
 }
 
-fileName = text {
-  name: "File Name",
-  left: 0px,
-  top: 0px,
-  fill: .black,
-  contents: "File Name",
-  font-style: "SemiBold"
-}
+fileName = text {left: 0px, top: 0px, fill: .black, contents: "File Name", font-style: "SemiBold"}
 
-chevron = icon {
-  name: "File Menu Chevron",
-  left: 789px,
-  top: 545px,
-  width: 12px,
-  height: 12px,
-  contents: chevrondown12
-}
+chevron = icon {left: 789px, top: 545px, width: 12px, height: 12px, contents: chevrondown12}
 
 actions = frame {
-  name: "Top Bar Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [tools, primaryButton]
 }
 
 tools = frame {
-  name: "Tools",
   height: 100%,
   layout: {align-items: .center},
   children: [leadingTool, middleTool, trailingTool]
 }
 
-leadingTool = button.smallIcon {name: "Icon", left: 287px, top: 21px}
+leadingTool = button.smallIcon {left: 287px, top: 21px}
 
-middleTool = button.smallIcon {name: "Icon", left: 307px, top: 41px}
+middleTool = button.smallIcon {left: 307px, top: 41px}
 
-trailingTool = button.smallIcon {name: "Icon", left: 335px, top: 41px}
+trailingTool = button.smallIcon {left: 335px, top: 41px}
 
-primaryButton = button.smallPrimary {name: "Primary Button", left: 606px, top: 542px, width: 62px}
+primaryButton = button.smallPrimary {left: 606px, top: 542px, width: 62px}

@@ -1,7 +1,6 @@
 import "tokens/colors.elyx" as colors
 
 export playHead = frame {
-  name: "Play Head",
   left: 670px,
   top: 469px,
   width: 12px,
@@ -13,7 +12,6 @@ export playHead = frame {
 }
 
 line = shape {
-  name: "Playhead Line",
   left: 6px,
   top: 0px,
   width: 2px,
@@ -33,7 +31,6 @@ line = shape {
 }
 
 handle = shape {
-  name: "Playhead Handle",
   left: 0px,
   top: 0px,
   width: 12px,
