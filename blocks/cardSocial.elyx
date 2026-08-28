@@ -24,7 +24,7 @@ export socialCard = cardBackground.transparent {
 
 smallButton = button.small {left: 1318px, top: 603px}
 
-mediumSummary = userSummary.UserSummaryM_3TgjJsJRgL {left: 1187.73px, top: 318.4px, width: 88px}
+mediumSummary = userSummary.medium {left: 1187.73px, top: 318.4px, width: 88px}
 
 socialFooter = frame {
   width: 100%,
@@ -106,7 +106,7 @@ profileIdentity = userSummary.UserSummaryMVariant {
   top: 160px,
   width: 100%,
 
-  userSummary.HeaderMLeft_U02Hb8hK7v.header.mediumSubtitle {
+  userSummary.mediumHeader.header.mediumSubtitle {
     contents: "@noraharper"
   }
 }

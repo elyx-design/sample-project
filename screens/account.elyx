@@ -250,4 +250,4 @@ savedActivity = activityRow2.activityRow {
   }
 }
 
-layer_3 = siteFooter.SiteFooter_khqGlqIYNR {left: 275px, top: 116px, width: 1080px, height: 246.5px}
+layer_3 = siteFooter.siteFooter {left: 275px, top: 116px, width: 1080px, height: 246.5px}

@@ -22,9 +22,9 @@ export siteHeader = cardBackground.solidFullRadius {
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
   overrides: [
-    insert(GroupedStack_wdgnFUsBsn, after = .nil),
-    insert(GroupedStack_3pPDzjFuot, after = GroupedStack_wdgnFUsBsn),
-    insert(GroupedStack_MQJzIUvAcJ, after = GroupedStack_3pPDzjFuot)
+    insert(brand, after = .nil),
+    insert(navLinks, after = brand),
+    insert(headerCta, after = navLinks)
   ]
 }
 
@@ -59,10 +59,7 @@ loggedInHeader = siteHeader {
   left: 512px,
   top: 572px,
   height: spacing.spacing.heightG,
-  overrides: [
-    insert(GroupedStack, after = GroupedStack_3pPDzjFuot),
-    remove(GroupedStack_MQJzIUvAcJ)
-  ]
+  overrides: [insert(GroupedStack, after = navLinks), remove(headerCta)]
 }
 
 @variant
@@ -149,13 +146,13 @@ helpCenterLink = mutedMenu {
   }
 }
 
-GroupedStack_MQJzIUvAcJ = frame {
+headerCta = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [Menu_9eKNms0xIQ, Primary_wXpMXTnHzx]
+  children: [logInLink, getStartedButton]
 }
 
-Menu_9eKNms0xIQ = menu {
+logInLink = menu {
   left: 1545px,
   top: 483px,
 
@@ -164,7 +161,7 @@ Menu_9eKNms0xIQ = menu {
   }
 }
 
-Primary_wXpMXTnHzx = button.mediumPrimary {
+getStartedButton = button.mediumPrimary {
   left: 751px,
   top: 475px,
 
@@ -220,9 +217,9 @@ SiteHeaderVariant = siteHeader {
   overrides: [
     insert(GroupedStack_J, after = .nil),
     insert(DividerWhite, after = GroupedStack_J),
-    remove(GroupedStack_3pPDzjFuot),
-    remove(GroupedStack_MQJzIUvAcJ),
-    remove(GroupedStack_wdgnFUsBsn)
+    remove(navLinks),
+    remove(headerCta),
+    remove(brand)
   ],
   shadow[0]: .nil
 }
@@ -337,9 +334,9 @@ SiteHeaderVariant_R = siteHeader {
   overrides: [
     insert(Content_0, after = .nil),
     insert(DividerWhite_r, after = Content_0),
-    remove(GroupedStack_3pPDzjFuot),
-    remove(GroupedStack_MQJzIUvAcJ),
-    remove(GroupedStack_wdgnFUsBsn)
+    remove(navLinks),
+    remove(headerCta),
+    remove(brand)
   ],
   shadow[0]: .nil
 }
@@ -472,29 +469,23 @@ mutedChevron = icon {
   contents: chevrondown122
 }
 
-GroupedStack_wdgnFUsBsn = frame {
+brand = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
+  children: [brandLogo, brandName]
 }
 
-LogoM36_5rZb7ha4WK = logo.medium {left: 596px, top: 481px}
+brandLogo = logo.medium {left: 596px, top: 481px}
 
-Text_cS4xjtHDcz = text {
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
+brandName = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
 
-GroupedStack_3pPDzjFuot = frame {
+navLinks = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
-  children: [Menu_AxqK14iupG, Menu_BUggW5sq6e, Menu_cVkjoKXmFQ, Menu_oqJJaNTT2Y]
+  children: [navProduct, navPricing, navCompany, navResources]
 }
 
-Menu_AxqK14iupG = menu {
+navProduct = menu {
   left: 357.9778px,
   top: 33.5256px,
 
@@ -503,7 +494,7 @@ Menu_AxqK14iupG = menu {
   }
 }
 
-Menu_BUggW5sq6e = mutedMenu {
+navPricing = mutedMenu {
   left: 377.9778px,
   top: 53.5256px,
 
@@ -512,7 +503,7 @@ Menu_BUggW5sq6e = mutedMenu {
   }
 }
 
-Menu_cVkjoKXmFQ = mutedMenu {
+navCompany = mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -521,7 +512,7 @@ Menu_cVkjoKXmFQ = mutedMenu {
   }
 }
 
-Menu_oqJJaNTT2Y = mutedIconMenu {
+navResources = mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 

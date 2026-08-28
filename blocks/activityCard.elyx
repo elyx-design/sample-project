@@ -3,7 +3,7 @@ import "tokens/radius.elyx" as Radius
 import "components/header.elyx" as header
 import "components/activityRow.elyx" as activityRow
 
-export activityCard_Qrr8IWU = frame {
+export activityCard = frame {
   left: 0px,
   top: 433px,
   width: 100%,

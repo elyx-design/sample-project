@@ -40,8 +40,8 @@ siteHeader_3 = siteHeader.siteHeader {
   border[0].visible: .false,
   shadow[0].drop-shadow.visible: .false,
 
-  siteHeader.GroupedStack_3pPDzjFuot {
-    overrides: [remove(siteHeader.Menu_oqJJaNTT2Y)]
+  siteHeader.navLinks {
+    overrides: [remove(siteHeader.navResources)]
   }
 }
 

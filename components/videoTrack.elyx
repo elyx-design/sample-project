@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 import "images/background/bird.jpg" as bird
 
-export VideoTrack_oikz8bvb8Z = frame {
+export base = frame {
   left: 639px,
   top: 492px,
   width: 475px,
@@ -12,19 +12,19 @@ export VideoTrack_oikz8bvb8Z = frame {
   fill: rgb(83.53%, 96.25%, 0%),
   corner-radius: 8px,
   padding: [4px, 0px],
-  children: [handle_Layj0z4Nv8, GroupedStack_Q4wEWSNt4H, handle_2fQ263mXIk]
+  children: [leadingHandle, filmstrip, trailingHandle]
 }
 
-handle_Layj0z4Nv8 = frame {
+leadingHandle = frame {
   left: 281px,
   top: 24px,
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: Rectangle_2lJBGBujeM
+  children: leadingGrip
 }
 
-Rectangle_2lJBGBujeM = shape {
+leadingGrip = shape {
   left: 932px,
   top: 532px,
   width: 2px,
@@ -34,15 +34,15 @@ Rectangle_2lJBGBujeM = shape {
   type: .rect
 }
 
-GroupedStack_Q4wEWSNt4H = frame {
+filmstrip = frame {
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: 1px},
   corner-radius: 4px,
-  children: [Rectangle_6Anu8dt4m4, Rectangle_TwaVf7x47r, Rectangle_hFB8lsQn1p]
+  children: [frameOne, frameTwo, frameThree]
 }
 
-Rectangle_6Anu8dt4m4 = shape {
+frameOne = shape {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -51,7 +51,7 @@ Rectangle_6Anu8dt4m4 = shape {
   type: .rect
 }
 
-Rectangle_TwaVf7x47r = shape {
+frameTwo = shape {
   left: 0px,
   top: 20px,
   width: 100%,
@@ -60,7 +60,7 @@ Rectangle_TwaVf7x47r = shape {
   type: .rect
 }
 
-Rectangle_hFB8lsQn1p = shape {
+frameThree = shape {
   left: 20px,
   top: 40px,
   width: 100%,
@@ -69,14 +69,14 @@ Rectangle_hFB8lsQn1p = shape {
   type: .rect
 }
 
-handle_2fQ263mXIk = frame {
+trailingHandle = frame {
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: Rectangle_pAIkI3WK3m
+  children: trailingGrip
 }
 
-Rectangle_pAIkI3WK3m = shape {
+trailingGrip = shape {
   left: 932px,
   top: 532px,
   width: 2px,

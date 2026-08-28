@@ -298,38 +298,38 @@ videoTrackRow = frame {
   children: [birdTrack, thumbnailTrack]
 }
 
-birdTrack = videoTrack.VideoTrack_oikz8bvb8Z {
+birdTrack = videoTrack.base {
   left: 7941px,
   top: 763px,
   width: 23.6364%,
 
-  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_hFB8lsQn1p {
+  videoTrack.filmstrip.frameThree {
     fill[0].image.ref: bird
   }
 
-  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_TwaVf7x47r {
+  videoTrack.filmstrip.frameTwo {
     fill[0].image.ref: bird
   }
 
-  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_6Anu8dt4m4 {
+  videoTrack.filmstrip.frameOne {
     fill[0].image.ref: bird
   }
 }
 
-thumbnailTrack = videoTrack.VideoTrack_oikz8bvb8Z {
+thumbnailTrack = videoTrack.base {
   left: 7961px,
   top: 783px,
   width: 23.6364%,
 
-  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_hFB8lsQn1p {
+  videoTrack.filmstrip.frameThree {
     fill[0].image.ref: thumb08
   }
 
-  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_TwaVf7x47r {
+  videoTrack.filmstrip.frameTwo {
     fill[0].image.ref: thumb08
   }
 
-  videoTrack.GroupedStack_Q4wEWSNt4H.Rectangle_6Anu8dt4m4 {
+  videoTrack.filmstrip.frameOne {
     fill[0].image.ref: thumb08
   }
 }
@@ -338,22 +338,14 @@ audioTrack = mediaTrack.track {
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
-  fill[0].color: rgb(100%, 41.19%, 100%),
-
-  mediaTrack.content.label.trackName {}
-
-  mediaTrack.content.label.typeIcon {}
+  fill[0].color: rgb(100%, 41.19%, 100%)
 }
 
 titleTrack = mediaTrack.track {
   left: -13207.5px,
   top: 808px,
   width: 59.2292%,
-  fill[0].color: rgb(0%, 98.76%, 100%),
-
-  mediaTrack.content.label.trackName {}
-
-  mediaTrack.content.label.typeIcon {}
+  fill[0].color: rgb(0%, 98.76%, 100%)
 }
 
 timelinePlayHead = playHead.playHead {left: 385px, top: -5px, height: 281px, ignore-stack: .true}

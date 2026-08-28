@@ -4,7 +4,7 @@ import "tokens/radius.elyx" as Radius
 import "components/avatar.elyx" as userAvatar
 import "components/header.elyx" as header
 
-export userSummary_3nStch3 = frame {
+export card = frame {
   left: 16px,
   top: 888px,
   width: 100%,
@@ -15,15 +15,15 @@ export userSummary_3nStch3 = frame {
   padding: Spacing.spacing.paddingM
 }
 
-export UserSummaryS_clM0CpDw4i = frame {
+export small = frame {
   height: Spacing.spacing.heightM,
   layout: {align-items: .center, item-gap: 12px},
-  children: [AvatarSPhoto_aTBp6lpaL0, HeaderSLeft_v1iI8KgpFk]
+  children: [smallAvatar, smallHeader]
 }
 
-AvatarSPhoto_aTBp6lpaL0 = userAvatar.smallPhoto {left: -7.5px, top: 28px}
+smallAvatar = userAvatar.smallPhoto {left: -7.5px, top: 28px}
 
-HeaderSLeft_v1iI8KgpFk = header.smallLeft {
+smallHeader = header.smallLeft {
   left: -8.5px,
   top: -18px,
 
@@ -38,27 +38,27 @@ HeaderSLeft_v1iI8KgpFk = header.smallLeft {
 }
 
 @variant
-UserSummarySVariant = UserSummaryS_clM0CpDw4i {
+UserSummarySVariant = small {
   left: 140px,
   top: -18px,
   height: .auto,
   layout.direction: .column,
 
   @use-variant(header.smallCenter)
-  HeaderSLeft_v1iI8KgpFk {}
+  smallHeader {}
 }
 
-export UserSummaryM_3TgjJsJRgL = frame {
+export medium = frame {
   left: -67px,
   top: 192px,
   height: 72px,
   layout: {justify-content: .end, align-items: .center, item-gap: 20px},
-  children: [AvatarMVariant_96PsSx7qfC, HeaderMLeft_U02Hb8hK7v]
+  children: [mediumAvatar, mediumHeader]
 }
 
-AvatarMVariant_96PsSx7qfC = userAvatar.mediumPhoto {left: 0px, top: 0px}
+mediumAvatar = userAvatar.mediumPhoto {left: 0px, top: 0px}
 
-HeaderMLeft_U02Hb8hK7v = header.mediumLeft {
+mediumHeader = header.mediumLeft {
   left: 83px,
   top: 10px,
 
@@ -73,12 +73,12 @@ HeaderMLeft_U02Hb8hK7v = header.mediumLeft {
 }
 
 @variant
-UserSummaryMVariant = UserSummaryM_3TgjJsJRgL {
+UserSummaryMVariant = medium {
   left: 229px,
   top: 192px,
   height: .auto,
   layout.direction: .column,
 
   @use-variant(header.mediumCenter)
-  HeaderMLeft_U02Hb8hK7v {}
+  mediumHeader {}
 }

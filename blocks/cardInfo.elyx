@@ -96,21 +96,21 @@ reviewAuthor = frame {
   children: [authorSummary, closeButton]
 }
 
-authorSummary = userSummary.UserSummaryS_clM0CpDw4i {
+authorSummary = userSummary.small {
   left: 786px,
   top: 143px,
   overflow: .visible,
 
-  userSummary.HeaderSLeft_v1iI8KgpFk.header.smallSubtitle {
+  userSummary.smallHeader.header.smallSubtitle {
     contents: "Writer",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  userSummary.HeaderSLeft_v1iI8KgpFk.header.smallTitle {
+  userSummary.smallHeader.header.smallTitle {
     fill[0].color: colors.colors.white100
   }
 
-  userSummary.AvatarSPhoto_aTBp6lpaL0.userAvatar.smallStatus {
+  userSummary.smallAvatar.userAvatar.smallStatus {
     display: .hidden
   }
 }
