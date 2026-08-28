@@ -5,16 +5,16 @@ import "images/profileImgs/005.jpg" as module
 import "tokens/spacing.elyx" as spacing
 import "images/profileImgs/001.jpg" as module4
 
-export ChatBubble_Rb2QJd9jzc = frame {
+export base = frame {
   name: "Chat Bubble",
   left: 602px,
   top: 476px,
   layout: {justify-content: .center, align-items: .center, item-gap: 8px},
   overflow: .visible,
-  children: [AvatarSPhoto_MIH7WKKzVs, Frame_iMg8dwYyHE]
+  children: [profileAvatar, message]
 }
 
-AvatarSPhoto_MIH7WKKzVs = avatar.smallPhoto {
+profileAvatar = avatar.smallPhoto {
   name: "Avatar S (Photo)",
   left: 0px,
   top: 0px,
@@ -28,7 +28,7 @@ AvatarSPhoto_MIH7WKKzVs = avatar.smallPhoto {
   }
 }
 
-Frame_iMg8dwYyHE = frame {
+message = frame {
   name: "Message Bubble",
   left: 65px,
   top: 0px,
@@ -39,32 +39,26 @@ Frame_iMg8dwYyHE = frame {
   corner-radius: radius.radius.max,
   padding-left: 12px,
   padding-right: 12px,
-  children: Chattext_chDa6dS3AP
+  children: text
 }
 
-Chattext_chDa6dS3AP = text {
-  name: "Chat text",
-  left: 0px,
-  top: 0px,
-  fill: .black,
-  contents: "Chat text"
-}
+text = text {name: "Chat text", left: 0px, top: 0px, fill: .black, contents: "Chat text"}
 
 @variant(User)
-ChatBubbleVariant = ChatBubble_Rb2QJd9jzc {
+user = base {
   left: 602px,
   top: 560px,
-  overrides: [move(Frame_iMg8dwYyHE, after = .nil)],
+  overrides: [move(message, after = .nil)],
 
-  AvatarSPhoto_MIH7WKKzVs.avatar.smallImage {
+  profileAvatar.avatar.smallImage {
     fill[0].image.ref: module
   }
 
-  Frame_iMg8dwYyHE {
+  message {
     fill[0].color: colors.colors.black20
   }
 
-  Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  message.text {
     fill[0].color: colors.colors.white100
   }
 }

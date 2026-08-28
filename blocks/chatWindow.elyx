@@ -24,13 +24,13 @@ Chat_rw4c7WJOMr = frame {
   children: [User_y4nVb60Ht8, GroupedStack_9ZE1MpDskD]
 }
 
-User_y4nVb60Ht8 = chatBubble.ChatBubbleVariant {
+User_y4nVb60Ht8 = chatBubble.user {
   name: "User Message",
   left: 1px,
   top: 0px,
   layout.justify-content: .end,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "This heat is brutal"
   }
 }
@@ -43,25 +43,25 @@ GroupedStack_9ZE1MpDskD = frame {
   children: [ChatBubble_w7rHdo4Xzi, ChatBubble_SIFYrR62A7]
 }
 
-ChatBubble_w7rHdo4Xzi = chatBubble.ChatBubble_Rb2QJd9jzc {
+ChatBubble_w7rHdo4Xzi = chatBubble.base {
   name: "First Reply",
   left: 0px,
   top: 74px,
   layout.justify-content: .start,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "Yeah, it true!",
     fill[0].color: colors.colors.white100
   }
 }
 
-ChatBubble_SIFYrR62A7 = chatBubble.ChatBubble_Rb2QJd9jzc {
+ChatBubble_SIFYrR62A7 = chatBubble.base {
   name: "Second Reply",
   left: 20px,
   top: 94px,
   layout.justify-content: .start,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "Incredible pace out there",
     fill[0].color: colors.colors.white100
   }

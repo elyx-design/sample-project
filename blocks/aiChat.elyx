@@ -62,13 +62,13 @@ GroupedStack_s1knnuFu9M = frame {
   children: [User_dronh23C7d, Text_ctWSRNMl7J]
 }
 
-User_dronh23C7d = chatBubble.ChatBubbleVariant {
+User_dronh23C7d = chatBubble.user {
   name: "User Message",
   left: 1066px,
   top: 464px,
   layout.justify-content: .end,
 
-  chatBubble.Frame_iMg8dwYyHE.Chattext_chDa6dS3AP {
+  chatBubble.message.text {
     contents: "RAM or processor for video editing?"
   }
 }
