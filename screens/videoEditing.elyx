@@ -177,11 +177,11 @@ layer_E = imageGallery.ImageGallery_GtwQ9FgVmL {
   width: 40%,
   height: 100%,
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.imageName {
     contents: "Red-flanked Bluetail"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_W3IdzAi9Kc.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
@@ -189,67 +189,67 @@ layer_E = imageGallery.ImageGallery_GtwQ9FgVmL {
     fill[0].image.ref: thumb02
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.imageName {
     contents: "Orange Bird"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_pOxPFqic6Z.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.imageName {
     contents: "Great Horned Owl"
   }
 
-  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_PuQDZckL9T.ThumbnailImage_ojWbhgsSeP.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.imageName {
     contents: "Blue-and-yellow Macaw"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_wvYu3x1xqi.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.imageName {
     contents: "Bald Eagle.wave"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_Tax0BI0J9n.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.imageName {
     contents: "Northern Cardinal\nBody Red"
   }
 
-  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_gKgiUol8gH.ThumbnailImage_rhdmA2yFU8.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.imageName {
     contents: "Toco Toucan"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_IJc7gbbjIi.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.imageName {
     contents: "Eurasian Blue"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_lRArBZphTR.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.Imagename_jOw4WJEFHF {
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.imageName {
     contents: "Lilac"
   }
 
-  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.Frame_knRpLk4dgQ.heart20svg_0Rw3zJS0s6 {
+  imageGallery.Frame_WudjtipEop.ThumbnailImage_RRjJxUn79S.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 }

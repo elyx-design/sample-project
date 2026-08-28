@@ -27,7 +27,7 @@ Frame_WudjtipEop = frame {
   children: [ThumbnailImage_RRjJxUn79S, ThumbnailImage_lRArBZphTR, ThumbnailImage_IJc7gbbjIi]
 }
 
-ThumbnailImage_RRjJxUn79S = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_RRjJxUn79S = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -36,7 +36,7 @@ ThumbnailImage_RRjJxUn79S = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
   fill[0].image.ref: thumb08
 }
 
-ThumbnailImage_lRArBZphTR = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_lRArBZphTR = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -44,7 +44,7 @@ ThumbnailImage_lRArBZphTR = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
   height: 100%
 }
 
-ThumbnailImage_IJc7gbbjIi = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_IJc7gbbjIi = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -63,7 +63,7 @@ Frame_gKgiUol8gH = frame {
   children: [ThumbnailImage_rhdmA2yFU8, ThumbnailImage_Tax0BI0J9n, ThumbnailImage_wvYu3x1xqi]
 }
 
-ThumbnailImage_rhdmA2yFU8 = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_rhdmA2yFU8 = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -72,7 +72,7 @@ ThumbnailImage_rhdmA2yFU8 = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
   fill[0].image.ref: thumb04
 }
 
-ThumbnailImage_Tax0BI0J9n = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_Tax0BI0J9n = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -81,7 +81,7 @@ ThumbnailImage_Tax0BI0J9n = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
   fill[0].image.ref: thumb05
 }
 
-ThumbnailImage_wvYu3x1xqi = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_wvYu3x1xqi = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -100,7 +100,7 @@ Frame_PuQDZckL9T = frame {
   children: [ThumbnailImage_ojWbhgsSeP, ThumbnailImage_pOxPFqic6Z, ThumbnailImage_W3IdzAi9Kc]
 }
 
-ThumbnailImage_ojWbhgsSeP = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_ojWbhgsSeP = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -109,7 +109,7 @@ ThumbnailImage_ojWbhgsSeP = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
   fill[0].image.ref: thumb07
 }
 
-ThumbnailImage_pOxPFqic6Z = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_pOxPFqic6Z = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
@@ -118,7 +118,7 @@ ThumbnailImage_pOxPFqic6Z = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
   fill[0].image.ref: thumb05
 }
 
-ThumbnailImage_W3IdzAi9Kc = thumbnailImage.ThumbnailImage_Bv4oCgAbjK {
+ThumbnailImage_W3IdzAi9Kc = thumbnailImage.thumbnailImage {
   name: "Thumbnail Image",
   left: 0px,
   top: 0px,
