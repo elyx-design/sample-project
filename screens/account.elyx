@@ -2,11 +2,8 @@ import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "blocks/cardAbout.elyx" as profileCard
-import "components/divider.elyx" as divider
 import "components/activityRow.elyx" as activityRow2
 import "blocks/cardSocial.elyx" as cardSocial
-import "blocks/headerWeb.elyx" as headerWeb
-import "images/background/wood.jpg" as wood
 import "blocks/productCard.elyx" as productCard
 import "blocks/productGallery.elyx" as productGallery
 
@@ -252,20 +249,18 @@ Frame = frame {
   width: 1910px,
   height: 1903px,
   layout: {direction: .column, align-items: .center, item-gap: 64px},
-  fill: {image: {ref: wood}},
+  fill: rgb(85.27%, 82.96%, 78.3387%),
   padding-top: 24px,
   padding-bottom: 24px,
-  children: [layer_l, Frame_F]
+  children: Frame_F
 }
-
-layer_l = headerWeb.Header_YoW7I9TfdY {name: "HeaderWeb", left: -2541px, top: -821px}
 
 Frame_F = frame {
   name: "Frame",
   left: 270px,
-  top: 156px,
+  top: 0px,
   width: 1080px,
-  height: 1109px,
+  height: .auto,
   layout: {item-gap: 24px},
   overflow: .visible,
   children: [layer, Frame_H]
@@ -275,6 +270,7 @@ layer = cardSocial.SocialCard_QzfezrXgSp {
   name: "Social Card",
   left: 0px,
   top: 0px,
+  fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 50%),
 
   cardSocial.GroupedStack_1gmgOy2Wt0.GroupedStack_CzQMt15d8V {
     overrides: [remove(cardSocial.Close_EIAQCGPEGW), remove(cardSocial.Icon_VkGiO7tulw)]
@@ -286,18 +282,57 @@ Frame_H = frame {
   left: 0px,
   top: 0px,
   width: 100%,
+  height: .auto,
   layout: {direction: .column, justify-content: .center, item-gap: 24px},
   overflow: .visible,
-  children: [layer_0, layer_O, layer_U, DividerWhite, layer_y]
+  children: [layer_0, layer_O, layer_U, GroupedStack]
 }
 
-layer_0 = profileCard.profileCard_vlvneaI {name: "profileCard", left: 0px, top: 0px, width: 100%}
+layer_0 = profileCard.profileCard_vlvneaI {
+  name: "profileCard",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  fill[0].color: rgb(29.8456%, 50.9697%, 17.88%, 50%),
+
+  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_tiqgxwz6GB.AvrRating_323yTc7AQH {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+
+  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_ySVSgouDo5.AvrRating_35SpwnbsZt {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+
+  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_K3EsLWJmUO.PagesRead_jDu4nkUS3l {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+
+  profileCard.Stats_IM8Fu5LkU6.stats.Frame_JZbGEcdAyx.Frame_v3hR4sAYg5.Livrosem20_OIV9rtYiSu {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+}
 
 layer_O = productCard.cardBackgroundSolid_MeUe9s7jIe {
   name: "Product Card",
   left: 0px,
   top: -317px,
-  width: 100%
+  width: 100%,
+
+  productCard.GroupedStack_iigKZjZVS6.GroupedStack_iaZBymztXh.Text_8hdD9fYPsD {
+    contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter of the book. It is amazing!"
+  }
+
+  productCard.GroupedStack_iigKZjZVS6.layer_OysMAZRDRZ.Slider_75Gh9EfwB5 {
+    fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 25%)
+  }
+
+  productCard.GroupedStack_iigKZjZVS6.layer_OysMAZRDRZ.Slider_75Gh9EfwB5.slider.slider_vMtvuimTJT {
+    fill[0].color: rgb(29.8%, 50.98%, 18.0392%)
+  }
+
+  productCard.GroupedStack_iigKZjZVS6.Text_dhOnMd2nDQ {
+    fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 50%)
+  }
 }
 
 layer_U = productGallery.ProductGallery_ZemQVvDdPm {
@@ -306,18 +341,153 @@ layer_U = productGallery.ProductGallery_ZemQVvDdPm {
   top: -444px,
   width: 100%,
 
-  productGallery.DividerWhite_TtAzllhBWz.divider.Rectangle_RlFhJcHgz0 {
+  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_g8PWi0Sk2i.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+    fill[0].color: rgb(100%, 100%, 100%, 50%)
+  }
 
+  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_b3BtwOLAJq.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+    fill[0].color: rgb(100%, 100%, 100%, 50%)
+  }
+
+  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_zOHrymIxFN.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+    fill[0].color: rgb(100%, 100%, 100%, 50%)
+  }
+
+  productGallery.GroupedStack_qc45FWeuhH.ProductInfo_iKbIuHTpmu.productInfo.GroupedStack_eaALrce3Cz.IconandLabel_lrjc2EBEzo {
+    fill[0].color: rgb(100%, 100%, 100%, 50%)
+  }
+
+  productGallery.Title_zj6bz1wvCw {
+    contents: "Recent activity"
   }
 }
 
-DividerWhite = divider.Divider_97GT5IGMgL {
-  name: "Divider (White)",
-  left: 20px,
-  top: 308px,
+GroupedStack = frame {
+  name: "Grouped Stack",
+  left: 0px,
+  top: 1124px,
   width: 100%,
-  padding-top: 8px,
-  padding-bottom: 8px
+  height: .auto,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  padding-top: 24px,
+  padding-bottom: 24px,
+  children: [layer_9, activityRow_r, activityRow_G, activityRow_L]
 }
 
-layer_y = activityRow2.activityRow_ZaTUcpO {name: "activityRow", left: 0px, top: 266px, width: 100%}
+layer_9 = activityRow2.activityRow_ZaTUcpO {
+  name: "activityRow",
+  left: 0px,
+  top: 1397px,
+  width: 100%,
+
+  @use-variant(activityRow2.tag.TagTransparentVariant)
+  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322 {}
+
+  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+    contents: "4,9"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+    contents: "Rated"
+  }
+}
+
+activityRow_r = activityRow2.activityRow_ZaTUcpO {
+  name: "activityRow",
+  left: 0px,
+  top: 1370px,
+  width: 100%,
+  height: 52.5px,
+
+  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+    contents: "Finished"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.Rated_h5p1S8iL1u {
+    contents: "Letters to No One"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+    contents: "Finished"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+    contents: "5 Days"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTime_dwkCnRe {
+    contents: "Finished Letters to No One"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.ActivityTime_dwkCnRe {
+    contents: "Finished Letters to No One"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+    contents: "5 Days"
+  }
+}
+
+activityRow_G = activityRow2.activityRow_ZaTUcpO {
+  name: "activityRow",
+  left: 20px,
+  top: 1390px,
+  width: 100%,
+  height: 52.5px,
+
+  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+    contents: "Reading"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.Rated_h5p1S8iL1u {
+    contents: "The Quiet Life of Things"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+    contents: "Started"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+    contents: "1 Week"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTime_dwkCnRe {
+    contents: "Started The Quiet Life of Things"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+    contents: "1 Week"
+  }
+}
+
+activityRow_L = activityRow2.activityRow_ZaTUcpO {
+  name: "activityRow",
+  left: 20px,
+  top: 1390px,
+  width: 100%,
+  height: 52.5px,
+
+  activityRow2.GroupedStack_cnBluZ7u0I.TagTransparent_7nWvl7H322.tag.Tag_gKZPtXRbSo {
+    contents: "Saved"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.Rated_h5p1S8iL1u {
+    contents: "Winter Mornings to Want to read"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_tRl1ourATY.ActivityTime_dwkCnRe {
+    contents: "Added"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_e9HzR7GXlD.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+    contents: "2 Weeks"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTime_dwkCnRe {
+    contents: "Added Winter Mornings to Want to read"
+  }
+
+  activityRow2.GroupedStack_cnBluZ7u0I.GroupedStack_mcK4tU66QQ.ActivityTitle_9XlhOnW {
+    contents: "2 Weeks"
+  }
+}
