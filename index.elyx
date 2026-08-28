@@ -250,7 +250,7 @@ Frame = frame {
 
 layer_3 = cardInfo.reviewCard {name: "Review Card", left: 585px, top: 823px}
 
-layer_6 = menuList.MenuList_6OjbR9CAsW {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
+layer_6 = menuList.menuList {name: "Menu List", left: 244px, top: 1288px, width: 317.5px}
 
 layer_1 = aiChat.aiChat {
   name: "Ai Chat",
