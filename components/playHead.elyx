@@ -1,6 +1,6 @@
 import "tokens/colors.elyx" as colors
 
-export Frame_kFEBYnH2MI = frame {
+export playHead = frame {
   name: "Play Head",
   left: 670px,
   top: 469px,
@@ -9,10 +9,10 @@ export Frame_kFEBYnH2MI = frame {
   layout: {direction: .column, justify-content: .center, align-items: .center},
   overflow: .visible,
   padding-top: 12px,
-  children: [Rectangle_fbB02n1chM, Ellipse_gF0x43ObsE]
+  children: [line, handle]
 }
 
-Rectangle_fbB02n1chM = shape {
+line = shape {
   name: "Playhead Line",
   left: 6px,
   top: 0px,
@@ -32,7 +32,7 @@ Rectangle_fbB02n1chM = shape {
   type: .rect
 }
 
-Ellipse_gF0x43ObsE = shape {
+handle = shape {
   name: "Playhead Handle",
   left: 0px,
   top: 0px,

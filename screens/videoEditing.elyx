@@ -382,7 +382,7 @@ VideoTrack = mediaTrack.track {
   }
 }
 
-layer_O = playHead.Frame_kFEBYnH2MI {
+layer_O = playHead.playHead {
   name: "Play Head",
   left: 385px,
   top: -5px,
