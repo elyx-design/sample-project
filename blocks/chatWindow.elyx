@@ -67,12 +67,12 @@ ChatBubble_SIFYrR62A7 = chatBubble.base {
   }
 }
 
-TextFieldPlaceholderbutton_zceWXdSr8m = textField.TextFieldbutton {
+TextFieldPlaceholderbutton_zceWXdSr8m = textField.buttonPlaceholder {
   name: "Message Field",
   left: 827px,
   top: 524px,
 
-  textField.Label {
+  textField.label {
     contents: "Write a message"
   }
 }

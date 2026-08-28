@@ -89,11 +89,11 @@ notificationText = text {
 
 notificationToggle = Checkbox.on {}
 
-nameField = TextField.textField_vGl5JUl04s {
+nameField = TextField.base {
   left: 0px,
   top: 115px,
 
-  TextField.Label {
+  TextField.label {
     contents: "Jason Chen"
   }
 }

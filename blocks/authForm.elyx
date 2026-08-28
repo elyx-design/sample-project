@@ -54,26 +54,26 @@ Fields_XaJ8fJSB8R = frame {
   children: [PlaceholderIcon_bJlHc6HdT3, PlaceholderIcon_7KEgapI9ft]
 }
 
-PlaceholderIcon_bJlHc6HdT3 = TextField.TextFieldIcon {
+PlaceholderIcon_bJlHc6HdT3 = TextField.iconPlaceholder {
   name: "Email Field",
 
-  TextField.Label {
+  TextField.label {
     contents: "Email address"
   }
 
-  TextField.create24svg_k {
+  TextField.placeholderIcon {
     contents: mail24
   }
 }
 
-PlaceholderIcon_7KEgapI9ft = TextField.TextFieldIcon {
+PlaceholderIcon_7KEgapI9ft = TextField.iconPlaceholder {
   name: "Password Field",
 
-  TextField.Label {
+  TextField.label {
     contents: "Password"
   }
 
-  TextField.create24svg_k {
+  TextField.placeholderIcon {
     contents: padlock24
   }
 }
