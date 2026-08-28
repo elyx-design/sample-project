@@ -2,7 +2,7 @@ import "tokens/spacing.elyx" as spacing
 import "icons/24 pixels/direct-24.svg" as direct24
 import "tokens/colors.elyx" as colors
 
-export VideoTrack_SXeZ1r8lmI = frame {
+export track = frame {
   name: "Video Track",
   left: 639.5px,
   top: 518px,
@@ -12,27 +12,27 @@ export VideoTrack_SXeZ1r8lmI = frame {
   fill: rgb(67.48%, 100%, 0%),
   corner-radius: 8px,
   padding: [4px, 0px],
-  children: [GroupedStack_md0TiVD0Q9, handle_n70EJtu1KB]
+  children: [content, endHandle]
 }
 
-GroupedStack_md0TiVD0Q9 = frame {
+content = frame {
   name: "Track Content",
   height: 100%,
   layout: {align-items: .center},
-  children: [handle_tjiMVlGnIE, GroupedStack_8jIVI4WWex]
+  children: [startHandle, label]
 }
 
-handle_tjiMVlGnIE = frame {
+startHandle = frame {
   name: "Start Trim Handle",
   left: 281px,
   top: 24px,
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: Rectangle_Yf2tiQKCBX
+  children: startGrip
 }
 
-Rectangle_Yf2tiQKCBX = shape {
+startGrip = shape {
   name: "Start Grip",
   left: 932px,
   top: 532px,
@@ -43,14 +43,14 @@ Rectangle_Yf2tiQKCBX = shape {
   type: .rect
 }
 
-GroupedStack_8jIVI4WWex = frame {
+label = frame {
   name: "Track Label",
   height: 100%,
   layout: {align-items: .center, item-gap: 4px},
-  children: [direct24svg_srC1L2hQr9, Text_zUhul68a5E]
+  children: [typeIcon, trackName]
 }
 
-direct24svg_srC1L2hQr9 = icon {
+typeIcon = icon {
   name: "Track Type Icon",
   left: 810px,
   top: 522px,
@@ -60,7 +60,7 @@ direct24svg_srC1L2hQr9 = icon {
   contents: direct24
 }
 
-Text_zUhul68a5E = text {
+trackName = text {
   name: "Track Name",
   left: 263px,
   top: 553px,
@@ -70,15 +70,15 @@ Text_zUhul68a5E = text {
   font-style: "SemiBold"
 }
 
-handle_n70EJtu1KB = frame {
+endHandle = frame {
   name: "End Trim Handle",
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: Rectangle_CHICkZNoS6
+  children: endGrip
 }
 
-Rectangle_CHICkZNoS6 = shape {
+endGrip = shape {
   name: "End Grip",
   left: 932px,
   top: 532px,

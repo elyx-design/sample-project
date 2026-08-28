@@ -350,34 +350,34 @@ VideoTrack_u = videoTrack.VideoTrack_oikz8bvb8Z {
   }
 }
 
-layer_VS = mediaTrack.VideoTrack_SXeZ1r8lmI {
+layer_VS = mediaTrack.track {
   name: "Audio Track",
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
   fill[0].color: rgb(100%, 41.19%, 100%),
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
+  mediaTrack.content.label.trackName {
     contents: "tropical_ambience.mp3"
   }
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.direct24svg_srC1L2hQr9 {
+  mediaTrack.content.label.typeIcon {
     contents: music24
   }
 }
 
-VideoTrack = mediaTrack.VideoTrack_SXeZ1r8lmI {
+VideoTrack = mediaTrack.track {
   name: "Title Track",
   left: -13207.5px,
   top: 808px,
   width: 59.2292%,
   fill[0].color: rgb(0%, 98.76%, 100%),
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.Text_zUhul68a5E {
+  mediaTrack.content.label.trackName {
     contents: "Birds in Their Element"
   }
 
-  mediaTrack.GroupedStack_md0TiVD0Q9.GroupedStack_8jIVI4WWex.direct24svg_srC1L2hQr9 {
+  mediaTrack.content.label.typeIcon {
     contents: text24
   }
 }
