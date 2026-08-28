@@ -53,7 +53,7 @@ mutedMenu = menu {
   top: 521px,
 
   label {
-    fill[0].color: colors.colors.blackAlpha25
+    fill[0].color: colors.colors.blackAlpha50
   }
 }
 
@@ -84,7 +84,7 @@ mutedIconMenu = menu {
   overrides: [insert(mutedChevron, after = label)],
 
   label {
-    fill[0].color: colors.colors.blackAlpha25
+    fill[0].color: colors.colors.blackAlpha50
   }
 }
 
@@ -508,6 +508,16 @@ DividerWhite_r = divider.horizontal {
   }
 }
 
+chevron = icon {
+  name: "Menu Chevron",
+  left: 297px,
+  top: 460px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.black20,
+  contents: chevrondown122
+}
+
 mutedChevron = icon {
   name: "Menu Chevron",
   left: 278px,
@@ -518,14 +528,22 @@ mutedChevron = icon {
   contents: chevrondown122
 }
 
-chevron = icon {
-  name: "Menu Chevron",
-  left: 297px,
-  top: 460px,
-  width: 12px,
-  height: 12px,
-  fill: colors.colors.black20,
-  contents: chevrondown122
+GroupedStack_wdgnFUsBsn = frame {
+  name: "Grouped Stack",
+  height: 100%,
+  layout: {align-items: .center, item-gap: 16px},
+  children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
+}
+
+LogoM36_5rZb7ha4WK = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+
+Text_cS4xjtHDcz = text {
+  name: "Text",
+  left: -340px,
+  top: 503px,
+  fill: .black,
+  contents: "Overleaf",
+  font-style: "Bold"
 }
 
 GroupedStack_3pPDzjFuot = frame {
@@ -573,22 +591,4 @@ Menu_oqJJaNTT2Y = mutedIconMenu {
   label {
     contents: "Resources"
   }
-}
-
-GroupedStack_wdgnFUsBsn = frame {
-  name: "Grouped Stack",
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
-}
-
-LogoM36_5rZb7ha4WK = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
-
-Text_cS4xjtHDcz = text {
-  name: "Text",
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
 }

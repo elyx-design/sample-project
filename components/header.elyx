@@ -38,8 +38,8 @@ mediumCenter = mediumLeft {
   layout.align-items: .center,
 
   mediumSubtitle {
-    align: .center,
-    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 70%)
+    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 70%),
+    align: .center
   }
 
   mediumTitle {
@@ -51,8 +51,9 @@ export smallLeft = frame {
   name: "Header S (Left)",
   left: -267.28px,
   top: 29px,
-  height: 36px,
-  layout: {direction: .column, item-gap: 2px},
+  width: 99px,
+  height: .auto,
+  layout: {direction: .column, item-gap: 8px},
   children: [smallTitle, smallSubtitle]
 }
 
@@ -88,5 +89,51 @@ smallCenter = smallLeft {
 
   smallTitle {
     align: .center
+  }
+}
+
+export largeLeft = frame {
+  name: "Header M (Left)",
+  left: 287.708px,
+  top: 21.3172px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, item-gap: 2px},
+  children: [largeTitle, largeSubtitle]
+}
+
+largeTitle = text {
+  name: "Title",
+  fill: Colors.colors.black20,
+  contents: "Title",
+  font-size: 56,
+  font-family: "Inter",
+  font-style: "Bold"
+}
+
+largeSubtitle = text {
+  name: "Subtitle",
+  width: 100%,
+  fill: Colors.colors.blackAlpha70,
+  contents: "Subtitle",
+  font-size: 18,
+  font-family: "Inter",
+  font-style: "Medium",
+  line-height: 1.5
+}
+
+@variant("Header M (Left) Variant")
+largeCenter = largeLeft {
+  left: 287.708px,
+  top: 166.3172px,
+  layout.align-items: .center,
+
+  largeSubtitle {
+    align: .center
+  }
+
+  largeTitle {
+    align: .center,
+    width: 100%
   }
 }

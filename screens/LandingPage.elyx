@@ -1,0 +1,257 @@
+import "images/background/night.jpg" as night
+import "blocks/siteHeader.elyx" as siteHeader
+import "tokens/colors.elyx" as colors
+import "components/button.elyx" as button
+import "components/header.elyx" as header
+import "icons/24 pixels/direct-24.svg" as direct24
+import "icons/24 pixels/activity.svg" as activity
+import "components/tag.elyx" as tag
+import "icons/20 pixels/arrowDown-20.svg" as arrowDown20
+import "icons/24 pixels/mug-24.svg" as mug24
+
+LandingPage = frame {
+  name: "Frame",
+  left: -5px,
+  top: 137px,
+  width: 1605px,
+  height: 940px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 116px
+  },
+  fill: {image: {ref: night}},
+  padding-top: 24px,
+  padding-bottom: 24px,
+  children: [top, frame3]
+}
+
+top = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 96px},
+  overflow: .visible,
+  children: [siteHeader_3, Copy]
+}
+
+siteHeader_3 = siteHeader.siteHeader {
+  name: "Site Header",
+  left: 388.5px,
+  top: 145px,
+  width: 60%,
+  border[0].visible: .false,
+  shadow[0].drop-shadow.visible: .false,
+
+  siteHeader.GroupedStack_3pPDzjFuot {
+    overrides: [remove(siteHeader.Menu_oqJJaNTT2Y)]
+  }
+}
+
+Copy = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 32px},
+  overflow: .visible,
+  children: [largeLeft, frame2]
+}
+
+largeLeft = header.largeCenter {
+  name: "Header M (Left) Variant",
+  left: 1840px,
+  top: 449px,
+  width: 44.0752%,
+
+  header.largeSubtitle {
+    contents: "Built to grow in the hardest conditions, our tool takes root where others fail. Reliable and resilient, so your work never stops."
+  }
+
+  header.largeTitle {
+    contents: "Bloom, regardles."
+  }
+}
+
+frame2 = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: 20px},
+  overflow: .visible,
+  children: [medium, text3]
+}
+
+medium = button.medium {
+  name: "Button M (36)",
+  left: 733px,
+  top: 353px,
+
+  button.mediumLabel {
+    contents: "Get Started"
+  }
+}
+
+text3 = text {
+  name: "Watch Demo",
+  left: 854px,
+  top: 477px,
+  fill: colors.colors.blackAlpha50,
+  contents: "Watch Demo",
+  font-style: "SemiBold"
+}
+
+frame3 = frame {
+  name: "Grouped Stack",
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 32px},
+  overflow: .visible,
+  children: [bottom, base]
+}
+
+bottom = frame {
+  name: "Grouped Stack",
+  left: 311px,
+  top: 840px,
+  width: 60%,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  children: [layer1, layer2, layer3]
+}
+
+layer1 = frame {
+  name: "Frame",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {item-gap: 12px},
+  fill: colors.colors.whiteAlpha50,
+  filter: {type: .background-blur, radius: 40px},
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: 16px,
+  children: [shape1, smallLeft]
+}
+
+shape1 = icon {
+  name: "direct-24.svg",
+  left: 644px,
+  top: 704px,
+  width: 40px,
+  height: 40px,
+  contents: direct24
+}
+
+smallLeft = header.smallLeft {
+  name: "Header S (Left)",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: .auto,
+
+  header.smallSubtitle {
+    contents: "Every detail is considered, and everything unnecessary is left out."
+  }
+
+  header.smallTitle {
+    contents: "Intentionally minimal",
+    width: .auto
+  }
+}
+
+layer2 = frame {
+  name: "Frame",
+  left: 20px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {item-gap: 12px},
+  fill: colors.colors.whiteAlpha50,
+  filter: {type: .background-blur, radius: 40px},
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: 16px,
+  children: [shape2, smallLeft_2]
+}
+
+shape2 = icon {
+  name: "direct-24.svg",
+  left: 648px,
+  top: 708px,
+  width: 40px,
+  height: 40px,
+  contents: activity
+}
+
+smallLeft_2 = header.smallLeft {
+  name: "Header S (Left)",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+
+  header.smallSubtitle {
+    contents: "Dependable sync and performance you can trust, no matter where you work."
+  }
+
+  header.smallTitle {
+    contents: "Rock steady",
+    width: .auto
+  }
+}
+
+layer3 = frame {
+  name: "Frame",
+  left: 354.6666px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {item-gap: 12px},
+  fill: colors.colors.whiteAlpha50,
+  filter: {type: .background-blur, radius: 40px},
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: 16px,
+  children: [shape3, smallLeft_3]
+}
+
+shape3 = icon {
+  name: "direct-24.svg",
+  left: 655px,
+  top: 715px,
+  width: 40px,
+  height: 40px,
+  contents: mug24
+}
+
+smallLeft_3 = header.smallLeft {
+  name: "Header S (Left)",
+  left: 0px,
+  top: 0px,
+  width: 100%,
+
+  header.smallSubtitle {
+    contents: "Collaboration made simple, in a space designed to keep everyone in flow."
+  }
+
+  header.smallTitle {
+    contents: "Better as a team",
+    width: .auto
+  }
+}
+
+base = tag.iconAndLabel {
+  name: "Icon and Label",
+  left: 774px,
+  top: 1091px,
+  border[0].visible: .false,
+  fill[0].color: colors.colors.blackAlpha25,
+
+  tag.label {
+    contents: "Scroldown",
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  tag.icon {
+    contents: arrowDown20,
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+}

@@ -44,7 +44,7 @@ mediumLabel = text {
   contents: "Button",
   font-size: Typography.typography.labelML,
   font-family: "Inter",
-  font-style: "Medium",
+  font-style: "SemiBold",
   align: .center
 }
 
@@ -164,7 +164,7 @@ smallLabel = text {
   contents: "Button",
   font-size: 12,
   font-family: "Inter",
-  font-style: "Medium",
+  font-style: "SemiBold",
   align: .center
 }
 
