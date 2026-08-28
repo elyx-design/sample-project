@@ -106,7 +106,11 @@ sidebarItemVariant_o8wJnAA = sidebarItem.sidebarItemVariant_Q {
   }
 }
 
-userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {name: "User Summary", left: 0px, top: 1241px}
+userSummary_RP1JqZ1 = userSummary2.userSummary_3nStch3 {
+  name: "User Summary",
+  left: 0px,
+  top: 1241px
+}
 
 export sideBar_xy3AK6H6s8 = cardBackground.cardBackgroundSolidVariant_o {
   name: "App Sidebar",
@@ -247,7 +251,7 @@ sidebarVariant = sidebar_QjenIug {
   ]
 }
 
-layer_0 = avatar.AvatarSVariant {name: "Avatar S (Photo)", left: 550px, top: 402px}
+layer_0 = avatar.smallPhoto {name: "Avatar S (Photo)", left: 550px, top: 402px}
 
 GroupedStack_C = frame {
   name: "Compact Sidebar Content",
@@ -265,52 +269,52 @@ GroupedStack = frame {
   children: [layer, Icon_2, Icon_C, Icon_L, Icon]
 }
 
-layer = button.PrimaryRounded {
+layer = button.mediumPlainIcon {
   name: "Home Button",
   left: 8.72px,
   top: 108px,
 
-  button.calendar24svg_0 {
+  button.mediumPlainIconGlyph {
     contents: home24
   }
 }
 
-Icon_2 = button.PrimaryRounded {
+Icon_2 = button.mediumPlainIcon {
   name: "Create Button",
   left: 28.72px,
   top: 128px,
 
-  button.calendar24svg_0 {
+  button.mediumPlainIconGlyph {
     contents: create24
   }
 }
 
-Icon_C = button.PrimaryRounded {
+Icon_C = button.mediumPlainIcon {
   name: "Folder Button",
   left: 28.72px,
   top: 128px,
 
-  button.calendar24svg_0 {
+  button.mediumPlainIconGlyph {
     contents: folder24
   }
 }
 
-Icon_L = button.PrimaryRounded {
+Icon_L = button.mediumPlainIcon {
   name: "Cloud Button",
   left: 28.72px,
   top: 164px,
 
-  button.calendar24svg_0 {
+  button.mediumPlainIconGlyph {
     contents: cloud24
   }
 }
 
-Icon = button.PrimaryRounded {
+Icon = button.mediumPlainIcon {
   name: "History Button",
   left: 28.72px,
   top: 128px,
 
-  button.calendar24svg_0 {
+  button.mediumPlainIconGlyph {
     contents: history24
   }
 }

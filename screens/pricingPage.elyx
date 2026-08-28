@@ -45,7 +45,7 @@ layer = planCard.planCard_LTK7mFiyqR {
   height: 100%,
   fill[0].visible: .false,
 
-  planCard.layer_Z.button.Button {
+  planCard.layer_Z.button.mediumLabel {
     contents: "Register for free!"
   }
 
@@ -70,10 +70,10 @@ planCard_H = planCard.planCard_LTK7mFiyqR {
   height: 498px,
   corner-radius: [20px, 0px, 0px, 20px],
 
-  @use-variant(appTopBar.button.ButtonVariant_V)
+  @use-variant(appTopBar.button.mediumPrimary)
   planCard.layer_Z {}
 
-  planCard.layer_Z.button.Button {
+  planCard.layer_Z.button.mediumLabel {
     contents: "Get Started"
   }
 
@@ -149,7 +149,7 @@ planCard_O = planCard.planCard_LTK7mFiyqR {
   height: 100%,
   corner-radius: [0px, 20px, 20px, 0px],
 
-  planCard.layer_Z.button.Button {
+  planCard.layer_Z.button.mediumLabel {
     contents: "Contact sales"
   }
 

@@ -26,7 +26,7 @@ export SocialCard_QzfezrXgSp = cardBackground.cardBackgroundSolidVariant {
   ]
 }
 
-layer_z = button.ButtonX28_unc1oz6mM6 {name: "Button S (28)", left: 1318px, top: 603px}
+layer_z = button.small {name: "Button S (28)", left: 1318px, top: 603px}
 
 layer = userSummary.UserSummaryM_3TgjJsJRgL {
   name: "User Summary M",
@@ -45,18 +45,14 @@ GroupedStack_Xn7zNLiGaY = frame {
   children: [profileGroup_j6LSOW6AIt, Primary_74gHxo0W69]
 }
 
-profileGroup_j6LSOW6AIt = avatarGroup.profileGroup_yzgf0sKCPf {
-  name: "Follower Avatars",
-  left: 20px,
-  top: 383px
-}
+profileGroup_j6LSOW6AIt = avatarGroup.base {name: "Follower Avatars", left: 20px, top: 383px}
 
-Primary_74gHxo0W69 = button.ButtonVariant_V {
+Primary_74gHxo0W69 = button.mediumPrimary {
   name: "Follow Button",
   left: 151.5px,
   top: 160px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Follow"
   }
 }
@@ -80,27 +76,27 @@ GroupedStack_CzQMt15d8V = frame {
   children: [Icon_VkGiO7tulw, Icon_NbaFVQqXgU, Close_EIAQCGPEGW]
 }
 
-Icon_VkGiO7tulw = button.ButtonS28Variant_7 {
+Icon_VkGiO7tulw = button.smallIcon {
   name: "Favorite Button",
   left: 245.81px,
   top: 37.5995px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: star20
   }
 }
 
-Icon_NbaFVQqXgU = button.ButtonS28Variant_7 {
+Icon_NbaFVQqXgU = button.smallIcon {
   name: "Like Button",
   left: 265.81px,
   top: 57.5995px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: heart20
   }
 }
 
-Close_EIAQCGPEGW = button.ButtonS28Variant_X {
+Close_EIAQCGPEGW = button.smallClose {
   name: "Close",
   left: 526px,
   top: 225px,

@@ -35,7 +35,7 @@ settingRow_O = settingRow.settingRow_HQWVNjz {
   width: 100%,
   height: .auto,
 
-  settingRow.layer.button.Button {
+  settingRow.layer.button.mediumLabel {
     contents: "Change"
   }
 
@@ -55,7 +55,7 @@ settingRow_u = settingRow.settingRow_HQWVNjz {
   width: 100%,
   height: .auto,
 
-  settingRow.layer.button.Button {
+  settingRow.layer.button.mediumLabel {
     contents: "Manage"
   }
 

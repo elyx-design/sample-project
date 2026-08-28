@@ -256,12 +256,12 @@ Basicexportoptions_NPd1l59Z9w = text {
   font-style: "Regular"
 }
 
-layer_Z = button.button_43RxZnGr30 {
+layer_Z = button.medium {
   name: "Manage Plan Button",
   left: 24px,
   top: 390px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Manage Plan"
   }
 }

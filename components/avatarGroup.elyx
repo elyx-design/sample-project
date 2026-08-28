@@ -5,132 +5,132 @@ import "images/profileImgs/002.jpg" as module6
 import "images/profileImgs/003.jpg" as module7
 import "images/profileImgs/004.jpg" as module8
 
-export profileGroup_yzgf0sKCPf = frame {
+export base = frame {
   name: "Avatar Group",
   left: 484px,
   top: 511px,
   width: 140px,
   layout: {align-items: .center},
   overflow: .visible,
-  children: GroupedStack_OfeQSGHwlq
+  children: baseStack
 }
 
-GroupedStack_OfeQSGHwlq = frame {
+baseStack = frame {
   name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
   height: 36px,
   overflow: .visible,
-  children: [layer_V, layer_tn, layer_l, layer_Q, layer_DE]
+  children: [baseFifthPhoto, baseFourthPhoto, baseThirdPhoto, baseSecondPhoto, baseFirstPhoto]
 }
 
-layer_V = userAvatar.AvatarSVariant {
+baseFifthPhoto = userAvatar.smallPhoto {
   name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module8
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-layer_tn = userAvatar.AvatarSVariant {
+baseFourthPhoto = userAvatar.smallPhoto {
   name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module7
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-layer_l = userAvatar.AvatarSVariant {
+baseThirdPhoto = userAvatar.smallPhoto {
   name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module6
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-layer_Q = userAvatar.AvatarSVariant {
+baseSecondPhoto = userAvatar.smallPhoto {
   name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module5
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-layer_DE = userAvatar.AvatarSVariant {
+baseFirstPhoto = userAvatar.smallPhoto {
   name: "Photo1",
   left: 0px,
   top: 0px,
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
 @variant("profileGroup Label Right")
-profileGroupVariant = profileGroup_yzgf0sKCPf {
+labelRight = base {
   left: 484px,
   top: 595px,
   width: .auto,
   layout.item-gap: 8px,
   overrides: [
-    insert(avatargroup_J, after = .nil),
-    insert(layer, after = avatargroup_J),
-    remove(GroupedStack_OfeQSGHwlq)
+    insert(rightStack, after = .nil),
+    insert(rightCount, after = rightStack),
+    remove(baseStack)
   ]
 }
 
 @variant("profileGroup Label bottom")
-profileGroupLabelbottom_uuBCQBPIGh = profileGroup_yzgf0sKCPf {
+labelBottom = base {
   left: 487.3293px,
   top: 679px,
   width: .auto,
   layout.direction: .column,
   layout.item-gap: 8px,
   overrides: [
-    insert(avatargroup_PMFARLtmys, after = .nil),
-    insert(Frame_czczziH5wc, after = avatargroup_PMFARLtmys),
-    remove(GroupedStack_OfeQSGHwlq)
+    insert(bottomStack, after = .nil),
+    insert(bottomCount, after = bottomStack),
+    remove(baseStack)
   ]
 }
 
-layer = frame {
+rightCount = frame {
   name: "Right Count Label",
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
-  children: textLayer
+  children: rightCountText
 }
 
-textLayer = text {
+rightCountText = text {
   name: "+28",
   left: 0px,
   top: 0px,
@@ -140,7 +140,7 @@ textLayer = text {
   contents: "+28"
 }
 
-avatargroup_PMFARLtmys = frame {
+bottomStack = frame {
   name: "Avatar Stack",
   left: 0px,
   top: 0px,
@@ -148,93 +148,93 @@ avatargroup_PMFARLtmys = frame {
   height: 36px,
   overflow: .visible,
   children: [
-    Photo5_fBnyYRJS4i,
-    Photo4_RNRKXPP8gA,
-    Photo3_0aHj3lFM7Z,
-    Photo2_iP17o8hjlk,
-    Photo1_P7OymuGtix
+    bottomFifthPhoto,
+    bottomFourthPhoto,
+    bottomThirdPhoto,
+    bottomSecondPhoto,
+    bottomFirstPhoto
   ]
 }
 
-Photo5_fBnyYRJS4i = userAvatar.AvatarSVariant {
+bottomFifthPhoto = userAvatar.smallPhoto {
   name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module8
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo4_RNRKXPP8gA = userAvatar.AvatarSVariant {
+bottomFourthPhoto = userAvatar.smallPhoto {
   name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module7
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo3_0aHj3lFM7Z = userAvatar.AvatarSVariant {
+bottomThirdPhoto = userAvatar.smallPhoto {
   name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module6
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo2_iP17o8hjlk = userAvatar.AvatarSVariant {
+bottomSecondPhoto = userAvatar.smallPhoto {
   name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module5
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo1_P7OymuGtix = userAvatar.AvatarSVariant {
+bottomFirstPhoto = userAvatar.smallPhoto {
   name: "Photo1",
   left: 0px,
   top: 0px,
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Frame_czczziH5wc = frame {
+bottomCount = frame {
   name: "Bottom Count Label",
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
-  children: textLayer_dV81HeiWgb
+  children: bottomCountText
 }
 
-textLayer_dV81HeiWgb = text {
+bottomCountText = text {
   name: "+28",
   left: 0px,
   top: 0px,
@@ -245,188 +245,184 @@ textLayer_dV81HeiWgb = text {
 }
 
 @variant("profileGroup Variant")
-profileGroupVariant_d = profileGroup_yzgf0sKCPf {
+labelTop = base {
   left: 484px,
   top: 788px,
   layout.align-items: .start,
   layout.direction: .column,
   layout.item-gap: 4px,
-  overrides: [
-    insert(Frame, after = .nil),
-    insert(avatargroup, after = Frame),
-    remove(GroupedStack_OfeQSGHwlq)
-  ]
+  overrides: [insert(title, after = .nil), insert(topStack, after = title), remove(baseStack)]
 }
 
-avatargroup = frame {
+topStack = frame {
   name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
   height: 36px,
   overflow: .visible,
-  children: [Photo5, Photo4, Photo3, Photo2, Photo1]
+  children: [topFifthPhoto, topFourthPhoto, topThirdPhoto, topSecondPhoto, topFirstPhoto]
 }
 
-Photo5 = userAvatar.AvatarSVariant {
+topFifthPhoto = userAvatar.smallPhoto {
   name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module8
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo4 = userAvatar.AvatarSVariant {
+topFourthPhoto = userAvatar.smallPhoto {
   name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module7
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo3 = userAvatar.AvatarSVariant {
+topThirdPhoto = userAvatar.smallPhoto {
   name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module6
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo2 = userAvatar.AvatarSVariant {
+topSecondPhoto = userAvatar.smallPhoto {
   name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module5
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo1 = userAvatar.AvatarSVariant {
+topFirstPhoto = userAvatar.smallPhoto {
   name: "Photo1",
   left: 0px,
   top: 0px,
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-avatargroup_J = frame {
+rightStack = frame {
   name: "Avatar Stack",
   left: 0px,
   top: 0px,
   width: 140px,
   height: 36px,
   overflow: .visible,
-  children: [Photo5_z, Photo4_H, Photo3_T, Photo2_w, Photo1_M]
+  children: [rightFifthPhoto, rightFourthPhoto, rightThirdPhoto, rightSecondPhoto, rightFirstPhoto]
 }
 
-Photo5_z = userAvatar.AvatarSVariant {
+rightFifthPhoto = userAvatar.smallPhoto {
   name: "Photo5",
   left: 104px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module8
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo4_H = userAvatar.AvatarSVariant {
+rightFourthPhoto = userAvatar.smallPhoto {
   name: "Photo4",
   left: 78px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module7
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo3_T = userAvatar.AvatarSVariant {
+rightThirdPhoto = userAvatar.smallPhoto {
   name: "Photo3",
   left: 52px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module6
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo2_w = userAvatar.AvatarSVariant {
+rightSecondPhoto = userAvatar.smallPhoto {
   name: "Photo2",
   left: 26px,
   top: 0px,
   ignore-stack: .true,
 
-  userAvatar.bg_e {
+  userAvatar.smallImage {
     fill[0].image.ref: module5
   }
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Photo1_M = userAvatar.AvatarSVariant {
+rightFirstPhoto = userAvatar.smallPhoto {
   name: "Photo1",
   left: 0px,
   top: 0px,
 
-  userAvatar.statusonline_aL82ghuez5 {
+  userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Frame = frame {
+title = frame {
   name: "Group Title Label",
   left: 65px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
-  children: textLayer_s
+  children: titleText
 }
 
-textLayer_s = text {
+titleText = text {
   name: "+28",
   left: 0px,
   top: 0px,

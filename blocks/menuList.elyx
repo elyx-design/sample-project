@@ -96,8 +96,7 @@ Row_dpI5iHhQJU = ListRow.listRow_Gz4ibpIzuN {
     contents: chat20
   }
 
-  ListRow.Item_e_O {
-  }
+  ListRow.Item_e_O {}
 }
 
 Selected_rskLcIWzCu = ListRow.RowVariant_7 {
@@ -109,13 +108,9 @@ Selected_rskLcIWzCu = ListRow.RowVariant_7 {
     contents: "Activity"
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  }
-
-  ListRow.Item_e_O {
-
-  }
+  ListRow.Item_e_O {}
 }
 
 Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
@@ -131,16 +126,17 @@ Row_uaorkPnJJf = ListRow.listRow_Gz4ibpIzuN {
     contents: notes20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    
-  }
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  ListRow.Item_e_O {
-    
-  }
+  ListRow.Item_e_O {}
 }
 
-Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {name: "Menu Divider", left: 0px, top: 0px, width: 100%}
+Divider_7bOUsmBic5 = divider.Divider_97GT5IGMgL {
+  name: "Menu Divider",
+  left: 0px,
+  top: 0px,
+  width: 100%
+}
 
 Menu_Z86v8Yz2p0 = frame {
   name: "Workspace Menu",
@@ -164,13 +160,9 @@ Row_XU5C18oI9q = ListRow.listRow_Gz4ibpIzuN {
     contents: notes20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    
-  }
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  ListRow.Item_e_O {
-    
-  }
+  ListRow.Item_e_O {}
 }
 
 Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
@@ -186,13 +178,9 @@ Row_6PGwNMvVCy = ListRow.listRow_Gz4ibpIzuN {
     contents: settings20
   }
 
-  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {
-    
-  }
+  ListRow.GroupedStack.layer_H_9_E_y_R.iconButton.defaultsvg {}
 
-  ListRow.Item_e_O {
-   
-  }
+  ListRow.Item_e_O {}
 }
 
 GroupedStack_PhTktSdJeE = frame {
@@ -203,7 +191,7 @@ GroupedStack_PhTktSdJeE = frame {
   children: [ButtonM36_QkDpQUOUSJ, GroupedStack_TEA9Nb4ecN]
 }
 
-ButtonM36_QkDpQUOUSJ = button.ButtonVariant_T {name: "Danger Button", left: 213px, top: 242px}
+ButtonM36_QkDpQUOUSJ = button.mediumDanger {name: "Danger Button", left: 213px, top: 242px}
 
 GroupedStack_TEA9Nb4ecN = frame {
   name: "Secondary Actions",
@@ -213,22 +201,22 @@ GroupedStack_TEA9Nb4ecN = frame {
   children: [Icon_aibAeY7M3f, Icon_kecQYvY0Mv]
 }
 
-Icon_aibAeY7M3f = button.ButtonM36Variant_h {
+Icon_aibAeY7M3f = button.mediumIcon {
   name: "Share Button",
   left: 233px,
   top: 262px,
 
-  button.calendar24svg {
+  button.mediumIconGlyph {
     contents: direct24
   }
 }
 
-Icon_kecQYvY0Mv = button.ButtonM36Variant_h {
+Icon_kecQYvY0Mv = button.mediumIcon {
   name: "More Button",
   left: 253px,
   top: 282px,
 
-  button.calendar24svg {
+  button.mediumIconGlyph {
     contents: ellipsishorizontal24
   }
 }

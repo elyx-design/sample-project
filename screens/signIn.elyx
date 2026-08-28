@@ -34,12 +34,12 @@ AuthForm_j40iQAKlB1 = AuthForm.cardBackgroundSolid_gpNRKSrmXr {
   width: 32%
 }
 
-profileGroup_LYFcdFxyNU = profileGroup.profileGroupLabelbottom_uuBCQBPIGh {
+profileGroup_LYFcdFxyNU = profileGroup.labelBottom {
   name: "Active Users",
   left: 600px,
   top: 962px,
 
-  profileGroup.Frame_czczziH5wc.textLayer_dV81HeiWgb {
+  profileGroup.bottomCount.bottomCountText {
     contents: "+28k online",
     fill[0].color: Colors.colors.whiteAlpha70
   }

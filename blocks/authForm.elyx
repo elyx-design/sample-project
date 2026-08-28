@@ -99,11 +99,11 @@ RememberLabel_Mburgp9oBk = text {
   font-style: "Regular"
 }
 
-Primary_3lXmMxE1bk = Button.ButtonVariant_V {
+Primary_3lXmMxE1bk = Button.mediumPrimary {
   name: "Sign In Button",
   width: 100%,
 
-  Button.Button {
+  Button.mediumLabel {
     contents: "Sign in"
   }
 }

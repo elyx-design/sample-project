@@ -32,7 +32,7 @@ export ToolbarCreate_WBWllCttV6 = cardBackground.cardBackgroundSolidVariant_B {
   ]
 }
 
-Icon_7TJ0RCVeUL = button.ButtonS28Variant_X {name: "Close", left: 686px, top: 602px}
+Icon_7TJ0RCVeUL = button.smallClose {name: "Close", left: 686px, top: 602px}
 
 GroupedStack_n9gWay5BJG = frame {
   name: "Tools",
@@ -49,12 +49,12 @@ GroupedStack_n9gWay5BJG = frame {
   ]
 }
 
-Icon_d3HRLKsqHq = button.ButtonS28Variant_7 {
+Icon_d3HRLKsqHq = button.smallIcon {
   name: "Frame Tool",
   left: 586px,
   top: 502px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: frame20
   }
 }
@@ -66,12 +66,12 @@ GroupedStack_1doynIV3VR = frame {
   children: [Icon_650qPmwIPa, chevrondown12svg_WAhL2Xn3jT]
 }
 
-Icon_650qPmwIPa = button.ButtonS28Variant_7 {
+Icon_650qPmwIPa = button.smallIcon {
   name: "Pointer Tool",
   left: 566px,
   top: 482px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: pointer20
   }
 }
@@ -94,12 +94,12 @@ GroupedStack_LNGQIB5TvI = frame {
   children: [Icon_HMJYV6zIOg, chevrondown12svg_3TeWdYmPSh]
 }
 
-Icon_HMJYV6zIOg = button.ButtonS28Variant_7 {
+Icon_HMJYV6zIOg = button.smallIcon {
   name: "Shape Tool",
   left: 566px,
   top: 482px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: shape20
   }
 }
@@ -113,42 +113,42 @@ chevrondown12svg_3TeWdYmPSh = icon {
   contents: chevrondown12
 }
 
-Icon_67gqL7VTo8 = button.ButtonS28Variant_7 {
+Icon_67gqL7VTo8 = button.smallIcon {
   name: "Image Tool",
   left: 646px,
   top: 562px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: image20
   }
 }
 
-Icon_rIRrS1H7io = button.ButtonS28Variant_7 {
+Icon_rIRrS1H7io = button.smallIcon {
   name: "Text Tool",
   left: 606px,
   top: 522px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: text20
   }
 }
 
-Icon_daW7bcJBuT = button.ButtonS28Variant_7 {
+Icon_daW7bcJBuT = button.smallIcon {
   name: "Comment Tool",
   left: 626px,
   top: 542px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: chat20
   }
 }
 
-Icon_DtYpJAIgiY = button.ButtonS28Variant_7 {
+Icon_DtYpJAIgiY = button.smallIcon {
   name: "Code Tool",
   left: 666px,
   top: 582px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: code20
   }
 }

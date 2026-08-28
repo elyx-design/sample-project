@@ -41,11 +41,11 @@ SettingDescription_FnvoRLz = text {
   font-style: "Regular"
 }
 
-layer = button.button_43RxZnGr30 {
+layer = button.medium {
   left: 500px,
   top: 105px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Label"
   }
 }

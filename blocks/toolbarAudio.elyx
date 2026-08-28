@@ -26,7 +26,7 @@ export Toolbaraudio_qGGZOkqJFq = cardBackground.cardBackgroundSolidVariant_B {
   ]
 }
 
-Close_EYg7HfYapC = button.ButtonS28Variant_X {name: "Close", left: 218px, top: 40px}
+Close_EYg7HfYapC = button.smallClose {name: "Close", left: 218px, top: 40px}
 
 GroupedStack_i4crOHtTlb = frame {
   name: "Audio Controls",
@@ -35,12 +35,12 @@ GroupedStack_i4crOHtTlb = frame {
   children: [Primaryrounded_YMDvd7YAnF, AudioBar_9RsV8DSxFJ, Tools_Zeh2Ix47Qp]
 }
 
-Primaryrounded_YMDvd7YAnF = button.ButtonS28Variant_5 {
+Primaryrounded_YMDvd7YAnF = button.smallPrimaryRounded {
   name: "Play Button",
   left: 0px,
   top: 4px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: play20
   }
 }
@@ -54,14 +54,14 @@ Tools_Zeh2Ix47Qp = frame {
   children: [Icon_GIIMxS9hgD, Icon_gcEBtbFoWa]
 }
 
-Icon_GIIMxS9hgD = button.ButtonS28Variant_7 {
+Icon_GIIMxS9hgD = button.smallIcon {
   name: "Favorite Button",
   left: 218px,
   top: 40px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: star20
   }
 }
 
-Icon_gcEBtbFoWa = button.ButtonS28Variant_7 {name: "More Button", left: 198px, top: 20px}
+Icon_gcEBtbFoWa = button.smallIcon {name: "More Button", left: 198px, top: 20px}

@@ -35,32 +35,32 @@ GroupedStack_rdVoRETh1T = frame {
   children: [Icon_4slh7sL8pH, Icon_teDPq1aBTb, Icon_clXC1PW6fA]
 }
 
-Icon_4slh7sL8pH = button.ButtonS28Variant_7 {
+Icon_4slh7sL8pH = button.smallIcon {
   name: "Settings Button",
   left: 264.5px,
   top: 8.5px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: settings20
   }
 }
 
-Icon_teDPq1aBTb = button.ButtonS28Variant_7 {
+Icon_teDPq1aBTb = button.smallIcon {
   name: "Like Button",
   left: 284.5px,
   top: 28.5px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: heart20
   }
 }
 
-Icon_clXC1PW6fA = button.ButtonS28Variant_7 {
+Icon_clXC1PW6fA = button.smallIcon {
   name: "More Button",
   left: 284.5px,
   top: 28.5px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: more20
   }
 }
@@ -82,12 +82,12 @@ GroupedStack_q0ILkfiHMO = frame {
   children: [Icon_5hh58LFCp5, Slider_QNPbheVsY9]
 }
 
-Icon_5hh58LFCp5 = button.ButtonS28Variant_7 {
+Icon_5hh58LFCp5 = button.smallIcon {
   name: "Play Button",
   left: 737px,
   top: 580px,
 
-  button.trash20svg_W {
+  button.smallIconGlyph {
     contents: play20
   }
 }

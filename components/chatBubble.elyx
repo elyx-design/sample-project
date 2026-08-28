@@ -14,16 +14,16 @@ export ChatBubble_Rb2QJd9jzc = frame {
   children: [AvatarSPhoto_MIH7WKKzVs, Frame_iMg8dwYyHE]
 }
 
-AvatarSPhoto_MIH7WKKzVs = avatar.AvatarSVariant {
+AvatarSPhoto_MIH7WKKzVs = avatar.smallPhoto {
   name: "Avatar S (Photo)",
   left: 0px,
   top: 0px,
 
-  avatar.bg_e {
+  avatar.smallImage {
     fill[0].image.ref: module4
   }
 
-  avatar.statusonline_aL82ghuez5 {
+  avatar.smallStatus {
     display: .hidden
   }
 }
@@ -56,7 +56,7 @@ ChatBubbleVariant = ChatBubble_Rb2QJd9jzc {
   top: 560px,
   overrides: [move(Frame_iMg8dwYyHE, after = .nil)],
 
-  AvatarSPhoto_MIH7WKKzVs.avatar.bg_e {
+  AvatarSPhoto_MIH7WKKzVs.avatar.smallImage {
     fill[0].image.ref: module
   }
 

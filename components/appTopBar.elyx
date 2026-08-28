@@ -64,15 +64,10 @@ tools = frame {
   children: [leadingTool, middleTool, trailingTool]
 }
 
-leadingTool = button.ButtonS28Variant_7 {name: "Icon", left: 287px, top: 21px}
+leadingTool = button.smallIcon {name: "Icon", left: 287px, top: 21px}
 
-middleTool = button.ButtonS28Variant_7 {name: "Icon", left: 307px, top: 41px}
+middleTool = button.smallIcon {name: "Icon", left: 307px, top: 41px}
 
-trailingTool = button.ButtonS28Variant_7 {name: "Icon", left: 335px, top: 41px}
+trailingTool = button.smallIcon {name: "Icon", left: 335px, top: 41px}
 
-primaryButton = button.PrimaryS_bwovCsQN9N {
-  name: "Primary Button",
-  left: 606px,
-  top: 542px,
-  width: 62px
-}
+primaryButton = button.smallPrimary {name: "Primary Button", left: 606px, top: 542px, width: 62px}

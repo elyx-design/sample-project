@@ -3,7 +3,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "images/profileImgs/005.jpg" as module
 
-export userAvatar_mKGJ6R7 = frame {
+export small = frame {
   name: "Avatar S",
   left: -94px,
   top: 10px,
@@ -12,10 +12,10 @@ export userAvatar_mKGJ6R7 = frame {
   layout: {justify-content: .center, align-items: .center},
   corner-radius: Radius.radius.max,
   overflow: .visible,
-  children: [Ellipse_9bQZpYxKwR, AvatarInitials_F4uGTp6, statusonline_aL82ghuez5]
+  children: [smallBackground, smallInitials, smallStatus]
 }
 
-Ellipse_9bQZpYxKwR = shape {
+smallBackground = shape {
   name: "Avatar Background",
   left: 0px,
   top: 0px,
@@ -27,7 +27,7 @@ Ellipse_9bQZpYxKwR = shape {
   type: .ellipse
 }
 
-AvatarInitials_F4uGTp6 = text {
+smallInitials = text {
   name: "Avatar Initials",
   left: 10px,
   top: 10.5px,
@@ -40,7 +40,7 @@ AvatarInitials_F4uGTp6 = text {
   font-style: "SemiBold"
 }
 
-statusonline_aL82ghuez5 = Ellipse_4OkVFaGU2Y {
+smallStatus = status {
   name: "Online Status",
   left: 26.85px,
   top: 26.83px,
@@ -48,7 +48,7 @@ statusonline_aL82ghuez5 = Ellipse_4OkVFaGU2Y {
   border[0].width: 2px
 }
 
-export Ellipse_4OkVFaGU2Y = shape {
+export status = shape {
   name: "Avatar Status",
   left: -94px,
   top: -72.12px,
@@ -60,24 +60,16 @@ export Ellipse_4OkVFaGU2Y = shape {
 }
 
 @variant(Away)
-statusonlineVariant = Ellipse_4OkVFaGU2Y {
-  left: -58px,
-  top: -72px,
-  fill[0].color: rgb(100%, 65.3497%, 0%)
-}
+statusAway = status {left: -58px, top: -72px, fill[0].color: rgb(100%, 65.3497%, 0%)}
 
 @variant("Avatar S (Photo)")
-AvatarSVariant = userAvatar_mKGJ6R7 {
+smallPhoto = small {
   left: -40px,
   top: 10px,
-  overrides: [
-    insert(bg_e, after = .nil),
-    remove(AvatarInitials_F4uGTp6),
-    remove(Ellipse_9bQZpYxKwR)
-  ]
+  overrides: [insert(smallImage, after = .nil), remove(smallInitials), remove(smallBackground)]
 }
 
-export AvatarM_ej3y9t9gG9 = frame {
+export medium = frame {
   name: "Avatar M",
   left: -94px,
   top: 94px,
@@ -85,10 +77,10 @@ export AvatarM_ej3y9t9gG9 = frame {
   height: 72px,
   layout: {direction: .column, justify-content: .center, align-items: .center},
   overflow: .visible,
-  children: [bg_3215z21ZmM, LargeAvatarInitials_aSqGwd9dLG, statusonline_b8jSnQus5L]
+  children: [mediumBackground, mediumInitials, mediumStatus]
 }
 
-bg_3215z21ZmM = shape {
+mediumBackground = shape {
   name: "Avatar Background",
   left: 0px,
   top: 0px,
@@ -100,7 +92,7 @@ bg_3215z21ZmM = shape {
   type: .ellipse
 }
 
-LargeAvatarInitials_aSqGwd9dLG = text {
+mediumInitials = text {
   name: "Large Avatar Initials",
   left: 21.5px,
   fill: Colors.colors.black20,
@@ -110,7 +102,7 @@ LargeAvatarInitials_aSqGwd9dLG = text {
   font-style: "SemiBold"
 }
 
-statusonline_b8jSnQus5L = Ellipse_4OkVFaGU2Y {
+mediumStatus = status {
   name: "Online Status",
   left: 56.85px,
   top: 56.83px,
@@ -119,18 +111,14 @@ statusonline_b8jSnQus5L = Ellipse_4OkVFaGU2Y {
 }
 
 @variant("Avatar M Variant")
-AvatarMVariant = AvatarM_ej3y9t9gG9 {
+mediumPhoto = medium {
   left: -4px,
   top: 94px,
   layout.include-borders: .true,
-  overrides: [
-    insert(bg, after = .nil),
-    remove(LargeAvatarInitials_aSqGwd9dLG),
-    remove(bg_3215z21ZmM)
-  ]
+  overrides: [insert(mediumImage, after = .nil), remove(mediumInitials), remove(mediumBackground)]
 }
 
-bg = shape {
+mediumImage = shape {
   name: "Avatar Photo",
   left: 0px,
   top: 0px,
@@ -142,7 +130,7 @@ bg = shape {
   type: .ellipse
 }
 
-bg_e = shape {
+smallImage = shape {
   name: "Avatar Photo",
   left: 0px,
   top: 0px,

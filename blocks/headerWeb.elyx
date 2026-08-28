@@ -19,9 +19,7 @@ export Header_YoW7I9TfdY = cardBackground.cardBackgroundSolidVariant {
   layout.direction: .row,
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
-  overrides: [
-
-  ]
+  overrides: []
 }
 
 export Menu_NptvsRIaJB = frame {
@@ -53,11 +51,7 @@ MenuVariant = Menu_NptvsRIaJB {
 }
 
 @variant("HeaderWeb Logged in")
-HeaderWebVariant = Header_YoW7I9TfdY {
-  left: 512px,
-  top: 572px,
-  height: spacing.spacing.heightG,
-}
+HeaderWebVariant = Header_YoW7I9TfdY {left: 512px, top: 572px, height: spacing.spacing.heightG}
 
 @variant("Menu (icon)")
 MenuVariant2 = Menu_NptvsRIaJB {
@@ -96,12 +90,12 @@ Menu_ufNhOkr09F = Menu_NptvsRIaJB {
   }
 }
 
-PrimaryM_TNPWRcxiAf = button.ButtonVariant_V {
+PrimaryM_TNPWRcxiAf = button.mediumPrimary {
   name: "Join the Circle Button",
   left: 867px,
   top: 498px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Join the Circle"
   }
 }

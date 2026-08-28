@@ -95,12 +95,12 @@ TagTransparent_jGUzhscTvO = tag.Frame_EkvUQb0wU7 {
   }
 }
 
-ButtonM36_zR4KGcaKIy = button.button_43RxZnGr30 {
+ButtonM36_zR4KGcaKIy = button.medium {
   name: "Read Full Review Button",
   left: 0px,
   top: 165px,
 
-  button.Button {
+  button.mediumLabel {
     contents: "Read full review"
   }
 }
@@ -128,9 +128,9 @@ UserSummaryS_hvtjNfK8hg = userSummary.UserSummaryS_clM0CpDw4i {
     fill[0].color: colors.colors.white100
   }
 
-  userSummary.AvatarSPhoto_aTBp6lpaL0.userAvatar.statusonline_aL82ghuez5 {
+  userSummary.AvatarSPhoto_aTBp6lpaL0.userAvatar.smallStatus {
     display: .hidden
   }
 }
 
-Icon_7SEczsI9Lh = button.ButtonS28Variant_X {name: "Close Button", left: 1097px, top: 291px}
+Icon_7SEczsI9Lh = button.smallClose {name: "Close Button", left: 1097px, top: 291px}

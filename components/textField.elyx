@@ -178,22 +178,22 @@ TextFieldbutton = textField_vGl5JUl04s {
   }
 }
 
-Primaryrounded = button.ButtonS28Variant_5 {
+Primaryrounded = button.smallPrimaryRounded {
   name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: arrowUp20
   }
 }
 
-layer = button.ButtonS28Variant_5 {
+layer = button.smallPrimaryRounded {
   name: "Submit Button",
   left: 52.3381px,
   top: 5.85px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: arrowUp20
   }
 }

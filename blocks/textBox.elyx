@@ -42,42 +42,42 @@ Left_piKXpcEizh = frame {
   children: [Icon_3KhD1tJCaV, ButtonS28_Shpp3Pqg3i, Icon_I0hFPNgQeU, Icon_XwaE41lB4a]
 }
 
-Icon_3KhD1tJCaV = button.ButtonS28Variant_0 {
+Icon_3KhD1tJCaV = button.smallIconBackground {
   name: "Add Button",
   left: 654px,
   top: 728px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: plus20
   }
 }
 
-ButtonS28_Shpp3Pqg3i = button.ButtonX28_unc1oz6mM6 {
+ButtonS28_Shpp3Pqg3i = button.small {
   name: "Model Selector",
   left: 694px,
   top: 768px,
 
-  button.Button_2BBvydtXMm {
+  button.smallLabel {
     contents: "Haze 4.8 Pro"
   }
 }
 
-Icon_I0hFPNgQeU = button.ButtonS28Variant_0 {
+Icon_I0hFPNgQeU = button.smallIconBackground {
   name: "Search Button",
   left: 674px,
   top: 748px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: search20
   }
 }
 
-Icon_XwaE41lB4a = button.ButtonS28Variant_0 {
+Icon_XwaE41lB4a = button.smallIconBackground {
   name: "More Button",
   left: 694px,
   top: 768px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: more20
   }
 }
@@ -90,22 +90,22 @@ Right_m38ayLrToC = frame {
   children: [Icon_LMHih4IBDW, Primaryrounded_mAqw08qHjT]
 }
 
-Icon_LMHih4IBDW = button.ButtonS28Variant_0 {
+Icon_LMHih4IBDW = button.smallIconBackground {
   name: "Voice Button",
   left: 714px,
   top: 788px,
 
-  button.trash20svg {
+  button.smallBackgroundIcon {
     contents: voice20
   }
 }
 
-Primaryrounded_mAqw08qHjT = button.ButtonS28Variant_5 {
+Primaryrounded_mAqw08qHjT = button.smallPrimaryRounded {
   name: "Send Button",
   left: 734px,
   top: 808px,
 
-  button.trash20svg_z {
+  button.smallPrimaryRoundedIcon {
     contents: arrowUp20
   }
 }
