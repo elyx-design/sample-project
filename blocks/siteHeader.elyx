@@ -9,7 +9,6 @@ import "components/textField.elyx" as textField
 import "components/divider.elyx" as divider
 
 export siteHeader = cardBackground.solidFullRadius {
-  name: "Site Header",
   left: 512px,
   top: 456px,
   width: 1024px,
@@ -23,14 +22,13 @@ export siteHeader = cardBackground.solidFullRadius {
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
   overrides: [
-    insert(GroupedStack_wdgnFUsBsn, after = .nil),
-    insert(GroupedStack_3pPDzjFuot, after = GroupedStack_wdgnFUsBsn),
-    insert(GroupedStack_MQJzIUvAcJ, after = GroupedStack_3pPDzjFuot)
+    insert(brand, after = .nil),
+    insert(navLinks, after = brand),
+    insert(headerCta, after = navLinks)
   ]
 }
 
 export menu = frame {
-  name: "Menu",
   left: 191px,
   top: 456px,
   width: .auto,
@@ -39,7 +37,6 @@ export menu = frame {
 }
 
 label = text {
-  name: "Menu",
   left: 0px,
   top: 0px,
   fill: colors.colors.black20,
@@ -47,7 +44,7 @@ label = text {
   font-style: "SemiBold"
 }
 
-@variant("Menu Variant")
+@variant
 mutedMenu = menu {
   left: 191px,
   top: 521px,
@@ -57,18 +54,15 @@ mutedMenu = menu {
   }
 }
 
-@variant("Logged in")
+@variant
 loggedInHeader = siteHeader {
   left: 512px,
   top: 572px,
   height: spacing.spacing.heightG,
-  overrides: [
-    insert(GroupedStack, after = GroupedStack_3pPDzjFuot),
-    remove(GroupedStack_MQJzIUvAcJ)
-  ]
+  overrides: [insert(GroupedStack, after = navLinks), remove(headerCta)]
 }
 
-@variant("Menu (icon)")
+@variant
 iconMenu = menu {
   left: 275px,
   top: 456px,
@@ -76,7 +70,7 @@ iconMenu = menu {
   overrides: [insert(chevron, after = label)]
 }
 
-@variant("Menu Variant")
+@variant
 mutedIconMenu = menu {
   left: 275px,
   top: 521.6479px,
@@ -89,14 +83,12 @@ mutedIconMenu = menu {
 }
 
 headerActions = frame {
-  name: "Header Actions",
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: signInLink
 }
 
 signInLink = menu {
-  name: "Sign In Link",
   left: 1101px,
   top: 505px,
 
@@ -106,7 +98,6 @@ signInLink = menu {
 }
 
 primaryNavigation = frame {
-  name: "Primary Navigation",
   left: 0px,
   top: 27.5px,
   width: .auto,
@@ -116,7 +107,6 @@ primaryNavigation = frame {
 }
 
 productMenu = iconMenu {
-  name: "Product Menu",
   left: 0px,
   top: 0px,
   height: 17px,
@@ -127,7 +117,6 @@ productMenu = iconMenu {
 }
 
 pricingLink = mutedMenu {
-  name: "Pricing Link",
   left: 58px,
   top: 0px,
   height: 17px,
@@ -138,7 +127,6 @@ pricingLink = mutedMenu {
 }
 
 blogLink = mutedMenu {
-  name: "Blog Link",
   left: 78px,
   top: 20px,
   height: 17px,
@@ -149,7 +137,6 @@ blogLink = mutedMenu {
 }
 
 helpCenterLink = mutedMenu {
-  name: "Help Center Link",
   left: 128px,
   top: 20px,
   height: 17px,
@@ -159,15 +146,13 @@ helpCenterLink = mutedMenu {
   }
 }
 
-GroupedStack_MQJzIUvAcJ = frame {
-  name: "Grouped Stack",
+headerCta = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [Menu_9eKNms0xIQ, Primary_wXpMXTnHzx]
+  children: [logInLink, getStartedButton]
 }
 
-Menu_9eKNms0xIQ = menu {
-  name: "Menu",
+logInLink = menu {
   left: 1545px,
   top: 483px,
 
@@ -176,8 +161,7 @@ Menu_9eKNms0xIQ = menu {
   }
 }
 
-Primary_wXpMXTnHzx = button.mediumPrimary {
-  name: "Primary",
+getStartedButton = button.mediumPrimary {
   left: 751px,
   top: 475px,
 
@@ -187,14 +171,12 @@ Primary_wXpMXTnHzx = button.mediumPrimary {
 }
 
 GroupedStack = frame {
-  name: "Logged in",
   height: 100%,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
-  children: [layer_h, GroupedStack_K]
+  children: [searchField, accountCluster]
 }
 
-layer_h = textField.iconPlaceholder {
-  name: "Placeholder (Icon)",
+searchField = textField.iconPlaceholder {
   left: -90.12px,
   top: 16px,
   width: 180px,
@@ -204,15 +186,13 @@ layer_h = textField.iconPlaceholder {
   }
 }
 
-GroupedStack_K = frame {
-  name: "Account",
+accountCluster = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [layer_j, layer]
+  children: [languageMenu, layer]
 }
 
-layer_j = iconMenu {
-  name: "Menu (icon)",
+languageMenu = iconMenu {
   left: 1478px,
   top: 606px,
 
@@ -221,9 +201,9 @@ layer_j = iconMenu {
   }
 }
 
-layer = avatar.smallPhoto {name: "Avatar S (Photo)", left: 1255px, top: 577px}
+layer = avatar.smallPhoto {left: 1255px, top: 577px}
 
-@variant("No background")
+@variant
 SiteHeaderVariant = siteHeader {
   left: 512px,
   top: 688px,
@@ -235,17 +215,16 @@ SiteHeaderVariant = siteHeader {
   fill[0]: .nil,
   layout.direction: .column,
   overrides: [
-    insert(GroupedStack_J, after = .nil),
-    insert(DividerWhite, after = GroupedStack_J),
-    remove(GroupedStack_3pPDzjFuot),
-    remove(GroupedStack_MQJzIUvAcJ),
-    remove(GroupedStack_wdgnFUsBsn)
+    insert(bareContent, after = .nil),
+    insert(DividerWhite, after = bareContent),
+    remove(navLinks),
+    remove(headerCta),
+    remove(brand)
   ],
   shadow[0]: .nil
 }
 
 DividerWhite = divider.horizontal {
-  name: "Divider (White)",
   left: 615px,
   top: 752px,
   width: 100%,
@@ -257,43 +236,32 @@ DividerWhite = divider.horizontal {
   }
 }
 
-GroupedStack_J = frame {
-  name: "Content",
+bareContent = frame {
   width: 100%,
   height: 100%,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
   padding-left: 24px,
   padding-right: 24px,
-  children: [GroupedStack_y, GroupedStack_C, GroupedStack_R]
+  children: [bareBrand, bareNav, bareCta]
 }
 
-GroupedStack_y = frame {
-  name: "Grouped Stack",
+bareBrand = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
   children: [LogoM36, Text]
 }
 
-LogoM36 = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+LogoM36 = logo.medium {left: 596px, top: 481px}
 
-Text = text {
-  name: "Text",
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
+Text = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
 
-GroupedStack_C = frame {
-  name: "Grouped Stack",
+bareNav = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
-  children: [Menu, MenuVariant, MenuVariant_9, MenuVariant_N]
+  children: [Menu, MenuVariant, bareCompany, bareResources]
 }
 
 Menu = menu {
-  name: "Menu",
   left: 357.9778px,
   top: 33.5256px,
 
@@ -303,7 +271,6 @@ Menu = menu {
 }
 
 MenuVariant = mutedMenu {
-  name: "Menu Variant",
   left: 377.9778px,
   top: 53.5256px,
 
@@ -312,8 +279,7 @@ MenuVariant = mutedMenu {
   }
 }
 
-MenuVariant_9 = mutedMenu {
-  name: "Menu Variant",
+bareCompany = mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -322,8 +288,7 @@ MenuVariant_9 = mutedMenu {
   }
 }
 
-MenuVariant_N = mutedIconMenu {
-  name: "Menu Variant",
+bareResources = mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 
@@ -332,15 +297,13 @@ MenuVariant_N = mutedIconMenu {
   }
 }
 
-GroupedStack_R = frame {
-  name: "Grouped Stack",
+bareCta = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [Menu_A, Primary]
+  children: [bareLogIn, Primary]
 }
 
-Menu_A = menu {
-  name: "Menu",
+bareLogIn = menu {
   left: 1545px,
   top: 483px,
 
@@ -350,7 +313,6 @@ Menu_A = menu {
 }
 
 Primary = button.mediumPrimary {
-  name: "Primary",
   left: 751px,
   top: 475px,
 
@@ -359,8 +321,8 @@ Primary = button.mediumPrimary {
   }
 }
 
-@variant("Logged in")
-SiteHeaderVariant_R = siteHeader {
+@variant
+accountHeader = siteHeader {
   left: 512px,
   top: 804px,
   corner-radius: 0px,
@@ -370,17 +332,16 @@ SiteHeaderVariant_R = siteHeader {
   fill[0]: .nil,
   layout.direction: .column,
   overrides: [
-    insert(Content_0, after = .nil),
-    insert(DividerWhite_r, after = Content_0),
-    remove(GroupedStack_3pPDzjFuot),
-    remove(GroupedStack_MQJzIUvAcJ),
-    remove(GroupedStack_wdgnFUsBsn)
+    insert(accountContent, after = .nil),
+    insert(accountDivider, after = accountContent),
+    remove(navLinks),
+    remove(headerCta),
+    remove(brand)
   ],
   shadow[0]: .nil
 }
 
-Content_0 = frame {
-  name: "Content",
+accountContent = frame {
   left: 602px,
   top: 0px,
   width: 100%,
@@ -388,20 +349,18 @@ Content_0 = frame {
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
   padding-left: 24px,
   padding-right: 24px,
-  children: [GroupedStack_7, GroupedStack_1, Right_c]
+  children: [accountBrand, accountNav, accountActions]
 }
 
-GroupedStack_7 = frame {
-  name: "Grouped Stack",
+accountBrand = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [LogoM36_R, Text_p]
+  children: [accountLogo, accountBrandName]
 }
 
-LogoM36_R = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+accountLogo = logo.medium {left: 596px, top: 481px}
 
-Text_p = text {
-  name: "Text",
+accountBrandName = text {
   left: -340px,
   top: 503px,
   fill: .black,
@@ -409,15 +368,13 @@ Text_p = text {
   font-style: "Bold"
 }
 
-GroupedStack_1 = frame {
-  name: "Grouped Stack",
+accountNav = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
-  children: [Menu_z, MenuVariant_l, MenuVariant_8, MenuVariant_nx]
+  children: [accountProduct, accountPricing, accountCompany, accountResources]
 }
 
-Menu_z = menu {
-  name: "Menu",
+accountProduct = menu {
   left: 357.9778px,
   top: 33.5256px,
 
@@ -426,8 +383,7 @@ Menu_z = menu {
   }
 }
 
-MenuVariant_l = mutedMenu {
-  name: "Menu Variant",
+accountPricing = mutedMenu {
   left: 377.9778px,
   top: 53.5256px,
 
@@ -436,8 +392,7 @@ MenuVariant_l = mutedMenu {
   }
 }
 
-MenuVariant_8 = mutedMenu {
-  name: "Menu Variant",
+accountCompany = mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -446,8 +401,7 @@ MenuVariant_8 = mutedMenu {
   }
 }
 
-MenuVariant_nx = mutedIconMenu {
-  name: "Menu Variant",
+accountResources = mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 
@@ -456,17 +410,15 @@ MenuVariant_nx = mutedIconMenu {
   }
 }
 
-Right_c = frame {
-  name: "Logged in",
+accountActions = frame {
   left: 361.69px,
   top: 0px,
   height: 100%,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
-  children: [PlaceholderIcon_t, Account_E]
+  children: [accountSearch, accountMenu]
 }
 
-PlaceholderIcon_t = textField.iconPlaceholder {
-  name: "Placeholder (Icon)",
+accountSearch = textField.iconPlaceholder {
   left: -90.12px,
   top: 16px,
   width: 180px,
@@ -476,15 +428,13 @@ PlaceholderIcon_t = textField.iconPlaceholder {
   }
 }
 
-Account_E = frame {
-  name: "Account",
+accountMenu = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [Menuicon_3, AvatarSPhoto_m]
+  children: [accountLanguage, accountAvatar]
 }
 
-Menuicon_3 = iconMenu {
-  name: "Menu (icon)",
+accountLanguage = iconMenu {
   left: 1478px,
   top: 606px,
 
@@ -493,10 +443,9 @@ Menuicon_3 = iconMenu {
   }
 }
 
-AvatarSPhoto_m = avatar.smallPhoto {name: "Avatar S (Photo)", left: 1255px, top: 577px}
+accountAvatar = avatar.smallPhoto {left: 1255px, top: 577px}
 
-DividerWhite_r = divider.horizontal {
-  name: "Divider (White)",
+accountDivider = divider.horizontal {
   left: 576.72px,
   top: 718.25px,
   width: 100%,
@@ -509,7 +458,6 @@ DividerWhite_r = divider.horizontal {
 }
 
 chevron = icon {
-  name: "Menu Chevron",
   left: 297px,
   top: 460px,
   width: 12px,
@@ -519,7 +467,6 @@ chevron = icon {
 }
 
 mutedChevron = icon {
-  name: "Menu Chevron",
   left: 278px,
   top: 460px,
   width: 12px,
@@ -528,33 +475,23 @@ mutedChevron = icon {
   contents: chevrondown122
 }
 
-GroupedStack_wdgnFUsBsn = frame {
-  name: "Grouped Stack",
+brand = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [LogoM36_5rZb7ha4WK, Text_cS4xjtHDcz]
+  children: [brandLogo, brandName]
 }
 
-LogoM36_5rZb7ha4WK = logo.medium {name: "Logo M (36)", left: 596px, top: 481px}
+brandLogo = logo.medium {left: 596px, top: 481px}
 
-Text_cS4xjtHDcz = text {
-  name: "Text",
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
+brandName = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
 
-GroupedStack_3pPDzjFuot = frame {
-  name: "Grouped Stack",
+navLinks = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
-  children: [Menu_AxqK14iupG, Menu_BUggW5sq6e, Menu_cVkjoKXmFQ, Menu_oqJJaNTT2Y]
+  children: [navProduct, navPricing, navCompany, navResources]
 }
 
-Menu_AxqK14iupG = menu {
-  name: "Menu",
+navProduct = menu {
   left: 357.9778px,
   top: 33.5256px,
 
@@ -563,8 +500,7 @@ Menu_AxqK14iupG = menu {
   }
 }
 
-Menu_BUggW5sq6e = mutedMenu {
-  name: "Menu Variant",
+navPricing = mutedMenu {
   left: 377.9778px,
   top: 53.5256px,
 
@@ -573,8 +509,7 @@ Menu_BUggW5sq6e = mutedMenu {
   }
 }
 
-Menu_cVkjoKXmFQ = mutedMenu {
-  name: "Menu Variant",
+navCompany = mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -583,8 +518,7 @@ Menu_cVkjoKXmFQ = mutedMenu {
   }
 }
 
-Menu_oqJJaNTT2Y = mutedIconMenu {
-  name: "Menu Variant",
+navResources = mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 

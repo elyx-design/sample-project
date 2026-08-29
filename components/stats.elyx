@@ -2,7 +2,6 @@ import "components/divider.elyx" as divider
 import "tokens/colors.elyx" as colors
 
 export stats = frame {
-  name: "Stats",
   left: 396px,
   top: 630px,
   width: 1011.3979px,
@@ -10,10 +9,9 @@ export stats = frame {
   children: [topDivider, row, bottomDivider]
 }
 
-topDivider = divider.horizontal {name: "Divider (White)", left: 0px, top: 0px, width: 100%}
+topDivider = divider.horizontal {left: 0px, top: 0px, width: 100%}
 
 row = frame {
-  name: "Stats Row",
   left: 0px,
   top: 74px,
   width: 100%,
@@ -22,7 +20,6 @@ row = frame {
 }
 
 books = frame {
-  name: "Books Stat",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -31,7 +28,6 @@ books = frame {
 }
 
 booksValue = text {
-  name: "41",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -42,7 +38,6 @@ booksValue = text {
 }
 
 booksLabel = text {
-  name: "Books",
   left: 0px,
   top: 39px,
   width: 100%,
@@ -53,10 +48,9 @@ booksLabel = text {
   align: .center
 }
 
-booksDivider = divider.vertical {name: "Divider (vertical)", left: 20px, top: 701px, width: 100%}
+booksDivider = divider.vertical {left: 20px, top: 701px, width: 100%}
 
 pages = frame {
-  name: "Pages Stat",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -65,7 +59,6 @@ pages = frame {
 }
 
 pagesValue = text {
-  name: "11k",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -76,7 +69,6 @@ pagesValue = text {
 }
 
 pagesLabel = text {
-  name: "Pages",
   left: 0px,
   top: 39px,
   width: 100%,
@@ -87,10 +79,9 @@ pagesLabel = text {
   align: .center
 }
 
-pagesDivider = divider.vertical {name: "Divider (vertical)", left: 0px, top: 681px, width: 100%}
+pagesDivider = divider.vertical {left: 0px, top: 681px, width: 100%}
 
 rating = frame {
-  name: "Rating Stat",
   left: 0px,
   top: 40px,
   width: 100%,
@@ -99,7 +90,6 @@ rating = frame {
 }
 
 ratingValue = text {
-  name: "4.2",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -110,7 +100,6 @@ ratingValue = text {
 }
 
 ratingLabel = text {
-  name: "Rating",
   left: 0px,
   top: 39px,
   width: 100%,
@@ -121,10 +110,9 @@ ratingLabel = text {
   align: .center
 }
 
-ratingDivider = divider.vertical {name: "Divider (vertical)", left: 20px, top: 701px, width: 100%}
+ratingDivider = divider.vertical {left: 20px, top: 701px, width: 100%}
 
 shelves = frame {
-  name: "Shelves Stat",
   left: 20px,
   top: 60px,
   width: 100%,
@@ -133,7 +121,6 @@ shelves = frame {
 }
 
 shelvesValue = text {
-  name: "9",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -144,7 +131,6 @@ shelvesValue = text {
 }
 
 shelvesLabel = text {
-  name: "Shelves",
   left: 0px,
   top: 39px,
   width: 100%,
@@ -155,4 +141,4 @@ shelvesLabel = text {
   align: .center
 }
 
-bottomDivider = divider.horizontal {name: "Divider (White)", left: 20px, top: 20px, width: 100%}
+bottomDivider = divider.horizontal {left: 20px, top: 20px, width: 100%}

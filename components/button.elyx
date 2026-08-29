@@ -8,7 +8,6 @@ import "icons/24 pixels/calendar-24.svg" as calendar24
 import "icons/20 pixels/trash-20.svg" as trash20
 
 export medium = frame {
-  name: "Button M (36)",
   left: 962px,
   top: 689px,
   height: Spacing.spacing.heightM,
@@ -36,7 +35,6 @@ export medium = frame {
 }
 
 mediumLabel = text {
-  name: "Button Label",
   left: 12px,
   top: 9.5px,
   width: .auto,
@@ -48,7 +46,7 @@ mediumLabel = text {
   align: .center
 }
 
-@variant(Primary)
+@variant
 mediumPrimary = medium {
   left: 1072px,
   top: 689px,
@@ -66,7 +64,7 @@ mediumPrimary = medium {
   }
 }
 
-@variant(Danger)
+@variant
 mediumDanger = medium {
   left: 1181px,
   top: 689px,
@@ -83,7 +81,7 @@ mediumDanger = medium {
   }
 }
 
-@variant(Pressed)
+@variant
 mediumPressed = medium {
   left: 962px,
   top: 769px,
@@ -95,7 +93,7 @@ mediumPressed = medium {
   shadow[0].inner-shadow.style: .normal
 }
 
-@variant("Primary Pressed")
+@variant
 mediumPrimaryPressed = medium {
   left: 1072px,
   top: 769px,
@@ -111,7 +109,7 @@ mediumPrimaryPressed = medium {
   }
 }
 
-@variant("Danger Pressed")
+@variant
 mediumDangerPressed = medium {
   left: 1181px,
   top: 769px,
@@ -129,7 +127,6 @@ mediumDangerPressed = medium {
 }
 
 export small = frame {
-  name: "Button S (28)",
   left: 962px,
   top: 917px,
   height: 28px,
@@ -156,7 +153,6 @@ export small = frame {
 }
 
 smallLabel = text {
-  name: "Button Label",
   left: 8px,
   top: 6.5px,
   width: .auto,
@@ -168,7 +164,7 @@ smallLabel = text {
   align: .center
 }
 
-@variant("Danger Pressed")
+@variant
 smallDangerPressed = small {
   left: 1127px,
   top: 993px,
@@ -184,7 +180,7 @@ smallDangerPressed = small {
   }
 }
 
-@variant(Danger)
+@variant
 smallDanger = small {
   left: 1127px,
   top: 917px,
@@ -201,7 +197,7 @@ smallDanger = small {
   }
 }
 
-@variant(Pressed)
+@variant
 smallPressed = small {
   left: 962px,
   top: 993px,
@@ -213,7 +209,7 @@ smallPressed = small {
   shadow[0].inner-shadow.style: .normal
 }
 
-@variant(Primary)
+@variant
 smallPrimary = small {
   left: 1045px,
   top: 917px,
@@ -231,7 +227,7 @@ smallPrimary = small {
   }
 }
 
-@variant("Primary Pressed")
+@variant
 smallPrimaryPressed = small {
   left: 1045px,
   top: 993px,
@@ -246,7 +242,7 @@ smallPrimaryPressed = small {
   }
 }
 
-@variant(Icon)
+@variant
 mediumIcon = medium {
   left: 1348px,
   top: 689px,
@@ -254,7 +250,7 @@ mediumIcon = medium {
   overrides: [insert(mediumIconGlyph, after = .nil), remove(mediumLabel)]
 }
 
-@variant(Close)
+@variant
 mediumClose = medium {
   left: 1291px,
   top: 689px,
@@ -267,7 +263,7 @@ mediumClose = medium {
   shadow[0]: .nil
 }
 
-@variant("Icon (BG)")
+@variant
 smallIconBackground = small {
   left: 1257px,
   top: 917px,
@@ -275,7 +271,7 @@ smallIconBackground = small {
   overrides: [insert(smallBackgroundIcon, after = .nil), remove(smallLabel)]
 }
 
-@variant(Close)
+@variant
 smallClose = small {
   left: 1210px,
   top: 917px,
@@ -289,7 +285,6 @@ smallClose = small {
 }
 
 smallBackgroundIcon = icon {
-  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -299,7 +294,6 @@ smallBackgroundIcon = icon {
 }
 
 mediumCloseIcon = icon {
-  name: "Close Icon",
   left: 1387px,
   top: 682px,
   width: 24px,
@@ -308,17 +302,9 @@ mediumCloseIcon = icon {
   contents: close24
 }
 
-smallCloseIcon = icon {
-  name: "Close Icon",
-  left: 1211px,
-  top: 918px,
-  width: 20px,
-  height: 20px,
-  contents: close20
-}
+smallCloseIcon = icon {left: 1211px, top: 918px, width: 20px, height: 20px, contents: close20}
 
 mediumIconGlyph = icon {
-  name: "Button Icon",
   left: 1353px,
   top: 705px,
   width: 24px,
@@ -327,7 +313,7 @@ mediumIconGlyph = icon {
   contents: calendar24
 }
 
-@variant("Primary rounded")
+@variant
 smallPrimaryRounded = small {
   left: 1304px,
   top: 917px,
@@ -338,7 +324,6 @@ smallPrimaryRounded = small {
 }
 
 smallPrimaryRoundedIcon = icon {
-  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -347,7 +332,7 @@ smallPrimaryRoundedIcon = icon {
   contents: trash20
 }
 
-@variant(Icon)
+@variant
 smallIcon = small {
   left: 1353px,
   top: 917px,
@@ -359,7 +344,6 @@ smallIcon = small {
 }
 
 smallIconGlyph = icon {
-  name: "Button Icon",
   left: 1248px,
   top: 918px,
   width: 20px,
@@ -368,7 +352,7 @@ smallIconGlyph = icon {
   contents: trash20
 }
 
-@variant("Primary Rounded")
+@variant
 mediumPrimaryRounded = medium {
   left: 1405px,
   top: 689px,
@@ -383,7 +367,7 @@ mediumPrimaryRounded = medium {
   shadow[1].inner-shadow.spread: 0px
 }
 
-@variant(Icon)
+@variant
 mediumPlainIcon = medium {
   left: 1462px,
   top: 690.056px,
@@ -395,7 +379,6 @@ mediumPlainIcon = medium {
 }
 
 mediumPlainIconGlyph = icon {
-  name: "Button Icon",
   left: 1397px,
   top: 701px,
   width: 24px,
@@ -405,7 +388,6 @@ mediumPlainIconGlyph = icon {
 }
 
 mediumPrimaryRoundedIcon = icon {
-  name: "Button Icon",
   left: 1397px,
   top: 701px,
   width: 24px,

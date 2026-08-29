@@ -6,7 +6,6 @@ import "icons/20 pixels/close-20.svg" as close20
 import "icons/20 pixels/status-20.svg" as status20
 
 export base = frame {
-  name: "Tag (Transparent)",
   left: 542px,
   top: 548px,
   height: spacing.spacing.heightS,
@@ -21,7 +20,6 @@ export base = frame {
 }
 
 label = text {
-  name: "Label",
   left: 0px,
   top: 0px,
   fill: colors.colors.blackAlpha50,
@@ -30,7 +28,7 @@ label = text {
   font-style: "Bold"
 }
 
-@variant("Label and Close")
+@variant
 labelAndClose = base {
   left: 542px,
   top: 700px,
@@ -39,7 +37,7 @@ labelAndClose = base {
   overrides: [insert(closeIcon, after = label)]
 }
 
-@variant(Status)
+@variant
 status = base {
   left: 545px,
   top: 776px,
@@ -47,17 +45,9 @@ status = base {
   overrides: [insert(statusIcon, after = .nil)]
 }
 
-statusIcon = icon {
-  name: "Status Icon",
-  left: 525px,
-  top: 635px,
-  width: 20px,
-  height: 20px,
-  contents: status20
-}
+statusIcon = icon {left: 525px, top: 635px, width: 20px, height: 20px, contents: status20}
 
 closeIcon = icon {
-  name: "Close Icon",
   left: 525px,
   top: 635px,
   width: 20px,
@@ -66,17 +56,16 @@ closeIcon = icon {
   contents: close20
 }
 
-@variant("Icon and Label")
+@variant
 iconAndLabel = base {
   left: 542px,
   top: 624px,
   padding-left: 8px,
   layout.item-gap: 4px,
-  overrides: [insert(icon, after = .nil)]
+  overrides: [insert(tagIcon, after = .nil)]
 }
 
-icon = icon {
-  name: "Tag Icon",
+tagIcon = icon {
   left: 525px,
   top: 635px,
   width: 20px,

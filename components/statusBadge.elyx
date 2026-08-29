@@ -4,7 +4,6 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
 export base = frame {
-  name: "Status Badge",
   left: 461px,
   top: 1px,
   width: .auto,
@@ -17,7 +16,6 @@ export base = frame {
 }
 
 label = text {
-  name: "Status Label",
   fill: rgb(1.85%, 26.7497%, 11.23%),
   contents: "Label",
   font-size: Typography.typography.labelM,
@@ -25,7 +23,7 @@ label = text {
   font-style: "Medium"
 }
 
-@variant("statusBadge Variant")
+@variant
 dark = base {
   left: 461px,
   top: 76px,

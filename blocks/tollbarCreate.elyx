@@ -11,7 +11,6 @@ import "icons/20 pixels/image-20.svg" as image20
 import "icons/20 pixels/code-20.svg" as code20
 
 export toolbarCreate = cardBackground.transparentFullRadius {
-  name: "Toolbar Create",
   left: 488px,
   top: 479px,
   width: 348px,
@@ -29,17 +28,15 @@ export toolbarCreate = cardBackground.transparentFullRadius {
   overrides: [insert(tools, after = .nil), insert(close, after = tools)]
 }
 
-close = button.smallClose {name: "Close", left: 686px, top: 602px}
+close = button.smallClose {left: 686px, top: 602px}
 
 tools = frame {
-  name: "Tools",
   height: 100%,
   layout: {align-items: .center, item-gap: 8px},
   children: [frameTool, pointerMenu, shapeMenu, imageTool, textTool, commentTool, codeTool]
 }
 
 frameTool = button.smallIcon {
-  name: "Frame Tool",
   left: 586px,
   top: 502px,
 
@@ -49,14 +46,12 @@ frameTool = button.smallIcon {
 }
 
 pointerMenu = frame {
-  name: "Pointer Tool Menu",
   height: 100%,
   layout: {align-items: .center},
   children: [pointerTool, pointerChevron]
 }
 
 pointerTool = button.smallIcon {
-  name: "Pointer Tool",
   left: 566px,
   top: 482px,
 
@@ -65,17 +60,9 @@ pointerTool = button.smallIcon {
   }
 }
 
-pointerChevron = icon {
-  name: "Pointer Menu Chevron",
-  left: 549px,
-  top: 493px,
-  width: 12px,
-  height: 12px,
-  contents: chevrondown12
-}
+pointerChevron = icon {left: 549px, top: 493px, width: 12px, height: 12px, contents: chevrondown12}
 
 shapeMenu = frame {
-  name: "Shape Tool Menu",
   left: 110.5px,
   top: 20px,
   height: 100%,
@@ -84,7 +71,6 @@ shapeMenu = frame {
 }
 
 shapeTool = button.smallIcon {
-  name: "Shape Tool",
   left: 566px,
   top: 482px,
 
@@ -93,17 +79,9 @@ shapeTool = button.smallIcon {
   }
 }
 
-shapeChevron = icon {
-  name: "Shape Menu Chevron",
-  left: 549px,
-  top: 493px,
-  width: 12px,
-  height: 12px,
-  contents: chevrondown12
-}
+shapeChevron = icon {left: 549px, top: 493px, width: 12px, height: 12px, contents: chevrondown12}
 
 imageTool = button.smallIcon {
-  name: "Image Tool",
   left: 646px,
   top: 562px,
 
@@ -113,7 +91,6 @@ imageTool = button.smallIcon {
 }
 
 textTool = button.smallIcon {
-  name: "Text Tool",
   left: 606px,
   top: 522px,
 
@@ -123,7 +100,6 @@ textTool = button.smallIcon {
 }
 
 commentTool = button.smallIcon {
-  name: "Comment Tool",
   left: 626px,
   top: 542px,
 
@@ -133,7 +109,6 @@ commentTool = button.smallIcon {
 }
 
 codeTool = button.smallIcon {
-  name: "Code Tool",
   left: 666px,
   top: 582px,
 

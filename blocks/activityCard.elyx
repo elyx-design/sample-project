@@ -3,8 +3,7 @@ import "tokens/radius.elyx" as Radius
 import "components/header.elyx" as header
 import "components/activityRow.elyx" as activityRow
 
-export activityCard_Qrr8IWU = frame {
-  name: "Activity Card",
+export activityCard = frame {
   left: 0px,
   top: 433px,
   width: 100%,
@@ -14,11 +13,10 @@ export activityCard_Qrr8IWU = frame {
   border: {color: rgb(0%, 0%, 0%, 8%), position: .outside},
   corner-radius: Radius.radius.l,
   padding: Spacing.spacing.xl,
-  children: [layer, activityRow_2, activityRow_a, activityRow_v]
+  children: [layer, firstRow, secondRow, thirdRow]
 }
 
 layer = header.mediumLeft {
-  name: "Header M (Left)",
   left: 35px,
   top: 453px,
 
@@ -31,8 +29,8 @@ layer = header.mediumLeft {
   }
 }
 
-activityRow_2 = activityRow.activityRow {name: "Activity Row", left: 0px, top: 81px, width: 100%}
+firstRow = activityRow.activityRow {left: 0px, top: 81px, width: 100%}
 
-activityRow_a = activityRow.activityRow {name: "Activity Row", left: 0px, top: 101px, width: 100%}
+secondRow = activityRow.activityRow {left: 0px, top: 101px, width: 100%}
 
-activityRow_v = activityRow.activityRow {name: "Activity Row", left: 0px, top: 151px, width: 100%}
+thirdRow = activityRow.activityRow {left: 0px, top: 151px, width: 100%}

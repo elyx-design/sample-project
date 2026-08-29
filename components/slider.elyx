@@ -2,7 +2,6 @@ import "tokens/radius.elyx" as radius
 import "tokens/colors.elyx" as colors
 
 export base = frame {
-  name: "Slider",
   left: 702px,
   top: 539px,
   width: 203px,
@@ -17,7 +16,6 @@ export base = frame {
 }
 
 track = shape {
-  name: "Slider Track",
   left: 0px,
   top: 0px,
   width: 40%,
@@ -27,7 +25,7 @@ track = shape {
   type: .rect
 }
 
-@variant("Slider thumb")
+@variant
 thumb = base {
   left: 702px,
   top: 591px,
@@ -40,7 +38,6 @@ thumb = base {
 }
 
 thumbHandle = shape {
-  name: "Slider Thumb",
   left: 56.98px,
   top: -3.0789px,
   width: 10px,

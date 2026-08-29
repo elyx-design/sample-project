@@ -8,7 +8,6 @@ import "components/tag.elyx" as tag
 import "images/background/dots.jpg" as dots
 
 export planCard = frame {
-  name: "Plan Card",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -21,7 +20,6 @@ export planCard = frame {
 }
 
 planContent = frame {
-  name: "Plan Content",
   width: 100%,
   layout: {direction: .column, item-gap: 48px},
   overflow: .visible,
@@ -29,7 +27,6 @@ planContent = frame {
 }
 
 planSummary = frame {
-  name: "Plan Summary",
   width: 100%,
   layout: {align-items: .center, item-gap: 12px},
   overflow: .visible,
@@ -37,7 +34,6 @@ planSummary = frame {
 }
 
 planIcon = frame {
-  name: "Plan Icon",
   left: 0px,
   top: 0px,
   width: 40px,
@@ -49,7 +45,6 @@ planIcon = frame {
 }
 
 planGlyph = icon {
-  name: "Plan Glyph",
   left: 2px,
   top: 29px,
   width: 32px,
@@ -59,7 +54,6 @@ planGlyph = icon {
 }
 
 planHeader = frame {
-  name: "Plan Header",
   width: 100%,
   layout: {align-items: .center, item-gap: 16px},
   overflow: .visible,
@@ -67,7 +61,6 @@ planHeader = frame {
 }
 
 planName = text {
-  name: "Starter",
   fill: Colors.colors.black20,
   contents: "Starter",
   font-size: 20,
@@ -76,7 +69,6 @@ planName = text {
 }
 
 badge = tag.iconAndLabel {
-  name: "Icon and Label",
   left: 67px,
   top: 37px,
   border[0].visible: .false,
@@ -88,14 +80,12 @@ badge = tag.iconAndLabel {
 }
 
 planDetails = frame {
-  name: "Plan Details",
   width: 100%,
   layout: {direction: .column, item-gap: 24px},
   children: [pricingCopy, features]
 }
 
 pricingCopy = frame {
-  name: "Pricing Copy",
   left: 24px,
   top: 112px,
   width: 100%,
@@ -104,14 +94,12 @@ pricingCopy = frame {
 }
 
 priceRow = frame {
-  name: "Price Row",
   width: 100%,
   layout: {align-items: .end, item-gap: 4px},
   children: [price, billingPeriod]
 }
 
 price = text {
-  name: "Plan Price",
   fill: Colors.colors.black20,
   contents: "$12",
   font-size: 40,
@@ -120,7 +108,6 @@ price = text {
 }
 
 billingPeriod = text {
-  name: "Billing Period",
   left: 40px,
   top: 132px,
   height: 22px,
@@ -132,7 +119,6 @@ billingPeriod = text {
 }
 
 description = text {
-  name: "Plan Description",
   left: 20px,
   top: 262px,
   fill: Colors.colors.black40,
@@ -142,7 +128,6 @@ description = text {
 }
 
 features = frame {
-  name: "Plan Features",
   left: 24px,
   top: 250px,
   layout: {direction: .column, item-gap: 8px},
@@ -150,22 +135,13 @@ features = frame {
 }
 
 projectsFeature = frame {
-  name: "Projects Feature",
   layout: {align-items: .center, item-gap: 8px},
   children: [projectsBullet, projectsLabel]
 }
 
-projectsBullet = icon {
-  name: "Feature Bullet",
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: dot12
-}
+projectsBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
 
 projectsLabel = text {
-  name: "Up to 3 projects",
   fill: Colors.colors.black40,
   contents: "Up to 3 projects",
   font-size: Typography.typography.labelML,
@@ -174,24 +150,15 @@ projectsLabel = text {
 }
 
 supportFeature = frame {
-  name: "Support Feature",
   left: 20px,
   top: 70px,
   layout: {align-items: .center, item-gap: 8px},
   children: [supportBullet, supportLabel]
 }
 
-supportBullet = icon {
-  name: "Feature Bullet",
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: dot12
-}
+supportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
 
 supportLabel = text {
-  name: "Community support",
   fill: Colors.colors.black40,
   contents: "Community support",
   font-size: Typography.typography.labelML,
@@ -200,24 +167,15 @@ supportLabel = text {
 }
 
 exportFeature = frame {
-  name: "Export Feature",
   left: 20px,
   top: 95px,
   layout: {align-items: .center, item-gap: 8px},
   children: [exportBullet, exportLabel]
 }
 
-exportBullet = icon {
-  name: "Feature Bullet",
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: dot12
-}
+exportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
 
 exportLabel = text {
-  name: "Basic export options",
   fill: Colors.colors.black40,
   contents: "Basic export options",
   font-size: Typography.typography.labelML,
@@ -226,24 +184,15 @@ exportLabel = text {
 }
 
 storageFeature = frame {
-  name: "Storage Feature",
   left: 40px,
   top: 115px,
   layout: {align-items: .center, item-gap: 8px},
   children: [storageBullet, storageLabel]
 }
 
-storageBullet = icon {
-  name: "Feature Bullet",
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: dot12
-}
+storageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
 
 storageLabel = text {
-  name: "2 GB storage",
   fill: Colors.colors.black40,
   contents: "2 GB storage",
   font-size: Typography.typography.labelML,
@@ -252,7 +201,6 @@ storageLabel = text {
 }
 
 manageButton = button.medium {
-  name: "Manage Plan Button",
   left: 24px,
   top: 390px,
 

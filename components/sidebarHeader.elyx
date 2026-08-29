@@ -3,29 +3,22 @@ import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
-
 export workspaceHeader = frame {
-  name: "Workspace Header",
   left: 16px,
   top: 16px,
   width: .auto,
   height: .auto,
   layout: {align-items: .center, item-gap: 10px},
   corner-radius: Radius.radius.m,
-  padding: Spacing.spacing.paddingM,
-
+  padding: Spacing.spacing.paddingM
 }
 
-
-
 workspaceMeta = frame {
-  name: "Workspace Meta",
   layout: {direction: .column, justify-content: .center, item-gap: 4px},
   children: [workspaceName, workspacePlan]
 }
 
 workspaceName = text {
-  name: "Haze",
   fill: Colors.colors.black20,
   contents: "Haze",
   font-size: Typography.typography.labelML,
@@ -34,7 +27,6 @@ workspaceName = text {
 }
 
 workspacePlan = text {
-  name: "Workspace Plan",
   fill: Colors.colors.blackAlpha70,
   contents: "Team plan",
   font-size: Typography.typography.labelM,

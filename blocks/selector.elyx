@@ -3,7 +3,6 @@ import "components/header.elyx" as header
 import "icons/24 pixels/chevron-upDown-24.svg" as chevronupDown24
 
 export Selector = frame {
-  name: "Frame",
   left: 268px,
   top: 443px,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 15px},
@@ -12,17 +11,15 @@ export Selector = frame {
 }
 
 Left = frame {
-  name: "Grouped Stack",
   height: 100%,
   layout: {align-items: .center, item-gap: 15px},
   overflow: .visible,
   children: [small, smallLeft]
 }
 
-small = avatar.smallPhoto {name: "Avatar S (Photo)", left: 0px, top: 2px}
+small = avatar.smallPhoto {left: 0px, top: 2px}
 
 smallLeft = header.smallLeft {
-  name: "Header S (Left)",
   left: 51px,
   top: 0px,
 
@@ -35,11 +32,4 @@ smallLeft = header.smallLeft {
   }
 }
 
-shape1 = icon {
-  name: "chevron-upDown-24.svg",
-  left: 26px,
-  top: 8px,
-  width: 24px,
-  height: 24px,
-  contents: chevronupDown24
-}
+shape1 = icon {left: 26px, top: 8px, width: 24px, height: 24px, contents: chevronupDown24}

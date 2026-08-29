@@ -4,7 +4,6 @@ import "components/product.elyx" as product
 import "blocks/productInfo.elyx" as productInfo
 
 export productGallery = cardBackground.base {
-  name: "Product Gallery",
   left: 177px,
   top: 240px,
   width: 888px,
@@ -14,7 +13,6 @@ export productGallery = cardBackground.base {
 }
 
 productList = frame {
-  name: "Product List",
   width: 100%,
   height: .auto,
   layout: {justify-content: .space-between, item-gap: 20px},
@@ -23,7 +21,6 @@ productList = frame {
 }
 
 designBook = productInfo.productInfo {
-  name: "Design Book",
   left: -167px,
   top: 300px,
   width: .auto,
@@ -46,7 +43,6 @@ designBook = productInfo.productInfo {
 }
 
 candyBook = productInfo.productInfo {
-  name: "Candy Book",
   left: -147px,
   top: 320px,
   width: .auto,
@@ -69,7 +65,6 @@ candyBook = productInfo.productInfo {
 }
 
 seaLifeBook = productInfo.productInfo {
-  name: "Sea Life Book",
   left: 77px,
   top: 320px,
   width: .auto,
@@ -92,7 +87,6 @@ seaLifeBook = productInfo.productInfo {
 }
 
 wildlifeBook = productInfo.productInfo {
-  name: "Wildlife Book",
   left: 301px,
   top: 320px,
   width: .auto,
@@ -115,7 +109,6 @@ wildlifeBook = productInfo.productInfo {
 }
 
 title = text {
-  name: "Gallery Title",
   left: 380px,
   top: 176.5px,
   fill: colors.colors.black20,

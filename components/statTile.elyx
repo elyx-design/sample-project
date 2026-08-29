@@ -4,7 +4,6 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 
 export statTile = frame {
-  name: "Stat Tile",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -28,7 +27,6 @@ export statTile = frame {
 }
 
 value = text {
-  name: "Stat Value",
   fill: Colors.colors.black20,
   contents: "16",
   font-size: Typography.typography.labelXL,
@@ -37,7 +35,6 @@ value = text {
 }
 
 label = text {
-  name: "Stat Label",
   fill: Colors.colors.blackAlpha70,
   contents: "Label",
   font-size: Typography.typography.labelML,

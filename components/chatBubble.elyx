@@ -6,7 +6,6 @@ import "tokens/spacing.elyx" as spacing
 import "images/profileImgs/001.jpg" as module4
 
 export base = frame {
-  name: "Chat Bubble",
   left: 602px,
   top: 476px,
   layout: {justify-content: .center, align-items: .center, item-gap: 8px},
@@ -15,7 +14,6 @@ export base = frame {
 }
 
 profileAvatar = avatar.smallPhoto {
-  name: "Avatar S (Photo)",
   left: 0px,
   top: 0px,
 
@@ -29,7 +27,6 @@ profileAvatar = avatar.smallPhoto {
 }
 
 message = frame {
-  name: "Message Bubble",
   left: 65px,
   top: 0px,
   width: .auto,
@@ -39,12 +36,12 @@ message = frame {
   corner-radius: radius.radius.max,
   padding-left: 12px,
   padding-right: 12px,
-  children: text
+  children: messageText
 }
 
-text = text {name: "Chat text", left: 0px, top: 0px, fill: .black, contents: "Chat text"}
+messageText = text {left: 0px, top: 0px, fill: .black, contents: "Chat text"}
 
-@variant(User)
+@variant
 user = base {
   left: 602px,
   top: 560px,
@@ -58,7 +55,7 @@ user = base {
     fill[0].color: colors.colors.black20
   }
 
-  message.text {
+  message.messageText {
     fill[0].color: colors.colors.white100
   }
 }

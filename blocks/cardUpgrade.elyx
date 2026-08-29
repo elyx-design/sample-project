@@ -4,7 +4,6 @@ import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
 
 export CardUpgrade = frame {
-  name: "Frame",
   left: 228px,
   top: 533px,
   width: 198px,
@@ -17,7 +16,6 @@ export CardUpgrade = frame {
 }
 
 top = frame {
-  name: "Frame",
   left: 0px,
   top: 0px,
   width: 100%,
@@ -30,7 +28,6 @@ top = frame {
 }
 
 title = frame {
-  name: "Frame",
   left: 0px,
   top: 24px,
   width: 100%,
@@ -39,7 +36,6 @@ title = frame {
 }
 
 shape1 = icon {
-  name: "direct-24.svg",
   left: 0px,
   top: 0px,
   width: 24px,
@@ -49,7 +45,6 @@ shape1 = icon {
 }
 
 text1 = text {
-  name: "Upgrade Pro",
   left: 60px,
   top: 15px,
   fill: colors.colors.white100,
@@ -58,7 +53,6 @@ text1 = text {
 }
 
 shape2 = icon {
-  name: "ellipsis-vertical-24.svg",
   left: 178px,
   top: 0px,
   width: 24px,
@@ -68,7 +62,6 @@ shape2 = icon {
 }
 
 bottom = frame {
-  name: "Grouped Stack",
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
   overflow: .visible,
@@ -79,7 +72,6 @@ bottom = frame {
 }
 
 text2 = text {
-  name: "Take your work furth",
   left: 0px,
   top: 67px,
   width: 100%,
@@ -89,7 +81,6 @@ text2 = text {
 }
 
 small = button.small {
-  name: "Button S (28)",
   left: 330px,
   top: 594px,
 

@@ -11,7 +11,6 @@ import "icons/24 pixels/padlock-24.svg" as padlock24
 import "components/logo.elyx" as logo
 
 export signInForm = cardBackground.transparent {
-  name: "Sign In Form",
   left: 39px,
   top: 21px,
   padding-top: 48px,
@@ -21,14 +20,12 @@ export signInForm = cardBackground.transparent {
 }
 
 content = frame {
-  name: "Content",
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 20px},
   children: [header, credentialFields, options, signInButton]
 }
 
 header = header2.mediumCenter {
-  name: "Header M (Center)",
   left: -33px,
   top: 120px,
 
@@ -42,7 +39,6 @@ header = header2.mediumCenter {
 }
 
 credentialFields = frame {
-  name: "Credential Fields",
   left: 0px,
   top: 42.75px,
   width: 100%,
@@ -52,8 +48,6 @@ credentialFields = frame {
 }
 
 emailField = TextField.iconPlaceholder {
-  name: "Email Field",
-
   TextField.label {
     contents: "Email address"
   }
@@ -64,8 +58,6 @@ emailField = TextField.iconPlaceholder {
 }
 
 passwordField = TextField.iconPlaceholder {
-  name: "Password Field",
-
   TextField.label {
     contents: "Password"
   }
@@ -76,7 +68,6 @@ passwordField = TextField.iconPlaceholder {
 }
 
 options = frame {
-  name: "Options",
   left: -33px,
   top: 62.75px,
   width: 100%,
@@ -85,10 +76,9 @@ options = frame {
   children: [rememberToggle, rememberLabel]
 }
 
-rememberToggle = Checkbox.on {name: "Remember Me Toggle", left: 127px, top: 285px}
+rememberToggle = Checkbox.on {left: 127px, top: 285px}
 
 rememberLabel = text {
-  name: "Remember Label",
   fill: Colors.colors.black20,
   contents: "Remember me",
   font-size: Typography.typography.labelML,
@@ -97,7 +87,6 @@ rememberLabel = text {
 }
 
 signInButton = Button.mediumPrimary {
-  name: "Sign In Button",
   width: 100%,
 
   Button.mediumLabel {
@@ -105,4 +94,4 @@ signInButton = Button.mediumPrimary {
   }
 }
 
-signInLogo = logo.extraLarge {name: "Sign In Logo", left: 351px, top: 15px}
+signInLogo = logo.extraLarge {left: 351px, top: 15px}

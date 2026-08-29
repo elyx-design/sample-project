@@ -16,7 +16,6 @@ header = header2.mediumLeft {
 }
 
 export securityCard = cardBackground.base {
-  name: "Security Card",
   left: 0px,
   top: 263px,
   width: 100%,
@@ -29,7 +28,6 @@ export securityCard = cardBackground.base {
 }
 
 password = settingRow.settingRow {
-  name: "Password Setting",
   left: 0px,
   top: 92px,
   width: 100%,
@@ -49,7 +47,6 @@ password = settingRow.settingRow {
 }
 
 twoFactorAuthentication = settingRow.settingRow {
-  name: "Two-Factor Authentication Setting",
   left: 20px,
   top: 112px,
   width: 100%,
