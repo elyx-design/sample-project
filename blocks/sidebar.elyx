@@ -153,15 +153,7 @@ selected = sideBarMenu {
   left: -354px,
   top: 76px,
   corner-radius: radius.radius.max,
-  fill[0].color: colors.colors.blackAlpha05,
-
-  text2 {
-    fill[0].color: colors.colors.black20
-  }
-
-  shape1 {
-    fill[0].color: colors.colors.black20
-  }
+  fill[0].color: colors.colors.blackAlpha05
 }
 
 CardUpgrade = cardUpgrade.CardUpgrade {
