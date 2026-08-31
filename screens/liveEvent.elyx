@@ -68,7 +68,7 @@ Video = frame {
   top: 0px,
   width: 65%,
   height: 100%,
-  layout: {direction: .column, align-items: .end},
+  layout: {direction: .column, align-items: .end, item-gap: 2px},
   overflow: .visible,
   children: [video, About]
 }
@@ -100,7 +100,7 @@ About = frame {
   left: 0px,
   top: 654px,
   width: 100%,
-  height: 136px,
+  height: 130px,
   layout: {direction: .column, justify-content: .space-between, item-gap: 24px},
   fill: {image: {ref: bikeBGBanner}},
   overflow: .visible,

@@ -150,7 +150,7 @@ player = videoPlayer.videoPlayer {
   }
 
   videoPlayer.headerRow.eventHeader.header.smallTitle {
-    contents: "Wings of the Wild"
+    contents: "Style in Motion"
   }
 
   videoPlayer.headerRow.eventHeader {
