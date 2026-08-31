@@ -120,3 +120,60 @@ smallImage = shape {
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }
+
+export xsmall = frame {
+  left: -76px,
+  top: 235px,
+  width: 28px,
+  height: 28px,
+  overflow: .visible,
+  children: [color, smallInitials_2, smallStatus_2]
+}
+
+color = shape {
+  left: 0px,
+  top: 0px,
+  width: 28px,
+  height: 28px,
+  ignore-stack: .true,
+  fill: Colors.colors.black95,
+  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  type: .ellipse
+}
+
+smallInitials_2 = text {
+  left: 6px,
+  top: 7px,
+  width: 16px,
+  height: 15px,
+  fill: Colors.colors.black20,
+  contents: "JC",
+  font-size: 11,
+  font-family: "Inter",
+  font-style: "SemiBold",
+  align: .center
+}
+
+smallStatus_2 = status {left: 20px, top: 20px, ignore-stack: .true, border[0].width: 2px}
+
+@variant
+xsmallVariant = xsmall {
+  left: -32px,
+  top: 235px,
+  overrides: [insert(photoBG, after = .nil), remove(color)],
+
+  smallInitials_2 {
+    display: .hidden
+  }
+}
+
+photoBG = shape {
+  left: 0px,
+  top: 0px,
+  width: 28px,
+  height: 28px,
+  ignore-stack: .true,
+  fill: {image: {ref: module}},
+  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  type: .ellipse
+}

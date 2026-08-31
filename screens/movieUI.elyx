@@ -1,0 +1,554 @@
+import "blocks/productInfo.elyx" as productInfo
+import "tokens/colors.elyx" as colors
+import "components/tag.elyx" as tag
+import "blocks/siteHeader.elyx" as siteHeader
+import "components/button.elyx" as button
+import "components/avatar.elyx" as avatar
+import "images/profileImgs/007.jpg" as lib3
+import "components/divider.elyx" as divider
+import "images/background/woman.jpg" as woman
+import "images/misc/movieCover.png" as movieCover
+import "images/profileImgs/006.jpg" as lib
+import "images/profileImgs/002.jpg" as lib2
+import "images/profileImgs/004.jpg" as lib4
+import "components/thumbnailImage.elyx" as thumbnailImage
+import "images/thumbnails/thumb10.jpg" as thumb10
+import "images/thumbnails/thumb11.jpg" as thumb11
+import "images/thumbnails/thumb12.jpg" as thumb12
+
+MovieUI = frame {
+  left: 396px,
+  top: 257px,
+  width: 1404px,
+  height: 844px,
+  layout: {direction: .column, align-items: .center},
+  fill: .black,
+  padding-top: 0px,
+  children: [movieBG, siteHeader_2, GroupedStack]
+}
+
+movieBG = frame {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 687px,
+  ignore-stack: .true,
+  fill: {image: {ref: woman}},
+  overflow: .visible
+}
+
+siteHeader_2 = siteHeader.accountHeader {
+  left: 0px,
+  top: -142px,
+  width: 100%,
+
+  siteHeader.accountDivider.divider.horizontalLine {
+    fill[0].color: colors.colors.whiteAlpha50
+  }
+
+  siteHeader.accountContent.accountActions.accountMenu {
+    overrides: [remove(siteHeader.accountLanguage)],
+    overflow: .visible
+  }
+
+  siteHeader.accountContent.accountActions.accountSearch {
+    fill[0].color: colors.colors.whiteAlpha25
+  }
+
+  siteHeader.accountContent.accountActions.accountSearch.textField.placeholderIcon {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountNav.accountResources.mutedChevron {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountNav.accountResources.label {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountNav.accountCompany.label {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountNav.accountPricing.label {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountNav.accountProduct.label {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountBrand.accountBrandName {
+    fill[0].color: colors.colors.whiteAlpha70
+  }
+
+  siteHeader.accountContent.accountActions.accountMenu.accountAvatar.avatar.smallStatus {
+    display: .hidden
+  }
+}
+
+GroupedStack = frame {
+  width: 70%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  overflow: .visible,
+  padding-top: 0px,
+  children: [GroupedStack_13, GroupedStack_2, horizontal, GroupedStack_8]
+}
+
+GroupedStack_13 = frame {
+  width: 100%,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 16px},
+  overflow: .visible,
+  padding-top: 96px,
+  padding-bottom: 96px,
+  children: Play
+}
+
+Play = button.Play {left: 1052px, top: 310px}
+
+GroupedStack_2 = frame {
+  width: 100%,
+  layout: {justify-content: .space-between},
+  overflow: .visible,
+  children: [text1, tags]
+}
+
+text1 = text {
+  left: 656px,
+  top: 852px,
+  fill: colors.colors.white100,
+  contents: "Silent Hues ",
+  font-size: 24,
+  font-style: "SemiBold"
+}
+
+tags = frame {height: 100%, layout: {item-gap: 8px}, overflow: .visible, children: [base, base_2]}
+
+base = tag.base {
+  left: 924px,
+  top: 538px,
+
+  tag.label {
+    contents: "Drama"
+  }
+}
+
+base_2 = tag.base {
+  left: 944px,
+  top: 558px,
+
+  tag.label {
+    contents: "Psychological"
+  }
+}
+
+horizontal = divider.horizontal {
+  left: 0px,
+  top: 553px,
+  width: 100%,
+  padding-top: 0px,
+  padding-bottom: 0px,
+
+  divider.horizontalLine {
+    fill[0].color: colors.colors.whiteAlpha50
+  }
+}
+
+GroupedStack_8 = frame {
+  width: 100%,
+  layout: {item-gap: 24px},
+  overflow: .visible,
+  children: [details, GroupedStack_9]
+}
+
+details = frame {
+  width: 100%,
+  layout: {item-gap: 24px},
+  overflow: .visible,
+  children: [productInfo_2, About]
+}
+
+productInfo_2 = productInfo.productInfo {
+  left: 741px,
+  top: 881px,
+
+  productInfo.productDetails.productCopy.subtitle {
+    contents: "by Amara Vale",
+    fill[0].color: colors.colors.whiteAlpha50
+  }
+
+  productInfo.productDetails.productCopy.productName {
+    contents: "Silent Hues",
+    fill[0].color: colors.colors.white100
+  }
+
+  productInfo.productPreview.product.coverOne {
+    fill[0].image.ref: movieCover
+  }
+}
+
+About = frame {
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  overflow: .visible,
+  children: [Synopsis, horizontal_2, GroupedStack_11, horizontal_3, Synopsis_4]
+}
+
+Synopsis = frame {
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [text2, text3]
+}
+
+text2 = text {
+  left: 0px,
+  top: 826px,
+  width: 100%,
+  fill: colors.colors.white100,
+  contents: "Synopsis",
+  font-size: 16,
+  font-style: "Bold"
+}
+
+text3 = text {
+  left: 0px,
+  top: 846px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "A rising performance artist begins to lose the line between the faces she paints and the self underneath. As each new piece grows bolder, so does the fracture between who she shows the world and who she has left in private. Chroma is an intimate portrait of identity, spectacle, and the cost of being seen.",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+horizontal_2 = divider.horizontal {
+  left: 0px,
+  top: 642px,
+  width: 100%,
+  padding-top: 0px,
+  padding-bottom: 0px,
+
+  divider.horizontalLine {
+    fill[0].color: colors.colors.whiteAlpha50
+  }
+}
+
+GroupedStack_11 = frame {
+  width: 100%,
+  layout: {item-gap: 16px},
+  overflow: .visible,
+  children: [Synopsis_2, Synopsis_3]
+}
+
+Synopsis_2 = frame {
+  left: 20px,
+  top: 109px,
+  width: 100%,
+  layout: {direction: .column, item-gap: 12px},
+  overflow: .visible,
+  children: [text4, actors]
+}
+
+text4 = text {
+  left: 0px,
+  top: 826px,
+  width: 100%,
+  fill: colors.colors.white100,
+  contents: "Starring",
+  font-size: 16,
+  font-style: "Bold"
+}
+
+actors = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: 2px},
+  overflow: .visible,
+  children: [GroupedStack_3, GroupedStack_4, GroupedStack_5, GroupedStack_6]
+}
+
+GroupedStack_3 = frame {
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [xsmall_3, text5]
+}
+
+xsmall_3 = avatar.xsmallVariant {
+  left: 782.1px,
+  top: 536.5px,
+
+  avatar.photoBG {
+    fill[0].image.ref: lib4,
+    border[0]: .nil
+  }
+
+  avatar.smallStatus_2 {
+    display: .hidden
+  }
+}
+
+text5 = text {
+  left: 0px,
+  top: -1814px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Nia Okafor",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+GroupedStack_4 = frame {
+  left: 20px,
+  top: 83px,
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [xsmall_4, text6]
+}
+
+xsmall_4 = avatar.xsmallVariant {
+  left: 782.1px,
+  top: 536.5px,
+
+  avatar.photoBG {
+    fill[0].image.ref: lib,
+    border[0]: .nil
+  }
+
+  avatar.smallStatus_2 {
+    display: .hidden
+  }
+}
+
+text6 = text {
+  left: 0px,
+  top: -1814px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Daniel Reyes",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+GroupedStack_5 = frame {
+  left: 40px,
+  top: 103px,
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [xsmall_5, text7]
+}
+
+xsmall_5 = avatar.xsmallVariant {
+  left: 782.1px,
+  top: 536.5px,
+
+  avatar.photoBG {
+    fill[0].image.ref: lib2,
+    border[0]: .nil
+  }
+
+  avatar.smallStatus_2 {
+    display: .hidden
+  }
+}
+
+text7 = text {
+  left: 0px,
+  top: -1814px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Simone Clarke",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+GroupedStack_6 = frame {
+  left: 60px,
+  top: 123px,
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [xsmall_6, text8]
+}
+
+xsmall_6 = avatar.xsmallVariant {
+  left: 782.1px,
+  top: 536.5px,
+
+  avatar.photoBG {
+    fill[0].image.ref: lib3,
+    border[0]: .nil
+  }
+
+  avatar.smallStatus_2 {
+    display: .hidden
+  }
+}
+
+text8 = text {
+  left: 0px,
+  top: -1814px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Grace Lin",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+Synopsis_3 = frame {
+  left: 40px,
+  top: 129px,
+  width: 100%,
+  layout: {direction: .column, item-gap: 12px},
+  overflow: .visible,
+  children: [text9, GroupedStack_7]
+}
+
+text9 = text {
+  left: 0px,
+  top: 826px,
+  width: 100%,
+  fill: colors.colors.white100,
+  contents: "Cast & Crew",
+  font-size: 16,
+  font-style: "Bold"
+}
+
+GroupedStack_7 = frame {
+  left: 0px,
+  top: 31px,
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: text10
+}
+
+text10 = text {
+  left: 0px,
+  top: -1814px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Director: Amara Vale\nWritten by: Amara Vale, Julian Foss\nProduced by: Rina Kapoor, Marcus Bell\nCinematography: Yusuf Adeyemi\nOriginal Score: Lena Vasquez",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+horizontal_3 = divider.horizontal {
+  left: 20px,
+  top: 662px,
+  width: 100%,
+  padding-top: 0px,
+  padding-bottom: 0px,
+
+  divider.horizontalLine {
+    fill[0].color: colors.colors.whiteAlpha50
+  }
+}
+
+Synopsis_4 = frame {
+  left: 20px,
+  top: 126px,
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: text12
+}
+
+text12 = text {
+  left: 0px,
+  top: 846px,
+  width: 100%,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Critics: 89% Fresh • Audience: 76% • IMDb: 7.8 / 10 • Metascore: 82",
+  font-style: "Light",
+  line-height: 1.5
+}
+
+GroupedStack_9 = frame {
+  height: 100%,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  children: [text11, GroupedStack_12]
+}
+
+text11 = text {
+  left: 901.2px,
+  top: 141px,
+  width: 100%,
+  fill: colors.colors.white100,
+  contents: "Gallery",
+  font-size: 16,
+  font-style: "Bold"
+}
+
+GroupedStack_12 = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: 8px},
+  overflow: .visible,
+  children: [thumbnailImage_2, GroupedStack_10]
+}
+
+thumbnailImage_2 = thumbnailImage.thumbnailVideo {
+  left: 36.6px,
+  top: 283.2895px,
+  width: 234px,
+  height: 145px,
+  corner-radius: 8px,
+  border[0].color: colors.colors.whiteAlpha10,
+  fill[0].image.ref: thumb10,
+  fill[1]: .nil
+}
+
+GroupedStack_10 = frame {
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [thumbnailImage_3, thumbnailImage_4]
+}
+
+thumbnailImage_3 = thumbnailImage.thumbnailImage {
+  left: 0px,
+  top: 303.2895px,
+  width: 100%,
+  height: 76px,
+  corner-radius: 8px,
+  border[0].color: colors.colors.whiteAlpha10,
+  fill[0].image.ref: thumb11,
+  fill[1]: .nil,
+
+  thumbnailImage.imageName {
+    display: .hidden
+  }
+
+  thumbnailImage.actions {
+    display: .hidden
+  }
+}
+
+thumbnailImage_4 = thumbnailImage.thumbnailImage {
+  left: 0px,
+  top: 491.2895px,
+  width: 100%,
+  height: 76px,
+  corner-radius: 8px,
+  border[0].color: colors.colors.whiteAlpha10,
+  fill[0].image.ref: thumb12,
+  fill[1]: .nil,
+
+  thumbnailImage.imageName {
+    display: .hidden
+  }
+
+  thumbnailImage.actions {
+    display: .hidden
+  }
+}
+
+xsmall_2 = avatar.xsmallVariant {
+  left: 324px,
+  top: 550px,
+  overrides: [remove(avatar.smallStatus_2), remove(avatar.photoBG)]
+}

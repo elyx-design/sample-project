@@ -33,7 +33,6 @@ background = cardBackground.base {
   height: spacing.spacing.heightS,
   corner-radius: radius.radius.max,
   layout.justify-content: .center,
-  overrides: [insert(pageBreadcrumb, after = .nil)]
 }
 
 track = mediaTrack.track {name: "Video Track", left: 435px, top: -26px}

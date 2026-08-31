@@ -81,9 +81,10 @@ marker9 = timelineRuler.timeMarker {
 videoEditing = frame {
   left: -689px,
   top: -230px,
-  width: 1184px,
-  height: 701px,
+  width: 1138px,
+  height: 663px,
   layout: {justify-content: .center},
+  fill: .black,
   children: [editingSidebar, workspace]
 }
 
@@ -338,14 +339,38 @@ audioTrack = mediaTrack.track {
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
-  fill[0].color: rgb(100%, 41.19%, 100%)
+  fill[0].color: rgb(100%, 41.19%, 100%),
+
+  mediaTrack.content.left.label.trackName {
+    contents: "ambientForest.mp3"
+  }
+
+  mediaTrack.content.left.label.typeIcon {
+    contents: music24
+  }
+
+  mediaTrack.content.dateLabel {
+    display: .hidden
+  }
 }
 
 titleTrack = mediaTrack.track {
   left: -13207.5px,
   top: 808px,
   width: 59.2292%,
-  fill[0].color: rgb(0%, 98.76%, 100%)
+  fill[0].color: .aqua,
+
+  mediaTrack.content.left.label.trackName {
+    contents: "Wild Birds"
+  }
+
+  mediaTrack.content.left.label.typeIcon {
+    contents: text24
+  }
+
+  mediaTrack.content.dateLabel {
+    display: .hidden
+  }
 }
 
 timelinePlayHead = playHead.playHead {left: 385px, top: -5px, height: 281px, ignore-stack: .true}

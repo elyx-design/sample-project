@@ -415,6 +415,7 @@ accountActions = frame {
   top: 0px,
   height: 100%,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
+  overflow: .visible,
   children: [accountSearch, accountMenu]
 }
 
@@ -475,16 +476,6 @@ mutedChevron = icon {
   contents: chevrondown122
 }
 
-brand = frame {
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: [brandLogo, brandName]
-}
-
-brandLogo = logo.medium {left: 596px, top: 481px}
-
-brandName = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
-
 navLinks = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 20px},
@@ -526,3 +517,13 @@ navResources = mutedIconMenu {
     contents: "Resources"
   }
 }
+
+brand = frame {
+  height: 100%,
+  layout: {align-items: .center, item-gap: 16px},
+  children: [brandLogo, brandName]
+}
+
+brandLogo = logo.medium {left: 596px, top: 481px}
+
+brandName = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}

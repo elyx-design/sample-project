@@ -6,6 +6,7 @@ import "icons/24 pixels/close-24.svg" as close24
 import "icons/20 pixels/close-20.svg" as close20
 import "icons/24 pixels/calendar-24.svg" as calendar24
 import "icons/20 pixels/trash-20.svg" as trash20
+import "icons/20 pixels/play-20.svg" as play20
 
 export medium = frame {
   left: 962px,
@@ -394,4 +395,33 @@ mediumPrimaryRoundedIcon = icon {
   height: 24px,
   fill: Colors.colors.white100,
   contents: calendar24
+}
+
+export Play = frame {
+  left: 1664px,
+  top: 673px,
+  width: 96px,
+  height: 96px,
+  layout: {justify-content: .center, align-items: .center},
+  children: [shape1, play20svg]
+}
+
+shape1 = shape {
+  left: 0px,
+  top: 0px,
+  width: 96px,
+  height: 96px,
+  ignore-stack: .true,
+  fill: Colors.colors.whiteAlpha50,
+  filter: {type: .background-blur, radius: 40px},
+  type: .ellipse
+}
+
+play20svg = icon {
+  left: 38px,
+  top: 38px,
+  width: 64px,
+  height: 64px,
+  fill: Colors.colors.blackAlpha70,
+  contents: play20
 }

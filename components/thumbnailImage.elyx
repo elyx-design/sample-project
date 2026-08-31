@@ -1,6 +1,8 @@
 import "tokens/colors.elyx" as colors
 import "images/thumbnails/thumb01.jpg" as thumb01
 import "icons/20 pixels/heart-20.svg" as heart20
+import "icons/20 pixels/play-20.svg" as play20
+import "tokens/radius.elyx" as radius
 
 export thumbnailImage = frame {
   left: 555px,
@@ -46,4 +48,43 @@ imageName = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Image name",
   font-size: 12
+}
+
+@variant
+thumbnailVideo = thumbnailImage {
+  left: 555px,
+  top: 563px,
+  layout.align-items: .center,
+  layout.justify-content: .center,
+  overrides: [insert(GroupedStack, after = .nil), remove(imageName), remove(actions)]
+}
+
+GroupedStack = frame {
+  width: .auto,
+  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  fill: colors.colors.blackAlpha70,
+  border: {color: colors.colors.whiteAlpha25, width: 0.5px, position: .outside},
+  corner-radius: radius.radius.max,
+  overflow: .visible,
+  padding: [2px, 8px, 2px, 4px],
+  children: [play20svg, imageName_2]
+}
+
+play20svg = icon {
+  left: 526px,
+  top: 606px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.whiteAlpha70,
+  contents: play20
+}
+
+imageName_2 = text {
+  left: 0px,
+  top: 197px,
+  width: .auto,
+  fill: colors.colors.whiteAlpha70,
+  contents: "Watch trailer",
+  font-size: 12,
+  align: .center
 }

@@ -1,0 +1,16 @@
+import "images/background/plain.jpg" as plain
+import "blocks/siteFooter.elyx" as siteFooter
+
+Footer = frame {
+
+  left: 183px,
+  top: 312px,
+  width: 1478px,
+  height: 738px,
+  layout: {justify-content: .center},
+  fill: {image: {ref: plain}},
+  padding-top: 190px,
+  children: siteFooter_2
+}
+
+siteFooter_2 = siteFooter.siteFooter {left: 225px, top: 213px}

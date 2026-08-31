@@ -251,3 +251,246 @@ savedActivity = activityRow2.activityRow {
 }
 
 footer = siteFooter.siteFooter {left: 275px, top: 116px, width: 1080px, height: 246.5px}
+
+ProfilePage_2 = frame {
+  left: -509px,
+  top: -509px,
+  width: 1574px,
+  height: 1903px,
+  layout: {direction: .column, align-items: .center, item-gap: 48px},
+  fill: rgb(87.6571%, 85.3489%, 82.6552%),
+  padding-top: 24px,
+  padding-bottom: 24px,
+  children: [siteHeader_2, Content_2, footer_2]
+}
+
+siteHeader_2 = siteHeader.loggedInHeader {
+  left: 201.91px,
+  top: -26px,
+  width: 1080px,
+  border[0].visible: .false,
+  shadow[0].drop-shadow.visible: .false
+}
+
+Content_2 = frame {
+  left: 247px,
+  top: 116px,
+  width: 1080px,
+  height: .auto,
+  layout: {item-gap: 24px},
+  overflow: .visible,
+  children: [socialCard_2, content_2]
+}
+
+socialCard_2 = cardSocial.socialCard {
+  left: 0px,
+  top: 0px,
+  border[0].visible: .false,
+  fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 50%),
+  shadow[0].drop-shadow.visible: .false,
+
+  @use-variant(cardSocial.button.medium)
+  cardSocial.socialFooter.followButton {}
+
+  cardSocial.cardContent.cardActions {
+    overrides: [remove(cardSocial.closeButton), remove(cardSocial.favoriteButton)]
+  }
+}
+
+content_2 = frame {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, justify-content: .center, item-gap: 24px},
+  overflow: .visible,
+  children: [profile_2, product_2, gallery_2, activityFeed_2]
+}
+
+profile_2 = profileCard.profileCard {
+  left: 147.99px,
+  top: 318.9467px,
+  width: 739px,
+  height: 314px,
+  border[0].visible: .false,
+  fill[0].color: rgb(29.8456%, 50.9697%, 17.88%, 50%),
+  shadow[0].drop-shadow.visible: .false,
+
+  profileCard.profileStats.stats.row.shelves.shelvesLabel {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+
+  profileCard.profileStats.stats.row.rating.ratingLabel {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+
+  profileCard.profileStats.stats.row.pages.pagesLabel {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+
+  profileCard.profileStats.stats.row.books.booksLabel {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
+}
+
+product_2 = productCard.productCard {
+  left: 0px,
+  top: -317px,
+  width: 100%,
+  border[0].visible: .false,
+  shadow[0].drop-shadow.visible: .false,
+
+  productCard.bookDetails.notes.notesBody {
+    contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter of the book. It is amazing!"
+  }
+
+  productCard.bookDetails.readingProgress.progressSlider {
+    fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 25%)
+  }
+
+  productCard.bookDetails.readingProgress.progressSlider.slider.track {
+    fill[0].color: rgb(29.8%, 50.98%, 18.0392%)
+  }
+
+  productCard.bookDetails.pageProgress {
+    fill[0].color: rgb(29.8%, 50.98%, 18.0392%, 50%)
+  }
+}
+
+gallery_2 = productGallery.productGallery {
+  left: 0px,
+  top: -444px,
+  width: 100%,
+  border[0].visible: .false,
+  shadow[0].drop-shadow.visible: .false,
+
+  productGallery.title {
+    contents: "Recent activity"
+  }
+
+  productGallery.productList.wildlifeBook.productInfo.productDetails.ratingTag.tag.label {
+    font-style: "SemiBold"
+  }
+
+  productGallery.productList.seaLifeBook.productInfo.productDetails.ratingTag.tag.label {
+    font-style: "SemiBold"
+  }
+
+  productGallery.productList.candyBook.productInfo.productDetails.ratingTag.tag.label {
+    font-style: "SemiBold"
+  }
+
+  productGallery.productList.designBook.productInfo.productDetails.ratingTag.tag.label {
+    font-style: "SemiBold"
+  }
+}
+
+activityFeed_2 = frame {
+  left: 0px,
+  top: 1124px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  overflow: .visible,
+  padding-top: 24px,
+  padding-bottom: 24px,
+  children: [ratingActivity_2, finishedActivity_2, readingActivity_2, savedActivity_2]
+}
+
+ratingActivity_2 = activityRow2.activityRow {
+  left: 0px,
+  top: 1397px,
+  width: 100%,
+
+  @use-variant(tag.iconAndLabel)
+  activityRow2.content.tag {
+    fill[0].color: rgb(100%, 83.1373%, 28.6275%, 50%)
+  }
+
+  activityRow2.content.tag.tagComponent.label {
+    contents: "4,9"
+  }
+
+  activityRow2.content.details.description.verb {
+    contents: "Rated"
+  }
+}
+
+finishedActivity_2 = activityRow2.activityRow {
+  left: 0px,
+  top: 1370px,
+  width: 100%,
+  height: 52.5px,
+
+  activityRow2.content.tag {
+    fill[0].color: rgb(34.32%, 100%, 34.9198%, 50%)
+  }
+
+  activityRow2.content.tag.tagComponent.label {
+    contents: "Finished"
+  }
+
+  activityRow2.content.details.description.detail {
+    contents: "Letters to No One"
+  }
+
+  activityRow2.content.details.description.verb {
+    contents: "Finished"
+  }
+
+  activityRow2.content.details.date.dateLabel {
+    contents: "5 Days"
+  }
+}
+
+readingActivity_2 = activityRow2.activityRow {
+  left: 20px,
+  top: 1390px,
+  width: 100%,
+  height: 52.5px,
+
+  activityRow2.content.tag {
+    fill[0].color: rgb(0%, 90.8082%, 100%, 50%)
+  }
+
+  activityRow2.content.tag.tagComponent.label {
+    contents: "Reading"
+  }
+
+  activityRow2.content.details.description.detail {
+    contents: "The Quiet Life of Things"
+  }
+
+  activityRow2.content.details.description.verb {
+    contents: "Started"
+  }
+
+  activityRow2.content.details.date.dateLabel {
+    contents: "1 Week"
+  }
+}
+
+savedActivity_2 = activityRow2.activityRow {
+  left: 20px,
+  top: 1390px,
+  width: 100%,
+  height: 52.5px,
+
+  activityRow2.content.tag.tagComponent.label {
+    contents: "Saved"
+  }
+
+  activityRow2.content.details.description.detail {
+    contents: "Winter Mornings to Want to read"
+  }
+
+  activityRow2.content.details.description.verb {
+    contents: "Added"
+  }
+
+  activityRow2.content.details.date.dateLabel {
+    contents: "2 Weeks"
+  }
+}
+
+footer_2 = siteFooter.siteFooter {left: 275px, top: 116px, width: 1080px, height: 246.5px}

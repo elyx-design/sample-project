@@ -9,12 +9,11 @@ export siteFooter = frame {
   left: 452px,
   top: 450px,
   width: 1070.3755px,
-  layout: {direction: .column, justify-content: .center, item-gap: 32px},
+  height: 270.5px,
+  layout: {direction: .column, item-gap: 32px},
   overflow: .visible,
-  children: [topDivider, content, bottom]
+  children: [content, bottom]
 }
-
-topDivider = divider.horizontal {left: 20px, top: 492px, width: 100%}
 
 content = frame {
   width: 100%,
@@ -29,26 +28,28 @@ brandColumn = frame {
   top: 0px,
   width: 291px,
   height: 100%,
-  layout: {direction: .column, item-gap: 24px},
+  layout: {direction: .column, justify-content: .space-between, item-gap: 24px},
   overflow: .visible,
-  children: [About, frame1]
-}
-
-About = frame {
-  width: 100%,
-  layout: {direction: .column, item-gap: 12px},
-  overflow: .visible,
-  children: [logoLockup, blurb]
+  children: [logoLockup, Newsletter]
 }
 
 logoLockup = frame {
   left: 0px,
   top: 0px,
-  layout: {justify-content: .center, align-items: .center, item-gap: 8px},
+  width: 100%,
+  layout: {align-items: .center, item-gap: 8px},
   children: [logoMark, logoWordmark]
 }
 
-logoMark = logo.small {left: 0px, top: 0px}
+logoMark = logo.small {
+  left: 0px,
+  top: 0px,
+
+  logo.smallArtwork {
+    width: 32px,
+    height: 32px
+  }
+}
 
 logoWordmark = text {
   left: 53px,
@@ -57,13 +58,41 @@ logoWordmark = text {
   height: 17px,
   fill: .black,
   contents: "Overleaf",
-  font-size: 14,
-  font-style: "Bold"
+  font-size: 16,
+  font-style: "Bold",
+  vertical-align: .center
+}
+
+Newsletter = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  children: [frame1, frame2]
+}
+
+frame1 = frame {
+
+  width: 100%,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [blurb, blurb_2]
 }
 
 blurb = text {
+
   left: 0px,
-  top: 61px,
+  top: 7px,
+  width: 100%,
+  fill: .black,
+  contents: "Newsletter",
+  font-size: 12,
+  font-style: "Bold",
+  line-height: 1.5
+}
+
+blurb_2 = text {
+  left: 20px,
+  top: 27px,
   width: 100%,
   fill: .black,
   contents: "Thoughtfully made, page after page. We believe good ideas deserve a place to grow, whether on the shelf or on the screen",
@@ -71,7 +100,14 @@ blurb = text {
   line-height: 1.5
 }
 
-frame1 = frame {width: 100%, layout: {item-gap: 8px}, overflow: .visible, children: [base, medium]}
+frame2 = frame {
+
+  width: 100%,
+  height: .auto,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [base, medium]
+}
 
 base = textField.iconPlaceholder {
   left: 40px,
@@ -86,7 +122,14 @@ base = textField.iconPlaceholder {
   }
 }
 
-medium = button.medium {left: 396.5px, top: 0px}
+medium = button.medium {
+  left: 396.5px,
+  top: 0px,
+
+  button.mediumLabel {
+    contents: "Sign up"
+  }
+}
 
 linkColumns = frame {
   left: 354.62px,
@@ -211,7 +254,13 @@ bottom = frame {
   children: [bottomDivider, copy]
 }
 
-bottomDivider = divider.horizontal {left: 0px, top: 472px, width: 100%}
+bottomDivider = divider.horizontal {
+  left: 0px,
+  top: 472px,
+  width: 100%,
+  padding-top: 0px,
+  padding-bottom: 0px
+}
 
 copy = frame {
   width: 100%,

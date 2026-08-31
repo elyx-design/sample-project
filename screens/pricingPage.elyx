@@ -4,14 +4,14 @@ import "blocks/planCard.elyx" as planCard
 import "icons/24 pixels/dashboard.svg" as dashboard
 import "icons/24 pixels/processor.svg" as processor
 import "components/header.elyx" as header
-import "images/background/whiteWave.jpg" as whiteWave
+import "images/background/sea.jpg" as sea
 
 pricingPage = frame {
   left: 130.5px,
   top: 163px,
   width: 1415px,
   height: 925px,
-  fill: {image: {ref: whiteWave}},
+  fill: {image: {ref: sea}},
   children: [pricingCards, pricingHeader]
 }
 
