@@ -245,15 +245,9 @@ bareContent = frame {
   children: [bareBrand, bareNav, bareCta]
 }
 
-bareBrand = frame {
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: [LogoM36, Text]
-}
+bareBrand = frame {height: 100%, layout: {align-items: .center, item-gap: 16px}, children: small_2}
 
-LogoM36 = logo.medium {left: 596px, top: 481px}
-
-Text = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}
+small_2 = logo.mediumWordmark {left: 489px, top: 459px}
 
 bareNav = frame {
   height: 100%,
@@ -355,18 +349,10 @@ accountContent = frame {
 accountBrand = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 16px},
-  children: [accountLogo, accountBrandName]
+  children: small_3
 }
 
-accountLogo = logo.medium {left: 596px, top: 481px}
-
-accountBrandName = text {
-  left: -340px,
-  top: 503px,
-  fill: .black,
-  contents: "Overleaf",
-  font-style: "Bold"
-}
+small_3 = logo.mediumWordmark {left: 489px, top: 459px}
 
 accountNav = frame {
   height: 100%,
@@ -458,6 +444,10 @@ accountDivider = divider.horizontal {
   }
 }
 
+brand = frame {height: 100%, layout: {align-items: .center, item-gap: 16px}, children: small}
+
+small = logo.mediumWordmark {left: 553px, top: 459px}
+
 chevron = icon {
   left: 297px,
   top: 460px,
@@ -517,13 +507,3 @@ navResources = mutedIconMenu {
     contents: "Resources"
   }
 }
-
-brand = frame {
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: [brandLogo, brandName]
-}
-
-brandLogo = logo.medium {left: 596px, top: 481px}
-
-brandName = text {left: -340px, top: 503px, fill: .black, contents: "Overleaf", font-style: "Bold"}

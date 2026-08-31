@@ -1,5 +1,4 @@
 import "tokens/colors.elyx" as colors
-import "components/appTopBar.elyx" as appTopBar
 import "blocks/planCard.elyx" as planCard
 import "icons/24 pixels/dashboard.svg" as dashboard
 import "icons/24 pixels/processor.svg" as processor

@@ -38,30 +38,10 @@ logoLockup = frame {
   top: 0px,
   width: 100%,
   layout: {align-items: .center, item-gap: 8px},
-  children: [logoMark, logoWordmark]
+  children: small
 }
 
-logoMark = logo.small {
-  left: 0px,
-  top: 0px,
-
-  logo.smallArtwork {
-    width: 32px,
-    height: 32px
-  }
-}
-
-logoWordmark = text {
-  left: 53px,
-  top: 10px,
-  width: .auto,
-  height: 17px,
-  fill: .black,
-  contents: "Overleaf",
-  font-size: 16,
-  font-style: "Bold",
-  vertical-align: .center
-}
+small = logo.mediumWordmark {left: 583px, top: 447px}
 
 Newsletter = frame {
   width: 100%,
@@ -71,7 +51,6 @@ Newsletter = frame {
 }
 
 frame1 = frame {
-
   width: 100%,
   layout: {direction: .column, item-gap: 4px},
   overflow: .visible,
@@ -79,7 +58,6 @@ frame1 = frame {
 }
 
 blurb = text {
-
   left: 0px,
   top: 7px,
   width: 100%,
@@ -101,7 +79,6 @@ blurb_2 = text {
 }
 
 frame2 = frame {
-
   width: 100%,
   height: .auto,
   layout: {item-gap: 8px},

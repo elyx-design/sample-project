@@ -10,28 +10,33 @@ import "icons/24 pixels/create-24.svg" as create24
 import "icons/24 pixels/folder-24.svg" as folder24
 import "icons/24 pixels/history-24.svg" as history24
 import "components/logo.elyx" as logo
-import "icons/24 pixels/bag-24.svg" as bag24
 import "blocks/selector.elyx" as selector
-import "components/divider.elyx" as divider
-import "icons/24 pixels/activity.svg" as activity
-import "icons/24 pixels/ai.svg" as ai
 import "icons/24 pixels/notes-24.svg" as notes24
 import "icons/24 pixels/settings-24.svg" as settings24
-import "blocks/cardUpgrade.elyx" as cardUpgrade
+import "icons/24 pixels/plus-24.svg" as plus24
+import "icons/24 pixels/database-24.svg" as database24
+import "icons/20 pixels/cloud-20.svg" as cloud20
+import "icons/20 pixels/sideBar-left-20.svg" as sideBarleft20
+import "icons/20 pixels/search-20.svg" as search20
+import "icons/20 pixels/settings-20.svg" as settings20
+import "icons/20 pixels/dot-20.svg" as dot20
 
-export sidebar = cardBackground.base {
+export sidebar = cardBackground.transparent {
   left: -123px,
   top: 0px,
   width: .auto,
   height: 645px,
-  padding-top: 20px,
-  padding-left: 20px,
-  padding-bottom: 20px,
-  padding-right: 20px,
+  padding-top: 4px,
+  padding-left: 0px,
+  padding-bottom: 8px,
+  padding-right: 0px,
   layout.align-items: .center,
   layout.item-gap: 16px,
   layout.justify-content: .space-between,
-  overrides: [insert(Content, after = .nil), insert(CardUpgrade, after = Content)]
+  overrides: [
+    insert(GroupedStack_3, after = .nil),
+    insert(workspaceSelector, after = GroupedStack_3)
+  ]
 }
 
 @variant
@@ -112,20 +117,20 @@ export sideBarMenu = frame {
   left: -354px,
   top: 0px,
   width: 152px,
-  height: Spacing.spacing.heightM,
-  layout: {align-items: .center, item-gap: 7px},
+  height: Spacing.spacing.heightS,
+  layout: {align-items: .center, item-gap: 4px},
   padding-left: 8px,
   padding-right: 8px,
   children: [shape1, text2]
 }
 
 shape1 = icon {
-  left: 0px,
-  top: 0px,
-  width: 24px,
-  height: 24px,
+  left: 2px,
+  top: 2px,
+  width: 20px,
+  height: 20px,
   fill: colors.colors.black20,
-  contents: bag24
+  contents: cloud20
 }
 
 text2 = text {
@@ -133,6 +138,7 @@ text2 = text {
   top: 7px,
   fill: colors.colors.black20,
   contents: "Menu",
+  font-size: 12,
   font-style: "Regular"
 }
 
@@ -144,33 +150,80 @@ selected = sideBarMenu {
   fill[0].color: colors.colors.blackAlpha05
 }
 
-CardUpgrade = cardUpgrade.CardUpgrade {
-  left: 0px,
-  top: -177px,
-  width: 100%,
+export segmentHeader = frame {
+  left: -474px,
+  top: 276px,
+  layout: {justify-content: .space-between, align-items: .center, item-gap: 39px},
+  children: [text1, settings20svg]
+}
 
-  cardUpgrade.bottom.text2 {
-    contents: "Take your work further. Pro gives you unlimited resources."
+text1 = text {
+  left: 0px,
+  top: 2px,
+  fill: colors.colors.blackAlpha50,
+  contents: "Chats and tasks",
+  font-size: 12,
+  font-style: "Medium"
+}
+
+settings20svg = icon {
+  left: 132px,
+  top: 0px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.blackAlpha50,
+  contents: settings20
+}
+
+workspaceSelector = selector.Selector {
+  left: -103px,
+  top: 72px,
+  width: 100%,
+  height: 36px,
+  padding-left: 10px,
+  padding-right: 10px,
+  overrides: [insert(GroupedStack, after = selector.Left), remove(selector.shape1)],
+
+  selector.Left {
+    overrides: [insert(xsmall, after = .nil), remove(selector.small)],
+    layout.item-gap: 8px
   }
+
+  selector.Left.smallLeft {
+    overrides: [remove(selector.header.smallSubtitle)],
+    layout.item-gap: 2px
+  }
+
+  selector.Left.smallLeft.header.smallTitle {
+    font-size: 12
+  }
+}
+
+GroupedStack_3 = frame {
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  overflow: .visible,
+  children: [Content, GroupedStack_4]
 }
 
 Content = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 24px},
+  layout: {direction: .column, item-gap: 16px},
   overflow: .visible,
   padding-left: 0px,
   padding-right: 0px,
-  children: [frame3, workspaceSelector, frame2]
+  children: frame3
 }
 
 frame3 = frame {
   left: 0px,
   top: 0px,
   width: 100%,
-  height: 66.5px,
+  height: .auto,
   layout: {direction: .column, justify-content: .space-between, item-gap: 8px},
   overflow: .visible,
-  children: [frame1, horizontal]
+  padding: [0px, 12px],
+  children: frame1
 }
 
 frame1 = frame {
@@ -178,27 +231,30 @@ frame1 = frame {
   layout: {align-items: .center, item-gap: 12px},
   overflow: .visible,
   padding: [8px, 0px],
-  children: [small, text1]
+  children: small_2
 }
 
-small = logo.medium {left: 118px, top: -37px}
+small_2 = logo.mediumWordmark {
+  left: 134px,
+  top: 22px,
+  overrides: [insert(small, after = .nil), remove(logo.text2), remove(logo.smallArtwork)]
+}
 
-text1 = text {left: 198px, top: 36px, fill: .black, contents: "Overleaf", font-style: "SemiBold"}
-
-horizontal = divider.horizontal {
-  left: 0px,
-  top: 66px,
+GroupedStack_4 = frame {
   width: 100%,
-  padding-top: 0px,
-  padding-bottom: 0px
+  layout: {direction: .column, align-items: .center, item-gap: 20px},
+  overflow: .visible,
+  children: [frame2, GroupedStack_2]
 }
-
-workspaceSelector = selector.Selector {left: 0px, top: 121px, width: 100%}
 
 frame2 = frame {
+  left: 0px,
+  top: 72px,
   width: 100%,
-  layout: {direction: .column, item-gap: 4px},
+  layout: {direction: .column},
   overflow: .visible,
+  padding-left: 10px,
+  padding-right: 10px,
   children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem]
 }
 
@@ -208,25 +264,25 @@ campaignsItem = sideBarMenu {
   width: 100%,
 
   text2 {
-    contents: "Campaigns"
+    contents: "New"
   }
 
   shape1 {
-    contents: ai
+    contents: plus24
   }
 }
 
-overviewItem = selected {
+overviewItem = sideBarMenu {
   left: 0px,
   top: 54px,
   width: 100%,
 
   text2 {
-    contents: "Overview"
+    contents: "Projects"
   }
 
   shape1 {
-    contents: activity
+    contents: history24
   }
 }
 
@@ -236,7 +292,11 @@ salesItem = sideBarMenu {
   width: 100%,
 
   text2 {
-    contents: "Sales"
+    contents: "Data"
+  }
+
+  shape1 {
+    contents: database24
   }
 }
 
@@ -246,7 +306,7 @@ tasksItem = sideBarMenu {
   width: 100%,
 
   text2 {
-    contents: "Tasks"
+    contents: "Notes"
   }
 
   shape1 {
@@ -267,3 +327,111 @@ settingsItem = sideBarMenu {
     contents: settings24
   }
 }
+
+GroupedStack_2 = frame {
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [segmentHeader_2, frame4]
+}
+
+segmentHeader_2 = segmentHeader {
+  left: 10px,
+  top: 222px,
+  width: 100%,
+  padding-left: 16px,
+  padding-right: 16px
+}
+
+frame4 = frame {
+  left: 0px,
+  top: 236px,
+  width: 100%,
+  layout: {direction: .column},
+  overflow: .visible,
+  padding-left: 10px,
+  padding-right: 10px,
+  children: [campaignsItem_4, campaignsItem_3, campaignsItem_5, campaignsItem_6]
+}
+
+campaignsItem_4 = selected {
+  left: 20px,
+  top: 84px,
+  width: 100%,
+
+  text2 {
+    contents: "Grocery list"
+  }
+
+  shape1 {
+    contents: dot20,
+    fill[0].color: colors.colors.blackAlpha25
+  }
+}
+
+campaignsItem_3 = sideBarMenu {
+  left: 20px,
+  top: 54px,
+  width: 100%,
+
+  text2 {
+    contents: "React component"
+  }
+
+  shape1 {
+    contents: dot20,
+    fill[0].color: colors.colors.blackAlpha25
+  }
+}
+
+campaignsItem_5 = sideBarMenu {
+  left: 20px,
+  top: 114px,
+  width: 100%,
+
+  text2 {
+    contents: "Personal notes"
+  }
+
+  shape1 {
+    contents: dot20,
+    fill[0].color: colors.colors.blackAlpha25
+  }
+}
+
+campaignsItem_6 = sideBarMenu {
+  left: 20px,
+  top: 144px,
+  width: 100%,
+
+  text2 {
+    contents: "Draft email"
+  }
+
+  shape1 {
+    contents: dot20,
+    fill[0].color: colors.colors.blackAlpha25
+  }
+}
+
+small = logo.mediumWordmark {left: -111px, top: 48px}
+
+xsmall = avatar.xsmallVariant {
+  left: -123px,
+  top: 600px,
+
+  avatar.smallStatus_2 {
+    display: .hidden
+  }
+}
+
+GroupedStack = frame {
+  height: 100%,
+  layout: {align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [shape3, shape2]
+}
+
+shape3 = icon {left: 28px, top: 10px, width: 20px, height: 20px, contents: search20}
+
+shape2 = icon {left: 48px, top: 30px, width: 20px, height: 20px, contents: sideBarleft20}

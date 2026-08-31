@@ -22,15 +22,15 @@ smallArtwork = shape {
 
 @variant
 large = small {
-  left: 490px,
-  top: 519px,
+  left: 340px,
+  top: 677px,
   overrides: [insert(largeArtwork, after = .nil), remove(smallArtwork)]
 }
 
 @variant
 extraLarge = small {
-  left: 636px,
-  top: 519px,
+  left: 340px,
+  top: 769px,
   overrides: [insert(extraLargeArtwork, after = .nil), remove(smallArtwork)]
 }
 
@@ -54,8 +54,8 @@ largeArtwork = shape {
 
 @variant
 medium = small {
-  left: 409px,
-  top: 519px,
+  left: 340px,
+  top: 597px,
   width: 36px,
   height: 36px,
 
@@ -63,4 +63,84 @@ medium = small {
     width: 36px,
     height: 36px
   }
+}
+
+@variant
+extraLargeWordmark = small {
+  left: 475px,
+  top: 769px,
+  layout.direction: .row,
+  layout.item-gap: 24px,
+  overrides: [insert(text4, after = smallArtwork)],
+
+  smallArtwork {
+    width: 80px,
+    height: 80px
+  }
+}
+
+@variant
+largeWordmark = small {
+  left: 475px,
+  top: 677px,
+  layout.direction: .row,
+  layout.item-gap: 12px,
+  overrides: [insert(text3, after = smallArtwork)],
+
+  smallArtwork {
+    width: 48px,
+    height: 48px
+  }
+}
+
+@variant
+mediumWordmark = small {
+  left: 475px,
+  top: 597px,
+  layout.direction: .row,
+  layout.item-gap: 8px,
+  overrides: [insert(text2, after = smallArtwork)],
+
+  smallArtwork {
+    width: 36px,
+    height: 36px
+  }
+}
+
+@variant
+smallWordmark = small {
+  left: 475px,
+  top: 519px,
+  layout.direction: .row,
+  layout.item-gap: 8px,
+  overrides: [insert(text1, after = smallArtwork)]
+}
+
+text1 = text {left: 426px, top: 673px, fill: .black, contents: "Overleaf", font-style: "SemiBold"}
+
+text2 = text {
+  left: 426px,
+  top: 655px,
+  fill: .black,
+  contents: "Overleaf",
+  font-size: 18,
+  font-style: "SemiBold"
+}
+
+text3 = text {
+  left: 402px,
+  top: 655px,
+  fill: .black,
+  contents: "Overleaf",
+  font-size: 22,
+  font-style: "SemiBold"
+}
+
+text4 = text {
+  left: 362px,
+  top: 655px,
+  fill: .black,
+  contents: "Overleaf",
+  font-size: 44,
+  font-style: "SemiBold"
 }

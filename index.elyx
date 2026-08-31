@@ -242,11 +242,9 @@ chat = aiChat.aiChat {
   top: 1369px,
   width: 408px,
   height: 562px,
-  overrides: [remove(aiChat.topBar)],
+  
 
-  aiChat.chatBody.messageArea {
-    overflow: .visible
-  }
+  
 }
 
 audioToolbar = toolbar.audioToolbar {left: 1411px, top: 1863px, width: 322px}

@@ -38,8 +38,9 @@ headerRow = frame {
 }
 
 eventHeader = header.smallLeft {
-  left: 501px,
+  left: 0px,
   top: 250px,
+  width: 100%,
 
   header.smallSubtitle {
     contents: "Live from the dunes: Stage 3",
