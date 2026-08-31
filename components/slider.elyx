@@ -30,16 +30,30 @@ thumb = base {
   left: 702px,
   top: 591px,
   overflow: .visible,
-  overrides: [insert(thumbHandle, after = track)],
+  overrides: [insert(handle_2, after = track)],
 
   track {
     corner-radius: [999px, 0px, 0px, 999px]
   }
 }
 
-thumbHandle = shape {
-  left: 56.98px,
-  top: -3.0789px,
+@variant
+full = base {
+  left: 702px,
+  top: 645px,
+  overflow: .visible,
+  overrides: [insert(handle_3, after = track)],
+
+  track {
+    width: 100%
+  }
+}
+
+export handle = frame {left: 620px, top: 569px, width: 10px, height: 10px, children: thumbHandle_2}
+
+thumbHandle_2 = shape {
+  left: 0px,
+  top: 0px,
   width: 10px,
   height: 10px,
   fill: colors.colors.whiteAlpha50,
@@ -47,3 +61,7 @@ thumbHandle = shape {
   filter: {type: .background-blur, radius: 40px},
   type: .ellipse
 }
+
+handle_2 = handle {left: 789px, top: 589px}
+
+handle_3 = handle {left: 796px, top: 643px}

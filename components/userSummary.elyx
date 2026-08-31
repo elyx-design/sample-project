@@ -1,4 +1,3 @@
-import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/avatar.elyx" as userAvatar
@@ -53,6 +52,7 @@ export medium = frame {
   top: 192px,
   height: 72px,
   layout: {justify-content: .end, align-items: .center, item-gap: 20px},
+  overflow: .visible,
   children: [mediumAvatar, mediumHeader]
 }
 
@@ -63,11 +63,13 @@ mediumHeader = header.mediumLeft {
   top: 10px,
 
   header.mediumSubtitle {
-    contents: "nora@mail.com"
+    contents: "nora@mail.com",
+    font-size: 18
   }
 
   header.mediumTitle {
     contents: "Nora Harper",
+    font-size: 24,
     font-style: "Bold"
   }
 }

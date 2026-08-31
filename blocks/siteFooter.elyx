@@ -99,7 +99,7 @@ base = textField.iconPlaceholder {
   }
 }
 
-medium = button.medium {
+medium = button.mediumPrimary {
   left: 396.5px,
   top: 0px,
 

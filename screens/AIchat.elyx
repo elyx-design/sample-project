@@ -5,8 +5,8 @@ import "images/background/waves.jpg" as waves
 import "blocks/aiChat.elyx" as aiChat
 
 AIChat = frame {
-  left: 434px,
-  top: 294px,
+  left: 180px,
+  top: 303px,
   width: 1360px,
   height: 776px,
   layout: {align-items: .center},
@@ -31,10 +31,10 @@ layer1 = frame {
   overflow: .visible,
   padding-top: 120px,
   padding-bottom: 48px,
-  children: [aiChat_2, bottom]
+  children: [aiChat_3, bottom]
 }
 
-aiChat_2 = aiChat.aiChat {left: 879px, top: 0px, height: 341px, min-height: .nil}
+aiChat_3 = aiChat.aiChat {left: 775px, top: 0px}
 
 bottom = frame {
   width: 100%,
@@ -50,5 +50,6 @@ text1 = text {
   top: 1073px,
   fill: colors.colors.blackAlpha50,
   contents: "Overleaf is AI and can make mistakes. Please double-check responses.",
-  font-size: 12
+  font-size: 12,
+  font-style: "Medium"
 }

@@ -56,7 +56,7 @@ eventHeader = header.smallLeft {
 liveStatus = tag.status {
   left: 806px,
   top: 450px,
-  fill[0].color: rgb(0%, 100%, 43.07%, 54%),
+  fill[0].color: rgb(100%, 0%, 0%, 60%),
 
   tag.label {
     contents: "Live",
@@ -64,7 +64,7 @@ liveStatus = tag.status {
   }
 
   tag.statusIcon {
-    fill[0].color: .lime
+    fill[0].color: colors.colors.white100
   }
 }
 

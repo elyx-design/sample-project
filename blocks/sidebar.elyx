@@ -199,6 +199,280 @@ workspaceSelector = selector.Selector {
   }
 }
 
+small = logo.mediumWordmark {left: -111px, top: 48px}
+
+xsmall = avatar.xsmallVariant {
+  left: -123px,
+  top: 600px,
+
+  avatar.smallStatus_2 {
+    display: .hidden
+  }
+}
+
+GroupedStack = frame {
+  height: 100%,
+  layout: {align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [shape3, shape2]
+}
+
+shape3 = icon {left: 28px, top: 10px, width: 20px, height: 20px, contents: search20}
+
+shape2 = icon {left: 48px, top: 30px, width: 20px, height: 20px, contents: sideBarleft20}
+
+@variant
+sidebarLiveEvent = sidebar {
+  left: -123px,
+  top: 693px,
+  width: 232px,
+  padding-top: 12px,
+  overrides: [remove(workspaceSelector)],
+
+  GroupedStack_3 {
+    overrides: [remove(Content)]
+  }
+
+  GroupedStack_3.GroupedStack_4 {
+    overrides: [insert(GroupedStack_5, after = .nil), remove(frame2)]
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4 {
+    overrides: [
+      insert(campaignsItem_11, after = campaignsItem_6),
+      insert(campaignsItem_12, after = campaignsItem_11)
+    ],
+    layout.item-gap: 8px
+  }
+
+  @use-variant(sideBarMenuEvent)
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6 {}
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.eventTag_2.text3 {
+    contents: "5,1k"
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.text5 {
+    contents: "Lowhealth"
+  }
+
+  @use-variant(sideBarMenuEvent)
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5 {}
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.eventTag_2.text3 {
+    contents: "3,1k"
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.text5 {
+    contents: "SkipperGO"
+  }
+
+  @use-variant(sideBarMenuEvent)
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3 {}
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.eventTag_2.text3 {
+    contents: "9,7k"
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.text5 {
+    contents: "HugeTown"
+  }
+
+  @use-variant(sideBarMenuEvent)
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4 {}
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2.text3 {
+    contents: "21,2k"
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.text5 {
+    contents: "RamblingRoosterTV"
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.text1 {
+    contents: "Live Channels"
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.settings20svg {
+    display: .hidden
+  }
+}
+
+@variant
+sideBarMenuEvent = sideBarMenu {
+  left: -354px,
+  top: 152px,
+  overflow: .visible,
+  layout.item-gap: 8px,
+  layout.justify-content: .space-between,
+  overrides: [
+    insert(text5, after = .nil),
+    insert(eventTag_2, after = text5),
+    remove(text2),
+    remove(shape1)
+  ]
+}
+
+campaignsItem_12 = sideBarMenuEvent {
+  left: 40px,
+  top: 192px,
+  width: 100%,
+
+  eventTag_2.text3 {
+    contents: "5,9k"
+  }
+
+  text5 {
+    contents: "RespawnRegret"
+  }
+}
+
+campaignsItem_11 = sideBarMenuEvent {
+  left: 40px,
+  top: 164px,
+  width: 100%,
+
+  eventTag_2.text3 {
+    contents: "71,1k"
+  }
+
+  text5 {
+    contents: "TurnTV"
+  }
+}
+
+GroupedStack_5 = frame {
+  left: 20px,
+  top: 340px,
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [segmentHeader_3, frame5]
+}
+
+segmentHeader_3 = segmentHeader {
+  left: 10px,
+  top: 222px,
+  width: 100%,
+  padding-left: 16px,
+  padding-right: 16px,
+
+  settings20svg {
+    contents: sideBarleft20
+  }
+
+  text1 {
+    contents: "For You"
+  }
+}
+
+frame5 = frame {
+  left: 0px,
+  top: 236px,
+  width: 100%,
+  layout: {direction: .column, item-gap: 8px},
+  overflow: .visible,
+  padding-left: 10px,
+  padding-right: 10px,
+  children: [campaignsItem_7, campaignsItem_8, campaignsItem_9, campaignsItem_10]
+}
+
+campaignsItem_7 = sideBarMenuEvent {
+  left: 20px,
+  top: 84px,
+  width: 100%,
+
+  eventTag_2.text3 {
+    contents: "5,5k"
+  }
+
+  text5 {
+    contents: "PixelDriftTV"
+  }
+}
+
+campaignsItem_8 = sideBarMenuEvent {
+  left: 20px,
+  top: 54px,
+  width: 100%,
+
+  eventTag_2.text3 {
+    contents: "1,2k"
+  }
+
+  text5 {
+    contents: "SofaKing"
+  }
+}
+
+campaignsItem_9 = sideBarMenuEvent {
+  left: 20px,
+  top: 114px,
+  width: 100%,
+
+  eventTag_2.text3 {
+    contents: "13,4k"
+  }
+
+  text5 {
+    contents: "InkAndPixels"
+  }
+}
+
+campaignsItem_10 = sideBarMenuEvent {
+  left: 20px,
+  top: 144px,
+  width: 100%,
+
+  @use-variant(eventTagOffline)
+  eventTag_2 {}
+
+  text5 {
+    contents: "PaletteRiot"
+  }
+}
+
+export eventTag = frame {
+  left: -492px,
+  top: 422px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 7px},
+  children: [status, text3]
+}
+
+status = avatar.status {left: 0px, top: 5px, fill[0].color: .red}
+
+text3 = text {
+  left: 15px,
+  top: 0px,
+  fill: .black,
+  contents: "2,2k",
+  font-size: 12,
+  font-style: "SemiBold"
+}
+
+@variant
+eventTagOffline = eventTag {
+  left: -492px,
+  top: 485px,
+  overrides: [remove(status)],
+
+  text3 {
+    contents: "Offline",
+    fill[0].color: colors.colors.blackAlpha25
+  }
+}
+
+eventTag_2 = eventTag {left: -251px, top: 161px, layout.item-gap: 4px}
+
+text5 = text {
+  left: 54.5px,
+  top: 6.5px,
+  fill: colors.colors.black20,
+  contents: "Menu",
+  font-size: 12,
+  font-style: "Regular"
+}
+
 GroupedStack_3 = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 16px},
@@ -413,25 +687,3 @@ campaignsItem_6 = sideBarMenu {
     fill[0].color: colors.colors.blackAlpha25
   }
 }
-
-small = logo.mediumWordmark {left: -111px, top: 48px}
-
-xsmall = avatar.xsmallVariant {
-  left: -123px,
-  top: 600px,
-
-  avatar.smallStatus_2 {
-    display: .hidden
-  }
-}
-
-GroupedStack = frame {
-  height: 100%,
-  layout: {align-items: .center, item-gap: 8px},
-  overflow: .visible,
-  children: [shape3, shape2]
-}
-
-shape3 = icon {left: 28px, top: 10px, width: 20px, height: 20px, contents: search20}
-
-shape2 = icon {left: 48px, top: 30px, width: 20px, height: 20px, contents: sideBarleft20}

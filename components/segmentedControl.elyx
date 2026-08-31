@@ -35,14 +35,16 @@ export mediumSelected = frame {
   border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
-      color: Colors.colors.blackAlpha10,
-      offset: point(0px, 2px),
-      blur-radius: 2px,
+      color: Colors.colors.blackAlpha05,
+      offset: point(0px, 1px),
+      blur-radius: 0px,
       spread: 0px,
-      style: .smooth
+      style: .smooth,
+      visible: .false
     }
   },
   corner-radius: Radius.radius.max,
+  overflow: .visible,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
   children: label
@@ -63,10 +65,10 @@ mediumInactive = mediumSelected {
   left: 623px,
   top: 812px,
   border[0].visible: .false,
-  shadow[0].drop-shadow.visible: .false,
+  fill[0]: .nil,
 
   label {
-    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 80%)
+    fill[0].color: Colors.colors.blackAlpha50
   }
 }
 
@@ -74,7 +76,7 @@ mediumInactive = mediumSelected {
 small = medium {
   left: 913px,
   top: 656px,
-  width: .auto,
+  width: 141px,
   height: .auto,
   fill[0].color: Colors.colors.black95,
   overrides: [insert(smallLeadingSegment, after = .nil), remove(leadingSegment)],
@@ -95,7 +97,11 @@ smallInactive = mediumSelected {
   padding-bottom: 4px,
   border[0]: .nil,
   fill[0]: .nil,
-  shadow[0]: .nil
+  shadow[0]: .nil,
+
+  label {
+    fill[0].color: Colors.colors.blackAlpha50
+  }
 }
 
 @variant

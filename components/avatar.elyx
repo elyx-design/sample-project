@@ -177,3 +177,6 @@ photoBG = shape {
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
   type: .ellipse
 }
+
+@variant
+statusOffline = status {left: -22px, top: -72px, fill[0].color: Colors.colors.black80}

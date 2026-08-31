@@ -6,6 +6,7 @@ import "icons/24 pixels/calendar-24.svg" as calendar24
 import "components/button.elyx" as button
 import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "icons/24 pixels/search-24.svg" as search24
+import "icons/20 pixels/emoji-20.svg" as emoji20
 
 export base = frame {
   left: 869px,
@@ -166,14 +167,14 @@ buttonPlaceholder = base {
   top: 850px,
   padding-right: 4px,
   layout.justify-content: .space-between,
-  overrides: [insert(placeholderButton, after = label)],
+  overrides: [insert(GroupedStack, after = label)],
 
   label {
     fill[0].color: Colors.colors.black80
   }
 }
 
-placeholderButton = button.smallPrimaryRounded {
+submitButton = button.smallPrimaryRounded {
   left: 52.3381px,
   top: 5.85px,
 
@@ -182,7 +183,23 @@ placeholderButton = button.smallPrimaryRounded {
   }
 }
 
-submitButton = button.smallPrimaryRounded {
+GroupedStack = frame {
+  height: 100%,
+  layout: {align-items: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [small, placeholderButton]
+}
+
+small = button.smallIcon {
+  left: 59.6px,
+  top: 6px,
+
+  button.smallIconGlyph {
+    contents: emoji20
+  }
+}
+
+placeholderButton = button.smallPrimaryRounded {
   left: 52.3381px,
   top: 5.85px,
 

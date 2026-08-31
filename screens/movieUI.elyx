@@ -64,18 +64,22 @@ siteHeader_2 = siteHeader.accountHeader {
   }
 
   siteHeader.accountContent.accountNav.accountResources.label {
+    contents: "Favourites",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountCompany.label {
+    contents: "Live",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountPricing.label {
+    contents: "TV Shows",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountProduct.label {
+    contents: "Movies",
     fill[0].color: colors.colors.whiteAlpha70
   }
 
@@ -85,9 +89,6 @@ siteHeader_2 = siteHeader.accountHeader {
 
   siteHeader.accountContent.accountActions.accountMenu.accountAvatar.avatar.smallStatus {
     display: .hidden
-  }
-
-  siteHeader.accountContent.accountBrand.accountBrandName {
   }
 }
 
@@ -176,6 +177,10 @@ details = frame {
 productInfo_2 = productInfo.productInfo {
   left: 741px,
   top: 881px,
+
+  productInfo.productDetails.ratingTag {
+    fill[0].color: rgb(100%, 83.1373%, 28.6275%)
+  }
 
   productInfo.productDetails.productCopy.subtitle {
     contents: "by Amara Vale",

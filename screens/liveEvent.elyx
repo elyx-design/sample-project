@@ -1,42 +1,76 @@
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "tokens/colors.elyx" as colors
+import "components/button.elyx" as button
 import "blocks/chatWindow.elyx" as chatWindow
-import "images/background/desert.png" as desert
+import "blocks/siteHeader.elyx" as siteHeader
+import "icons/20 pixels/pause-20.svg" as pause20
+import "blocks/sideBar.elyx" as sideBar
+import "components/userSummary.elyx" as userSummary
+import "images/misc/bikeBGBanner.jpg" as bikeBGBanner
 
 liveEvent = frame {
-  left: -76.9999px,
-  top: -8px,
-  width: 1415px,
-  height: 925px,
-  fill: {image: {ref: desert}},
-  children: eventPanel
+  left: -642.9999px,
+  top: -511px,
+  width: 1524px,
+  height: 798px,
+  layout: {direction: .column, align-items: .center},
+  fill: rgb(7.84%, 12.94%, 13.7255%),
+  children: [siteHeader_2, Content]
 }
 
-eventPanel = frame {
-  left: 226.9999px,
-  top: 219px,
-  width: 962px,
-  height: 488px,
-  layout: {direction: .column},
-  shadow: {
-    drop-shadow: {
-      color: colors.colors.blackAlpha10,
-      offset: point(0px, 5px),
-      blur-radius: 5px,
-      spread: 0px
-    }
-  },
-  corner-radius: 24px,
-  children: layout
-}
-
-layout = frame {
+siteHeader_2 = siteHeader.accountHeader {
   left: 0px,
+  top: 43px,
+  width: 100%,
+  fill[0].color: colors.colors.white100,
+
+  siteHeader.accountContent.accountNav.accountResources.label {
+    contents: "Playlists"
+  }
+
+  siteHeader.accountContent.accountNav.accountCompany.label {
+    contents: "Categories"
+  }
+
+  siteHeader.accountContent.accountNav.accountPricing.label {
+    contents: "Browse"
+  }
+
+  siteHeader.accountContent.accountNav.accountProduct.label {
+    contents: "Live Now"
+  }
+}
+
+Content = frame {
+  left: 226.9999px,
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .space-between},
-  children: [video, chat]
+  layout: {direction: .row},
+  corner-radius: 0px,
+  overflow: .visible,
+  children: [sidebar, Video, chat]
+}
+
+sidebar = sideBar.sidebarLiveEvent {
+  left: 751px,
+  top: 0px,
+  height: 100%,
+  corner-radius: 0px,
+  border[0].visible: .false,
+  fill[0].color: colors.colors.white100,
+  filter[0].visible: .false,
+  shadow[0].drop-shadow.visible: .false
+}
+
+Video = frame {
+  left: 0px,
+  top: 0px,
+  width: 65%,
+  height: 100%,
+  layout: {direction: .column, align-items: .end},
+  overflow: .visible,
+  children: [video, About]
 }
 
 video = videoPlayer.videoPlayer {
@@ -44,11 +78,114 @@ video = videoPlayer.videoPlayer {
   top: 0px,
   width: 100%,
   height: 100%,
+  corner-radius: 0px,
 
-  videoPlayer.headerRow.eventHeader {
-    left: 0px,
-    width: 100%
+  @use-variant(videoPlayer.playbackControl.slider.full)
+  videoPlayer.controls.playbackControl.scrubber.progressSlider {}
+
+  videoPlayer.controls.playbackControl.scrubber.playButton.button.smallIconGlyph {
+    contents: pause20
+  }
+
+  videoPlayer.headerRow.eventHeader.header.smallSubtitle {
+    contents: "Lead cycling duo"
+  }
+
+  videoPlayer.headerRow.eventHeader.header.smallTitle {
+    contents: "CAM 3"
   }
 }
 
-chat = chatWindow.chatWindow {left: 640px, top: 0px, width: 32.6%, height: 100%}
+About = frame {
+  left: 0px,
+  top: 654px,
+  width: 100%,
+  height: 136px,
+  layout: {direction: .column, justify-content: .space-between, item-gap: 24px},
+  fill: {image: {ref: bikeBGBanner}},
+  overflow: .visible,
+  padding: 20px,
+  children: [small, GroupedStack]
+}
+
+small = userSummary.small {
+  left: -238px,
+  top: 333px,
+  overflow: .visible,
+
+  userSummary.smallHeader.header.smallSubtitle {
+    contents: "Your go-to spot for everything cycling",
+    fill[0].color: colors.colors.whiteAlpha50
+  }
+
+  userSummary.smallHeader.header.smallTitle {
+    contents: "BikeNOW",
+    fill[0].color: colors.colors.white100
+  }
+
+  userSummary.smallHeader {
+    width: .auto
+  }
+}
+
+GroupedStack = frame {
+  width: 100%,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [small_2, small_3, small_4]
+}
+
+small_2 = button.small {
+  left: 254.9999px,
+  top: 58px,
+
+  button.smallLabel {
+    contents: "Follow"
+  }
+}
+
+small_3 = button.smallPrimary {
+  left: 274.9999px,
+  top: 78px,
+
+  button.smallLabel {
+    contents: "Gift a Sub"
+  }
+}
+
+small_4 = button.smallPrimary {
+  left: 294.9999px,
+  top: 98px,
+
+  button.smallLabel {
+    contents: "Subscribe: 25% off"
+  }
+}
+
+chat = chatWindow.liveChat {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  corner-radius: 0px,
+  border[0].color: colors.colors.blackAlpha25,
+  border[0].position: .outside,
+  border[0].visible: .false,
+  border[0].width: 0.5px,
+
+  chatWindow.GroupedStack.chat.base_3.chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: rgb(0%, 74.55%, 0%)
+  }
+
+  chatWindow.GroupedStack.chat.base_4.chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: rgb(0%, 72.99%, 92.99%)
+  }
+
+  chatWindow.GroupedStack.chat.base_2.chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: rgb(52.22%, 0%, 100%)
+  }
+
+  chatWindow.GroupedStack.chat.base.chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: rgb(100%, 0%, 51.28%)
+  }
+}
