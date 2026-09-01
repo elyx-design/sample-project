@@ -8,7 +8,7 @@ export medium = frame {
   width: 100%,
   height: Spacing.spacing.heightM,
   layout: {justify-content: .center, align-items: .center},
-  fill: rgb(89.84%, 89.84%, 89.84%),
+  fill: Colors.colors.controlSurface,
   corner-radius: Radius.radius.max,
   padding: 4px,
   children: [leadingSegment, middleSegment, trailingSegment]

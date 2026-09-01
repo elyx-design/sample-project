@@ -14,7 +14,7 @@ export liveEvent = frame {
   width: 1524px,
   height: 798px,
   layout: {direction: .column, align-items: .center},
-  fill: rgb(7.84%, 12.94%, 13.7255%),
+  fill: colors.colors.tealDark,
   children: [siteHeader_2, Content]
 }
 
@@ -174,18 +174,18 @@ chat = chatWindow.liveChat {
   border[0].width: 0.5px,
 
   chatWindow.GroupedStack.chat.base_3.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: rgb(0%, 74.55%, 0%)
+    fill[0].color: colors.colors.green
   }
 
   chatWindow.GroupedStack.chat.base_4.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: rgb(0%, 72.99%, 92.99%)
+    fill[0].color: colors.colors.cyan
   }
 
   chatWindow.GroupedStack.chat.base_2.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: rgb(52.22%, 0%, 100%)
+    fill[0].color: colors.colors.purple
   }
 
   chatWindow.GroupedStack.chat.base.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: rgb(100%, 0%, 51.28%)
+    fill[0].color: colors.colors.pink
   }
 }

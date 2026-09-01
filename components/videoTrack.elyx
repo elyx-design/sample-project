@@ -9,7 +9,7 @@ export base = frame {
   width: 475px,
   height: spacing.spacing.heightG,
   layout: {justify-content: .space-evenly, align-items: .center},
-  fill: rgb(83.53%, 96.25%, 0%),
+  fill: colors.colors.lime,
   corner-radius: 8px,
   padding: [4px, 0px],
   children: [leadingHandle, filmstrip, trailingHandle]

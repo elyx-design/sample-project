@@ -48,7 +48,7 @@ subtitle = text {
 ratingTag = tag.iconAndLabel {
   left: 18.2196px,
   top: 229.1186px,
-  fill[0].color: rgb(100%, 83.1373%, 28.6275%, 50%),
+  fill[0].color: colors.colors.yellowAlpha50,
 
   tag.label {
     contents: "4.5"

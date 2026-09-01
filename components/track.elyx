@@ -9,7 +9,7 @@ export track = frame {
   width: 361px,
   height: spacing.spacing.heightM,
   layout: {justify-content: .space-between, align-items: .center},
-  fill: rgb(67.48%, 100%, 0%),
+  fill: colors.colors.limeBright,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   corner-radius: 8px,
   padding: [4px, 0px],

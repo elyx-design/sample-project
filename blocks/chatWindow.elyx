@@ -204,7 +204,7 @@ base = chatBubble.liveBubble {
 
   chatBubble.GroupedStack.messageText_3 {
     contents: "oasis_rider",
-    fill[0].color: rgb(100%, 0%, 51.37%)
+    fill[0].color: colors.colors.pink
   }
 }
 
@@ -223,7 +223,7 @@ base_2 = chatBubble.liveBubble {
 
   chatBubble.GroupedStack.messageText_3 {
     contents: "Mirage_FC",
-    fill[0].color: rgb(52.1569%, 0%, 100%)
+    fill[0].color: colors.colors.purple
   }
 }
 
@@ -242,7 +242,7 @@ base_4 = chatBubble.liveBubble {
 
   chatBubble.GroupedStack.messageText_3 {
     contents: "joana.rd",
-    fill[0].color: rgb(0%, 72.94%, 92.94%)
+    fill[0].color: colors.colors.cyan
   }
 }
 
@@ -261,7 +261,7 @@ base_3 = chatBubble.liveBubble {
 
   chatBubble.GroupedStack.messageText_3 {
     contents: "MODYara",
-    fill[0].color: rgb(0%, 74.5098%, 0%)
+    fill[0].color: colors.colors.green
   }
 }
 

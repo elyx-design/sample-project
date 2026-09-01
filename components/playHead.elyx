@@ -17,7 +17,7 @@ line = shape {
   width: 2px,
   height: 100%,
   fill: [
-    rgb(80.39%, 96.47%, 0%),
+    colors.colors.lime,
     {
       linear-gradient: {
         from: point(50%, 88.7466%),
@@ -37,6 +37,6 @@ handle = shape {
   height: 12px,
   ignore-stack: .true,
   fill: colors.colors.blackAlpha70,
-  border: {color: rgb(83.5294%, 96.0784%, 0%), width: 2px},
+  border: {color: colors.colors.lime, width: 2px},
   type: .ellipse
 }

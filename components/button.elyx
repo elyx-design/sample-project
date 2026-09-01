@@ -60,7 +60,7 @@ mediumPrimary = medium {
   shadow[1].inner-shadow.spread: 0px,
 
   mediumLabel {
-    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%),
+    fill[0].color: Colors.colors.controlForeground,
     left: 16px
   }
 }
@@ -78,7 +78,7 @@ mediumDanger = medium {
   shadow[1].inner-shadow.spread: 0px,
 
   mediumLabel {
-    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
+    fill[0].color: Colors.colors.controlForeground
   }
 }
 
@@ -106,7 +106,7 @@ mediumPrimaryPressed = medium {
   shadow[0].inner-shadow.offset: [0px, 3px],
 
   mediumLabel {
-    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
+    fill[0].color: Colors.colors.controlForeground
   }
 }
 
@@ -123,7 +123,7 @@ mediumDangerPressed = medium {
   shadow[0].inner-shadow.style: .normal,
 
   mediumLabel {
-    fill[0].color: rgb(98.9987%, 98.9987%, 98.9987%)
+    fill[0].color: Colors.colors.controlForeground
   }
 }
 

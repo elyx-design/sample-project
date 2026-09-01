@@ -47,7 +47,7 @@ compact = frame {
   height: 456px,
   layout: {direction: .column, justify-content: .space-between},
   fill: .white,
-  border: {color: rgb(0%, 0%, 0%, 8%), visible: .false, position: .outside},
+  border: {color: colors.colors.blackAlpha08, visible: .false, position: .outside},
   padding: [20px, 12px],
   children: [compactContent, profileAvatar]
 }

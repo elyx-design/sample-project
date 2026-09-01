@@ -11,7 +11,7 @@ export profileCard = cardBackground.transparent {
   padding-left: 0px,
   padding-bottom: 0px,
   padding-right: 0px,
-  fill[0].color: rgb(100%, 83.09%, 28.6%, 50%),
+  fill[0].color: colors.colors.yellowAlpha50,
   layout.item-gap: 0,
   overrides: [insert(content, after = .nil), insert(profileStats, after = content)]
 }

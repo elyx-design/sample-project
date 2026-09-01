@@ -17,5 +17,21 @@ export darkColors = colors.colors {
   blackAlpha50: rgb(100%, 100%, 100%, 50%),
   whiteAlpha70: rgb(0%, 0%, 0%, 70%),
   whiteAlpha50: rgb(0%, 0%, 0%, 50%),
-  blackAlpha05: rgb(100%, 100%, 100%, 5%)
+  blackAlpha05: rgb(100%, 100%, 100%, 5%),
+  blackAlpha08: rgb(100%, 100%, 100%, 8%),
+  yellow: rgb(100%, 83.1373%, 28.6275%),
+  yellowAlpha50: rgb(100%, 83.1373%, 28.6275%, 50%),
+  pink: rgb(100%, 0%, 51.37%),
+  purple: rgb(52.1569%, 0%, 100%),
+  cyan: rgb(0%, 72.94%, 92.94%),
+  green: rgb(0%, 74.5098%, 0%),
+  tealDark: rgb(7.84%, 12.94%, 13.7255%),
+  limeBright: rgb(67.48%, 100%, 0%),
+  lime: rgb(83.53%, 96.25%, 0%),
+  magenta: rgb(100%, 41.19%, 100%),
+  controlForeground: rgb(8.61%, 8.61%, 8.61%),
+  controlBorder: rgb(28.06%, 28.06%, 28.06%),
+  controlSurface: rgb(17.92%, 17.92%, 17.92%),
+  surfaceSubtle: rgb(13.73%, 13.73%, 13.73%),
+  lavender: rgb(90.2878%, 81.12%, 100%)
 }

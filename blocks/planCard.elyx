@@ -72,7 +72,7 @@ badge = tag.iconAndLabel {
   left: 67px,
   top: 37px,
   border[0].visible: .false,
-  fill[0].color: rgb(90.2878%, 81.12%, 100%),
+  fill[0].color: Colors.colors.lavender,
 
   tag.label {
     contents: "Best!"

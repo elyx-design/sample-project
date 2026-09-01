@@ -2,6 +2,7 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/avatar.elyx" as userAvatar
 import "components/header.elyx" as header
+import "tokens/colors.elyx" as Colors
 
 export card = frame {
   left: 16px,
@@ -11,7 +12,7 @@ export card = frame {
   min-width: 100px,
   min-height: 100px,
   layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
-  fill: rgb(94.9997%, 94.9997%, 94.9997%),
+  fill: Colors.colors.surfaceSubtle,
   corner-radius: Radius.radius.m,
   padding: Spacing.spacing.paddingM
 }

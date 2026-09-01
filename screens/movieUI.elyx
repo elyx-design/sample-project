@@ -179,7 +179,7 @@ productInfo_2 = productInfo.productInfo {
   top: 881px,
 
   productInfo.productDetails.ratingTag {
-    fill[0].color: rgb(100%, 83.1373%, 28.6275%)
+    fill[0].color: colors.colors.yellow
   }
 
   productInfo.productDetails.productCopy.subtitle {

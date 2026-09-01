@@ -1,4 +1,5 @@
 import "images/misc/logo.png" as logo2
+import "tokens/colors.elyx" as Colors
 
 export small = frame {
   left: 340px,
@@ -6,7 +7,7 @@ export small = frame {
   width: .auto,
   height: .auto,
   layout: {align-items: .center},
-  fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
+  fill: {color: Colors.colors.controlBorder, visible: .false},
   corner-radius: 0px,
   children: smallArtwork
 }
@@ -110,12 +111,18 @@ smallWordmark = small {
   overrides: [insert(text1, after = smallArtwork)]
 }
 
-text1 = text {left: 426px, top: 673px, fill: .black, contents: "Overleaf", font-style: "SemiBold"}
+text1 = text {
+  left: 426px,
+  top: 673px,
+  fill: Colors.colors.black20,
+  contents: "Overleaf",
+  font-style: "SemiBold"
+}
 
 text2 = text {
   left: 426px,
   top: 655px,
-  fill: .black,
+  fill: Colors.colors.black20,
   contents: "Overleaf",
   font-size: 18,
   font-style: "SemiBold"
@@ -124,7 +131,7 @@ text2 = text {
 text3 = text {
   left: 402px,
   top: 655px,
-  fill: .black,
+  fill: Colors.colors.black20,
   contents: "Overleaf",
   font-size: 22,
   font-style: "SemiBold"
@@ -133,7 +140,7 @@ text3 = text {
 text4 = text {
   left: 362px,
   top: 655px,
-  fill: .black,
+  fill: Colors.colors.black20,
   contents: "Overleaf",
   font-size: 44,
   font-style: "SemiBold"

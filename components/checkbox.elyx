@@ -7,7 +7,7 @@ anchor = frame {
   width: 0px,
   height: 0px,
   fill: .white,
-  border: rgb(79.9972%, 79.9972%, 79.9972%)
+  border: Colors.colors.controlBorder
 }
 
 export on = frame {

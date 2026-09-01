@@ -339,7 +339,7 @@ audioTrack = mediaTrack.track {
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
-  fill[0].color: rgb(100%, 41.19%, 100%),
+  fill[0].color: Colors.colors.magenta,
 
   mediaTrack.content.left.label.trackName {
     contents: "ambientForest.mp3"
