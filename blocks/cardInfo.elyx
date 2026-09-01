@@ -109,10 +109,6 @@ small = avatar.smallPhoto {
   avatar.smallStatus {
     display: .hidden
   }
-
-  avatar.smallInitials {
-    contents: "Writer"
-  }
 }
 
 closeButton = button.smallClose {left: 1097px, top: 291px}

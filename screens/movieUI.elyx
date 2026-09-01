@@ -83,10 +83,6 @@ siteHeader_2 = siteHeader.accountHeader {
     fill[0].color: colors.colors.whiteAlpha70
   }
 
-  siteHeader.accountContent.accountBrand.small_3.logo.text2 {
-    fill[0].color: colors.colors.white100
-  }
-
   siteHeader.accountContent.accountActions.accountMenu.accountAvatar.avatar.smallStatus {
     display: .hidden
   }
