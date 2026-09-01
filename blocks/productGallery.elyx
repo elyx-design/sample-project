@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
@@ -115,7 +116,7 @@ title = text {
   left: 380px,
   top: 176.5px,
   fill: colors.colors.black20,
-  contents: "Reading Next",
+  contents: Strings.labels.readingNext,
   font-size: Spacing.fontSize.xxlarge,
   font-style: "SemiBold"
 }

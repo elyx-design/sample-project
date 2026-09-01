@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as spacing
 import "icons/24 pixels/direct-24.svg" as direct24
 import "tokens/colors.elyx" as colors
@@ -64,7 +65,7 @@ trackName = text {
   left: 263px,
   top: 553px,
   fill: colors.colors.black20,
-  contents: "Track name",
+  contents: Strings.componentDefaults.trackName,
   font-size: spacing.fontSize.small,
   font-style: "SemiBold"
 }

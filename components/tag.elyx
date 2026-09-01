@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as spacing
 import "tokens/radius.elyx" as radius
@@ -23,7 +24,7 @@ label = text {
   left: 0px,
   top: 0px,
   fill: colors.colors.blackAlpha50,
-  contents: "Label",
+  contents: Strings.componentDefaults.label,
   font-size: spacing.fontSize.small,
   font-style: "Bold"
 }

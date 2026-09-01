@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
@@ -42,7 +43,7 @@ label = text {
   left: 0px,
   top: 0px,
   fill: colors.colors.black20,
-  contents: "Menu",
+  contents: Strings.navigation.menu,
   font-style: "SemiBold"
 }
 
@@ -94,7 +95,7 @@ logInLink = menu {
   top: 483px,
 
   label {
-    contents: "Log In"
+    contents: Strings.actions.logIn
   }
 }
 
@@ -103,7 +104,7 @@ getStartedButton = button.mediumPrimary {
   top: 475px,
 
   button.mediumLabel {
-    contents: "Get started"
+    contents: Strings.actions.getStartedHeader
   }
 }
 
@@ -119,7 +120,7 @@ searchField = textField.iconPlaceholder {
   width: 180px,
 
   textField.label {
-    contents: "Search"
+    contents: Strings.actions.search
   }
 }
 
@@ -195,7 +196,7 @@ Menu = menu {
   top: 33.5256px,
 
   label {
-    contents: "Product"
+    contents: Strings.navigation.product
   }
 }
 
@@ -204,7 +205,7 @@ MenuVariant = mutedMenu {
   top: 53.5256px,
 
   label {
-    contents: "Pricing"
+    contents: Strings.navigation.pricing
   }
 }
 
@@ -213,7 +214,7 @@ bareCompany = mutedMenu {
   top: 73.5256px,
 
   label {
-    contents: "Company"
+    contents: Strings.navigation.company
   }
 }
 
@@ -222,7 +223,7 @@ bareResources = mutedIconMenu {
   top: 93.5256px,
 
   label {
-    contents: "Resources"
+    contents: Strings.navigation.resources
   }
 }
 
@@ -237,7 +238,7 @@ bareLogIn = menu {
   top: 483px,
 
   label {
-    contents: "Log In"
+    contents: Strings.actions.logIn
   }
 }
 
@@ -246,7 +247,7 @@ Primary = button.mediumPrimary {
   top: 475px,
 
   button.mediumLabel {
-    contents: "Get started"
+    contents: Strings.actions.getStartedHeader
   }
 }
 
@@ -294,7 +295,7 @@ accountProduct = menu {
   top: 33.5256px,
 
   label {
-    contents: "Product"
+    contents: Strings.navigation.product
   }
 }
 
@@ -303,7 +304,7 @@ accountPricing = mutedMenu {
   top: 53.5256px,
 
   label {
-    contents: "Pricing"
+    contents: Strings.navigation.pricing
   }
 }
 
@@ -312,7 +313,7 @@ accountCompany = mutedMenu {
   top: 73.5256px,
 
   label {
-    contents: "Company"
+    contents: Strings.navigation.company
   }
 }
 
@@ -321,7 +322,7 @@ accountResources = mutedIconMenu {
   top: 93.5256px,
 
   label {
-    contents: "Resources"
+    contents: Strings.navigation.resources
   }
 }
 
@@ -340,7 +341,7 @@ accountSearch = textField.iconPlaceholder {
   width: 180px,
 
   textField.label {
-    contents: "Search"
+    contents: Strings.actions.search
   }
 }
 
@@ -402,7 +403,7 @@ navProduct = menu {
   top: 33.5256px,
 
   label {
-    contents: "Product"
+    contents: Strings.navigation.product
   }
 }
 
@@ -411,7 +412,7 @@ navPricing = mutedMenu {
   top: 53.5256px,
 
   label {
-    contents: "Pricing"
+    contents: Strings.navigation.pricing
   }
 }
 
@@ -420,7 +421,7 @@ navCompany = mutedMenu {
   top: 73.5256px,
 
   label {
-    contents: "Company"
+    contents: Strings.navigation.company
   }
 }
 
@@ -429,7 +430,7 @@ navResources = mutedIconMenu {
   top: 93.5256px,
 
   label {
-    contents: "Resources"
+    contents: Strings.navigation.resources
   }
 }
 

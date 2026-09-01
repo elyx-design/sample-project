@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
@@ -114,5 +115,5 @@ placeholder = text {
   left: 633px,
   top: 581px,
   fill: colors.colors.black80,
-  contents: "Ask anything..."
+  contents: Strings.forms.askAnything
 }

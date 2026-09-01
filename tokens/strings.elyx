@@ -1,0 +1,178 @@
+export actions = tokens {
+  follow: "Follow",
+  getStarted: "Get Started",
+  getStartedHeader: "Get started",
+  logIn: "Log In",
+  search: "Search",
+  signIn: "Sign in",
+  signUp: "Sign up",
+  readFullReview: "Read full review",
+  managePlan: "Manage Plan",
+  watchDemo: "Watch Demo",
+  watchTrailer: "Watch trailer",
+  contactSales: "Contact sales",
+  giftSubscription: "Gift a Sub",
+  subscribeDiscount: "Subscribe: 25% off",
+  scrollDown: "Scroll down"
+}
+
+export forms = tokens {
+  accountPrompt: "Use your account to continue.",
+  signInTitle: "Sign In",
+  emailAddress: "Email address",
+  password: "Password",
+  rememberMe: "Remember me",
+  askAnything: "Ask anything...",
+  messagePlaceholder: "Write a message"
+}
+
+export navigation = tokens {
+  menu: "Menu",
+  product: "Product",
+  pricing: "Pricing",
+  company: "Company",
+  resources: "Resources",
+  howItWorks: "How it works",
+  faq: "FAQ",
+  features: "Features",
+  roadmap: "Roadmap",
+  about: "About",
+  contact: "Contact",
+  careers: "Careers",
+  press: "Press",
+  ourStory: "Our Story",
+  privacyPolicy: "Privacy Policy",
+  termsOfService: "Terms of Service",
+  security: "Security",
+  projects: "Projects",
+  data: "Data",
+  notes: "Notes",
+  settings: "Settings",
+  playlists: "Playlists",
+  categories: "Categories",
+  browse: "Browse",
+  favourites: "Favourites",
+  tvShows: "TV Shows",
+  movies: "Movies",
+  privacy: "Privacy",
+  terms: "Terms",
+  help: "Help"
+}
+
+export status = tokens {
+  live: "Live",
+  liveNow: "Live Now",
+  offline: "Offline",
+  new: "New",
+  servicesOnline: "All services are online"
+}
+
+export labels = tokens {
+  publicProfile: "Public Profile",
+  following: "Following",
+  followers: "Followers",
+  posts: "Posts",
+  broadcastChat: "Broadcast chat",
+  analysis: "Analysis",
+  fans: "Fans",
+  public: "Public",
+  progress: "Progress",
+  readingNext: "Reading Next",
+  chatsAndTasks: "Chats and tasks",
+  liveChannels: "Live Channels",
+  forYou: "For You",
+  newsletter: "Newsletter",
+  productSection: "PRODUCT",
+  companySection: "COMPANY",
+  contactSection: "CONTACT",
+  synopsis: "Synopsis",
+  starring: "Starring",
+  castAndCrew: "Cast & Crew",
+  gallery: "Gallery",
+  manager: "Manager"
+}
+
+export componentDefaults = tokens {
+  button: "Button",
+  title: "Title",
+  subtitle: "Subtitle",
+  label: "Label",
+  item: "Item",
+  chatText: "Chat text",
+  name: "Name",
+  imageName: "Image name",
+  trackName: "Track name",
+  avatarGroupTitle: "Title:",
+  productName: "Product Name"
+}
+
+export stats = tokens {books: "Books", pages: "Pages", rating: "Rating", shelves: "Shelves"}
+
+export plans = tokens {
+  starter: "Starter",
+  best: "Best!",
+  perMonth: "/Month",
+  starterDescription: "Free forever.\nFor individuals getting started.",
+  threeProjects: "Up to 3 projects",
+  communitySupport: "Community support",
+  basicExport: "Basic export options",
+  twoGigabytesStorage: "2 GB storage",
+  pro: "Pro",
+  business: "Business",
+  proDescription: "Best option!\nFor professionals who need more room to work.",
+  businessDescription: "For companies.\nTeams that need scale and control.",
+  advancedExport: "Advanced export options",
+  prioritySupport: "Priority email support",
+  fiveUsers: "Up to 5 users",
+  unlimitedProjects: "Unlimited projects",
+  customIntegrations: "Custom integrations",
+  dedicatedSupport: "Dedicated support",
+  unlimitedUsers: "Unlimited users",
+  everythingInPro: "Everything in Pro",
+  oneTerabyteStorage: "1 TB storage",
+  versionHistory: "Version history",
+  adminControls: "Admin controls and permissions",
+  hundredGigabytesStorage: "100 GB storage"
+}
+
+export marketing = tokens {
+  newsletterDescription: "Thoughtfully made, page after page. We believe good ideas deserve a place to grow, whether on the shelf or on the screen",
+  footerEmailAddress: "Email Address",
+  aiDisclaimer: "Overleaf is AI and can make mistakes. Please double-check responses."
+}
+
+export landingPage = tokens {
+  heroDescription: "Built to grow in the hardest conditions, our tool takes root where others fail. Reliable and resilient, so your work never stops.",
+  heroTitle: "Bloom, regardles.",
+  minimalDescription: "Every detail is considered, and everything unnecessary is left out.",
+  minimalTitle: "Intentionally minimal",
+  reliabilityDescription: "Dependable sync and performance you can trust, no matter where you work.",
+  reliabilityTitle: "Rock steady",
+  collaborationDescription: "Collaboration made simple, in a space designed to keep everyone in flow.",
+  collaborationTitle: "Better as a team"
+}
+
+export liveEvent = tokens {
+  streamTitle: "Lead cycling duo",
+  channelDescription: "Your go-to spot for everything cycling"
+}
+
+export pricingPage = tokens {
+  freeRegistration: "Register for free!",
+  description: "Flexible pricing for individuals, professionals, and growing teams.",
+  title: "Choose the plan that fits your work"
+}
+
+export scaffold = tokens {
+  welcomeTitle: "Welcome to the Elyx scaffold project",
+  welcomeDescription: "This document contains best practices on how to set up .elyx files within your project",
+  structureDescription: "As you can see in the project list on the left, files are organized into groups, with the most important ones being components, blocks, and screens. The three main building blocks for organizing your components.",
+  componentsTitle: "COMPONENTS",
+  componentsDescription: "Components are the smallest reusable UI pieces in the Elyx design system. Think of them like atoms. These would be UI elements such as button, text fields, badges etc.",
+  blocksTitle: "BLOCKS",
+  blocksDescription: "If components are atoms, then blocks are like molecules. Blocks are used interface sections such as panels, menus, toasts, alerts, etc that would contain components.",
+  screensTitle: "SCREENS",
+  screensDescription: "Screens would be things like app windows, panels, and standalone states that represent what a user would see at one moment. Examples would be things like Log In, Dashboard, Settings, Account, etc.",
+  assetsDescription: "Also in the project are folders for other asset types, such as images and icons. If you were to add fonts, then create a new /fonts folder.",
+  tokensDescription: "Finally, is the existence of a tokens/ folder. Each file there groups a related family of tokens - colors, typography, spacing, radius - referenced throughout the entire project."
+}

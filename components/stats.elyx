@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/divider.elyx" as divider
 import "tokens/colors.elyx" as colors
@@ -48,7 +49,7 @@ booksLabel = text {
   top: 39px,
   width: .auto,
   fill: colors.colors.blackAlpha25,
-  contents: "Books",
+  contents: Strings.stats.books,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
@@ -84,7 +85,7 @@ pagesLabel = text {
   top: 39px,
   width: .auto,
   fill: colors.colors.blackAlpha25,
-  contents: "Pages",
+  contents: Strings.stats.pages,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
@@ -120,7 +121,7 @@ ratingLabel = text {
   top: 39px,
   width: .auto,
   fill: colors.colors.blackAlpha25,
-  contents: "Rating",
+  contents: Strings.stats.rating,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
@@ -156,7 +157,7 @@ shelvesLabel = text {
   top: 39px,
   width: .auto,
   fill: colors.colors.blackAlpha25,
-  contents: "Shelves",
+  contents: Strings.stats.shelves,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center

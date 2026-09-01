@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "blocks/productInfo.elyx" as productInfo
 import "tokens/colors.elyx" as colors
@@ -66,22 +67,22 @@ siteHeader_2 = siteHeader.accountHeader {
   }
 
   siteHeader.accountContent.accountNav.accountResources.label {
-    contents: "Favourites",
+    contents: Strings.navigation.favourites,
     fill[0].color: colors.colors.whiteAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountCompany.label {
-    contents: "Live",
+    contents: Strings.status.live,
     fill[0].color: colors.colors.whiteAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountPricing.label {
-    contents: "TV Shows",
+    contents: Strings.navigation.tvShows,
     fill[0].color: colors.colors.whiteAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountProduct.label {
-    contents: "Movies",
+    contents: Strings.navigation.movies,
     fill[0].color: colors.colors.whiteAlpha70
   }
 
@@ -224,7 +225,7 @@ text2 = text {
   top: 826px,
   width: 100%,
   fill: colors.colors.white100,
-  contents: "Synopsis",
+  contents: Strings.labels.synopsis,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
@@ -272,7 +273,7 @@ text4 = text {
   top: 826px,
   width: 100%,
   fill: colors.colors.white100,
-  contents: "Starring",
+  contents: Strings.labels.starring,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
@@ -428,7 +429,7 @@ text9 = text {
   top: 826px,
   width: 100%,
   fill: colors.colors.white100,
-  contents: "Cast & Crew",
+  contents: Strings.labels.castAndCrew,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
@@ -495,7 +496,7 @@ text11 = text {
   top: 141px,
   width: 100%,
   fill: colors.colors.white100,
-  contents: "Gallery",
+  contents: Strings.labels.gallery,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }

@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "blocks/planCard.elyx" as planCard
@@ -44,7 +45,7 @@ freePlan = planCard.planCard {
   fill[0].visible: .false,
 
   planCard.manageButton.button.mediumLabel {
-    contents: "Register for free!"
+    contents: Strings.pricingPage.freeRegistration
   }
 
   planCard.planContent.planDetails.pricingCopy.priceRow.price {
@@ -64,7 +65,7 @@ proPlan = planCard.planCard {
   corner-radius: [Radius.radius.large, 0px, 0px, Radius.radius.large],
 
   planCard.manageButton.button.mediumLabel {
-    contents: "Get Started"
+    contents: Strings.actions.getStarted
   }
 
   planCard.planContent.planDetails.features {
@@ -75,27 +76,27 @@ proPlan = planCard.planCard {
   }
 
   planCard.planContent.planDetails.features.storageFeature.storageLabel {
-    contents: "Advanced export options"
+    contents: Strings.plans.advancedExport
   }
 
   planCard.planContent.planDetails.features.exportFeature.exportLabel {
-    contents: "Priority email support"
+    contents: Strings.plans.prioritySupport
   }
 
   planCard.planContent.planDetails.features.supportFeature.supportLabel {
-    contents: "Up to 5 users"
+    contents: Strings.plans.fiveUsers
   }
 
   planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
-    contents: "Unlimited projects"
+    contents: Strings.plans.unlimitedProjects
   }
 
   planCard.planContent.planDetails.pricingCopy.description {
-    contents: "Best option!\nFor professionals who need more room to work."
+    contents: Strings.plans.proDescription
   }
 
   planCard.planContent.planSummary.planHeader.planName {
-    contents: "Pro"
+    contents: Strings.plans.pro
   }
 
   planCard.planContent.planSummary.planIcon.planGlyph {
@@ -113,7 +114,7 @@ businessPlan = planCard.planCard {
   corner-radius: [0px, Radius.radius.large, Radius.radius.large, 0px],
 
   planCard.manageButton.button.mediumLabel {
-    contents: "Contact sales"
+    contents: Strings.actions.contactSales
   }
 
   planCard.planContent.planDetails.features {
@@ -124,23 +125,23 @@ businessPlan = planCard.planCard {
   }
 
   planCard.planContent.planDetails.features.storageFeature.storageLabel {
-    contents: "Custom integrations"
+    contents: Strings.plans.customIntegrations
   }
 
   planCard.planContent.planDetails.features.exportFeature.exportLabel {
-    contents: "Dedicated support"
+    contents: Strings.plans.dedicatedSupport
   }
 
   planCard.planContent.planDetails.features.supportFeature.supportLabel {
-    contents: "Unlimited users"
+    contents: Strings.plans.unlimitedUsers
   }
 
   planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
-    contents: "Everything in Pro"
+    contents: Strings.plans.everythingInPro
   }
 
   planCard.planContent.planDetails.pricingCopy.description {
-    contents: "For companies.\nTeams that need scale and control."
+    contents: Strings.plans.businessDescription
   }
 
   planCard.planContent.planDetails.pricingCopy.priceRow.price {
@@ -152,7 +153,7 @@ businessPlan = planCard.planCard {
   }
 
   planCard.planContent.planSummary.planHeader.planName {
-    contents: "Business"
+    contents: Strings.plans.business
   }
 
   planCard.planContent.planSummary.planIcon.planGlyph {
@@ -168,11 +169,11 @@ pricingHeader = header.mediumCenter {
   width: .auto,
 
   header.mediumSubtitle {
-    contents: "Flexible pricing for individuals, professionals, and growing teams."
+    contents: Strings.pricingPage.description
   }
 
   header.mediumTitle {
-    contents: "Choose the plan that fits your work"
+    contents: Strings.pricingPage.title
   }
 }
 
@@ -193,7 +194,7 @@ businessStorageBullet = icon {
 
 businessStorageLabel = text {
   fill: colors.colors.black40,
-  contents: "1 TB storage",
+  contents: Strings.plans.oneTerabyteStorage,
   font-size: Spacing.fontSize.medium
 }
 
@@ -214,7 +215,7 @@ versionHistoryBullet = icon {
 
 versionHistoryLabel = text {
   fill: colors.colors.black40,
-  contents: "Version history",
+  contents: Strings.plans.versionHistory,
   font-size: Spacing.fontSize.medium
 }
 
@@ -235,7 +236,7 @@ adminControlsBullet = icon {
 
 adminControlsLabel = text {
   fill: colors.colors.black40,
-  contents: "Admin controls and permissions",
+  contents: Strings.plans.adminControls,
   font-size: Spacing.fontSize.medium
 }
 
@@ -250,6 +251,6 @@ proStorageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, content
 
 proStorageLabel = text {
   fill: colors.colors.black40,
-  contents: "100 GB storage",
+  contents: Strings.plans.hundredGigabytesStorage,
   font-size: Spacing.fontSize.medium
 }

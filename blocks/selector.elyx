@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "components/avatar.elyx" as avatar
 import "components/header.elyx" as header
 import "icons/24 pixels/chevron-upDown-24.svg" as chevronupDown24
@@ -24,7 +25,7 @@ smallLeft = header.smallLeft {
   top: 0px,
 
   header.smallSubtitle {
-    contents: "Manager"
+    contents: Strings.labels.manager
   }
 
   header.smallTitle {

@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
@@ -53,10 +54,18 @@ footerLinks = frame {
 
 privacy = text {
   fill: Colors.colors.white100,
-  contents: "Privacy",
+  contents: Strings.navigation.privacy,
   font-size: Spacing.fontSize.small
 }
 
-terms = text {fill: Colors.colors.white100, contents: "Terms", font-size: Spacing.fontSize.small}
+terms = text {
+  fill: Colors.colors.white100,
+  contents: Strings.navigation.terms,
+  font-size: Spacing.fontSize.small
+}
 
-help = text {fill: Colors.colors.white100, contents: "Help", font-size: Spacing.fontSize.small}
+help = text {
+  fill: Colors.colors.white100,
+  contents: Strings.navigation.help,
+  font-size: Spacing.fontSize.small
+}

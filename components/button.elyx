@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
@@ -39,7 +40,7 @@ mediumLabel = text {
   top: 9.5px,
   width: .auto,
   fill: Colors.colors.black20,
-  contents: "Button",
+  contents: Strings.componentDefaults.button,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
@@ -156,7 +157,7 @@ smallLabel = text {
   top: 6.5px,
   width: .auto,
   fill: Colors.colors.black20,
-  contents: "Button",
+  contents: Strings.componentDefaults.button,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
   align: .center

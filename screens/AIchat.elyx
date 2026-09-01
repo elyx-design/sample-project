@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "blocks/sideBar.elyx" as sideBar
 import "tokens/colors.elyx" as colors
@@ -50,7 +51,7 @@ text1 = text {
   left: 1412px,
   top: 1073px,
   fill: colors.colors.blackAlpha50,
-  contents: "Overleaf is AI and can make mistakes. Please double-check responses.",
+  contents: Strings.marketing.aiDisclaimer,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }

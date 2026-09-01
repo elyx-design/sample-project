@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "images/thumbnails/thumb01.jpg" as thumb01
@@ -47,7 +48,7 @@ imageName = text {
   top: 197px,
   width: 100%,
   fill: colors.colors.whiteAlpha70,
-  contents: "Image name",
+  contents: Strings.componentDefaults.imageName,
   font-size: Spacing.fontSize.small
 }
 
@@ -65,7 +66,7 @@ base = tag.iconAndLabel {
   top: 50px,
 
   tag.label {
-    contents: "Watch trailer"
+    contents: Strings.actions.watchTrailer
   }
 
   tag.tagIcon {

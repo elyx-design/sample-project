@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "tokens/colors.elyx" as colors
@@ -26,19 +27,19 @@ siteHeader_2 = siteHeader.accountHeader {
   fill[0].color: colors.colors.white100,
 
   siteHeader.accountContent.accountNav.accountResources.label {
-    contents: "Playlists"
+    contents: Strings.navigation.playlists
   }
 
   siteHeader.accountContent.accountNav.accountCompany.label {
-    contents: "Categories"
+    contents: Strings.navigation.categories
   }
 
   siteHeader.accountContent.accountNav.accountPricing.label {
-    contents: "Browse"
+    contents: Strings.navigation.browse
   }
 
   siteHeader.accountContent.accountNav.accountProduct.label {
-    contents: "Live Now"
+    contents: Strings.status.liveNow
   }
 }
 
@@ -89,7 +90,7 @@ video = videoPlayer.videoPlayer {
   }
 
   videoPlayer.headerRow.eventHeader.header.smallSubtitle {
-    contents: "Lead cycling duo"
+    contents: Strings.liveEvent.streamTitle
   }
 
   videoPlayer.headerRow.eventHeader.header.smallTitle {
@@ -115,7 +116,7 @@ small = userSummary.small {
   overflow: .visible,
 
   userSummary.smallHeader.header.smallSubtitle {
-    contents: "Your go-to spot for everything cycling",
+    contents: Strings.liveEvent.channelDescription,
     fill[0].color: colors.colors.whiteAlpha50
   }
 
@@ -141,7 +142,7 @@ small_2 = button.small {
   top: 58px,
 
   button.smallLabel {
-    contents: "Follow"
+    contents: Strings.actions.follow
   }
 }
 
@@ -150,7 +151,7 @@ small_3 = button.smallPrimary {
   top: 78px,
 
   button.smallLabel {
-    contents: "Gift a Sub"
+    contents: Strings.actions.giftSubscription
   }
 }
 
@@ -159,7 +160,7 @@ small_4 = button.smallPrimary {
   top: 98px,
 
   button.smallLabel {
-    contents: "Subscribe: 25% off"
+    contents: Strings.actions.subscribeDiscount
   }
 }
 

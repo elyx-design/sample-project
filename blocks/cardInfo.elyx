@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
@@ -92,7 +93,7 @@ readReviewButton = button.medium {
   top: 165px,
 
   button.mediumLabel {
-    contents: "Read full review"
+    contents: Strings.actions.readFullReview
   }
 }
 

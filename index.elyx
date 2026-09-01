@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
@@ -41,7 +42,7 @@ welcomeHeading = text {
   left: 0px,
   top: 0px,
   fill: rgb(27.3%, 20.74%, 2.7%),
-  contents: "Welcome to the Elyx scaffold project",
+  contents: Strings.scaffold.welcomeTitle,
   font-size: Spacing.fontSize.huge
 }
 
@@ -49,7 +50,7 @@ welcomeDescription = text {
   left: 20px,
   top: 20px,
   fill: rgb(27.45%, 20.78%, 2.7451%),
-  contents: "This document contains best practices on how to set up .elyx files within your project",
+  contents: Strings.scaffold.welcomeDescription,
   font-size: Spacing.fontSize.large
 }
 
@@ -58,7 +59,7 @@ projectStructureOverview = text {
   top: 40px,
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
-  contents: "As you can see in the project list on the left, files are organized into groups, with the most important ones being components, blocks, and screens. The three main building blocks for organizing your components.",
+  contents: Strings.scaffold.structureDescription,
   font-size: Spacing.fontSize.large
 }
 
@@ -85,7 +86,7 @@ componentsLabel = text {
   left: 69px,
   top: 45px,
   fill: rgb(62%, 38.23%, 0%),
-  contents: "COMPONENTS",
+  contents: Strings.scaffold.componentsTitle,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
   letter-spacing: Spacing.letterSpacing.medium
@@ -96,7 +97,7 @@ componentsDescription = text {
   top: 65px,
   width: 100%,
   fill: rgb(27.45%, 20.78%, 2.7451%),
-  contents: "Components are the smallest reusable UI pieces in the Elyx design system. Think of them like atoms. These would be UI elements such as button, text fields, badges etc.",
+  contents: Strings.scaffold.componentsDescription,
   font-size: Spacing.fontSize.medium
 }
 
@@ -117,7 +118,7 @@ blocksLabel = text {
   left: 162.6667px,
   top: -17px,
   fill: rgb(62%, 38.23%, 0%),
-  contents: "BLOCKS",
+  contents: Strings.scaffold.blocksTitle,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
   letter-spacing: Spacing.letterSpacing.medium
@@ -128,7 +129,7 @@ blocksDescription = text {
   top: 71px,
   width: 100%,
   fill: rgb(27.45%, 20.78%, 2.7451%),
-  contents: "If components are atoms, then blocks are like molecules. Blocks are used interface sections such as panels, menus, toasts, alerts, etc that would contain components.",
+  contents: Strings.scaffold.blocksDescription,
   font-size: Spacing.fontSize.medium
 }
 
@@ -149,7 +150,7 @@ screensLabel = text {
   left: 162.6667px,
   top: -25.5px,
   fill: rgb(62%, 38.23%, 0%),
-  contents: "SCREENS",
+  contents: Strings.scaffold.screensTitle,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
   letter-spacing: Spacing.letterSpacing.medium
@@ -161,7 +162,7 @@ screensDescription = text {
   width: 100%,
   height: .auto,
   fill: rgb(27.45%, 20.78%, 2.7451%),
-  contents: "Screens would be things like app windows, panels, and standalone states that represent what a user would see at one moment. Examples would be things like Log In, Dashboard, Settings, Account, etc.",
+  contents: Strings.scaffold.screensDescription,
   font-size: Spacing.fontSize.medium
 }
 
@@ -170,7 +171,7 @@ assetFoldersDescription = text {
   top: 60px,
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
-  contents: "Also in the project are folders for other asset types, such as images and icons. If you were to add fonts, then create a new /fonts folder.",
+  contents: Strings.scaffold.assetsDescription,
   font-size: Spacing.fontSize.large
 }
 
@@ -179,7 +180,7 @@ tokensFolderDescription = text {
   top: 301px,
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
-  contents: "Finally, is the existence of a tokens/ folder. Each file there groups a related family of tokens - colors, typography, spacing, radius - referenced throughout the entire project.",
+  contents: Strings.scaffold.tokensDescription,
   font-size: Spacing.fontSize.large
 }
 

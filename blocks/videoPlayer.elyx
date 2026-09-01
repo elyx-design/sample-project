@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "blocks/playbackControl.elyx" as playbackControl
 import "tokens/colors.elyx" as colors
@@ -59,7 +60,7 @@ liveStatus = tag.status {
   fill[0].color: rgb(100%, 0%, 0%, 60%),
 
   tag.label {
-    contents: "Live",
+    contents: Strings.status.live,
     fill[0].color: colors.colors.white100
   }
 

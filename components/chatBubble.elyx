@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "components/avatar.elyx" as avatar
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
@@ -39,7 +40,7 @@ message = frame {
   children: messageText
 }
 
-messageText = text {left: 0px, top: 0px, fill: .black, contents: "Chat text"}
+messageText = text {left: 0px, top: 0px, fill: .black, contents: Strings.componentDefaults.chatText}
 
 @variant
 user = base {
@@ -82,7 +83,7 @@ messageText_2 = text {
   top: 30.5px,
   width: 100%,
   fill: .black,
-  contents: "Chat text",
+  contents: Strings.componentDefaults.chatText,
   font-size: spacing.fontSize.small
 }
 
@@ -93,7 +94,13 @@ GroupedStack = frame {
   children: [messageText_3, messageText_4]
 }
 
-messageText_3 = text {left: 0px, top: 5.5px, fill: .black, contents: "Name", font-style: "Bold"}
+messageText_3 = text {
+  left: 0px,
+  top: 5.5px,
+  fill: .black,
+  contents: Strings.componentDefaults.name,
+  font-style: "Bold"
+}
 
 messageText_4 = text {
   left: 20px,

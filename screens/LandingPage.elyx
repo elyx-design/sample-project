@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "images/background/night.jpg" as night
 import "blocks/siteHeader.elyx" as siteHeader
@@ -60,11 +61,11 @@ largeLeft = header.largeCenter {
   width: 44.0752%,
 
   header.largeSubtitle {
-    contents: "Built to grow in the hardest conditions, our tool takes root where others fail. Reliable and resilient, so your work never stops."
+    contents: Strings.landingPage.heroDescription
   }
 
   header.largeTitle {
-    contents: "Bloom, regardles."
+    contents: Strings.landingPage.heroTitle
   }
 }
 
@@ -80,7 +81,7 @@ medium = button.medium {
   top: 353px,
 
   button.mediumLabel {
-    contents: "Get Started"
+    contents: Strings.actions.getStarted
   }
 }
 
@@ -88,7 +89,7 @@ text3 = text {
   left: 854px,
   top: 477px,
   fill: colors.colors.blackAlpha50,
-  contents: "Watch Demo",
+  contents: Strings.actions.watchDemo,
   font-style: "SemiBold"
 }
 
@@ -132,11 +133,11 @@ smallLeft = header.smallLeft {
   height: .auto,
 
   header.smallSubtitle {
-    contents: "Every detail is considered, and everything unnecessary is left out."
+    contents: Strings.landingPage.minimalDescription
   }
 
   header.smallTitle {
-    contents: "Intentionally minimal",
+    contents: Strings.landingPage.minimalTitle,
     width: .auto
   }
 }
@@ -163,11 +164,11 @@ steadyHeader = header.smallLeft {
   width: 100%,
 
   header.smallSubtitle {
-    contents: "Dependable sync and performance you can trust, no matter where you work."
+    contents: Strings.landingPage.reliabilityDescription
   }
 
   header.smallTitle {
-    contents: "Rock steady",
+    contents: Strings.landingPage.reliabilityTitle,
     width: .auto
   }
 }
@@ -194,11 +195,11 @@ teamHeader = header.smallLeft {
   width: 100%,
 
   header.smallSubtitle {
-    contents: "Collaboration made simple, in a space designed to keep everyone in flow."
+    contents: Strings.landingPage.collaborationDescription
   }
 
   header.smallTitle {
-    contents: "Better as a team",
+    contents: Strings.landingPage.collaborationTitle,
     width: .auto
   }
 }
@@ -210,7 +211,7 @@ base = tag.iconAndLabel {
   fill[0].color: colors.colors.blackAlpha25,
 
   tag.label {
-    contents: "Scroll down",
+    contents: Strings.actions.scrollDown,
     fill[0].color: colors.colors.whiteAlpha70
   }
 

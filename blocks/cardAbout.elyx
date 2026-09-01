@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
@@ -44,7 +45,7 @@ profileTitle = header.mediumLeft {
   overrides: [remove(header.mediumSubtitle)],
 
   header.mediumTitle {
-    contents: "Public Profile"
+    contents: Strings.labels.publicProfile
   }
 }
 

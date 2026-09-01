@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/logo.elyx" as logo
 import "tokens/colors.elyx" as colors
@@ -55,7 +56,7 @@ blurb = text {
   top: 7px,
   width: 100%,
   fill: .black,
-  contents: "Newsletter",
+  contents: Strings.labels.newsletter,
   font-size: Spacing.fontSize.small,
   font-style: "Bold",
   line-height: Spacing.lineHeight.relaxed
@@ -66,7 +67,7 @@ blurb_2 = text {
   top: 27px,
   width: 100%,
   fill: .black,
-  contents: "Thoughtfully made, page after page. We believe good ideas deserve a place to grow, whether on the shelf or on the screen",
+  contents: Strings.marketing.newsletterDescription,
   font-size: Spacing.fontSize.small,
   line-height: Spacing.lineHeight.relaxed
 }
@@ -84,7 +85,7 @@ base = textField.iconPlaceholder {
   top: 94.5px,
 
   textField.label {
-    contents: "Email Address"
+    contents: Strings.marketing.footerEmailAddress
   }
 
   textField.placeholderIcon {
@@ -97,7 +98,7 @@ medium = button.mediumPrimary {
   top: 0px,
 
   button.mediumLabel {
-    contents: "Sign up"
+    contents: Strings.actions.signUp
   }
 }
 
@@ -122,7 +123,7 @@ productHeading = text {
   top: 61px,
   width: 100%,
   fill: colors.colors.blackAlpha25,
-  contents: "PRODUCT",
+  contents: Strings.labels.productSection,
   font-size: Spacing.fontSize.xsmall,
   font-style: "ExtraBold",
   line-height: Spacing.lineHeight.relaxed,
@@ -142,7 +143,7 @@ howItWorksLink = text {
   top: 522px,
   width: 100%,
   fill: .black,
-  contents: "How it works",
+  contents: Strings.navigation.howItWorks,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -152,7 +153,7 @@ pricingFooterLink = text {
   top: 542px,
   width: 100%,
   fill: .black,
-  contents: "Pricing",
+  contents: Strings.navigation.pricing,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -162,7 +163,7 @@ faqLink = text {
   top: 562px,
   width: 100%,
   fill: .black,
-  contents: "FAQ",
+  contents: Strings.navigation.faq,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -172,7 +173,7 @@ resourcesLink = text {
   top: 585px,
   width: 100%,
   fill: .black,
-  contents: "Resources",
+  contents: Strings.navigation.resources,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -182,7 +183,7 @@ featuresLink = text {
   top: 605px,
   width: 100%,
   fill: .black,
-  contents: "Features",
+  contents: Strings.navigation.features,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -192,7 +193,7 @@ roadmapLink = text {
   top: 625px,
   width: 100%,
   fill: .black,
-  contents: "Roadmap",
+  contents: Strings.navigation.roadmap,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -210,7 +211,7 @@ companyHeading = text {
   top: 61px,
   width: 100%,
   fill: colors.colors.blackAlpha25,
-  contents: "COMPANY",
+  contents: Strings.labels.companySection,
   font-size: Spacing.fontSize.xsmall,
   font-style: "ExtraBold",
   line-height: Spacing.lineHeight.relaxed,
@@ -230,7 +231,7 @@ aboutLink = text {
   top: 522px,
   width: 100%,
   fill: .black,
-  contents: "About",
+  contents: Strings.navigation.about,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -240,7 +241,7 @@ contactLink = text {
   top: 542px,
   width: 100%,
   fill: .black,
-  contents: "Contact",
+  contents: Strings.navigation.contact,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -250,7 +251,7 @@ careersLink = text {
   top: 562px,
   width: 100%,
   fill: .black,
-  contents: "Careers",
+  contents: Strings.navigation.careers,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -260,7 +261,7 @@ pressLink = text {
   top: 582px,
   width: 100%,
   fill: .black,
-  contents: "Press",
+  contents: Strings.navigation.press,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -270,7 +271,7 @@ ourStoryLink = text {
   top: 602px,
   width: 100%,
   fill: .black,
-  contents: "Our Story",
+  contents: Strings.navigation.ourStory,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -288,7 +289,7 @@ contactHeading = text {
   top: 61px,
   width: 100%,
   fill: colors.colors.blackAlpha25,
-  contents: "CONTACT",
+  contents: Strings.labels.contactSection,
   font-size: Spacing.fontSize.xsmall,
   font-style: "ExtraBold",
   line-height: Spacing.lineHeight.relaxed,
@@ -308,7 +309,7 @@ privacyLink = text {
   top: 522px,
   width: 100%,
   fill: .black,
-  contents: "Privacy Policy",
+  contents: Strings.navigation.privacyPolicy,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -318,7 +319,7 @@ termsLink = text {
   top: 542px,
   width: 100%,
   fill: .black,
-  contents: "Terms of Service",
+  contents: Strings.navigation.termsOfService,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -328,7 +329,7 @@ contactCareersLink = text {
   top: 562px,
   width: 100%,
   fill: .black,
-  contents: "Careers",
+  contents: Strings.navigation.careers,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -338,7 +339,7 @@ securityLink = text {
   top: 582px,
   width: 100%,
   fill: .black,
-  contents: "Security",
+  contents: Strings.navigation.security,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -383,7 +384,7 @@ statusNote = text {
   width: .auto,
   height: .auto,
   fill: colors.colors.blackAlpha70,
-  contents: "All services are online",
+  contents: Strings.status.servicesOnline,
   font-size: Spacing.fontSize.small,
   font-style: "Medium",
   line-height: Spacing.lineHeight.relaxed

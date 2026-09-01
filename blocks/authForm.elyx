@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
 import "components/button.elyx" as Button
@@ -30,11 +31,11 @@ header = header2.mediumCenter {
   top: 120px,
 
   header2.mediumSubtitle {
-    contents: "Use your account to continue."
+    contents: Strings.forms.accountPrompt
   }
 
   header2.mediumTitle {
-    contents: "Sign In"
+    contents: Strings.forms.signInTitle
   }
 }
 
@@ -49,7 +50,7 @@ credentialFields = frame {
 
 emailField = TextField.iconPlaceholder {
   TextField.label {
-    contents: "Email address"
+    contents: Strings.forms.emailAddress
   }
 
   TextField.placeholderIcon {
@@ -59,7 +60,7 @@ emailField = TextField.iconPlaceholder {
 
 passwordField = TextField.iconPlaceholder {
   TextField.label {
-    contents: "Password"
+    contents: Strings.forms.password
   }
 
   TextField.placeholderIcon {
@@ -80,7 +81,7 @@ rememberToggle = Checkbox.on {left: 127px, top: 285px}
 
 rememberLabel = text {
   fill: Colors.colors.black20,
-  contents: "Remember me",
+  contents: Strings.forms.rememberMe,
   font-size: Spacing.fontSize.medium
 }
 
@@ -88,7 +89,7 @@ signInButton = Button.mediumPrimary {
   width: 100%,
 
   Button.mediumLabel {
-    contents: "Sign in"
+    contents: Strings.actions.signIn
   }
 }
 

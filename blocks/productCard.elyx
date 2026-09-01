@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
@@ -75,7 +76,7 @@ progressLabel = text {
   width: .auto,
   height: .auto,
   fill: colors.colors.blackAlpha50,
-  contents: "Progress",
+  contents: Strings.labels.progress,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }
@@ -112,7 +113,7 @@ notesLabel = text {
   left: 652px,
   top: 688px,
   fill: .black,
-  contents: "Notes",
+  contents: Strings.navigation.notes,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }

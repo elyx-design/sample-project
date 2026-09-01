@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/chatBubble.elyx" as chatBubble
 import "tokens/colors.elyx" as colors
@@ -71,7 +72,7 @@ messageField = textField.buttonPlaceholder {
   top: 524px,
 
   textField.label {
-    contents: "Write a message"
+    contents: Strings.forms.messagePlaceholder
   }
 }
 
@@ -134,7 +135,7 @@ text1 = text {
   left: 793px,
   top: 637px,
   fill: .black,
-  contents: "Broadcast chat",
+  contents: Strings.labels.broadcastChat,
   font-size: Spacing.fontSize.xlarge,
   font-style: "SemiBold"
 }
@@ -171,15 +172,15 @@ medium_2 = segmentedControl.small {
   width: 100%,
 
   segmentedControl.trailingSegment.label {
-    contents: "Analysis"
+    contents: Strings.labels.analysis
   }
 
   segmentedControl.middleSegment.label {
-    contents: "Fans"
+    contents: Strings.labels.fans
   }
 
   segmentedControl.smallLeadingSegment.label {
-    contents: "Public"
+    contents: Strings.labels.public
   }
 }
 
@@ -282,7 +283,7 @@ messageField_2 = textField.buttonPlaceholder {
   top: -48px,
 
   textField.label {
-    contents: "Write a message"
+    contents: Strings.forms.messagePlaceholder
   }
 }
 

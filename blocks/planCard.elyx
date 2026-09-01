@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
@@ -62,7 +63,7 @@ planHeader = frame {
 
 planName = text {
   fill: Colors.colors.black20,
-  contents: "Starter",
+  contents: Strings.plans.starter,
   font-size: Spacing.fontSize.xxlarge,
   font-style: "Bold"
 }
@@ -74,7 +75,7 @@ badge = tag.iconAndLabel {
   fill[0].color: Colors.colors.lavender,
 
   tag.label {
-    contents: "Best!"
+    contents: Strings.plans.best
   }
 }
 
@@ -105,7 +106,7 @@ billingPeriod = text {
   top: 132px,
   height: 22px,
   fill: Colors.colors.blackAlpha50,
-  contents: "/Month",
+  contents: Strings.plans.perMonth,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold"
 }
@@ -114,7 +115,7 @@ description = text {
   left: 20px,
   top: 262px,
   fill: Colors.colors.black40,
-  contents: "Free forever.\nFor individuals getting started.",
+  contents: Strings.plans.starterDescription,
   line-height: Spacing.lineHeight.relaxed
 }
 
@@ -135,7 +136,7 @@ projectsBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents:
 
 projectsLabel = text {
   fill: Colors.colors.black40,
-  contents: "Up to 3 projects",
+  contents: Strings.plans.threeProjects,
   font-size: Spacing.fontSize.medium
 }
 
@@ -150,7 +151,7 @@ supportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: 
 
 supportLabel = text {
   fill: Colors.colors.black40,
-  contents: "Community support",
+  contents: Strings.plans.communitySupport,
   font-size: Spacing.fontSize.medium
 }
 
@@ -165,7 +166,7 @@ exportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: d
 
 exportLabel = text {
   fill: Colors.colors.black40,
-  contents: "Basic export options",
+  contents: Strings.plans.basicExport,
   font-size: Spacing.fontSize.medium
 }
 
@@ -180,7 +181,7 @@ storageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: 
 
 storageLabel = text {
   fill: Colors.colors.black40,
-  contents: "2 GB storage",
+  contents: Strings.plans.twoGigabytesStorage,
   font-size: Spacing.fontSize.medium
 }
 
@@ -189,6 +190,6 @@ manageButton = button.medium {
   top: 390px,
 
   button.mediumLabel {
-    contents: "Manage Plan"
+    contents: Strings.actions.managePlan
   }
 }

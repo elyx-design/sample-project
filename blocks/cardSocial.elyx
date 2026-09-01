@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
@@ -40,7 +41,7 @@ followButton = button.mediumPrimary {
   top: 160px,
 
   button.mediumLabel {
-    contents: "Follow"
+    contents: Strings.actions.follow
   }
 }
 
@@ -149,7 +150,7 @@ followingLabel = text {
   left: 0px,
   top: 18px,
   fill: .black,
-  contents: "Following",
+  contents: Strings.labels.following,
   font-size: Spacing.fontSize.small,
   align: .center
 }
@@ -175,7 +176,7 @@ followersLabel = text {
   left: 0px,
   top: 18px,
   fill: .black,
-  contents: "Followers",
+  contents: Strings.labels.followers,
   font-size: Spacing.fontSize.small,
   align: .center
 }
@@ -201,7 +202,7 @@ postsLabel = text {
   left: 0px,
   top: 18px,
   fill: .black,
-  contents: "Posts",
+  contents: Strings.labels.posts,
   font-size: Spacing.fontSize.small,
   align: .center
 }

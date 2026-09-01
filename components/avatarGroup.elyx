@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "components/avatar.elyx" as userAvatar
@@ -399,6 +400,6 @@ titleText = text {
   width: .auto,
   height: 17px,
   fill: colors.colors.black20,
-  contents: "Title:",
+  contents: Strings.componentDefaults.avatarGroupTitle,
   font-style: "SemiBold"
 }

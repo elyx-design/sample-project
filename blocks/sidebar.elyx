@@ -1,3 +1,4 @@
+import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
@@ -139,7 +140,7 @@ text2 = text {
   left: 31px,
   top: 7px,
   fill: colors.colors.black20,
-  contents: "Menu",
+  contents: Strings.navigation.menu,
   font-size: Spacing.fontSize.small
 }
 
@@ -162,7 +163,7 @@ text1 = text {
   left: 0px,
   top: 2px,
   fill: colors.colors.blackAlpha50,
-  contents: "Chats and tasks",
+  contents: Strings.labels.chatsAndTasks,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
@@ -312,7 +313,7 @@ sidebarLiveEvent = sidebar {
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.text1 {
-    contents: "Live Channels"
+    contents: Strings.labels.liveChannels
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.settings20svg {
@@ -392,7 +393,7 @@ segmentHeader_3 = segmentHeader {
   }
 
   text1 {
-    contents: "For You"
+    contents: Strings.labels.forYou
   }
 }
 
@@ -498,7 +499,7 @@ eventTagOffline = eventTag {
   overrides: [remove(status)],
 
   text3 {
-    contents: "Offline",
+    contents: Strings.status.offline,
     fill[0].color: colors.colors.blackAlpha25
   }
 }
@@ -509,7 +510,7 @@ text5 = text {
   left: 54.5px,
   top: 6.5px,
   fill: colors.colors.black20,
-  contents: "Menu",
+  contents: Strings.navigation.menu,
   font-size: Spacing.fontSize.small
 }
 
@@ -579,7 +580,7 @@ campaignsItem = sideBarMenu {
   top: 34px,
 
   text2 {
-    contents: "New"
+    contents: Strings.status.new
   }
 
   shape1 {
@@ -592,7 +593,7 @@ overviewItem = sideBarMenu {
   top: 54px,
 
   text2 {
-    contents: "Projects"
+    contents: Strings.navigation.projects
   }
 
   shape1 {
@@ -605,7 +606,7 @@ salesItem = sideBarMenu {
   top: 74px,
 
   text2 {
-    contents: "Data"
+    contents: Strings.navigation.data
   }
 
   shape1 {
@@ -618,7 +619,7 @@ tasksItem = sideBarMenu {
   top: 94px,
 
   text2 {
-    contents: "Notes"
+    contents: Strings.navigation.notes
   }
 
   shape1 {
@@ -631,7 +632,7 @@ settingsItem = sideBarMenu {
   top: 134px,
 
   text2 {
-    contents: "Settings"
+    contents: Strings.navigation.settings
   }
 
   shape1 {
