@@ -1,0 +1,188 @@
+import "tokens/strings.elyx" as strings
+
+@context(lang="fr")
+__file__
+
+export scaffold = strings.scaffold {
+  welcomeTitle: "Bienvenue dans le projet de démarrage Elyx",
+  welcomeDescription: "Ce document présente les bonnes pratiques pour configurer les fichiers .elyx dans votre projet",
+  structureDescription: "Comme vous pouvez le voir dans la liste des projets à gauche, les fichiers sont organisés en groupes. Les plus importants sont les composants, les blocs et les écrans, qui constituent les trois principaux éléments de structuration de vos composants.",
+  componentsTitle: "COMPOSANTS",
+  componentsDescription: "Les composants sont les plus petits éléments d’interface réutilisables du système de conception Elyx. Considérez-les comme des atomes : boutons, champs de texte, badges, etc.",
+  blocksTitle: "BLOCS",
+  blocksDescription: "Si les composants sont des atomes, les blocs sont des molécules. Ils représentent des sections d’interface telles que des panneaux, menus, notifications ou alertes, composées de plusieurs composants.",
+  screensTitle: "ÉCRANS",
+  screensDescription: "Les écrans représentent ce que l’utilisateur voit à un instant donné, par exemple une fenêtre d’application, un panneau ou un état autonome : connexion, tableau de bord, paramètres, compte, etc.",
+  assetsDescription: "Le projet contient également des dossiers pour d’autres ressources, comme les images et les icônes. Pour ajouter des polices, créez un dossier /fonts.",
+  tokensDescription: "Enfin, le dossier tokens/ regroupe les différentes familles de jetons — couleurs, typographie, espacement et rayons — utilisées dans l’ensemble du projet."
+}
+
+export pricingPage = strings.pricingPage {
+  freeRegistration: "Inscrivez-vous gratuitement !",
+  description: "Des tarifs flexibles pour les particuliers, les professionnels et les équipes en pleine croissance.",
+  title: "Choisissez le forfait adapté à votre travail"
+}
+
+export liveEvent = strings.liveEvent {
+  streamTitle: "Duo de tête de la course",
+  channelDescription: "Votre référence pour tout ce qui concerne le cyclisme"
+}
+
+export landingPage = strings.landingPage {
+  heroDescription: "Conçu pour évoluer dans les conditions les plus difficiles, notre outil s’enracine là où les autres échouent. Fiable et résilient, il vous permet de travailler sans interruption.",
+  heroTitle: "Épanouissez-vous, quoi qu’il arrive.",
+  minimalDescription: "Chaque détail est pensé et tout ce qui est superflu est éliminé.",
+  minimalTitle: "Délibérément minimaliste",
+  reliabilityDescription: "Une synchronisation fiable et des performances constantes, où que vous travailliez.",
+  reliabilityTitle: "D’une fiabilité à toute épreuve",
+  collaborationDescription: "Une collaboration simplifiée dans un espace conçu pour préserver la fluidité du travail de chacun.",
+  collaborationTitle: "Plus forts ensemble"
+}
+
+export marketing = strings.marketing {
+  newsletterDescription: "Conçu avec soin, page après page. Nous pensons que les bonnes idées méritent un espace pour grandir, sur une étagère comme sur un écran",
+  footerEmailAddress: "Adresse e-mail",
+  aiDisclaimer: "Overleaf est une IA et peut faire des erreurs. Veuillez vérifier ses réponses."
+}
+
+export plans = strings.plans {
+  starter: "Débutant",
+  best: "Meilleur choix !",
+  perMonth: "/mois",
+  starterDescription: "Gratuit pour toujours.\nPour les personnes qui débutent.",
+  threeProjects: "Jusqu’à 3 projets",
+  communitySupport: "Assistance communautaire",
+  basicExport: "Options d’exportation de base",
+  twoGigabytesStorage: "2 Go de stockage",
+  pro: "Pro",
+  business: "Entreprise",
+  proDescription: "La meilleure option !\nPour les professionnels qui ont besoin de plus d’espace.",
+  businessDescription: "Pour les entreprises.\nPour les équipes qui ont besoin d’évolutivité et de contrôle.",
+  advancedExport: "Options d’exportation avancées",
+  prioritySupport: "Assistance prioritaire par e-mail",
+  fiveUsers: "Jusqu’à 5 utilisateurs",
+  unlimitedProjects: "Projets illimités",
+  customIntegrations: "Intégrations personnalisées",
+  dedicatedSupport: "Assistance dédiée",
+  unlimitedUsers: "Utilisateurs illimités",
+  everythingInPro: "Tout ce qui est inclus dans Pro",
+  oneTerabyteStorage: "1 To de stockage",
+  versionHistory: "Historique des versions",
+  adminControls: "Contrôles et autorisations d’administration",
+  hundredGigabytesStorage: "100 Go de stockage"
+}
+
+export stats = strings.stats {
+  books: "Livres",
+  pages: "Pages",
+  rating: "Note",
+  shelves: "Étagères"
+}
+
+export componentDefaults = strings.componentDefaults {
+  button: "Bouton",
+  title: "Titre",
+  subtitle: "Sous-titre",
+  label: "Libellé",
+  item: "Élément",
+  chatText: "Texte du chat",
+  name: "Nom",
+  imageName: "Nom de l’image",
+  trackName: "Nom de la piste",
+  avatarGroupTitle: "Titre :",
+  productName: "Nom du produit"
+}
+
+export labels = strings.labels {
+  publicProfile: "Profil public",
+  following: "Abonnements",
+  followers: "Abonnés",
+  posts: "Publications",
+  broadcastChat: "Chat en direct",
+  analysis: "Analyse",
+  fans: "Fans",
+  public: "Public",
+  progress: "Progression",
+  readingNext: "À lire ensuite",
+  chatsAndTasks: "Discussions et tâches",
+  liveChannels: "Chaînes en direct",
+  forYou: "Pour vous",
+  newsletter: "Newsletter",
+  productSection: "PRODUIT",
+  companySection: "ENTREPRISE",
+  contactSection: "CONTACT",
+  synopsis: "Synopsis",
+  starring: "Avec",
+  castAndCrew: "Distribution et équipe technique",
+  gallery: "Galerie",
+  manager: "Responsable"
+}
+
+export status = strings.status {
+  live: "En direct",
+  liveNow: "En direct maintenant",
+  offline: "Hors ligne",
+  new: "Nouveau",
+  servicesOnline: "Tous les services sont opérationnels"
+}
+
+export navigation = strings.navigation {
+  menu: "Menu",
+  product: "Produit",
+  pricing: "Tarifs",
+  company: "Entreprise",
+  resources: "Ressources",
+  howItWorks: "Fonctionnement",
+  faq: "FAQ",
+  features: "Fonctionnalités",
+  roadmap: "Feuille de route",
+  about: "À propos",
+  contact: "Contact",
+  careers: "Carrières",
+  press: "Presse",
+  ourStory: "Notre histoire",
+  privacyPolicy: "Politique de confidentialité",
+  termsOfService: "Conditions d’utilisation",
+  security: "Sécurité",
+  projects: "Projets",
+  data: "Données",
+  notes: "Notes",
+  settings: "Paramètres",
+  playlists: "Listes de lecture",
+  categories: "Catégories",
+  browse: "Parcourir",
+  favourites: "Favoris",
+  tvShows: "Séries TV",
+  movies: "Films",
+  privacy: "Confidentialité",
+  terms: "Conditions",
+  help: "Aide"
+}
+
+export forms = strings.forms {
+  accountPrompt: "Utilisez votre compte pour continuer.",
+  signInTitle: "Connexion",
+  emailAddress: "Adresse e-mail",
+  password: "Mot de passe",
+  rememberMe: "Se souvenir de moi",
+  askAnything: "Posez votre question...",
+  messagePlaceholder: "Écrivez un message"
+}
+
+export actions = strings.actions {
+  follow: "Suivre",
+  getStarted: "Commencer",
+  getStartedHeader: "Commencer",
+  logIn: "Se connecter",
+  search: "Rechercher",
+  signIn: "Se connecter",
+  signUp: "S’inscrire",
+  readFullReview: "Lire l’avis complet",
+  managePlan: "Gérer le forfait",
+  watchDemo: "Voir la démo",
+  watchTrailer: "Voir la bande-annonce",
+  contactSales: "Contacter le service commercial",
+  giftSubscription: "Offrir un abonnement",
+  subscribeDiscount: "S’abonner : 25 % de réduction",
+  scrollDown: "Faire défiler vers le bas"
+}
