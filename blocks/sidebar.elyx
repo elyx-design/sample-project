@@ -47,7 +47,7 @@ compact = frame {
   width: 60px,
   height: 456px,
   layout: {direction: .column, justify-content: .space-between},
-  fill: .white,
+  fill: colors.colors.white100,
   border: {color: colors.colors.blackAlpha08, visible: .false, position: .outside},
   padding: [Spacing.padding.xlarge, Spacing.padding.medium],
   children: [compactContent, profileAvatar]
@@ -227,7 +227,7 @@ shape2 = icon {left: 48px, top: 30px, width: 20px, height: 20px, contents: sideB
 @variant
 sidebarLiveEvent = sidebar {
   left: -123px,
-  top: 693px,
+  top: 712px,
   width: 232px,
   padding-top: Spacing.padding.medium,
   padding-left: Spacing.padding.large,
