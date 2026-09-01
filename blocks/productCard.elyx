@@ -35,8 +35,9 @@ bookInfo = frame {
 }
 
 title = text {
-  left: 864px,
+  left: 0px,
   top: 413px,
+  width: 100%,
   fill: .black,
   contents: "Hidden Treasures",
   font-size: 28,
@@ -56,22 +57,22 @@ readingProgress = frame {
   left: 0px,
   top: 98px,
   width: 100%,
-  height: 33px,
-  layout: {direction: .column, justify-content: .center, item-gap: 4px},
+  height: .auto,
+  layout: {direction: .column, justify-content: .center, item-gap: 6px},
   children: [progressLabels, progressSlider]
 }
 
 progressLabels = frame {
   width: 100%,
-  layout: {item-gap: 12px},
+  layout: {justify-content: .space-between, item-gap: 12px},
   children: [progressLabel, progressValue]
 }
 
 progressLabel = text {
   left: 0px,
   top: 16px,
-  width: 100%,
-  height: 17px,
+  width: .auto,
+  height: .auto,
   fill: colors.colors.blackAlpha50,
   contents: "Progress",
   font-size: 12,
@@ -82,7 +83,7 @@ progressValue = text {
   left: 20px,
   top: 36px,
   width: .auto,
-  height: 17px,
+  height: .auto,
   fill: colors.colors.blackAlpha50,
   contents: "42%",
   font-size: 12,
@@ -90,7 +91,15 @@ progressValue = text {
   align: .right
 }
 
-progressSlider = slider.base {left: 0px, top: 0px, width: 100%}
+progressSlider = slider.base {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+
+  slider.track {
+    width: 42%
+  }
+}
 
 notes = frame {
   width: 100%,

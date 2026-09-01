@@ -22,6 +22,7 @@ export signInForm = cardBackground.transparent {
 content = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 20px},
+  overflow: .visible,
   children: [header, credentialFields, options, signInButton]
 }
 

@@ -23,6 +23,8 @@ messageThread = frame {
   height: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: 24px},
   overflow: .visible,
+  slot: .true,
+  restrict-children: .true,
   children: [userMessage, replyMessages]
 }
 
@@ -46,10 +48,9 @@ replyMessages = frame {
 firstReply = chatBubble.base {
   left: 0px,
   top: 74px,
-  layout.justify-content: .start,
 
   chatBubble.message.messageText {
-    contents: "Yeah, it true!",
+    contents: "Yeah, it's true!",
     fill[0].color: colors.colors.white100
   }
 }
@@ -57,7 +58,6 @@ firstReply = chatBubble.base {
 secondReply = chatBubble.base {
   left: 20px,
   top: 94px,
-  layout.justify-content: .start,
 
   chatBubble.message.messageText {
     contents: "Incredible pace out there",
@@ -124,8 +124,8 @@ GroupedStack_5 = frame {
   height: .auto,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 38px},
   overflow: .visible,
-  padding-left: 4px,
-  padding-right: 4px,
+  padding-left: 0px,
+  padding-right: 0px,
   children: [text1, GroupedStack_2]
 }
 
@@ -186,6 +186,8 @@ chat = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 16px},
   overflow: .visible,
+  slot: .true,
+  restrict-children: .true,
   padding-left: 20px,
   padding-right: 20px,
   children: [base, base_2, base_4, base_3]
@@ -270,9 +272,7 @@ footer = frame {
   height: .auto,
   layout: {justify-content: .center, align-items: .center, item-gap: 12px},
   overflow: .visible,
-  padding-left: 12px,
-  padding-bottom: 12px,
-  padding-right: 12px,
+  padding: 12px,
   children: [messageField_2, medium]
 }
 

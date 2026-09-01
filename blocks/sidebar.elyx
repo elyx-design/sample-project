@@ -63,6 +63,8 @@ compactLogo = logo.medium {left: 0px, top: 278px}
 compactNavigation = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
+  slot: .true,
+  restrict-children: .true,
   children: [home, create, folder, cloud, history]
 }
 
@@ -114,9 +116,9 @@ history = button.mediumPlainIcon {
 profileAvatar = avatar.smallPhoto {left: 550px, top: 402px}
 
 export sideBarMenu = frame {
-  left: -354px,
+  left: -492px,
   top: 0px,
-  width: 152px,
+  width: 100%,
   height: Spacing.spacing.heightS,
   layout: {align-items: .center, item-gap: 4px},
   padding-left: 8px,
@@ -144,14 +146,14 @@ text2 = text {
 
 @variant
 selected = sideBarMenu {
-  left: -354px,
+  left: -492px,
   top: 76px,
   corner-radius: radius.radius.max,
   fill[0].color: colors.colors.blackAlpha05
 }
 
 export segmentHeader = frame {
-  left: -474px,
+  left: -492px,
   top: 276px,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 39px},
   children: [text1, settings20svg]
@@ -186,6 +188,7 @@ workspaceSelector = selector.Selector {
 
   selector.Left {
     overrides: [insert(xsmall, after = .nil), remove(selector.small)],
+    height: .auto,
     layout.item-gap: 8px
   }
 
@@ -211,7 +214,7 @@ xsmall = avatar.xsmallVariant {
 }
 
 GroupedStack = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 8px},
   overflow: .visible,
   children: [shape3, shape2]
@@ -227,6 +230,9 @@ sidebarLiveEvent = sidebar {
   top: 693px,
   width: 232px,
   padding-top: 12px,
+  padding-left: 16px,
+  padding-bottom: 12px,
+  padding-right: 16px,
   overrides: [remove(workspaceSelector)],
 
   GroupedStack_3 {
@@ -235,6 +241,11 @@ sidebarLiveEvent = sidebar {
 
   GroupedStack_3.GroupedStack_4 {
     overrides: [insert(GroupedStack_5, after = .nil), remove(frame2)]
+  }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2 {
+    padding-left: 0px,
+    padding-right: 0px
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4 {
@@ -249,40 +260,52 @@ sidebarLiveEvent = sidebar {
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6 {}
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.eventTag_2.text3 {
-    contents: "5,1k"
+    contents: "5.1k"
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.text5 {
     contents: "Lowhealth"
   }
 
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.eventTag_2 {
+    layout.item-gap: 4px
+  }
+
   @use-variant(sideBarMenuEvent)
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5 {}
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.eventTag_2.text3 {
-    contents: "3,1k"
+    contents: "3.1k"
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.text5 {
     contents: "SkipperGO"
   }
 
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.eventTag_2 {
+    layout.item-gap: 4px
+  }
+
   @use-variant(sideBarMenuEvent)
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3 {}
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.eventTag_2.text3 {
-    contents: "9,7k"
+    contents: "9.7k"
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.text5 {
     contents: "HugeTown"
   }
 
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.eventTag_2 {
+    layout.item-gap: 4px
+  }
+
   @use-variant(sideBarMenuEvent)
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4 {}
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2.text3 {
-    contents: "21,2k"
+    contents: "21.2k"
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.text5 {
@@ -296,11 +319,15 @@ sidebarLiveEvent = sidebar {
   GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.settings20svg {
     display: .hidden
   }
+
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2 {
+    layout.item-gap: 4px
+  }
 }
 
 @variant
 sideBarMenuEvent = sideBarMenu {
-  left: -354px,
+  left: -492px,
   top: 152px,
   overflow: .visible,
   layout.item-gap: 8px,
@@ -316,28 +343,34 @@ sideBarMenuEvent = sideBarMenu {
 campaignsItem_12 = sideBarMenuEvent {
   left: 40px,
   top: 192px,
-  width: 100%,
 
   eventTag_2.text3 {
-    contents: "5,9k"
+    contents: "5.9k"
   }
 
   text5 {
     contents: "RespawnRegret"
+  }
+
+  eventTag_2 {
+    layout.item-gap: 4px
   }
 }
 
 campaignsItem_11 = sideBarMenuEvent {
   left: 40px,
   top: 164px,
-  width: 100%,
 
   eventTag_2.text3 {
-    contents: "71,1k"
+    contents: "71.1k"
   }
 
   text5 {
     contents: "TurnTV"
+  }
+
+  eventTag_2 {
+    layout.item-gap: 4px
   }
 }
 
@@ -354,8 +387,6 @@ segmentHeader_3 = segmentHeader {
   left: 10px,
   top: 222px,
   width: 100%,
-  padding-left: 16px,
-  padding-right: 16px,
 
   settings20svg {
     contents: sideBarleft20
@@ -372,50 +403,61 @@ frame5 = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 8px},
   overflow: .visible,
-  padding-left: 10px,
-  padding-right: 10px,
+  slot: .true,
+  restrict-children: .true,
+  padding-left: 0px,
+  padding-right: 0px,
   children: [campaignsItem_7, campaignsItem_8, campaignsItem_9, campaignsItem_10]
 }
 
 campaignsItem_7 = sideBarMenuEvent {
   left: 20px,
   top: 84px,
-  width: 100%,
 
   eventTag_2.text3 {
-    contents: "5,5k"
+    contents: "5.5k"
   }
 
   text5 {
     contents: "PixelDriftTV"
+  }
+
+  eventTag_2 {
+    layout.item-gap: 4px
   }
 }
 
 campaignsItem_8 = sideBarMenuEvent {
   left: 20px,
   top: 54px,
-  width: 100%,
 
   eventTag_2.text3 {
-    contents: "1,2k"
+    contents: "1.2k"
   }
 
   text5 {
     contents: "SofaKing"
+  }
+
+  eventTag_2 {
+    layout.item-gap: 4px
   }
 }
 
 campaignsItem_9 = sideBarMenuEvent {
   left: 20px,
   top: 114px,
-  width: 100%,
 
   eventTag_2.text3 {
-    contents: "13,4k"
+    contents: "13.4k"
   }
 
   text5 {
     contents: "InkAndPixels"
+  }
+
+  eventTag_2 {
+    layout.item-gap: 4px
   }
 }
 
@@ -439,13 +481,13 @@ export eventTag = frame {
   children: [status, text3]
 }
 
-status = avatar.status {left: 0px, top: 5px, fill[0].color: .red}
+status = avatar.status {left: 0px, top: 5px, fill[0].color: colors.colors.red70}
 
 text3 = text {
   left: 15px,
   top: 0px,
   fill: .black,
-  contents: "2,2k",
+  contents: "2.2k",
   font-size: 12,
   font-style: "SemiBold"
 }
@@ -462,7 +504,7 @@ eventTagOffline = eventTag {
   }
 }
 
-eventTag_2 = eventTag {left: -251px, top: 161px, layout.item-gap: 4px}
+eventTag_2 = eventTag {left: -251px, top: 161px}
 
 text5 = text {
   left: 54.5px,
@@ -527,6 +569,8 @@ frame2 = frame {
   width: 100%,
   layout: {direction: .column},
   overflow: .visible,
+  slot: .true,
+  restrict-children: .true,
   padding-left: 10px,
   padding-right: 10px,
   children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem]
@@ -535,7 +579,6 @@ frame2 = frame {
 campaignsItem = sideBarMenu {
   left: 0px,
   top: 34px,
-  width: 100%,
 
   text2 {
     contents: "New"
@@ -549,7 +592,6 @@ campaignsItem = sideBarMenu {
 overviewItem = sideBarMenu {
   left: 0px,
   top: 54px,
-  width: 100%,
 
   text2 {
     contents: "Projects"
@@ -563,7 +605,6 @@ overviewItem = sideBarMenu {
 salesItem = sideBarMenu {
   left: 0px,
   top: 74px,
-  width: 100%,
 
   text2 {
     contents: "Data"
@@ -577,7 +618,6 @@ salesItem = sideBarMenu {
 tasksItem = sideBarMenu {
   left: 20px,
   top: 94px,
-  width: 100%,
 
   text2 {
     contents: "Notes"
@@ -591,7 +631,6 @@ tasksItem = sideBarMenu {
 settingsItem = sideBarMenu {
   left: 20px,
   top: 134px,
-  width: 100%,
 
   text2 {
     contents: "Settings"
@@ -606,16 +645,12 @@ GroupedStack_2 = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 8px},
   overflow: .visible,
+  padding-left: 10px,
+  padding-right: 10px,
   children: [segmentHeader_2, frame4]
 }
 
-segmentHeader_2 = segmentHeader {
-  left: 10px,
-  top: 222px,
-  width: 100%,
-  padding-left: 16px,
-  padding-right: 16px
-}
+segmentHeader_2 = segmentHeader {left: 10px, top: 222px, width: 100%}
 
 frame4 = frame {
   left: 0px,
@@ -623,8 +658,10 @@ frame4 = frame {
   width: 100%,
   layout: {direction: .column},
   overflow: .visible,
-  padding-left: 10px,
-  padding-right: 10px,
+  slot: .true,
+  restrict-children: .true,
+  padding-left: 0px,
+  padding-right: 0px,
   children: [campaignsItem_4, campaignsItem_3, campaignsItem_5, campaignsItem_6]
 }
 

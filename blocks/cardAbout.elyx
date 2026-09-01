@@ -65,17 +65,14 @@ profileStats = stats.stats {
   overrides: [remove(stats.bottomDivider), remove(stats.topDivider)],
 
   stats.row.ratingDivider {
-    top: 0px,
-    height: 100%
+    top: 0px
   }
 
   stats.row.pagesDivider {
-    top: 0px,
-    height: 100%
+    top: 0px
   }
 
   stats.row.booksDivider {
-    top: 0px,
-    height: 100%
+    top: 0px
   }
 }

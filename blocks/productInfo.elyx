@@ -10,7 +10,7 @@ export productInfo = frame {
   children: [productPreview, productDetails]
 }
 
-productPreview = product.product {left: 0px, top: 0px, width: 100%}
+productPreview = product.product {left: -30.85px, top: -42.3893px}
 
 productDetails = frame {
   width: 100%,

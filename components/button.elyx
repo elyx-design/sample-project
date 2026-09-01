@@ -373,6 +373,8 @@ mediumPlainIcon = medium {
   left: 1462px,
   top: 690.056px,
   width: Spacing.spacing.heightM,
+  padding-left: 0px,
+  padding-right: 0px,
   border[0]: .nil,
   fill[0]: .nil,
   overrides: [insert(mediumPlainIconGlyph, after = .nil), remove(mediumLabel)],

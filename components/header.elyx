@@ -19,7 +19,7 @@ mediumTitle = text {
 }
 
 mediumSubtitle = text {
-  width: .auto,
+  width: 100%,
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
   font-size: Typography.typography.labelML,
@@ -63,7 +63,7 @@ smallTitle = text {
 }
 
 smallSubtitle = text {
-  width: .auto,
+  width: 100%,
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
   font-size: Typography.typography.labelM,
@@ -104,7 +104,7 @@ largeTitle = text {
 }
 
 largeSubtitle = text {
-  width: .auto,
+  width: 100%,
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
   font-size: 18,

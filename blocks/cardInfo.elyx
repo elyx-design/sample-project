@@ -2,7 +2,7 @@ import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
 import "images/background/nightMountain.jpg" as nightMountain
-import "components/userSummary.elyx" as userSummary
+import "components/avatar.elyx" as avatar
 import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
@@ -44,14 +44,20 @@ reviewHeader = header.mediumLeft {
   }
 }
 
-tags = frame {width: 100%, layout: {item-gap: 8px}, children: [ratingTag, thrillerTag, dramaTag]}
+tags = frame {
+  width: 100%,
+  layout: {item-gap: 8px},
+  slot: .true,
+  restrict-children: .true,
+  children: [ratingTag, thrillerTag, dramaTag]
+}
 
 ratingTag = tag.iconAndLabel {
   left: 765px,
   top: 726px,
 
   tag.label {
-    contents: "4,2",
+    contents: "4.2",
     fill[0].color: colors.colors.white100
   }
 
@@ -93,25 +99,19 @@ reviewAuthor = frame {
   width: 100%,
   layout: {justify-content: .space-between, item-gap: 20px},
   overflow: .visible,
-  children: [authorSummary, closeButton]
+  children: [small, closeButton]
 }
 
-authorSummary = userSummary.small {
+small = avatar.smallPhoto {
   left: 786px,
   top: 143px,
-  overflow: .visible,
 
-  userSummary.smallHeader.header.smallSubtitle {
-    contents: "Writer",
-    fill[0].color: colors.colors.whiteAlpha70
-  }
-
-  userSummary.smallHeader.header.smallTitle {
-    fill[0].color: colors.colors.white100
-  }
-
-  userSummary.smallAvatar.userAvatar.smallStatus {
+  avatar.smallStatus {
     display: .hidden
+  }
+
+  avatar.smallInitials {
+    contents: "Writer"
   }
 }
 

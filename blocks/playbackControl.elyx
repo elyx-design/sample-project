@@ -30,6 +30,8 @@ export playbackControl = cardBackground.none {
 tools = frame {
   height: 100%,
   layout: {align-items: .center},
+  slot: .true,
+  restrict-children: .true,
   children: [settingsButton, likeButton, moreButton]
 }
 

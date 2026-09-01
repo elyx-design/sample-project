@@ -22,10 +22,6 @@ export socialCard = cardBackground.transparent {
   overrides: [insert(cardContent, after = .nil), insert(socialFooter, after = cardContent)]
 }
 
-smallButton = button.small {left: 1318px, top: 603px}
-
-mediumSummary = userSummary.medium {left: 1187.73px, top: 318.4px, width: 88px}
-
 socialFooter = frame {
   width: 100%,
   height: .auto,
@@ -58,8 +54,10 @@ cardContent = frame {
 }
 
 cardActions = frame {
-  width: 100%,
+  width: .auto,
   layout: {justify-content: .end, align-items: .end, item-gap: 8px},
+  slot: .true,
+  restrict-children: .true,
   children: [favoriteButton, likeButton, closeButton]
 }
 

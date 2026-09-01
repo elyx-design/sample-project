@@ -54,7 +54,7 @@ planGlyph = icon {
 }
 
 planHeader = frame {
-  width: 100%,
+  width: .auto,
   layout: {align-items: .center, item-gap: 16px},
   overflow: .visible,
   children: [planName, badge]
@@ -128,8 +128,9 @@ description = text {
 }
 
 features = frame {
-  left: 24px,
+  left: 0px,
   top: 250px,
+  width: 100%,
   layout: {direction: .column, item-gap: 8px},
   children: [projectsFeature, supportFeature, exportFeature, storageFeature]
 }

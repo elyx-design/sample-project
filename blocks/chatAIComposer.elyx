@@ -33,6 +33,8 @@ attachmentActions = frame {
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
+  slot: .true,
+  restrict-children: .true,
   children: [add, modelSelector, search, more]
 }
 
@@ -76,6 +78,8 @@ messageActions = frame {
   height: 100%,
   layout: {item-gap: 8px},
   overflow: .visible,
+  slot: .true,
+  restrict-children: .true,
   children: [voice, send]
 }
 
