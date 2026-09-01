@@ -9,7 +9,7 @@ import "components/tag.elyx" as tag
 import "icons/20 pixels/arrowDown-20.svg" as arrowDown20
 import "icons/24 pixels/mug-24.svg" as mug24
 
-LandingPage = frame {
+export LandingPage = frame {
   left: -5px,
   top: 137px,
   width: 1605px,

@@ -5,7 +5,7 @@ import "icons/24 pixels/processor.svg" as processor
 import "components/header.elyx" as header
 import "images/background/sea.jpg" as sea
 
-pricingPage = frame {
+export pricingPage = frame {
   left: 130.5px,
   top: 163px,
   width: 1415px,
@@ -60,9 +60,6 @@ proPlan = planCard.planCard {
   width: 380px,
   height: 498px,
   corner-radius: [20px, 0px, 0px, 20px],
-
-  @use-variant(appTopBar.button.mediumPrimary)
-  planCard.manageButton {}
 
   planCard.manageButton.button.mediumLabel {
     contents: "Get Started"

@@ -78,7 +78,7 @@ marker9 = timelineRuler.timeMarker {
   }
 }
 
-videoEditing = frame {
+export videoEditing = frame {
   left: -689px,
   top: -230px,
   width: 1138px,
