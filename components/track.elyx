@@ -2,6 +2,7 @@ import "tokens/spacing.elyx" as spacing
 import "icons/24 pixels/direct-24.svg" as direct24
 import "tokens/colors.elyx" as colors
 import "icons/24 pixels/calendar-24.svg" as calendar24
+import "tokens/radius.elyx" as radius
 
 export track = frame {
   left: 639.5px,
@@ -11,7 +12,7 @@ export track = frame {
   layout: {justify-content: .space-between, align-items: .center},
   fill: colors.colors.limeBright,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
-  corner-radius: 8px,
+  corner-radius: radius.radius.xsmall,
   padding: [4px, 0px],
   children: [startHandle, content, endHandle]
 }
@@ -31,7 +32,7 @@ startGrip = shape {
   width: 2px,
   height: 16px,
   fill: rgb(0%, 0%, 0%, 25%),
-  corner-radius: 999px,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -107,6 +108,6 @@ endGrip = shape {
   width: 2px,
   height: 16px,
   fill: rgb(0%, 0%, 0%, 25%),
-  corner-radius: 999px,
+  corner-radius: radius.radius.full,
   type: .rect
 }

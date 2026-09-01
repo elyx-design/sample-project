@@ -49,7 +49,7 @@ majorTick = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -59,7 +59,7 @@ firstMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -69,7 +69,7 @@ secondMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -79,7 +79,7 @@ thirdMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -89,7 +89,7 @@ fourthMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -99,7 +99,7 @@ fifthMinorTick = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 

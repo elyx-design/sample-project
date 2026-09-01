@@ -6,6 +6,7 @@ import "images/background/dots.jpg" as dots
 import "components/avatarGroup.elyx" as avatarGroup
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/star-20.svg" as star20
+import "tokens/radius.elyx" as Radius
 
 export socialCard = cardBackground.transparent {
   left: 186px,
@@ -48,7 +49,7 @@ cardContent = frame {
   layout: {direction: .column, align-items: .end, item-gap: 24px},
   fill: {image: {ref: dots}},
   border: {color: colors.colors.blackAlpha10, visible: .false, width: 0.5px, position: .outside},
-  corner-radius: 16px,
+  corner-radius: Radius.radius.medium,
   padding: 24px,
   children: [cardActions, profileInfo]
 }

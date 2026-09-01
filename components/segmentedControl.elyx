@@ -9,7 +9,7 @@ export medium = frame {
   height: Spacing.spacing.heightM,
   layout: {justify-content: .center, align-items: .center},
   fill: Colors.colors.controlSurface,
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   padding: 4px,
   children: [leadingSegment, middleSegment, trailingSegment]
 }
@@ -43,7 +43,7 @@ export mediumSelected = frame {
       visible: .false
     }
   },
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   overflow: .visible,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,

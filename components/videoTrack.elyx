@@ -10,7 +10,7 @@ export base = frame {
   height: spacing.spacing.heightG,
   layout: {justify-content: .space-evenly, align-items: .center},
   fill: colors.colors.lime,
-  corner-radius: 8px,
+  corner-radius: radius.radius.xsmall,
   padding: [4px, 0px],
   children: [leadingHandle, filmstrip, trailingHandle]
 }
@@ -30,7 +30,7 @@ leadingGrip = shape {
   width: 2px,
   height: 16px,
   fill: colors.colors.blackAlpha25,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -84,6 +84,6 @@ trailingGrip = shape {
   width: 2px,
   height: 16px,
   fill: colors.colors.blackAlpha25,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }

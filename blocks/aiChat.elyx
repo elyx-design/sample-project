@@ -10,7 +10,7 @@ export aiChat = frame {
   min-width: 100px,
   min-height: 60px,
   layout: {direction: .column, item-gap: 24px},
-  corner-radius: cardBackground.Radius.radius.xl,
+  corner-radius: cardBackground.Radius.radius.xlarge,
   slot: .true,
   restrict-children: .true,
   padding: [0px, 12px],

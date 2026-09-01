@@ -9,7 +9,7 @@ export small = frame {
   width: 36px,
   height: 36px,
   layout: {justify-content: .center, align-items: .center},
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   overflow: .visible,
   children: [smallBackground, smallInitials, smallStatus]
 }

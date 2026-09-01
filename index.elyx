@@ -18,7 +18,7 @@ welcome = frame {
       spread: 0px
     }
   },
-  corner-radius: Radius.radius.l,
+  corner-radius: Radius.radius.large,
   padding: [40px, 60px],
   children: [
     introCopy,
@@ -82,7 +82,7 @@ componentsCard = frame {
   layout: {direction: .column, item-gap: 10px},
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
-  corner-radius: Radius.radius.s,
+  corner-radius: Radius.radius.small,
   padding: 16px,
   children: [componentsLabel, componentsDescription]
 }
@@ -117,7 +117,7 @@ blocksCard = frame {
   layout: {direction: .column, item-gap: 10px},
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
-  corner-radius: Radius.radius.s,
+  corner-radius: Radius.radius.small,
   padding: 16px,
   children: [blocksLabel, blocksDescription]
 }
@@ -152,7 +152,7 @@ screensCard = frame {
   layout: {direction: .column, item-gap: 10px},
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
-  corner-radius: Radius.radius.s,
+  corner-radius: Radius.radius.small,
   padding: 16px,
   children: [screensLabel, screensDescription]
 }

@@ -23,7 +23,7 @@ export on = frame {
     }
   },
   border: {color: Colors.colors.black20, width: 0.5px},
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   padding: 3px,
   children: knob
 }
@@ -39,7 +39,7 @@ knob = frame {
       stops: [stop(0%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
     }
   },
-  corner-radius: Radius.radius.max
+  corner-radius: Radius.radius.full
 }
 
 @variant

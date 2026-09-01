@@ -12,6 +12,7 @@ import "images/profileImgs/006.jpg" as lib
 import "images/profileImgs/002.jpg" as lib2
 import "images/profileImgs/004.jpg" as lib4
 import "components/thumbnailImage.elyx" as thumbnailImage
+import "tokens/radius.elyx" as Radius
 import "images/thumbnails/thumb10.jpg" as thumb10
 import "images/thumbnails/thumb11.jpg" as thumb11
 import "images/thumbnails/thumb12.jpg" as thumb12
@@ -500,7 +501,7 @@ thumbnailImage_2 = thumbnailImage.thumbnailVideo {
   top: 283.2895px,
   width: 234px,
   height: 145px,
-  corner-radius: 8px,
+  corner-radius: Radius.radius.xsmall,
   border[0].color: colors.colors.whiteAlpha10,
   fill[0].image.ref: thumb10,
   fill[1]: .nil
@@ -518,7 +519,7 @@ thumbnailImage_3 = thumbnailImage.thumbnailImage {
   top: 303.2895px,
   width: 100%,
   height: 76px,
-  corner-radius: 8px,
+  corner-radius: Radius.radius.xsmall,
   border[0].color: colors.colors.whiteAlpha10,
   fill[0].image.ref: thumb11,
   fill[1]: .nil,
@@ -537,7 +538,7 @@ thumbnailImage_4 = thumbnailImage.thumbnailImage {
   top: 491.2895px,
   width: 100%,
   height: 76px,
-  corner-radius: 8px,
+  corner-radius: Radius.radius.xsmall,
   border[0].color: colors.colors.whiteAlpha10,
   fill[0].image.ref: thumb12,
   fill[1]: .nil,

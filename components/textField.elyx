@@ -16,7 +16,7 @@ export base = frame {
   layout: {align-items: .center, item-gap: 4px},
   fill: Colors.colors.white100,
   border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   padding-left: Spacing.spacing.paddingM,
   padding-right: Spacing.spacing.paddingM,
   children: label

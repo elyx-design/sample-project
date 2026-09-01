@@ -14,7 +14,7 @@ export planCard = frame {
   height: 425px,
   layout: {direction: .column, justify-content: .space-between, item-gap: 48px},
   fill: {image: {ref: dots}},
-  corner-radius: Radius.radius.l,
+  corner-radius: Radius.radius.large,
   padding: 24px,
   children: [planContent, manageButton]
 }
@@ -40,7 +40,7 @@ planIcon = frame {
   height: 40px,
   layout: {direction: .column, justify-content: .center, align-items: .center},
   fill: Colors.colors.black20,
-  corner-radius: 8px,
+  corner-radius: Radius.radius.xsmall,
   children: planGlyph
 }
 

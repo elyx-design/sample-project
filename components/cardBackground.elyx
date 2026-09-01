@@ -20,7 +20,7 @@ export base = frame {
       spread: 0px
     }
   },
-  corner-radius: Radius.radius.xl,
+  corner-radius: Radius.radius.xlarge,
   padding: 24px
 }
 
@@ -40,11 +40,11 @@ none = base {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: 
 transparentFullRadius = base {
   left: 275px,
   top: 575px,
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   fill[0].color: colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }
 
 @variant
-solidFullRadius = base {left: 275.05px, top: 467px, corner-radius: Radius.radius.max}
+solidFullRadius = base {left: 275.05px, top: 467px, corner-radius: Radius.radius.full}

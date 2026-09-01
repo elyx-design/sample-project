@@ -9,7 +9,7 @@ export audioBar = frame {
   height: spacing.spacing.heightS,
   layout: {align-items: .center, item-gap: 8px},
   fill: colors.colors.white100,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   padding-left: 12px,
   padding-right: 12px,
   children: [timecode, track]
@@ -66,7 +66,7 @@ bar01 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -76,7 +76,7 @@ bar02 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -86,7 +86,7 @@ bar03 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -96,7 +96,7 @@ bar04 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -106,7 +106,7 @@ bar05 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -116,7 +116,7 @@ bar06 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -126,7 +126,7 @@ bar07 = shape {
   width: 1px,
   height: 4px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -136,7 +136,7 @@ bar08 = shape {
   width: 1px,
   height: 6px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -146,7 +146,7 @@ bar09 = shape {
   width: 1px,
   height: 10px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -156,7 +156,7 @@ bar10 = shape {
   width: 1px,
   height: 14px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -166,7 +166,7 @@ bar11 = shape {
   width: 1px,
   height: 8px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -176,7 +176,7 @@ bar12 = shape {
   width: 1px,
   height: 4px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -186,7 +186,7 @@ bar13 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -196,7 +196,7 @@ bar14 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -206,7 +206,7 @@ bar15 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -216,7 +216,7 @@ bar16 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -226,7 +226,7 @@ bar17 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -236,7 +236,7 @@ bar18 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -246,7 +246,7 @@ bar19 = shape {
   width: 1px,
   height: 4px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -256,7 +256,7 @@ bar20 = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -266,7 +266,7 @@ bar21 = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -276,7 +276,7 @@ bar22 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -286,7 +286,7 @@ bar23 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -296,7 +296,7 @@ bar24 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -306,7 +306,7 @@ bar25 = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -316,7 +316,7 @@ bar26 = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -326,7 +326,7 @@ bar27 = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -336,7 +336,7 @@ bar28 = shape {
   width: 1px,
   height: 5px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -346,7 +346,7 @@ bar29 = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -356,7 +356,7 @@ bar30 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -366,7 +366,7 @@ bar31 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -376,7 +376,7 @@ bar32 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -386,7 +386,7 @@ bar33 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -396,7 +396,7 @@ bar34 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -406,7 +406,7 @@ bar35 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -416,6 +416,6 @@ bar36 = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.black20,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }

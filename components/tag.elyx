@@ -13,7 +13,7 @@ export base = frame {
   fill: colors.colors.whiteAlpha50,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   filter: {type: .background-blur, radius: 40px},
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   padding-left: 12px,
   padding-right: 12px,
   children: label

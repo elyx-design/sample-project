@@ -13,7 +13,7 @@ export card = frame {
   min-height: 100px,
   layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
   fill: Colors.colors.surfaceSubtle,
-  corner-radius: Radius.radius.m,
+  corner-radius: Radius.radius.medium,
   padding: Spacing.spacing.paddingM
 }
 

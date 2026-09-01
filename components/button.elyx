@@ -29,7 +29,7 @@ export medium = frame {
       style: .smooth
     }
   },
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   padding-left: 16px,
   padding-right: 16px,
   children: mediumLabel
@@ -148,7 +148,7 @@ export small = frame {
       style: .smooth
     }
   },
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   padding: [0px, 12px],
   children: smallLabel
 }

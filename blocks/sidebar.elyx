@@ -148,7 +148,7 @@ text2 = text {
 selected = sideBarMenu {
   left: -492px,
   top: 76px,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   fill[0].color: colors.colors.blackAlpha05
 }
 

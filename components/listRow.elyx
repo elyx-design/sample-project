@@ -10,7 +10,7 @@ export base = frame {
   width: 100%,
   height: Spacing.spacing.heightS,
   layout: {justify-content: .space-between, align-items: .center},
-  corner-radius: Radius.radius.max,
+  corner-radius: Radius.radius.full,
   padding: [4px, 8px],
   children: content
 }

@@ -11,7 +11,7 @@ export settingRow = frame {
   height: .auto,
   layout: {justify-content: .space-between, align-items: .center},
   fill: Colors.colors.black95,
-  corner-radius: Radius.radius.m,
+  corner-radius: Radius.radius.medium,
   padding: Spacing.spacing.paddingM,
   children: [copy, action]
 }

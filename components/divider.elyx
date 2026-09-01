@@ -18,7 +18,7 @@ horizontalLine = shape {
   width: 100%,
   height: 0.5px,
   fill: colors.colors.blackAlpha25,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }
 
@@ -38,6 +38,6 @@ verticalLine = shape {
   width: 0.5px,
   height: 100%,
   fill: colors.colors.blackAlpha25,
-  corner-radius: radius.radius.max,
+  corner-radius: radius.radius.full,
   type: .rect
 }

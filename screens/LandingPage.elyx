@@ -8,6 +8,7 @@ import "icons/24 pixels/activity.svg" as activity
 import "components/tag.elyx" as tag
 import "icons/20 pixels/arrowDown-20.svg" as arrowDown20
 import "icons/24 pixels/mug-24.svg" as mug24
+import "tokens/radius.elyx" as Radius
 
 export LandingPage = frame {
   left: -5px,
@@ -115,7 +116,7 @@ layer1 = frame {
   layout: {item-gap: 12px},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
-  corner-radius: 16px,
+  corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: 16px,
   children: [shape1, smallLeft]
@@ -147,7 +148,7 @@ layer2 = frame {
   layout: {item-gap: 12px},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
-  corner-radius: 16px,
+  corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: 16px,
   children: [shape2, steadyHeader]
@@ -178,7 +179,7 @@ layer3 = frame {
   layout: {item-gap: 12px},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
-  corner-radius: 16px,
+  corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: 16px,
   children: [shape3, teamHeader]
