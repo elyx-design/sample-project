@@ -8,6 +8,8 @@ export card = frame {
   top: 888px,
   width: 100%,
   height: .auto,
+  min-width: 100px,
+  min-height: 100px,
   layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
   fill: rgb(94.9997%, 94.9997%, 94.9997%),
   corner-radius: Radius.radius.m,

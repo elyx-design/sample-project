@@ -1,8 +1,8 @@
 import "components/audioBar.elyx" as audioBar
 import "tokens/spacing.elyx" as spacing
 import "components/button.elyx" as button
-import "components/cardBackground.elyx" as cardBackground
 import "icons/20 pixels/play-20.svg" as play20
+import "components/cardBackground.elyx" as cardBackground
 import "icons/20 pixels/star-20.svg" as star20
 
 export audioToolbar = cardBackground.transparentFullRadius {
@@ -42,7 +42,7 @@ play = button.smallPrimaryRounded {
 audio = audioBar.audioBar {left: 863px, top: 837px}
 
 tools = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 4px},
   children: [favorite, more]
 }

@@ -13,7 +13,7 @@ export base = frame {
   top: 770px,
   width: 100%,
   height: Spacing.spacing.heightM,
-  layout: {align-items: .center},
+  layout: {align-items: .center, item-gap: 4px},
   fill: Colors.colors.white100,
   border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   corner-radius: Radius.radius.max,
@@ -70,7 +70,6 @@ withIcon = base {
   top: 770px,
   padding-left: 8px,
   padding-right: 8px,
-  layout.item-gap: 4px,
   overrides: [insert(defaultIcon, after = .nil)]
 }
 
@@ -80,7 +79,6 @@ iconPlaceholder = base {
   top: 850px,
   padding-left: 8px,
   padding-right: 8px,
-  layout.item-gap: 4px,
   overrides: [insert(placeholderIcon, after = .nil)],
 
   label {
@@ -114,7 +112,6 @@ iconFocused = base {
   padding-right: 8px,
   border[0].color: Colors.colors.black20,
   border[0].width: 1.5px,
-  layout.item-gap: 4px,
   overrides: [insert(focusedIcon, after = .nil)]
 }
 
@@ -126,7 +123,6 @@ iconError = base {
   padding-right: 8px,
   border[0].color: Colors.colors.red70,
   border[0].width: 1.5px,
-  layout.item-gap: 4px,
   overrides: [insert(errorIcon, after = .nil)],
 
   label {
@@ -184,7 +180,7 @@ submitButton = button.smallPrimaryRounded {
 }
 
 GroupedStack = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 8px},
   overflow: .visible,
   children: [small, placeholderButton]

@@ -32,8 +32,8 @@ label = text {
 labelAndClose = base {
   left: 542px,
   top: 700px,
-  padding-right: 6px,
-  layout.item-gap: 2px,
+  padding-right: 8px,
+  layout.item-gap: 4px,
   overrides: [insert(closeIcon, after = label)]
 }
 
@@ -45,7 +45,14 @@ status = base {
   overrides: [insert(statusIcon, after = .nil)]
 }
 
-statusIcon = icon {left: 525px, top: 635px, width: 20px, height: 20px, contents: status20}
+statusIcon = icon {
+  left: 525px,
+  top: 635px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.status-visible,
+  contents: status20
+}
 
 closeIcon = icon {
   left: 525px,

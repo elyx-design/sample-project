@@ -5,7 +5,7 @@ export small = frame {
   top: 519px,
   width: .auto,
   height: .auto,
-  layout: {direction: .column, justify-content: .center, align-items: .center},
+  layout: {align-items: .center},
   fill: {color: rgb(79.9972%, 79.9972%, 79.9972%), visible: .false},
   corner-radius: 0px,
   children: smallArtwork
@@ -56,8 +56,6 @@ largeArtwork = shape {
 medium = small {
   left: 340px,
   top: 597px,
-  width: 36px,
-  height: 36px,
 
   smallArtwork {
     width: 36px,
@@ -69,7 +67,6 @@ medium = small {
 extraLargeWordmark = small {
   left: 475px,
   top: 769px,
-  layout.direction: .row,
   layout.item-gap: 24px,
   overrides: [insert(text4, after = smallArtwork)],
 
@@ -83,7 +80,6 @@ extraLargeWordmark = small {
 largeWordmark = small {
   left: 475px,
   top: 677px,
-  layout.direction: .row,
   layout.item-gap: 12px,
   overrides: [insert(text3, after = smallArtwork)],
 
@@ -97,7 +93,6 @@ largeWordmark = small {
 mediumWordmark = small {
   left: 475px,
   top: 597px,
-  layout.direction: .row,
   layout.item-gap: 8px,
   overrides: [insert(text2, after = smallArtwork)],
 
@@ -111,7 +106,6 @@ mediumWordmark = small {
 smallWordmark = small {
   left: 475px,
   top: 519px,
-  layout.direction: .row,
   layout.item-gap: 8px,
   overrides: [insert(text1, after = smallArtwork)]
 }

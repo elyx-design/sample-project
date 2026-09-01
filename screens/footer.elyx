@@ -1,8 +1,7 @@
 import "images/background/plain.jpg" as plain
 import "blocks/siteFooter.elyx" as siteFooter
 
-Footer = frame {
-
+export Footer = frame {
   left: 183px,
   top: 312px,
   width: 1478px,

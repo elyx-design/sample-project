@@ -39,6 +39,8 @@ filmstrip = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 1px},
   corner-radius: 4px,
+  slot: .true,
+  restrict-children: .true,
   children: [frameOne, frameTwo, frameThree]
 }
 

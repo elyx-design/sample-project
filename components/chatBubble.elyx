@@ -8,7 +8,7 @@ import "images/profileImgs/001.jpg" as module4
 export base = frame {
   left: 602px,
   top: 476px,
-  layout: {justify-content: .center, align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: 8px},
   overflow: .visible,
   children: [profileAvatar, message]
 }
@@ -45,6 +45,7 @@ messageText = text {left: 0px, top: 0px, fill: .black, contents: "Chat text"}
 user = base {
   left: 602px,
   top: 560px,
+  layout.justify-content: .end,
   overrides: [move(message, after = .nil)],
 
   profileAvatar.avatar.smallImage {

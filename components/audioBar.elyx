@@ -18,7 +18,7 @@ export audioBar = frame {
 timecode = text {left: 0px, top: 0px, fill: .black, contents: "0:00", font-size: 12}
 
 track = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 2px},
   children: [
     bar01,

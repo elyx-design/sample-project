@@ -16,7 +16,7 @@ import "images/thumbnails/thumb10.jpg" as thumb10
 import "images/thumbnails/thumb11.jpg" as thumb11
 import "images/thumbnails/thumb12.jpg" as thumb12
 
-MovieUI = frame {
+export MovieUI = frame {
   left: 396px,
   top: 257px,
   width: 1404px,

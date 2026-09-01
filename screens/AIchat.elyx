@@ -4,7 +4,7 @@ import "blocks/chatAIComposer.elyx" as chatAIComposer
 import "images/background/waves.jpg" as waves
 import "blocks/aiChat.elyx" as aiChat
 
-AIChat = frame {
+export AIChat = frame {
   left: 180px,
   top: 303px,
   width: 1360px,

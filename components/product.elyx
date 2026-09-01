@@ -7,16 +7,15 @@ import "images/misc/book5.png" as book5
 export product = frame {
   left: 409.71px,
   top: 494px,
-  width: .auto,
+  width: 155px,
   height: 211px,
-  layout: {direction: .column, justify-content: .center, align-items: .center},
   overflow: .visible,
   children: coverOne
 }
 
 coverOne = shape {
-  left: 51.0859px,
-  top: 72px,
+  left: 0px,
+  top: 0px,
   width: 155px,
   height: 211px,
   fill: {image: {ref: book1}},
@@ -52,8 +51,8 @@ productTwo = product {
 }
 
 coverTwo = shape {
-  left: 10.85px,
-  top: -5315.5698px,
+  left: 0px,
+  top: 0px,
   width: 155px,
   height: 212px,
   fill: {image: {ref: book2}},
@@ -61,8 +60,8 @@ coverTwo = shape {
 }
 
 coverFour = shape {
-  left: 46.17px,
-  top: 26.7px,
+  left: 0px,
+  top: 0px,
   width: 155px,
   height: 211px,
   fill: {image: {ref: book4}},
@@ -70,8 +69,8 @@ coverFour = shape {
 }
 
 coverThree = shape {
-  left: 20.8567px,
-  top: 23.0153px,
+  left: 0px,
+  top: 0px,
   width: 155px,
   height: 211px,
   fill: {image: {ref: book3}},
@@ -79,8 +78,8 @@ coverThree = shape {
 }
 
 coverFive = shape {
-  left: 62.03px,
-  top: 19.46px,
+  left: 0px,
+  top: 0px,
   width: 155px,
   height: 211px,
   fill: {image: {ref: book5}},

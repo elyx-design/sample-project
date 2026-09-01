@@ -10,7 +10,7 @@ export base = frame {
   min-width: 100px,
   min-height: 60px,
   layout: {direction: .column, item-gap: Spacing.spacing.paddingXL},
-  fill: .white,
+  fill: colors.colors.white100,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
