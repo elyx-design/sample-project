@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/product.elyx" as product
@@ -8,14 +9,14 @@ export productGallery = cardBackground.base {
   top: 240px,
   width: 888px,
   overflow: .visible,
-  layout.item-gap: 20px,
+  layout.item-gap: Spacing.gap.xlarge,
   overrides: [insert(title, after = .nil), insert(productList, after = title)]
 }
 
 productList = frame {
   width: 100%,
   height: .auto,
-  layout: {justify-content: .space-between, item-gap: 20px},
+  layout: {justify-content: .space-between, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,

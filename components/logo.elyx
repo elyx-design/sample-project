@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "images/misc/logo.png" as logo2
 import "tokens/colors.elyx" as Colors
 
@@ -59,8 +60,8 @@ medium = small {
   top: 597px,
 
   smallArtwork {
-    width: 36px,
-    height: 36px
+    width: Spacing.size.medium,
+    height: Spacing.size.medium
   }
 }
 
@@ -68,7 +69,7 @@ medium = small {
 extraLargeWordmark = small {
   left: 475px,
   top: 769px,
-  layout.item-gap: 24px,
+  layout.item-gap: Spacing.gap.xxlarge,
   overrides: [insert(text4, after = smallArtwork)],
 
   smallArtwork {
@@ -81,7 +82,7 @@ extraLargeWordmark = small {
 largeWordmark = small {
   left: 475px,
   top: 677px,
-  layout.item-gap: 12px,
+  layout.item-gap: Spacing.gap.medium,
   overrides: [insert(text3, after = smallArtwork)],
 
   smallArtwork {
@@ -94,12 +95,12 @@ largeWordmark = small {
 mediumWordmark = small {
   left: 475px,
   top: 597px,
-  layout.item-gap: 8px,
+  layout.item-gap: Spacing.gap.small,
   overrides: [insert(text2, after = smallArtwork)],
 
   smallArtwork {
-    width: 36px,
-    height: 36px
+    width: Spacing.size.medium,
+    height: Spacing.size.medium
   }
 }
 
@@ -107,7 +108,7 @@ mediumWordmark = small {
 smallWordmark = small {
   left: 475px,
   top: 519px,
-  layout.item-gap: 8px,
+  layout.item-gap: Spacing.gap.small,
   overrides: [insert(text1, after = smallArtwork)]
 }
 

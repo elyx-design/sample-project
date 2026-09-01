@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "components/chatBubble.elyx" as chatBubble
 import "icons/24 pixels/robot-24.svg" as robot24
@@ -9,11 +10,11 @@ export aiChat = frame {
   height: .auto,
   min-width: 100px,
   min-height: 60px,
-  layout: {direction: .column, item-gap: 24px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   corner-radius: cardBackground.Radius.radius.xlarge,
   slot: .true,
   restrict-children: .true,
-  padding: [0px, 12px],
+  padding: [0px, Spacing.padding.medium],
   children: [userMessage, assistantResponse, layer1]
 }
 

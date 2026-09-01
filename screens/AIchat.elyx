@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "blocks/sideBar.elyx" as sideBar
 import "tokens/colors.elyx" as colors
 import "blocks/chatAIComposer.elyx" as chatAIComposer
@@ -11,7 +12,7 @@ export AIChat = frame {
   height: 776px,
   layout: {align-items: .center},
   fill: {image: {ref: waves}},
-  padding: 12px,
+  padding: Spacing.padding.medium,
   children: [sidebar_2, layer1]
 }
 
@@ -26,7 +27,7 @@ layer1 = frame {
     direction: .column,
     justify-content: .space-between,
     align-items: .center,
-    item-gap: 16px
+    item-gap: Spacing.gap.large
   },
   overflow: .visible,
   padding-top: 120px,
@@ -38,7 +39,7 @@ aiChat_3 = aiChat.aiChat {left: 775px, top: 0px}
 
 bottom = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [chatAIComposer_2, text1]
 }

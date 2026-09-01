@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 
 export playHead = frame {
@@ -7,7 +8,7 @@ export playHead = frame {
   height: 74px,
   layout: {direction: .column, justify-content: .center, align-items: .center},
   overflow: .visible,
-  padding-top: 12px,
+  padding-top: Spacing.padding.medium,
   children: [line, handle]
 }
 

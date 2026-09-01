@@ -9,7 +9,7 @@ export base = frame {
   height: .auto,
   min-width: 100px,
   min-height: 60px,
-  layout: {direction: .column, item-gap: Spacing.spacing.paddingXL},
+  layout: {direction: .column, item-gap: Spacing.padding.xlarge},
   fill: colors.colors.white100,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   shadow: {
@@ -21,7 +21,7 @@ export base = frame {
     }
   },
   corner-radius: Radius.radius.xlarge,
-  padding: 24px
+  padding: Spacing.padding.xxlarge
 }
 
 @variant

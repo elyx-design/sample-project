@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
@@ -8,14 +9,14 @@ export productCard = cardBackground.base {
   top: 134px,
   width: 565px,
   layout.direction: .row,
-  layout.item-gap: 20px,
+  layout.item-gap: Spacing.gap.xlarge,
   overrides: [insert(productPreview, after = .nil), insert(bookDetails, after = productPreview)]
 }
 
 bookDetails = frame {
   width: 100%,
   height: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   children: [pageProgress, bookInfo, readingProgress, notes]
 }
 
@@ -30,7 +31,7 @@ pageProgress = text {
 
 bookInfo = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 4px},
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   children: [title, author]
 }
 
@@ -64,7 +65,7 @@ readingProgress = frame {
 
 progressLabels = frame {
   width: 100%,
-  layout: {justify-content: .space-between, item-gap: 12px},
+  layout: {justify-content: .space-between, item-gap: Spacing.gap.medium},
   children: [progressLabel, progressValue]
 }
 
@@ -103,7 +104,7 @@ progressSlider = slider.base {
 
 notes = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 8px},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   children: [notesLabel, notesBody]
 }
 

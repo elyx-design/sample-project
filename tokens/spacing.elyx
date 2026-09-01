@@ -1,14 +1,14 @@
-export spacing = tokens {
-  s: 8,
-  m: 12,
-  l: 16,
-  xl: 20,
-  paddingS: 8,
-  paddingM: 12,
-  paddingL: 16,
-  paddingXL: 20,
-  heightM: 36,
-  negative: -8,
-  heightG: 68,
-  heightS: 28
+export gap = tokens {
+  xxsmall: 2,
+  xsmall: 4,
+  small: 8,
+  medium: 12,
+  large: 16,
+  xlarge: 20,
+  xxlarge: 24,
+  huge: 32
 }
+
+export padding = tokens {xsmall: 4, small: 8, medium: 12, large: 16, xlarge: 20, xxlarge: 24}
+
+export size = tokens {small: 28, medium: 36, large: 68}

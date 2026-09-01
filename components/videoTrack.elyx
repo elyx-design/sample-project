@@ -7,11 +7,11 @@ export base = frame {
   left: 639px,
   top: 492px,
   width: 475px,
-  height: spacing.spacing.heightG,
+  height: spacing.size.large,
   layout: {justify-content: .space-evenly, align-items: .center},
   fill: colors.colors.lime,
   corner-radius: radius.radius.xsmall,
-  padding: [4px, 0px],
+  padding: [spacing.padding.xsmall, 0px],
   children: [leadingHandle, filmstrip, trailingHandle]
 }
 
@@ -48,7 +48,7 @@ frameOne = shape {
   left: 0px,
   top: 0px,
   width: 100%,
-  height: spacing.spacing.heightG,
+  height: spacing.size.large,
   fill: {image: {ref: bird}},
   type: .rect
 }
@@ -57,7 +57,7 @@ frameTwo = shape {
   left: 0px,
   top: 20px,
   width: 100%,
-  height: spacing.spacing.heightG,
+  height: spacing.size.large,
   fill: {image: {ref: bird}},
   type: .rect
 }
@@ -66,7 +66,7 @@ frameThree = shape {
   left: 20px,
   top: 40px,
   width: 100%,
-  height: spacing.spacing.heightG,
+  height: spacing.size.large,
   fill: {image: {ref: bird}},
   type: .rect
 }

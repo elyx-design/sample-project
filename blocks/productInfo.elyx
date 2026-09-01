@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/product.elyx" as product
 import "tokens/colors.elyx" as colors
 import "components/tag.elyx" as tag
@@ -5,7 +6,7 @@ import "components/tag.elyx" as tag
 export productInfo = frame {
   left: -167px,
   top: 300px,
-  layout: {direction: .column, justify-content: .center, item-gap: 20px},
+  layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   children: [productPreview, productDetails]
 }
@@ -14,14 +15,14 @@ productPreview = product.product {left: -30.85px, top: -42.3893px}
 
 productDetails = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [productCopy, ratingTag]
 }
 
 productCopy = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 4px},
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   children: [productName, subtitle]
 }
 

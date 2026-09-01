@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
@@ -68,7 +69,7 @@ Video = frame {
   top: 0px,
   width: 65%,
   height: 100%,
-  layout: {direction: .column, align-items: .end, item-gap: 2px},
+  layout: {direction: .column, align-items: .end, item-gap: Spacing.gap.xxsmall},
   overflow: .visible,
   children: [video, About]
 }
@@ -101,10 +102,10 @@ About = frame {
   top: 654px,
   width: 100%,
   height: 130px,
-  layout: {direction: .column, justify-content: .space-between, item-gap: 24px},
+  layout: {direction: .column, justify-content: .space-between, item-gap: Spacing.gap.xxlarge},
   fill: {image: {ref: bikeBGBanner}},
   overflow: .visible,
-  padding: 20px,
+  padding: Spacing.padding.xlarge,
   children: [small, GroupedStack]
 }
 
@@ -130,7 +131,7 @@ small = userSummary.small {
 
 GroupedStack = frame {
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [small_2, small_3, small_4]
 }

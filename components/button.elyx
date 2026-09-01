@@ -11,7 +11,7 @@ import "icons/20 pixels/play-20.svg" as play20
 export medium = frame {
   left: 962px,
   top: 689px,
-  height: Spacing.spacing.heightM,
+  height: Spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
   fill: {
     linear-gradient: {
@@ -30,8 +30,8 @@ export medium = frame {
     }
   },
   corner-radius: Radius.radius.full,
-  padding-left: 16px,
-  padding-right: 16px,
+  padding-left: Spacing.padding.large,
+  padding-right: Spacing.padding.large,
   children: mediumLabel
 }
 
@@ -130,7 +130,7 @@ mediumDangerPressed = medium {
 export small = frame {
   left: 962px,
   top: 917px,
-  height: 28px,
+  height: Spacing.size.small,
   layout: {justify-content: .center, align-items: .center},
   fill: {
     linear-gradient: {
@@ -149,7 +149,7 @@ export small = frame {
     }
   },
   corner-radius: Radius.radius.full,
-  padding: [0px, 12px],
+  padding: [0px, Spacing.padding.medium],
   children: smallLabel
 }
 
@@ -247,7 +247,7 @@ smallPrimaryPressed = small {
 mediumIcon = medium {
   left: 1348px,
   top: 689px,
-  width: Spacing.spacing.heightM,
+  width: Spacing.size.medium,
   overrides: [insert(mediumIconGlyph, after = .nil), remove(mediumLabel)]
 }
 
@@ -255,7 +255,7 @@ mediumIcon = medium {
 mediumClose = medium {
   left: 1291px,
   top: 689px,
-  width: Spacing.spacing.heightM,
+  width: Spacing.size.medium,
   border[0].visible: .false,
   fill[0].color: Colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
@@ -268,7 +268,7 @@ mediumClose = medium {
 smallIconBackground = small {
   left: 1257px,
   top: 917px,
-  width: Spacing.spacing.heightS,
+  width: Spacing.size.small,
   overrides: [insert(smallBackgroundIcon, after = .nil), remove(smallLabel)]
 }
 
@@ -276,7 +276,7 @@ smallIconBackground = small {
 smallClose = small {
   left: 1210px,
   top: 917px,
-  width: Spacing.spacing.heightS,
+  width: Spacing.size.small,
   border[0].visible: .false,
   fill[0].color: Colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
@@ -318,7 +318,7 @@ mediumIconGlyph = icon {
 smallPrimaryRounded = small {
   left: 1304px,
   top: 917px,
-  width: Spacing.spacing.heightS,
+  width: Spacing.size.small,
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
   overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(smallLabel)]
@@ -337,7 +337,7 @@ smallPrimaryRoundedIcon = icon {
 smallIcon = small {
   left: 1353px,
   top: 917px,
-  width: Spacing.spacing.heightS,
+  width: Spacing.size.small,
   border[0]: .nil,
   fill[0]: .nil,
   overrides: [insert(smallIconGlyph, after = .nil), remove(smallLabel)],
@@ -357,7 +357,7 @@ smallIconGlyph = icon {
 mediumPrimaryRounded = medium {
   left: 1405px,
   top: 689px,
-  width: Spacing.spacing.heightM,
+  width: Spacing.size.medium,
   border[0].color: Colors.colors.black20,
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
@@ -372,7 +372,7 @@ mediumPrimaryRounded = medium {
 mediumPlainIcon = medium {
   left: 1462px,
   top: 690.056px,
-  width: Spacing.spacing.heightM,
+  width: Spacing.size.medium,
   padding-left: 0px,
   padding-right: 0px,
   border[0]: .nil,

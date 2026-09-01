@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "images/thumbnails/thumb01.jpg" as thumb01
 import "icons/20 pixels/heart-20.svg" as heart20
@@ -20,7 +21,7 @@ export thumbnailImage = frame {
       }
     }
   ],
-  padding: 12px,
+  padding: Spacing.padding.medium,
   children: [actions, imageName]
 }
 

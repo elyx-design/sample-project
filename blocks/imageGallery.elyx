@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/thumbnailImage.elyx" as thumbnailImage
 import "images/thumbnails/thumb07.jpg" as thumb07
 import "images/thumbnails/thumb03.jpg" as thumb03
@@ -12,7 +13,12 @@ export imageGallery = frame {
   top: 310px,
   width: 585px,
   height: 444px,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 2px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xxsmall
+  },
   children: [topRow, middleRow, bottomRow]
 }
 
@@ -21,7 +27,7 @@ topRow = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
   children: [topLeft, topCenter, topRight]
 }
 
@@ -48,7 +54,7 @@ middleRow = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
   children: [middleLeft, middleCenter, middleRight]
 }
 
@@ -81,7 +87,7 @@ bottomRow = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: 2px},
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
   children: [bottomLeft, bottomCenter, bottomRight]
 }
 

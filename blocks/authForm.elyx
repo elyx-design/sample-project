@@ -21,7 +21,7 @@ export signInForm = cardBackground.transparent {
 
 content = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 20px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   children: [header, credentialFields, options, signInButton]
 }
@@ -43,7 +43,7 @@ credentialFields = frame {
   left: 0px,
   top: 42.75px,
   width: 100%,
-  layout: {direction: .column, item-gap: Spacing.spacing.m},
+  layout: {direction: .column, item-gap: Spacing.gap.medium},
   overflow: .visible,
   children: [emailField, passwordField]
 }
@@ -73,7 +73,7 @@ options = frame {
   top: 62.75px,
   width: 100%,
   height: .auto,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [rememberToggle, rememberLabel]
 }
 

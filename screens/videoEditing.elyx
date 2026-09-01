@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "components/slider.elyx" as slider
@@ -121,7 +122,7 @@ preview = frame {
   left: 0px,
   top: 0px,
   height: 60%,
-  layout: {justify-content: .end, align-items: .end, item-gap: 2px},
+  layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.xxsmall},
   fill: Colors.colors.black20,
   children: [player, gallery]
 }
@@ -248,9 +249,9 @@ gallery = imageGallery.imageGallery {
 timeline = frame {
   width: 100%,
   height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
   fill: Colors.colors.black20,
-  padding-top: 8px,
+  padding-top: Spacing.padding.small,
   children: [ruler, tracks]
 }
 
@@ -259,7 +260,7 @@ ruler = timelineRuler.timelineRuler {
   top: 442.5px,
   width: 100%,
   overflow: .visible,
-  padding-left: 24px,
+  padding-left: Spacing.padding.xxlarge,
   padding-right: 0px,
   overrides: [
     insert(marker4, after = timelineRuler.marker3),
@@ -287,14 +288,14 @@ ruler = timelineRuler.timelineRuler {
 tracks = frame {
   width: 100%,
   height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 8px},
-  padding: [24px, 0px],
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  padding: [Spacing.padding.xxlarge, 0px],
   children: [videoTrackRow, audioTrack, titleTrack]
 }
 
 videoTrackRow = frame {
   width: 100%,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   padding-left: 80px,
   children: [birdTrack, thumbnailTrack]
 }

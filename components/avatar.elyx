@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
@@ -6,8 +7,8 @@ import "images/profileImgs/005.jpg" as module
 export small = frame {
   left: -94px,
   top: 10px,
-  width: 36px,
-  height: 36px,
+  width: Spacing.size.medium,
+  height: Spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
   corner-radius: Radius.radius.full,
   overflow: .visible,
@@ -17,8 +18,8 @@ export small = frame {
 smallBackground = shape {
   left: 0px,
   top: 0px,
-  width: 36px,
-  height: 36px,
+  width: Spacing.size.medium,
+  height: Spacing.size.medium,
   ignore-stack: .true,
   fill: Colors.colors.black90,
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
@@ -113,8 +114,8 @@ mediumImage = shape {
 smallImage = shape {
   left: 0px,
   top: 0px,
-  width: 36px,
-  height: 36px,
+  width: Spacing.size.medium,
+  height: Spacing.size.medium,
   ignore-stack: .true,
   fill: {image: {ref: module}},
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
@@ -124,8 +125,8 @@ smallImage = shape {
 export xsmall = frame {
   left: -94px,
   top: 235px,
-  width: 28px,
-  height: 28px,
+  width: Spacing.size.small,
+  height: Spacing.size.small,
   overflow: .visible,
   children: [color, smallInitials_2, smallStatus_2]
 }
@@ -133,8 +134,8 @@ export xsmall = frame {
 color = shape {
   left: 0px,
   top: 0px,
-  width: 28px,
-  height: 28px,
+  width: Spacing.size.small,
+  height: Spacing.size.small,
   ignore-stack: .true,
   fill: Colors.colors.black95,
   border: {color: Colors.colors.white100, width: 2px, position: .outside},
@@ -170,8 +171,8 @@ xsmallVariant = xsmall {
 photoBG = shape {
   left: 0px,
   top: 0px,
-  width: 28px,
-  height: 28px,
+  width: Spacing.size.small,
+  height: Spacing.size.small,
   ignore-stack: .true,
   fill: {image: {ref: module}},
   border: {color: Colors.colors.white100, width: 2px, position: .outside},

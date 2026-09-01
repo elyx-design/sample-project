@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
@@ -20,7 +21,12 @@ content = frame {
   top: 0px,
   width: 1280px,
   height: 100%,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 32px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.huge
+  },
   overflow: .visible,
   children: [signInForm, activeUsers, footerLinks]
 }

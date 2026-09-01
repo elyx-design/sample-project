@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "components/avatar.elyx" as userAvatar
 import "images/profileImgs/001.jpg" as module5
@@ -18,7 +19,7 @@ baseStack = frame {
   left: 0px,
   top: 0px,
   width: 140px,
-  height: 36px,
+  height: Spacing.size.medium,
   overflow: .visible,
   children: [baseFifthPhoto, baseFourthPhoto, baseThirdPhoto, baseSecondPhoto, baseFirstPhoto]
 }
@@ -93,7 +94,7 @@ labelRight = base {
   left: 484px,
   top: 595px,
   width: .auto,
-  layout.item-gap: 8px,
+  layout.item-gap: Spacing.gap.small,
   overrides: [
     insert(rightStack, after = .nil),
     insert(rightCount, after = rightStack),
@@ -107,7 +108,7 @@ labelBottom = base {
   top: 679px,
   width: .auto,
   layout.direction: .column,
-  layout.item-gap: 8px,
+  layout.item-gap: Spacing.gap.small,
   overrides: [
     insert(bottomStack, after = .nil),
     insert(bottomCount, after = bottomStack),
@@ -135,7 +136,7 @@ bottomStack = frame {
   left: 0px,
   top: 0px,
   width: 140px,
-  height: 36px,
+  height: Spacing.size.medium,
   overflow: .visible,
   children: [
     bottomFifthPhoto,
@@ -233,7 +234,7 @@ labelTop = base {
   top: 788px,
   layout.align-items: .start,
   layout.direction: .column,
-  layout.item-gap: 4px,
+  layout.item-gap: Spacing.gap.xsmall,
   overrides: [insert(title, after = .nil), insert(topStack, after = title), remove(baseStack)]
 }
 
@@ -241,7 +242,7 @@ topStack = frame {
   left: 0px,
   top: 0px,
   width: 140px,
-  height: 36px,
+  height: Spacing.size.medium,
   overflow: .visible,
   children: [topFifthPhoto, topFourthPhoto, topThirdPhoto, topSecondPhoto, topFirstPhoto]
 }
@@ -315,7 +316,7 @@ rightStack = frame {
   left: 0px,
   top: 0px,
   width: 140px,
-  height: 36px,
+  height: Spacing.size.medium,
   overflow: .visible,
   children: [rightFifthPhoto, rightFourthPhoto, rightThirdPhoto, rightSecondPhoto, rightFirstPhoto]
 }

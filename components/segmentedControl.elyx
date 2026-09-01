@@ -6,11 +6,11 @@ export medium = frame {
   left: 623px,
   top: 656px,
   width: 100%,
-  height: Spacing.spacing.heightM,
+  height: Spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
   fill: Colors.colors.controlSurface,
   corner-radius: Radius.radius.full,
-  padding: 4px,
+  padding: Spacing.padding.xsmall,
   children: [leadingSegment, middleSegment, trailingSegment]
 }
 
@@ -24,7 +24,7 @@ export mediumSelected = frame {
   left: 623px,
   top: 736px,
   width: .auto,
-  height: Spacing.spacing.heightS,
+  height: Spacing.size.small,
   layout: {justify-content: .center, align-items: .center},
   fill: {
     linear-gradient: {
@@ -45,8 +45,8 @@ export mediumSelected = frame {
   },
   corner-radius: Radius.radius.full,
   overflow: .visible,
-  padding-left: Spacing.spacing.paddingM,
-  padding-right: Spacing.spacing.paddingM,
+  padding-left: Spacing.padding.medium,
+  padding-right: Spacing.padding.medium,
   children: label
 }
 
@@ -93,8 +93,8 @@ smallInactive = mediumSelected {
   left: 726px,
   top: 812px,
   height: .auto,
-  padding-top: 4px,
-  padding-bottom: 4px,
+  padding-top: Spacing.padding.xsmall,
+  padding-bottom: Spacing.padding.xsmall,
   border[0]: .nil,
   fill[0]: .nil,
   shadow[0]: .nil,
@@ -109,8 +109,8 @@ smallSelected = mediumSelected {
   left: 726px,
   top: 736px,
   height: .auto,
-  padding-top: 4px,
-  padding-bottom: 4px
+  padding-top: Spacing.padding.xsmall,
+  padding-bottom: Spacing.padding.xsmall
 }
 
 smallLeadingSegment = smallSelected {left: 0px, top: 6.5px, width: 100%}

@@ -9,15 +9,15 @@ export audioToolbar = cardBackground.transparentFullRadius {
   left: 828px,
   top: 798px,
   width: .auto,
-  height: spacing.spacing.heightM,
+  height: spacing.size.medium,
   min-height: .nil,
   padding-top: 0px,
-  padding-left: 4px,
+  padding-left: spacing.padding.xsmall,
   padding-bottom: 0px,
-  padding-right: 4px,
+  padding-right: spacing.padding.xsmall,
   layout.align-items: .center,
   layout.direction: .row,
-  layout.item-gap: 20px,
+  layout.item-gap: spacing.gap.xlarge,
   layout.justify-content: .space-between,
   overrides: [insert(controls, after = .nil), insert(close, after = controls)]
 }
@@ -26,7 +26,7 @@ close = button.smallClose {left: 218px, top: 40px}
 
 controls = frame {
   height: 100%,
-  layout: {align-items: .center, item-gap: 4px},
+  layout: {align-items: .center, item-gap: spacing.gap.xsmall},
   children: [play, audio, tools]
 }
 
@@ -43,12 +43,12 @@ audio = frame {
   left: 863px,
   top: 837px,
   width: .auto,
-  height: spacing.spacing.heightS,
-  layout: {align-items: .center, item-gap: 8px},
+  height: spacing.size.small,
+  layout: {align-items: .center, item-gap: spacing.gap.small},
   fill: audioBar.colors.colors.white100,
   corner-radius: audioBar.radius.radius.full,
-  padding-left: 12px,
-  padding-right: 12px,
+  padding-left: spacing.padding.medium,
+  padding-right: spacing.padding.medium,
   children: [timecode, track]
 }
 
@@ -56,7 +56,7 @@ timecode = text {left: 0px, top: 0px, fill: .black, contents: "0:00", font-size:
 
 track = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 2px},
+  layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
   children: [
     bar01,
     bar02,
@@ -459,7 +459,7 @@ bar36 = shape {
 
 tools = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 4px},
+  layout: {align-items: .center, item-gap: spacing.gap.xsmall},
   slot: .true,
   restrict-children: .true,
   children: [favorite, more]

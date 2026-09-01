@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/divider.elyx" as divider
 import "tokens/colors.elyx" as colors
 
@@ -5,7 +6,7 @@ export stats = frame {
   left: 396px,
   top: 630px,
   width: 100%,
-  layout: {direction: .column, justify-content: .center, item-gap: 8px},
+  layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.small},
   children: [topDivider, row, bottomDivider]
 }
 
@@ -15,7 +16,7 @@ row = frame {
   left: 0px,
   top: 74px,
   width: 100%,
-  layout: {justify-content: .space-around, item-gap: 24px},
+  layout: {justify-content: .space-around, item-gap: Spacing.gap.xxlarge},
   children: [books, booksDivider, pages, pagesDivider, rating, ratingDivider, shelves]
 }
 
@@ -23,7 +24,12 @@ books = frame {
   left: 0px,
   top: 0px,
   width: 100%,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xsmall
+  },
   children: [booksValue, booksLabel]
 }
 
@@ -54,7 +60,12 @@ pages = frame {
   left: 0px,
   top: 0px,
   width: 100%,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xsmall
+  },
   children: [pagesValue, pagesLabel]
 }
 
@@ -85,7 +96,12 @@ rating = frame {
   left: 0px,
   top: 40px,
   width: 100%,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xsmall
+  },
   children: [ratingValue, ratingLabel]
 }
 
@@ -116,7 +132,12 @@ shelves = frame {
   left: 20px,
   top: 60px,
   width: 100%,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 4px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xsmall
+  },
   children: [shelvesValue, shelvesLabel]
 }
 

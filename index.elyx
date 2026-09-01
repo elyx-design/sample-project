@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
@@ -8,7 +9,7 @@ welcome = frame {
   top: 2px,
   width: 1100px,
   height: .auto,
-  layout: {direction: .column, item-gap: 24px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   fill: rgb(99.64%, 98.67%, 94.36%),
   shadow: {
     drop-shadow: {
@@ -31,7 +32,7 @@ welcome = frame {
 
 introCopy = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 8px},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   corner-radius: 0px,
   padding: 0px,
   children: [welcomeHeading, welcomeDescription]
@@ -70,7 +71,7 @@ projectStructureOverview = text {
 
 scaffoldSections = frame {
   width: 100%,
-  layout: {item-gap: 20px},
+  layout: {item-gap: Spacing.gap.xlarge},
   children: [componentsCard, blocksCard, screensCard]
 }
 
@@ -83,7 +84,7 @@ componentsCard = frame {
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: Radius.radius.small,
-  padding: 16px,
+  padding: Spacing.padding.large,
   children: [componentsLabel, componentsDescription]
 }
 
@@ -118,7 +119,7 @@ blocksCard = frame {
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: Radius.radius.small,
-  padding: 16px,
+  padding: Spacing.padding.large,
   children: [blocksLabel, blocksDescription]
 }
 
@@ -153,7 +154,7 @@ screensCard = frame {
   fill: rgb(99.04%, 97.86%, 88.96%),
   border: rgb(89.6%, 84.8%, 58.4%),
   corner-radius: Radius.radius.small,
-  padding: 16px,
+  padding: Spacing.padding.large,
   children: [screensLabel, screensDescription]
 }
 

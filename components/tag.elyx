@@ -8,14 +8,14 @@ import "icons/20 pixels/status-20.svg" as status20
 export base = frame {
   left: 542px,
   top: 548px,
-  height: spacing.spacing.heightS,
+  height: spacing.size.small,
   layout: {justify-content: .center, align-items: .center},
   fill: colors.colors.whiteAlpha50,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   filter: {type: .background-blur, radius: 40px},
   corner-radius: radius.radius.full,
-  padding-left: 12px,
-  padding-right: 12px,
+  padding-left: spacing.padding.medium,
+  padding-right: spacing.padding.medium,
   children: label
 }
 
@@ -32,8 +32,8 @@ label = text {
 labelAndClose = base {
   left: 542px,
   top: 700px,
-  padding-right: 8px,
-  layout.item-gap: 4px,
+  padding-right: spacing.padding.small,
+  layout.item-gap: spacing.gap.xsmall,
   overrides: [insert(closeIcon, after = label)]
 }
 
@@ -41,7 +41,7 @@ labelAndClose = base {
 status = base {
   left: 545px,
   top: 776px,
-  padding-left: 4px,
+  padding-left: spacing.padding.xsmall,
   overrides: [insert(statusIcon, after = .nil)]
 }
 
@@ -67,8 +67,8 @@ closeIcon = icon {
 iconAndLabel = base {
   left: 542px,
   top: 624px,
-  padding-left: 8px,
-  layout.item-gap: 4px,
+  padding-left: spacing.padding.small,
+  layout.item-gap: spacing.gap.xsmall,
   overrides: [insert(tagIcon, after = .nil)]
 }
 

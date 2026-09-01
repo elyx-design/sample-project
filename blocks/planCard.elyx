@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
@@ -15,7 +16,7 @@ export planCard = frame {
   layout: {direction: .column, justify-content: .space-between, item-gap: 48px},
   fill: {image: {ref: dots}},
   corner-radius: Radius.radius.large,
-  padding: 24px,
+  padding: Spacing.padding.xxlarge,
   children: [planContent, manageButton]
 }
 
@@ -28,7 +29,7 @@ planContent = frame {
 
 planSummary = frame {
   width: 100%,
-  layout: {align-items: .center, item-gap: 12px},
+  layout: {align-items: .center, item-gap: Spacing.gap.medium},
   overflow: .visible,
   children: [planIcon, planHeader]
 }
@@ -55,7 +56,7 @@ planGlyph = icon {
 
 planHeader = frame {
   width: .auto,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [planName, badge]
 }
@@ -81,7 +82,7 @@ badge = tag.iconAndLabel {
 
 planDetails = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 24px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   children: [pricingCopy, features]
 }
 
@@ -89,13 +90,13 @@ pricingCopy = frame {
   left: 24px,
   top: 112px,
   width: 100%,
-  layout: {direction: .column, item-gap: 8px},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   children: [priceRow, description]
 }
 
 priceRow = frame {
   width: 100%,
-  layout: {align-items: .end, item-gap: 4px},
+  layout: {align-items: .end, item-gap: Spacing.gap.xsmall},
   children: [price, billingPeriod]
 }
 
@@ -131,12 +132,12 @@ features = frame {
   left: 0px,
   top: 250px,
   width: 100%,
-  layout: {direction: .column, item-gap: 8px},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   children: [projectsFeature, supportFeature, exportFeature, storageFeature]
 }
 
 projectsFeature = frame {
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [projectsBullet, projectsLabel]
 }
 
@@ -153,7 +154,7 @@ projectsLabel = text {
 supportFeature = frame {
   left: 20px,
   top: 70px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [supportBullet, supportLabel]
 }
 
@@ -170,7 +171,7 @@ supportLabel = text {
 exportFeature = frame {
   left: 20px,
   top: 95px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [exportBullet, exportLabel]
 }
 
@@ -187,7 +188,7 @@ exportLabel = text {
 storageFeature = frame {
   left: 40px,
   top: 115px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [storageBullet, storageLabel]
 }
 

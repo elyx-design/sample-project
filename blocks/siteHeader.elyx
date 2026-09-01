@@ -12,16 +12,16 @@ export siteHeader = cardBackground.solidFullRadius {
   left: 512px,
   top: 456px,
   width: 1024px,
-  height: spacing.spacing.heightG,
+  height: spacing.size.large,
   min-width: .nil,
   min-height: .nil,
   padding-top: 0px,
-  padding-left: spacing.spacing.paddingL,
+  padding-left: spacing.padding.large,
   padding-bottom: 0px,
-  padding-right: spacing.spacing.paddingL,
+  padding-right: spacing.padding.large,
   layout.align-items: .center,
   layout.direction: .row,
-  layout.item-gap: 20px,
+  layout.item-gap: spacing.gap.xlarge,
   layout.justify-content: .space-between,
   overrides: [
     insert(small_4, after = .nil),
@@ -67,7 +67,7 @@ loggedInHeader = siteHeader {
 iconMenu = menu {
   left: 275px,
   top: 456px,
-  layout.item-gap: 2px,
+  layout.item-gap: spacing.gap.xxsmall,
   overrides: [insert(chevron, after = label)]
 }
 
@@ -75,7 +75,7 @@ iconMenu = menu {
 mutedIconMenu = menu {
   left: 275px,
   top: 521.6479px,
-  layout.item-gap: 2px,
+  layout.item-gap: spacing.gap.xxsmall,
   overrides: [insert(mutedChevron, after = label)],
 
   label {
@@ -85,7 +85,7 @@ mutedIconMenu = menu {
 
 headerCta = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: spacing.gap.large},
   children: [logInLink, getStartedButton]
 }
 
@@ -125,7 +125,7 @@ searchField = textField.iconPlaceholder {
 
 accountCluster = frame {
   height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: spacing.gap.large},
   children: [languageMenu, layer]
 }
 
@@ -176,9 +176,9 @@ DividerWhite = divider.horizontal {
 bareContent = frame {
   width: 100%,
   height: 100%,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
-  padding-left: 24px,
-  padding-right: 24px,
+  layout: {justify-content: .space-between, align-items: .center, item-gap: spacing.gap.xlarge},
+  padding-left: spacing.padding.xxlarge,
+  padding-right: spacing.padding.xxlarge,
   children: [small_5, bareNav, bareCta]
 }
 
@@ -186,7 +186,7 @@ small_5 = logo.mediumWordmark {left: 452.5px, top: 0px}
 
 bareNav = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 20px},
+  layout: {align-items: .center, item-gap: spacing.gap.xlarge},
   children: [Menu, MenuVariant, bareCompany, bareResources]
 }
 
@@ -228,7 +228,7 @@ bareResources = mutedIconMenu {
 
 bareCta = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: spacing.gap.large},
   children: [bareLogIn, Primary]
 }
 
@@ -275,9 +275,9 @@ accountContent = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
-  padding-left: 24px,
-  padding-right: 24px,
+  layout: {justify-content: .space-between, align-items: .center, item-gap: spacing.gap.xlarge},
+  padding-left: spacing.padding.xxlarge,
+  padding-right: spacing.padding.xxlarge,
   children: [small_6, accountNav, accountActions]
 }
 
@@ -285,7 +285,7 @@ small_6 = logo.mediumWordmark {left: 452.5px, top: 0px}
 
 accountNav = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 20px},
+  layout: {align-items: .center, item-gap: spacing.gap.xlarge},
   children: [accountProduct, accountPricing, accountCompany, accountResources]
 }
 
@@ -346,7 +346,7 @@ accountSearch = textField.iconPlaceholder {
 
 accountMenu = frame {
   height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
+  layout: {align-items: .center, item-gap: spacing.gap.large},
   children: [accountLanguage, accountAvatar]
 }
 
@@ -393,7 +393,7 @@ chevron = icon {
 
 navLinks = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 20px},
+  layout: {align-items: .center, item-gap: spacing.gap.xlarge},
   children: [navProduct, navPricing, navCompany, navResources]
 }
 

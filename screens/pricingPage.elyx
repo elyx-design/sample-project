@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "blocks/planCard.elyx" as planCard
 import "icons/24 pixels/dashboard.svg" as dashboard
@@ -31,7 +32,7 @@ pricingCards = frame {
   },
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.xlarge,
-  padding: 12px,
+  padding: Spacing.padding.medium,
   children: [freePlan, proPlan, businessPlan]
 }
 
@@ -178,7 +179,7 @@ pricingHeader = header.mediumCenter {
 businessStorageFeature = frame {
   left: 60px,
   top: 135px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [businessStorageBullet, businessStorageLabel]
 }
 
@@ -201,7 +202,7 @@ businessStorageLabel = text {
 versionHistoryFeature = frame {
   left: 80px,
   top: 155px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [versionHistoryBullet, versionHistoryLabel]
 }
 
@@ -224,7 +225,7 @@ versionHistoryLabel = text {
 adminControlsFeature = frame {
   left: 80px,
   top: 155px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [adminControlsBullet, adminControlsLabel]
 }
 
@@ -247,7 +248,7 @@ adminControlsLabel = text {
 proStorageFeature = frame {
   left: 60px,
   top: 135px,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [proStorageBullet, proStorageLabel]
 }
 

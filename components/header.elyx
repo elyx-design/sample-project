@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/typography.elyx" as Typography
 
@@ -6,7 +7,7 @@ export mediumLeft = frame {
   top: 20px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 2px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxsmall},
   children: [mediumTitle, mediumSubtitle]
 }
 
@@ -49,7 +50,7 @@ export smallLeft = frame {
   top: 29px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 4px},
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   children: [smallTitle, smallSubtitle]
 }
 
@@ -91,7 +92,7 @@ export largeLeft = frame {
   top: 21.3172px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 2px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxsmall},
   children: [largeTitle, largeSubtitle]
 }
 

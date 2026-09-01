@@ -8,17 +8,17 @@ export base = frame {
   left: 862px,
   top: 603px,
   width: 100%,
-  height: Spacing.spacing.heightS,
+  height: Spacing.size.small,
   layout: {justify-content: .space-between, align-items: .center},
   corner-radius: Radius.radius.full,
-  padding: [4px, 8px],
+  padding: [Spacing.padding.xsmall, Spacing.padding.small],
   children: content
 }
 
 content = frame {
   width: .auto,
   height: .auto,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [rowIcon, label]
 }
 

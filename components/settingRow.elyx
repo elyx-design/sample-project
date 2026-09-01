@@ -12,11 +12,14 @@ export settingRow = frame {
   layout: {justify-content: .space-between, align-items: .center},
   fill: Colors.colors.black95,
   corner-radius: Radius.radius.medium,
-  padding: Spacing.spacing.paddingM,
+  padding: Spacing.padding.medium,
   children: [copy, action]
 }
 
-copy = frame {layout: {direction: .column, item-gap: 4px}, children: [title, description]}
+copy = frame {
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
+  children: [title, description]
+}
 
 title = text {
   fill: Colors.colors.black20,

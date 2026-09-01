@@ -12,13 +12,13 @@ export base = frame {
   left: 869px,
   top: 770px,
   width: 100%,
-  height: Spacing.spacing.heightM,
-  layout: {align-items: .center, item-gap: 4px},
+  height: Spacing.size.medium,
+  layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
   fill: Colors.colors.white100,
   border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   corner-radius: Radius.radius.full,
-  padding-left: Spacing.spacing.paddingM,
-  padding-right: Spacing.spacing.paddingM,
+  padding-left: Spacing.padding.medium,
+  padding-right: Spacing.padding.medium,
   children: label
 }
 
@@ -68,8 +68,8 @@ error = base {
 withIcon = base {
   left: 989.73px,
   top: 770px,
-  padding-left: 8px,
-  padding-right: 8px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
   overrides: [insert(defaultIcon, after = .nil)]
 }
 
@@ -77,8 +77,8 @@ withIcon = base {
 iconPlaceholder = base {
   left: 988.65px,
   top: 850px,
-  padding-left: 8px,
-  padding-right: 8px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
   overrides: [insert(placeholderIcon, after = .nil)],
 
   label {
@@ -108,8 +108,8 @@ defaultIcon = icon {
 iconFocused = base {
   left: 987.9291px,
   top: 930px,
-  padding-left: 8px,
-  padding-right: 8px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
   border[0].color: Colors.colors.black20,
   border[0].width: 1.5px,
   overrides: [insert(focusedIcon, after = .nil)]
@@ -119,8 +119,8 @@ iconFocused = base {
 iconError = base {
   left: 988.2896px,
   top: 1010px,
-  padding-left: 8px,
-  padding-right: 8px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
   border[0].color: Colors.colors.red70,
   border[0].width: 1.5px,
   overrides: [insert(errorIcon, after = .nil)],
@@ -152,7 +152,7 @@ errorIcon = icon {
 withButton = base {
   left: 1139px,
   top: 770px,
-  padding-right: 4px,
+  padding-right: Spacing.padding.xsmall,
   layout.justify-content: .space-between,
   overrides: [insert(submitButton, after = label)]
 }
@@ -161,7 +161,7 @@ withButton = base {
 buttonPlaceholder = base {
   left: 1142.4px,
   top: 850px,
-  padding-right: 4px,
+  padding-right: Spacing.padding.xsmall,
   layout.justify-content: .space-between,
   overrides: [insert(GroupedStack, after = label)],
 
@@ -181,7 +181,7 @@ submitButton = button.smallPrimaryRounded {
 
 GroupedStack = frame {
   height: .auto,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [small, placeholderButton]
 }

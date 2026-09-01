@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "images/background/night.jpg" as night
 import "blocks/siteHeader.elyx" as siteHeader
 import "tokens/colors.elyx" as colors
@@ -22,8 +23,8 @@ export LandingPage = frame {
     item-gap: 116px
   },
   fill: {image: {ref: night}},
-  padding-top: 24px,
-  padding-bottom: 24px,
+  padding-top: Spacing.padding.xxlarge,
+  padding-bottom: Spacing.padding.xxlarge,
   children: [top, frame3]
 }
 
@@ -48,7 +49,7 @@ pageHeader = siteHeader.siteHeader {
 
 Copy = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 32px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.huge},
   overflow: .visible,
   children: [largeLeft, frame2]
 }
@@ -69,7 +70,7 @@ largeLeft = header.largeCenter {
 
 frame2 = frame {
   width: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: 20px},
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   children: [medium, text3]
 }
@@ -93,7 +94,7 @@ text3 = text {
 
 frame3 = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 32px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.huge},
   overflow: .visible,
   children: [bottom, base]
 }
@@ -103,7 +104,7 @@ bottom = frame {
   top: 840px,
   width: 60%,
   height: .auto,
-  layout: {align-items: .center, item-gap: 24px},
+  layout: {align-items: .center, item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
   children: [layer1, layer2, layer3]
 }
@@ -113,12 +114,12 @@ layer1 = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {item-gap: 12px},
+  layout: {item-gap: Spacing.gap.medium},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.medium,
   overflow: .visible,
-  padding: 16px,
+  padding: Spacing.padding.large,
   children: [shape1, smallLeft]
 }
 
@@ -145,12 +146,12 @@ layer2 = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {item-gap: 12px},
+  layout: {item-gap: Spacing.gap.medium},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.medium,
   overflow: .visible,
-  padding: 16px,
+  padding: Spacing.padding.large,
   children: [shape2, steadyHeader]
 }
 
@@ -176,12 +177,12 @@ layer3 = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {item-gap: 12px},
+  layout: {item-gap: Spacing.gap.medium},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.medium,
   overflow: .visible,
-  padding: 16px,
+  padding: Spacing.padding.large,
   children: [shape3, teamHeader]
 }
 

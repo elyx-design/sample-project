@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
@@ -13,25 +14,25 @@ export chatAIComposer = cardBackground.transparent {
   top: 471px,
   width: 462px,
   height: 120px,
-  padding-top: 16px,
-  padding-left: 16px,
-  padding-bottom: 16px,
-  padding-right: 16px,
-  layout.item-gap: 20px,
+  padding-top: Spacing.padding.large,
+  padding-left: Spacing.padding.large,
+  padding-bottom: Spacing.padding.large,
+  padding-right: Spacing.padding.large,
+  layout.item-gap: Spacing.gap.xlarge,
   layout.justify-content: .space-between,
   overrides: [insert(prompt, after = .nil), insert(actions, after = prompt)]
 }
 
 actions = frame {
   width: 100%,
-  layout: {justify-content: .space-between, item-gap: 8px},
+  layout: {justify-content: .space-between, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [attachmentActions, messageActions]
 }
 
 attachmentActions = frame {
   height: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
@@ -76,7 +77,7 @@ more = button.smallIconBackground {
 
 messageActions = frame {
   height: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
@@ -103,7 +104,7 @@ send = button.smallPrimaryRounded {
 
 prompt = frame {
   width: 100%,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [small, placeholder]
 }
 

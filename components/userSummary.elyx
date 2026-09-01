@@ -11,15 +11,15 @@ export card = frame {
   height: .auto,
   min-width: 100px,
   min-height: 100px,
-  layout: {align-items: .center, item-gap: Spacing.spacing.paddingM},
+  layout: {align-items: .center, item-gap: Spacing.padding.medium},
   fill: Colors.colors.surfaceSubtle,
   corner-radius: Radius.radius.medium,
-  padding: Spacing.spacing.paddingM
+  padding: Spacing.padding.medium
 }
 
 export small = frame {
-  height: Spacing.spacing.heightM,
-  layout: {align-items: .center, item-gap: 12px},
+  height: Spacing.size.medium,
+  layout: {align-items: .center, item-gap: Spacing.gap.medium},
   children: [smallAvatar, smallHeader]
 }
 
@@ -54,7 +54,7 @@ export medium = frame {
   left: -67px,
   top: 192px,
   height: 72px,
-  layout: {justify-content: .end, align-items: .center, item-gap: 20px},
+  layout: {justify-content: .end, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   children: [mediumAvatar, mediumHeader]
 }

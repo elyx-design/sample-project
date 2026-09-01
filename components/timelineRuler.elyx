@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
@@ -5,7 +6,7 @@ export timelineRuler = frame {
   left: 609px,
   top: 488px,
   width: 335px,
-  layout: {justify-content: .center, align-items: .center, item-gap: 8px},
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.small},
   children: [marker0, marker1, marker2, marker3]
 }
 

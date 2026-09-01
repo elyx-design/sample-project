@@ -14,16 +14,16 @@ export toolbarCreate = cardBackground.transparentFullRadius {
   left: 488px,
   top: 479px,
   width: 348px,
-  height: spacing.spacing.heightM,
+  height: spacing.size.medium,
   min-width: .nil,
   min-height: .nil,
   padding-top: 0px,
-  padding-left: 12px,
+  padding-left: spacing.padding.medium,
   padding-bottom: 0px,
-  padding-right: 4px,
+  padding-right: spacing.padding.xsmall,
   layout.align-items: .center,
   layout.direction: .row,
-  layout.item-gap: 8px,
+  layout.item-gap: spacing.gap.small,
   layout.justify-content: .space-between,
   overrides: [insert(tools, after = .nil), insert(close, after = tools)]
 }
@@ -32,7 +32,7 @@ close = button.smallClose {left: 686px, top: 602px}
 
 tools = frame {
   height: 100%,
-  layout: {align-items: .center, item-gap: 8px},
+  layout: {align-items: .center, item-gap: spacing.gap.small},
   slot: .true,
   restrict-children: .true,
   children: [frameTool, pointerMenu, shapeMenu, imageTool, textTool, commentTool, codeTool]

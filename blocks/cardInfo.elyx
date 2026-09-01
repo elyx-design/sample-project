@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
@@ -12,20 +13,20 @@ export reviewCard = cardBackground.base {
   width: 370px,
   height: 470px,
   fill[0].image.ref: nightMountain,
-  layout.item-gap: 20px,
+  layout.item-gap: Spacing.gap.xlarge,
   layout.justify-content: .space-between,
   overrides: [insert(reviewAuthor, after = .nil), insert(reviewFooter, after = reviewAuthor)]
 }
 
 reviewFooter = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 32px},
+  layout: {direction: .column, item-gap: Spacing.gap.huge},
   children: [reviewInfo, readReviewButton]
 }
 
 reviewInfo = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   children: [reviewHeader, tags]
 }
 
@@ -46,7 +47,7 @@ reviewHeader = header.mediumLeft {
 
 tags = frame {
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   slot: .true,
   restrict-children: .true,
   children: [ratingTag, thrillerTag, dramaTag]
@@ -97,7 +98,7 @@ readReviewButton = button.medium {
 
 reviewAuthor = frame {
   width: 100%,
-  layout: {justify-content: .space-between, item-gap: 20px},
+  layout: {justify-content: .space-between, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   children: [small, closeButton]
 }

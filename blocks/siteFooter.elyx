@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/logo.elyx" as logo
 import "tokens/colors.elyx" as colors
 import "components/divider.elyx" as divider
@@ -10,7 +11,7 @@ export siteFooter = frame {
   top: 450px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, item-gap: 32px},
+  layout: {direction: .column, item-gap: Spacing.gap.huge},
   overflow: .visible,
   children: [content, bottom]
 }
@@ -28,7 +29,7 @@ brandColumn = frame {
   top: 0px,
   width: 291px,
   height: 100%,
-  layout: {direction: .column, justify-content: .space-between, item-gap: 24px},
+  layout: {direction: .column, justify-content: .space-between, item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
   children: [small, Newsletter]
 }
@@ -37,14 +38,14 @@ small = logo.mediumWordmark {left: 0px, top: 0px}
 
 Newsletter = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [frame1, frame2]
 }
 
 frame1 = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 4px},
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
   children: [blurb, blurb_2]
 }
@@ -73,7 +74,7 @@ blurb_2 = text {
 frame2 = frame {
   width: 100%,
   height: .auto,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [base, medium]
 }
@@ -130,7 +131,7 @@ productHeading = text {
 
 productLinks = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 12px},
+  layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
   restrict-children: .true,
   children: [howItWorksLink, pricingFooterLink, faqLink, resourcesLink, featuresLink, roadmapLink]
@@ -218,7 +219,7 @@ companyHeading = text {
 
 companyLinks = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 12px},
+  layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
   restrict-children: .true,
   children: [aboutLink, contactLink, careersLink, pressLink, ourStoryLink]
@@ -296,7 +297,7 @@ contactHeading = text {
 
 contactLinks = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 12px},
+  layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
   restrict-children: .true,
   children: [privacyLink, termsLink, contactCareersLink, securityLink]
@@ -344,7 +345,7 @@ securityLink = text {
 
 bottom = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [bottomDivider, copy]
 }
@@ -359,7 +360,7 @@ bottomDivider = divider.horizontal {
 
 copy = frame {
   width: 100%,
-  layout: {justify-content: .space-between, item-gap: 16px},
+  layout: {justify-content: .space-between, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [copyright, statusNote]
 }

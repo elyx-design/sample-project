@@ -7,8 +7,8 @@ export horizontal = frame {
   top: 552px,
   width: 16px,
   layout: {justify-content: .center, align-items: .center},
-  padding-top: 4px,
-  padding-bottom: 4px,
+  padding-top: spacing.padding.xsmall,
+  padding-bottom: spacing.padding.xsmall,
   children: horizontalLine
 }
 
@@ -25,10 +25,10 @@ horizontalLine = shape {
 export vertical = frame {
   left: 919px,
   top: 552px,
-  height: spacing.spacing.heightM,
+  height: spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
-  padding-left: 4px,
-  padding-right: 4px,
+  padding-left: spacing.padding.xsmall,
+  padding-right: spacing.padding.xsmall,
   children: verticalLine
 }
 

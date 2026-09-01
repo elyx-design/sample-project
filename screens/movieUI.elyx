@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "blocks/productInfo.elyx" as productInfo
 import "tokens/colors.elyx" as colors
 import "components/tag.elyx" as tag
@@ -92,7 +93,7 @@ siteHeader_2 = siteHeader.accountHeader {
 GroupedStack = frame {
   width: 70%,
   height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
   padding-top: 0px,
   children: [GroupedStack_13, GroupedStack_2, horizontal, GroupedStack_8]
@@ -100,7 +101,12 @@ GroupedStack = frame {
 
 GroupedStack_13 = frame {
   width: 100%,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 16px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.large
+  },
   overflow: .visible,
   padding-top: 96px,
   padding-bottom: 96px,
@@ -125,7 +131,12 @@ text1 = text {
   font-style: "SemiBold"
 }
 
-tags = frame {height: 100%, layout: {item-gap: 8px}, overflow: .visible, children: [base, base_2]}
+tags = frame {
+  height: 100%,
+  layout: {item-gap: Spacing.gap.small},
+  overflow: .visible,
+  children: [base, base_2]
+}
 
 base = tag.base {
   left: 924px,
@@ -159,14 +170,14 @@ horizontal = divider.horizontal {
 
 GroupedStack_8 = frame {
   width: 100%,
-  layout: {item-gap: 24px},
+  layout: {item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
   children: [details, GroupedStack_9]
 }
 
 details = frame {
   width: 100%,
-  layout: {item-gap: 24px},
+  layout: {item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
   children: [productInfo_2, About]
 }
@@ -196,14 +207,14 @@ productInfo_2 = productInfo.productInfo {
 
 About = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [Synopsis, horizontal_2, GroupedStack_11, horizontal_3, Synopsis_4]
 }
 
 Synopsis = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [text2, text3]
 }
@@ -242,7 +253,7 @@ horizontal_2 = divider.horizontal {
 
 GroupedStack_11 = frame {
   width: 100%,
-  layout: {item-gap: 16px},
+  layout: {item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [Synopsis_2, Synopsis_3]
 }
@@ -251,7 +262,7 @@ Synopsis_2 = frame {
   left: 20px,
   top: 109px,
   width: 100%,
-  layout: {direction: .column, item-gap: 12px},
+  layout: {direction: .column, item-gap: Spacing.gap.medium},
   overflow: .visible,
   children: [text4, actors]
 }
@@ -268,14 +279,14 @@ text4 = text {
 
 actors = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 2px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxsmall},
   overflow: .visible,
   children: [GroupedStack_3, GroupedStack_4, GroupedStack_5, GroupedStack_6]
 }
 
 GroupedStack_3 = frame {
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_3, text5]
 }
@@ -308,7 +319,7 @@ GroupedStack_4 = frame {
   left: 20px,
   top: 83px,
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_4, text6]
 }
@@ -341,7 +352,7 @@ GroupedStack_5 = frame {
   left: 40px,
   top: 103px,
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_5, text7]
 }
@@ -374,7 +385,7 @@ GroupedStack_6 = frame {
   left: 60px,
   top: 123px,
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_6, text8]
 }
@@ -407,7 +418,7 @@ Synopsis_3 = frame {
   left: 40px,
   top: 129px,
   width: 100%,
-  layout: {direction: .column, item-gap: 12px},
+  layout: {direction: .column, item-gap: Spacing.gap.medium},
   overflow: .visible,
   children: [text9, GroupedStack_7]
 }
@@ -426,7 +437,7 @@ GroupedStack_7 = frame {
   left: 0px,
   top: 31px,
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: text10
 }
@@ -457,7 +468,7 @@ Synopsis_4 = frame {
   left: 20px,
   top: 126px,
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: 8px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: text12
 }
@@ -474,7 +485,7 @@ text12 = text {
 
 GroupedStack_9 = frame {
   height: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
   children: [text11, GroupedStack_12]
 }
@@ -491,7 +502,7 @@ text11 = text {
 
 GroupedStack_12 = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 8px},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [thumbnailImage_2, GroupedStack_10]
 }
@@ -509,7 +520,7 @@ thumbnailImage_2 = thumbnailImage.thumbnailVideo {
 
 GroupedStack_10 = frame {
   width: 100%,
-  layout: {item-gap: 8px},
+  layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [thumbnailImage_3, thumbnailImage_4]
 }

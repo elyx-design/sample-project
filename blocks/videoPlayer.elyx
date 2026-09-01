@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "blocks/playbackControl.elyx" as playbackControl
 import "tokens/colors.elyx" as colors
 import "images/background/liveEvent.jpg" as liveEvent
@@ -27,7 +28,7 @@ export videoPlayer = frame {
       }
     }
   ],
-  padding: 20px,
+  padding: Spacing.padding.xlarge,
   children: [headerRow, controls]
 }
 

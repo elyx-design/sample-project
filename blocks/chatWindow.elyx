@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/chatBubble.elyx" as chatBubble
 import "tokens/colors.elyx" as colors
 import "components/textField.elyx" as textField
@@ -14,14 +15,14 @@ export chatWindow = frame {
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 38px},
   fill: colors.colors.whiteAlpha50,
   filter: {type: .background-blur, radius: 40px},
-  padding: [24px, 12px, 12px],
+  padding: [Spacing.padding.xxlarge, Spacing.padding.medium, Spacing.padding.medium],
   children: [messageThread, messageField]
 }
 
 messageThread = frame {
   width: 100%,
   height: 100%,
-  layout: {direction: .column, align-items: .stretch, item-gap: 24px},
+  layout: {direction: .column, align-items: .stretch, item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
@@ -40,7 +41,7 @@ userMessage = chatBubble.user {
 
 replyMessages = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .stretch, item-gap: 8px},
+  layout: {direction: .column, align-items: .stretch, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [firstReply, secondReply]
 }
@@ -96,14 +97,14 @@ liveChat = chatWindow {
 
 GroupedStack = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 24px},
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
   children: [GroupedStack_4, chat]
 }
 
 GroupedStack_4 = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   shadow: {
     drop-shadow: {
       color: colors.colors.blackAlpha10,
@@ -113,7 +114,7 @@ GroupedStack_4 = frame {
     }
   },
   overflow: .visible,
-  padding: [16px, 12px, 12px],
+  padding: [Spacing.padding.large, Spacing.padding.medium, Spacing.padding.medium],
   children: [GroupedStack_5, medium_2]
 }
 
@@ -140,7 +141,7 @@ text1 = text {
 
 GroupedStack_2 = frame {
   height: 100%,
-  layout: {align-items: .center, item-gap: 4px},
+  layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
   children: [group24svg, text2]
 }
@@ -184,12 +185,12 @@ medium_2 = segmentedControl.small {
 
 chat = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: 16px},
+  layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
-  padding-left: 20px,
-  padding-right: 20px,
+  padding-left: Spacing.padding.xlarge,
+  padding-right: Spacing.padding.xlarge,
   children: [base, base_2, base_4, base_3]
 }
 
@@ -270,9 +271,9 @@ footer = frame {
   top: 868px,
   width: 100%,
   height: .auto,
-  layout: {justify-content: .center, align-items: .center, item-gap: 12px},
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.medium},
   overflow: .visible,
-  padding: 12px,
+  padding: Spacing.padding.medium,
   children: [messageField_2, medium]
 }
 

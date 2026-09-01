@@ -1,3 +1,4 @@
+import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
@@ -22,10 +23,10 @@ content = frame {
   top: 0px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, align-items: .center, item-gap: 16px},
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   fill: colors.colors.white100,
   corner-radius: [0px, 0px, Radius.radius.xlarge, Radius.radius.xlarge],
-  padding: 24px,
+  padding: Spacing.padding.xxlarge,
   children: [profileHeader, bio]
 }
 
@@ -59,10 +60,10 @@ bio = text {
 profileStats = stats.stats {
   left: 0px,
   top: 157px,
-  padding-top: 20px,
-  padding-left: 24px,
-  padding-bottom: 20px,
-  padding-right: 24px,
+  padding-top: Spacing.padding.xlarge,
+  padding-left: Spacing.padding.xxlarge,
+  padding-bottom: Spacing.padding.xlarge,
+  padding-right: Spacing.padding.xxlarge,
   overrides: [remove(stats.bottomDivider), remove(stats.topDivider)],
 
   stats.row.ratingDivider {

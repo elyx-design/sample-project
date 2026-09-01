@@ -8,12 +8,12 @@ export track = frame {
   left: 639.5px,
   top: 518px,
   width: 361px,
-  height: spacing.spacing.heightM,
+  height: spacing.size.medium,
   layout: {justify-content: .space-between, align-items: .center},
   fill: colors.colors.limeBright,
   border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
   corner-radius: radius.radius.xsmall,
-  padding: [4px, 0px],
+  padding: [spacing.padding.xsmall, 0px],
   children: [startHandle, content, endHandle]
 }
 
@@ -21,7 +21,7 @@ startHandle = frame {
   left: 1.3469px,
   top: 32px,
   width: 12px,
-  height: 28px,
+  height: spacing.size.small,
   layout: {justify-content: .center, align-items: .center},
   children: startGrip
 }
@@ -47,7 +47,7 @@ left = frame {height: .auto, layout: {align-items: .center}, overflow: .visible,
 
 label = frame {
   height: 100%,
-  layout: {align-items: .center, item-gap: 2px},
+  layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
   children: [typeIcon, trackName]
 }
 
@@ -73,7 +73,7 @@ dateLabel = frame {
   left: 128px,
   top: 20px,
   height: .auto,
-  layout: {align-items: .center, item-gap: 2px},
+  layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
   children: [dateIcon, dateText]
 }
 
