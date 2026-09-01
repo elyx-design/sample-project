@@ -4,7 +4,7 @@ import "tokens/colors.elyx" as colors
 export stats = frame {
   left: 396px,
   top: 630px,
-  width: 1011.3979px,
+  width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: 8px},
   children: [topDivider, row, bottomDivider]
 }
@@ -30,7 +30,7 @@ books = frame {
 booksValue = text {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.black20,
   contents: "41",
   font-size: 32,
@@ -40,7 +40,7 @@ booksValue = text {
 booksLabel = text {
   left: 0px,
   top: 39px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Books",
   font-size: 14,
@@ -61,7 +61,7 @@ pages = frame {
 pagesValue = text {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.black20,
   contents: "11k",
   font-size: 32,
@@ -71,7 +71,7 @@ pagesValue = text {
 pagesLabel = text {
   left: 0px,
   top: 39px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Pages",
   font-size: 14,
@@ -92,7 +92,7 @@ rating = frame {
 ratingValue = text {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.black20,
   contents: "4.2",
   font-size: 32,
@@ -102,7 +102,7 @@ ratingValue = text {
 ratingLabel = text {
   left: 0px,
   top: 39px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Rating",
   font-size: 14,
@@ -123,7 +123,7 @@ shelves = frame {
 shelvesValue = text {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.black20,
   contents: "9",
   font-size: 32,
@@ -133,7 +133,7 @@ shelvesValue = text {
 shelvesLabel = text {
   left: 0px,
   top: 39px,
-  width: 100%,
+  width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Shelves",
   font-size: 14,

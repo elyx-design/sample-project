@@ -1,15 +1,6 @@
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
-backdrop = shape {
-  left: 430px,
-  top: 260px,
-  width: 1355px,
-  height: 486px,
-  fill: colors.colors.black30,
-  type: .rect
-}
-
 export timelineRuler = frame {
   left: 609px,
   top: 488px,
