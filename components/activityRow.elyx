@@ -6,10 +6,11 @@ import "components/divider.elyx" as dividerComponent
 export activityRow = frame {
   left: -117px,
   top: -17px,
-  width: 640px,
+  width: 100%,
   height: .auto,
   layout: {direction: .column, align-items: .center, item-gap: 16px},
   overflow: .visible,
+  padding-top: 16px,
   children: [content, divider]
 }
 
@@ -35,7 +36,7 @@ date = frame {
 dateLabel = text {
   left: 0px,
   top: 0px,
-  width: 96px,
+  width: .auto,
   fill: Colors.colors.blackAlpha25,
   contents: "2 Days",
   font-size: Typography.typography.labelML,
@@ -44,7 +45,7 @@ dateLabel = text {
 }
 
 description = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 4px},
   children: [verb, detail]
 }
