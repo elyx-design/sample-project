@@ -1,7 +1,7 @@
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
-import "blocks/cardAbout.elyx" as profileCard
 import "components/button.elyx" as button
+import "blocks/cardInfo.elyx" as cardInfo
 
 welcome = frame {
   left: 0px,
@@ -202,10 +202,6 @@ tokensFolderDescription = text {
   font-style: "Regular"
 }
 
-componentExample = button.mediumPrimary {
-  doc: "A simple button as a component.",
-  left: 16px,
-  top: 757px
-}
+componentExample = button.medium {left: 16px, top: 757px}
 
-blockExample = profileCard.profileCard {left: 311px, top: 757px}
+blockExample = cardInfo.reviewCard {left: 306px, top: 757px}
