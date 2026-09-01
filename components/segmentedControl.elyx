@@ -76,7 +76,7 @@ mediumInactive = mediumSelected {
 small = medium {
   left: 913px,
   top: 656px,
-  width: 141px,
+  width: .auto,
   height: .auto,
   fill[0].color: Colors.colors.black95,
   overrides: [insert(smallLeadingSegment, after = .nil), remove(leadingSegment)],
