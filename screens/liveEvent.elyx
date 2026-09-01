@@ -16,7 +16,7 @@ export liveEvent = frame {
   width: 1524px,
   height: 798px,
   layout: {direction: .column, align-items: .center},
-  fill: colors.colors.tealDark,
+  fill: colors.colors.white100,
   children: [siteHeader_2, Content]
 }
 
@@ -54,16 +54,7 @@ Content = frame {
   children: [sidebar, Video, chat]
 }
 
-sidebar = sideBar.sidebarLiveEvent {
-  left: 751px,
-  top: 0px,
-  height: 100%,
-  corner-radius: 0px,
-  border[0].visible: .false,
-  fill[0].color: colors.colors.white100,
-  filter[0].visible: .false,
-  shadow[0].drop-shadow.visible: .false
-}
+sidebar = sideBar.sidebarLiveEvent {left: 751px, top: 0px, height: 100%, corner-radius: 0px}
 
 Video = frame {
   left: 0px,
@@ -164,30 +155,4 @@ small_4 = button.smallPrimary {
   }
 }
 
-chat = chatWindow.liveChat {
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  height: 100%,
-  corner-radius: 0px,
-  border[0].color: colors.colors.blackAlpha25,
-  border[0].position: .outside,
-  border[0].visible: .false,
-  border[0].width: 0.5px,
-
-  chatWindow.GroupedStack.chat.base_3.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.green
-  }
-
-  chatWindow.GroupedStack.chat.base_4.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.cyan
-  }
-
-  chatWindow.GroupedStack.chat.base_2.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.purple
-  }
-
-  chatWindow.GroupedStack.chat.base.chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.pink
-  }
-}
+chat = chatWindow.liveChat {left: 0px, top: 0px, width: 100%, height: 100%}

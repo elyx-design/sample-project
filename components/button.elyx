@@ -243,7 +243,7 @@ smallPrimaryPressed = small {
 
 @variant
 mediumIcon = medium {
-  left: 1348px,
+  left: 1368px,
   top: 689px,
   width: Spacing.size.medium,
   overrides: [insert(mediumIconGlyph, after = .nil), remove(mediumLabel)]
@@ -264,7 +264,7 @@ mediumClose = medium {
 
 @variant
 smallIconBackground = small {
-  left: 1257px,
+  left: 1277px,
   top: 917px,
   width: Spacing.size.small,
   overrides: [insert(smallBackgroundIcon, after = .nil), remove(smallLabel)]
@@ -314,7 +314,7 @@ mediumIconGlyph = icon {
 
 @variant
 smallPrimaryRounded = small {
-  left: 1304px,
+  left: 1344px,
   top: 917px,
   width: Spacing.size.small,
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
@@ -333,7 +333,7 @@ smallPrimaryRoundedIcon = icon {
 
 @variant
 smallIcon = small {
-  left: 1353px,
+  left: 1417px,
   top: 917px,
   width: Spacing.size.small,
   border[0]: .nil,
@@ -353,7 +353,7 @@ smallIconGlyph = icon {
 
 @variant
 mediumPrimaryRounded = medium {
-  left: 1405px,
+  left: 1445px,
   top: 689px,
   width: Spacing.size.medium,
   border[0].color: Colors.colors.black20,
@@ -368,8 +368,8 @@ mediumPrimaryRounded = medium {
 
 @variant
 mediumPlainIcon = medium {
-  left: 1462px,
-  top: 690.056px,
+  left: 1522px,
+  top: 689px,
   width: Spacing.size.medium,
   padding-left: 0px,
   padding-right: 0px,

@@ -128,7 +128,7 @@ rightCountText = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  height: 17px,
+  height: .auto,
   fill: colors.colors.black20,
   contents: "+28"
 }
@@ -224,7 +224,7 @@ bottomCountText = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  height: 17px,
+  height: .auto,
   fill: colors.colors.black20,
   contents: "+28"
 }
@@ -398,7 +398,7 @@ titleText = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  height: 17px,
+  height: .auto,
   fill: colors.colors.black20,
   contents: Strings.componentDefaults.avatarGroupTitle,
   font-style: "SemiBold"

@@ -2,6 +2,7 @@ import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "images/background/night.jpg" as night
 import "blocks/siteHeader.elyx" as siteHeader
+import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
 import "components/header.elyx" as header
@@ -10,7 +11,6 @@ import "icons/24 pixels/activity.svg" as activity
 import "components/tag.elyx" as tag
 import "icons/20 pixels/arrowDown-20.svg" as arrowDown20
 import "icons/24 pixels/mug-24.svg" as mug24
-import "tokens/radius.elyx" as Radius
 
 export LandingPage = frame {
   left: -5px,

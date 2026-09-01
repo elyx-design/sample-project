@@ -1,14 +1,17 @@
 import "images/background/plain.jpg" as plain
 import "blocks/siteFooter.elyx" as siteFooter
+import "tokens/spacing.elyx" as spacing
 
 export Footer = frame {
   left: 183px,
   top: 312px,
   width: 1478px,
   height: 738px,
-  layout: {justify-content: .center},
+  layout: {justify-content: .center, align-items: .center},
   fill: {image: {ref: plain}},
-  padding-top: 190px,
+  padding-top: 0px,
+  padding-left: spacing.padding.xxlarge,
+  padding-right: spacing.padding.xxlarge,
   children: siteFooter_2
 }
 

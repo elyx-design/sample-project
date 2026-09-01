@@ -252,8 +252,7 @@ sidebarLiveEvent = sidebar {
     overrides: [
       insert(campaignsItem_11, after = campaignsItem_6),
       insert(campaignsItem_12, after = campaignsItem_11)
-    ],
-    layout.item-gap: Spacing.gap.small
+    ]
   }
 
   @use-variant(sideBarMenuEvent)
@@ -312,16 +311,16 @@ sidebarLiveEvent = sidebar {
     contents: "RamblingRoosterTV"
   }
 
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2 {
+    layout.item-gap: Spacing.gap.xsmall
+  }
+
   GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.text1 {
     contents: Strings.labels.liveChannels
   }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.settings20svg {
     display: .hidden
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
   }
 }
 
@@ -464,7 +463,6 @@ campaignsItem_9 = sideBarMenuEvent {
 campaignsItem_10 = sideBarMenuEvent {
   left: 20px,
   top: 144px,
-  width: 100%,
 
   @use-variant(eventTagOffline)
   eventTag_2 {}
@@ -478,6 +476,7 @@ export eventTag = frame {
   left: -492px,
   top: 422px,
   layout: {justify-content: .center, align-items: .center, item-gap: 7px},
+  overflow: .visible,
   children: [status, text3]
 }
 
@@ -486,7 +485,7 @@ status = avatar.status {left: 0px, top: 5px, fill[0].color: colors.colors.red70}
 text3 = text {
   left: 15px,
   top: 0px,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: "2.2k",
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
@@ -566,7 +565,7 @@ frame2 = frame {
   left: 0px,
   top: 72px,
   width: 100%,
-  layout: {direction: .column},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
@@ -655,7 +654,7 @@ frame4 = frame {
   left: 0px,
   top: 236px,
   width: 100%,
-  layout: {direction: .column},
+  layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
   restrict-children: .true,

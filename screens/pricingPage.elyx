@@ -2,11 +2,11 @@ import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "blocks/planCard.elyx" as planCard
+import "tokens/radius.elyx" as Radius
 import "icons/24 pixels/dashboard.svg" as dashboard
 import "icons/24 pixels/processor.svg" as processor
 import "components/header.elyx" as header
 import "images/background/sea.jpg" as sea
-import "tokens/radius.elyx" as Radius
 
 export pricingPage = frame {
   left: 130.5px,

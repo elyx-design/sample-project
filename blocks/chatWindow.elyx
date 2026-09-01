@@ -134,7 +134,7 @@ GroupedStack_5 = frame {
 text1 = text {
   left: 793px,
   top: 637px,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.labels.broadcastChat,
   font-size: Spacing.fontSize.xlarge,
   font-style: "SemiBold"

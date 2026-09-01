@@ -1,9 +1,9 @@
 import "tokens/strings.elyx" as Strings
 import "components/avatar.elyx" as avatar
+import "tokens/spacing.elyx" as spacing
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 import "images/profileImgs/005.jpg" as module
-import "tokens/spacing.elyx" as spacing
 import "images/profileImgs/001.jpg" as module4
 
 export base = frame {
@@ -69,7 +69,6 @@ liveBubble = base {
   layout.align-items: .start,
   layout.direction: .column,
   layout.item-gap: spacing.gap.xsmall,
-  layout.justify-content: .start,
   overrides: [
     insert(GroupedStack, after = .nil),
     insert(messageText_2, after = GroupedStack),
@@ -82,7 +81,7 @@ messageText_2 = text {
   left: 0px,
   top: 30.5px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.componentDefaults.chatText,
   font-size: spacing.fontSize.small
 }
@@ -97,7 +96,7 @@ GroupedStack = frame {
 messageText_3 = text {
   left: 0px,
   top: 5.5px,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.componentDefaults.name,
   font-style: "Bold"
 }

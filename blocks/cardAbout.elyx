@@ -1,10 +1,10 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "components/cardBackground.elyx" as cardBackground
+import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
 import "components/stats.elyx" as stats
-import "tokens/radius.elyx" as Radius
 
 export profileCard = cardBackground.transparent {
   left: 0px,
