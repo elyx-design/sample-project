@@ -194,9 +194,7 @@ businessStorageBullet = icon {
 businessStorageLabel = text {
   fill: colors.colors.black40,
   contents: "1 TB storage",
-  font-size: planCard.Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 versionHistoryFeature = frame {
@@ -217,9 +215,7 @@ versionHistoryBullet = icon {
 versionHistoryLabel = text {
   fill: colors.colors.black40,
   contents: "Version history",
-  font-size: planCard.Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 adminControlsFeature = frame {
@@ -240,9 +236,7 @@ adminControlsBullet = icon {
 adminControlsLabel = text {
   fill: colors.colors.black40,
   contents: "Admin controls and permissions",
-  font-size: planCard.Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 proStorageFeature = frame {
@@ -257,7 +251,5 @@ proStorageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, content
 proStorageLabel = text {
   fill: colors.colors.black40,
   contents: "100 GB storage",
-  font-size: planCard.Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }

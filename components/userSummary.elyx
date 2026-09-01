@@ -67,12 +67,12 @@ mediumHeader = header.mediumLeft {
 
   header.mediumSubtitle {
     contents: "nora@mail.com",
-    font-size: 18
+    font-size: Spacing.fontSize.xlarge
   }
 
   header.mediumTitle {
     contents: "Nora Harper",
-    font-size: 24,
+    font-size: Spacing.fontSize.xxxlarge,
     font-style: "Bold"
   }
 }

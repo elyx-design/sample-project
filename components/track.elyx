@@ -65,7 +65,7 @@ trackName = text {
   top: 553px,
   fill: colors.colors.black20,
   contents: "Track name",
-  font-size: 12,
+  font-size: spacing.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -91,7 +91,7 @@ dateText = text {
   top: 553px,
   fill: colors.colors.blackAlpha25,
   contents: "8 Jul",
-  font-size: 12,
+  font-size: spacing.fontSize.small,
   font-style: "SemiBold"
 }
 

@@ -116,7 +116,6 @@ title = text {
   top: 176.5px,
   fill: colors.colors.black20,
   contents: "Reading Next",
-  font-size: 20,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.xxlarge,
   font-style: "SemiBold"
 }

@@ -51,6 +51,6 @@ text1 = text {
   top: 1073px,
   fill: colors.colors.blackAlpha50,
   contents: "Overleaf is AI and can make mistakes. Please double-check responses.",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }

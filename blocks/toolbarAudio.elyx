@@ -52,7 +52,13 @@ audio = frame {
   children: [timecode, track]
 }
 
-timecode = text {left: 0px, top: 0px, fill: .black, contents: "0:00", font-size: 12}
+timecode = text {
+  left: 0px,
+  top: 0px,
+  fill: .black,
+  contents: "0:00",
+  font-size: spacing.fontSize.small
+}
 
 track = frame {
   height: .auto,

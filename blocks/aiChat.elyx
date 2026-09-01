@@ -35,7 +35,7 @@ assistantResponse = text {
   width: 100%,
   fill: .black,
   contents: "Perfect!\n\nI've put together a complete grocery list for the week based on what you usually eat, with a good balance of staples, fresh produce, and protein so you'll have everything you need. Here's your list:\n• Bread\n• Eggs\n• Rice\n• Beans\n• Chicken breast\n• Lettuce",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 layer1 = frame {

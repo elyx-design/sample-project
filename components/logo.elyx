@@ -125,7 +125,7 @@ text2 = text {
   top: 655px,
   fill: Colors.colors.black20,
   contents: "Overleaf",
-  font-size: 18,
+  font-size: Spacing.fontSize.xlarge,
   font-style: "SemiBold"
 }
 

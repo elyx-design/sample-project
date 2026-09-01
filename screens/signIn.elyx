@@ -1,7 +1,6 @@
 import "tokens/spacing.elyx" as Spacing
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "components/avatarGroup.elyx" as profileGroup
 import "images/background/desert.png" as desert
 
@@ -55,23 +54,9 @@ footerLinks = frame {
 privacy = text {
   fill: Colors.colors.white100,
   contents: "Privacy",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.small
 }
 
-terms = text {
-  fill: Colors.colors.white100,
-  contents: "Terms",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
-  font-style: "Regular"
-}
+terms = text {fill: Colors.colors.white100, contents: "Terms", font-size: Spacing.fontSize.small}
 
-help = text {
-  fill: Colors.colors.white100,
-  contents: "Help",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
-  font-style: "Regular"
-}
+help = text {fill: Colors.colors.white100, contents: "Help", font-size: Spacing.fontSize.small}

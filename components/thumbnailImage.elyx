@@ -48,7 +48,7 @@ imageName = text {
   width: 100%,
   fill: colors.colors.whiteAlpha70,
   contents: "Image name",
-  font-size: 12
+  font-size: Spacing.fontSize.small
 }
 
 @variant

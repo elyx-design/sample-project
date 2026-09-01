@@ -1,5 +1,4 @@
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "components/button.elyx" as Button
 import "components/checkbox.elyx" as Checkbox
@@ -82,9 +81,7 @@ rememberToggle = Checkbox.on {left: 127px, top: 285px}
 rememberLabel = text {
   fill: Colors.colors.black20,
   contents: "Remember me",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 signInButton = Button.mediumPrimary {

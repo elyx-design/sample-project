@@ -117,8 +117,8 @@ bio = text {
   width: 100%,
   fill: colors.colors.blackAlpha70,
   contents: "I love good coffee, long conversations, and finding beauty in the little things.",
-  font-size: 12,
-  line-height: 1.5,
+  font-size: Spacing.fontSize.small,
+  line-height: Spacing.lineHeight.relaxed,
   align: .center
 }
 
@@ -140,7 +140,7 @@ followingCount = text {
   top: 0px,
   fill: .black,
   contents: "169",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold",
   align: .center
 }
@@ -150,7 +150,7 @@ followingLabel = text {
   top: 18px,
   fill: .black,
   contents: "Following",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   align: .center
 }
 
@@ -166,7 +166,7 @@ followerCount = text {
   top: 0px,
   fill: .black,
   contents: "18k",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold",
   align: .center
 }
@@ -176,7 +176,7 @@ followersLabel = text {
   top: 18px,
   fill: .black,
   contents: "Followers",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   align: .center
 }
 
@@ -192,7 +192,7 @@ postCount = text {
   top: 0px,
   fill: .black,
   contents: "1.2k",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold",
   align: .center
 }
@@ -202,6 +202,6 @@ postsLabel = text {
   top: 18px,
   fill: .black,
   contents: "Posts",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   align: .center
 }

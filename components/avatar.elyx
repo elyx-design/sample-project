@@ -1,6 +1,5 @@
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "images/profileImgs/005.jpg" as module
 
@@ -33,8 +32,7 @@ smallInitials = text {
   height: 15px,
   fill: Colors.colors.black20,
   contents: "JC",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -86,7 +84,6 @@ mediumInitials = text {
   fill: Colors.colors.black20,
   contents: "JC",
   font-size: 22,
-  font-family: "Inter",
   font-style: "SemiBold"
 }
 
@@ -150,7 +147,6 @@ smallInitials_2 = text {
   fill: Colors.colors.black20,
   contents: "JC",
   font-size: 11,
-  font-family: "Inter",
   font-style: "SemiBold",
   align: .center
 }

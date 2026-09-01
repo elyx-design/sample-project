@@ -140,8 +140,7 @@ text2 = text {
   top: 7px,
   fill: colors.colors.black20,
   contents: "Menu",
-  font-size: 12,
-  font-style: "Regular"
+  font-size: Spacing.fontSize.small
 }
 
 @variant
@@ -164,7 +163,7 @@ text1 = text {
   top: 2px,
   fill: colors.colors.blackAlpha50,
   contents: "Chats and tasks",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -198,7 +197,7 @@ workspaceSelector = selector.Selector {
   }
 
   selector.Left.smallLeft.header.smallTitle {
-    font-size: 12
+    font-size: Spacing.fontSize.small
   }
 }
 
@@ -488,7 +487,7 @@ text3 = text {
   top: 0px,
   fill: .black,
   contents: "2.2k",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -511,8 +510,7 @@ text5 = text {
   top: 6.5px,
   fill: colors.colors.black20,
   contents: "Menu",
-  font-size: 12,
-  font-style: "Regular"
+  font-size: Spacing.fontSize.small
 }
 
 GroupedStack_3 = frame {

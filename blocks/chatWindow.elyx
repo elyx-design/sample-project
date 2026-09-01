@@ -135,7 +135,7 @@ text1 = text {
   top: 637px,
   fill: .black,
   contents: "Broadcast chat",
-  font-size: 18,
+  font-size: Spacing.fontSize.xlarge,
   font-style: "SemiBold"
 }
 
@@ -160,7 +160,7 @@ text2 = text {
   top: 657px,
   fill: colors.colors.blackAlpha25,
   contents: "2,490 online",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
   align: .right
 }

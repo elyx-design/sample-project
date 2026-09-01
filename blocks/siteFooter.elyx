@@ -56,9 +56,9 @@ blurb = text {
   width: 100%,
   fill: .black,
   contents: "Newsletter",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Bold",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 blurb_2 = text {
@@ -67,8 +67,8 @@ blurb_2 = text {
   width: 100%,
   fill: .black,
   contents: "Thoughtfully made, page after page. We believe good ideas deserve a place to grow, whether on the shelf or on the screen",
-  font-size: 12,
-  line-height: 1.5
+  font-size: Spacing.fontSize.small,
+  line-height: Spacing.lineHeight.relaxed
 }
 
 frame2 = frame {
@@ -123,10 +123,10 @@ productHeading = text {
   width: 100%,
   fill: colors.colors.blackAlpha25,
   contents: "PRODUCT",
-  font-size: 10,
+  font-size: Spacing.fontSize.xsmall,
   font-style: "ExtraBold",
-  line-height: 1.5,
-  letter-spacing: 10%
+  line-height: Spacing.lineHeight.relaxed,
+  letter-spacing: Spacing.letterSpacing.wide
 }
 
 productLinks = frame {
@@ -143,7 +143,7 @@ howItWorksLink = text {
   width: 100%,
   fill: .black,
   contents: "How it works",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -153,7 +153,7 @@ pricingFooterLink = text {
   width: 100%,
   fill: .black,
   contents: "Pricing",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -163,7 +163,7 @@ faqLink = text {
   width: 100%,
   fill: .black,
   contents: "FAQ",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -173,7 +173,7 @@ resourcesLink = text {
   width: 100%,
   fill: .black,
   contents: "Resources",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -183,7 +183,7 @@ featuresLink = text {
   width: 100%,
   fill: .black,
   contents: "Features",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -193,7 +193,7 @@ roadmapLink = text {
   width: 100%,
   fill: .black,
   contents: "Roadmap",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -211,10 +211,10 @@ companyHeading = text {
   width: 100%,
   fill: colors.colors.blackAlpha25,
   contents: "COMPANY",
-  font-size: 10,
+  font-size: Spacing.fontSize.xsmall,
   font-style: "ExtraBold",
-  line-height: 1.5,
-  letter-spacing: 10%
+  line-height: Spacing.lineHeight.relaxed,
+  letter-spacing: Spacing.letterSpacing.wide
 }
 
 companyLinks = frame {
@@ -231,7 +231,7 @@ aboutLink = text {
   width: 100%,
   fill: .black,
   contents: "About",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -241,7 +241,7 @@ contactLink = text {
   width: 100%,
   fill: .black,
   contents: "Contact",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -251,7 +251,7 @@ careersLink = text {
   width: 100%,
   fill: .black,
   contents: "Careers",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -261,7 +261,7 @@ pressLink = text {
   width: 100%,
   fill: .black,
   contents: "Press",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -271,7 +271,7 @@ ourStoryLink = text {
   width: 100%,
   fill: .black,
   contents: "Our Story",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -289,10 +289,10 @@ contactHeading = text {
   width: 100%,
   fill: colors.colors.blackAlpha25,
   contents: "CONTACT",
-  font-size: 10,
+  font-size: Spacing.fontSize.xsmall,
   font-style: "ExtraBold",
-  line-height: 1.5,
-  letter-spacing: 10%
+  line-height: Spacing.lineHeight.relaxed,
+  letter-spacing: Spacing.letterSpacing.wide
 }
 
 contactLinks = frame {
@@ -309,7 +309,7 @@ privacyLink = text {
   width: 100%,
   fill: .black,
   contents: "Privacy Policy",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -319,7 +319,7 @@ termsLink = text {
   width: 100%,
   fill: .black,
   contents: "Terms of Service",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -329,7 +329,7 @@ contactCareersLink = text {
   width: 100%,
   fill: .black,
   contents: "Careers",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -339,7 +339,7 @@ securityLink = text {
   width: 100%,
   fill: .black,
   contents: "Security",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 
@@ -372,9 +372,9 @@ copyright = text {
   height: .auto,
   fill: colors.colors.blackAlpha70,
   contents: "© 2026 Overleaf. All rights reserved.",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 statusNote = text {
@@ -384,7 +384,7 @@ statusNote = text {
   height: .auto,
   fill: colors.colors.blackAlpha70,
   contents: "All services are online",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "Medium",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }

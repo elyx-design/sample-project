@@ -1,5 +1,4 @@
 import "tokens/spacing.elyx" as Spacing
-import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 import "blocks/cardInfo.elyx" as cardInfo
@@ -43,9 +42,7 @@ welcomeHeading = text {
   top: 0px,
   fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Welcome to the Elyx scaffold project",
-  font-size: 32,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.huge
 }
 
 welcomeDescription = text {
@@ -53,9 +50,7 @@ welcomeDescription = text {
   top: 20px,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "This document contains best practices on how to set up .elyx files within your project",
-  font-size: Typography.typography.labelL,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.large
 }
 
 projectStructureOverview = text {
@@ -64,9 +59,7 @@ projectStructureOverview = text {
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "As you can see in the project list on the left, files are organized into groups, with the most important ones being components, blocks, and screens. The three main building blocks for organizing your components.",
-  font-size: Typography.typography.labelL,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.large
 }
 
 scaffoldSections = frame {
@@ -93,10 +86,9 @@ componentsLabel = text {
   top: 45px,
   fill: rgb(62%, 38.23%, 0%),
   contents: "COMPONENTS",
-  font-size: 12,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
-  letter-spacing: 5%
+  letter-spacing: Spacing.letterSpacing.medium
 }
 
 componentsDescription = text {
@@ -105,9 +97,7 @@ componentsDescription = text {
   width: 100%,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "Components are the smallest reusable UI pieces in the Elyx design system. Think of them like atoms. These would be UI elements such as button, text fields, badges etc.",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 blocksCard = frame {
@@ -128,10 +118,9 @@ blocksLabel = text {
   top: -17px,
   fill: rgb(62%, 38.23%, 0%),
   contents: "BLOCKS",
-  font-size: 12,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
-  letter-spacing: 5%
+  letter-spacing: Spacing.letterSpacing.medium
 }
 
 blocksDescription = text {
@@ -140,9 +129,7 @@ blocksDescription = text {
   width: 100%,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "If components are atoms, then blocks are like molecules. Blocks are used interface sections such as panels, menus, toasts, alerts, etc that would contain components.",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 screensCard = frame {
@@ -163,10 +150,9 @@ screensLabel = text {
   top: -25.5px,
   fill: rgb(62%, 38.23%, 0%),
   contents: "SCREENS",
-  font-size: 12,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
-  letter-spacing: 5%
+  letter-spacing: Spacing.letterSpacing.medium
 }
 
 screensDescription = text {
@@ -176,9 +162,7 @@ screensDescription = text {
   height: .auto,
   fill: rgb(27.45%, 20.78%, 2.7451%),
   contents: "Screens would be things like app windows, panels, and standalone states that represent what a user would see at one moment. Examples would be things like Log In, Dashboard, Settings, Account, etc.",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 assetFoldersDescription = text {
@@ -187,9 +171,7 @@ assetFoldersDescription = text {
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Also in the project are folders for other asset types, such as images and icons. If you were to add fonts, then create a new /fonts folder.",
-  font-size: Typography.typography.labelL,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.large
 }
 
 tokensFolderDescription = text {
@@ -198,9 +180,7 @@ tokensFolderDescription = text {
   width: 100%,
   fill: rgb(27.3%, 20.74%, 2.7%),
   contents: "Finally, is the existence of a tokens/ folder. Each file there groups a related family of tokens - colors, typography, spacing, radius - referenced throughout the entire project.",
-  font-size: Typography.typography.labelL,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.large
 }
 
 componentExample = button.medium {left: 16px, top: 757px}

@@ -127,7 +127,7 @@ text1 = text {
   top: 852px,
   fill: colors.colors.white100,
   contents: "Silent Hues ",
-  font-size: 24,
+  font-size: Spacing.fontSize.xxxlarge,
   font-style: "SemiBold"
 }
 
@@ -225,7 +225,7 @@ text2 = text {
   width: 100%,
   fill: colors.colors.white100,
   contents: "Synopsis",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
 
@@ -236,7 +236,7 @@ text3 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "A rising performance artist begins to lose the line between the faces she paints and the self underneath. As each new piece grows bolder, so does the fracture between who she shows the world and who she has left in private. Chroma is an intimate portrait of identity, spectacle, and the cost of being seen.",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 horizontal_2 = divider.horizontal {
@@ -273,7 +273,7 @@ text4 = text {
   width: 100%,
   fill: colors.colors.white100,
   contents: "Starring",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
 
@@ -312,7 +312,7 @@ text5 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Nia Okafor",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 GroupedStack_4 = frame {
@@ -345,7 +345,7 @@ text6 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Daniel Reyes",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 GroupedStack_5 = frame {
@@ -378,7 +378,7 @@ text7 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Simone Clarke",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 GroupedStack_6 = frame {
@@ -411,7 +411,7 @@ text8 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Grace Lin",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 Synopsis_3 = frame {
@@ -429,7 +429,7 @@ text9 = text {
   width: 100%,
   fill: colors.colors.white100,
   contents: "Cast & Crew",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
 
@@ -449,7 +449,7 @@ text10 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Director: Amara Vale\nWritten by: Amara Vale, Julian Foss\nProduced by: Rina Kapoor, Marcus Bell\nCinematography: Yusuf Adeyemi\nOriginal Score: Lena Vasquez",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 horizontal_3 = divider.horizontal {
@@ -480,7 +480,7 @@ text12 = text {
   fill: colors.colors.whiteAlpha70,
   contents: "Critics: 89% Fresh • Audience: 76% • IMDb: 7.8 / 10 • Metascore: 82",
   font-style: "Light",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 GroupedStack_9 = frame {
@@ -496,7 +496,7 @@ text11 = text {
   width: 100%,
   fill: colors.colors.white100,
   contents: "Gallery",
-  font-size: 16,
+  font-size: Spacing.fontSize.large,
   font-style: "Bold"
 }
 

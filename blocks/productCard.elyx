@@ -25,7 +25,7 @@ pageProgress = text {
   top: 62px,
   fill: colors.colors.blackAlpha25,
   contents: "Page 214 of 344",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -50,7 +50,7 @@ author = text {
   top: 393px,
   fill: colors.colors.blackAlpha50,
   contents: "by Eric Mateo",
-  font-size: 14,
+  font-size: Spacing.fontSize.medium,
   font-style: "SemiBold"
 }
 
@@ -76,7 +76,7 @@ progressLabel = text {
   height: .auto,
   fill: colors.colors.blackAlpha50,
   contents: "Progress",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -87,7 +87,7 @@ progressValue = text {
   height: .auto,
   fill: colors.colors.blackAlpha50,
   contents: "42%",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
   align: .right
 }
@@ -113,7 +113,7 @@ notesLabel = text {
   top: 688px,
   fill: .black,
   contents: "Notes",
-  font-size: 12,
+  font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -123,9 +123,8 @@ notesBody = text {
   width: 100%,
   fill: .black,
   contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter.",
-  font-size: 12,
-  font-style: "Regular",
-  line-height: 1.5
+  font-size: Spacing.fontSize.small,
+  line-height: Spacing.lineHeight.relaxed
 }
 
 productPreview = product.product {left: -63px, top: -86px}

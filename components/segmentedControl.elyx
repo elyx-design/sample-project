@@ -55,8 +55,7 @@ label = text {
   top: 0px,
   fill: Colors.colors.black20,
   contents: "Item",
-  font-size: 12,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.small,
   font-style: "Medium"
 }
 

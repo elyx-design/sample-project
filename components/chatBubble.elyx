@@ -83,7 +83,7 @@ messageText_2 = text {
   width: 100%,
   fill: .black,
   contents: "Chat text",
-  font-size: 12
+  font-size: spacing.fontSize.small
 }
 
 GroupedStack = frame {
@@ -100,6 +100,6 @@ messageText_4 = text {
   top: 25.5px,
   fill: colors.colors.blackAlpha25,
   contents: "14:15",
-  font-size: 12,
+  font-size: spacing.fontSize.small,
   font-style: "Medium"
 }

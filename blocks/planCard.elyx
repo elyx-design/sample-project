@@ -1,6 +1,5 @@
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 import "icons/24 pixels/direct-24.svg" as direct24
@@ -64,8 +63,7 @@ planHeader = frame {
 planName = text {
   fill: Colors.colors.black20,
   contents: "Starter",
-  font-size: 20,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.xxlarge,
   font-style: "Bold"
 }
 
@@ -100,13 +98,7 @@ priceRow = frame {
   children: [price, billingPeriod]
 }
 
-price = text {
-  fill: Colors.colors.black20,
-  contents: "$12",
-  font-size: 40,
-  font-family: "Inter",
-  font-style: "Light"
-}
+price = text {fill: Colors.colors.black20, contents: "$12", font-size: 40, font-style: "Light"}
 
 billingPeriod = text {
   left: 40px,
@@ -114,8 +106,7 @@ billingPeriod = text {
   height: 22px,
   fill: Colors.colors.blackAlpha50,
   contents: "/Month",
-  font-size: 14,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.medium,
   font-style: "SemiBold"
 }
 
@@ -124,8 +115,7 @@ description = text {
   top: 262px,
   fill: Colors.colors.black40,
   contents: "Free forever.\nFor individuals getting started.",
-  font-style: "Regular",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 features = frame {
@@ -146,9 +136,7 @@ projectsBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents:
 projectsLabel = text {
   fill: Colors.colors.black40,
   contents: "Up to 3 projects",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 supportFeature = frame {
@@ -163,9 +151,7 @@ supportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: 
 supportLabel = text {
   fill: Colors.colors.black40,
   contents: "Community support",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 exportFeature = frame {
@@ -180,9 +166,7 @@ exportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: d
 exportLabel = text {
   fill: Colors.colors.black40,
   contents: "Basic export options",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 storageFeature = frame {
@@ -197,9 +181,7 @@ storageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: 
 storageLabel = text {
   fill: Colors.colors.black40,
   contents: "2 GB storage",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.medium
 }
 
 manageButton = button.medium {

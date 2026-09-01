@@ -1,5 +1,4 @@
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
@@ -24,17 +23,14 @@ copy = frame {
 title = text {
   fill: Colors.colors.black20,
   contents: "Label",
-  font-size: Typography.typography.labelML,
-  font-family: "Inter",
+  font-size: Spacing.fontSize.medium,
   font-style: "Medium"
 }
 
 description = text {
   fill: Colors.colors.blackAlpha70,
   contents: "Subtitle",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.small
 }
 
 action = button.medium {

@@ -39,7 +39,7 @@ booksValue = text {
   width: .auto,
   fill: colors.colors.black20,
   contents: "41",
-  font-size: 32,
+  font-size: Spacing.fontSize.huge,
   align: .center
 }
 
@@ -49,7 +49,7 @@ booksLabel = text {
   width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Books",
-  font-size: 14,
+  font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
@@ -75,7 +75,7 @@ pagesValue = text {
   width: .auto,
   fill: colors.colors.black20,
   contents: "11k",
-  font-size: 32,
+  font-size: Spacing.fontSize.huge,
   align: .center
 }
 
@@ -85,7 +85,7 @@ pagesLabel = text {
   width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Pages",
-  font-size: 14,
+  font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
@@ -111,7 +111,7 @@ ratingValue = text {
   width: .auto,
   fill: colors.colors.black20,
   contents: "4.2",
-  font-size: 32,
+  font-size: Spacing.fontSize.huge,
   align: .center
 }
 
@@ -121,7 +121,7 @@ ratingLabel = text {
   width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Rating",
-  font-size: 14,
+  font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
@@ -147,7 +147,7 @@ shelvesValue = text {
   width: .auto,
   fill: colors.colors.black20,
   contents: "9",
-  font-size: 32,
+  font-size: Spacing.fontSize.huge,
   align: .center
 }
 
@@ -157,7 +157,7 @@ shelvesLabel = text {
   width: .auto,
   fill: colors.colors.blackAlpha25,
   contents: "Shelves",
-  font-size: 14,
+  font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }

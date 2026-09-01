@@ -54,7 +54,7 @@ bio = text {
   width: 100%,
   fill: colors.colors.blackAlpha70,
   contents: "Nora Harper is a lifestyle content creator with a warm, thoughtful eye for everyday moments. With 18k followers, she has built a community around simple, authentic experiences: specialty coffee, long conversations, and finding beauty in small things.\n\nHer content carries a cozy, intimate tone that celebrates slowing down and appreciating daily life. Active and engaged, she posts regularly to a loyal audience that connects with her warm, reflective outlook.",
-  line-height: 1.5
+  line-height: Spacing.lineHeight.relaxed
 }
 
 profileStats = stats.stats {

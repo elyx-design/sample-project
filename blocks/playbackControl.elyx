@@ -62,7 +62,13 @@ moreButton = button.smallIcon {
   }
 }
 
-playbackTime = text {left: 722px, top: 543px, fill: .black, contents: "0:00 / 32:46", font-size: 12}
+playbackTime = text {
+  left: 722px,
+  top: 543px,
+  fill: .black,
+  contents: "0:00 / 32:46",
+  font-size: spacing.fontSize.small
+}
 
 scrubber = frame {
   width: 100%,

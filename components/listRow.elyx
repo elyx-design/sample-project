@@ -1,5 +1,4 @@
 import "tokens/colors.elyx" as Colors
-import "tokens/typography.elyx" as Typography
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "icons/20 pixels/activity-20.svg" as activity20
@@ -31,9 +30,7 @@ label = text {
   height: .auto,
   fill: Colors.colors.black20,
   contents: "Item",
-  font-size: Typography.typography.labelM,
-  font-family: "Inter",
-  font-style: "Regular"
+  font-size: Spacing.fontSize.small
 }
 
 @variant
