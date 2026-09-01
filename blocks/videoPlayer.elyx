@@ -40,7 +40,6 @@ headerRow = frame {
 eventHeader = header.smallLeft {
   left: 0px,
   top: 250px,
-  width: 100%,
 
   header.smallSubtitle {
     contents: "Live from the dunes: Stage 3",
@@ -86,6 +85,7 @@ controls = playbackControl.playbackControl {
   }
 
   playbackControl.playbackTime {
+    contents: "12:59 / 32:46",
     fill[0].color: colors.colors.whiteAlpha70
   }
 

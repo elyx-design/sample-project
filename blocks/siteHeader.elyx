@@ -12,7 +12,9 @@ export siteHeader = cardBackground.solidFullRadius {
   left: 512px,
   top: 456px,
   width: 1024px,
-  height: 68px,
+  height: spacing.spacing.heightG,
+  min-width: .nil,
+  min-height: .nil,
   padding-top: 0px,
   padding-left: spacing.spacing.paddingL,
   padding-bottom: 0px,
@@ -22,8 +24,8 @@ export siteHeader = cardBackground.solidFullRadius {
   layout.item-gap: 20px,
   layout.justify-content: .space-between,
   overrides: [
-    insert(brand, after = .nil),
-    insert(navLinks, after = brand),
+    insert(small_4, after = .nil),
+    insert(navLinks, after = small_4),
     insert(headerCta, after = navLinks)
   ]
 }
@@ -58,7 +60,6 @@ mutedMenu = menu {
 loggedInHeader = siteHeader {
   left: 512px,
   top: 572px,
-  height: spacing.spacing.heightG,
   overrides: [insert(GroupedStack, after = navLinks), remove(headerCta)]
 }
 
@@ -82,72 +83,8 @@ mutedIconMenu = menu {
   }
 }
 
-headerActions = frame {
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: signInLink
-}
-
-signInLink = menu {
-  left: 1101px,
-  top: 505px,
-
-  label {
-    contents: "Sign In"
-  }
-}
-
-primaryNavigation = frame {
-  left: 0px,
-  top: 27.5px,
-  width: .auto,
-  height: 17px,
-  layout: {justify-content: .center, align-items: .center, item-gap: 20px},
-  children: [productMenu, pricingLink, blogLink, helpCenterLink]
-}
-
-productMenu = iconMenu {
-  left: 0px,
-  top: 0px,
-  height: 17px,
-
-  label {
-    contents: "Product"
-  }
-}
-
-pricingLink = mutedMenu {
-  left: 58px,
-  top: 0px,
-  height: 17px,
-
-  label {
-    contents: "Pricing"
-  }
-}
-
-blogLink = mutedMenu {
-  left: 78px,
-  top: 20px,
-  height: 17px,
-
-  label {
-    contents: "Blog"
-  }
-}
-
-helpCenterLink = mutedMenu {
-  left: 128px,
-  top: 20px,
-  height: 17px,
-
-  label {
-    contents: "Help Center"
-  }
-}
-
 headerCta = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 16px},
   children: [logInLink, getStartedButton]
 }
@@ -171,7 +108,7 @@ getStartedButton = button.mediumPrimary {
 }
 
 GroupedStack = frame {
-  height: 100%,
+  height: .auto,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
   children: [searchField, accountCluster]
 }
@@ -217,9 +154,9 @@ SiteHeaderVariant = siteHeader {
   overrides: [
     insert(bareContent, after = .nil),
     insert(DividerWhite, after = bareContent),
-    remove(navLinks),
     remove(headerCta),
-    remove(brand)
+    remove(navLinks),
+    remove(small_4)
   ],
   shadow[0]: .nil
 }
@@ -242,15 +179,13 @@ bareContent = frame {
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
   padding-left: 24px,
   padding-right: 24px,
-  children: [bareBrand, bareNav, bareCta]
+  children: [small_5, bareNav, bareCta]
 }
 
-bareBrand = frame {height: 100%, layout: {align-items: .center, item-gap: 16px}, children: small_2}
-
-small_2 = logo.mediumWordmark {left: 489px, top: 459px}
+small_5 = logo.mediumWordmark {left: 452.5px, top: 0px}
 
 bareNav = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 20px},
   children: [Menu, MenuVariant, bareCompany, bareResources]
 }
@@ -292,7 +227,7 @@ bareResources = mutedIconMenu {
 }
 
 bareCta = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 16px},
   children: [bareLogIn, Primary]
 }
@@ -328,9 +263,9 @@ accountHeader = siteHeader {
   overrides: [
     insert(accountContent, after = .nil),
     insert(accountDivider, after = accountContent),
-    remove(navLinks),
     remove(headerCta),
-    remove(brand)
+    remove(navLinks),
+    remove(small_4)
   ],
   shadow[0]: .nil
 }
@@ -343,19 +278,13 @@ accountContent = frame {
   layout: {justify-content: .space-between, align-items: .center, item-gap: 20px},
   padding-left: 24px,
   padding-right: 24px,
-  children: [accountBrand, accountNav, accountActions]
+  children: [small_6, accountNav, accountActions]
 }
 
-accountBrand = frame {
-  height: 100%,
-  layout: {align-items: .center, item-gap: 16px},
-  children: small_3
-}
-
-small_3 = logo.mediumWordmark {left: 489px, top: 459px}
+small_6 = logo.mediumWordmark {left: 452.5px, top: 0px}
 
 accountNav = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 20px},
   children: [accountProduct, accountPricing, accountCompany, accountResources]
 }
@@ -399,7 +328,7 @@ accountResources = mutedIconMenu {
 accountActions = frame {
   left: 361.69px,
   top: 0px,
-  height: 100%,
+  height: .auto,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
   overflow: .visible,
   children: [accountSearch, accountMenu]
@@ -444,9 +373,14 @@ accountDivider = divider.horizontal {
   }
 }
 
-brand = frame {height: 100%, layout: {align-items: .center, item-gap: 16px}, children: small}
-
-small = logo.mediumWordmark {left: 553px, top: 459px}
+mutedChevron = icon {
+  left: 278px,
+  top: 460px,
+  width: 12px,
+  height: 12px,
+  fill: colors.colors.blackAlpha50,
+  contents: chevrondown122
+}
 
 chevron = icon {
   left: 297px,
@@ -457,17 +391,8 @@ chevron = icon {
   contents: chevrondown122
 }
 
-mutedChevron = icon {
-  left: 278px,
-  top: 460px,
-  width: 12px,
-  height: 12px,
-  fill: colors.colors.blackAlpha50,
-  contents: chevrondown122
-}
-
 navLinks = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center, item-gap: 20px},
   children: [navProduct, navPricing, navCompany, navResources]
 }
@@ -507,3 +432,5 @@ navResources = mutedIconMenu {
     contents: "Resources"
   }
 }
+
+small_4 = logo.mediumWordmark {left: 16px, top: 16px}

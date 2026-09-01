@@ -8,7 +8,7 @@ import "blocks/cardInfo.elyx" as cardInfo
 import "blocks/menuList.elyx" as menuList
 import "blocks/aiChat.elyx" as aiChat
 import "blocks/toolbarAudio.elyx" as toolbar
-import "blocks/tollbarCreate.elyx" as tollbarCreate
+import "blocks/toolbarCreate.elyx" as tollbarCreate
 import "blocks/chatWindow.elyx" as chatWindow
 import "blocks/videoPlayer.elyx" as videoPlayer
 import "images/background/desert.png" as desert

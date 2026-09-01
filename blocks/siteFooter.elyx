@@ -8,8 +8,8 @@ import "icons/24 pixels/mail-24.svg" as mail24
 export siteFooter = frame {
   left: 452px,
   top: 450px,
-  width: 1070.3755px,
-  height: 270.5px,
+  width: 100%,
+  height: .auto,
   layout: {direction: .column, item-gap: 32px},
   overflow: .visible,
   children: [content, bottom]
@@ -30,18 +30,10 @@ brandColumn = frame {
   height: 100%,
   layout: {direction: .column, justify-content: .space-between, item-gap: 24px},
   overflow: .visible,
-  children: [logoLockup, Newsletter]
+  children: [small, Newsletter]
 }
 
-logoLockup = frame {
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  layout: {align-items: .center, item-gap: 8px},
-  children: small
-}
-
-small = logo.mediumWordmark {left: 583px, top: 447px}
+small = logo.mediumWordmark {left: 0px, top: 0px}
 
 Newsletter = frame {
   width: 100%,
@@ -91,7 +83,7 @@ base = textField.iconPlaceholder {
   top: 94.5px,
 
   textField.label {
-    contents: "Email Adress"
+    contents: "Email Address"
   }
 
   textField.placeholderIcon {
@@ -111,15 +103,15 @@ medium = button.mediumPrimary {
 linkColumns = frame {
   left: 354.62px,
   top: 0px,
-  width: 492.3755px,
-  layout: {justify-content: .end, item-gap: 54.6877px},
+  width: .auto,
+  layout: {justify-content: .end, item-gap: 50px},
   children: [productColumn, companyColumn, contactColumn]
 }
 
 productColumn = frame {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: 130px,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
   children: [productHeading, productLinks]
 }
@@ -139,25 +131,75 @@ productHeading = text {
 productLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
+  slot: .true,
+  restrict-children: .true,
   children: [howItWorksLink, pricingFooterLink, faqLink, resourcesLink, featuresLink, roadmapLink]
 }
 
-howItWorksLink = link {left: 788.7266px, top: 522px, contents: "How it works"}
+howItWorksLink = text {
+  left: 0px,
+  top: 522px,
+  width: 100%,
+  fill: .black,
+  contents: "How it works",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-pricingFooterLink = link {left: 808.7266px, top: 542px, contents: "Pricing"}
+pricingFooterLink = text {
+  left: 0px,
+  top: 542px,
+  width: 100%,
+  fill: .black,
+  contents: "Pricing",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-faqLink = link {left: 828.7266px, top: 562px, contents: "FAQ"}
+faqLink = text {
+  left: 0px,
+  top: 562px,
+  width: 100%,
+  fill: .black,
+  contents: "FAQ",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-resourcesLink = link {left: 828.7266px, top: 585px, contents: "Resources"}
+resourcesLink = text {
+  left: 0px,
+  top: 585px,
+  width: 100%,
+  fill: .black,
+  contents: "Resources",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-featuresLink = link {left: 848.7266px, top: 605px, contents: "Features"}
+featuresLink = text {
+  left: 0px,
+  top: 605px,
+  width: 100%,
+  fill: .black,
+  contents: "Features",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-roadmapLink = link {left: 868.7266px, top: 625px, contents: "Roadmap"}
+roadmapLink = text {
+  left: 0px,
+  top: 625px,
+  width: 100%,
+  fill: .black,
+  contents: "Roadmap",
+  font-size: 12,
+  font-style: "Medium"
+}
 
 companyColumn = frame {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: 130px,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
   children: [companyHeading, companyLinks]
 }
@@ -177,23 +219,65 @@ companyHeading = text {
 companyLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
+  slot: .true,
+  restrict-children: .true,
   children: [aboutLink, contactLink, careersLink, pressLink, ourStoryLink]
 }
 
-aboutLink = link {left: 788.7266px, top: 522px, contents: "About"}
+aboutLink = text {
+  left: 0px,
+  top: 522px,
+  width: 100%,
+  fill: .black,
+  contents: "About",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-contactLink = link {left: 808.7266px, top: 542px, contents: "Contact"}
+contactLink = text {
+  left: 0px,
+  top: 542px,
+  width: 100%,
+  fill: .black,
+  contents: "Contact",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-careersLink = link {left: 828.7266px, top: 562px, contents: "Careers"}
+careersLink = text {
+  left: 0px,
+  top: 562px,
+  width: 100%,
+  fill: .black,
+  contents: "Careers",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-pressLink = link {left: 848.7266px, top: 582px, contents: "Press"}
+pressLink = text {
+  left: 0px,
+  top: 582px,
+  width: 100%,
+  fill: .black,
+  contents: "Press",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-ourStoryLink = link {left: 868.7266px, top: 602px, contents: "Our Story"}
+ourStoryLink = text {
+  left: 0px,
+  top: 602px,
+  width: 100%,
+  fill: .black,
+  contents: "Our Story",
+  font-size: 12,
+  font-style: "Medium"
+}
 
 contactColumn = frame {
   left: 0px,
   top: 0px,
-  width: 100%,
+  width: 130px,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
   children: [contactHeading, contactLinks]
 }
@@ -213,16 +297,50 @@ contactHeading = text {
 contactLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 12px},
+  slot: .true,
+  restrict-children: .true,
   children: [privacyLink, termsLink, contactCareersLink, securityLink]
 }
 
-privacyLink = link {left: 788.7266px, top: 522px, contents: "Privacy Policy"}
+privacyLink = text {
+  left: 0px,
+  top: 522px,
+  width: 100%,
+  fill: .black,
+  contents: "Privacy Policy",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-termsLink = link {left: 808.7266px, top: 542px, contents: "Terms of Service"}
+termsLink = text {
+  left: 0px,
+  top: 542px,
+  width: 100%,
+  fill: .black,
+  contents: "Terms of Service",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-contactCareersLink = link {left: 828.7266px, top: 562px, contents: "Careers"}
+contactCareersLink = text {
+  left: 0px,
+  top: 562px,
+  width: 100%,
+  fill: .black,
+  contents: "Careers",
+  font-size: 12,
+  font-style: "Medium"
+}
 
-securityLink = link {left: 848.7266px, top: 582px, contents: "Security"}
+securityLink = text {
+  left: 0px,
+  top: 582px,
+  width: 100%,
+  fill: .black,
+  contents: "Security",
+  font-size: 12,
+  font-style: "Medium"
+}
 
 bottom = frame {
   width: 100%,
@@ -268,13 +386,4 @@ statusNote = text {
   font-size: 12,
   font-style: "Medium",
   line-height: 1.5
-}
-
-export link = text {
-  left: 113px,
-  top: 488px,
-  fill: .black,
-  contents: "Link",
-  font-size: 12,
-  font-style: "Medium"
 }

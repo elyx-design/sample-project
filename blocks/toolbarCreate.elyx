@@ -33,6 +33,8 @@ close = button.smallClose {left: 686px, top: 602px}
 tools = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 8px},
+  slot: .true,
+  restrict-children: .true,
   children: [frameTool, pointerMenu, shapeMenu, imageTool, textTool, commentTool, codeTool]
 }
 
@@ -46,7 +48,7 @@ frameTool = button.smallIcon {
 }
 
 pointerMenu = frame {
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center},
   children: [pointerTool, pointerChevron]
 }
@@ -65,7 +67,7 @@ pointerChevron = icon {left: 549px, top: 493px, width: 12px, height: 12px, conte
 shapeMenu = frame {
   left: 110.5px,
   top: 20px,
-  height: 100%,
+  height: .auto,
   layout: {align-items: .center},
   children: [shapeTool, shapeChevron]
 }
