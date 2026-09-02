@@ -3,7 +3,7 @@ import "tokens/strings.elyx" as strings
 @context(lang="fr")
 __file__
 
-export scaffold = strings.scaffold {
+export scaffold = tokens : strings.scaffold {
   welcomeTitle: "Bienvenue dans le projet de démarrage Elyx",
   welcomeDescription: "Ce document présente les bonnes pratiques pour configurer les fichiers .elyx dans votre projet",
   structureDescription: "Comme vous pouvez le voir dans la liste des projets à gauche, les fichiers sont organisés en groupes. Les plus importants sont les composants, les blocs et les écrans, qui constituent les trois principaux éléments de structuration de vos composants.",
@@ -17,18 +17,18 @@ export scaffold = strings.scaffold {
   tokensDescription: "Enfin, le dossier tokens/ regroupe les différentes familles de jetons — couleurs, typographie, espacement et rayons — utilisées dans l’ensemble du projet."
 }
 
-export pricingPage = strings.pricingPage {
+export pricingPage = tokens : strings.pricingPage {
   freeRegistration: "Inscrivez-vous gratuitement !",
   description: "Des tarifs flexibles pour les particuliers, les professionnels et les équipes en pleine croissance.",
   title: "Choisissez le forfait adapté à votre travail"
 }
 
-export liveEvent = strings.liveEvent {
+export liveEvent = tokens : strings.liveEvent {
   streamTitle: "Duo de tête de la course",
   channelDescription: "Votre référence pour tout ce qui concerne le cyclisme"
 }
 
-export landingPage = strings.landingPage {
+export landingPage = tokens : strings.landingPage {
   heroDescription: "Conçu pour évoluer dans les conditions les plus difficiles, notre outil s’enracine là où les autres échouent. Fiable et résilient, il vous permet de travailler sans interruption.",
   heroTitle: "Épanouissez-vous, quoi qu’il arrive.",
   minimalDescription: "Chaque détail est pensé et tout ce qui est superflu est éliminé.",
@@ -39,13 +39,13 @@ export landingPage = strings.landingPage {
   collaborationTitle: "Plus forts ensemble"
 }
 
-export marketing = strings.marketing {
+export marketing = tokens : strings.marketing {
   newsletterDescription: "Conçu avec soin, page après page. Nous pensons que les bonnes idées méritent un espace pour grandir, sur une étagère comme sur un écran",
   footerEmailAddress: "Adresse e-mail",
   aiDisclaimer: "Overleaf est une IA et peut faire des erreurs. Veuillez vérifier ses réponses."
 }
 
-export plans = strings.plans {
+export plans = tokens : strings.plans {
   starter: "Débutant",
   best: "Meilleur choix !",
   perMonth: "/mois",
@@ -72,14 +72,14 @@ export plans = strings.plans {
   hundredGigabytesStorage: "100 Go de stockage"
 }
 
-export stats = strings.stats {
+export stats = tokens : strings.stats {
   books: "Livres",
   pages: "Pages",
   rating: "Note",
   shelves: "Étagères"
 }
 
-export componentDefaults = strings.componentDefaults {
+export componentDefaults = tokens : strings.componentDefaults {
   button: "Bouton",
   title: "Titre",
   subtitle: "Sous-titre",
@@ -93,7 +93,7 @@ export componentDefaults = strings.componentDefaults {
   productName: "Nom du produit"
 }
 
-export labels = strings.labels {
+export labels = tokens : strings.labels {
   publicProfile: "Profil public",
   following: "Abonnements",
   followers: "Abonnés",
@@ -118,7 +118,7 @@ export labels = strings.labels {
   manager: "Responsable"
 }
 
-export status = strings.status {
+export status = tokens : strings.status {
   live: "En direct",
   liveNow: "En direct maintenant",
   offline: "Hors ligne",
@@ -126,7 +126,7 @@ export status = strings.status {
   servicesOnline: "Tous les services sont opérationnels"
 }
 
-export navigation = strings.navigation {
+export navigation = tokens : strings.navigation {
   menu: "Menu",
   product: "Produit",
   pricing: "Tarifs",
@@ -159,7 +159,7 @@ export navigation = strings.navigation {
   help: "Aide"
 }
 
-export forms = strings.forms {
+export forms = tokens : strings.forms {
   accountPrompt: "Utilisez votre compte pour continuer.",
   signInTitle: "Connexion",
   emailAddress: "Adresse e-mail",
@@ -169,7 +169,7 @@ export forms = strings.forms {
   messagePlaceholder: "Écrivez un message"
 }
 
-export actions = strings.actions {
+export actions = tokens : strings.actions {
   follow: "Suivre",
   getStarted: "Commencer",
   getStartedHeader: "Commencer",
