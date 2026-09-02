@@ -1,8 +1,8 @@
 # Components
 
-Components are the smallest reusable UI pieces in the Elyx design system. Think 
-of them as atoms.They sit above shared tokens and assets, and below blocks and
-screens:
+Components are the smallest reusable UI elements in the Elyx design system: the
+atoms of the interface. They sit above shared tokens and assets, and below blocks
+and screens:
 
 ```
 tokens / icons / images
@@ -17,12 +17,12 @@ base controls, small grouped controls, and reusable interface primitives such as
 buttons, inputs, toggles, rows, swatches, dividers, toolbar controls, and
 similar pieces.
 
-## Best Practices
+## Best practices
 
 - Keep one primary reusable component per file when practical.
 - Import shared values from `tokens/` instead of hard-coding repeated
   colors, spacing, typography, or radii.
-- Expose intended reuse with `pub`; keep helper layers private unless another
+- Expose intended reuse with `export`; keep helper layers private unless another
   file needs to import them.
 - Name files and public symbols for the component's role, not for the first
   screen that used it.
@@ -37,5 +37,5 @@ similar pieces.
 - Avoid showcase or demo layouts in component files unless the file is
   intentionally documenting variants.
 
-Larger reusable interface sections belong in `design/blocks/`. Complete
-surfaces or top-level states belong in `design/screens/`.
+Larger reusable interface sections belong in `blocks/`. Complete surfaces or
+top-level states belong in `screens/`.

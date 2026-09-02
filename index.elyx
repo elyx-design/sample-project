@@ -7,15 +7,16 @@ import "blocks/cardInfo.elyx" as cardInfo
 import "images/intro/introBG.png" as introBG
 import "images/intro/elyxLogo.png" as elyxLogo
 
-componentExample = button.medium {left: 16px, top: 757px}
+componentExample = frame : button.medium {left: 16px, top: 757px}
 
-blockExample = cardInfo.reviewCard {left: 306px, top: 757px}
+blockExample = frame : cardInfo.reviewCard {left: 306px, top: 757px}
 
 intro = frame {
   left: -412px,
   top: -389px,
   height: 620px,
   layout: {justify-content: .center, align-items: .center},
+  corner-radius: 20px,
   children: [welcome, welcome_2]
 }
 
@@ -34,7 +35,7 @@ welcome = frame {
       spread: 0px
     }
   },
-  corner-radius: [20px, 0px, 0px, 20px],
+  corner-radius: 0px,
   padding: [0px, 56px, 56px],
   children: [elyxLogopng, introCopy]
 }
@@ -60,7 +61,7 @@ welcomeHeading = text {
   left: 0px,
   top: 0px,
   mix-blend-mode: .overlay,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: Strings.scaffold.welcomeTitle,
   font-size: 24,
   align: .center
@@ -81,7 +82,7 @@ welcome_2 = frame {
       spread: 0px
     }
   },
-  corner-radius: [0px, 20px, 20px, 0px],
+  corner-radius: 0px,
   padding: 56px,
   children: [GroupedStack, scaffoldSections_2, GroupedStack_2]
 }
@@ -136,7 +137,7 @@ componentsCard_2 = frame {
 componentsLabel_2 = text {
   left: 69px,
   top: 45px,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.scaffold.componentsTitle,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
@@ -147,7 +148,7 @@ componentsDescription_2 = text {
   left: 0px,
   top: 65px,
   width: 100%,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.primitives.white70,
   contents: Strings.scaffold.componentsDescription,
   font-size: Spacing.fontSize.medium,
   line-height: 1.5
@@ -167,7 +168,7 @@ blocksCard_2 = frame {
 blocksLabel_2 = text {
   left: 162.6667px,
   top: -17px,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.scaffold.blocksTitle,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
@@ -178,7 +179,7 @@ blocksDescription_2 = text {
   left: 0px,
   top: 71px,
   width: 100%,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.primitives.white70,
   contents: Strings.scaffold.blocksDescription,
   font-size: Spacing.fontSize.medium,
   line-height: 1.5
@@ -198,7 +199,7 @@ screensCard_2 = frame {
 screensLabel_2 = text {
   left: 162.6667px,
   top: -25.5px,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.scaffold.screensTitle,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold",
@@ -210,7 +211,7 @@ screensDescription_2 = text {
   top: 0px,
   width: 100%,
   height: .auto,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.primitives.white70,
   contents: Strings.scaffold.screensDescription,
   font-size: Spacing.fontSize.medium,
   line-height: 1.5

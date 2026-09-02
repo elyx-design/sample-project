@@ -1,26 +1,29 @@
 # Scaffold
 
-This document contains best practices on how to set up .elyx files within your project
+Welcome to the Elyx scaffold.
 
-As you can see in the project list on the left, files are organized into groups, with 
-the most important ones being components, blocks, and screens. The three main building 
-blocks for organizing your components.
+This project demonstrates best practices for organizing and building with .elyx files.
+
+The project is organized into folders. The three most important folders are components,
+blocks, and screens. Together, they form the foundation of the UI.
 
 ## Components
-Components are the smallest reusable UI pieces in the Elyx design system. Think of them 
-like atoms. These would be UI elements such as button, text fields, badges etc.
+
+Components are the smallest reusable UI elements in the Elyx design system: the atoms of
+the interface. Examples include buttons, text fields, and badges.
 
 ## Blocks
-If components are atoms, then blocks are like molecules. Blocks are used interface 
-sections such as panels, menus, toasts, alerts, etc that would contain components.
+
+If components are atoms, blocks are molecules: reusable interface sections such as
+panels, menus, toasts, and alerts.
 
 ## Screens
-Screens would be things like app windows, panels, and standalone states that represent 
-what a user would see at one moment. Examples would be things like Log In, Dashboard, 
-Settings, Account, etc.
 
-Also in the project are folders for other asset types, such as images and icons. If you 
-were to add fonts, then create a new /fonts folder.
+Screens represent complete views or standalone states a user sees at a given moment,
+such as Sign in, Dashboard, Settings, or Account.
 
-Finally, is the existence of a tokens/ folder. Each file there groups a related family of
-tokens - colors, typography, spacing, radius - referenced throughout the entire project.
+The project also includes folders for assets such as images and icons. Add a `/fonts`
+folder if the project needs custom fonts.
+
+The `tokens/` folder contains related token families, such as color, typography, spacing,
+and radius, that are referenced throughout the project.

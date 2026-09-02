@@ -1,7 +1,7 @@
 # Screens
 
 Screens are complete UI surfaces or standalone screen-level states assembled
-from blocks, components, tokens, and assets. They sit above reusable sections 
+from blocks, components, tokens, and assets. They sit above reusable sections
 (blocks).
 
 ```
@@ -11,14 +11,13 @@ tokens / icons / images
       -> screens
 ```
 
-Use `screens/` for full-surface compositions, app windows, panels, and
-standalone states that represent what a user would see at one moment. Examples
-would be things like Log In, Dashboard, Settings, Account, etc.
+Use `screens/` for complete views or standalone states that represent what a
+user sees at a given moment, such as Sign in, Dashboard, Settings, or Account.
 
-## Best Practices
+## Best practices
 
 - Prefer one top-level screen or screen state per file.
-- Compose screens from `design/blocks/` and `design/components/` instead of
+- Compose screens from `blocks/` and `components/` instead of
   duplicating reusable UI directly in the screen file.
 - Import shared tokens, icons, images, and fonts rather than embedding copied
   values or artwork.
@@ -32,5 +31,5 @@ would be things like Log In, Dashboard, Settings, Account, etc.
 - Use overrides to adapt imported blocks and components for the screen state
   instead of forking the source component for one-off differences.
 
-Lower-level reusable pieces belong in `design/components/` and
-`design/blocks/`. Shared visual values belong in `tokens/`.
+Lower-level reusable pieces belong in `components/` and `blocks/`. Shared visual
+values belong in `tokens/`.
