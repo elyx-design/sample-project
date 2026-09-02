@@ -23,7 +23,7 @@ line = shape {
       linear-gradient: {
         from: point(50%, 88.7466%),
         to: point(50%, 100%),
-        stops: [stop(0%, .transparent), stop(100%, colors.colors.black20)]
+        stops: [stop(0%, .transparent), stop(100%, colors.gradients.overlayEnd)]
       }
     }
   ],

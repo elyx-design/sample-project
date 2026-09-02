@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/colors.elyx" as colors
 import "images/thumbnails/thumb01.jpg" as thumb01
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/play-20.svg" as play20
@@ -17,7 +18,10 @@ export thumbnailImage = frame {
       linear-gradient: {
         from: point(50%, 50%),
         to: point(50%, 90.21%),
-        stops: [stop(0%, rgb(8.6275%, 8.6275%, 8.6275%, 0%)), stop(100%, rgb(8.61%, 8.61%, 8.61%))]
+        stops: [
+          stop(0%, rgb(8.6275%, 8.6275%, 8.6275%, 0%)),
+          stop(100%, colors.gradients.overlayEnd)
+        ]
       }
     }
   ],

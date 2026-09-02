@@ -19,7 +19,7 @@ export on = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.colors.black40), stop(100%, Colors.colors.black30)]
+      stops: [stop(0%, Colors.gradients.emphasisTop), stop(100%, Colors.gradients.emphasisBottom)]
     }
   },
   border: {color: Colors.colors.blackAlpha10, width: 0.5px},
@@ -36,7 +36,7 @@ knob = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
+      stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
     }
   },
   corner-radius: Radius.radius.full

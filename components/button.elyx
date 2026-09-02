@@ -16,7 +16,7 @@ export medium = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(2.58%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
+      stops: [stop(2.58%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
     }
   },
   border: {color: Colors.colors.blackAlpha25, width: 0.5px},
@@ -51,8 +51,8 @@ mediumPrimary = frame : medium {
   left: 1072px,
   top: 689px,
   border[0].color: Colors.colors.black20,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
+  fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
@@ -69,8 +69,8 @@ mediumDanger = frame : medium {
   left: 1181px,
   top: 689px,
   border[0].color: Colors.colors.red50,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
+  fill[0].linear-gradient.stops[0].color: Colors.gradients.dangerTop,
+  fill[0].linear-gradient.stops[1].color: Colors.gradients.dangerBottom,
   shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 5%),
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: rgb(100%, 100%, 100%, 50%),
@@ -135,7 +135,7 @@ export small = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.colors.white100), stop(100%, Colors.colors.black95)]
+      stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
     }
   },
   border: {color: Colors.colors.blackAlpha25, width: 0.5px},
@@ -185,8 +185,8 @@ smallDanger = frame : small {
   left: 1127px,
   top: 917px,
   border[0].color: Colors.colors.red50,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
+  fill[0].linear-gradient.stops[0].color: Colors.gradients.dangerTop,
+  fill[0].linear-gradient.stops[1].color: Colors.gradients.dangerBottom,
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: rgb(100%, 100%, 100%, 50%),
   shadow[1].inner-shadow.offset: [0px, 1.5px],
@@ -215,8 +215,8 @@ smallPrimary = frame : small {
   top: 917px,
   border[1].color: Colors.colors.black20,
   border[1].width: 0.5px,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
+  fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
@@ -318,8 +318,8 @@ smallPrimaryRounded = frame : small {
   left: 1344px,
   top: 917px,
   width: Spacing.size.small,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
+  fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
   overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(smallLabel)]
 }
 
@@ -358,8 +358,8 @@ mediumPrimaryRounded = frame : medium {
   top: 689px,
   width: Spacing.size.medium,
   border[0].color: Colors.colors.black20,
-  fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
-  fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
+  fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
+  fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
   overrides: [insert(mediumPrimaryRoundedIcon, after = .nil), remove(mediumLabel)],
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: Colors.primitives.white50,

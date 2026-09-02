@@ -44,3 +44,13 @@ export primitives = tokens {
   white50: rgb(100%, 100%, 100%, 50%),
   black: rgb(9%, 9%, 9%)
 }
+
+export gradients = tokens {
+  surfaceTop: .white,
+  surfaceBottom: rgb(93.448%, 93.448%, 93.448%),
+  emphasisTop: rgb(28.06%, 28.06%, 28.06%),
+  emphasisBottom: rgb(17.92%, 17.92%, 17.92%),
+  dangerTop: rgb(100%, 10.15%, 17.63%),
+  dangerBottom: rgb(89.3891%, 19.8896%, 14.9388%),
+  overlayEnd: rgb(8.61%, 8.61%, 8.61%)
+}

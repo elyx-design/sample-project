@@ -19,7 +19,7 @@ import "blocks/sideBar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
 import "components/playHead.elyx" as playHead
 
-marker8 = timelineRuler.timeMarker {
+marker8 = frame : timelineRuler.timeMarker {
   left: 306.508px,
   top: 555px,
   width: 100%,
@@ -29,7 +29,7 @@ marker8 = timelineRuler.timeMarker {
   }
 }
 
-marker6 = timelineRuler.timeMarker {
+marker6 = frame : timelineRuler.timeMarker {
   left: 197.2858px,
   top: 535px,
   width: 100%,
@@ -39,7 +39,7 @@ marker6 = timelineRuler.timeMarker {
   }
 }
 
-marker5 = timelineRuler.timeMarker {
+marker5 = frame : timelineRuler.timeMarker {
   left: 133px,
   top: 535px,
   width: 100%,
@@ -49,7 +49,7 @@ marker5 = timelineRuler.timeMarker {
   }
 }
 
-marker4 = timelineRuler.timeMarker {
+marker4 = frame : timelineRuler.timeMarker {
   left: 58px,
   top: 535px,
   width: 100%,
@@ -59,7 +59,7 @@ marker4 = timelineRuler.timeMarker {
   }
 }
 
-marker7 = timelineRuler.timeMarker {
+marker7 = frame : timelineRuler.timeMarker {
   left: 217.2858px,
   top: 555px,
   width: 100%,
@@ -69,7 +69,7 @@ marker7 = timelineRuler.timeMarker {
   }
 }
 
-marker9 = timelineRuler.timeMarker {
+marker9 = frame : timelineRuler.timeMarker {
   left: 326.508px,
   top: 575px,
   width: 100%,
@@ -89,7 +89,7 @@ export videoEditing = frame {
   children: [editingSidebar, workspace]
 }
 
-editingSidebar = sidebar.compact {
+editingSidebar = frame : sidebar.compact {
   left: 0px,
   top: 0px,
   height: 100%,
@@ -127,13 +127,13 @@ preview = frame {
   children: [player, gallery]
 }
 
-player = videoPlayer.videoPlayer {
+player = frame : videoPlayer.videoPlayer {
   left: -3772px,
   top: 0px,
   width: 60%,
   height: 100%,
   fill[0].image.ref: bird,
-  fill[1].linear-gradient.stops[1].color: Colors.colors.black20,
+  fill[1].linear-gradient.stops[1].color: Colors.gradients.overlayEnd,
 
   videoPlayer.controls.playbackControl.tools.likeButton.button.smallIconGlyph {
     contents: pen20
@@ -163,7 +163,7 @@ player = videoPlayer.videoPlayer {
   }
 }
 
-gallery = imageGallery.imageGallery {
+gallery = frame : imageGallery.imageGallery {
   left: 20px,
   top: 0px,
   width: 40%,
@@ -255,7 +255,7 @@ timeline = frame {
   children: [ruler, tracks]
 }
 
-ruler = timelineRuler.timelineRuler {
+ruler = frame : timelineRuler.timelineRuler {
   left: 0px,
   top: 442.5px,
   width: 100%,
@@ -300,7 +300,7 @@ videoTrackRow = frame {
   children: [birdTrack, thumbnailTrack]
 }
 
-birdTrack = videoTrack.base {
+birdTrack = frame : videoTrack.base {
   left: 7941px,
   top: 763px,
   width: 23.6364%,
@@ -318,7 +318,7 @@ birdTrack = videoTrack.base {
   }
 }
 
-thumbnailTrack = videoTrack.base {
+thumbnailTrack = frame : videoTrack.base {
   left: 7961px,
   top: 783px,
   width: 23.6364%,
@@ -336,7 +336,7 @@ thumbnailTrack = videoTrack.base {
   }
 }
 
-audioTrack = mediaTrack.track {
+audioTrack = frame : mediaTrack.track {
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
@@ -355,7 +355,7 @@ audioTrack = mediaTrack.track {
   }
 }
 
-titleTrack = mediaTrack.track {
+titleTrack = frame : mediaTrack.track {
   left: -13207.5px,
   top: 808px,
   width: 59.2292%,
@@ -374,4 +374,9 @@ titleTrack = mediaTrack.track {
   }
 }
 
-timelinePlayHead = playHead.playHead {left: 385px, top: -5px, height: 281px, ignore-stack: .true}
+timelinePlayHead = frame : playHead.playHead {
+  left: 385px,
+  top: -5px,
+  height: 281px,
+  ignore-stack: .true
+}

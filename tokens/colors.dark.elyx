@@ -33,3 +33,13 @@ export darkColors = tokens : colors.colors {
   lavender: rgb(90.2878%, 81.12%, 100%),
   whiteAlpha50: rgb(0%, 0%, 0%, 50%)
 }
+
+export darkGradients = tokens : colors.gradients {
+  surfaceTop: rgb(13.73%, 13.73%, 13.73%),
+  surfaceBottom: rgb(8.61%, 8.61%, 8.61%),
+  emphasisTop: rgb(87.0588%, 87.0588%, 87.0588%),
+  emphasisBottom: rgb(74.32%, 74.32%, 74.32%),
+  dangerTop: rgb(100%, 10.15%, 17.63%),
+  dangerBottom: rgb(89.3891%, 19.8896%, 14.9388%),
+  overlayEnd: rgb(8.61%, 8.61%, 8.61%)
+}
