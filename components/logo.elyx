@@ -23,14 +23,14 @@ smallArtwork = shape {
 }
 
 @variant
-large = small {
+large = frame : small {
   left: 340px,
   top: 677px,
   overrides: [insert(largeArtwork, after = .nil), remove(smallArtwork)]
 }
 
 @variant
-extraLarge = small {
+extraLarge = frame : small {
   left: 340px,
   top: 769px,
   overrides: [insert(extraLargeArtwork, after = .nil), remove(smallArtwork)]
@@ -55,7 +55,7 @@ largeArtwork = shape {
 }
 
 @variant
-medium = small {
+medium = frame : small {
   left: 340px,
   top: 597px,
 
@@ -66,7 +66,7 @@ medium = small {
 }
 
 @variant
-extraLargeWordmark = small {
+extraLargeWordmark = frame : small {
   left: 475px,
   top: 769px,
   layout.item-gap: Spacing.gap.xxlarge,
@@ -79,7 +79,7 @@ extraLargeWordmark = small {
 }
 
 @variant
-largeWordmark = small {
+largeWordmark = frame : small {
   left: 475px,
   top: 677px,
   layout.item-gap: Spacing.gap.medium,
@@ -92,7 +92,7 @@ largeWordmark = small {
 }
 
 @variant
-mediumWordmark = small {
+mediumWordmark = frame : small {
   left: 475px,
   top: 597px,
   layout.item-gap: Spacing.gap.small,
@@ -105,7 +105,7 @@ mediumWordmark = small {
 }
 
 @variant
-smallWordmark = small {
+smallWordmark = frame : small {
   left: 475px,
   top: 519px,
   layout.item-gap: Spacing.gap.small,

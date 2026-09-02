@@ -12,7 +12,7 @@ export track = frame {
   height: spacing.size.medium,
   layout: {justify-content: .space-between, align-items: .center},
   fill: colors.colors.limeBright,
-  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  border: {color: rgb(0%, 0%, 0%, 25%), width: 0.5px, position: .outside},
   corner-radius: radius.radius.xsmall,
   padding: [spacing.padding.xsmall, 0px],
   children: [startHandle, content, endHandle]
@@ -33,8 +33,8 @@ startGrip = shape {
   width: 2px,
   height: 16px,
   fill: rgb(0%, 0%, 0%, 25%),
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 content = frame {
@@ -57,14 +57,14 @@ typeIcon = icon {
   top: 522px,
   width: 24px,
   height: 24px,
-  fill: colors.colors.black20,
+  fill: colors.primitives.black,
   contents: direct24
 }
 
 trackName = text {
   left: 263px,
   top: 553px,
-  fill: colors.colors.black20,
+  fill: colors.primitives.black,
   contents: Strings.componentDefaults.trackName,
   font-size: spacing.fontSize.small,
   font-style: "SemiBold"
@@ -83,14 +83,14 @@ dateIcon = icon {
   top: 522px,
   width: 24px,
   height: 24px,
-  fill: colors.colors.blackAlpha25,
+  fill: rgb(0%, 0%, 0%, 25%),
   contents: calendar24
 }
 
 dateText = text {
   left: 263px,
   top: 553px,
-  fill: colors.colors.blackAlpha25,
+  fill: rgb(0%, 0%, 0%, 25%),
   contents: "8 Jul",
   font-size: spacing.fontSize.small,
   font-style: "SemiBold"
@@ -109,6 +109,6 @@ endGrip = shape {
   width: 2px,
   height: 16px,
   fill: rgb(0%, 0%, 0%, 25%),
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }

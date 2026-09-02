@@ -31,7 +31,7 @@ label = text {
 }
 
 @variant
-placeholder = base {
+placeholder = frame : base {
   left: 869px,
   top: 850px,
 
@@ -41,7 +41,7 @@ placeholder = base {
 }
 
 @variant
-focused = base {
+focused = frame : base {
   left: 869px,
   top: 930px,
   border[0].color: Colors.colors.black20,
@@ -50,7 +50,7 @@ focused = base {
 }
 
 @variant
-error = base {
+error = frame : base {
   left: 869px,
   top: 1010px,
   border[0].color: Colors.colors.red70,
@@ -63,7 +63,7 @@ error = base {
 }
 
 @variant
-withIcon = base {
+withIcon = frame : base {
   left: 989.73px,
   top: 770px,
   padding-left: Spacing.padding.small,
@@ -72,7 +72,7 @@ withIcon = base {
 }
 
 @variant
-iconPlaceholder = base {
+iconPlaceholder = frame : base {
   left: 988.65px,
   top: 850px,
   padding-left: Spacing.padding.small,
@@ -103,7 +103,7 @@ defaultIcon = icon {
 }
 
 @variant
-iconFocused = base {
+iconFocused = frame : base {
   left: 987.9291px,
   top: 930px,
   padding-left: Spacing.padding.small,
@@ -114,7 +114,7 @@ iconFocused = base {
 }
 
 @variant
-iconError = base {
+iconError = frame : base {
   left: 988.2896px,
   top: 1010px,
   padding-left: Spacing.padding.small,
@@ -147,7 +147,7 @@ errorIcon = icon {
 }
 
 @variant
-withButton = base {
+withButton = frame : base {
   left: 1139px,
   top: 770px,
   padding-right: Spacing.padding.xsmall,
@@ -156,7 +156,7 @@ withButton = base {
 }
 
 @variant
-buttonPlaceholder = base {
+buttonPlaceholder = frame : base {
   left: 1142.4px,
   top: 850px,
   padding-right: Spacing.padding.xsmall,
@@ -168,7 +168,7 @@ buttonPlaceholder = base {
   }
 }
 
-submitButton = button.smallPrimaryRounded {
+submitButton = frame : button.smallPrimaryRounded {
   left: 52.3381px,
   top: 5.85px,
 
@@ -184,7 +184,7 @@ GroupedStack = frame {
   children: [small, placeholderButton]
 }
 
-small = button.smallIcon {
+small = frame : button.smallIcon {
   left: 59.6px,
   top: 6px,
 
@@ -193,7 +193,7 @@ small = button.smallIcon {
   }
 }
 
-placeholderButton = button.smallPrimaryRounded {
+placeholderButton = frame : button.smallPrimaryRounded {
   left: 52.3381px,
   top: 5.85px,
 

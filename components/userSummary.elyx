@@ -1,8 +1,8 @@
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "components/avatar.elyx" as userAvatar
-import "components/header.elyx" as header
 import "tokens/colors.elyx" as Colors
+import "components/header.elyx" as header
 
 export card = frame {
   left: 16px,
@@ -20,12 +20,13 @@ export card = frame {
 export small = frame {
   height: Spacing.size.medium,
   layout: {align-items: .center, item-gap: Spacing.gap.medium},
+  overflow: .visible,
   children: [smallAvatar, smallHeader]
 }
 
-smallAvatar = userAvatar.smallPhoto {left: -7.5px, top: 28px}
+smallAvatar = frame : userAvatar.smallPhoto {left: -7.5px, top: 28px}
 
-smallHeader = header.smallLeft {
+smallHeader = frame : header.smallLeft {
   left: -8.5px,
   top: -18px,
 
@@ -40,7 +41,7 @@ smallHeader = header.smallLeft {
 }
 
 @variant
-UserSummarySVariant = small {
+UserSummarySVariant = frame : small {
   left: 140px,
   top: -18px,
   height: .auto,
@@ -59,9 +60,9 @@ export medium = frame {
   children: [mediumAvatar, mediumHeader]
 }
 
-mediumAvatar = userAvatar.mediumPhoto {left: 0px, top: 0px}
+mediumAvatar = frame : userAvatar.mediumPhoto {left: 0px, top: 0px}
 
-mediumHeader = header.mediumLeft {
+mediumHeader = frame : header.mediumLeft {
   left: 83px,
   top: 10px,
 
@@ -78,7 +79,7 @@ mediumHeader = header.mediumLeft {
 }
 
 @variant
-UserSummaryMVariant = medium {
+UserSummaryMVariant = frame : medium {
   left: 229px,
   top: 192px,
   height: .auto,

@@ -30,7 +30,7 @@ label = text {
 }
 
 @variant
-labelAndClose = base {
+labelAndClose = frame : base {
   left: 542px,
   top: 700px,
   padding-right: spacing.padding.small,
@@ -39,7 +39,7 @@ labelAndClose = base {
 }
 
 @variant
-status = base {
+status = frame : base {
   left: 545px,
   top: 776px,
   padding-left: spacing.padding.xsmall,
@@ -65,7 +65,7 @@ closeIcon = icon {
 }
 
 @variant
-iconAndLabel = base {
+iconAndLabel = frame : base {
   left: 542px,
   top: 624px,
   padding-left: spacing.padding.small,

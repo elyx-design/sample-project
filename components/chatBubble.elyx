@@ -14,7 +14,7 @@ export base = frame {
   children: [profileAvatar, message]
 }
 
-profileAvatar = avatar.smallPhoto {
+profileAvatar = frame : avatar.smallPhoto {
   left: 0px,
   top: 0px,
 
@@ -43,7 +43,7 @@ message = frame {
 messageText = text {left: 0px, top: 0px, fill: .black, contents: Strings.componentDefaults.chatText}
 
 @variant
-user = base {
+user = frame : base {
   left: 602px,
   top: 560px,
   layout.justify-content: .end,
@@ -63,7 +63,7 @@ user = base {
 }
 
 @variant
-liveBubble = base {
+liveBubble = frame : base {
   left: 602px,
   top: 644px,
   layout.align-items: .start,

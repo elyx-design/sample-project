@@ -27,13 +27,12 @@ mediumSubtitle = text {
 }
 
 @variant
-mediumCenter = mediumLeft {
+mediumCenter = frame : mediumLeft {
   left: 20px,
   top: 117px,
   layout.align-items: .center,
 
   mediumSubtitle {
-    fill[0].color: rgb(9.8%, 9.8%, 9.8%, 70%),
     align: .center
   }
 
@@ -67,7 +66,7 @@ smallSubtitle = text {
 }
 
 @variant
-smallCenter = smallLeft {
+smallCenter = frame : smallLeft {
   left: -267.28px,
   top: 113px,
   layout.align-items: .center,
@@ -107,7 +106,7 @@ largeSubtitle = text {
 }
 
 @variant
-largeCenter = largeLeft {
+largeCenter = frame : largeLeft {
   left: 287.708px,
   top: 166.3172px,
   layout.align-items: .center,

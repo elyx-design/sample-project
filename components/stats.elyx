@@ -11,7 +11,7 @@ export stats = frame {
   children: [topDivider, row, bottomDivider]
 }
 
-topDivider = divider.horizontal {left: 0px, top: 0px, width: 100%}
+topDivider = frame : divider.horizontal {left: 0px, top: 0px, width: 100%}
 
 row = frame {
   left: 0px,
@@ -55,7 +55,7 @@ booksLabel = text {
   align: .center
 }
 
-booksDivider = divider.vertical {left: 20px, top: 701px, width: 100%}
+booksDivider = frame : divider.vertical {left: 20px, top: 701px, width: 100%}
 
 pages = frame {
   left: 0px,
@@ -91,7 +91,7 @@ pagesLabel = text {
   align: .center
 }
 
-pagesDivider = divider.vertical {left: 0px, top: 681px, width: 100%}
+pagesDivider = frame : divider.vertical {left: 0px, top: 681px, width: 100%}
 
 rating = frame {
   left: 0px,
@@ -127,7 +127,7 @@ ratingLabel = text {
   align: .center
 }
 
-ratingDivider = divider.vertical {left: 20px, top: 701px, width: 100%}
+ratingDivider = frame : divider.vertical {left: 20px, top: 701px, width: 100%}
 
 shelves = frame {
   left: 20px,
@@ -163,4 +163,4 @@ shelvesLabel = text {
   align: .center
 }
 
-bottomDivider = divider.horizontal {left: 20px, top: 20px, width: 100%}
+bottomDivider = frame : divider.horizontal {left: 20px, top: 20px, width: 100%}

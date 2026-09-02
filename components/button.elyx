@@ -426,12 +426,3 @@ play20svg = icon {
   fill: Colors.colors.blackAlpha70,
   contents: play20
 }
-
-shape2 = shape {
-  left: 876px,
-  top: 583px,
-  width: 910px,
-  height: 521px,
-  fill: rgb(80%, 80%, 80%),
-  type: .rect
-}

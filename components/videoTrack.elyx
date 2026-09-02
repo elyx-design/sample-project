@@ -29,9 +29,9 @@ leadingGrip = shape {
   top: 532px,
   width: 2px,
   height: 16px,
-  fill: colors.colors.blackAlpha25,
-  corner-radius: radius.radius.full,
-  type: .rect
+  fill: rgb(0%, 0%, 0%, 25%),
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 filmstrip = frame {
@@ -83,7 +83,7 @@ trailingGrip = shape {
   top: 532px,
   width: 2px,
   height: 16px,
-  fill: colors.colors.blackAlpha25,
-  corner-radius: radius.radius.full,
-  type: .rect
+  fill: rgb(0%, 0%, 0%, 25%),
+  type: .rect,
+  corner-radius: radius.radius.full
 }

@@ -10,13 +10,13 @@ export timelineRuler = frame {
   children: [marker0, marker1, marker2, marker3]
 }
 
-marker0 = timeMarker {left: 0px, top: 495px, width: 100%}
+marker0 = frame : timeMarker {left: 0px, top: 495px, width: 100%}
 
-marker1 = timeMarker {left: 20px, top: 515px, width: 100%}
+marker1 = frame : timeMarker {left: 20px, top: 515px, width: 100%}
 
-marker2 = timeMarker {left: 29px, top: 515px, width: 100%}
+marker2 = frame : timeMarker {left: 29px, top: 515px, width: 100%}
 
-marker3 = timeMarker {left: 38px, top: 515px, width: 100%}
+marker3 = frame : timeMarker {left: 38px, top: 515px, width: 100%}
 
 export timeMarker = frame {
   left: 609px,
@@ -50,8 +50,8 @@ majorTick = shape {
   width: 1px,
   height: 3px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 firstMinorTick = shape {
@@ -60,8 +60,8 @@ firstMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 secondMinorTick = shape {
@@ -70,8 +70,8 @@ secondMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 thirdMinorTick = shape {
@@ -80,8 +80,8 @@ thirdMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 fourthMinorTick = shape {
@@ -90,8 +90,8 @@ fourthMinorTick = shape {
   width: 1px,
   height: 2px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 fifthMinorTick = shape {
@@ -100,8 +100,8 @@ fifthMinorTick = shape {
   width: 1px,
   height: 1px,
   fill: colors.colors.whiteAlpha50,
-  corner-radius: radius.radius.full,
-  type: .rect
+  type: .rect,
+  corner-radius: radius.radius.full
 }
 
 label = text {

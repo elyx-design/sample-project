@@ -15,11 +15,11 @@ export medium = frame {
   children: [leadingSegment, middleSegment, trailingSegment]
 }
 
-leadingSegment = mediumSelected {left: 0px, top: 10px, width: 100%}
+leadingSegment = frame : mediumSelected {left: 0px, top: 10px, width: 100%}
 
-middleSegment = mediumInactive {left: 0px, top: 30px, width: 100%}
+middleSegment = frame : mediumInactive {left: 0px, top: 30px, width: 100%}
 
-trailingSegment = mediumInactive {left: 0px, top: 30px, width: 100%}
+trailingSegment = frame : mediumInactive {left: 0px, top: 30px, width: 100%}
 
 export mediumSelected = frame {
   left: 623px,
@@ -61,7 +61,7 @@ label = text {
 }
 
 @variant
-mediumInactive = mediumSelected {
+mediumInactive = frame : mediumSelected {
   left: 623px,
   top: 812px,
   border[0].visible: .false,
@@ -73,7 +73,7 @@ mediumInactive = mediumSelected {
 }
 
 @variant
-small = medium {
+small = frame : medium {
   left: 913px,
   top: 656px,
   width: .auto,
@@ -89,7 +89,7 @@ small = medium {
 }
 
 @variant
-smallInactive = mediumSelected {
+smallInactive = frame : mediumSelected {
   left: 726px,
   top: 812px,
   height: .auto,
@@ -105,7 +105,7 @@ smallInactive = mediumSelected {
 }
 
 @variant
-smallSelected = mediumSelected {
+smallSelected = frame : mediumSelected {
   left: 726px,
   top: 736px,
   height: .auto,
@@ -113,4 +113,4 @@ smallSelected = mediumSelected {
   padding-bottom: Spacing.padding.xsmall
 }
 
-smallLeadingSegment = smallSelected {left: 0px, top: 6.5px, width: 100%}
+smallLeadingSegment = frame : smallSelected {left: 0px, top: 6.5px, width: 100%}
