@@ -1,14 +1,15 @@
 import "images/background/plain.jpg" as plain
 import "blocks/siteFooter.elyx" as siteFooter
 import "tokens/spacing.elyx" as spacing
+import "tokens/colors.elyx" as colors
 
 export Footer = frame {
   left: 183px,
   top: 312px,
-  width: 1478px,
-  height: 738px,
+  width: 1440px,
+  height: 810px,
   layout: {justify-content: .center, align-items: .center},
-  fill: {image: {ref: plain}},
+  fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: plain}}],
   padding-top: 0px,
   padding-left: spacing.padding.xxlarge,
   padding-right: spacing.padding.xxlarge,

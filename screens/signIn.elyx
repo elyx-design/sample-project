@@ -8,10 +8,10 @@ import "images/background/desert.png" as desert
 export signInScreen = frame {
   left: -16px,
   top: 147px,
-  width: 1280px,
-  height: 960px,
+  width: 1440px,
+  height: 810px,
   layout: {direction: .column, align-items: .center, item-gap: 48px},
-  fill: {image: {ref: desert}},
+  fill: [Colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: desert}}],
   padding-top: 0px,
   children: content
 }
@@ -38,7 +38,7 @@ activeUsers = frame : profileGroup.labelBottom {
   top: 962px,
 
   profileGroup.bottomCount.bottomCountText {
-    fill[0].color: Colors.colors.whiteAlpha70,
+    fill[0].color: Colors.primitives.white70,
     contents: "+28k online"
   }
 }
@@ -53,19 +53,19 @@ footerLinks = frame {
 }
 
 privacy = text {
-  fill: Colors.colors.white100,
+  fill: Colors.primitives.white50,
   contents: Strings.navigation.privacy,
   font-size: Spacing.fontSize.small
 }
 
 terms = text {
-  fill: Colors.colors.white100,
+  fill: Colors.primitives.white50,
   contents: Strings.navigation.terms,
   font-size: Spacing.fontSize.small
 }
 
 help = text {
-  fill: Colors.colors.white100,
+  fill: Colors.primitives.white50,
   contents: Strings.navigation.help,
   font-size: Spacing.fontSize.small
 }

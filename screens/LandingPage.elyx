@@ -15,15 +15,15 @@ import "icons/24 pixels/mug-24.svg" as mug24
 export LandingPage = frame {
   left: -5px,
   top: 137px,
-  width: 1605px,
-  height: 940px,
+  width: 1440px,
+  height: 810px,
   layout: {
     direction: .column,
     justify-content: .space-between,
     align-items: .center,
     item-gap: 116px
   },
-  fill: {image: {ref: night}},
+  fill: [colors.colors.white100, {mix-blend-mode: .multiply, image: {ref: night}}],
   padding-top: Spacing.padding.xxlarge,
   padding-bottom: Spacing.padding.xxlarge,
   children: [top, frame3]

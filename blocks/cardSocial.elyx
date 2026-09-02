@@ -103,6 +103,7 @@ profileInfo = frame {
 profileSummary = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
+  overflow: .visible,
   children: [profileIdentity, bio]
 }
 

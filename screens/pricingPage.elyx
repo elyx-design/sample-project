@@ -11,10 +11,25 @@ import "images/background/sea.jpg" as sea
 export pricingPage = frame {
   left: 130.5px,
   top: 163px,
-  width: 1415px,
-  height: 925px,
-  fill: {image: {ref: sea}},
-  children: [pricingCards, pricingHeader]
+  width: 1440px,
+  height: 810px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 34px},
+  fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: sea}}],
+  children: [pricingHeader, pricingCards]
+}
+
+pricingHeader = frame : header.mediumCenter {
+  left: 472.5px,
+  top: 121px,
+  width: .auto,
+
+  header.mediumSubtitle {
+    contents: Strings.pricingPage.description
+  }
+
+  header.mediumTitle {
+    contents: Strings.pricingPage.title
+  }
 }
 
 pricingCards = frame {
@@ -128,20 +143,6 @@ businessPlan = frame : planCard.planCard {
 
   planCard.planContent.planSummary.planHeader.planName {
     contents: Strings.plans.business
-  }
-}
-
-pricingHeader = frame : header.mediumCenter {
-  left: 472.5px,
-  top: 121px,
-  width: .auto,
-
-  header.mediumSubtitle {
-    contents: Strings.pricingPage.description
-  }
-
-  header.mediumTitle {
-    contents: Strings.pricingPage.title
   }
 }
 

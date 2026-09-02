@@ -19,12 +19,11 @@ import "images/thumbnails/thumb10.jpg" as thumb10
 import "images/thumbnails/thumb11.jpg" as thumb11
 import "images/thumbnails/thumb12.jpg" as thumb12
 
-@with-context()
 export MovieUI = frame {
   left: 396px,
   top: 257px,
-  width: 1404px,
-  height: 844px,
+  width: 1440px,
+  height: 810px,
   layout: {direction: .column, align-items: .center},
   fill: .black,
   padding-top: 0px,
@@ -109,7 +108,7 @@ GroupedStack_13 = frame {
   left: 0px,
   top: 0px,
   width: 100%,
-  height: 290px,
+  height: 280px,
   layout: {
     direction: .column,
     justify-content: .center,
@@ -134,8 +133,8 @@ GroupedStack_2 = frame {
 text1 = text {
   left: 656px,
   top: 852px,
-  fill: colors.colors.white100,
-  contents: "Silent Hues ",
+  fill: colors.primitives.white,
+  contents: "Silent Hues",
   font-size: Spacing.fontSize.xxxlarge,
   font-style: "SemiBold"
 }
@@ -173,7 +172,7 @@ horizontal = frame : divider.horizontal {
   padding-bottom: 0px,
 
   divider.horizontalLine {
-    fill[0].color: colors.colors.whiteAlpha50
+    fill[0].color: colors.primitives.white50
   }
 }
 
@@ -200,12 +199,12 @@ productInfo_2 = frame : productInfo.productInfo {
   }
 
   productInfo.productDetails.productCopy.subtitle {
-    fill[0].color: colors.colors.whiteAlpha50,
+    fill[0].color: colors.primitives.white70,
     contents: "by Amara Vale"
   }
 
   productInfo.productDetails.productCopy.productName {
-    fill[0].color: colors.colors.white100,
+    fill[0].color: colors.primitives.white,
     contents: "Silent Hues"
   }
 
@@ -232,7 +231,7 @@ text2 = text {
   left: 0px,
   top: 826px,
   width: 100%,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.labels.synopsis,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
@@ -242,7 +241,7 @@ text3 = text {
   left: 0px,
   top: 846px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "A rising performance artist begins to lose the line between the faces she paints and the self underneath. As each new piece grows bolder, so does the fracture between who she shows the world and who she has left in private. Chroma is an intimate portrait of identity, spectacle, and the cost of being seen.",
   font-style: "Light",
   line-height: Spacing.lineHeight.relaxed
@@ -256,7 +255,7 @@ horizontal_2 = frame : divider.horizontal {
   padding-bottom: 0px,
 
   divider.horizontalLine {
-    fill[0].color: colors.colors.whiteAlpha50
+    fill[0].color: colors.primitives.white50
   }
 }
 
@@ -280,7 +279,7 @@ text4 = text {
   left: 0px,
   top: 826px,
   width: 100%,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.labels.starring,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
@@ -288,14 +287,14 @@ text4 = text {
 
 actors = frame {
   width: 100%,
-  layout: {direction: .column, item-gap: Spacing.gap.xxsmall},
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
   children: [GroupedStack_3, GroupedStack_4, GroupedStack_5, GroupedStack_6]
 }
 
 GroupedStack_3 = frame {
   width: 100%,
-  layout: {item-gap: Spacing.gap.small},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_3, text5]
 }
@@ -318,17 +317,16 @@ text5 = text {
   left: 0px,
   top: -1814px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "Nia Okafor",
-  font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  font-style: "Light"
 }
 
 GroupedStack_4 = frame {
   left: 20px,
   top: 83px,
   width: 100%,
-  layout: {item-gap: Spacing.gap.small},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_4, text6]
 }
@@ -351,17 +349,16 @@ text6 = text {
   left: 0px,
   top: -1814px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "Daniel Reyes",
-  font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  font-style: "Light"
 }
 
 GroupedStack_5 = frame {
   left: 40px,
   top: 103px,
   width: 100%,
-  layout: {item-gap: Spacing.gap.small},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_5, text7]
 }
@@ -384,17 +381,16 @@ text7 = text {
   left: 0px,
   top: -1814px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "Simone Clarke",
-  font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  font-style: "Light"
 }
 
 GroupedStack_6 = frame {
   left: 60px,
   top: 123px,
   width: 100%,
-  layout: {item-gap: Spacing.gap.small},
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
   children: [xsmall_6, text8]
 }
@@ -417,10 +413,9 @@ text8 = text {
   left: 0px,
   top: -1814px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "Grace Lin",
-  font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  font-style: "Light"
 }
 
 Synopsis_3 = frame {
@@ -436,7 +431,7 @@ text9 = text {
   left: 0px,
   top: 826px,
   width: 100%,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.labels.castAndCrew,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
@@ -455,7 +450,7 @@ text10 = text {
   left: 0px,
   top: -1814px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "Director: Amara Vale\nWritten by: Amara Vale, Julian Foss\nProduced by: Rina Kapoor, Marcus Bell\nCinematography: Yusuf Adeyemi\nOriginal Score: Lena Vasquez",
   font-style: "Light",
   line-height: Spacing.lineHeight.relaxed
@@ -469,7 +464,7 @@ horizontal_3 = frame : divider.horizontal {
   padding-bottom: 0px,
 
   divider.horizontalLine {
-    fill[0].color: colors.colors.whiteAlpha50
+    fill[0].color: colors.primitives.white50
   }
 }
 
@@ -486,7 +481,7 @@ text12 = text {
   left: 0px,
   top: 846px,
   width: 100%,
-  fill: colors.colors.whiteAlpha70,
+  fill: colors.primitives.white70,
   contents: "Critics: 89% Fresh • Audience: 76% • IMDb: 7.8 / 10 • Metascore: 82",
   font-style: "Light",
   line-height: Spacing.lineHeight.relaxed
@@ -503,7 +498,7 @@ text11 = text {
   left: 901.2px,
   top: 141px,
   width: 100%,
-  fill: colors.colors.white100,
+  fill: colors.primitives.white,
   contents: Strings.labels.gallery,
   font-size: Spacing.fontSize.large,
   font-style: "Bold"
@@ -570,10 +565,4 @@ thumbnailImage_4 = frame : thumbnailImage.thumbnailImage {
   thumbnailImage.actions {
     display: .hidden
   }
-}
-
-xsmall_2 = frame : avatar.xsmallVariant {
-  left: 324px,
-  top: 550px,
-  overrides: [remove(avatar.smallStatus_2), remove(avatar.photoBG)]
 }

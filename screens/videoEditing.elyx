@@ -82,8 +82,8 @@ marker9 = frame : timelineRuler.timeMarker {
 export videoEditing = frame {
   left: -689px,
   top: -230px,
-  width: 1138px,
-  height: 663px,
+  width: 1440px,
+  height: 810px,
   layout: {justify-content: .center},
   fill: Colors.primitives.black,
   children: [editingSidebar, workspace]

@@ -9,10 +9,10 @@ import "blocks/sidebar.elyx" as sidebar
 export AIChat = frame {
   left: 180px,
   top: 303px,
-  width: 1360px,
-  height: 776px,
+  width: 1440px,
+  height: 810px,
   layout: {align-items: .center},
-  fill: {image: {ref: waves}},
+  fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: waves}}],
   padding: Spacing.padding.medium,
   children: [sidebar_3, layer1]
 }

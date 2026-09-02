@@ -13,8 +13,8 @@ import "images/misc/bikeBGBanner.jpg" as bikeBGBanner
 export liveEvent = frame {
   left: -642.9999px,
   top: -511px,
-  width: 1524px,
-  height: 798px,
+  width: 1440px,
+  height: 810px,
   layout: {direction: .column, align-items: .center},
   fill: colors.colors.white100,
   children: [siteHeader_2, Content]
