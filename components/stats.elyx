@@ -7,6 +7,7 @@ export stats = frame {
   left: 396px,
   top: 630px,
   width: 100%,
+  min-width: 360px,
   layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.small},
   children: [topDivider, row, bottomDivider]
 }

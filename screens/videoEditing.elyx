@@ -17,7 +17,6 @@ import "icons/24 pixels/music-24.svg" as music24
 import "icons/24 pixels/text-24.svg" as text24
 import "blocks/sidebar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
-import "components/playHead.elyx" as playHead
 
 marker8 = frame : timelineRuler.timeMarker {
   left: 306.508px,
@@ -379,9 +378,44 @@ titleTrack = frame : mediaTrack.track {
   }
 }
 
-timelinePlayHead = frame : playHead.playHead {
+timelinePlayHead = frame {
   left: 385px,
   top: -5px,
+  width: 12px,
   height: 281px,
-  ignore-stack: .true
+  ignore-stack: .true,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  padding-top: Spacing.padding.medium,
+  children: [line, handle]
+}
+
+line = shape {
+  left: 6px,
+  top: 0px,
+  width: 2px,
+  height: 100%,
+  fill: [
+    Colors.colors.lime,
+    {
+      linear-gradient: {
+        from: point(50%, 88.7466%),
+        to: point(50%, 100%),
+        stops: [stop(0%, .transparent), stop(100%, Colors.gradients.overlayEnd)]
+      }
+    }
+  ],
+  border: {color: Colors.colors.blackAlpha70, width: 0.5px, position: .outside},
+  type: .rect
+}
+
+handle = shape {
+  left: 0px,
+  top: 0px,
+  width: 12px,
+  height: 12px,
+  ignore-stack: .true,
+  fill: Colors.colors.blackAlpha70,
+  border: {color: Colors.colors.lime, width: 2px},
+  type: .ellipse
 }
