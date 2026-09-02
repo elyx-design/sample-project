@@ -42,7 +42,7 @@ export sidebar = frame : cardBackground.transparent {
 
 @variant
 compact = frame {
-  left: 539.2797px,
+  left: 498px,
   top: 0px,
   width: 60px,
   height: 456px,
@@ -226,8 +226,8 @@ shape2 = icon {left: 48px, top: 30px, width: 20px, height: 20px, contents: sideB
 
 @variant
 sidebarLiveEvent = frame : sidebar {
-  left: -123px,
-  top: 712px,
+  left: 151.53px,
+  top: 0px,
   width: 232px,
   padding-top: Spacing.padding.medium,
   padding-left: Spacing.padding.large,

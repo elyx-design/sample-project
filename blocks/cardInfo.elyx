@@ -8,11 +8,12 @@ import "components/avatar.elyx" as avatar
 import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
-export reviewCard = cardBackground.base {
+export reviewCard = frame : cardBackground.base {
   left: 693px,
   top: 267px,
   width: 370px,
   height: 470px,
+  border[0].color: colors.primitives.black25,
   fill[0].image.ref: nightMountain,
   layout.item-gap: Spacing.gap.xlarge,
   layout.justify-content: .space-between,
@@ -22,73 +23,77 @@ export reviewCard = cardBackground.base {
 reviewFooter = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.huge},
+  overflow: .visible,
   children: [reviewInfo, readReviewButton]
 }
 
 reviewInfo = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
+  overflow: .visible,
   children: [reviewHeader, tags]
 }
 
-reviewHeader = header.mediumLeft {
+reviewHeader = frame : header.mediumLeft {
   left: 768px,
   top: 512px,
 
   header.mediumSubtitle {
     contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure.",
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70
   }
 
   header.mediumTitle {
     contents: "A Breathtaking Escape",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 }
 
 tags = frame {
   width: 100%,
   layout: {item-gap: Spacing.gap.small},
+  overflow: .visible,
   slot: .true,
   restrict-children: .true,
   children: [ratingTag, thrillerTag, dramaTag]
 }
 
-ratingTag = tag.iconAndLabel {
+ratingTag = frame : tag.iconAndLabel {
   left: 765px,
   top: 726px,
+  overflow: .visible,
 
   tag.label {
     contents: "4.2",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 
   tag.tagIcon {
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 }
 
-thrillerTag = tag.base {
+thrillerTag = frame : tag.base {
   left: 785px,
   top: 746px,
 
   tag.label {
     contents: "Thriller",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 }
 
-dramaTag = tag.base {
+dramaTag = frame : tag.base {
   left: 785px,
   top: 827.25px,
 
   tag.label {
     contents: "Drama",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 }
 
-readReviewButton = button.medium {
+readReviewButton = frame : button.medium {
   left: 0px,
   top: 165px,
 
@@ -104,7 +109,7 @@ reviewAuthor = frame {
   children: [small, closeButton]
 }
 
-small = avatar.smallPhoto {
+small = frame : avatar.smallPhoto {
   left: 786px,
   top: 143px,
 
@@ -113,4 +118,8 @@ small = avatar.smallPhoto {
   }
 }
 
-closeButton = button.smallClose {left: 1097px, top: 291px}
+closeButton = frame : button.smallClose {
+  left: 1097px,
+  top: 291px,
+  fill[0].color: colors.primitives.white70
+}

@@ -5,7 +5,7 @@ import "tokens/colors.elyx" as colors
 import "components/product.elyx" as product
 import "blocks/productInfo.elyx" as productInfo
 
-export productGallery = cardBackground.base {
+export productGallery = frame : cardBackground.base {
   left: 177px,
   top: 240px,
   width: 888px,
@@ -24,7 +24,7 @@ productList = frame {
   children: [designBook, candyBook, seaLifeBook, wildlifeBook]
 }
 
-designBook = productInfo.productInfo {
+designBook = frame : productInfo.productInfo {
   left: -167px,
   top: 300px,
   width: .auto,
@@ -33,20 +33,20 @@ designBook = productInfo.productInfo {
     contents: "by Alicia Puma"
   }
 
-  productInfo.productDetails.productCopy.productName {
-    contents: "Design",
-    width: 155px
-  }
-
   productInfo.productDetails.ratingTag {
     overflow: .visible
+  }
+
+  productInfo.productDetails.productCopy.productName {
+    width: 155px,
+    contents: "Design"
   }
 
   @use-variant(product.productFive)
   productInfo.productPreview {}
 }
 
-candyBook = productInfo.productInfo {
+candyBook = frame : productInfo.productInfo {
   left: -147px,
   top: 320px,
   width: .auto,
@@ -60,15 +60,15 @@ candyBook = productInfo.productInfo {
   }
 
   productInfo.productDetails.productCopy.productName {
-    contents: "The Delicious Book of Candy",
-    width: 155px
+    width: 155px,
+    contents: "The Delicious Book of Candy"
   }
 
   @use-variant(product.productFour)
   productInfo.productPreview {}
 }
 
-seaLifeBook = productInfo.productInfo {
+seaLifeBook = frame : productInfo.productInfo {
   left: 77px,
   top: 320px,
   width: .auto,
@@ -82,15 +82,15 @@ seaLifeBook = productInfo.productInfo {
   }
 
   productInfo.productDetails.productCopy.productName {
-    contents: "Sea Life",
-    width: 155px
+    width: 155px,
+    contents: "Sea Life"
   }
 
   @use-variant(product.productThree)
   productInfo.productPreview {}
 }
 
-wildlifeBook = productInfo.productInfo {
+wildlifeBook = frame : productInfo.productInfo {
   left: 301px,
   top: 320px,
   width: .auto,
@@ -104,8 +104,8 @@ wildlifeBook = productInfo.productInfo {
   }
 
   productInfo.productDetails.productCopy.productName {
-    contents: "Widlife",
-    width: 155px
+    width: 155px,
+    contents: "Widlife"
   }
 
   @use-variant(product.productTwo)

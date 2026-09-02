@@ -247,6 +247,8 @@ mediumIcon = frame : medium {
   left: 1368px,
   top: 689px,
   width: Spacing.size.medium,
+  padding-left: 0px,
+  padding-right: 0px,
   overrides: [insert(mediumIconGlyph, after = .nil), remove(mediumLabel)]
 }
 
@@ -255,6 +257,8 @@ mediumClose = frame : medium {
   left: 1291px,
   top: 689px,
   width: Spacing.size.medium,
+  padding-left: 0px,
+  padding-right: 0px,
   border[0].visible: .false,
   fill[0].color: Colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
@@ -268,6 +272,8 @@ smallIconBackground = frame : small {
   left: 1277px,
   top: 917px,
   width: Spacing.size.small,
+  padding-left: 0px,
+  padding-right: 0px,
   overrides: [insert(smallBackgroundIcon, after = .nil), remove(smallLabel)]
 }
 
@@ -276,6 +282,8 @@ smallClose = frame : small {
   left: 1210px,
   top: 917px,
   width: Spacing.size.small,
+  padding-left: 0px,
+  padding-right: 0px,
   border[0].visible: .false,
   fill[0].color: Colors.colors.whiteAlpha50,
   filter[0].radius: 40px,
@@ -302,7 +310,14 @@ mediumCloseIcon = icon {
   contents: close24
 }
 
-smallCloseIcon = icon {left: 1211px, top: 918px, width: 20px, height: 20px, contents: close20}
+smallCloseIcon = icon {
+  left: 1211px,
+  top: 918px,
+  width: 20px,
+  height: 20px,
+  fill: Colors.colors.black20,
+  contents: close20
+}
 
 mediumIconGlyph = icon {
   left: 1353px,
@@ -318,6 +333,8 @@ smallPrimaryRounded = frame : small {
   left: 1344px,
   top: 917px,
   width: Spacing.size.small,
+  padding-left: 0px,
+  padding-right: 0px,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
   fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
   overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(smallLabel)]
@@ -337,6 +354,8 @@ smallIcon = frame : small {
   left: 1417px,
   top: 917px,
   width: Spacing.size.small,
+  padding-left: 0px,
+  padding-right: 0px,
   border[0]: .nil,
   fill[0]: .nil,
   overrides: [insert(smallIconGlyph, after = .nil), remove(smallLabel)],
@@ -357,6 +376,8 @@ mediumPrimaryRounded = frame : medium {
   left: 1445px,
   top: 689px,
   width: Spacing.size.medium,
+  padding-left: 0px,
+  padding-right: 0px,
   border[0].color: Colors.colors.black20,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
   fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,

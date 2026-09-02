@@ -1,5 +1,6 @@
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
+import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
 import "components/button.elyx" as button
 import "icons/20 pixels/play-20.svg" as play20
@@ -7,7 +8,7 @@ import "icons/20 pixels/more-20.svg" as more20
 import "icons/20 pixels/heart-20.svg" as heart20
 import "icons/20 pixels/settings-20.svg" as settings20
 
-export playbackControl = cardBackground.none {
+export playbackControl = frame : cardBackground.none {
   left: 669px,
   top: 522px,
   width: 359px,
@@ -35,7 +36,7 @@ tools = frame {
   children: [settingsButton, likeButton, moreButton]
 }
 
-settingsButton = button.smallIcon {
+settingsButton = frame : button.smallIcon {
   left: 264.5px,
   top: 8.5px,
 
@@ -44,7 +45,7 @@ settingsButton = button.smallIcon {
   }
 }
 
-likeButton = button.smallIcon {
+likeButton = frame : button.smallIcon {
   left: 284.5px,
   top: 28.5px,
 
@@ -53,7 +54,7 @@ likeButton = button.smallIcon {
   }
 }
 
-moreButton = button.smallIcon {
+moreButton = frame : button.smallIcon {
   left: 284.5px,
   top: 28.5px,
 
@@ -65,7 +66,7 @@ moreButton = button.smallIcon {
 playbackTime = text {
   left: 722px,
   top: 543px,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: "0:00 / 32:46",
   font-size: spacing.fontSize.small
 }
@@ -77,7 +78,7 @@ scrubber = frame {
   children: [playButton, progressSlider]
 }
 
-playButton = button.smallIcon {
+playButton = frame : button.smallIcon {
   left: 737px,
   top: 580px,
 
@@ -86,4 +87,4 @@ playButton = button.smallIcon {
   }
 }
 
-progressSlider = slider.base {left: 0px, top: 636px, width: 100%}
+progressSlider = frame : slider.base {left: 0px, top: 636px, width: 100%}

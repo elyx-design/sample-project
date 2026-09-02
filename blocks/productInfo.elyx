@@ -12,7 +12,7 @@ export productInfo = frame {
   children: [productPreview, productDetails]
 }
 
-productPreview = product.product {left: -30.85px, top: -42.3893px}
+productPreview = frame : product.product {left: -30.85px, top: -42.3893px}
 
 productDetails = frame {
   width: 100%,
@@ -31,7 +31,7 @@ productName = text {
   left: 0px,
   top: 344px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.componentDefaults.productName,
   font-size: Spacing.fontSize.xlarge,
   font-style: "SemiBold"
@@ -47,7 +47,7 @@ subtitle = text {
   font-style: "Medium"
 }
 
-ratingTag = tag.iconAndLabel {
+ratingTag = frame : tag.iconAndLabel {
   left: 18.2196px,
   top: 229.1186px,
   fill[0].color: colors.colors.yellowAlpha50,

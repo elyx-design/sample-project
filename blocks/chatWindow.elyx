@@ -30,7 +30,7 @@ messageThread = frame {
   children: [userMessage, replyMessages]
 }
 
-userMessage = chatBubble.user {
+userMessage = frame : chatBubble.user {
   left: 1px,
   top: 0px,
   layout.justify-content: .end,
@@ -47,27 +47,27 @@ replyMessages = frame {
   children: [firstReply, secondReply]
 }
 
-firstReply = chatBubble.base {
+firstReply = frame : chatBubble.base {
   left: 0px,
   top: 74px,
 
   chatBubble.message.messageText {
-    contents: "Yeah, it's true!",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.colors.white100,
+    contents: "Yeah, it's true!"
   }
 }
 
-secondReply = chatBubble.base {
+secondReply = frame : chatBubble.base {
   left: 20px,
   top: 94px,
 
   chatBubble.message.messageText {
-    contents: "Incredible pace out there",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.colors.white100,
+    contents: "Incredible pace out there"
   }
 }
 
-messageField = textField.buttonPlaceholder {
+messageField = frame : textField.buttonPlaceholder {
   left: 827px,
   top: 524px,
 
@@ -77,7 +77,7 @@ messageField = textField.buttonPlaceholder {
 }
 
 @variant
-liveChat = chatWindow {
+liveChat = frame : chatWindow {
   left: 659px,
   top: 605px,
   height: 455px,
@@ -167,7 +167,7 @@ text2 = text {
   align: .right
 }
 
-medium_2 = segmentedControl.small {
+medium_2 = frame : segmentedControl.small {
   left: 8px,
   top: 29px,
   width: 100%,
@@ -196,25 +196,30 @@ chat = frame {
   children: [base, base_2, base_4, base_3]
 }
 
-base = chatBubble.liveBubble {
+base = frame : chatBubble.liveBubble {
   left: 0px,
   top: 894px,
   width: 100%,
 
+  chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: colors.colors.pink,
+    contents: "oasis_rider"
+  }
+
   chatBubble.messageText_2 {
     contents: "This is cycling history right here"
   }
-
-  chatBubble.GroupedStack.messageText_3 {
-    contents: "oasis_rider",
-    fill[0].color: colors.colors.pink
-  }
 }
 
-base_2 = chatBubble.liveBubble {
+base_2 = frame : chatBubble.liveBubble {
   left: 20px,
   top: 914px,
   width: 100%,
+
+  chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: colors.colors.purple,
+    contents: "Mirage_FC"
+  }
 
   chatBubble.messageText_2 {
     contents: "Chahold this break to the finish please"
@@ -223,17 +228,17 @@ base_2 = chatBubble.liveBubble {
   chatBubble.GroupedStack.messageText_4 {
     contents: "14:12"
   }
-
-  chatBubble.GroupedStack.messageText_3 {
-    contents: "Mirage_FC",
-    fill[0].color: colors.colors.purple
-  }
 }
 
-base_4 = chatBubble.liveBubble {
+base_4 = frame : chatBubble.liveBubble {
   left: 0px,
   top: 986px,
   width: 100%,
+
+  chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: colors.colors.cyan,
+    contents: "joana.rd"
+  }
 
   chatBubble.messageText_2 {
     contents: "that crosswind s going to do damage. 4 so far because of the heat"
@@ -242,17 +247,17 @@ base_4 = chatBubble.liveBubble {
   chatBubble.GroupedStack.messageText_4 {
     contents: "14:10"
   }
-
-  chatBubble.GroupedStack.messageText_3 {
-    contents: "joana.rd",
-    fill[0].color: colors.colors.cyan
-  }
 }
 
-base_3 = chatBubble.liveBubble {
+base_3 = frame : chatBubble.liveBubble {
   left: 40px,
   top: 934px,
   width: 100%,
+
+  chatBubble.GroupedStack.messageText_3 {
+    fill[0].color: colors.colors.green,
+    contents: "MODYara"
+  }
 
   chatBubble.messageText_2 {
     contents: "he will blow up before the climb"
@@ -260,11 +265,6 @@ base_3 = chatBubble.liveBubble {
 
   chatBubble.GroupedStack.messageText_4 {
     contents: "14:09"
-  }
-
-  chatBubble.GroupedStack.messageText_3 {
-    contents: "MODYara",
-    fill[0].color: colors.colors.green
   }
 }
 
@@ -279,7 +279,7 @@ footer = frame {
   children: [messageField_2, medium]
 }
 
-messageField_2 = textField.buttonPlaceholder {
+messageField_2 = frame : textField.buttonPlaceholder {
   left: 0px,
   top: -48px,
 
@@ -288,7 +288,7 @@ messageField_2 = textField.buttonPlaceholder {
   }
 }
 
-medium = button.mediumIcon {
+medium = frame : button.mediumIcon {
   left: 0px,
   top: -56.5px,
 

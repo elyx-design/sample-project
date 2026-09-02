@@ -42,7 +42,9 @@ export colors = tokens {
 export primitives = tokens {
   white: .white,
   white50: rgb(100%, 100%, 100%, 50%),
-  black: rgb(9%, 9%, 9%)
+  black: rgb(9%, 9%, 9%),
+  white70: rgb(100%, 100%, 100%, 70%),
+  black25: rgb(0%, 0%, 0%, 25%)
 }
 
 export gradients = tokens {

@@ -5,7 +5,7 @@ import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
 import "components/product.elyx" as product
 
-export productCard = cardBackground.base {
+export productCard = frame : cardBackground.base {
   left: 140px,
   top: 134px,
   width: 565px,
@@ -40,7 +40,7 @@ title = text {
   left: 0px,
   top: 413px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: "Hidden Treasures",
   font-size: 28,
   font-style: "SemiBold"
@@ -93,7 +93,7 @@ progressValue = text {
   align: .right
 }
 
-progressSlider = slider.base {
+progressSlider = frame : slider.base {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -112,7 +112,7 @@ notes = frame {
 notesLabel = text {
   left: 652px,
   top: 688px,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.notes,
   font-size: Spacing.fontSize.small,
   font-style: "SemiBold"
@@ -122,10 +122,10 @@ notesBody = text {
   left: 0px,
   top: 708px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter.",
   font-size: Spacing.fontSize.small,
   line-height: Spacing.lineHeight.relaxed
 }
 
-productPreview = product.product {left: -63px, top: -86px}
+productPreview = frame : product.product {left: -63px, top: -86px}

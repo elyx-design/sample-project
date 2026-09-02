@@ -6,7 +6,7 @@ import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
 import "components/stats.elyx" as stats
 
-export profileCard = cardBackground.transparent {
+export profileCard = frame : cardBackground.transparent {
   left: 0px,
   top: 0px,
   width: 519px,
@@ -14,6 +14,7 @@ export profileCard = cardBackground.transparent {
   padding-left: 0px,
   padding-bottom: 0px,
   padding-right: 0px,
+  border[0].color: colors.primitives.black25,
   fill[0].color: colors.colors.yellowAlpha50,
   layout.item-gap: 0,
   overrides: [insert(content, after = .nil), insert(profileStats, after = content)]
@@ -39,7 +40,7 @@ profileHeader = frame {
   children: profileTitle
 }
 
-profileTitle = header.mediumLeft {
+profileTitle = frame : header.mediumLeft {
   left: 56px,
   top: 2px,
   overrides: [remove(header.mediumSubtitle)],
@@ -58,7 +59,7 @@ bio = text {
   line-height: Spacing.lineHeight.relaxed
 }
 
-profileStats = stats.stats {
+profileStats = frame : stats.stats {
   left: 0px,
   top: 157px,
   padding-top: Spacing.padding.xlarge,

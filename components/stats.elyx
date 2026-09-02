@@ -11,7 +11,15 @@ export stats = frame {
   children: [topDivider, row, bottomDivider]
 }
 
-topDivider = frame : divider.horizontal {left: 0px, top: 0px, width: 100%}
+topDivider = frame : divider.horizontal {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+
+  divider.horizontalLine {
+    fill[0].color: rgb(0%, 0%, 0%, 25%)
+  }
+}
 
 row = frame {
   left: 0px,
@@ -38,7 +46,7 @@ booksValue = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  fill: colors.colors.black20,
+  fill: colors.primitives.black,
   contents: "41",
   font-size: Spacing.fontSize.huge,
   align: .center
@@ -48,14 +56,22 @@ booksLabel = text {
   left: 0px,
   top: 39px,
   width: .auto,
-  fill: colors.colors.blackAlpha25,
+  fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.books,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
 
-booksDivider = frame : divider.vertical {left: 20px, top: 701px, width: 100%}
+booksDivider = frame : divider.vertical {
+  left: 20px,
+  top: 701px,
+  width: 100%,
+
+  divider.verticalLine {
+    fill[0].color: rgb(0%, 0%, 0%, 25%)
+  }
+}
 
 pages = frame {
   left: 0px,
@@ -74,7 +90,7 @@ pagesValue = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  fill: colors.colors.black20,
+  fill: colors.primitives.black,
   contents: "11k",
   font-size: Spacing.fontSize.huge,
   align: .center
@@ -84,14 +100,22 @@ pagesLabel = text {
   left: 0px,
   top: 39px,
   width: .auto,
-  fill: colors.colors.blackAlpha25,
+  fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.pages,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
 
-pagesDivider = frame : divider.vertical {left: 0px, top: 681px, width: 100%}
+pagesDivider = frame : divider.vertical {
+  left: 0px,
+  top: 681px,
+  width: 100%,
+
+  divider.verticalLine {
+    fill[0].color: rgb(0%, 0%, 0%, 25%)
+  }
+}
 
 rating = frame {
   left: 0px,
@@ -110,7 +134,7 @@ ratingValue = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  fill: colors.colors.black20,
+  fill: colors.primitives.black,
   contents: "4.2",
   font-size: Spacing.fontSize.huge,
   align: .center
@@ -120,14 +144,22 @@ ratingLabel = text {
   left: 0px,
   top: 39px,
   width: .auto,
-  fill: colors.colors.blackAlpha25,
+  fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.rating,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
 
-ratingDivider = frame : divider.vertical {left: 20px, top: 701px, width: 100%}
+ratingDivider = frame : divider.vertical {
+  left: 20px,
+  top: 701px,
+  width: 100%,
+
+  divider.verticalLine {
+    fill[0].color: rgb(0%, 0%, 0%, 25%)
+  }
+}
 
 shelves = frame {
   left: 20px,
@@ -146,7 +178,7 @@ shelvesValue = text {
   left: 0px,
   top: 0px,
   width: .auto,
-  fill: colors.colors.black20,
+  fill: colors.primitives.black,
   contents: "9",
   font-size: Spacing.fontSize.huge,
   align: .center
@@ -156,11 +188,19 @@ shelvesLabel = text {
   left: 0px,
   top: 39px,
   width: .auto,
-  fill: colors.colors.blackAlpha25,
+  fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.shelves,
   font-size: Spacing.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
 
-bottomDivider = frame : divider.horizontal {left: 20px, top: 20px, width: 100%}
+bottomDivider = frame : divider.horizontal {
+  left: 20px,
+  top: 20px,
+  width: 100%,
+
+  divider.horizontalLine {
+    fill[0].color: rgb(0%, 0%, 0%, 25%)
+  }
+}

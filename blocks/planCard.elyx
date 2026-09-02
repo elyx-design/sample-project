@@ -4,9 +4,9 @@ import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 import "icons/24 pixels/direct-24.svg" as direct24
-import "icons/12 pixels/dot-12.svg" as dot12
 import "components/tag.elyx" as tag
 import "images/background/dots.jpg" as dots
+import "components/listItem.elyx" as listItem
 
 export planCard = frame {
   left: 0px,
@@ -14,7 +14,7 @@ export planCard = frame {
   width: 100%,
   height: 425px,
   layout: {direction: .column, justify-content: .space-between, item-gap: 48px},
-  fill: {image: {ref: dots}},
+  fill: [{visible: .false, image: {ref: dots}}, Colors.colors.white100],
   corner-radius: Radius.radius.large,
   padding: Spacing.padding.xxlarge,
   children: [planContent, manageButton]
@@ -68,14 +68,19 @@ planName = text {
   font-style: "Bold"
 }
 
-badge = tag.iconAndLabel {
+badge = frame : tag.iconAndLabel {
   left: 67px,
   top: 37px,
   border[0].visible: .false,
   fill[0].color: Colors.colors.lavender,
 
   tag.label {
+    fill[0].color: Colors.primitives.black,
     contents: Strings.plans.best
+  }
+
+  tag.tagIcon {
+    fill[0].color: Colors.primitives.black
   }
 }
 
@@ -124,68 +129,45 @@ features = frame {
   top: 250px,
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
-  children: [projectsFeature, supportFeature, exportFeature, storageFeature]
+  slot: .true,
+  restrict-children: .true,
+  children: [projectsFeature, projectsFeature_2, projectsFeature_3, projectsFeature_4]
 }
 
-projectsFeature = frame {
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [projectsBullet, projectsLabel]
+projectsFeature = frame : listItem.projectsFeature {
+  listItem.projectsLabel {
+    contents: Strings.plans.threeProjects
+  }
 }
 
-projectsBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
+projectsFeature_2 = frame : listItem.projectsFeature {
+  left: 20px,
+  top: 45px,
 
-projectsLabel = text {
-  fill: Colors.colors.black40,
-  contents: Strings.plans.threeProjects,
-  font-size: Spacing.fontSize.medium
+  listItem.projectsLabel {
+    contents: Strings.plans.communitySupport
+  }
 }
 
-supportFeature = frame {
+projectsFeature_3 = frame : listItem.projectsFeature {
   left: 20px,
   top: 70px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [supportBullet, supportLabel]
+
+  listItem.projectsLabel {
+    contents: Strings.plans.basicExport
+  }
 }
 
-supportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
-
-supportLabel = text {
-  fill: Colors.colors.black40,
-  contents: Strings.plans.communitySupport,
-  font-size: Spacing.fontSize.medium
-}
-
-exportFeature = frame {
+projectsFeature_4 = frame : listItem.projectsFeature {
   left: 20px,
   top: 95px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [exportBullet, exportLabel]
+
+  listItem.projectsLabel {
+    contents: Strings.plans.twoGigabytesStorage
+  }
 }
 
-exportBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
-
-exportLabel = text {
-  fill: Colors.colors.black40,
-  contents: Strings.plans.basicExport,
-  font-size: Spacing.fontSize.medium
-}
-
-storageFeature = frame {
-  left: 40px,
-  top: 115px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [storageBullet, storageLabel]
-}
-
-storageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: dot12}
-
-storageLabel = text {
-  fill: Colors.colors.black40,
-  contents: Strings.plans.twoGigabytesStorage,
-  font-size: Spacing.fontSize.medium
-}
-
-manageButton = button.medium {
+manageButton = frame : button.medium {
   left: 24px,
   top: 390px,
 

@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "components/avatar.elyx" as avatar
+import "tokens/colors.elyx" as colors
 import "components/header.elyx" as header
 import "icons/24 pixels/chevron-upDown-24.svg" as chevronupDown24
 
@@ -18,9 +19,9 @@ Left = frame {
   children: [small, smallLeft]
 }
 
-small = avatar.smallPhoto {left: 0px, top: 2px}
+small = frame : avatar.smallPhoto {left: 0px, top: 2px}
 
-smallLeft = header.smallLeft {
+smallLeft = frame : header.smallLeft {
   left: 51px,
   top: 0px,
 
@@ -33,4 +34,11 @@ smallLeft = header.smallLeft {
   }
 }
 
-shape1 = icon {left: 26px, top: 8px, width: 24px, height: 24px, contents: chevronupDown24}
+shape1 = icon {
+  left: 26px,
+  top: 8px,
+  width: 24px,
+  height: 24px,
+  fill: colors.colors.black20,
+  contents: chevronupDown24
+}
