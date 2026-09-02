@@ -6,7 +6,7 @@ import "components/button.elyx" as button
 import "blocks/chatWindow.elyx" as chatWindow
 import "blocks/siteHeader.elyx" as siteHeader
 import "icons/20 pixels/pause-20.svg" as pause20
-import "blocks/sideBar.elyx" as sideBar
+import "blocks/sidebar.elyx" as sideBar
 import "components/userSummary.elyx" as userSummary
 import "images/misc/bikeBGBanner.jpg" as bikeBGBanner
 
