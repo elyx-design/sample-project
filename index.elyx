@@ -8,9 +8,17 @@ import "blocks/cardInfo.elyx" as cardInfo
 import "images/intro/introBG.png" as introBG
 import "images/intro/elyxLogo.png" as elyxLogo
 
-componentExample = frame : button.medium {left: 16px, top: 757px}
+componentExample = frame : button.medium {
+  doc: "A simple button as a component.",
+  left: -8px,
+  top: 489px
+}
 
-blockExample = frame : cardInfo.reviewCard {left: 306px, top: 757px}
+blockExample = frame : cardInfo.reviewCard {
+  doc: "A review card as a block, containing multiple components.",
+  left: 282px,
+  top: 489px
+}
 
 intro = frame {
   left: -412px,

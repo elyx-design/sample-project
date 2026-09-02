@@ -3,6 +3,10 @@ import "tokens/strings.elyx" as strings
 @context(lang="fr")
 __file__
 
+// Provides French locale overrides for the default string tokens. Keep its
+// exported group structure aligned with strings.elyx.
+__canvas__
+
 export scaffold = tokens : strings.scaffold {
   welcomeTitle: "Bienvenue dans le projet de démarrage Elyx",
   welcomeDescription: "Ce document présente les bonnes pratiques pour configurer les fichiers .elyx dans votre projet",

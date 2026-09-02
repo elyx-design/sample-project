@@ -7,6 +7,8 @@ import "components/avatarGroup.elyx" as profileGroup
 import "images/background/desert.png" as desert
 import "screens/AIchat.elyx" as AIchat
 
+// Demonstrates a complete screen composed from reusable blocks, including a
+// connection to the AI chat screen.
 @draw-connections
 __canvas__
 

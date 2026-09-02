@@ -2,6 +2,10 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 
+// Defines reusable card surfaces and variants for solid, transparent,
+// borderless, and fully rounded containers.
+__canvas__
+
 export base = frame {
   left: 80px,
   top: 467px,
