@@ -37,7 +37,7 @@ pricingCards = frame {
   children: [freePlan, proPlan, businessPlan]
 }
 
-freePlan = planCard.planCard {
+freePlan = frame : planCard.planCard {
   left: 0px,
   top: 0px,
   width: 380px,
@@ -57,7 +57,7 @@ freePlan = planCard.planCard {
   }
 }
 
-proPlan = planCard.planCard {
+proPlan = frame : planCard.planCard {
   left: 420px,
   top: 0.9999px,
   width: 380px,
@@ -70,25 +70,15 @@ proPlan = planCard.planCard {
 
   planCard.planContent.planDetails.features {
     overrides: [
-      insert(proStorageFeature, after = planCard.storageFeature),
-      insert(versionHistoryFeature, after = proStorageFeature)
+      insert(projectsFeature_4, after = planCard.projectsFeature_4),
+      insert(projectsFeature_5, after = projectsFeature_4)
     ]
   }
 
-  planCard.planContent.planDetails.features.storageFeature.storageLabel {
-    contents: Strings.plans.advancedExport
-  }
-
-  planCard.planContent.planDetails.features.exportFeature.exportLabel {
-    contents: Strings.plans.prioritySupport
-  }
-
-  planCard.planContent.planDetails.features.supportFeature.supportLabel {
-    contents: Strings.plans.fiveUsers
-  }
-
-  planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
-    contents: Strings.plans.unlimitedProjects
+  planCard.planContent.planSummary.planIcon.planGlyph {
+    left: 6px,
+    top: 33px,
+    contents: dashboard
   }
 
   planCard.planContent.planDetails.pricingCopy.description {
@@ -99,14 +89,9 @@ proPlan = planCard.planCard {
     contents: Strings.plans.pro
   }
 
-  planCard.planContent.planSummary.planIcon.planGlyph {
-    contents: dashboard,
-    left: 6px,
-    top: 33px
-  }
 }
 
-businessPlan = planCard.planCard {
+businessPlan = frame : planCard.planCard {
   left: 840px,
   top: 0px,
   width: 380px,
@@ -119,25 +104,9 @@ businessPlan = planCard.planCard {
 
   planCard.planContent.planDetails.features {
     overrides: [
-      insert(businessStorageFeature, after = planCard.storageFeature),
-      insert(adminControlsFeature, after = businessStorageFeature)
+      insert(projectsFeature_6, after = planCard.projectsFeature_4),
+      insert(projectsFeature_7, after = projectsFeature_6)
     ]
-  }
-
-  planCard.planContent.planDetails.features.storageFeature.storageLabel {
-    contents: Strings.plans.customIntegrations
-  }
-
-  planCard.planContent.planDetails.features.exportFeature.exportLabel {
-    contents: Strings.plans.dedicatedSupport
-  }
-
-  planCard.planContent.planDetails.features.supportFeature.supportLabel {
-    contents: Strings.plans.unlimitedUsers
-  }
-
-  planCard.planContent.planDetails.features.projectsFeature.projectsLabel {
-    contents: Strings.plans.everythingInPro
   }
 
   planCard.planContent.planDetails.pricingCopy.description {
@@ -152,18 +121,19 @@ businessPlan = planCard.planCard {
     overrides: [remove(planCard.badge)]
   }
 
+  planCard.planContent.planSummary.planIcon.planGlyph {
+    left: 6px,
+    top: 33px,
+    contents: processor
+  }
+
   planCard.planContent.planSummary.planHeader.planName {
     contents: Strings.plans.business
   }
 
-  planCard.planContent.planSummary.planIcon.planGlyph {
-    contents: processor,
-    left: 6px,
-    top: 33px
-  }
 }
 
-pricingHeader = header.mediumCenter {
+pricingHeader = frame : header.mediumCenter {
   left: 472.5px,
   top: 121px,
   width: .auto,
@@ -177,80 +147,38 @@ pricingHeader = header.mediumCenter {
   }
 }
 
-businessStorageFeature = frame {
-  left: 60px,
-  top: 135px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [businessStorageBullet, businessStorageLabel]
+projectsFeature_7 = frame : planCard.listItem.projectsFeature {
+  left: 40px,
+  top: 140px,
+
+  planCard.listItem.projectsLabel {
+    contents: Strings.plans.adminControls
+  }
 }
 
-businessStorageBullet = icon {
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: planCard.dot12
+projectsFeature_6 = frame : planCard.listItem.projectsFeature {
+  left: 40px,
+  top: 115px,
+
+  planCard.listItem.projectsLabel {
+    contents: Strings.plans.oneTerabyteStorage
+  }
 }
 
-businessStorageLabel = text {
-  fill: colors.colors.black40,
-  contents: Strings.plans.oneTerabyteStorage,
-  font-size: Spacing.fontSize.medium
+projectsFeature_5 = frame : planCard.listItem.projectsFeature {
+  left: 40px,
+  top: 140px,
+
+  planCard.listItem.projectsLabel {
+    contents: Strings.plans.versionHistory
+  }
 }
 
-versionHistoryFeature = frame {
-  left: 80px,
-  top: 155px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [versionHistoryBullet, versionHistoryLabel]
-}
+projectsFeature_4 = frame : planCard.listItem.projectsFeature {
+  left: 40px,
+  top: 115px,
 
-versionHistoryBullet = icon {
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: planCard.dot12
-}
-
-versionHistoryLabel = text {
-  fill: colors.colors.black40,
-  contents: Strings.plans.versionHistory,
-  font-size: Spacing.fontSize.medium
-}
-
-adminControlsFeature = frame {
-  left: 80px,
-  top: 155px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [adminControlsBullet, adminControlsLabel]
-}
-
-adminControlsBullet = icon {
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  contents: planCard.dot12
-}
-
-adminControlsLabel = text {
-  fill: colors.colors.black40,
-  contents: Strings.plans.adminControls,
-  font-size: Spacing.fontSize.medium
-}
-
-proStorageFeature = frame {
-  left: 60px,
-  top: 135px,
-  layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [proStorageBullet, proStorageLabel]
-}
-
-proStorageBullet = icon {left: 4px, top: 4px, width: 12px, height: 12px, contents: planCard.dot12}
-
-proStorageLabel = text {
-  fill: colors.colors.black40,
-  contents: Strings.plans.hundredGigabytesStorage,
-  font-size: Spacing.fontSize.medium
+  planCard.listItem.projectsLabel {
+    contents: Strings.plans.hundredGigabytesStorage
+  }
 }
