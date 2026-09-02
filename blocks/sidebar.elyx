@@ -480,7 +480,7 @@ export eventTag = frame {
   children: [status, text3]
 }
 
-status = avatar.status {left: 0px, top: 5px, fill[0].color: colors.colors.red70}
+status = shape : avatar.status {left: 0px, top: 5px, fill[0].color: colors.colors.red70}
 
 text3 = text {
   left: 15px,
