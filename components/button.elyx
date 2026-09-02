@@ -47,14 +47,14 @@ mediumLabel = text {
 }
 
 @variant
-mediumPrimary = medium {
+mediumPrimary = frame : medium {
   left: 1072px,
   top: 689px,
   border[0].color: Colors.colors.black20,
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
@@ -65,43 +65,44 @@ mediumPrimary = medium {
 }
 
 @variant
-mediumDanger = medium {
+mediumDanger = frame : medium {
   left: 1181px,
   top: 689px,
   border[0].color: Colors.colors.red50,
   fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
   fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
+  shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 5%),
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.color: rgb(100%, 100%, 100%, 50%),
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
   mediumLabel {
-    fill[0].color: Colors.colors.controlForeground
+    fill[0].color: Colors.primitives.white
   }
 }
 
 @variant
-mediumPressed = medium {
+mediumPressed = frame : medium {
   left: 962px,
   top: 769px,
   fill[0].color: Colors.colors.black90,
-  shadow[0].drop-shadow.color: Colors.colors.black80,
+  shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: Colors.colors.black80,
+  shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal
 }
 
 @variant
-mediumPrimaryPressed = medium {
+mediumPrimaryPressed = frame : medium {
   left: 1072px,
   top: 769px,
   border[0].color: Colors.colors.black30,
   fill[0].color: Colors.colors.black40,
-  shadow[0].drop-shadow.color: Colors.colors.black30,
+  shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: Colors.colors.black30,
+  shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
 
   mediumLabel {
@@ -110,7 +111,7 @@ mediumPrimaryPressed = medium {
 }
 
 @variant
-mediumDangerPressed = medium {
+mediumDangerPressed = frame : medium {
   left: 1181px,
   top: 769px,
   border[0].color: Colors.colors.red50,
@@ -122,7 +123,7 @@ mediumDangerPressed = medium {
   shadow[0].inner-shadow.style: .normal,
 
   mediumLabel {
-    fill[0].color: Colors.colors.controlForeground
+    fill[0].color: Colors.primitives.white
   }
 }
 
@@ -164,7 +165,7 @@ smallLabel = text {
 }
 
 @variant
-smallDangerPressed = small {
+smallDangerPressed = frame : small {
   left: 1127px,
   top: 993px,
   fill[0].color: Colors.colors.red60,
@@ -175,41 +176,41 @@ smallDangerPressed = small {
   shadow[0].inner-shadow.style: .normal,
 
   smallLabel {
-    fill[0].color: Colors.colors.white100
+    fill[0].color: Colors.primitives.white
   }
 }
 
 @variant
-smallDanger = small {
+smallDanger = frame : small {
   left: 1127px,
   top: 917px,
   border[0].color: Colors.colors.red50,
   fill[0].linear-gradient.stops[0].color: Colors.colors.red70,
   fill[0].linear-gradient.stops[1].color: Colors.colors.red60,
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.color: rgb(100%, 100%, 100%, 50%),
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
   smallLabel {
-    fill[0].color: Colors.colors.white100
+    fill[0].color: Colors.primitives.white
   }
 }
 
 @variant
-smallPressed = small {
+smallPressed = frame : small {
   left: 962px,
   top: 993px,
   fill[0].color: Colors.colors.black90,
-  shadow[0].drop-shadow.color: Colors.colors.black80,
+  shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: Colors.colors.black80,
+  shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal
 }
 
 @variant
-smallPrimary = small {
+smallPrimary = frame : small {
   left: 1045px,
   top: 917px,
   border[1].color: Colors.colors.black20,
@@ -217,7 +218,7 @@ smallPrimary = small {
   fill[0].linear-gradient.stops[0].color: Colors.colors.black40,
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
@@ -227,13 +228,13 @@ smallPrimary = small {
 }
 
 @variant
-smallPrimaryPressed = small {
+smallPrimaryPressed = frame : small {
   left: 1045px,
   top: 993px,
   fill[0].color: Colors.colors.black40,
-  shadow[0].drop-shadow.color: Colors.colors.black30,
+  shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.blur-radius: 3px,
-  shadow[0].inner-shadow.color: Colors.colors.black30,
+  shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
 
   smallLabel {
@@ -242,7 +243,7 @@ smallPrimaryPressed = small {
 }
 
 @variant
-mediumIcon = medium {
+mediumIcon = frame : medium {
   left: 1368px,
   top: 689px,
   width: Spacing.size.medium,
@@ -250,7 +251,7 @@ mediumIcon = medium {
 }
 
 @variant
-mediumClose = medium {
+mediumClose = frame : medium {
   left: 1291px,
   top: 689px,
   width: Spacing.size.medium,
@@ -263,7 +264,7 @@ mediumClose = medium {
 }
 
 @variant
-smallIconBackground = small {
+smallIconBackground = frame : small {
   left: 1277px,
   top: 917px,
   width: Spacing.size.small,
@@ -271,7 +272,7 @@ smallIconBackground = small {
 }
 
 @variant
-smallClose = small {
+smallClose = frame : small {
   left: 1210px,
   top: 917px,
   width: Spacing.size.small,
@@ -313,7 +314,7 @@ mediumIconGlyph = icon {
 }
 
 @variant
-smallPrimaryRounded = small {
+smallPrimaryRounded = frame : small {
   left: 1344px,
   top: 917px,
   width: Spacing.size.small,
@@ -332,7 +333,7 @@ smallPrimaryRoundedIcon = icon {
 }
 
 @variant
-smallIcon = small {
+smallIcon = frame : small {
   left: 1417px,
   top: 917px,
   width: Spacing.size.small,
@@ -352,7 +353,7 @@ smallIconGlyph = icon {
 }
 
 @variant
-mediumPrimaryRounded = medium {
+mediumPrimaryRounded = frame : medium {
   left: 1445px,
   top: 689px,
   width: Spacing.size.medium,
@@ -361,13 +362,13 @@ mediumPrimaryRounded = medium {
   fill[0].linear-gradient.stops[1].color: Colors.colors.black30,
   overrides: [insert(mediumPrimaryRoundedIcon, after = .nil), remove(mediumLabel)],
   shadow[1].inner-shadow.blur-radius: 0.5px,
-  shadow[1].inner-shadow.color: Colors.colors.whiteAlpha50,
+  shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px
 }
 
 @variant
-mediumPlainIcon = medium {
+mediumPlainIcon = frame : medium {
   left: 1522px,
   top: 689px,
   width: Spacing.size.medium,
@@ -424,4 +425,13 @@ play20svg = icon {
   height: 64px,
   fill: Colors.colors.blackAlpha70,
   contents: play20
+}
+
+shape2 = shape {
+  left: 876px,
+  top: 583px,
+  width: 910px,
+  height: 521px,
+  fill: rgb(80%, 80%, 80%),
+  type: .rect
 }

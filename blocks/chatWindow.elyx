@@ -106,6 +106,7 @@ GroupedStack = frame {
 GroupedStack_4 = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
+  fill: colors.colors.white100,
   shadow: {
     drop-shadow: {
       color: colors.colors.blackAlpha10,

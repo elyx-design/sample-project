@@ -36,7 +36,12 @@ smallInitials = text {
   font-style: "SemiBold"
 }
 
-smallStatus = shape : status {left: 26.85px, top: 26.83px, ignore-stack: .true, border[0].width: 2px}
+smallStatus = shape : status {
+  left: 26.85px,
+  top: 26.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
 
 export status = shape {
   left: -94px,
@@ -52,7 +57,7 @@ export status = shape {
 statusAway = shape : status {left: -58px, top: -72px, fill[0].color: Colors.colors.status-away}
 
 @variant
-smallPhoto = small {
+smallPhoto = frame : small {
   left: -4px,
   top: 10px,
   overrides: [insert(smallImage, after = .nil), remove(smallInitials), remove(smallBackground)]
@@ -87,10 +92,15 @@ mediumInitials = text {
   font-style: "SemiBold"
 }
 
-mediumStatus = shape : status {left: 56.85px, top: 56.83px, ignore-stack: .true, border[0].width: 2px}
+mediumStatus = shape : status {
+  left: 56.85px,
+  top: 56.83px,
+  ignore-stack: .true,
+  border[0].width: 2px
+}
 
 @variant
-mediumPhoto = medium {
+mediumPhoto = frame : medium {
   left: -4px,
   top: 94px,
   layout.include-borders: .true,
@@ -154,7 +164,7 @@ smallInitials_2 = text {
 smallStatus_2 = shape : status {left: 20px, top: 20px, ignore-stack: .true, border[0].width: 2px}
 
 @variant
-xsmallVariant = xsmall {
+xsmallVariant = frame : xsmall {
   left: -4px,
   top: 235px,
   overrides: [insert(photoBG, after = .nil), remove(color)],

@@ -13,11 +13,8 @@ export darkColors = tokens : colors.colors {
   black30: rgb(87.0588%, 87.0588%, 87.0588%),
   black80: rgb(28.06%, 28.06%, 28.06%),
   black95: rgb(13.73%, 13.73%, 13.73%),
-  blackAlpha10: rgb(100%, 100%, 100%, 10%),
   blackAlpha50: rgb(100%, 100%, 100%, 50%),
   whiteAlpha70: rgb(0%, 0%, 0%, 70%),
-  whiteAlpha50: rgb(0%, 0%, 0%, 50%),
-  blackAlpha05: rgb(100%, 100%, 100%, 5%),
   blackAlpha08: rgb(100%, 100%, 100%, 8%),
   yellow: rgb(100%, 83.1373%, 28.6275%),
   yellowAlpha50: rgb(100%, 83.1373%, 28.6275%, 50%),
@@ -33,5 +30,6 @@ export darkColors = tokens : colors.colors {
   controlBorder: rgb(28.06%, 28.06%, 28.06%),
   controlSurface: rgb(17.92%, 17.92%, 17.92%),
   surfaceSubtle: rgb(13.73%, 13.73%, 13.73%),
-  lavender: rgb(90.2878%, 81.12%, 100%)
+  lavender: rgb(90.2878%, 81.12%, 100%),
+  whiteAlpha50: rgb(0%, 0%, 0%, 50%)
 }

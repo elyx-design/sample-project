@@ -1,6 +1,10 @@
 import "tokens/spacing.elyx" as Spacing
 import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
+import "tokens/colors.dark.elyx" as colorsdark
+
+@with-context(theme="dark")
+__canvas__
 
 export base = frame {
   left: 80px,
@@ -10,8 +14,8 @@ export base = frame {
   min-width: 100px,
   min-height: 60px,
   layout: {direction: .column, item-gap: Spacing.padding.xlarge},
-  fill: colors.colors.white100,
-  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  fill: colorsdark.darkColors.white100,
+  border: {color: colorsdark.darkColors.blackAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
       color: colors.colors.blackAlpha10,
@@ -25,26 +29,26 @@ export base = frame {
 }
 
 @variant
-transparent = base {
+transparent = frame : base {
   left: 80px,
   top: 575px,
-  fill[0].color: colors.colors.whiteAlpha50,
+  fill[0].color: colorsdark.darkColors.whiteAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }
 
 @variant
-none = base {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
+none = frame : base {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
 
 @variant
-transparentFullRadius = base {
+transparentFullRadius = frame : base {
   left: 275px,
   top: 575px,
   corner-radius: Radius.radius.full,
-  fill[0].color: colors.colors.whiteAlpha50,
+  fill[0].color: colorsdark.darkColors.whiteAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }
 
 @variant
-solidFullRadius = base {left: 275.05px, top: 467px, corner-radius: Radius.radius.full}
+solidFullRadius = frame : base {left: 275.05px, top: 467px, corner-radius: Radius.radius.full}

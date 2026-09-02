@@ -38,3 +38,5 @@ export colors = tokens {
   surfaceSubtle: rgb(94.9997%, 94.9997%, 94.9997%),
   lavender: rgb(90.2878%, 81.12%, 100%)
 }
+
+export primitives = tokens {white: .white, white50: rgb(100%, 100%, 100%, 50%)}
