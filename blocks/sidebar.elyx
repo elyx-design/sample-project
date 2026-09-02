@@ -1,7 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
-import "tokens/radius.elyx" as radius
 import "components/avatar.elyx" as avatar
 import "components/cardBackground.elyx" as cardBackground
 import "icons/24 pixels/home-24.svg" as home24
@@ -16,11 +15,11 @@ import "icons/24 pixels/notes-24.svg" as notes24
 import "icons/24 pixels/settings-24.svg" as settings24
 import "icons/24 pixels/plus-24.svg" as plus24
 import "icons/24 pixels/database-24.svg" as database24
-import "icons/20 pixels/cloud-20.svg" as cloud20
 import "icons/20 pixels/sideBar-left-20.svg" as sideBarleft20
 import "icons/20 pixels/search-20.svg" as search20
 import "icons/20 pixels/settings-20.svg" as settings20
 import "icons/20 pixels/dot-20.svg" as dot20
+import "components/sidebarItem.elyx" as sidebarItem
 
 export sidebar = frame : cardBackground.transparent {
   left: -123px,
@@ -116,45 +115,9 @@ history = frame : button.mediumPlainIcon {
 
 profileAvatar = frame : avatar.smallPhoto {left: 550px, top: 402px}
 
-export sideBarMenu = frame {
-  left: -492px,
-  top: 0px,
-  width: 100%,
-  height: Spacing.size.small,
-  layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
-  padding-left: Spacing.padding.small,
-  padding-right: Spacing.padding.small,
-  children: [shape1, text2]
-}
-
-shape1 = icon {
-  left: 2px,
-  top: 2px,
-  width: 20px,
-  height: 20px,
-  fill: colors.colors.black20,
-  contents: cloud20
-}
-
-text2 = text {
-  left: 31px,
-  top: 7px,
-  fill: colors.colors.black20,
-  contents: Strings.navigation.menu,
-  font-size: Spacing.fontSize.small
-}
-
-@variant
-selected = frame : sideBarMenu {
-  left: -492px,
-  top: 76px,
-  corner-radius: radius.radius.full,
-  fill[0].color: colors.colors.blackAlpha05
-}
-
 export segmentHeader = frame {
-  left: -492px,
-  top: 276px,
+  left: -435px,
+  top: 0px,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 39px},
   children: [text1, settings20svg]
 }
@@ -325,17 +288,17 @@ sidebarLiveEvent = frame : sidebar {
 }
 
 @variant
-sideBarMenuEvent = frame : sideBarMenu {
-  left: -492px,
-  top: 152px,
+sideBarMenuEvent = frame : sidebarItem.sidebarMenu {
+  left: -435px,
+  top: 68px,
   overflow: .visible,
   layout.item-gap: Spacing.gap.small,
   layout.justify-content: .space-between,
   overrides: [
     insert(text5, after = .nil),
     insert(eventTag_2, after = text5),
-    remove(text2),
-    remove(shape1)
+    remove(sidebarItem.text2),
+    remove(sidebarItem.shape1)
   ]
 }
 
@@ -473,8 +436,8 @@ campaignsItem_10 = frame : sideBarMenuEvent {
 }
 
 export eventTag = frame {
-  left: -492px,
-  top: 422px,
+  left: -435px,
+  top: 144px,
   layout: {justify-content: .center, align-items: .center, item-gap: 7px},
   overflow: .visible,
   children: [status, text3]
@@ -493,8 +456,8 @@ text3 = text {
 
 @variant
 eventTagOffline = frame : eventTag {
-  left: -492px,
-  top: 485px,
+  left: -435px,
+  top: 207px,
   overrides: [remove(status)],
 
   text3 {
@@ -574,67 +537,67 @@ frame2 = frame {
   children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem]
 }
 
-campaignsItem = frame : sideBarMenu {
+campaignsItem = frame : sidebarItem.sidebarMenu {
   left: 0px,
   top: 34px,
 
-  shape1 {
+  sidebarItem.shape1 {
     contents: plus24
   }
 
-  text2 {
+  sidebarItem.text2 {
     contents: Strings.status.new
   }
 }
 
-overviewItem = frame : sideBarMenu {
+overviewItem = frame : sidebarItem.sidebarMenu {
   left: 0px,
   top: 54px,
 
-  shape1 {
+  sidebarItem.shape1 {
     contents: history24
   }
 
-  text2 {
+  sidebarItem.text2 {
     contents: Strings.navigation.projects
   }
 }
 
-salesItem = frame : sideBarMenu {
+salesItem = frame : sidebarItem.sidebarMenu {
   left: 0px,
   top: 74px,
 
-  shape1 {
+  sidebarItem.shape1 {
     contents: database24
   }
 
-  text2 {
+  sidebarItem.text2 {
     contents: Strings.navigation.data
   }
 }
 
-tasksItem = frame : sideBarMenu {
+tasksItem = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 94px,
 
-  shape1 {
+  sidebarItem.shape1 {
     contents: notes24
   }
 
-  text2 {
+  sidebarItem.text2 {
     contents: Strings.navigation.notes
   }
 }
 
-settingsItem = frame : sideBarMenu {
+settingsItem = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 134px,
 
-  shape1 {
+  sidebarItem.shape1 {
     contents: settings24
   }
 
-  text2 {
+  sidebarItem.text2 {
     contents: Strings.navigation.settings
   }
 }
@@ -663,62 +626,58 @@ frame4 = frame {
   children: [campaignsItem_4, campaignsItem_3, campaignsItem_5, campaignsItem_6]
 }
 
-campaignsItem_4 = frame : selected {
+campaignsItem_4 = frame : sidebarItem.selected {
   left: 20px,
   top: 84px,
-  width: 100%,
 
-  shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
-    contents: dot20
-  }
-
-  text2 {
+  sidebarItem.text2 {
     contents: "Grocery list"
   }
+
+  sidebarItem.shape1 {
+    fill[0].color: colors.colors.blackAlpha25,
+    contents: dot20
+  }
 }
 
-campaignsItem_3 = frame : sideBarMenu {
+campaignsItem_3 = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 54px,
-  width: 100%,
 
-  shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
-    contents: dot20
-  }
-
-  text2 {
+  sidebarItem.text2 {
     contents: "React component"
   }
+
+  sidebarItem.shape1 {
+    fill[0].color: colors.colors.blackAlpha25,
+    contents: dot20
+  }
 }
 
-campaignsItem_5 = frame : sideBarMenu {
+campaignsItem_5 = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 114px,
-  width: 100%,
 
-  shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
-    contents: dot20
+  sidebarItem.text2 {
+    contents: "Personal notes"
   }
 
-  text2 {
-    contents: "Personal notes"
+  sidebarItem.shape1 {
+    fill[0].color: colors.colors.blackAlpha25,
+    contents: dot20
   }
 }
 
-campaignsItem_6 = frame : sideBarMenu {
+campaignsItem_6 = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 144px,
-  width: 100%,
 
-  shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
-    contents: dot20
+  sidebarItem.text2 {
+    contents: "Draft email"
   }
 
-  text2 {
-    contents: "Draft email"
+  sidebarItem.shape1 {
+    fill[0].color: colors.colors.blackAlpha25,
+    contents: dot20
   }
 }

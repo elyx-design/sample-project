@@ -1,0 +1,41 @@
+import "icons/20 pixels/cloud-20.svg" as cloud20
+import "tokens/radius.elyx" as radius
+import "tokens/colors.elyx" as colors
+import "tokens/spacing.elyx" as Spacing
+import "tokens/strings.elyx" as strings
+
+@variant
+selected = frame : sidebarMenu {
+  left: -492px,
+  top: 76px,
+  corner-radius: radius.radius.full,
+  fill[0].color: colors.colors.blackAlpha05
+}
+
+export sidebarMenu = frame {
+  left: -492px,
+  top: 0px,
+  width: 100%,
+  height: Spacing.size.small,
+  layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
+  children: [shape1, text2]
+}
+
+shape1 = icon {
+  left: 2px,
+  top: 2px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.black20,
+  contents: cloud20
+}
+
+text2 = text {
+  left: 31px,
+  top: 7px,
+  fill: colors.colors.black20,
+  contents: strings.navigation.menu,
+  font-size: Spacing.fontSize.small
+}

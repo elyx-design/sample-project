@@ -9,7 +9,7 @@ import "components/avatar.elyx" as avatar
 import "components/textField.elyx" as textField
 import "components/divider.elyx" as divider
 
-export siteHeader = cardBackground.solidFullRadius {
+export siteHeader = frame : cardBackground.solidFullRadius {
   left: 512px,
   top: 456px,
   width: 1024px,
@@ -48,7 +48,7 @@ label = text {
 }
 
 @variant
-mutedMenu = menu {
+mutedMenu = frame : menu {
   left: 191px,
   top: 521px,
 
@@ -58,14 +58,14 @@ mutedMenu = menu {
 }
 
 @variant
-loggedInHeader = siteHeader {
+loggedInHeader = frame : siteHeader {
   left: 512px,
   top: 572px,
   overrides: [insert(GroupedStack, after = navLinks), remove(headerCta)]
 }
 
 @variant
-iconMenu = menu {
+iconMenu = frame : menu {
   left: 275px,
   top: 456px,
   layout.item-gap: spacing.gap.xxsmall,
@@ -73,7 +73,7 @@ iconMenu = menu {
 }
 
 @variant
-mutedIconMenu = menu {
+mutedIconMenu = frame : menu {
   left: 275px,
   top: 521.6479px,
   layout.item-gap: spacing.gap.xxsmall,
@@ -90,7 +90,7 @@ headerCta = frame {
   children: [logInLink, getStartedButton]
 }
 
-logInLink = menu {
+logInLink = frame : menu {
   left: 1545px,
   top: 483px,
 
@@ -99,7 +99,7 @@ logInLink = menu {
   }
 }
 
-getStartedButton = button.mediumPrimary {
+getStartedButton = frame : button.mediumPrimary {
   left: 751px,
   top: 475px,
 
@@ -111,10 +111,11 @@ getStartedButton = button.mediumPrimary {
 GroupedStack = frame {
   height: .auto,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
+  overflow: .visible,
   children: [searchField, accountCluster]
 }
 
-searchField = textField.iconPlaceholder {
+searchField = frame : textField.iconPlaceholder {
   left: -90.12px,
   top: 16px,
   width: 180px,
@@ -127,10 +128,11 @@ searchField = textField.iconPlaceholder {
 accountCluster = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: spacing.gap.large},
+  overflow: .visible,
   children: [languageMenu, layer]
 }
 
-languageMenu = iconMenu {
+languageMenu = frame : iconMenu {
   left: 1478px,
   top: 606px,
 
@@ -139,10 +141,10 @@ languageMenu = iconMenu {
   }
 }
 
-layer = avatar.smallPhoto {left: 1255px, top: 577px}
+layer = frame : avatar.smallPhoto {left: 1255px, top: 577px}
 
 @variant
-SiteHeaderVariant = siteHeader {
+SiteHeaderVariant = frame : siteHeader {
   left: 512px,
   top: 688px,
   corner-radius: 0px,
@@ -162,7 +164,7 @@ SiteHeaderVariant = siteHeader {
   shadow[0]: .nil
 }
 
-DividerWhite = divider.horizontal {
+DividerWhite = frame : divider.horizontal {
   left: 615px,
   top: 752px,
   width: 100%,
@@ -183,7 +185,7 @@ bareContent = frame {
   children: [small_5, bareNav, bareCta]
 }
 
-small_5 = logo.mediumWordmark {left: 452.5px, top: 0px}
+small_5 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
 
 bareNav = frame {
   height: .auto,
@@ -191,7 +193,7 @@ bareNav = frame {
   children: [Menu, MenuVariant, bareCompany, bareResources]
 }
 
-Menu = menu {
+Menu = frame : menu {
   left: 357.9778px,
   top: 33.5256px,
 
@@ -200,7 +202,7 @@ Menu = menu {
   }
 }
 
-MenuVariant = mutedMenu {
+MenuVariant = frame : mutedMenu {
   left: 377.9778px,
   top: 53.5256px,
 
@@ -209,7 +211,7 @@ MenuVariant = mutedMenu {
   }
 }
 
-bareCompany = mutedMenu {
+bareCompany = frame : mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -218,7 +220,7 @@ bareCompany = mutedMenu {
   }
 }
 
-bareResources = mutedIconMenu {
+bareResources = frame : mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 
@@ -233,7 +235,7 @@ bareCta = frame {
   children: [bareLogIn, Primary]
 }
 
-bareLogIn = menu {
+bareLogIn = frame : menu {
   left: 1545px,
   top: 483px,
 
@@ -242,7 +244,7 @@ bareLogIn = menu {
   }
 }
 
-Primary = button.mediumPrimary {
+Primary = frame : button.mediumPrimary {
   left: 751px,
   top: 475px,
 
@@ -252,7 +254,7 @@ Primary = button.mediumPrimary {
 }
 
 @variant
-accountHeader = siteHeader {
+accountHeader = frame : siteHeader {
   left: 512px,
   top: 804px,
   corner-radius: 0px,
@@ -282,7 +284,7 @@ accountContent = frame {
   children: [small_6, accountNav, accountActions]
 }
 
-small_6 = logo.mediumWordmark {left: 452.5px, top: 0px}
+small_6 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
 
 accountNav = frame {
   height: .auto,
@@ -290,7 +292,7 @@ accountNav = frame {
   children: [accountProduct, accountPricing, accountCompany, accountResources]
 }
 
-accountProduct = menu {
+accountProduct = frame : menu {
   left: 357.9778px,
   top: 33.5256px,
 
@@ -299,7 +301,7 @@ accountProduct = menu {
   }
 }
 
-accountPricing = mutedMenu {
+accountPricing = frame : mutedMenu {
   left: 377.9778px,
   top: 53.5256px,
 
@@ -308,7 +310,7 @@ accountPricing = mutedMenu {
   }
 }
 
-accountCompany = mutedMenu {
+accountCompany = frame : mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -317,7 +319,7 @@ accountCompany = mutedMenu {
   }
 }
 
-accountResources = mutedIconMenu {
+accountResources = frame : mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 
@@ -335,7 +337,7 @@ accountActions = frame {
   children: [accountSearch, accountMenu]
 }
 
-accountSearch = textField.iconPlaceholder {
+accountSearch = frame : textField.iconPlaceholder {
   left: -90.12px,
   top: 16px,
   width: 180px,
@@ -348,10 +350,11 @@ accountSearch = textField.iconPlaceholder {
 accountMenu = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: spacing.gap.large},
+  overflow: .visible,
   children: [accountLanguage, accountAvatar]
 }
 
-accountLanguage = iconMenu {
+accountLanguage = frame : iconMenu {
   left: 1478px,
   top: 606px,
 
@@ -360,9 +363,9 @@ accountLanguage = iconMenu {
   }
 }
 
-accountAvatar = avatar.smallPhoto {left: 1255px, top: 577px}
+accountAvatar = frame : avatar.smallPhoto {left: 1255px, top: 577px}
 
-accountDivider = divider.horizontal {
+accountDivider = frame : divider.horizontal {
   left: 576.72px,
   top: 718.25px,
   width: 100%,
@@ -398,7 +401,7 @@ navLinks = frame {
   children: [navProduct, navPricing, navCompany, navResources]
 }
 
-navProduct = menu {
+navProduct = frame : menu {
   left: 357.9778px,
   top: 33.5256px,
 
@@ -407,7 +410,7 @@ navProduct = menu {
   }
 }
 
-navPricing = mutedMenu {
+navPricing = frame : mutedMenu {
   left: 377.9778px,
   top: 53.5256px,
 
@@ -416,7 +419,7 @@ navPricing = mutedMenu {
   }
 }
 
-navCompany = mutedMenu {
+navCompany = frame : mutedMenu {
   left: 397.9778px,
   top: 73.5256px,
 
@@ -425,7 +428,7 @@ navCompany = mutedMenu {
   }
 }
 
-navResources = mutedIconMenu {
+navResources = frame : mutedIconMenu {
   left: 417.9778px,
   top: 93.5256px,
 
@@ -434,4 +437,4 @@ navResources = mutedIconMenu {
   }
 }
 
-small_4 = logo.mediumWordmark {left: 16px, top: 16px}
+small_4 = frame : logo.mediumWordmark {left: 16px, top: 16px}

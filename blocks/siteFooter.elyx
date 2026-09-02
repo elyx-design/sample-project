@@ -35,7 +35,7 @@ brandColumn = frame {
   children: [small, Newsletter]
 }
 
-small = logo.mediumWordmark {left: 0px, top: 0px}
+small = frame : logo.mediumWordmark {left: 0px, top: 0px}
 
 Newsletter = frame {
   width: 100%,
@@ -55,7 +55,7 @@ blurb = text {
   left: 0px,
   top: 7px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.labels.newsletter,
   font-size: Spacing.fontSize.small,
   font-style: "Bold",
@@ -66,7 +66,7 @@ blurb_2 = text {
   left: 20px,
   top: 27px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.marketing.newsletterDescription,
   font-size: Spacing.fontSize.small,
   line-height: Spacing.lineHeight.relaxed
@@ -80,20 +80,20 @@ frame2 = frame {
   children: [base, medium]
 }
 
-base = textField.iconPlaceholder {
+base = frame : textField.iconPlaceholder {
   left: 40px,
   top: 94.5px,
-
-  textField.label {
-    contents: Strings.marketing.footerEmailAddress
-  }
 
   textField.placeholderIcon {
     contents: mail24
   }
+
+  textField.label {
+    contents: Strings.marketing.footerEmailAddress
+  }
 }
 
-medium = button.mediumPrimary {
+medium = frame : button.mediumPrimary {
   left: 396.5px,
   top: 0px,
 
@@ -142,7 +142,7 @@ howItWorksLink = text {
   left: 0px,
   top: 522px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.howItWorks,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -152,7 +152,7 @@ pricingFooterLink = text {
   left: 0px,
   top: 542px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.pricing,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -162,7 +162,7 @@ faqLink = text {
   left: 0px,
   top: 562px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.faq,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -172,7 +172,7 @@ resourcesLink = text {
   left: 0px,
   top: 585px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.resources,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -182,7 +182,7 @@ featuresLink = text {
   left: 0px,
   top: 605px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.features,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -192,7 +192,7 @@ roadmapLink = text {
   left: 0px,
   top: 625px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.roadmap,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -230,7 +230,7 @@ aboutLink = text {
   left: 0px,
   top: 522px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.about,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -240,7 +240,7 @@ contactLink = text {
   left: 0px,
   top: 542px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.contact,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -250,7 +250,7 @@ careersLink = text {
   left: 0px,
   top: 562px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.careers,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -260,7 +260,7 @@ pressLink = text {
   left: 0px,
   top: 582px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.press,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -270,7 +270,7 @@ ourStoryLink = text {
   left: 0px,
   top: 602px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.ourStory,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -308,7 +308,7 @@ privacyLink = text {
   left: 0px,
   top: 522px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.privacyPolicy,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -318,7 +318,7 @@ termsLink = text {
   left: 0px,
   top: 542px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.termsOfService,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -328,7 +328,7 @@ contactCareersLink = text {
   left: 0px,
   top: 562px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.careers,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -338,7 +338,7 @@ securityLink = text {
   left: 0px,
   top: 582px,
   width: 100%,
-  fill: .black,
+  fill: colors.colors.black20,
   contents: Strings.navigation.security,
   font-size: Spacing.fontSize.small,
   font-style: "Medium"
@@ -351,7 +351,7 @@ bottom = frame {
   children: [bottomDivider, copy]
 }
 
-bottomDivider = divider.horizontal {
+bottomDivider = frame : divider.horizontal {
   left: 0px,
   top: 472px,
   width: 100%,

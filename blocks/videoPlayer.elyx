@@ -39,59 +39,63 @@ headerRow = frame {
   children: [eventHeader, liveStatus]
 }
 
-eventHeader = header.smallLeft {
+eventHeader = frame : header.smallLeft {
   left: 0px,
   top: 250px,
 
   header.smallSubtitle {
     contents: "Live from the dunes: Stage 3",
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70
   }
 
   header.smallTitle {
     contents: "Endless Dunes",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 }
 
-liveStatus = tag.status {
+liveStatus = frame : tag.status {
   left: 806px,
   top: 450px,
   fill[0].color: rgb(100%, 0%, 0%, 60%),
 
   tag.label {
-    contents: Strings.status.live,
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white,
+    contents: Strings.status.live
   }
 
   tag.statusIcon {
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white
   }
 }
 
-controls = playbackControl.playbackControl {
+controls = frame : playbackControl.playbackControl {
   left: 0px,
   top: 809px,
   width: 100%,
 
   playbackControl.tools.moreButton.button.smallIconGlyph {
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70
   }
 
   playbackControl.tools.likeButton.button.smallIconGlyph {
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70
   }
 
   playbackControl.tools.settingsButton.button.smallIconGlyph {
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70
   }
 
   playbackControl.playbackTime {
-    contents: "12:59 / 32:46",
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70,
+    contents: "12:59 / 32:46"
+  }
+
+  playbackControl.scrubber.progressSlider.slider.track {
+    fill[0].color: colors.primitives.white
   }
 
   playbackControl.scrubber.playButton.button.smallIconGlyph {
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.primitives.white70
   }
 }
