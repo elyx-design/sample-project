@@ -9,7 +9,7 @@ selected = frame : sidebarMenu {
   left: -492px,
   top: 76px,
   corner-radius: radius.radius.full,
-  fill[0].color: colors.colors.blackAlpha05
+  fill[0].color: colors.colors.blackAlpha25
 }
 
 export sidebarMenu = frame {

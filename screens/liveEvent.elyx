@@ -20,11 +20,15 @@ export liveEvent = frame {
   children: [siteHeader_2, Content]
 }
 
-siteHeader_2 = siteHeader.accountHeader {
+siteHeader_2 = frame : siteHeader.accountHeader {
   left: 0px,
   top: 43px,
   width: 100%,
   fill[0].color: colors.colors.white100,
+
+  siteHeader.accountDivider {
+    overrides: [remove(siteHeader.divider.horizontalLine)]
+  }
 
   siteHeader.accountContent.accountNav.accountResources.label {
     contents: Strings.navigation.playlists
@@ -54,7 +58,14 @@ Content = frame {
   children: [sidebar, Video, chat]
 }
 
-sidebar = sideBar.sidebarLiveEvent {left: 751px, top: 0px, height: 100%, corner-radius: 0px}
+sidebar = frame : sideBar.sidebarLiveEvent {
+  left: 751px,
+  top: 0px,
+  height: 100%,
+  corner-radius: 0px,
+  border[0].visible: .false,
+  fill[0].visible: .false
+}
 
 Video = frame {
   left: 0px,
@@ -66,15 +77,12 @@ Video = frame {
   children: [video, About]
 }
 
-video = videoPlayer.videoPlayer {
+video = frame : videoPlayer.videoPlayer {
   left: 0px,
   top: 0px,
   width: 100%,
   height: 100%,
   corner-radius: 0px,
-
-  @use-variant(videoPlayer.playbackControl.slider.full)
-  videoPlayer.controls.playbackControl.scrubber.progressSlider {}
 
   videoPlayer.controls.playbackControl.scrubber.playButton.button.smallIconGlyph {
     contents: pause20
@@ -86,6 +94,11 @@ video = videoPlayer.videoPlayer {
 
   videoPlayer.headerRow.eventHeader.header.smallTitle {
     contents: "CAM 3"
+  }
+
+  videoPlayer.controls.playbackControl.scrubber.progressSlider.slider.track {
+    fill[0].opacity: .nil,
+    fill[0].mix-blend-mode: .nil
   }
 }
 
@@ -101,19 +114,18 @@ About = frame {
   children: [small, GroupedStack]
 }
 
-small = userSummary.small {
+small = frame : userSummary.small {
   left: -238px,
   top: 333px,
-  overflow: .visible,
 
   userSummary.smallHeader.header.smallSubtitle {
-    contents: Strings.liveEvent.channelDescription,
-    fill[0].color: colors.colors.whiteAlpha50
+    fill[0].color: colors.primitives.white70,
+    contents: Strings.liveEvent.channelDescription
   }
 
   userSummary.smallHeader.header.smallTitle {
-    contents: "BikeNOW",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.primitives.white,
+    contents: "BikeNOW"
   }
 
   userSummary.smallHeader {
@@ -128,7 +140,7 @@ GroupedStack = frame {
   children: [small_2, small_3, small_4]
 }
 
-small_2 = button.small {
+small_2 = frame : button.small {
   left: 254.9999px,
   top: 58px,
 
@@ -137,7 +149,7 @@ small_2 = button.small {
   }
 }
 
-small_3 = button.smallPrimary {
+small_3 = frame : button.smallPrimary {
   left: 274.9999px,
   top: 78px,
 
@@ -146,7 +158,7 @@ small_3 = button.smallPrimary {
   }
 }
 
-small_4 = button.smallPrimary {
+small_4 = frame : button.smallPrimary {
   left: 294.9999px,
   top: 98px,
 
@@ -155,4 +167,4 @@ small_4 = button.smallPrimary {
   }
 }
 
-chat = chatWindow.liveChat {left: 0px, top: 0px, width: 100%, height: 100%}
+chat = frame : chatWindow.liveChat {left: 0px, top: 0px, width: 100%, height: 100%}

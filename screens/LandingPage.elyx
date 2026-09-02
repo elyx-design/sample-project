@@ -36,7 +36,7 @@ top = frame {
   children: [pageHeader, Copy]
 }
 
-pageHeader = siteHeader.siteHeader {
+pageHeader = frame : siteHeader.siteHeader {
   left: 388.5px,
   top: 145px,
   width: 60%,
@@ -55,7 +55,7 @@ Copy = frame {
   children: [largeLeft, frame2]
 }
 
-largeLeft = header.largeCenter {
+largeLeft = frame : header.largeCenter {
   left: 1840px,
   top: 449px,
   width: 44.0752%,
@@ -76,7 +76,7 @@ frame2 = frame {
   children: [medium, text3]
 }
 
-medium = button.medium {
+medium = frame : button.medium {
   left: 733px,
   top: 353px,
 
@@ -126,19 +126,19 @@ layer1 = frame {
 
 shape1 = icon {left: 644px, top: 704px, width: 40px, height: 40px, contents: direct24}
 
-smallLeft = header.smallLeft {
+smallLeft = frame : header.smallLeft {
   left: 0px,
   top: 0px,
   width: 100%,
   height: .auto,
 
-  header.smallSubtitle {
-    contents: Strings.landingPage.minimalDescription
+  header.smallTitle {
+    width: .auto,
+    contents: Strings.landingPage.minimalTitle
   }
 
-  header.smallTitle {
-    contents: Strings.landingPage.minimalTitle,
-    width: .auto
+  header.smallSubtitle {
+    contents: Strings.landingPage.minimalDescription
   }
 }
 
@@ -158,18 +158,18 @@ layer2 = frame {
 
 shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: activity}
 
-steadyHeader = header.smallLeft {
+steadyHeader = frame : header.smallLeft {
   left: 0px,
   top: 0px,
   width: 100%,
 
-  header.smallSubtitle {
-    contents: Strings.landingPage.reliabilityDescription
+  header.smallTitle {
+    width: .auto,
+    contents: Strings.landingPage.reliabilityTitle
   }
 
-  header.smallTitle {
-    contents: Strings.landingPage.reliabilityTitle,
-    width: .auto
+  header.smallSubtitle {
+    contents: Strings.landingPage.reliabilityDescription
   }
 }
 
@@ -189,34 +189,34 @@ layer3 = frame {
 
 shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug24}
 
-teamHeader = header.smallLeft {
+teamHeader = frame : header.smallLeft {
   left: 0px,
   top: 0px,
   width: 100%,
 
+  header.smallTitle {
+    width: .auto,
+    contents: Strings.landingPage.collaborationTitle
+  }
+
   header.smallSubtitle {
     contents: Strings.landingPage.collaborationDescription
   }
-
-  header.smallTitle {
-    contents: Strings.landingPage.collaborationTitle,
-    width: .auto
-  }
 }
 
-base = tag.iconAndLabel {
+base = frame : tag.iconAndLabel {
   left: 774px,
   top: 1091px,
   border[0].visible: .false,
   fill[0].color: colors.colors.blackAlpha25,
 
   tag.label {
-    contents: Strings.actions.scrollDown,
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.colors.whiteAlpha70,
+    contents: Strings.actions.scrollDown
   }
 
   tag.tagIcon {
-    contents: arrowDown20,
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.colors.whiteAlpha70,
+    contents: arrowDown20
   }
 }

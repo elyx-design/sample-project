@@ -41,7 +41,7 @@ movieBG = frame {
   overflow: .visible
 }
 
-siteHeader_2 = siteHeader.accountHeader {
+siteHeader_2 = frame : siteHeader.accountHeader {
   left: 0px,
   top: -142px,
   width: 100%,
@@ -68,23 +68,23 @@ siteHeader_2 = siteHeader.accountHeader {
   }
 
   siteHeader.accountContent.accountNav.accountResources.label {
-    contents: Strings.navigation.favourites,
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.colors.whiteAlpha70,
+    contents: Strings.navigation.favourites
   }
 
   siteHeader.accountContent.accountNav.accountCompany.label {
-    contents: Strings.status.live,
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.colors.whiteAlpha70,
+    contents: Strings.status.live
   }
 
   siteHeader.accountContent.accountNav.accountPricing.label {
-    contents: Strings.navigation.tvShows,
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.colors.whiteAlpha70,
+    contents: Strings.navigation.tvShows
   }
 
   siteHeader.accountContent.accountNav.accountProduct.label {
-    contents: Strings.navigation.movies,
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.colors.whiteAlpha70,
+    contents: Strings.navigation.movies
   }
 
   siteHeader.accountContent.small_6.logo.text2 {
@@ -122,7 +122,7 @@ GroupedStack_13 = frame {
   children: Play
 }
 
-Play = button.Play {left: 1052px, top: 310px}
+Play = frame : button.Play {left: 1052px, top: 310px}
 
 GroupedStack_2 = frame {
   width: 100%,
@@ -147,7 +147,7 @@ tags = frame {
   children: [base, base_2]
 }
 
-base = tag.base {
+base = frame : tag.base {
   left: 924px,
   top: 538px,
 
@@ -156,7 +156,7 @@ base = tag.base {
   }
 }
 
-base_2 = tag.base {
+base_2 = frame : tag.base {
   left: 944px,
   top: 558px,
 
@@ -165,7 +165,7 @@ base_2 = tag.base {
   }
 }
 
-horizontal = divider.horizontal {
+horizontal = frame : divider.horizontal {
   left: 0px,
   top: 553px,
   width: 100%,
@@ -191,7 +191,7 @@ details = frame {
   children: [productInfo_2, About]
 }
 
-productInfo_2 = productInfo.productInfo {
+productInfo_2 = frame : productInfo.productInfo {
   left: 741px,
   top: 881px,
 
@@ -200,13 +200,13 @@ productInfo_2 = productInfo.productInfo {
   }
 
   productInfo.productDetails.productCopy.subtitle {
-    contents: "by Amara Vale",
-    fill[0].color: colors.colors.whiteAlpha50
+    fill[0].color: colors.colors.whiteAlpha50,
+    contents: "by Amara Vale"
   }
 
   productInfo.productDetails.productCopy.productName {
-    contents: "Silent Hues",
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.colors.white100,
+    contents: "Silent Hues"
   }
 
   productInfo.productPreview.product.coverOne {
@@ -248,7 +248,7 @@ text3 = text {
   line-height: Spacing.lineHeight.relaxed
 }
 
-horizontal_2 = divider.horizontal {
+horizontal_2 = frame : divider.horizontal {
   left: 0px,
   top: 642px,
   width: 100%,
@@ -300,7 +300,7 @@ GroupedStack_3 = frame {
   children: [xsmall_3, text5]
 }
 
-xsmall_3 = avatar.xsmallVariant {
+xsmall_3 = frame : avatar.xsmallVariant {
   left: 782.1px,
   top: 536.5px,
 
@@ -333,7 +333,7 @@ GroupedStack_4 = frame {
   children: [xsmall_4, text6]
 }
 
-xsmall_4 = avatar.xsmallVariant {
+xsmall_4 = frame : avatar.xsmallVariant {
   left: 782.1px,
   top: 536.5px,
 
@@ -366,7 +366,7 @@ GroupedStack_5 = frame {
   children: [xsmall_5, text7]
 }
 
-xsmall_5 = avatar.xsmallVariant {
+xsmall_5 = frame : avatar.xsmallVariant {
   left: 782.1px,
   top: 536.5px,
 
@@ -399,7 +399,7 @@ GroupedStack_6 = frame {
   children: [xsmall_6, text8]
 }
 
-xsmall_6 = avatar.xsmallVariant {
+xsmall_6 = frame : avatar.xsmallVariant {
   left: 782.1px,
   top: 536.5px,
 
@@ -461,7 +461,7 @@ text10 = text {
   line-height: Spacing.lineHeight.relaxed
 }
 
-horizontal_3 = divider.horizontal {
+horizontal_3 = frame : divider.horizontal {
   left: 20px,
   top: 662px,
   width: 100%,
@@ -516,7 +516,7 @@ GroupedStack_12 = frame {
   children: [thumbnailImage_2, GroupedStack_10]
 }
 
-thumbnailImage_2 = thumbnailImage.thumbnailVideo {
+thumbnailImage_2 = frame : thumbnailImage.thumbnailVideo {
   left: 36.6px,
   top: 283.2895px,
   width: 234px,
@@ -534,7 +534,7 @@ GroupedStack_10 = frame {
   children: [thumbnailImage_3, thumbnailImage_4]
 }
 
-thumbnailImage_3 = thumbnailImage.thumbnailImage {
+thumbnailImage_3 = frame : thumbnailImage.thumbnailImage {
   left: 0px,
   top: 303.2895px,
   width: 100%,
@@ -553,7 +553,7 @@ thumbnailImage_3 = thumbnailImage.thumbnailImage {
   }
 }
 
-thumbnailImage_4 = thumbnailImage.thumbnailImage {
+thumbnailImage_4 = frame : thumbnailImage.thumbnailImage {
   left: 0px,
   top: 491.2895px,
   width: 100%,
@@ -572,7 +572,7 @@ thumbnailImage_4 = thumbnailImage.thumbnailImage {
   }
 }
 
-xsmall_2 = avatar.xsmallVariant {
+xsmall_2 = frame : avatar.xsmallVariant {
   left: 324px,
   top: 550px,
   overrides: [remove(avatar.smallStatus_2), remove(avatar.photoBG)]

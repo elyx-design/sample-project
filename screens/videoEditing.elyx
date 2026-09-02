@@ -85,7 +85,7 @@ export videoEditing = frame {
   width: 1138px,
   height: 663px,
   layout: {justify-content: .center},
-  fill: .black,
+  fill: Colors.primitives.black,
   children: [editingSidebar, workspace]
 }
 
@@ -123,7 +123,7 @@ preview = frame {
   top: 0px,
   height: 60%,
   layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.xxsmall},
-  fill: Colors.colors.black20,
+  fill: {color: Colors.colors.black20, visible: .false},
   children: [player, gallery]
 }
 
@@ -146,12 +146,9 @@ player = frame : videoPlayer.videoPlayer {
   @use-variant(slider.thumb)
   videoPlayer.controls.playbackControl.scrubber.progressSlider {}
 
-  videoPlayer.headerRow.eventHeader.header.smallSubtitle {
-    contents: "4K landscape film, cinematic 21:9"
-  }
-
-  videoPlayer.headerRow.eventHeader.header.smallTitle {
-    contents: "Style in Motion"
+  videoPlayer.controls.playbackControl.scrubber.progressSlider.slider.handle_2.thumbHandle_2 {
+    fill[0].color: Colors.primitives.white,
+    border[0].visible: .false
   }
 
   videoPlayer.headerRow.eventHeader {
@@ -161,6 +158,14 @@ player = frame : videoPlayer.videoPlayer {
   videoPlayer.headerRow.liveStatus {
     display: .hidden
   }
+
+  videoPlayer.headerRow.eventHeader.header.smallSubtitle {
+    contents: "4K landscape film, cinematic 21:9"
+  }
+
+  videoPlayer.headerRow.eventHeader.header.smallTitle {
+    contents: "Style in Motion"
+  }
 }
 
 gallery = frame : imageGallery.imageGallery {
@@ -169,80 +174,80 @@ gallery = frame : imageGallery.imageGallery {
   width: 40%,
   height: 100%,
 
-  imageGallery.bottomRow.bottomRight.thumbnailImage.imageName {
-    contents: "Red-flanked Bluetail"
+  imageGallery.bottomRow.bottomCenter {
+    fill[0].image.ref: thumb02
   }
 
   imageGallery.bottomRow.bottomRight.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.bottomRow.bottomCenter {
-    fill[0].image.ref: thumb02
-  }
-
-  imageGallery.bottomRow.bottomCenter.thumbnailImage.imageName {
-    contents: "Orange Bird"
-  }
-
   imageGallery.bottomRow.bottomCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
-  }
-
-  imageGallery.bottomRow.bottomLeft.thumbnailImage.imageName {
-    contents: "Great Horned Owl"
   }
 
   imageGallery.bottomRow.bottomLeft.thumbnailImage.actions.favoriteIcon {
     contents: image20
   }
 
-  imageGallery.middleRow.middleRight.thumbnailImage.imageName {
-    contents: "Blue-and-yellow Macaw"
-  }
-
   imageGallery.middleRow.middleRight.thumbnailImage.actions.favoriteIcon {
     contents: image20
-  }
-
-  imageGallery.middleRow.middleCenter.thumbnailImage.imageName {
-    contents: "Bald Eagle.wave"
   }
 
   imageGallery.middleRow.middleCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.middleRow.middleLeft.thumbnailImage.imageName {
-    contents: "Northern Cardinal\nBody Red"
-  }
-
   imageGallery.middleRow.middleLeft.thumbnailImage.actions.favoriteIcon {
     contents: image20
-  }
-
-  imageGallery.topRow.topRight.thumbnailImage.imageName {
-    contents: "Toco Toucan"
   }
 
   imageGallery.topRow.topRight.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.topRow.topCenter.thumbnailImage.imageName {
-    contents: "Eurasian Blue"
-  }
-
   imageGallery.topRow.topCenter.thumbnailImage.actions.favoriteIcon {
     contents: video20
   }
 
-  imageGallery.topRow.topLeft.thumbnailImage.imageName {
-    contents: "Lilac"
-  }
-
   imageGallery.topRow.topLeft.thumbnailImage.actions.favoriteIcon {
     contents: video20
+  }
+
+  imageGallery.bottomRow.bottomRight.thumbnailImage.imageName {
+    contents: "Red-flanked Bluetail"
+  }
+
+  imageGallery.bottomRow.bottomCenter.thumbnailImage.imageName {
+    contents: "Orange Bird"
+  }
+
+  imageGallery.bottomRow.bottomLeft.thumbnailImage.imageName {
+    contents: "Great Horned Owl"
+  }
+
+  imageGallery.middleRow.middleRight.thumbnailImage.imageName {
+    contents: "Blue-and-yellow Macaw"
+  }
+
+  imageGallery.middleRow.middleCenter.thumbnailImage.imageName {
+    contents: "Bald Eagle.wave"
+  }
+
+  imageGallery.middleRow.middleLeft.thumbnailImage.imageName {
+    contents: "Northern Cardinal\nBody Red"
+  }
+
+  imageGallery.topRow.topRight.thumbnailImage.imageName {
+    contents: "Toco Toucan"
+  }
+
+  imageGallery.topRow.topCenter.thumbnailImage.imageName {
+    contents: "Eurasian Blue"
+  }
+
+  imageGallery.topRow.topLeft.thumbnailImage.imageName {
+    contents: "Lilac"
   }
 }
 
@@ -250,7 +255,7 @@ timeline = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
-  fill: Colors.colors.black20,
+  fill: {color: Colors.colors.black20, visible: .false},
   padding-top: Spacing.padding.small,
   children: [ruler, tracks]
 }
@@ -342,16 +347,16 @@ audioTrack = frame : mediaTrack.track {
   width: 48.3773%,
   fill[0].color: Colors.colors.magenta,
 
-  mediaTrack.content.left.label.trackName {
-    contents: "ambientForest.mp3"
+  mediaTrack.content.dateLabel {
+    display: .hidden
   }
 
   mediaTrack.content.left.label.typeIcon {
     contents: music24
   }
 
-  mediaTrack.content.dateLabel {
-    display: .hidden
+  mediaTrack.content.left.label.trackName {
+    contents: "ambientForest.mp3"
   }
 }
 
@@ -361,16 +366,16 @@ titleTrack = frame : mediaTrack.track {
   width: 59.2292%,
   fill[0].color: .aqua,
 
-  mediaTrack.content.left.label.trackName {
-    contents: "Wild Birds"
+  mediaTrack.content.dateLabel {
+    display: .hidden
   }
 
   mediaTrack.content.left.label.typeIcon {
     contents: text24
   }
 
-  mediaTrack.content.dateLabel {
-    display: .hidden
+  mediaTrack.content.left.label.trackName {
+    contents: "Wild Birds"
   }
 }
 

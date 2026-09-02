@@ -42,7 +42,7 @@ freePlan = frame : planCard.planCard {
   top: 0px,
   width: 380px,
   height: 100%,
-  fill[0].visible: .false,
+  corner-radius: [20px, 0px, 0px, 20px],
 
   planCard.manageButton.button.mediumLabel {
     contents: Strings.pricingPage.freeRegistration
@@ -62,7 +62,7 @@ proPlan = frame : planCard.planCard {
   top: 0.9999px,
   width: 380px,
   height: 498px,
-  corner-radius: [Radius.radius.large, 0px, 0px, Radius.radius.large],
+  corner-radius: 0px,
 
   planCard.manageButton.button.mediumLabel {
     contents: Strings.actions.getStarted
@@ -88,7 +88,6 @@ proPlan = frame : planCard.planCard {
   planCard.planContent.planSummary.planHeader.planName {
     contents: Strings.plans.pro
   }
-
 }
 
 businessPlan = frame : planCard.planCard {
@@ -130,7 +129,6 @@ businessPlan = frame : planCard.planCard {
   planCard.planContent.planSummary.planHeader.planName {
     contents: Strings.plans.business
   }
-
 }
 
 pricingHeader = frame : header.mediumCenter {

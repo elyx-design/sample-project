@@ -31,15 +31,15 @@ content = frame {
   children: [signInForm, activeUsers, footerLinks]
 }
 
-signInForm = AuthForm.signInForm {left: 373px, top: 389px, width: 32%}
+signInForm = frame : AuthForm.signInForm {left: 373px, top: 389px, width: 32%}
 
-activeUsers = profileGroup.labelBottom {
+activeUsers = frame : profileGroup.labelBottom {
   left: 600px,
   top: 962px,
 
   profileGroup.bottomCount.bottomCountText {
-    contents: "+28k online",
-    fill[0].color: Colors.colors.whiteAlpha70
+    fill[0].color: Colors.colors.whiteAlpha70,
+    contents: "+28k online"
   }
 }
 

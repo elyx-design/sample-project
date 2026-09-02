@@ -183,9 +183,23 @@ GroupedStack = frame {
   children: [shape3, shape2]
 }
 
-shape3 = icon {left: Spacing.size.small, top: 10px, width: 20px, height: 20px, contents: search20}
+shape3 = icon {
+  left: Spacing.size.small,
+  top: 10px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.black20,
+  contents: search20
+}
 
-shape2 = icon {left: 48px, top: 30px, width: 20px, height: 20px, contents: sideBarleft20}
+shape2 = icon {
+  left: 48px,
+  top: 30px,
+  width: 20px,
+  height: 20px,
+  fill: colors.colors.black20,
+  contents: sideBarleft20
+}
 
 @variant
 sidebarLiveEvent = frame : sidebar {
@@ -629,6 +643,7 @@ frame4 = frame {
 campaignsItem_4 = frame : sidebarItem.selected {
   left: 20px,
   top: 84px,
+  fill[0].color: colors.colors.blackAlpha10,
 
   sidebarItem.text2 {
     contents: "Grocery list"
@@ -644,13 +659,13 @@ campaignsItem_3 = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 54px,
 
-  sidebarItem.text2 {
-    contents: "React component"
-  }
-
   sidebarItem.shape1 {
     fill[0].color: colors.colors.blackAlpha25,
     contents: dot20
+  }
+
+  sidebarItem.text2 {
+    contents: "React component"
   }
 }
 
@@ -658,13 +673,13 @@ campaignsItem_5 = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 114px,
 
-  sidebarItem.text2 {
-    contents: "Personal notes"
-  }
-
   sidebarItem.shape1 {
     fill[0].color: colors.colors.blackAlpha25,
     contents: dot20
+  }
+
+  sidebarItem.text2 {
+    contents: "Personal notes"
   }
 }
 
@@ -672,12 +687,12 @@ campaignsItem_6 = frame : sidebarItem.sidebarMenu {
   left: 20px,
   top: 144px,
 
-  sidebarItem.text2 {
-    contents: "Draft email"
-  }
-
   sidebarItem.shape1 {
     fill[0].color: colors.colors.blackAlpha25,
     contents: dot20
+  }
+
+  sidebarItem.text2 {
+    contents: "Draft email"
   }
 }
