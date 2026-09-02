@@ -16,7 +16,7 @@ export liveEvent = frame {
   width: 1440px,
   height: 810px,
   layout: {direction: .column, align-items: .center},
-  fill: colors.colors.white100,
+  fill: colors.theme.base,
   children: [siteHeader_2, Content]
 }
 
@@ -24,7 +24,7 @@ siteHeader_2 = frame : siteHeader.accountHeader {
   left: 0px,
   top: 43px,
   width: 100%,
-  fill[0].color: colors.colors.white100,
+  fill[0].color: colors.theme.base,
 
   siteHeader.accountDivider {
     overrides: [remove(siteHeader.divider.horizontalLine)]

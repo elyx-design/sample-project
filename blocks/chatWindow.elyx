@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/chatBubble.elyx" as chatBubble
 import "tokens/colors.elyx" as colors
 import "components/textField.elyx" as textField
@@ -14,7 +15,7 @@ export chatWindow = frame {
   width: 327px,
   height: 316px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 38px},
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   filter: {type: .background-blur, radius: 40px},
   padding: [Spacing.padding.xxlarge, Spacing.padding.medium, Spacing.padding.medium],
   children: [messageThread, messageField]
@@ -52,7 +53,7 @@ firstReply = frame : chatBubble.base {
   top: 74px,
 
   chatBubble.message.messageText {
-    fill[0].color: colors.colors.white100,
+    fill[0].color: colors.theme.base,
     contents: "Yeah, it's true!"
   }
 }
@@ -62,7 +63,7 @@ secondReply = frame : chatBubble.base {
   top: 94px,
 
   chatBubble.message.messageText {
-    fill[0].color: colors.colors.white100,
+    fill[0].color: colors.theme.base,
     contents: "Incredible pace out there"
   }
 }
@@ -85,7 +86,7 @@ liveChat = frame : chatWindow {
   padding-left: 0px,
   padding-bottom: 0px,
   padding-right: 0px,
-  fill[0].color: colors.colors.white100,
+  fill[0].color: colors.theme.base,
   layout.align-items: .start,
   layout.justify-content: .space-between,
   overrides: [
@@ -106,10 +107,10 @@ GroupedStack = frame {
 GroupedStack_4 = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
-  fill: colors.colors.white100,
+  fill: colors.theme.base,
   shadow: {
     drop-shadow: {
-      color: colors.colors.blackAlpha10,
+      color: colors.primitives.blackAlpha10,
       offset: point(0px, 1px),
       blur-radius: 0px,
       spread: 0px
@@ -135,9 +136,9 @@ GroupedStack_5 = frame {
 text1 = text {
   left: 793px,
   top: 637px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.labels.broadcastChat,
-  font-size: Spacing.fontSize.xlarge,
+  font-size: Typography.fontSize.xlarge,
   font-style: "SemiBold"
 }
 
@@ -153,16 +154,16 @@ group24svg = icon {
   top: 615px,
   width: 24px,
   height: 24px,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: group24
 }
 
 text2 = text {
   left: 813px,
   top: 657px,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: "2,490 online",
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold",
   align: .right
 }
@@ -202,7 +203,7 @@ base = frame : chatBubble.liveBubble {
   width: 100%,
 
   chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.pink,
+    fill[0].color: colors.palette.pink,
     contents: "oasis_rider"
   }
 
@@ -217,7 +218,7 @@ base_2 = frame : chatBubble.liveBubble {
   width: 100%,
 
   chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.purple,
+    fill[0].color: colors.palette.purple,
     contents: "Mirage_FC"
   }
 
@@ -236,7 +237,7 @@ base_4 = frame : chatBubble.liveBubble {
   width: 100%,
 
   chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.cyan,
+    fill[0].color: colors.palette.cyan,
     contents: "joana.rd"
   }
 
@@ -255,7 +256,7 @@ base_3 = frame : chatBubble.liveBubble {
   width: 100%,
 
   chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.colors.green,
+    fill[0].color: colors.palette.green,
     contents: "MODYara"
   }
 

@@ -17,7 +17,7 @@ horizontalLine = shape {
   top: 0px,
   width: 100%,
   height: 0.5px,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -37,7 +37,7 @@ verticalLine = shape {
   top: 0px,
   width: 0.5px,
   height: 100%,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   type: .rect,
   corner-radius: radius.radius.full
 }

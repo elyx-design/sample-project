@@ -1,4 +1,5 @@
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/avatar.elyx" as userAvatar
 import "components/header.elyx" as header
 
@@ -53,12 +54,12 @@ mediumHeader = frame : header.mediumLeft {
 
   header.mediumSubtitle {
     contents: "nora@mail.com",
-    font-size: Spacing.fontSize.xlarge
+    font-size: Typography.fontSize.xlarge
   }
 
   header.mediumTitle {
     contents: "Nora Harper",
-    font-size: Spacing.fontSize.xxxlarge,
+    font-size: Typography.fontSize.xxxlarge,
     font-style: "Bold"
   }
 }

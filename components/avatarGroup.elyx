@@ -129,7 +129,7 @@ rightCountText = text {
   top: 0px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: "+28"
 }
 
@@ -225,7 +225,7 @@ bottomCountText = text {
   top: 0px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: "+28"
 }
 
@@ -399,7 +399,7 @@ titleText = text {
   top: 0px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.avatarGroupTitle,
   font-style: "SemiBold"
 }

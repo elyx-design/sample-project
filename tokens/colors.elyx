@@ -1,27 +1,24 @@
-export colors = tokens {
+export theme = tokens {
+  base: .white,
+  baseAlpha50: rgb(100%, 100%, 100%, 50%),
+  baseAlpha70: rgb(100%, 100%, 100%, 70%),
+  contrastStrongest: rgb(8.61%, 8.61%, 8.61%),
+  contrastStrong: rgb(17.92%, 17.92%, 17.92%),
+  contrastDefault: rgb(28.06%, 28.06%, 28.06%),
+  contrastMuted: rgb(74.32%, 74.32%, 74.32%),
+  contrastSubtle: rgb(87.0588%, 87.0588%, 87.0588%),
+  contrastFaint: rgb(93.448%, 93.448%, 93.448%),
+  contrastAlpha08: rgb(0%, 0%, 0%, 8%),
+  contrastAlpha25: rgb(0%, 0%, 0%, 25%),
+  contrastAlpha50: rgb(0%, 0%, 0%, 50%),
+  contrastAlpha70: rgb(9.8%, 9.8%, 9.8%, 70%)
+}
+
+export palette = tokens {
   blue: rgb(0%, 50.56%, 100%),
   red70: rgb(100%, 10.15%, 17.63%),
   red60: rgb(89.3891%, 19.8896%, 14.9388%),
-  white100: .white,
-  blackAlpha25: rgb(0%, 0%, 0%, 25%),
-  black20: rgb(8.61%, 8.61%, 8.61%),
-  blackAlpha70: rgb(9.8%, 9.8%, 9.8%, 70%),
-  black90: rgb(87.0588%, 87.0588%, 87.0588%),
   red50: rgb(75.1167%, 0%, 0%),
-  black40: rgb(28.06%, 28.06%, 28.06%),
-  black30: rgb(17.92%, 17.92%, 17.92%),
-  black80: rgb(74.32%, 74.32%, 74.32%),
-  black95: rgb(93.448%, 93.448%, 93.448%),
-  blackAlpha10: rgb(0%, 0%, 0%, 10%),
-  blackAlpha50: rgb(0%, 0%, 0%, 50%),
-  whiteAlpha70: rgb(100%, 100%, 100%, 70%),
-  whiteAlpha50: rgb(100%, 100%, 100%, 50%),
-  blackAlpha05: rgb(0%, 0%, 0%, 5%),
-  blackAlpha08: rgb(0%, 0%, 0%, 8%),
-  whiteAlpha25: rgb(100%, 100%, 100%, 25%),
-  whiteAlpha10: rgb(100%, 100%, 100%, 10%),
-  status-visible: rgb(0%, 92.12%, 0%),
-  status-away: rgb(100%, 65.3497%, 0%),
   yellow: rgb(100%, 83.1373%, 28.6275%),
   yellowAlpha50: rgb(100%, 83.1373%, 28.6275%, 50%),
   pink: rgb(100%, 0%, 51.37%),
@@ -32,17 +29,32 @@ export colors = tokens {
   limeBright: rgb(67.48%, 100%, 0%),
   lime: rgb(83.53%, 96.25%, 0%),
   magenta: rgb(100%, 41.19%, 100%),
-  controlForeground: rgb(98.9987%, 98.9987%, 98.9987%),
-  controlBorder: rgb(79.9972%, 79.9972%, 79.9972%),
-  controlSurface: rgb(89.84%, 89.84%, 89.84%),
-  surfaceSubtle: rgb(94.9997%, 94.9997%, 94.9997%),
   lavender: rgb(90.2878%, 81.12%, 100%)
+}
+
+export status = tokens {
+  visible: rgb(0%, 92.12%, 0%),
+  away: rgb(100%, 65.3497%, 0%)
+}
+
+export controls = tokens {
+  foreground: rgb(98.9987%, 98.9987%, 98.9987%),
+  border: rgb(79.9972%, 79.9972%, 79.9972%),
+  surface: rgb(89.84%, 89.84%, 89.84%)
+}
+
+export surfaces = tokens {
+  subtle: rgb(94.9997%, 94.9997%, 94.9997%)
 }
 
 export primitives = tokens {
   white: .white,
+  whiteAlpha10: rgb(100%, 100%, 100%, 10%),
+  whiteAlpha25: rgb(100%, 100%, 100%, 25%),
   white50: rgb(100%, 100%, 100%, 50%),
   black: rgb(9%, 9%, 9%),
+  blackAlpha05: rgb(0%, 0%, 0%, 5%),
+  blackAlpha10: rgb(0%, 0%, 0%, 10%),
   white70: rgb(100%, 100%, 100%, 70%),
   black25: rgb(0%, 0%, 0%, 25%)
 }

@@ -36,11 +36,11 @@ pricingCards = frame {
   left: 125.5px,
   top: 202px,
   layout: {justify-content: .center, align-items: .center},
-  fill: colors.colors.whiteAlpha50,
-  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  fill: colors.theme.baseAlpha50,
+  border: {color: colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
-      color: colors.colors.blackAlpha10,
+      color: colors.primitives.blackAlpha10,
       offset: point(0px, 5px),
       blur-radius: 5px,
       spread: 0px

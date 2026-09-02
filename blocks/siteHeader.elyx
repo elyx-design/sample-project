@@ -42,7 +42,7 @@ export menu = frame {
 label = text {
   left: 0px,
   top: 0px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.menu,
   font-style: "SemiBold"
 }
@@ -53,7 +53,7 @@ mutedMenu = frame : menu {
   top: 521px,
 
   label {
-    fill[0].color: colors.colors.blackAlpha50
+    fill[0].color: colors.theme.contrastAlpha50
   }
 }
 
@@ -80,7 +80,7 @@ mutedIconMenu = frame : menu {
   overrides: [insert(mutedChevron, after = label)],
 
   label {
-    fill[0].color: colors.colors.blackAlpha50
+    fill[0].color: colors.theme.contrastAlpha50
   }
 }
 
@@ -172,7 +172,7 @@ DividerWhite = frame : divider.horizontal {
   padding-bottom: 0px,
 
   divider.horizontalLine {
-    fill[0].color: colors.colors.blackAlpha50
+    fill[0].color: colors.theme.contrastAlpha50
   }
 }
 
@@ -373,7 +373,7 @@ accountDivider = frame : divider.horizontal {
   padding-bottom: 0px,
 
   divider.horizontalLine {
-    fill[0].color: colors.colors.blackAlpha50
+    fill[0].color: colors.theme.contrastAlpha50
   }
 }
 
@@ -382,7 +382,7 @@ mutedChevron = icon {
   top: 460px,
   width: 12px,
   height: 12px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: chevrondown122
 }
 
@@ -391,7 +391,7 @@ chevron = icon {
   top: 460px,
   width: 12px,
   height: 12px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: chevrondown122
 }
 

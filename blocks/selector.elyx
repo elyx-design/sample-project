@@ -39,6 +39,6 @@ shape1 = icon {
   top: 8px,
   width: 24px,
   height: 24px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: chevronupDown24
 }

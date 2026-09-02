@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as colors
 import "images/thumbnails/thumb01.jpg" as thumb01
 import "icons/20 pixels/heart-20.svg" as heart20
@@ -52,7 +53,7 @@ imageName = text {
   width: 100%,
   fill: rgb(100%, 100%, 100%, 70%),
   contents: Strings.componentDefaults.imageName,
-  font-size: Spacing.fontSize.small
+  font-size: Typography.fontSize.small
 }
 
 @variant

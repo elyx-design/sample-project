@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as colors
 import "blocks/chatAIComposer.elyx" as chatAIComposer
 import "images/background/waves.jpg" as waves
@@ -50,8 +51,8 @@ chatAIComposer_2 = frame : chatAIComposer.chatAIComposer {left: 119px, top: 105p
 text1 = text {
   left: 1412px,
   top: 1073px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: Strings.marketing.aiDisclaimer,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }

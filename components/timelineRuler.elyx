@@ -1,4 +1,5 @@
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
@@ -49,7 +50,7 @@ majorTick = shape {
   top: 0px,
   width: 1px,
   height: 3px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -59,7 +60,7 @@ firstMinorTick = shape {
   top: 0px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -69,7 +70,7 @@ secondMinorTick = shape {
   top: 0.39px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -79,7 +80,7 @@ thirdMinorTick = shape {
   top: 0.78px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -89,7 +90,7 @@ fourthMinorTick = shape {
   top: 1.17px,
   width: 1px,
   height: 2px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -99,7 +100,7 @@ fifthMinorTick = shape {
   top: 1.56px,
   width: 1px,
   height: 1px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -109,8 +110,8 @@ label = text {
   right: 50.63px,
   width: .auto,
   height: 15px,
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   contents: "0",
-  font-size: Spacing.fontSize.xsmall,
+  font-size: Typography.fontSize.xsmall,
   align: .center
 }

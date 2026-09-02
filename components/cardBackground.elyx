@@ -10,11 +10,11 @@ export base = frame {
   min-width: 100px,
   min-height: 60px,
   layout: {direction: .column, item-gap: Spacing.padding.xlarge},
-  fill: colors.colors.white100,
-  border: {color: colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  fill: colors.theme.base,
+  border: {color: colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
-      color: colors.colors.blackAlpha10,
+      color: colors.primitives.blackAlpha10,
       offset: point(0px, 5px),
       blur-radius: 5px,
       spread: 0px
@@ -28,7 +28,7 @@ export base = frame {
 transparent = frame : base {
   left: 80px,
   top: 575px,
-  fill[0].color: colors.colors.whiteAlpha50,
+  fill[0].color: colors.theme.baseAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }
@@ -41,7 +41,7 @@ transparentFullRadius = frame : base {
   left: 275px,
   top: 575px,
   corner-radius: Radius.radius.full,
-  fill[0].color: colors.colors.whiteAlpha50,
+  fill[0].color: colors.theme.baseAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur
 }

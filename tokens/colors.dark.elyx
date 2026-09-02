@@ -3,19 +3,23 @@ import "tokens/colors.elyx" as colors
 @context(theme="dark")
 __file__
 
-export darkColors = tokens : colors.colors {
-  white100: rgb(8.61%, 8.61%, 8.61%),
-  blackAlpha25: rgb(100%, 100%, 100%, 25%),
-  black20: .white,
-  blackAlpha70: rgb(100%, 100%, 100%, 70%),
-  black90: rgb(17.92%, 17.92%, 17.92%),
-  black40: rgb(74.32%, 74.32%, 74.32%),
-  black30: rgb(87.0588%, 87.0588%, 87.0588%),
-  black80: rgb(28.06%, 28.06%, 28.06%),
-  black95: rgb(13.73%, 13.73%, 13.73%),
-  blackAlpha50: rgb(100%, 100%, 100%, 50%),
-  whiteAlpha70: rgb(0%, 0%, 0%, 70%),
-  blackAlpha08: rgb(100%, 100%, 100%, 8%),
+export darkTheme = tokens : colors.theme {
+  base: rgb(8.61%, 8.61%, 8.61%),
+  baseAlpha50: rgb(0%, 0%, 0%, 50%),
+  baseAlpha70: rgb(0%, 0%, 0%, 70%),
+  contrastStrongest: .white,
+  contrastStrong: rgb(87.0588%, 87.0588%, 87.0588%),
+  contrastDefault: rgb(74.32%, 74.32%, 74.32%),
+  contrastMuted: rgb(28.06%, 28.06%, 28.06%),
+  contrastSubtle: rgb(17.92%, 17.92%, 17.92%),
+  contrastFaint: rgb(13.73%, 13.73%, 13.73%),
+  contrastAlpha08: rgb(100%, 100%, 100%, 8%),
+  contrastAlpha25: rgb(100%, 100%, 100%, 25%),
+  contrastAlpha50: rgb(100%, 100%, 100%, 50%),
+  contrastAlpha70: rgb(100%, 100%, 100%, 70%)
+}
+
+export darkPalette = tokens : colors.palette {
   yellow: rgb(100%, 83.1373%, 28.6275%),
   yellowAlpha50: rgb(100%, 83.1373%, 28.6275%, 50%),
   pink: rgb(100%, 0%, 51.37%),
@@ -26,12 +30,17 @@ export darkColors = tokens : colors.colors {
   limeBright: rgb(67.48%, 100%, 0%),
   lime: rgb(83.53%, 96.25%, 0%),
   magenta: rgb(100%, 41.19%, 100%),
-  controlForeground: rgb(8.61%, 8.61%, 8.61%),
-  controlBorder: rgb(28.06%, 28.06%, 28.06%),
-  controlSurface: rgb(17.92%, 17.92%, 17.92%),
-  surfaceSubtle: rgb(13.73%, 13.73%, 13.73%),
-  lavender: rgb(90.2878%, 81.12%, 100%),
-  whiteAlpha50: rgb(0%, 0%, 0%, 50%)
+  lavender: rgb(90.2878%, 81.12%, 100%)
+}
+
+export darkControls = tokens : colors.controls {
+  foreground: rgb(8.61%, 8.61%, 8.61%),
+  border: rgb(28.06%, 28.06%, 28.06%),
+  surface: rgb(17.92%, 17.92%, 17.92%)
+}
+
+export darkSurfaces = tokens : colors.surfaces {
+  subtle: rgb(13.73%, 13.73%, 13.73%)
 }
 
 export darkGradients = tokens : colors.gradients {

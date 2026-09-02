@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/logo.elyx" as logo
 import "tokens/colors.elyx" as colors
 import "components/divider.elyx" as divider
@@ -55,21 +56,21 @@ blurb = text {
   left: 0px,
   top: 7px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.labels.newsletter,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Bold",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 blurb_2 = text {
   left: 20px,
   top: 27px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.marketing.newsletterDescription,
-  font-size: Spacing.fontSize.small,
-  line-height: Spacing.lineHeight.relaxed
+  font-size: Typography.fontSize.small,
+  line-height: Typography.lineHeight.relaxed
 }
 
 frame2 = frame {
@@ -122,12 +123,12 @@ productHeading = text {
   left: 0px,
   top: 61px,
   width: 100%,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: Strings.labels.productSection,
-  font-size: Spacing.fontSize.xsmall,
+  font-size: Typography.fontSize.xsmall,
   font-style: "ExtraBold",
-  line-height: Spacing.lineHeight.relaxed,
-  letter-spacing: Spacing.letterSpacing.wide
+  line-height: Typography.lineHeight.relaxed,
+  letter-spacing: Typography.letterSpacing.wide
 }
 
 productLinks = frame {
@@ -142,9 +143,9 @@ howItWorksLink = text {
   left: 0px,
   top: 522px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.howItWorks,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -152,9 +153,9 @@ pricingFooterLink = text {
   left: 0px,
   top: 542px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.pricing,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -162,9 +163,9 @@ faqLink = text {
   left: 0px,
   top: 562px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.faq,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -172,9 +173,9 @@ resourcesLink = text {
   left: 0px,
   top: 585px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.resources,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -182,9 +183,9 @@ featuresLink = text {
   left: 0px,
   top: 605px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.features,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -192,9 +193,9 @@ roadmapLink = text {
   left: 0px,
   top: 625px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.roadmap,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -210,12 +211,12 @@ companyHeading = text {
   left: 0px,
   top: 61px,
   width: 100%,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: Strings.labels.companySection,
-  font-size: Spacing.fontSize.xsmall,
+  font-size: Typography.fontSize.xsmall,
   font-style: "ExtraBold",
-  line-height: Spacing.lineHeight.relaxed,
-  letter-spacing: Spacing.letterSpacing.wide
+  line-height: Typography.lineHeight.relaxed,
+  letter-spacing: Typography.letterSpacing.wide
 }
 
 companyLinks = frame {
@@ -230,9 +231,9 @@ aboutLink = text {
   left: 0px,
   top: 522px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.about,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -240,9 +241,9 @@ contactLink = text {
   left: 0px,
   top: 542px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.contact,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -250,9 +251,9 @@ careersLink = text {
   left: 0px,
   top: 562px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.careers,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -260,9 +261,9 @@ pressLink = text {
   left: 0px,
   top: 582px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.press,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -270,9 +271,9 @@ ourStoryLink = text {
   left: 0px,
   top: 602px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.ourStory,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -288,12 +289,12 @@ contactHeading = text {
   left: 0px,
   top: 61px,
   width: 100%,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: Strings.labels.contactSection,
-  font-size: Spacing.fontSize.xsmall,
+  font-size: Typography.fontSize.xsmall,
   font-style: "ExtraBold",
-  line-height: Spacing.lineHeight.relaxed,
-  letter-spacing: Spacing.letterSpacing.wide
+  line-height: Typography.lineHeight.relaxed,
+  letter-spacing: Typography.letterSpacing.wide
 }
 
 contactLinks = frame {
@@ -308,9 +309,9 @@ privacyLink = text {
   left: 0px,
   top: 522px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.privacyPolicy,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -318,9 +319,9 @@ termsLink = text {
   left: 0px,
   top: 542px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.termsOfService,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -328,9 +329,9 @@ contactCareersLink = text {
   left: 0px,
   top: 562px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.careers,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -338,9 +339,9 @@ securityLink = text {
   left: 0px,
   top: 582px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.security,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -371,11 +372,11 @@ copyright = text {
   top: 1080px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.blackAlpha70,
+  fill: colors.theme.contrastAlpha70,
   contents: "© 2026 Overleaf. All rights reserved.",
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 statusNote = text {
@@ -383,9 +384,9 @@ statusNote = text {
   top: 1100px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.blackAlpha70,
+  fill: colors.theme.contrastAlpha70,
   contents: Strings.status.servicesOnline,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }

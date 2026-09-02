@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
@@ -24,9 +25,9 @@ bookDetails = frame {
 pageProgress = text {
   left: 0px,
   top: 62px,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: "Page 214 of 344",
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -40,7 +41,7 @@ title = text {
   left: 0px,
   top: 413px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: "Hidden Treasures",
   font-size: 28,
   font-style: "SemiBold"
@@ -49,9 +50,9 @@ title = text {
 author = text {
   left: 844px,
   top: 393px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: "by Eric Mateo",
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   font-style: "SemiBold"
 }
 
@@ -75,9 +76,9 @@ progressLabel = text {
   top: 16px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: Strings.labels.progress,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -86,9 +87,9 @@ progressValue = text {
   top: 36px,
   width: .auto,
   height: .auto,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: "42%",
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold",
   align: .right
 }
@@ -112,9 +113,9 @@ notes = frame {
 notesLabel = text {
   left: 652px,
   top: 688px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.notes,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -122,10 +123,10 @@ notesBody = text {
   left: 0px,
   top: 708px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter.",
-  font-size: Spacing.fontSize.small,
-  line-height: Spacing.lineHeight.relaxed
+  font-size: Typography.fontSize.small,
+  line-height: Typography.lineHeight.relaxed
 }
 
 productPreview = frame : product.product {left: -63px, top: -86px}

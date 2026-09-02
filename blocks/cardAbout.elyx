@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
@@ -15,7 +16,7 @@ export profileCard = frame : cardBackground.transparent {
   padding-bottom: 0px,
   padding-right: 0px,
   border[0].color: colors.primitives.black25,
-  fill[0].color: colors.colors.yellowAlpha50,
+  fill[0].color: colors.palette.yellowAlpha50,
   layout.item-gap: 0,
   overrides: [insert(content, after = .nil), insert(profileStats, after = content)]
 }
@@ -26,7 +27,7 @@ content = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
-  fill: colors.colors.white100,
+  fill: colors.theme.base,
   corner-radius: [0px, 0px, Radius.radius.xlarge, Radius.radius.xlarge],
   padding: Spacing.padding.xxlarge,
   children: [profileHeader, bio]
@@ -54,9 +55,9 @@ bio = text {
   left: 0px,
   top: 0px,
   width: 100%,
-  fill: colors.colors.blackAlpha70,
+  fill: colors.theme.contrastAlpha70,
   contents: "Nora Harper is a lifestyle content creator with a warm, thoughtful eye for everyday moments. With 18k followers, she has built a community around simple, authentic experiences: specialty coffee, long conversations, and finding beauty in small things.\n\nHer content carries a cozy, intimate tone that celebrates slowing down and appreciating daily life. Active and engaged, she posts regularly to a loyal audience that connects with her warm, reflective outlook.",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 profileStats = frame : stats.stats {

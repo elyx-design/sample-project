@@ -1,6 +1,7 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/button.elyx" as Button
 import "components/checkbox.elyx" as Checkbox
 import "components/textField.elyx" as TextField
@@ -80,9 +81,9 @@ options = frame {
 rememberToggle = frame : Checkbox.on {left: 127px, top: 285px}
 
 rememberLabel = text {
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: Strings.forms.rememberMe,
-  font-size: Spacing.fontSize.medium
+  font-size: Typography.fontSize.medium
 }
 
 signInButton = frame : Button.mediumPrimary {

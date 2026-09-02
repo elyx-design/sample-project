@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "blocks/productInfo.elyx" as productInfo
 import "tokens/colors.elyx" as colors
 import "components/tag.elyx" as tag
@@ -46,7 +47,7 @@ siteHeader_2 = frame : siteHeader.accountHeader {
   width: 100%,
 
   siteHeader.accountDivider.divider.horizontalLine {
-    fill[0].color: colors.colors.whiteAlpha50
+    fill[0].color: colors.theme.baseAlpha50
   }
 
   siteHeader.accountContent.accountActions.accountMenu {
@@ -55,39 +56,39 @@ siteHeader_2 = frame : siteHeader.accountHeader {
   }
 
   siteHeader.accountContent.accountActions.accountSearch {
-    fill[0].color: colors.colors.whiteAlpha25
+    fill[0].color: colors.primitives.whiteAlpha25
   }
 
   siteHeader.accountContent.accountActions.accountSearch.textField.placeholderIcon {
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.theme.baseAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountResources.mutedChevron {
-    fill[0].color: colors.colors.whiteAlpha70
+    fill[0].color: colors.theme.baseAlpha70
   }
 
   siteHeader.accountContent.accountNav.accountResources.label {
-    fill[0].color: colors.colors.whiteAlpha70,
+    fill[0].color: colors.theme.baseAlpha70,
     contents: Strings.navigation.favourites
   }
 
   siteHeader.accountContent.accountNav.accountCompany.label {
-    fill[0].color: colors.colors.whiteAlpha70,
+    fill[0].color: colors.theme.baseAlpha70,
     contents: Strings.status.live
   }
 
   siteHeader.accountContent.accountNav.accountPricing.label {
-    fill[0].color: colors.colors.whiteAlpha70,
+    fill[0].color: colors.theme.baseAlpha70,
     contents: Strings.navigation.tvShows
   }
 
   siteHeader.accountContent.accountNav.accountProduct.label {
-    fill[0].color: colors.colors.whiteAlpha70,
+    fill[0].color: colors.theme.baseAlpha70,
     contents: Strings.navigation.movies
   }
 
   siteHeader.accountContent.small_6.logo.text2 {
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.theme.base
   }
 
   siteHeader.accountContent.accountActions.accountMenu.accountAvatar.avatar.smallStatus {
@@ -135,7 +136,7 @@ text1 = text {
   top: 852px,
   fill: colors.primitives.white,
   contents: "Silent Hues",
-  font-size: Spacing.fontSize.xxxlarge,
+  font-size: Typography.fontSize.xxxlarge,
   font-style: "SemiBold"
 }
 
@@ -195,7 +196,7 @@ productInfo_2 = frame : productInfo.productInfo {
   top: 881px,
 
   productInfo.productDetails.ratingTag {
-    fill[0].color: colors.colors.yellow
+    fill[0].color: colors.palette.yellow
   }
 
   productInfo.productDetails.productCopy.subtitle {
@@ -233,7 +234,7 @@ text2 = text {
   width: 100%,
   fill: colors.primitives.white,
   contents: Strings.labels.synopsis,
-  font-size: Spacing.fontSize.large,
+  font-size: Typography.fontSize.large,
   font-style: "Bold"
 }
 
@@ -244,7 +245,7 @@ text3 = text {
   fill: colors.primitives.white70,
   contents: "A rising performance artist begins to lose the line between the faces she paints and the self underneath. As each new piece grows bolder, so does the fracture between who she shows the world and who she has left in private. Chroma is an intimate portrait of identity, spectacle, and the cost of being seen.",
   font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 horizontal_2 = frame : divider.horizontal {
@@ -281,7 +282,7 @@ text4 = text {
   width: 100%,
   fill: colors.primitives.white,
   contents: Strings.labels.starring,
-  font-size: Spacing.fontSize.large,
+  font-size: Typography.fontSize.large,
   font-style: "Bold"
 }
 
@@ -433,7 +434,7 @@ text9 = text {
   width: 100%,
   fill: colors.primitives.white,
   contents: Strings.labels.castAndCrew,
-  font-size: Spacing.fontSize.large,
+  font-size: Typography.fontSize.large,
   font-style: "Bold"
 }
 
@@ -453,7 +454,7 @@ text10 = text {
   fill: colors.primitives.white70,
   contents: "Director: Amara Vale\nWritten by: Amara Vale, Julian Foss\nProduced by: Rina Kapoor, Marcus Bell\nCinematography: Yusuf Adeyemi\nOriginal Score: Lena Vasquez",
   font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 horizontal_3 = frame : divider.horizontal {
@@ -484,7 +485,7 @@ text12 = text {
   fill: colors.primitives.white70,
   contents: "Critics: 89% Fresh • Audience: 76% • IMDb: 7.8 / 10 • Metascore: 82",
   font-style: "Light",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 GroupedStack_9 = frame {
@@ -500,7 +501,7 @@ text11 = text {
   width: 100%,
   fill: colors.primitives.white,
   contents: Strings.labels.gallery,
-  font-size: Spacing.fontSize.large,
+  font-size: Typography.fontSize.large,
   font-style: "Bold"
 }
 
@@ -517,7 +518,7 @@ thumbnailImage_2 = frame : thumbnailImage.thumbnailVideo {
   width: 234px,
   height: 145px,
   corner-radius: Radius.radius.xsmall,
-  border[0].color: colors.colors.whiteAlpha10,
+  border[0].color: colors.primitives.whiteAlpha10,
   fill[0].image.ref: thumb10,
   fill[1]: .nil
 }
@@ -535,7 +536,7 @@ thumbnailImage_3 = frame : thumbnailImage.thumbnailImage {
   width: 100%,
   height: 76px,
   corner-radius: Radius.radius.xsmall,
-  border[0].color: colors.colors.whiteAlpha10,
+  border[0].color: colors.primitives.whiteAlpha10,
   fill[0].image.ref: thumb11,
   fill[1]: .nil,
 
@@ -554,7 +555,7 @@ thumbnailImage_4 = frame : thumbnailImage.thumbnailImage {
   width: 100%,
   height: 76px,
   corner-radius: Radius.radius.xsmall,
-  border[0].color: colors.colors.whiteAlpha10,
+  border[0].color: colors.primitives.whiteAlpha10,
   fill[0].image.ref: thumb12,
   fill[1]: .nil,
 

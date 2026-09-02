@@ -29,7 +29,7 @@ export LandingPage = frame {
     align-items: .center,
     item-gap: 116px
   },
-  fill: [colors.colors.white100, {mix-blend-mode: .multiply, image: {ref: night}}],
+  fill: [colors.theme.base, {mix-blend-mode: .multiply, image: {ref: night}}],
   padding-top: Spacing.padding.xxlarge,
   padding-bottom: Spacing.padding.xxlarge,
   children: [top, frame3]
@@ -102,7 +102,7 @@ medium = frame : button.medium {
 text3 = text {
   left: 854px,
   top: 477px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: Strings.actions.watchDemo,
   font-style: "SemiBold"
 }
@@ -130,7 +130,7 @@ layer1 = frame {
   width: 100%,
   height: 100%,
   layout: {item-gap: Spacing.gap.medium},
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.medium,
   overflow: .visible,
@@ -162,7 +162,7 @@ layer2 = frame {
   width: 100%,
   height: 100%,
   layout: {item-gap: Spacing.gap.medium},
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.medium,
   overflow: .visible,
@@ -193,7 +193,7 @@ layer3 = frame {
   width: 100%,
   height: 100%,
   layout: {item-gap: Spacing.gap.medium},
-  fill: colors.colors.whiteAlpha50,
+  fill: colors.theme.baseAlpha50,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.medium,
   overflow: .visible,
@@ -223,15 +223,15 @@ base = frame : tag.iconAndLabel {
   top: 1091px,
   border[0].visible: .false,
   connections[0].target: footer.Footer,
-  fill[0].color: colors.colors.blackAlpha25,
+  fill[0].color: colors.theme.contrastAlpha25,
 
   tag.label {
-    fill[0].color: colors.colors.whiteAlpha70,
+    fill[0].color: colors.theme.baseAlpha70,
     contents: Strings.actions.scrollDown
   }
 
   tag.tagIcon {
-    fill[0].color: colors.colors.whiteAlpha70,
+    fill[0].color: colors.theme.baseAlpha70,
     contents: arrowDown20
   }
 }

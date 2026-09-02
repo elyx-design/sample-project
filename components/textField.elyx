@@ -1,6 +1,7 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "icons/24 pixels/calendar-24.svg" as calendar24
 import "components/button.elyx" as button
@@ -14,8 +15,8 @@ export base = frame {
   width: 100%,
   height: Spacing.size.medium,
   layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
-  fill: Colors.colors.white100,
-  border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  fill: Colors.theme.base,
+  border: {color: Colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
   corner-radius: Radius.radius.full,
   padding-left: Spacing.padding.medium,
   padding-right: Spacing.padding.medium,
@@ -25,9 +26,9 @@ export base = frame {
 label = text {
   left: 0px,
   top: 0px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.label,
-  font-size: Spacing.fontSize.medium
+  font-size: Typography.fontSize.medium
 }
 
 @variant
@@ -36,7 +37,7 @@ placeholder = frame : base {
   top: 850px,
 
   label {
-    fill[0].color: Colors.colors.black80
+    fill[0].color: Colors.theme.contrastMuted
   }
 }
 
@@ -44,7 +45,7 @@ placeholder = frame : base {
 focused = frame : base {
   left: 869px,
   top: 930px,
-  border[0].color: Colors.colors.black20,
+  border[0].color: Colors.theme.contrastStrongest,
   border[0].position: .center,
   border[0].width: 1.5px
 }
@@ -53,12 +54,12 @@ focused = frame : base {
 error = frame : base {
   left: 869px,
   top: 1010px,
-  border[0].color: Colors.colors.red70,
+  border[0].color: Colors.palette.red70,
   border[0].position: .center,
   border[0].width: 1.5px,
 
   label {
-    fill[0].color: Colors.colors.red70
+    fill[0].color: Colors.palette.red70
   }
 }
 
@@ -80,7 +81,7 @@ iconPlaceholder = frame : base {
   overrides: [insert(placeholderIcon, after = .nil)],
 
   label {
-    fill[0].color: Colors.colors.black80
+    fill[0].color: Colors.theme.contrastMuted
   }
 }
 
@@ -89,7 +90,7 @@ placeholderIcon = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: search24
 }
 
@@ -98,7 +99,7 @@ defaultIcon = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: calendar24
 }
 
@@ -108,7 +109,7 @@ iconFocused = frame : base {
   top: 930px,
   padding-left: Spacing.padding.small,
   padding-right: Spacing.padding.small,
-  border[0].color: Colors.colors.black20,
+  border[0].color: Colors.theme.contrastStrongest,
   border[0].width: 1.5px,
   overrides: [insert(focusedIcon, after = .nil)]
 }
@@ -119,12 +120,12 @@ iconError = frame : base {
   top: 1010px,
   padding-left: Spacing.padding.small,
   padding-right: Spacing.padding.small,
-  border[0].color: Colors.colors.red70,
+  border[0].color: Colors.palette.red70,
   border[0].width: 1.5px,
   overrides: [insert(errorIcon, after = .nil)],
 
   label {
-    fill[0].color: Colors.colors.red70
+    fill[0].color: Colors.palette.red70
   }
 }
 
@@ -133,7 +134,7 @@ focusedIcon = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: calendar24
 }
 
@@ -142,7 +143,7 @@ errorIcon = icon {
   top: 782px,
   width: 24px,
   height: 24px,
-  fill: Colors.colors.red70,
+  fill: Colors.palette.red70,
   contents: calendar24
 }
 
@@ -164,7 +165,7 @@ buttonPlaceholder = frame : base {
   overrides: [insert(GroupedStack, after = label)],
 
   label {
-    fill[0].color: Colors.colors.black80
+    fill[0].color: Colors.theme.contrastMuted
   }
 }
 

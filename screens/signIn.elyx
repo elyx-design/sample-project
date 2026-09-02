@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "components/avatarGroup.elyx" as profileGroup
@@ -67,17 +68,17 @@ footerLinks = frame {
 privacy = text {
   fill: Colors.primitives.white50,
   contents: Strings.navigation.privacy,
-  font-size: Spacing.fontSize.small
+  font-size: Typography.fontSize.small
 }
 
 terms = text {
   fill: Colors.primitives.white50,
   contents: Strings.navigation.terms,
-  font-size: Spacing.fontSize.small
+  font-size: Typography.fontSize.small
 }
 
 help = text {
   fill: Colors.primitives.white50,
   contents: Strings.navigation.help,
-  font-size: Spacing.fontSize.small
+  font-size: Typography.fontSize.small
 }

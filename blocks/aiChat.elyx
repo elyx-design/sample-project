@@ -1,4 +1,5 @@
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/cardBackground.elyx" as cardBackground
 import "tokens/colors.elyx" as colors
 import "components/chatBubble.elyx" as chatBubble
@@ -34,9 +35,9 @@ assistantResponse = text {
   left: 12px,
   top: 60px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: "Perfect!\n\nI've put together a complete grocery list for the week based on what you usually eat, with a good balance of staples, fresh produce, and protein so you'll have everything you need. Here's your list:\n• Bread\n• Eggs\n• Rice\n• Beans\n• Chicken breast\n• Lettuce",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 layer1 = frame {
@@ -53,6 +54,6 @@ assistantIcon = icon {
   top: 0px,
   width: 100%,
   height: 24px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: robot24
 }

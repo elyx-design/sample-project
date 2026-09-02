@@ -12,18 +12,3 @@ export gap = tokens {
 export padding = tokens {xsmall: 4, small: 8, medium: 12, large: 16, xlarge: 20, xxlarge: 24}
 
 export size = tokens {small: 28, medium: 36, large: 68}
-
-export fontSize = tokens {
-  xsmall: 10,
-  small: 12,
-  medium: 14,
-  large: 16,
-  xlarge: 18,
-  xxlarge: 20,
-  xxxlarge: 24,
-  huge: 32
-}
-
-export lineHeight = tokens {relaxed: 1.5}
-
-export letterSpacing = tokens {medium: 5%, wide: 10%}

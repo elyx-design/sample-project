@@ -1,8 +1,8 @@
 # Tokens
 
 Tokens are shared values referenced throughout the Elyx design system. They
-provide a single source of truth for colors, strings, spacing, sizing, and corner
-radii, and sit beneath components, blocks, and screens:
+provide a single source of truth for colors, strings, spacing, typography, and
+corner radii, and sit beneath components, blocks, and screens:
 
 ```
 tokens / icons / images
@@ -18,7 +18,12 @@ as demonstrated by `colors.dark.elyx` and `strings.fr.elyx`.
 ## Best practices
 
 - Group related token families into focused files such as `colors.elyx`,
-  `spacing.elyx`, `radius.elyx`, and `strings.elyx`.
+  `spacing.elyx`, `typography.elyx`, `radius.elyx`, and `strings.elyx`.
+- Within `colors.elyx`, keep fixed values in `primitives` and `palette`, and group
+  contextual values by role in `theme`, `status`, `controls`, and `surfaces`.
+- Use `base` and `contrast` names for theme-dependent neutral colors, and omit
+  prefixes already supplied by a group name, such as `status.visible` and
+  `controls.foreground`.
 - Export token sets that other files need to import.
 - Reference tokens instead of hard-coding values that appear in multiple places.
 - Use clear names that describe a token's purpose or value consistently.

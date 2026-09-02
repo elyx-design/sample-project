@@ -122,7 +122,7 @@ preview = frame {
   top: 0px,
   height: 60%,
   layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.xxsmall},
-  fill: {color: Colors.colors.black20, visible: .false},
+  fill: {color: Colors.theme.contrastStrongest, visible: .false},
   children: [player, gallery]
 }
 
@@ -254,7 +254,7 @@ timeline = frame {
   width: 100%,
   height: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
-  fill: {color: Colors.colors.black20, visible: .false},
+  fill: {color: Colors.theme.contrastStrongest, visible: .false},
   padding-top: Spacing.padding.small,
   children: [ruler, tracks]
 }
@@ -344,7 +344,7 @@ audioTrack = frame : mediaTrack.track {
   left: 4241.5px,
   top: 788px,
   width: 48.3773%,
-  fill[0].color: Colors.colors.magenta,
+  fill[0].color: Colors.palette.magenta,
 
   mediaTrack.content.dateLabel {
     display: .hidden
@@ -396,7 +396,7 @@ line = shape {
   width: 2px,
   height: 100%,
   fill: [
-    Colors.colors.lime,
+    Colors.palette.lime,
     {
       linear-gradient: {
         from: point(50%, 88.7466%),
@@ -405,7 +405,7 @@ line = shape {
       }
     }
   ],
-  border: {color: Colors.colors.blackAlpha70, width: 0.5px, position: .outside},
+  border: {color: Colors.theme.contrastAlpha70, width: 0.5px, position: .outside},
   type: .rect
 }
 
@@ -415,7 +415,7 @@ handle = shape {
   width: 12px,
   height: 12px,
   ignore-stack: .true,
-  fill: Colors.colors.blackAlpha70,
-  border: {color: Colors.colors.lime, width: 2px},
+  fill: Colors.theme.contrastAlpha70,
+  border: {color: Colors.palette.lime, width: 2px},
   type: .ellipse
 }

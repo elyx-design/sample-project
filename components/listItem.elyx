@@ -1,6 +1,7 @@
 import "icons/12 pixels/dot-12.svg" as dot12
 import "tokens/colors.elyx" as colors
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 
 export projectsFeature = frame {
   layout: {align-items: .center, item-gap: Spacing.gap.small},
@@ -12,12 +13,12 @@ projectsBullet = icon {
   top: 4px,
   width: 12px,
   height: 12px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: dot12
 }
 
 projectsLabel = text {
-  fill: colors.colors.black40,
+  fill: colors.theme.contrastDefault,
   contents: "Label",
-  font-size: Spacing.fontSize.medium
+  font-size: Typography.fontSize.medium
 }

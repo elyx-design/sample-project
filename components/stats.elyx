@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "components/divider.elyx" as divider
 import "tokens/colors.elyx" as colors
 
@@ -49,7 +50,7 @@ booksValue = text {
   width: .auto,
   fill: colors.primitives.black,
   contents: "41",
-  font-size: Spacing.fontSize.huge,
+  font-size: Typography.fontSize.huge,
   align: .center
 }
 
@@ -59,7 +60,7 @@ booksLabel = text {
   width: .auto,
   fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.books,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
@@ -93,7 +94,7 @@ pagesValue = text {
   width: .auto,
   fill: colors.primitives.black,
   contents: "11k",
-  font-size: Spacing.fontSize.huge,
+  font-size: Typography.fontSize.huge,
   align: .center
 }
 
@@ -103,7 +104,7 @@ pagesLabel = text {
   width: .auto,
   fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.pages,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
@@ -137,7 +138,7 @@ ratingValue = text {
   width: .auto,
   fill: colors.primitives.black,
   contents: "4.2",
-  font-size: Spacing.fontSize.huge,
+  font-size: Typography.fontSize.huge,
   align: .center
 }
 
@@ -147,7 +148,7 @@ ratingLabel = text {
   width: .auto,
   fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.rating,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }
@@ -181,7 +182,7 @@ shelvesValue = text {
   width: .auto,
   fill: colors.primitives.black,
   contents: "9",
-  font-size: Spacing.fontSize.huge,
+  font-size: Typography.fontSize.huge,
   align: .center
 }
 
@@ -191,7 +192,7 @@ shelvesLabel = text {
   width: .auto,
   fill: rgb(9%, 9%, 9%, 25%),
   contents: Strings.stats.shelves,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   font-style: "SemiBold",
   align: .center
 }

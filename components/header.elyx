@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as Colors
 
 export mediumLeft = frame {
@@ -12,18 +13,18 @@ export mediumLeft = frame {
 }
 
 mediumTitle = text {
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.title,
-  font-size: Spacing.fontSize.xxlarge,
+  font-size: Typography.fontSize.xxlarge,
   font-style: "SemiBold"
 }
 
 mediumSubtitle = text {
   width: 100%,
-  fill: Colors.colors.blackAlpha70,
+  fill: Colors.theme.contrastAlpha70,
   contents: Strings.componentDefaults.subtitle,
-  font-size: Spacing.fontSize.medium,
-  line-height: Spacing.lineHeight.relaxed
+  font-size: Typography.fontSize.medium,
+  line-height: Typography.lineHeight.relaxed
 }
 
 @variant
@@ -52,17 +53,17 @@ export smallLeft = frame {
 
 smallTitle = text {
   width: .auto,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.title,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   font-style: "SemiBold"
 }
 
 smallSubtitle = text {
   width: 100%,
-  fill: Colors.colors.blackAlpha70,
+  fill: Colors.theme.contrastAlpha70,
   contents: Strings.componentDefaults.subtitle,
-  font-size: Spacing.fontSize.small
+  font-size: Typography.fontSize.small
 }
 
 @variant
@@ -90,7 +91,7 @@ export largeLeft = frame {
 }
 
 largeTitle = text {
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.title,
   font-size: 56,
   font-style: "Bold"
@@ -98,11 +99,11 @@ largeTitle = text {
 
 largeSubtitle = text {
   width: 100%,
-  fill: Colors.colors.blackAlpha70,
+  fill: Colors.theme.contrastAlpha70,
   contents: Strings.componentDefaults.subtitle,
-  font-size: Spacing.fontSize.xlarge,
+  font-size: Typography.fontSize.xlarge,
   font-style: "Medium",
-  line-height: Spacing.lineHeight.relaxed
+  line-height: Typography.lineHeight.relaxed
 }
 
 @variant

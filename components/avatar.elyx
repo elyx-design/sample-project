@@ -1,4 +1,5 @@
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
 import "images/profileImgs/005.jpg" as module
@@ -24,8 +25,8 @@ smallBackground = shape {
   width: Spacing.size.medium,
   height: Spacing.size.medium,
   ignore-stack: .true,
-  fill: Colors.colors.black90,
-  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  fill: Colors.theme.contrastSubtle,
+  border: {color: Colors.theme.base, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -34,9 +35,9 @@ smallInitials = text {
   top: 10.5px,
   width: 16px,
   height: 15px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: "JC",
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -52,13 +53,13 @@ export status = shape {
   top: -72.12px,
   width: 8px,
   height: 8px,
-  fill: Colors.colors.status-visible,
-  border: {color: Colors.colors.white100, position: .outside},
+  fill: Colors.status.visible,
+  border: {color: Colors.theme.base, position: .outside},
   type: .ellipse
 }
 
 @variant
-statusAway = shape : status {left: -58px, top: -72px, fill[0].color: Colors.colors.status-away}
+statusAway = shape : status {left: -58px, top: -72px, fill[0].color: Colors.status.away}
 
 @variant
 smallPhoto = frame : small {
@@ -84,14 +85,14 @@ mediumBackground = shape {
   width: 72px,
   height: 72px,
   ignore-stack: .true,
-  fill: Colors.colors.black90,
-  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  fill: Colors.theme.contrastSubtle,
+  border: {color: Colors.theme.base, width: 2px, position: .outside},
   type: .ellipse
 }
 
 mediumInitials = text {
   left: 21.5px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: "JC",
   font-size: 22,
   font-style: "SemiBold"
@@ -120,7 +121,7 @@ mediumImage = shape {
   height: 72px,
   ignore-stack: .true,
   fill: {image: {ref: module}},
-  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  border: {color: Colors.theme.base, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -131,7 +132,7 @@ smallImage = shape {
   height: Spacing.size.medium,
   ignore-stack: .true,
   fill: {image: {ref: module}},
-  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  border: {color: Colors.theme.base, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -150,8 +151,8 @@ color = shape {
   width: Spacing.size.small,
   height: Spacing.size.small,
   ignore-stack: .true,
-  fill: Colors.colors.black95,
-  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  fill: Colors.theme.contrastFaint,
+  border: {color: Colors.theme.base, width: 2px, position: .outside},
   type: .ellipse
 }
 
@@ -160,7 +161,7 @@ smallInitials_2 = text {
   top: 7px,
   width: 16px,
   height: 15px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: "JC",
   font-size: 11,
   font-style: "SemiBold",
@@ -188,9 +189,9 @@ photoBG = shape {
   height: Spacing.size.small,
   ignore-stack: .true,
   fill: {image: {ref: module}},
-  border: {color: Colors.colors.white100, width: 2px, position: .outside},
+  border: {color: Colors.theme.base, width: 2px, position: .outside},
   type: .ellipse
 }
 
 @variant
-statusOffline = shape : status {left: -22px, top: -72px, fill[0].color: Colors.colors.black80}
+statusOffline = shape : status {left: -22px, top: -72px, fill[0].color: Colors.theme.contrastMuted}

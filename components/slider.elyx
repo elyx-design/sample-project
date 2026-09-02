@@ -7,7 +7,7 @@ export base = frame {
   width: 203px,
   height: 6px,
   layout: {align-items: .center},
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   filter: {type: .background-blur, radius: 40px},
   corner-radius: radius.radius.full,
   padding-left: 1px,
@@ -20,7 +20,7 @@ track = shape {
   top: 0px,
   width: 40%,
   height: 4px,
-  fill: colors.colors.white100,
+  fill: colors.theme.base,
   type: .rect,
   corner-radius: radius.radius.full
 }
@@ -56,8 +56,8 @@ thumbHandle_2 = shape {
   top: 0px,
   width: 10px,
   height: 10px,
-  fill: colors.colors.whiteAlpha50,
-  border: {color: colors.colors.whiteAlpha70, width: 2px},
+  fill: colors.theme.baseAlpha50,
+  border: {color: colors.theme.baseAlpha70, width: 2px},
   filter: {type: .background-blur, radius: 40px},
   type: .ellipse
 }

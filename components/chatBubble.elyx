@@ -1,6 +1,7 @@
 import "tokens/strings.elyx" as Strings
 import "components/avatar.elyx" as avatar
 import "tokens/spacing.elyx" as spacing
+import "tokens/typography.elyx" as typography
 import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 import "images/profileImgs/005.jpg" as module
@@ -33,7 +34,7 @@ message = frame {
   width: .auto,
   height: spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   corner-radius: radius.radius.full,
   padding-left: spacing.padding.medium,
   padding-right: spacing.padding.medium,
@@ -54,11 +55,11 @@ user = frame : base {
   }
 
   message {
-    fill[0].color: colors.colors.black20
+    fill[0].color: colors.theme.contrastStrongest
   }
 
   message.messageText {
-    fill[0].color: colors.colors.white100
+    fill[0].color: colors.theme.base
   }
 }
 
@@ -81,9 +82,9 @@ messageText_2 = text {
   left: 0px,
   top: 30.5px,
   width: 100%,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.chatText,
-  font-size: spacing.fontSize.small
+  font-size: typography.fontSize.small
 }
 
 GroupedStack = frame {
@@ -96,7 +97,7 @@ GroupedStack = frame {
 messageText_3 = text {
   left: 0px,
   top: 5.5px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.name,
   font-style: "Bold"
 }
@@ -104,8 +105,8 @@ messageText_3 = text {
 messageText_4 = text {
   left: 20px,
   top: 25.5px,
-  fill: colors.colors.blackAlpha25,
+  fill: colors.theme.contrastAlpha25,
   contents: "14:15",
-  font-size: spacing.fontSize.small,
+  font-size: typography.fontSize.small,
   font-style: "Medium"
 }

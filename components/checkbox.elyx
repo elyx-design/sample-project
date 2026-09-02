@@ -7,7 +7,7 @@ anchor = frame {
   width: 0px,
   height: 0px,
   fill: .white,
-  border: Colors.colors.controlBorder
+  border: Colors.controls.border
 }
 
 export on = frame {
@@ -22,7 +22,7 @@ export on = frame {
       stops: [stop(0%, Colors.gradients.emphasisTop), stop(100%, Colors.gradients.emphasisBottom)]
     }
   },
-  border: {color: Colors.colors.blackAlpha10, width: 0.5px},
+  border: {color: Colors.primitives.blackAlpha10, width: 0.5px},
   corner-radius: Radius.radius.full,
   padding: 3px,
   children: knob

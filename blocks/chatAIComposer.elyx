@@ -114,6 +114,6 @@ small = frame : logo.small {left: 550px, top: 487px}
 placeholder = text {
   left: 633px,
   top: 581px,
-  fill: colors.colors.black40,
+  fill: colors.theme.contrastDefault,
   contents: Strings.forms.askAnything
 }

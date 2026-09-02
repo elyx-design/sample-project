@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as spacing
+import "tokens/typography.elyx" as typography
 import "icons/24 pixels/direct-24.svg" as direct24
 import "tokens/colors.elyx" as colors
 import "icons/24 pixels/calendar-24.svg" as calendar24
@@ -11,7 +12,7 @@ export track = frame {
   width: 361px,
   height: spacing.size.medium,
   layout: {justify-content: .space-between, align-items: .center},
-  fill: colors.colors.limeBright,
+  fill: colors.palette.limeBright,
   border: {color: rgb(0%, 0%, 0%, 25%), width: 0.5px, position: .outside},
   corner-radius: radius.radius.xsmall,
   padding: [spacing.padding.xsmall, 0px],
@@ -66,7 +67,7 @@ trackName = text {
   top: 553px,
   fill: colors.primitives.black,
   contents: Strings.componentDefaults.trackName,
-  font-size: spacing.fontSize.small,
+  font-size: typography.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -92,7 +93,7 @@ dateText = text {
   top: 553px,
   fill: rgb(0%, 0%, 0%, 25%),
   contents: "8 Jul",
-  font-size: spacing.fontSize.small,
+  font-size: typography.fontSize.small,
   font-style: "SemiBold"
 }
 

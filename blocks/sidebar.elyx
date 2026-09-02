@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as colors
 import "components/avatar.elyx" as avatar
 import "tokens/radius.elyx" as radius
@@ -47,8 +48,8 @@ compact = frame {
   width: 60px,
   height: 456px,
   layout: {direction: .column, justify-content: .space-between},
-  fill: colors.colors.white100,
-  border: {color: colors.colors.blackAlpha08, visible: .false, position: .outside},
+  fill: colors.theme.base,
+  border: {color: colors.theme.contrastAlpha08, visible: .false, position: .outside},
   padding: [Spacing.padding.xlarge, Spacing.padding.medium],
   children: [compactContent, profileAvatar]
 }
@@ -126,9 +127,9 @@ export segmentHeader = frame {
 text1 = text {
   left: 0px,
   top: 2px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: Strings.labels.chatsAndTasks,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -137,7 +138,7 @@ settings20svg = icon {
   top: 0px,
   width: 20px,
   height: 20px,
-  fill: colors.colors.blackAlpha50,
+  fill: colors.theme.contrastAlpha50,
   contents: settings20
 }
 
@@ -162,7 +163,7 @@ workspaceSelector = frame : selector.Selector {
   }
 
   selector.Left.smallLeft.header.smallTitle {
-    font-size: Spacing.fontSize.small
+    font-size: Typography.fontSize.small
   }
 }
 
@@ -189,7 +190,7 @@ shape3 = icon {
   top: 10px,
   width: 20px,
   height: 20px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: search20
 }
 
@@ -198,7 +199,7 @@ shape2 = icon {
   top: 30px,
   width: 20px,
   height: 20px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: sideBarleft20
 }
 
@@ -460,14 +461,14 @@ export eventTag = frame {
   children: [status, text3]
 }
 
-status = shape : avatar.status {left: 0px, top: 5px, fill[0].color: colors.colors.red70}
+status = shape : avatar.status {left: 0px, top: 5px, fill[0].color: colors.palette.red70}
 
 text3 = text {
   left: 15px,
   top: 0px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: "2.2k",
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold"
 }
 
@@ -478,7 +479,7 @@ eventTagOffline = frame : eventTag {
   overrides: [remove(status)],
 
   text3 {
-    fill[0].color: colors.colors.blackAlpha25,
+    fill[0].color: colors.theme.contrastAlpha25,
     contents: Strings.status.offline
   }
 }
@@ -488,9 +489,9 @@ eventTag_2 = frame : eventTag {left: -251px, top: 161px}
 text5 = text {
   left: 54.5px,
   top: 6.5px,
-  fill: colors.colors.black20,
+  fill: colors.theme.contrastStrongest,
   contents: Strings.navigation.menu,
-  font-size: Spacing.fontSize.small
+  font-size: Typography.fontSize.small
 }
 
 GroupedStack_3 = frame {
@@ -646,10 +647,10 @@ frame4 = frame {
 campaignsItem_4 = frame : sidebarItem.selected {
   left: 20px,
   top: 84px,
-  fill[0].color: colors.colors.blackAlpha10,
+  fill[0].color: colors.primitives.blackAlpha10,
 
   sidebarItem.shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
+    fill[0].color: colors.theme.contrastAlpha25,
     contents: dot20
   }
 
@@ -663,7 +664,7 @@ campaignsItem_3 = frame : sidebarItem.sidebarMenu {
   top: 54px,
 
   sidebarItem.shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
+    fill[0].color: colors.theme.contrastAlpha25,
     contents: dot20
   }
 
@@ -677,7 +678,7 @@ campaignsItem_5 = frame : sidebarItem.sidebarMenu {
   top: 114px,
 
   sidebarItem.shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
+    fill[0].color: colors.theme.contrastAlpha25,
     contents: dot20
   }
 
@@ -691,7 +692,7 @@ campaignsItem_6 = frame : sidebarItem.sidebarMenu {
   top: 144px,
 
   sidebarItem.shape1 {
-    fill[0].color: colors.colors.blackAlpha25,
+    fill[0].color: colors.theme.contrastAlpha25,
     contents: dot20
   }
 

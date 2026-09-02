@@ -1,6 +1,7 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/colors.elyx" as Colors
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 
 export medium = frame {
@@ -9,7 +10,7 @@ export medium = frame {
   width: 100%,
   height: Spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
-  fill: Colors.colors.controlSurface,
+  fill: Colors.controls.surface,
   corner-radius: Radius.radius.full,
   padding: Spacing.padding.xsmall,
   children: [leadingSegment, middleSegment, trailingSegment]
@@ -33,10 +34,10 @@ export mediumSelected = frame {
       stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
     }
   },
-  border: {color: Colors.colors.blackAlpha25, width: 0.5px, position: .outside},
+  border: {color: Colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
   shadow: {
     drop-shadow: {
-      color: Colors.colors.blackAlpha05,
+      color: Colors.primitives.blackAlpha05,
       offset: point(0px, 1px),
       blur-radius: 0px,
       spread: 0px,
@@ -54,9 +55,9 @@ export mediumSelected = frame {
 label = text {
   left: 0px,
   top: 0px,
-  fill: Colors.colors.black20,
+  fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.item,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "Medium"
 }
 
@@ -68,7 +69,7 @@ mediumInactive = frame : mediumSelected {
   fill[0]: .nil,
 
   label {
-    fill[0].color: Colors.colors.blackAlpha50
+    fill[0].color: Colors.theme.contrastAlpha50
   }
 }
 
@@ -78,7 +79,7 @@ small = frame : medium {
   top: 656px,
   width: .auto,
   height: .auto,
-  fill[0].color: Colors.colors.black95,
+  fill[0].color: Colors.theme.contrastFaint,
   overrides: [insert(smallLeadingSegment, after = .nil), remove(leadingSegment)],
 
   @use-variant(smallInactive)
@@ -100,7 +101,7 @@ smallInactive = frame : mediumSelected {
   shadow[0]: .nil,
 
   label {
-    fill[0].color: Colors.colors.blackAlpha50
+    fill[0].color: Colors.theme.contrastAlpha50
   }
 }
 

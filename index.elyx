@@ -1,5 +1,6 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
 import "components/button.elyx" as button
 import "tokens/colors.elyx" as colors
@@ -98,7 +99,7 @@ welcomeDescription_2 = text {
   left: -46.02px,
   top: -161px,
   width: 100%,
-  fill: colors.colors.tealDark,
+  fill: colors.palette.tealDark,
   contents: Strings.scaffold.welcomeDescription,
   font-size: 24,
   line-height: 1.3
@@ -108,7 +109,7 @@ projectStructureOverview_2 = text {
   left: 0px,
   top: 40px,
   width: 100%,
-  fill: colors.colors.tealDark,
+  fill: colors.palette.tealDark,
   contents: Strings.scaffold.structureDescription,
   font-size: 14,
   line-height: 1.5
@@ -139,7 +140,7 @@ componentsLabel_2 = text {
   top: 45px,
   fill: colors.primitives.white,
   contents: Strings.scaffold.componentsTitle,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold",
   letter-spacing: 10%
 }
@@ -150,7 +151,7 @@ componentsDescription_2 = text {
   width: 100%,
   fill: colors.primitives.white70,
   contents: Strings.scaffold.componentsDescription,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   line-height: 1.5
 }
 
@@ -170,7 +171,7 @@ blocksLabel_2 = text {
   top: -17px,
   fill: colors.primitives.white,
   contents: Strings.scaffold.blocksTitle,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold",
   letter-spacing: 10%
 }
@@ -181,7 +182,7 @@ blocksDescription_2 = text {
   width: 100%,
   fill: colors.primitives.white70,
   contents: Strings.scaffold.blocksDescription,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   line-height: 1.5
 }
 
@@ -201,7 +202,7 @@ screensLabel_2 = text {
   top: -25.5px,
   fill: colors.primitives.white,
   contents: Strings.scaffold.screensTitle,
-  font-size: Spacing.fontSize.small,
+  font-size: Typography.fontSize.small,
   font-style: "SemiBold",
   letter-spacing: 10%
 }
@@ -213,7 +214,7 @@ screensDescription_2 = text {
   height: .auto,
   fill: colors.primitives.white70,
   contents: Strings.scaffold.screensDescription,
-  font-size: Spacing.fontSize.medium,
+  font-size: Typography.fontSize.medium,
   line-height: 1.5
 }
 
@@ -228,7 +229,7 @@ assetFoldersDescription_2 = text {
   left: 20px,
   top: 60px,
   width: 100%,
-  fill: colors.colors.tealDark,
+  fill: colors.palette.tealDark,
   contents: Strings.scaffold.assetsDescription,
   font-size: 14,
   line-height: 1.5
@@ -238,7 +239,7 @@ tokensFolderDescription_2 = text {
   left: 20px,
   top: 301px,
   width: 100%,
-  fill: colors.colors.tealDark,
+  fill: colors.palette.tealDark,
   contents: Strings.scaffold.tokensDescription,
   font-size: 14,
   line-height: 1.5
