@@ -4,6 +4,10 @@ import "blocks/authForm.elyx" as AuthForm
 import "tokens/colors.elyx" as Colors
 import "components/avatarGroup.elyx" as profileGroup
 import "images/background/desert.png" as desert
+import "screens/AIchat.elyx" as AIchat
+
+@draw-connections
+__canvas__
 
 export signInScreen = frame {
   left: -16px,
@@ -31,7 +35,15 @@ content = frame {
   children: [signInForm, activeUsers, footerLinks]
 }
 
-signInForm = frame : AuthForm.signInForm {left: 373px, top: 389px, width: 32%}
+signInForm = frame : AuthForm.signInForm {
+  left: 373px,
+  top: 389px,
+  width: 32%,
+
+  AuthForm.content.signInButton {
+    connections[0].target: AIchat.AIChat
+  }
+}
 
 activeUsers = frame : profileGroup.labelBottom {
   left: 600px,

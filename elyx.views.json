@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "a03ec2a8-3cb2-41cd-8161-e2a20e4794e2",
+      "name": "icons-large",
+      "gallery": {
+        "type": "folderGallery",
+        "rootPath": "icons/24 pixels",
+        "query": {
+          "filters": {
+            "diagnostics": [],
+            "extensions": [],
+            "gitStatuses": [],
+            "modifiedWithin": null
+          },
+          "search": "",
+          "sort": {
+            "field": "name",
+            "direction": "ascending"
+          }
+        }
+      }
+    },
+    {
+      "id": "1916f407-4eef-4b27-bb36-751dcb7f42e0",
+      "name": "screens",
+      "gallery": {
+        "type": "folderGallery",
+        "rootPath": "screens",
+        "query": {
+          "filters": {
+            "diagnostics": [],
+            "extensions": [
+              ".elyx"
+            ],
+            "gitStatuses": [],
+            "modifiedWithin": null
+          },
+          "search": "",
+          "sort": {
+            "field": "name",
+            "direction": "ascending"
+          }
+        }
+      }
+    },
+    {
+      "id": "7719aef6-d714-4b97-85c8-0854d6391c25",
+      "name": "blocks",
+      "gallery": {
+        "type": "folderGallery",
+        "rootPath": "blocks",
+        "query": {
+          "filters": {
+            "diagnostics": [],
+            "extensions": [
+              ".elyx"
+            ],
+            "gitStatuses": [],
+            "modifiedWithin": null
+          },
+          "search": "",
+          "sort": {
+            "field": "name",
+            "direction": "ascending"
+          }
+        }
+      }
+    },
+    {
+      "id": "8eb496c0-ff70-4cd5-b4ed-d6302aa89500",
+      "name": "components",
+      "gallery": {
+        "type": "folderGallery",
+        "rootPath": "components",
+        "query": {
+          "filters": {
+            "diagnostics": [],
+            "extensions": [
+              ".elyx"
+            ],
+            "gitStatuses": [],
+            "modifiedWithin": null
+          },
+          "search": "",
+          "sort": {
+            "field": "name",
+            "direction": "ascending"
+          }
+        }
+      }
+    }
+  ]
+}

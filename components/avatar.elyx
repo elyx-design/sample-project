@@ -2,6 +2,10 @@ import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
 import "images/profileImgs/005.jpg" as module
+import "blocks/cardSocial.elyx" as cardSocial
+
+@draw-connections
+__canvas__
 
 export small = frame {
   left: -94px,
@@ -60,6 +64,7 @@ statusAway = shape : status {left: -58px, top: -72px, fill[0].color: Colors.colo
 smallPhoto = frame : small {
   left: -4px,
   top: 10px,
+  connections[0].target: cardSocial.socialCard,
   overrides: [insert(smallImage, after = .nil), remove(smallInitials), remove(smallBackground)]
 }
 
@@ -103,6 +108,7 @@ mediumStatus = shape : status {
 mediumPhoto = frame : medium {
   left: -4px,
   top: 94px,
+  connections[0].target: cardSocial.socialCard,
   layout.include-borders: .true,
   overrides: [insert(mediumImage, after = .nil), remove(mediumInitials), remove(mediumBackground)]
 }
@@ -167,6 +173,7 @@ smallStatus_2 = shape : status {left: 20px, top: 20px, ignore-stack: .true, bord
 xsmallVariant = frame : xsmall {
   left: -4px,
   top: 235px,
+  connections[0].target: cardSocial.socialCard,
   overrides: [insert(photoBG, after = .nil), remove(color)],
 
   smallInitials_2 {

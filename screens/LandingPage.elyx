@@ -11,6 +11,12 @@ import "icons/24 pixels/activity.svg" as activity
 import "components/tag.elyx" as tag
 import "icons/20 pixels/arrowDown-20.svg" as arrowDown20
 import "icons/24 pixels/mug-24.svg" as mug24
+import "screens/signIn.elyx" as signIn
+import "screens/footer.elyx" as footer
+import "screens/pricingPage.elyx" as pricingPage
+
+@draw-connections
+__canvas__
 
 export LandingPage = frame {
   left: -5px,
@@ -43,8 +49,16 @@ pageHeader = frame : siteHeader.siteHeader {
   border[0].visible: .false,
   shadow[0].drop-shadow.visible: .false,
 
+  siteHeader.headerCta.logInLink.label {
+    connections[0].target: signIn.signInScreen
+  }
+
   siteHeader.navLinks {
     overrides: [remove(siteHeader.navResources)]
+  }
+
+  siteHeader.navLinks.navPricing.label {
+    connections[0].target: pricingPage.pricingPage
   }
 }
 
@@ -208,6 +222,7 @@ base = frame : tag.iconAndLabel {
   left: 774px,
   top: 1091px,
   border[0].visible: .false,
+  connections[0].target: footer.Footer,
   fill[0].color: colors.colors.blackAlpha25,
 
   tag.label {

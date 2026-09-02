@@ -2,10 +2,11 @@ import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/colors.elyx" as colors
 import "components/avatar.elyx" as avatar
+import "tokens/radius.elyx" as radius
 import "components/cardBackground.elyx" as cardBackground
+import "components/button.elyx" as button
 import "icons/24 pixels/home-24.svg" as home24
 import "icons/24 pixels/cloud-24.svg" as cloud24
-import "components/button.elyx" as button
 import "icons/24 pixels/create-24.svg" as create24
 import "icons/24 pixels/folder-24.svg" as folder24
 import "icons/24 pixels/history-24.svg" as history24
@@ -278,7 +279,9 @@ sidebarLiveEvent = frame : sidebar {
   }
 
   @use-variant(sideBarMenuEvent)
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4 {}
+  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4 {
+    corner-radius: radius.radius.full
+  }
 
   GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2 {
     layout.item-gap: Spacing.gap.xsmall
@@ -645,13 +648,13 @@ campaignsItem_4 = frame : sidebarItem.selected {
   top: 84px,
   fill[0].color: colors.colors.blackAlpha10,
 
-  sidebarItem.text2 {
-    contents: "Grocery list"
-  }
-
   sidebarItem.shape1 {
     fill[0].color: colors.colors.blackAlpha25,
     contents: dot20
+  }
+
+  sidebarItem.text2 {
+    contents: "Grocery list"
   }
 }
 
