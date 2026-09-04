@@ -208,6 +208,7 @@ sidebarLiveEvent = frame : sidebar {
   left: 151.53px,
   top: 0px,
   width: 232px,
+  overflow: .scroll,
   padding-top: Spacing.padding.medium,
   padding-left: Spacing.padding.large,
   padding-bottom: Spacing.padding.medium,
@@ -420,7 +421,7 @@ campaignsItem_8 = frame : sideBarMenuEvent {
   }
 
   text5 {
-    contents: "SofaKing"
+    contents: "ChessKing"
   }
 }
 

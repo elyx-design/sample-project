@@ -144,6 +144,8 @@ export marketing = tokens {
 export landingPage = tokens {
   heroDescription: "Built to grow in the hardest conditions, our tool takes root where others fail. Reliable and resilient, so your work never stops.",
   heroTitle: "Bloom, regardles.",
+  galleryDescription: "A flexible space to explore ideas, shape the details, and keep your best work moving forward.",
+  galleryTitle: "Create what comes next",
   minimalDescription: "Every detail is considered, and everything unnecessary is left out.",
   minimalTitle: "Intentionally minimal",
   reliabilityDescription: "Dependable sync and performance you can trust, no matter where you work.",

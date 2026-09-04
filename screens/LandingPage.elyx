@@ -14,25 +14,23 @@ import "icons/24 pixels/mug-24.svg" as mug24
 import "screens/signIn.elyx" as signIn
 import "screens/footer.elyx" as footer
 import "screens/pricingPage.elyx" as pricingPage
+import "blocks/productGallery.elyx" as productGallery
 
 @draw-connections
 __canvas__
 
 export LandingPage = frame {
+  doc: "This frame is a real scroll view. Select it, and scroll down.",
   left: -5px,
   top: 137px,
   width: 1440px,
   height: 810px,
-  layout: {
-    direction: .column,
-    justify-content: .space-between,
-    align-items: .center,
-    item-gap: 116px
-  },
+  layout: {direction: .column, align-items: .center, item-gap: 248px},
   fill: [colors.theme.base, {mix-blend-mode: .multiply, image: {ref: night}}],
+  overflow: .scroll,
   padding-top: Spacing.padding.xxlarge,
   padding-bottom: Spacing.padding.xxlarge,
-  children: [top, frame3]
+  children: [top, frame3, GroupedStack]
 }
 
 top = frame {
@@ -235,3 +233,27 @@ base = frame : tag.iconAndLabel {
     contents: arrowDown20
   }
 }
+
+GroupedStack = frame {
+  width: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: 96px},
+  overflow: .visible,
+  children: [largeLeft_2, productGallery_2]
+}
+
+largeLeft_2 = frame : header.largeCenter {
+  left: 1840px,
+  top: -265px,
+  width: 44.0752%,
+
+  header.largeTitle {
+    width: 100%,
+    contents: Strings.landingPage.galleryTitle
+  }
+
+  header.largeSubtitle {
+    contents: Strings.landingPage.galleryDescription
+  }
+}
+
+productGallery_2 = frame : productGallery.productGallery {left: 276px, top: 443px}

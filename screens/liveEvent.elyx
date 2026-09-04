@@ -4,10 +4,10 @@ import "blocks/videoPlayer.elyx" as videoPlayer
 import "tokens/colors.elyx" as colors
 import "components/button.elyx" as button
 import "blocks/chatWindow.elyx" as chatWindow
+import "components/userSummary.elyx" as userSummary
 import "blocks/siteHeader.elyx" as siteHeader
 import "icons/20 pixels/pause-20.svg" as pause20
 import "blocks/sidebar.elyx" as sideBar
-import "components/userSummary.elyx" as userSummary
 import "images/misc/bikeBGBanner.jpg" as bikeBGBanner
 
 export liveEvent = frame {
@@ -73,7 +73,7 @@ Video = frame {
   width: 65%,
   height: 100%,
   layout: {direction: .column, align-items: .end, item-gap: Spacing.gap.xxsmall},
-  overflow: .visible,
+  overflow: .scroll,
   children: [video, About]
 }
 
@@ -81,7 +81,7 @@ video = frame : videoPlayer.videoPlayer {
   left: 0px,
   top: 0px,
   width: 100%,
-  height: 100%,
+  height: 603px,
   corner-radius: 0px,
 
   videoPlayer.controls.playbackControl.scrubber.playButton.button.smallIconGlyph {
@@ -106,8 +106,8 @@ About = frame {
   left: 0px,
   top: 654px,
   width: 100%,
-  height: 130px,
-  layout: {direction: .column, justify-content: .space-between, item-gap: Spacing.gap.xxlarge},
+  height: 320px,
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   fill: {image: {ref: bikeBGBanner}},
   overflow: .visible,
   padding: Spacing.padding.xlarge,
