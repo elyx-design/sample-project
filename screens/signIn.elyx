@@ -61,8 +61,8 @@ activeUsers = frame : profileGroup.labelBottom {
 footerLinks = frame {
   left: 569.5px,
   top: 0px,
-  width: 141px,
-  height: 15px,
+  width: .auto,
+  height: .auto,
   layout: {align-items: .center, item-gap: 18px},
   children: [privacy, terms, help]
 }

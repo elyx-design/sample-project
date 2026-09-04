@@ -19,9 +19,9 @@ export pricingPage = frame {
 }
 
 pricingHeader = frame : header.mediumCenter {
-  left: 472.5px,
+  left: 742.5px,
   top: 121px,
-  width: .auto,
+  width: 62.5%,
 
   header.mediumSubtitle {
     contents: Strings.pricingPage.description

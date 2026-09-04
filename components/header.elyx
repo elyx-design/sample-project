@@ -13,6 +13,7 @@ export mediumLeft = frame {
 }
 
 mediumTitle = text {
+  width: 100%,
   fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.title,
   font-size: Typography.fontSize.xxlarge,
@@ -52,7 +53,7 @@ export smallLeft = frame {
 }
 
 smallTitle = text {
-  width: .auto,
+  width: 100%,
   fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.title,
   font-size: Typography.fontSize.medium,
@@ -91,6 +92,7 @@ export largeLeft = frame {
 }
 
 largeTitle = text {
+  width: 100%,
   fill: Colors.theme.contrastStrongest,
   contents: Strings.componentDefaults.title,
   font-size: 56,

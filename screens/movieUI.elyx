@@ -8,13 +8,13 @@ import "tokens/radius.elyx" as Radius
 import "blocks/siteHeader.elyx" as siteHeader
 import "components/button.elyx" as button
 import "components/avatar.elyx" as avatar
+import "images/profileImgs/002.jpg" as lib2
+import "images/profileImgs/004.jpg" as lib4
 import "components/divider.elyx" as divider
 import "images/profileImgs/007.jpg" as lib3
 import "images/background/woman.jpg" as woman
 import "images/misc/movieCover.png" as movieCover
 import "images/profileImgs/006.jpg" as lib
-import "images/profileImgs/002.jpg" as lib2
-import "images/profileImgs/004.jpg" as lib4
 import "components/thumbnailImage.elyx" as thumbnailImage
 import "images/thumbnails/thumb10.jpg" as thumb10
 import "images/thumbnails/thumb11.jpg" as thumb11

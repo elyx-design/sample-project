@@ -72,12 +72,13 @@ largeLeft = frame : header.largeCenter {
   top: 449px,
   width: 44.0752%,
 
-  header.largeSubtitle {
-    contents: Strings.landingPage.heroDescription
+  header.largeTitle {
+    width: 100%,
+    contents: Strings.landingPage.heroTitle
   }
 
-  header.largeTitle {
-    contents: Strings.landingPage.heroTitle
+  header.largeSubtitle {
+    contents: Strings.landingPage.heroDescription
   }
 }
 
@@ -141,16 +142,13 @@ shape1 = icon {left: 644px, top: 704px, width: 40px, height: 40px, contents: dir
 smallLeft = frame : header.smallLeft {
   left: 0px,
   top: 0px,
-  width: 100%,
-  height: .auto,
-
-  header.smallTitle {
-    width: .auto,
-    contents: Strings.landingPage.minimalTitle
-  }
 
   header.smallSubtitle {
     contents: Strings.landingPage.minimalDescription
+  }
+
+  header.smallTitle {
+    contents: Strings.landingPage.minimalTitle
   }
 }
 
@@ -173,15 +171,13 @@ shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: act
 steadyHeader = frame : header.smallLeft {
   left: 0px,
   top: 0px,
-  width: 100%,
-
-  header.smallTitle {
-    width: .auto,
-    contents: Strings.landingPage.reliabilityTitle
-  }
 
   header.smallSubtitle {
     contents: Strings.landingPage.reliabilityDescription
+  }
+
+  header.smallTitle {
+    contents: Strings.landingPage.reliabilityTitle
   }
 }
 
@@ -204,15 +200,13 @@ shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug
 teamHeader = frame : header.smallLeft {
   left: 0px,
   top: 0px,
-  width: 100%,
-
-  header.smallTitle {
-    width: .auto,
-    contents: Strings.landingPage.collaborationTitle
-  }
 
   header.smallSubtitle {
     contents: Strings.landingPage.collaborationDescription
+  }
+
+  header.smallTitle {
+    contents: Strings.landingPage.collaborationTitle
   }
 }
 

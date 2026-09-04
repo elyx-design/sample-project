@@ -35,6 +35,8 @@ export liveEvent = tokens : strings.liveEvent {
 export landingPage = tokens : strings.landingPage {
   heroDescription: "Conçu pour évoluer dans les conditions les plus difficiles, notre outil s’enracine là où les autres échouent. Fiable et résilient, il vous permet de travailler sans interruption.",
   heroTitle: "Épanouissez-vous, quoi qu’il arrive.",
+  galleryDescription: "Un espace flexible pour explorer vos idées, peaufiner chaque détail et faire avancer vos meilleurs projets.",
+  galleryTitle: "Créez la suite",
   minimalDescription: "Chaque détail est pensé et tout ce qui est superflu est éliminé.",
   minimalTitle: "Délibérément minimaliste",
   reliabilityDescription: "Une synchronisation fiable et des performances constantes, où que vous travailliez.",
