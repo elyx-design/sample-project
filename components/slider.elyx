@@ -1,7 +1,7 @@
 import "tokens/radius.elyx" as radius
 import "tokens/colors.elyx" as colors
 
-export base = frame {
+export slider = frame {
   left: 702px,
   top: 539px,
   width: 203px,
@@ -26,7 +26,7 @@ track = shape {
 }
 
 @variant
-thumb = frame : base {
+thumb = frame : slider {
   left: 702px,
   top: 591px,
   overflow: .visible,
@@ -38,7 +38,7 @@ thumb = frame : base {
 }
 
 @variant
-full = frame : base {
+full = frame : slider {
   left: 702px,
   top: 645px,
   overflow: .visible,

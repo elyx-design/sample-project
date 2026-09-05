@@ -8,7 +8,7 @@ import "components/avatar.elyx" as avatar
 import "components/tag.elyx" as tag
 import "components/button.elyx" as button
 
-export reviewCard = frame : cardBackground.base {
+export reviewCard = frame : cardBackground.cardBackground {
   left: 693px,
   top: 267px,
   width: 370px,
@@ -73,7 +73,7 @@ ratingTag = frame : tag.iconAndLabel {
   }
 }
 
-thrillerTag = frame : tag.base {
+thrillerTag = frame : tag.tagTransparent {
   left: 785px,
   top: 746px,
 
@@ -83,7 +83,7 @@ thrillerTag = frame : tag.base {
   }
 }
 
-dramaTag = frame : tag.base {
+dramaTag = frame : tag.tagTransparent {
   left: 785px,
   top: 827.25px,
 

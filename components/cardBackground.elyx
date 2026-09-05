@@ -6,7 +6,7 @@ import "tokens/colors.elyx" as colors
 // borderless, and fully rounded containers.
 __canvas__
 
-export base = frame {
+export cardBackground = frame {
   left: 80px,
   top: 467px,
   width: 100%,
@@ -29,7 +29,7 @@ export base = frame {
 }
 
 @variant
-transparent = frame : base {
+transparent = frame : cardBackground {
   left: 80px,
   top: 575px,
   fill[0].color: colors.theme.baseAlpha50,
@@ -38,10 +38,10 @@ transparent = frame : base {
 }
 
 @variant
-none = frame : base {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
+none = frame : cardBackground {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
 
 @variant
-transparentFullRadius = frame : base {
+transparentFullRadius = frame : cardBackground {
   left: 275px,
   top: 575px,
   corner-radius: Radius.radius.full,
@@ -51,4 +51,4 @@ transparentFullRadius = frame : base {
 }
 
 @variant
-solidFullRadius = frame : base {left: 275.05px, top: 467px, corner-radius: Radius.radius.full}
+solidFullRadius = frame : cardBackground {left: 275.05px, top: 467px, corner-radius: Radius.radius.full}

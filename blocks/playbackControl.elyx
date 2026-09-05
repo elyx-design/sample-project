@@ -88,4 +88,4 @@ playButton = frame : button.smallIcon {
   }
 }
 
-progressSlider = frame : slider.base {left: 0px, top: 636px, width: 100%}
+progressSlider = frame : slider.slider {left: 0px, top: 636px, width: 100%}

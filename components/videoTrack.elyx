@@ -3,7 +3,7 @@ import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 import "images/background/bird.jpg" as bird
 
-export base = frame {
+export videoTrack = frame {
   left: 639px,
   top: 492px,
   width: 475px,

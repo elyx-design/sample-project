@@ -304,7 +304,7 @@ videoTrackRow = frame {
   children: [birdTrack, thumbnailTrack]
 }
 
-birdTrack = frame : videoTrack.base {
+birdTrack = frame : videoTrack.videoTrack {
   left: 7941px,
   top: 763px,
   width: 23.6364%,
@@ -322,7 +322,7 @@ birdTrack = frame : videoTrack.base {
   }
 }
 
-thumbnailTrack = frame : videoTrack.base {
+thumbnailTrack = frame : videoTrack.videoTrack {
   left: 7961px,
   top: 783px,
   width: 23.6364%,

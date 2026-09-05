@@ -147,7 +147,7 @@ tags = frame {
   children: [base, base_2]
 }
 
-base = frame : tag.base {
+base = frame : tag.tagTransparent {
   left: 924px,
   top: 538px,
 
@@ -156,7 +156,7 @@ base = frame : tag.base {
   }
 }
 
-base_2 = frame : tag.base {
+base_2 = frame : tag.tagTransparent {
   left: 944px,
   top: 558px,
 

@@ -7,7 +7,7 @@ import "tokens/radius.elyx" as radius
 import "images/profileImgs/005.jpg" as module
 import "images/profileImgs/001.jpg" as module4
 
-export base = frame {
+export chatBubble = frame {
   left: 602px,
   top: 476px,
   layout: {align-items: .center, item-gap: spacing.gap.small},
@@ -44,7 +44,7 @@ message = frame {
 messageText = text {left: 0px, top: 0px, fill: .black, contents: Strings.componentDefaults.chatText}
 
 @variant
-user = frame : base {
+user = frame : chatBubble {
   left: 602px,
   top: 560px,
   layout.justify-content: .end,
@@ -64,7 +64,7 @@ user = frame : base {
 }
 
 @variant
-liveBubble = frame : base {
+liveBubble = frame : chatBubble {
   left: 602px,
   top: 644px,
   layout.align-items: .start,

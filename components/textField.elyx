@@ -9,7 +9,7 @@ import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
 import "icons/24 pixels/search-24.svg" as search24
 import "icons/20 pixels/emoji-20.svg" as emoji20
 
-export base = frame {
+export textField = frame {
   left: 869px,
   top: 770px,
   width: 100%,
@@ -32,7 +32,7 @@ label = text {
 }
 
 @variant
-placeholder = frame : base {
+placeholder = frame : textField {
   left: 869px,
   top: 850px,
 
@@ -42,7 +42,7 @@ placeholder = frame : base {
 }
 
 @variant
-focused = frame : base {
+focused = frame : textField {
   left: 869px,
   top: 930px,
   border[0].color: Colors.theme.contrastStrongest,
@@ -51,7 +51,7 @@ focused = frame : base {
 }
 
 @variant
-error = frame : base {
+error = frame : textField {
   left: 869px,
   top: 1010px,
   border[0].color: Colors.palette.red70,
@@ -64,7 +64,7 @@ error = frame : base {
 }
 
 @variant
-withIcon = frame : base {
+withIcon = frame : textField {
   left: 989.73px,
   top: 770px,
   padding-left: Spacing.padding.small,
@@ -73,7 +73,7 @@ withIcon = frame : base {
 }
 
 @variant
-iconPlaceholder = frame : base {
+iconPlaceholder = frame : textField {
   left: 988.65px,
   top: 850px,
   padding-left: Spacing.padding.small,
@@ -104,7 +104,7 @@ defaultIcon = icon {
 }
 
 @variant
-iconFocused = frame : base {
+iconFocused = frame : textField {
   left: 987.9291px,
   top: 930px,
   padding-left: Spacing.padding.small,
@@ -115,7 +115,7 @@ iconFocused = frame : base {
 }
 
 @variant
-iconError = frame : base {
+iconError = frame : textField {
   left: 988.2896px,
   top: 1010px,
   padding-left: Spacing.padding.small,
@@ -148,7 +148,7 @@ errorIcon = icon {
 }
 
 @variant
-withButton = frame : base {
+withButton = frame : textField {
   left: 1139px,
   top: 770px,
   padding-right: Spacing.padding.xsmall,
@@ -157,7 +157,7 @@ withButton = frame : base {
 }
 
 @variant
-buttonPlaceholder = frame : base {
+buttonPlaceholder = frame : textField {
   left: 1142.4px,
   top: 850px,
   padding-right: Spacing.padding.xsmall,

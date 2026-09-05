@@ -7,7 +7,7 @@ import "icons/20 pixels/star-20.svg" as star20
 import "icons/20 pixels/close-20.svg" as close20
 import "icons/20 pixels/status-20.svg" as status20
 
-export base = frame {
+export tagTransparent = frame {
   left: 542px,
   top: 548px,
   height: spacing.size.small,
@@ -31,7 +31,7 @@ label = text {
 }
 
 @variant
-labelAndClose = frame : base {
+labelAndClose = frame : tagTransparent {
   left: 542px,
   top: 700px,
   padding-right: spacing.padding.small,
@@ -40,7 +40,7 @@ labelAndClose = frame : base {
 }
 
 @variant
-status = frame : base {
+status = frame : tagTransparent {
   left: 545px,
   top: 776px,
   padding-left: spacing.padding.xsmall,
@@ -66,7 +66,7 @@ closeIcon = icon {
 }
 
 @variant
-iconAndLabel = frame : base {
+iconAndLabel = frame : tagTransparent {
   left: 542px,
   top: 624px,
   padding-left: spacing.padding.small,

@@ -6,7 +6,7 @@ import "tokens/colors.elyx" as colors
 import "components/slider.elyx" as slider
 import "components/product.elyx" as product
 
-export productCard = frame : cardBackground.base {
+export productCard = frame : cardBackground.cardBackground {
   left: 140px,
   top: 134px,
   width: 565px,
@@ -94,7 +94,7 @@ progressValue = text {
   align: .right
 }
 
-progressSlider = frame : slider.base {
+progressSlider = frame : slider.slider {
   left: 0px,
   top: 0px,
   width: 100%,

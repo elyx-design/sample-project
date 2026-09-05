@@ -35,7 +35,7 @@ socialFooter = frame {
   children: [followerAvatars, followButton]
 }
 
-followerAvatars = frame : avatarGroup.base {left: 20px, top: 383px}
+followerAvatars = frame : avatarGroup.avatarGroup {left: 20px, top: 383px}
 
 followButton = frame : button.mediumPrimary {
   left: 151.5px,

@@ -6,7 +6,7 @@ import "tokens/colors.elyx" as colors
 import "components/product.elyx" as product
 import "blocks/productInfo.elyx" as productInfo
 
-export productGallery = frame : cardBackground.base {
+export productGallery = frame : cardBackground.cardBackground {
   left: 177px,
   top: 240px,
   width: 888px,

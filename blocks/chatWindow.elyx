@@ -48,7 +48,7 @@ replyMessages = frame {
   children: [firstReply, secondReply]
 }
 
-firstReply = frame : chatBubble.base {
+firstReply = frame : chatBubble.chatBubble {
   left: 0px,
   top: 74px,
 
@@ -58,7 +58,7 @@ firstReply = frame : chatBubble.base {
   }
 }
 
-secondReply = frame : chatBubble.base {
+secondReply = frame : chatBubble.chatBubble {
   left: 20px,
   top: 94px,
 
