@@ -30,72 +30,86 @@ export videoPlayer = frame {
     }
   ],
   padding: Spacing.padding.xlarge,
-  children: [headerRow, controls]
+  children: [headerRow, controls],
+
+  controls = frame : playbackControl.playbackControl {
+    left: 0px,
+    top: 809px,
+    width: 100%,
+
+    playbackControl.tools {
+      playbackControl.tools.moreButton {
+        playbackControl.button.smallIcon.smallIconGlyph {
+          fill[0].color: colors.primitives.white70
+        }
+      }
+
+      playbackControl.tools.likeButton {
+        playbackControl.button.smallIcon.smallIconGlyph {
+          fill[0].color: colors.primitives.white70
+        }
+      }
+
+      playbackControl.tools.settingsButton {
+        playbackControl.button.smallIcon.smallIconGlyph {
+          fill[0].color: colors.primitives.white70
+        }
+      }
+    }
+
+    playbackControl.playbackControl.playbackTime {
+      fill[0].color: colors.primitives.white70,
+      contents: "12:59 / 32:46"
+    }
+
+    playbackControl.scrubber {
+      playbackControl.scrubber.progressSlider {
+        playbackControl.slider.slider.track {
+          fill[0].color: colors.primitives.white
+        }
+      }
+
+      playbackControl.scrubber.playButton {
+        playbackControl.button.smallIcon.smallIconGlyph {
+          fill[0].color: colors.primitives.white70
+        }
+      }
+    }
+  }
 }
 
 headerRow = frame {
   width: 100%,
   layout: {justify-content: .space-between},
-  children: [eventHeader, liveStatus]
-}
+  children: [eventHeader, liveStatus],
 
-eventHeader = frame : header.smallLeft {
-  left: 0px,
-  top: 250px,
+  eventHeader = frame : header.smallLeft {
+    left: 0px,
+    top: 250px,
 
-  header.smallSubtitle {
-    contents: "Live from the dunes: Stage 3",
-    fill[0].color: colors.primitives.white70
+    header.smallLeft.smallSubtitle {
+      contents: "Live from the dunes: Stage 3",
+      fill[0].color: colors.primitives.white70
+    }
+
+    header.smallLeft.smallTitle {
+      contents: "Endless Dunes",
+      fill[0].color: colors.primitives.white
+    }
   }
 
-  header.smallTitle {
-    contents: "Endless Dunes",
-    fill[0].color: colors.primitives.white
-  }
-}
+  liveStatus = frame : tag.status {
+    left: 806px,
+    top: 450px,
+    fill[0].color: rgb(100%, 0%, 0%, 60%),
 
-liveStatus = frame : tag.status {
-  left: 806px,
-  top: 450px,
-  fill[0].color: rgb(100%, 0%, 0%, 60%),
+    tag.tagTransparent.label {
+      fill[0].color: colors.primitives.white,
+      contents: Strings.status.live
+    }
 
-  tag.label {
-    fill[0].color: colors.primitives.white,
-    contents: Strings.status.live
-  }
-
-  tag.statusIcon {
-    fill[0].color: colors.primitives.white
-  }
-}
-
-controls = frame : playbackControl.playbackControl {
-  left: 0px,
-  top: 809px,
-  width: 100%,
-
-  playbackControl.tools.moreButton.button.smallIconGlyph {
-    fill[0].color: colors.primitives.white70
-  }
-
-  playbackControl.tools.likeButton.button.smallIconGlyph {
-    fill[0].color: colors.primitives.white70
-  }
-
-  playbackControl.tools.settingsButton.button.smallIconGlyph {
-    fill[0].color: colors.primitives.white70
-  }
-
-  playbackControl.playbackTime {
-    fill[0].color: colors.primitives.white70,
-    contents: "12:59 / 32:46"
-  }
-
-  playbackControl.scrubber.progressSlider.slider.track {
-    fill[0].color: colors.primitives.white
-  }
-
-  playbackControl.scrubber.playButton.button.smallIconGlyph {
-    fill[0].color: colors.primitives.white70
+    tag.status.statusIcon {
+      fill[0].color: colors.primitives.white
+    }
   }
 }

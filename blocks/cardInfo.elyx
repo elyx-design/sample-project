@@ -24,28 +24,37 @@ reviewFooter = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.huge},
   overflow: .visible,
-  children: [reviewInfo, readReviewButton]
+  children: [reviewInfo, readReviewButton],
+
+  readReviewButton = frame : button.medium {
+    left: 0px,
+    top: 165px,
+
+    button.medium.mediumLabel {
+      contents: Strings.actions.readFullReview
+    }
+  }
 }
 
 reviewInfo = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [reviewHeader, tags]
-}
+  children: [reviewHeader, tags],
 
-reviewHeader = frame : header.mediumLeft {
-  left: 768px,
-  top: 512px,
+  reviewHeader = frame : header.mediumLeft {
+    left: 768px,
+    top: 512px,
 
-  header.mediumSubtitle {
-    contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure.",
-    fill[0].color: colors.primitives.white70
-  }
+    header.mediumLeft.mediumSubtitle {
+      contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure.",
+      fill[0].color: colors.primitives.white70
+    }
 
-  header.mediumTitle {
-    contents: "A Breathtaking Escape",
-    fill[0].color: colors.primitives.white
+    header.mediumLeft.mediumTitle {
+      contents: "A Breathtaking Escape",
+      fill[0].color: colors.primitives.white
+    }
   }
 }
 
@@ -55,50 +64,41 @@ tags = frame {
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
-  children: [ratingTag, thrillerTag, dramaTag]
-}
+  children: [ratingTag, thrillerTag, dramaTag],
 
-ratingTag = frame : tag.iconAndLabel {
-  left: 765px,
-  top: 726px,
-  overflow: .visible,
+  ratingTag = frame : tag.iconAndLabel {
+    left: 765px,
+    top: 726px,
+    overflow: .visible,
 
-  tag.label {
-    contents: "4.2",
-    fill[0].color: colors.primitives.white
+    tag.tagTransparent.label {
+      contents: "4.2",
+      fill[0].color: colors.primitives.white
+    }
+
+    tag.iconAndLabel.tagIcon {
+      fill[0].color: colors.primitives.white
+    }
   }
 
-  tag.tagIcon {
-    fill[0].color: colors.primitives.white
+  thrillerTag = frame : tag.tagTransparent {
+    left: 785px,
+    top: 746px,
+
+    tag.tagTransparent.label {
+      contents: "Thriller",
+      fill[0].color: colors.primitives.white
+    }
   }
-}
 
-thrillerTag = frame : tag.tagTransparent {
-  left: 785px,
-  top: 746px,
+  dramaTag = frame : tag.tagTransparent {
+    left: 785px,
+    top: 827.25px,
 
-  tag.label {
-    contents: "Thriller",
-    fill[0].color: colors.primitives.white
-  }
-}
-
-dramaTag = frame : tag.tagTransparent {
-  left: 785px,
-  top: 827.25px,
-
-  tag.label {
-    contents: "Drama",
-    fill[0].color: colors.primitives.white
-  }
-}
-
-readReviewButton = frame : button.medium {
-  left: 0px,
-  top: 165px,
-
-  button.mediumLabel {
-    contents: Strings.actions.readFullReview
+    tag.tagTransparent.label {
+      contents: "Drama",
+      fill[0].color: colors.primitives.white
+    }
   }
 }
 
@@ -106,20 +106,20 @@ reviewAuthor = frame {
   width: 100%,
   layout: {justify-content: .space-between, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
-  children: [small, closeButton]
-}
+  children: [small, closeButton],
 
-small = frame : avatar.smallPhoto {
-  left: 786px,
-  top: 143px,
+  small = frame : avatar.smallPhoto {
+    left: 786px,
+    top: 143px,
 
-  avatar.smallStatus {
-    display: .hidden
+    avatar.small.smallStatus {
+      display: .hidden
+    }
   }
-}
 
-closeButton = frame : button.smallClose {
-  left: 1097px,
-  top: 291px,
-  fill[0].color: colors.primitives.white70
+  closeButton = frame : button.smallClose {
+    left: 1097px,
+    top: 291px,
+    fill[0].color: colors.primitives.white70
+  }
 }

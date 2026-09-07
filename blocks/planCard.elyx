@@ -18,21 +18,36 @@ export planCard = frame {
   fill: [{visible: .false, image: {ref: dots}}, Colors.theme.base],
   corner-radius: Radius.radius.large,
   padding: Spacing.padding.xxlarge,
-  children: [planContent, manageButton]
+  children: [planContent, manageButton],
+
+  manageButton = frame : button.medium {
+    left: 24px,
+    top: 390px,
+
+    button.medium.mediumLabel {
+      contents: Strings.actions.managePlan
+    }
+  }
 }
 
 planContent = frame {
   width: 100%,
   layout: {direction: .column, item-gap: 48px},
   overflow: .visible,
-  children: [planSummary, planDetails]
-}
+  children: [planSummary, planDetails],
 
-planSummary = frame {
-  width: 100%,
-  layout: {align-items: .center, item-gap: Spacing.gap.medium},
-  overflow: .visible,
-  children: [planIcon, planHeader]
+  planSummary = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: Spacing.gap.medium},
+    overflow: .visible,
+    children: [planIcon, planHeader]
+  }
+
+  planDetails = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
+    children: [pricingCopy, features]
+  }
 }
 
 planIcon = frame {
@@ -43,52 +58,46 @@ planIcon = frame {
   layout: {direction: .column, justify-content: .center, align-items: .center},
   fill: Colors.theme.contrastStrongest,
   corner-radius: Radius.radius.xsmall,
-  children: planGlyph
-}
+  children: planGlyph,
 
-planGlyph = icon {
-  left: 2px,
-  top: 29px,
-  width: 32px,
-  height: 32px,
-  fill: Colors.theme.base,
-  contents: direct24
+  planGlyph = icon {
+    left: 2px,
+    top: 29px,
+    width: 32px,
+    height: 32px,
+    fill: Colors.theme.base,
+    contents: direct24
+  }
 }
 
 planHeader = frame {
   width: .auto,
   layout: {align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [planName, badge]
-}
+  children: [planName, badge],
 
-planName = text {
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.plans.starter,
-  font-size: Typography.fontSize.xxlarge,
-  font-style: "Bold"
-}
-
-badge = frame : tag.iconAndLabel {
-  left: 67px,
-  top: 37px,
-  border[0].visible: .false,
-  fill[0].color: Colors.palette.lavender,
-
-  tag.label {
-    fill[0].color: Colors.primitives.black,
-    contents: Strings.plans.best
+  planName = text {
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.plans.starter,
+    font-size: Typography.fontSize.xxlarge,
+    font-style: "Bold"
   }
 
-  tag.tagIcon {
-    fill[0].color: Colors.primitives.black
-  }
-}
+  badge = frame : tag.iconAndLabel {
+    left: 67px,
+    top: 37px,
+    border[0].visible: .false,
+    fill[0].color: Colors.palette.lavender,
 
-planDetails = frame {
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
-  children: [pricingCopy, features]
+    tag.tagTransparent.label {
+      fill[0].color: Colors.primitives.black,
+      contents: Strings.plans.best
+    }
+
+    tag.iconAndLabel.tagIcon {
+      fill[0].color: Colors.primitives.black
+    }
+  }
 }
 
 pricingCopy = frame {
@@ -96,33 +105,38 @@ pricingCopy = frame {
   top: 112px,
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
-  children: [priceRow, description]
+  children: [priceRow, description],
+
+  description = text {
+    left: 20px,
+    top: 262px,
+    fill: Colors.theme.contrastDefault,
+    contents: Strings.plans.starterDescription,
+    line-height: Typography.lineHeight.relaxed
+  }
 }
 
 priceRow = frame {
   width: 100%,
   layout: {align-items: .end, item-gap: Spacing.gap.xsmall},
-  children: [price, billingPeriod]
-}
+  children: [price, billingPeriod],
 
-price = text {fill: Colors.theme.contrastStrongest, contents: "$12", font-size: 40, font-style: "Light"}
+  price = text {
+    fill: Colors.theme.contrastStrongest,
+    contents: "$12",
+    font-size: 40,
+    font-style: "Light"
+  }
 
-billingPeriod = text {
-  left: 40px,
-  top: 132px,
-  height: 22px,
-  fill: Colors.theme.contrastAlpha50,
-  contents: Strings.plans.perMonth,
-  font-size: Typography.fontSize.medium,
-  font-style: "SemiBold"
-}
-
-description = text {
-  left: 20px,
-  top: 262px,
-  fill: Colors.theme.contrastDefault,
-  contents: Strings.plans.starterDescription,
-  line-height: Typography.lineHeight.relaxed
+  billingPeriod = text {
+    left: 40px,
+    top: 132px,
+    height: 22px,
+    fill: Colors.theme.contrastAlpha50,
+    contents: Strings.plans.perMonth,
+    font-size: Typography.fontSize.medium,
+    font-style: "SemiBold"
+  }
 }
 
 features = frame {
@@ -132,47 +146,38 @@ features = frame {
   layout: {direction: .column, item-gap: Spacing.gap.small},
   slot: .true,
   restrict-children: .true,
-  children: [projectsFeature, projectsFeature_2, projectsFeature_3, projectsFeature_4]
-}
+  children: [projectsFeature, projectsFeature_2, projectsFeature_3, projectsFeature_4],
 
-projectsFeature = frame : listItem.projectsFeature {
-  listItem.projectsLabel {
-    contents: Strings.plans.threeProjects
+  projectsFeature = frame : listItem.projectsFeature {
+    listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.threeProjects
+    }
   }
-}
 
-projectsFeature_2 = frame : listItem.projectsFeature {
-  left: 20px,
-  top: 45px,
+  projectsFeature_2 = frame : listItem.projectsFeature {
+    left: 20px,
+    top: 45px,
 
-  listItem.projectsLabel {
-    contents: Strings.plans.communitySupport
+    listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.communitySupport
+    }
   }
-}
 
-projectsFeature_3 = frame : listItem.projectsFeature {
-  left: 20px,
-  top: 70px,
+  projectsFeature_3 = frame : listItem.projectsFeature {
+    left: 20px,
+    top: 70px,
 
-  listItem.projectsLabel {
-    contents: Strings.plans.basicExport
+    listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.basicExport
+    }
   }
-}
 
-projectsFeature_4 = frame : listItem.projectsFeature {
-  left: 20px,
-  top: 95px,
+  projectsFeature_4 = frame : listItem.projectsFeature {
+    left: 20px,
+    top: 95px,
 
-  listItem.projectsLabel {
-    contents: Strings.plans.twoGigabytesStorage
-  }
-}
-
-manageButton = frame : button.medium {
-  left: 24px,
-  top: 390px,
-
-  button.mediumLabel {
-    contents: Strings.actions.managePlan
+    listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.twoGigabytesStorage
+    }
   }
 }

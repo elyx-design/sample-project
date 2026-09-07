@@ -37,26 +37,32 @@ top = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 96px},
   overflow: .visible,
-  children: [pageHeader, Copy]
-}
+  children: [pageHeader, Copy],
 
-pageHeader = frame : siteHeader.siteHeader {
-  left: 388.5px,
-  top: 145px,
-  width: 60%,
-  border[0].visible: .false,
-  shadow[0].drop-shadow.visible: .false,
+  pageHeader = frame : siteHeader.siteHeader {
+    left: 388.5px,
+    top: 145px,
+    width: 60%,
+    border[0].visible: .false,
+    shadow[0].drop-shadow.visible: .false,
 
-  siteHeader.headerCta.logInLink.label {
-    connections[0].target: signIn.signInScreen
-  }
+    siteHeader.headerCta {
+      siteHeader.headerCta.logInLink {
+        siteHeader.menu.label {
+          connections[0].target: signIn.signInScreen
+        }
+      }
+    }
 
-  siteHeader.navLinks {
-    overrides: [remove(siteHeader.navResources)]
-  }
+    siteHeader.navLinks {
+      overrides: [remove(siteHeader.navLinks.navResources)],
 
-  siteHeader.navLinks.navPricing.label {
-    connections[0].target: pricingPage.pricingPage
+      siteHeader.navLinks.navPricing {
+        siteHeader.menu.label {
+          connections[0].target: pricingPage.pricingPage
+        }
+      }
+    }
   }
 }
 
@@ -64,21 +70,21 @@ Copy = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.huge},
   overflow: .visible,
-  children: [largeLeft, frame2]
-}
+  children: [largeLeft, frame2],
 
-largeLeft = frame : header.largeCenter {
-  left: 1840px,
-  top: 449px,
-  width: 44.0752%,
+  largeLeft = frame : header.largeCenter {
+    left: 1840px,
+    top: 449px,
+    width: 44.0752%,
 
-  header.largeTitle {
-    width: 100%,
-    contents: Strings.landingPage.heroTitle
-  }
+    header.largeLeft.largeTitle {
+      width: 100%,
+      contents: Strings.landingPage.heroTitle
+    }
 
-  header.largeSubtitle {
-    contents: Strings.landingPage.heroDescription
+    header.largeLeft.largeSubtitle {
+      contents: Strings.landingPage.heroDescription
+    }
   }
 }
 
@@ -86,41 +92,59 @@ frame2 = frame {
   width: 100%,
   layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
-  children: [medium, text3]
-}
+  children: [medium, text3],
 
-medium = frame : button.medium {
-  left: 733px,
-  top: 353px,
+  medium = frame : button.medium {
+    left: 733px,
+    top: 353px,
 
-  button.mediumLabel {
-    contents: Strings.actions.getStarted
+    button.medium.mediumLabel {
+      contents: Strings.actions.getStarted
+    }
   }
-}
 
-text3 = text {
-  left: 854px,
-  top: 477px,
-  fill: colors.theme.contrastAlpha50,
-  contents: Strings.actions.watchDemo,
-  font-style: "SemiBold"
+  text3 = text {
+    left: 854px,
+    top: 477px,
+    fill: colors.theme.contrastAlpha50,
+    contents: Strings.actions.watchDemo,
+    font-style: "SemiBold"
+  }
 }
 
 frame3 = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.huge},
   overflow: .visible,
-  children: [bottom, base]
-}
+  children: [bottom, base],
 
-bottom = frame {
-  left: 311px,
-  top: 840px,
-  width: 60%,
-  height: .auto,
-  layout: {align-items: .center, item-gap: Spacing.gap.xxlarge},
-  overflow: .visible,
-  children: [layer1, layer2, layer3]
+  bottom = frame {
+    left: 311px,
+    top: 840px,
+    width: 60%,
+    height: .auto,
+    layout: {align-items: .center, item-gap: Spacing.gap.xxlarge},
+    overflow: .visible,
+    children: [layer1, layer2, layer3]
+  }
+
+  base = frame : tag.iconAndLabel {
+    left: 774px,
+    top: 1091px,
+    border[0].visible: .false,
+    connections[0].target: footer.Footer,
+    fill[0].color: colors.theme.contrastAlpha25,
+
+    tag.tagTransparent.label {
+      fill[0].color: colors.theme.baseAlpha70,
+      contents: Strings.actions.scrollDown
+    }
+
+    tag.iconAndLabel.tagIcon {
+      fill[0].color: colors.theme.baseAlpha70,
+      contents: arrowDown20
+    }
+  }
 }
 
 layer1 = frame {
@@ -134,21 +158,21 @@ layer1 = frame {
   corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [shape1, smallLeft]
-}
+  children: [shape1, smallLeft],
 
-shape1 = icon {left: 644px, top: 704px, width: 40px, height: 40px, contents: direct24}
+  shape1 = icon {left: 644px, top: 704px, width: 40px, height: 40px, contents: direct24}
 
-smallLeft = frame : header.smallLeft {
-  left: 0px,
-  top: 0px,
+  smallLeft = frame : header.smallLeft {
+    left: 0px,
+    top: 0px,
 
-  header.smallSubtitle {
-    contents: Strings.landingPage.minimalDescription
-  }
+    header.smallLeft.smallSubtitle {
+      contents: Strings.landingPage.minimalDescription
+    }
 
-  header.smallTitle {
-    contents: Strings.landingPage.minimalTitle
+    header.smallLeft.smallTitle {
+      contents: Strings.landingPage.minimalTitle
+    }
   }
 }
 
@@ -163,21 +187,21 @@ layer2 = frame {
   corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [shape2, steadyHeader]
-}
+  children: [shape2, steadyHeader],
 
-shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: activity}
+  shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: activity}
 
-steadyHeader = frame : header.smallLeft {
-  left: 0px,
-  top: 0px,
+  steadyHeader = frame : header.smallLeft {
+    left: 0px,
+    top: 0px,
 
-  header.smallSubtitle {
-    contents: Strings.landingPage.reliabilityDescription
-  }
+    header.smallLeft.smallSubtitle {
+      contents: Strings.landingPage.reliabilityDescription
+    }
 
-  header.smallTitle {
-    contents: Strings.landingPage.reliabilityTitle
+    header.smallLeft.smallTitle {
+      contents: Strings.landingPage.reliabilityTitle
+    }
   }
 }
 
@@ -192,39 +216,21 @@ layer3 = frame {
   corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [shape3, teamHeader]
-}
+  children: [shape3, teamHeader],
 
-shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug24}
+  shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug24}
 
-teamHeader = frame : header.smallLeft {
-  left: 0px,
-  top: 0px,
+  teamHeader = frame : header.smallLeft {
+    left: 0px,
+    top: 0px,
 
-  header.smallSubtitle {
-    contents: Strings.landingPage.collaborationDescription
-  }
+    header.smallLeft.smallSubtitle {
+      contents: Strings.landingPage.collaborationDescription
+    }
 
-  header.smallTitle {
-    contents: Strings.landingPage.collaborationTitle
-  }
-}
-
-base = frame : tag.iconAndLabel {
-  left: 774px,
-  top: 1091px,
-  border[0].visible: .false,
-  connections[0].target: footer.Footer,
-  fill[0].color: colors.theme.contrastAlpha25,
-
-  tag.label {
-    fill[0].color: colors.theme.baseAlpha70,
-    contents: Strings.actions.scrollDown
-  }
-
-  tag.tagIcon {
-    fill[0].color: colors.theme.baseAlpha70,
-    contents: arrowDown20
+    header.smallLeft.smallTitle {
+      contents: Strings.landingPage.collaborationTitle
+    }
   }
 }
 
@@ -232,22 +238,22 @@ GroupedStack = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 96px},
   overflow: .visible,
-  children: [largeLeft_2, productGallery_2]
-}
+  children: [largeLeft_2, productGallery_2],
 
-largeLeft_2 = frame : header.largeCenter {
-  left: 1840px,
-  top: -265px,
-  width: 44.0752%,
+  largeLeft_2 = frame : header.largeCenter {
+    left: 1840px,
+    top: -265px,
+    width: 44.0752%,
 
-  header.largeTitle {
-    width: 100%,
-    contents: Strings.landingPage.galleryTitle
+    header.largeLeft.largeTitle {
+      width: 100%,
+      contents: Strings.landingPage.galleryTitle
+    }
+
+    header.largeLeft.largeSubtitle {
+      contents: Strings.landingPage.galleryDescription
+    }
   }
 
-  header.largeSubtitle {
-    contents: Strings.landingPage.galleryDescription
-  }
+  productGallery_2 = frame : productGallery.productGallery {left: 276px, top: 443px}
 }
-
-productGallery_2 = frame : productGallery.productGallery {left: 276px, top: 443px}

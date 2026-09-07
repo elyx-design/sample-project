@@ -18,16 +18,16 @@ export tagTransparent = frame {
   corner-radius: radius.radius.full,
   padding-left: spacing.padding.medium,
   padding-right: spacing.padding.medium,
-  children: label
-}
+  children: label,
 
-label = text {
-  left: 0px,
-  top: 0px,
-  fill: colors.theme.contrastAlpha50,
-  contents: Strings.componentDefaults.label,
-  font-size: typography.fontSize.small,
-  font-style: "Bold"
+  label = text {
+    left: 0px,
+    top: 0px,
+    fill: colors.theme.contrastAlpha50,
+    contents: Strings.componentDefaults.label,
+    font-size: typography.fontSize.small,
+    font-style: "Bold"
+  }
 }
 
 @variant
@@ -36,7 +36,16 @@ labelAndClose = frame : tagTransparent {
   top: 700px,
   padding-right: spacing.padding.small,
   layout.item-gap: spacing.gap.xsmall,
-  overrides: [insert(closeIcon, after = label)]
+  overrides: [insert(closeIcon, after = tagTransparent.label)],
+
+  closeIcon = icon {
+    left: 525px,
+    top: 635px,
+    width: 20px,
+    height: 20px,
+    fill: colors.theme.contrastAlpha50,
+    contents: close20
+  }
 }
 
 @variant
@@ -44,25 +53,16 @@ status = frame : tagTransparent {
   left: 545px,
   top: 776px,
   padding-left: spacing.padding.xsmall,
-  overrides: [insert(statusIcon, after = .nil)]
-}
+  overrides: [insert(statusIcon, after = .nil)],
 
-statusIcon = icon {
-  left: 525px,
-  top: 635px,
-  width: 20px,
-  height: 20px,
-  fill: colors.status.visible,
-  contents: status20
-}
-
-closeIcon = icon {
-  left: 525px,
-  top: 635px,
-  width: 20px,
-  height: 20px,
-  fill: colors.theme.contrastAlpha50,
-  contents: close20
+  statusIcon = icon {
+    left: 525px,
+    top: 635px,
+    width: 20px,
+    height: 20px,
+    fill: colors.status.visible,
+    contents: status20
+  }
 }
 
 @variant
@@ -71,14 +71,14 @@ iconAndLabel = frame : tagTransparent {
   top: 624px,
   padding-left: spacing.padding.small,
   layout.item-gap: spacing.gap.xsmall,
-  overrides: [insert(tagIcon, after = .nil)]
-}
+  overrides: [insert(tagIcon, after = .nil)],
 
-tagIcon = icon {
-  left: 525px,
-  top: 635px,
-  width: 20px,
-  height: 20px,
-  fill: colors.theme.contrastAlpha50,
-  contents: star20
+  tagIcon = icon {
+    left: 525px,
+    top: 635px,
+    width: 20px,
+    height: 20px,
+    fill: colors.theme.contrastAlpha50,
+    contents: star20
+  }
 }

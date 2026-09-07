@@ -17,26 +17,36 @@ export signInForm = frame : cardBackground.transparent {
   padding-top: 48px,
   layout.align-items: .center,
   layout.item-gap: 48px,
-  overrides: [insert(signInLogo, after = .nil), insert(content, after = signInLogo)]
+  overrides: [insert(signInLogo, after = .nil), insert(content, after = signInLogo)],
+
+  signInLogo = frame : logo.extraLarge {left: 351px, top: 15px}
 }
 
 content = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
-  children: [header, credentialFields, options, signInButton]
-}
+  children: [header, credentialFields, options, signInButton],
 
-header = frame : header2.mediumCenter {
-  left: -33px,
-  top: 120px,
+  header = frame : header2.mediumCenter {
+    left: -33px,
+    top: 120px,
 
-  header2.mediumSubtitle {
-    contents: Strings.forms.accountPrompt
+    header2.mediumLeft.mediumSubtitle {
+      contents: Strings.forms.accountPrompt
+    }
+
+    header2.mediumLeft.mediumTitle {
+      contents: Strings.forms.signInTitle
+    }
   }
 
-  header2.mediumTitle {
-    contents: Strings.forms.signInTitle
+  signInButton = frame : Button.mediumPrimary {
+    width: 100%,
+
+    Button.medium.mediumLabel {
+      contents: Strings.actions.signIn
+    }
   }
 }
 
@@ -46,26 +56,26 @@ credentialFields = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   overflow: .visible,
-  children: [emailField, passwordField]
-}
+  children: [emailField, passwordField],
 
-emailField = frame : TextField.iconPlaceholder {
-  TextField.placeholderIcon {
-    contents: mail24
+  emailField = frame : TextField.iconPlaceholder {
+    TextField.iconPlaceholder.placeholderIcon {
+      contents: mail24
+    }
+
+    TextField.textField.label {
+      contents: Strings.forms.emailAddress
+    }
   }
 
-  TextField.label {
-    contents: Strings.forms.emailAddress
-  }
-}
+  passwordField = frame : TextField.iconPlaceholder {
+    TextField.iconPlaceholder.placeholderIcon {
+      contents: padlock24
+    }
 
-passwordField = frame : TextField.iconPlaceholder {
-  TextField.placeholderIcon {
-    contents: padlock24
-  }
-
-  TextField.label {
-    contents: Strings.forms.password
+    TextField.textField.label {
+      contents: Strings.forms.password
+    }
   }
 }
 
@@ -75,23 +85,13 @@ options = frame {
   width: 100%,
   height: .auto,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [rememberToggle, rememberLabel]
-}
+  children: [rememberToggle, rememberLabel],
 
-rememberToggle = frame : Checkbox.on {left: 127px, top: 285px}
+  rememberToggle = frame : Checkbox.on {left: 127px, top: 285px}
 
-rememberLabel = text {
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.forms.rememberMe,
-  font-size: Typography.fontSize.medium
-}
-
-signInButton = frame : Button.mediumPrimary {
-  width: 100%,
-
-  Button.mediumLabel {
-    contents: Strings.actions.signIn
+  rememberLabel = text {
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.forms.rememberMe,
+    font-size: Typography.fontSize.medium
   }
 }
-
-signInLogo = frame : logo.extraLarge {left: 351px, top: 15px}

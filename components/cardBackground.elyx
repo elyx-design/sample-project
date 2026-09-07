@@ -38,7 +38,13 @@ transparent = frame : cardBackground {
 }
 
 @variant
-none = frame : cardBackground {left: 80px, top: 683px, border[0]: .nil, fill[0]: .nil, shadow[0]: .nil}
+none = frame : cardBackground {
+  left: 80px,
+  top: 683px,
+  border[0]: .nil,
+  fill[0]: .nil,
+  shadow[0]: .nil
+}
 
 @variant
 transparentFullRadius = frame : cardBackground {
@@ -51,4 +57,8 @@ transparentFullRadius = frame : cardBackground {
 }
 
 @variant
-solidFullRadius = frame : cardBackground {left: 275.05px, top: 467px, corner-radius: Radius.radius.full}
+solidFullRadius = frame : cardBackground {
+  left: 275.05px,
+  top: 467px,
+  corner-radius: Radius.radius.full
+}

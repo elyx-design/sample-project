@@ -20,15 +20,15 @@ export textField = frame {
   corner-radius: Radius.radius.full,
   padding-left: Spacing.padding.medium,
   padding-right: Spacing.padding.medium,
-  children: label
-}
+  children: label,
 
-label = text {
-  left: 0px,
-  top: 0px,
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.label,
-  font-size: Typography.fontSize.medium
+  label = text {
+    left: 0px,
+    top: 0px,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.label,
+    font-size: Typography.fontSize.medium
+  }
 }
 
 @variant
@@ -36,7 +36,7 @@ placeholder = frame : textField {
   left: 869px,
   top: 850px,
 
-  label {
+  textField.label {
     fill[0].color: Colors.theme.contrastMuted
   }
 }
@@ -58,7 +58,7 @@ error = frame : textField {
   border[0].position: .center,
   border[0].width: 1.5px,
 
-  label {
+  textField.label {
     fill[0].color: Colors.palette.red70
   }
 }
@@ -69,7 +69,16 @@ withIcon = frame : textField {
   top: 770px,
   padding-left: Spacing.padding.small,
   padding-right: Spacing.padding.small,
-  overrides: [insert(defaultIcon, after = .nil)]
+  overrides: [insert(defaultIcon, after = .nil)],
+
+  defaultIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: calendar24
+  }
 }
 
 @variant
@@ -80,27 +89,18 @@ iconPlaceholder = frame : textField {
   padding-right: Spacing.padding.small,
   overrides: [insert(placeholderIcon, after = .nil)],
 
-  label {
+  textField.label {
     fill[0].color: Colors.theme.contrastMuted
   }
-}
 
-placeholderIcon = icon {
-  left: 981px,
-  top: 782px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.contrastStrongest,
-  contents: search24
-}
-
-defaultIcon = icon {
-  left: 981px,
-  top: 782px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.contrastStrongest,
-  contents: calendar24
+  placeholderIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: search24
+  }
 }
 
 @variant
@@ -111,7 +111,16 @@ iconFocused = frame : textField {
   padding-right: Spacing.padding.small,
   border[0].color: Colors.theme.contrastStrongest,
   border[0].width: 1.5px,
-  overrides: [insert(focusedIcon, after = .nil)]
+  overrides: [insert(focusedIcon, after = .nil)],
+
+  focusedIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: calendar24
+  }
 }
 
 @variant
@@ -124,27 +133,18 @@ iconError = frame : textField {
   border[0].width: 1.5px,
   overrides: [insert(errorIcon, after = .nil)],
 
-  label {
+  textField.label {
     fill[0].color: Colors.palette.red70
   }
-}
 
-focusedIcon = icon {
-  left: 981px,
-  top: 782px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.contrastStrongest,
-  contents: calendar24
-}
-
-errorIcon = icon {
-  left: 981px,
-  top: 782px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.palette.red70,
-  contents: calendar24
+  errorIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.palette.red70,
+    contents: calendar24
+  }
 }
 
 @variant
@@ -153,7 +153,16 @@ withButton = frame : textField {
   top: 770px,
   padding-right: Spacing.padding.xsmall,
   layout.justify-content: .space-between,
-  overrides: [insert(submitButton, after = label)]
+  overrides: [insert(submitButton, after = textField.label)],
+
+  submitButton = frame : button.smallPrimaryRounded {
+    left: 52.3381px,
+    top: 5.85px,
+
+    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+      contents: arrowUp20
+    }
+  }
 }
 
 @variant
@@ -162,19 +171,10 @@ buttonPlaceholder = frame : textField {
   top: 850px,
   padding-right: Spacing.padding.xsmall,
   layout.justify-content: .space-between,
-  overrides: [insert(GroupedStack, after = label)],
+  overrides: [insert(GroupedStack, after = textField.label)],
 
-  label {
+  textField.label {
     fill[0].color: Colors.theme.contrastMuted
-  }
-}
-
-submitButton = frame : button.smallPrimaryRounded {
-  left: 52.3381px,
-  top: 5.85px,
-
-  button.smallPrimaryRoundedIcon {
-    contents: arrowUp20
   }
 }
 
@@ -182,23 +182,23 @@ GroupedStack = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [small, placeholderButton]
-}
+  children: [small, placeholderButton],
 
-small = frame : button.smallIcon {
-  left: 59.6px,
-  top: 6px,
+  small = frame : button.smallIcon {
+    left: 59.6px,
+    top: 6px,
 
-  button.smallIconGlyph {
-    contents: emoji20
+    button.smallIcon.smallIconGlyph {
+      contents: emoji20
+    }
   }
-}
 
-placeholderButton = frame : button.smallPrimaryRounded {
-  left: 52.3381px,
-  top: 5.85px,
+  placeholderButton = frame : button.smallPrimaryRounded {
+    left: 52.3381px,
+    top: 5.85px,
 
-  button.smallPrimaryRoundedIcon {
-    contents: arrowUp20
+    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+      contents: arrowUp20
+    }
   }
 }

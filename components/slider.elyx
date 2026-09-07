@@ -12,17 +12,17 @@ export slider = frame {
   corner-radius: radius.radius.full,
   padding-left: 1px,
   padding-right: 1px,
-  children: track
-}
+  children: track,
 
-track = shape {
-  left: 0px,
-  top: 0px,
-  width: 40%,
-  height: 4px,
-  fill: colors.theme.base,
-  type: .rect,
-  corner-radius: radius.radius.full
+  track = shape {
+    left: 0px,
+    top: 0px,
+    width: 40%,
+    height: 4px,
+    fill: colors.theme.base,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 }
 
 @variant
@@ -30,11 +30,13 @@ thumb = frame : slider {
   left: 702px,
   top: 591px,
   overflow: .visible,
-  overrides: [insert(handle_2, after = track)],
+  overrides: [insert(handle_2, after = slider.track)],
 
-  track {
+  slider.track {
     corner-radius: [radius.radius.full, 0px, 0px, radius.radius.full]
   }
+
+  handle_2 = frame : handle {left: 789px, top: 589px}
 }
 
 @variant
@@ -42,26 +44,30 @@ full = frame : slider {
   left: 702px,
   top: 645px,
   overflow: .visible,
-  overrides: [insert(handle_3, after = track)],
+  overrides: [insert(handle_3, after = slider.track)],
 
-  track {
+  slider.track {
     width: 100%
   }
+
+  handle_3 = frame : handle {left: 796px, top: 643px}
 }
 
-export handle = frame {left: 620px, top: 539px, width: 10px, height: 10px, children: thumbHandle_2}
-
-thumbHandle_2 = shape {
-  left: 0px,
-  top: 0px,
+export handle = frame {
+  left: 620px,
+  top: 539px,
   width: 10px,
   height: 10px,
-  fill: colors.theme.baseAlpha50,
-  border: {color: colors.theme.baseAlpha70, width: 2px},
-  filter: {type: .background-blur, radius: 40px},
-  type: .ellipse
+  children: thumbHandle_2,
+
+  thumbHandle_2 = shape {
+    left: 0px,
+    top: 0px,
+    width: 10px,
+    height: 10px,
+    fill: colors.theme.baseAlpha50,
+    border: {color: colors.theme.baseAlpha70, width: 2px},
+    filter: {type: .background-blur, radius: 40px},
+    type: .ellipse
+  }
 }
-
-handle_2 = frame : handle {left: 789px, top: 589px}
-
-handle_3 = frame : handle {left: 796px, top: 643px}

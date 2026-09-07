@@ -33,18 +33,18 @@ export medium = frame {
   corner-radius: Radius.radius.full,
   padding-left: Spacing.padding.large,
   padding-right: Spacing.padding.large,
-  children: mediumLabel
-}
+  children: mediumLabel,
 
-mediumLabel = text {
-  left: 12px,
-  top: 9.5px,
-  width: .auto,
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.button,
-  font-size: Typography.fontSize.medium,
-  font-style: "SemiBold",
-  align: .center
+  mediumLabel = text {
+    left: 12px,
+    top: 9.5px,
+    width: .auto,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.button,
+    font-size: Typography.fontSize.medium,
+    font-style: "SemiBold",
+    align: .center
+  }
 }
 
 @variant
@@ -59,7 +59,7 @@ mediumPrimary = frame : medium {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  mediumLabel {
+  medium.mediumLabel {
     fill[0].color: Colors.controls.foreground,
     left: 16px
   }
@@ -78,7 +78,7 @@ mediumDanger = frame : medium {
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
-  mediumLabel {
+  medium.mediumLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -106,7 +106,7 @@ mediumPrimaryPressed = frame : medium {
   shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
 
-  mediumLabel {
+  medium.mediumLabel {
     fill[0].color: Colors.controls.foreground
   }
 }
@@ -123,7 +123,7 @@ mediumDangerPressed = frame : medium {
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal,
 
-  mediumLabel {
+  medium.mediumLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -151,18 +151,18 @@ export small = frame {
   },
   corner-radius: Radius.radius.full,
   padding: [0px, Spacing.padding.medium],
-  children: smallLabel
-}
+  children: smallLabel,
 
-smallLabel = text {
-  left: 8px,
-  top: 6.5px,
-  width: .auto,
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.button,
-  font-size: Typography.fontSize.small,
-  font-style: "SemiBold",
-  align: .center
+  smallLabel = text {
+    left: 8px,
+    top: 6.5px,
+    width: .auto,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.button,
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold",
+    align: .center
+  }
 }
 
 @variant
@@ -176,7 +176,7 @@ smallDangerPressed = frame : small {
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal,
 
-  smallLabel {
+  small.smallLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -193,7 +193,7 @@ smallDanger = frame : small {
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
-  smallLabel {
+  small.smallLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -223,7 +223,7 @@ smallPrimary = frame : small {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  smallLabel {
+  small.smallLabel {
     fill[0].color: Colors.theme.base
   }
 }
@@ -238,7 +238,7 @@ smallPrimaryPressed = frame : small {
   shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
 
-  smallLabel {
+  small.smallLabel {
     fill[0].color: Colors.theme.base
   }
 }
@@ -250,7 +250,16 @@ mediumIcon = frame : medium {
   width: Spacing.size.medium,
   padding-left: 0px,
   padding-right: 0px,
-  overrides: [insert(mediumIconGlyph, after = .nil), remove(mediumLabel)]
+  overrides: [insert(mediumIconGlyph, after = .nil), remove(medium.mediumLabel)],
+
+  mediumIconGlyph = icon {
+    left: 1353px,
+    top: 705px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: calendar24
+  }
 }
 
 @variant
@@ -264,8 +273,17 @@ mediumClose = frame : medium {
   fill[0].color: Colors.theme.baseAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur,
-  overrides: [insert(mediumCloseIcon, after = .nil), remove(mediumLabel)],
-  shadow[0]: .nil
+  overrides: [insert(mediumCloseIcon, after = .nil), remove(medium.mediumLabel)],
+  shadow[0]: .nil,
+
+  mediumCloseIcon = icon {
+    left: 1387px,
+    top: 682px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: close24
+  }
 }
 
 @variant
@@ -275,7 +293,16 @@ smallIconBackground = frame : small {
   width: Spacing.size.small,
   padding-left: 0px,
   padding-right: 0px,
-  overrides: [insert(smallBackgroundIcon, after = .nil), remove(smallLabel)]
+  overrides: [insert(smallBackgroundIcon, after = .nil), remove(small.smallLabel)],
+
+  smallBackgroundIcon = icon {
+    left: 1248px,
+    top: 918px,
+    width: 20px,
+    height: 20px,
+    fill: Colors.theme.contrastStrongest,
+    contents: trash20
+  }
 }
 
 @variant
@@ -289,44 +316,17 @@ smallClose = frame : small {
   fill[0].color: Colors.theme.baseAlpha50,
   filter[0].radius: 40px,
   filter[0].type: .background-blur,
-  overrides: [insert(smallCloseIcon, after = .nil), remove(smallLabel)],
-  shadow[0]: .nil
-}
+  overrides: [insert(smallCloseIcon, after = .nil), remove(small.smallLabel)],
+  shadow[0]: .nil,
 
-smallBackgroundIcon = icon {
-  left: 1248px,
-  top: 918px,
-  width: 20px,
-  height: 20px,
-  fill: Colors.theme.contrastStrongest,
-  contents: trash20
-}
-
-mediumCloseIcon = icon {
-  left: 1387px,
-  top: 682px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.contrastStrongest,
-  contents: close24
-}
-
-smallCloseIcon = icon {
-  left: 1211px,
-  top: 918px,
-  width: 20px,
-  height: 20px,
-  fill: Colors.theme.contrastStrongest,
-  contents: close20
-}
-
-mediumIconGlyph = icon {
-  left: 1353px,
-  top: 705px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.contrastStrongest,
-  contents: calendar24
+  smallCloseIcon = icon {
+    left: 1211px,
+    top: 918px,
+    width: 20px,
+    height: 20px,
+    fill: Colors.theme.contrastStrongest,
+    contents: close20
+  }
 }
 
 @variant
@@ -338,16 +338,16 @@ smallPrimaryRounded = frame : small {
   padding-right: 0px,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
   fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
-  overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(smallLabel)]
-}
+  overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(small.smallLabel)],
 
-smallPrimaryRoundedIcon = icon {
-  left: 1248px,
-  top: 918px,
-  width: 20px,
-  height: 20px,
-  fill: Colors.theme.base,
-  contents: trash20
+  smallPrimaryRoundedIcon = icon {
+    left: 1248px,
+    top: 918px,
+    width: 20px,
+    height: 20px,
+    fill: Colors.theme.base,
+    contents: trash20
+  }
 }
 
 @variant
@@ -359,17 +359,17 @@ smallIcon = frame : small {
   padding-right: 0px,
   border[0]: .nil,
   fill[0]: .nil,
-  overrides: [insert(smallIconGlyph, after = .nil), remove(smallLabel)],
-  shadow[0]: .nil
-}
+  overrides: [insert(smallIconGlyph, after = .nil), remove(small.smallLabel)],
+  shadow[0]: .nil,
 
-smallIconGlyph = icon {
-  left: 1248px,
-  top: 918px,
-  width: 20px,
-  height: 20px,
-  fill: Colors.theme.contrastStrongest,
-  contents: trash20
+  smallIconGlyph = icon {
+    left: 1248px,
+    top: 918px,
+    width: 20px,
+    height: 20px,
+    fill: Colors.theme.contrastStrongest,
+    contents: trash20
+  }
 }
 
 @variant
@@ -382,11 +382,20 @@ mediumPrimaryRounded = frame : medium {
   border[0].color: Colors.theme.contrastStrongest,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
   fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
-  overrides: [insert(mediumPrimaryRoundedIcon, after = .nil), remove(mediumLabel)],
+  overrides: [insert(mediumPrimaryRoundedIcon, after = .nil), remove(medium.mediumLabel)],
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
-  shadow[1].inner-shadow.spread: 0px
+  shadow[1].inner-shadow.spread: 0px,
+
+  mediumPrimaryRoundedIcon = icon {
+    left: 1397px,
+    top: 701px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.base,
+    contents: calendar24
+  }
 }
 
 @variant
@@ -398,26 +407,17 @@ mediumPlainIcon = frame : medium {
   padding-right: 0px,
   border[0]: .nil,
   fill[0]: .nil,
-  overrides: [insert(mediumPlainIconGlyph, after = .nil), remove(mediumLabel)],
-  shadow[0]: .nil
-}
+  overrides: [insert(mediumPlainIconGlyph, after = .nil), remove(medium.mediumLabel)],
+  shadow[0]: .nil,
 
-mediumPlainIconGlyph = icon {
-  left: 1397px,
-  top: 701px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.contrastStrongest,
-  contents: calendar24
-}
-
-mediumPrimaryRoundedIcon = icon {
-  left: 1397px,
-  top: 701px,
-  width: 24px,
-  height: 24px,
-  fill: Colors.theme.base,
-  contents: calendar24
+  mediumPlainIconGlyph = icon {
+    left: 1397px,
+    top: 701px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: calendar24
+  }
 }
 
 export Play = frame {
@@ -426,25 +426,25 @@ export Play = frame {
   width: 96px,
   height: 96px,
   layout: {justify-content: .center, align-items: .center},
-  children: [shape1, play20svg]
-}
+  children: [shape1, play20svg],
 
-shape1 = shape {
-  left: 0px,
-  top: 0px,
-  width: 96px,
-  height: 96px,
-  ignore-stack: .true,
-  fill: Colors.theme.baseAlpha50,
-  filter: {type: .background-blur, radius: 40px},
-  type: .ellipse
-}
+  shape1 = shape {
+    left: 0px,
+    top: 0px,
+    width: 96px,
+    height: 96px,
+    ignore-stack: .true,
+    fill: Colors.theme.baseAlpha50,
+    filter: {type: .background-blur, radius: 40px},
+    type: .ellipse
+  }
 
-play20svg = icon {
-  left: 38px,
-  top: 38px,
-  width: 64px,
-  height: 64px,
-  fill: Colors.theme.contrastAlpha70,
-  contents: play20
+  play20svg = icon {
+    left: 38px,
+    top: 38px,
+    width: 64px,
+    height: 64px,
+    fill: Colors.theme.contrastAlpha70,
+    contents: play20
+  }
 }

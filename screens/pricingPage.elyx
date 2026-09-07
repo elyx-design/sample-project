@@ -15,20 +15,20 @@ export pricingPage = frame {
   height: 810px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 34px},
   fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: sea}}],
-  children: [pricingHeader, pricingCards]
-}
+  children: [pricingHeader, pricingCards],
 
-pricingHeader = frame : header.mediumCenter {
-  left: 742.5px,
-  top: 121px,
-  width: 62.5%,
+  pricingHeader = frame : header.mediumCenter {
+    left: 742.5px,
+    top: 121px,
+    width: 62.5%,
 
-  header.mediumSubtitle {
-    contents: Strings.pricingPage.description
-  }
+    header.mediumLeft.mediumSubtitle {
+      contents: Strings.pricingPage.description
+    }
 
-  header.mediumTitle {
-    contents: Strings.pricingPage.title
+    header.mediumLeft.mediumTitle {
+      contents: Strings.pricingPage.title
+    }
   }
 }
 
@@ -49,26 +49,38 @@ pricingCards = frame {
   filter: {type: .background-blur, radius: 40px},
   corner-radius: Radius.radius.xlarge,
   padding: Spacing.padding.medium,
-  children: [freePlan, proPlan, businessPlan]
-}
+  children: [freePlan, proPlan, businessPlan],
 
-freePlan = frame : planCard.planCard {
-  left: 0px,
-  top: 0px,
-  width: 380px,
-  height: 100%,
-  corner-radius: [20px, 0px, 0px, 20px],
+  freePlan = frame : planCard.planCard {
+    left: 0px,
+    top: 0px,
+    width: 380px,
+    height: 100%,
+    corner-radius: [20px, 0px, 0px, 20px],
 
-  planCard.manageButton.button.mediumLabel {
-    contents: Strings.pricingPage.freeRegistration
-  }
+    planCard.planCard.manageButton {
+      planCard.button.medium.mediumLabel {
+        contents: Strings.pricingPage.freeRegistration
+      }
+    }
 
-  planCard.planContent.planDetails.pricingCopy.priceRow.price {
-    contents: "$0"
-  }
+    planCard.planContent {
+      planCard.planContent.planDetails {
+        planCard.pricingCopy {
+          planCard.priceRow {
+            planCard.priceRow.price {
+              contents: "$0"
+            }
+          }
+        }
+      }
 
-  planCard.planContent.planSummary.planHeader {
-    overrides: [remove(planCard.badge)]
+      planCard.planContent.planSummary {
+        planCard.planHeader {
+          overrides: [remove(planCard.planHeader.badge)]
+        }
+      }
+    }
   }
 }
 
@@ -79,29 +91,61 @@ proPlan = frame : planCard.planCard {
   height: 498px,
   corner-radius: 0px,
 
-  planCard.manageButton.button.mediumLabel {
-    contents: Strings.actions.getStarted
+  planCard.planCard.manageButton {
+    planCard.button.medium.mediumLabel {
+      contents: Strings.actions.getStarted
+    }
   }
 
-  planCard.planContent.planDetails.features {
-    overrides: [
-      insert(projectsFeature_4, after = planCard.projectsFeature_4),
-      insert(projectsFeature_5, after = projectsFeature_4)
-    ]
+  planCard.planContent {
+    planCard.planContent.planDetails {
+      planCard.features {
+        overrides: [
+          insert(projectsFeature_4, after = planCard.features.projectsFeature_4),
+          insert(projectsFeature_5, after = projectsFeature_4)
+        ]
+      }
+
+      planCard.pricingCopy {
+        planCard.pricingCopy.description {
+          contents: Strings.plans.proDescription
+        }
+      }
+    }
+
+    planCard.planContent.planSummary {
+      planCard.planIcon {
+        planCard.planIcon.planGlyph {
+          left: 6px,
+          top: 33px,
+          contents: dashboard
+        }
+      }
+
+      planCard.planHeader {
+        planCard.planHeader.planName {
+          contents: Strings.plans.pro
+        }
+      }
+    }
   }
 
-  planCard.planContent.planSummary.planIcon.planGlyph {
-    left: 6px,
-    top: 33px,
-    contents: dashboard
+  projectsFeature_4 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 115px,
+
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.hundredGigabytesStorage
+    }
   }
 
-  planCard.planContent.planDetails.pricingCopy.description {
-    contents: Strings.plans.proDescription
-  }
+  projectsFeature_5 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 140px,
 
-  planCard.planContent.planSummary.planHeader.planName {
-    contents: Strings.plans.pro
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.versionHistory
+    }
   }
 }
 
@@ -112,72 +156,68 @@ businessPlan = frame : planCard.planCard {
   height: 100%,
   corner-radius: [0px, Radius.radius.large, Radius.radius.large, 0px],
 
-  planCard.manageButton.button.mediumLabel {
-    contents: Strings.actions.contactSales
+  planCard.planCard.manageButton {
+    planCard.button.medium.mediumLabel {
+      contents: Strings.actions.contactSales
+    }
   }
 
-  planCard.planContent.planDetails.features {
-    overrides: [
-      insert(projectsFeature_6, after = planCard.projectsFeature_4),
-      insert(projectsFeature_7, after = projectsFeature_6)
-    ]
+  planCard.planContent {
+    planCard.planContent.planDetails {
+      planCard.features {
+        overrides: [
+          insert(projectsFeature_6, after = planCard.features.projectsFeature_4),
+          insert(projectsFeature_7, after = projectsFeature_6)
+        ]
+      }
+
+      planCard.pricingCopy {
+        planCard.pricingCopy.description {
+          contents: Strings.plans.businessDescription
+        }
+
+        planCard.priceRow {
+          planCard.priceRow.price {
+            contents: "$29"
+          }
+        }
+      }
+    }
+
+    planCard.planContent.planSummary {
+      planCard.planHeader {
+        overrides: [remove(planCard.planHeader.badge)],
+
+        planCard.planHeader.planName {
+          contents: Strings.plans.business
+        }
+      }
+
+      planCard.planIcon {
+        planCard.planIcon.planGlyph {
+          left: 6px,
+          top: 33px,
+          contents: processor
+        }
+      }
+    }
   }
 
-  planCard.planContent.planDetails.pricingCopy.description {
-    contents: Strings.plans.businessDescription
+  projectsFeature_6 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 115px,
+
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.oneTerabyteStorage
+    }
   }
 
-  planCard.planContent.planDetails.pricingCopy.priceRow.price {
-    contents: "$29"
-  }
+  projectsFeature_7 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 140px,
 
-  planCard.planContent.planSummary.planHeader {
-    overrides: [remove(planCard.badge)]
-  }
-
-  planCard.planContent.planSummary.planIcon.planGlyph {
-    left: 6px,
-    top: 33px,
-    contents: processor
-  }
-
-  planCard.planContent.planSummary.planHeader.planName {
-    contents: Strings.plans.business
-  }
-}
-
-projectsFeature_7 = frame : planCard.listItem.projectsFeature {
-  left: 40px,
-  top: 140px,
-
-  planCard.listItem.projectsLabel {
-    contents: Strings.plans.adminControls
-  }
-}
-
-projectsFeature_6 = frame : planCard.listItem.projectsFeature {
-  left: 40px,
-  top: 115px,
-
-  planCard.listItem.projectsLabel {
-    contents: Strings.plans.oneTerabyteStorage
-  }
-}
-
-projectsFeature_5 = frame : planCard.listItem.projectsFeature {
-  left: 40px,
-  top: 140px,
-
-  planCard.listItem.projectsLabel {
-    contents: Strings.plans.versionHistory
-  }
-}
-
-projectsFeature_4 = frame : planCard.listItem.projectsFeature {
-  left: 40px,
-  top: 115px,
-
-  planCard.listItem.projectsLabel {
-    contents: Strings.plans.hundredGigabytesStorage
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.adminControls
+    }
   }
 }

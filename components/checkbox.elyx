@@ -25,21 +25,21 @@ export on = frame {
   border: {color: Colors.primitives.blackAlpha10, width: 0.5px},
   corner-radius: Radius.radius.full,
   padding: 3px,
-  children: knob
-}
+  children: knob,
 
-knob = frame {
-  left: 23px,
-  top: 3px,
-  width: 14px,
-  height: 14px,
-  fill: {
-    linear-gradient: {
-      angle: 180deg,
-      stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
-    }
-  },
-  corner-radius: Radius.radius.full
+  knob = frame {
+    left: 23px,
+    top: 3px,
+    width: 14px,
+    height: 14px,
+    fill: {
+      linear-gradient: {
+        angle: 180deg,
+        stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
+      }
+    },
+    corner-radius: Radius.radius.full
+  }
 }
 
 @variant

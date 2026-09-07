@@ -51,95 +51,95 @@ compact = frame {
   fill: colors.theme.base,
   border: {color: colors.theme.contrastAlpha08, visible: .false, position: .outside},
   padding: [Spacing.padding.xlarge, Spacing.padding.medium],
-  children: [compactContent, profileAvatar]
+  children: [compactContent, profileAvatar],
+
+  profileAvatar = frame : avatar.smallPhoto {left: 550px, top: 402px}
 }
 
 compactContent = frame {
   width: 100%,
   layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.xxlarge},
-  children: [compactLogo, compactNavigation]
-}
+  children: [compactLogo, compactNavigation],
 
-compactLogo = frame : logo.medium {left: 0px, top: 278px}
+  compactLogo = frame : logo.medium {left: 0px, top: 278px}
+}
 
 compactNavigation = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
   slot: .true,
   restrict-children: .true,
-  children: [home, create, folder, cloud, history]
-}
+  children: [home, create, folder, cloud, history],
 
-home = frame : button.mediumPlainIcon {
-  left: 8.72px,
-  top: 108px,
+  home = frame : button.mediumPlainIcon {
+    left: 8.72px,
+    top: 108px,
 
-  button.mediumPlainIconGlyph {
-    contents: home24
+    button.mediumPlainIcon.mediumPlainIconGlyph {
+      contents: home24
+    }
+  }
+
+  create = frame : button.mediumPlainIcon {
+    left: 28.72px,
+    top: 128px,
+
+    button.mediumPlainIcon.mediumPlainIconGlyph {
+      contents: create24
+    }
+  }
+
+  folder = frame : button.mediumPlainIcon {
+    left: 28.72px,
+    top: 128px,
+
+    button.mediumPlainIcon.mediumPlainIconGlyph {
+      contents: folder24
+    }
+  }
+
+  cloud = frame : button.mediumPlainIcon {
+    left: 28.72px,
+    top: 164px,
+
+    button.mediumPlainIcon.mediumPlainIconGlyph {
+      contents: cloud24
+    }
+  }
+
+  history = frame : button.mediumPlainIcon {
+    left: 28.72px,
+    top: 128px,
+
+    button.mediumPlainIcon.mediumPlainIconGlyph {
+      contents: history24
+    }
   }
 }
-
-create = frame : button.mediumPlainIcon {
-  left: 28.72px,
-  top: 128px,
-
-  button.mediumPlainIconGlyph {
-    contents: create24
-  }
-}
-
-folder = frame : button.mediumPlainIcon {
-  left: 28.72px,
-  top: 128px,
-
-  button.mediumPlainIconGlyph {
-    contents: folder24
-  }
-}
-
-cloud = frame : button.mediumPlainIcon {
-  left: 28.72px,
-  top: 164px,
-
-  button.mediumPlainIconGlyph {
-    contents: cloud24
-  }
-}
-
-history = frame : button.mediumPlainIcon {
-  left: 28.72px,
-  top: 128px,
-
-  button.mediumPlainIconGlyph {
-    contents: history24
-  }
-}
-
-profileAvatar = frame : avatar.smallPhoto {left: 550px, top: 402px}
 
 export segmentHeader = frame {
   left: -435px,
   top: 0px,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 39px},
-  children: [text1, settings20svg]
-}
+  children: [text1, settings20svg],
 
-text1 = text {
-  left: 0px,
-  top: 2px,
-  fill: colors.theme.contrastAlpha50,
-  contents: Strings.labels.chatsAndTasks,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  text1 = text {
+    left: 0px,
+    top: 2px,
+    fill: colors.theme.contrastAlpha50,
+    contents: Strings.labels.chatsAndTasks,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-settings20svg = icon {
-  left: 132px,
-  top: 0px,
-  width: 20px,
-  height: 20px,
-  fill: colors.theme.contrastAlpha50,
-  contents: settings20
+  settings20svg = icon {
+    left: 132px,
+    top: 0px,
+    width: 20px,
+    height: 20px,
+    fill: colors.theme.contrastAlpha50,
+    contents: settings20
+  }
 }
 
 workspaceSelector = frame : selector.Selector {
@@ -149,32 +149,30 @@ workspaceSelector = frame : selector.Selector {
   height: Spacing.size.medium,
   padding-left: 10px,
   padding-right: 10px,
-  overrides: [insert(GroupedStack, after = selector.Left), remove(selector.shape1)],
+  overrides: [insert(GroupedStack, after = selector.Left), remove(selector.Selector.shape1)],
 
   selector.Left {
-    overrides: [insert(xsmall, after = .nil), remove(selector.small)],
+    overrides: [insert(xsmall, after = .nil), remove(selector.Left.small)],
     height: .auto,
-    layout.item-gap: Spacing.gap.small
+    layout.item-gap: Spacing.gap.small,
+
+    selector.Left.smallLeft {
+      overrides: [remove(selector.header.smallLeft.smallSubtitle)],
+      layout.item-gap: Spacing.gap.xxsmall,
+
+      selector.header.smallLeft.smallTitle {
+        font-size: Typography.fontSize.small
+      }
+    }
   }
 
-  selector.Left.smallLeft {
-    overrides: [remove(selector.header.smallSubtitle)],
-    layout.item-gap: Spacing.gap.xxsmall
-  }
+  xsmall = frame : avatar.xsmallVariant {
+    left: -123px,
+    top: 600px,
 
-  selector.Left.smallLeft.header.smallTitle {
-    font-size: Typography.fontSize.small
-  }
-}
-
-small = frame : logo.mediumWordmark {left: -111px, top: 48px}
-
-xsmall = frame : avatar.xsmallVariant {
-  left: -123px,
-  top: 600px,
-
-  avatar.smallStatus_2 {
-    display: .hidden
+    avatar.xsmall.smallStatus_2 {
+      display: .hidden
+    }
   }
 }
 
@@ -182,25 +180,25 @@ GroupedStack = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [shape3, shape2]
-}
+  children: [shape3, shape2],
 
-shape3 = icon {
-  left: Spacing.size.small,
-  top: 10px,
-  width: 20px,
-  height: 20px,
-  fill: colors.theme.contrastStrongest,
-  contents: search20
-}
+  shape3 = icon {
+    left: Spacing.size.small,
+    top: 10px,
+    width: 20px,
+    height: 20px,
+    fill: colors.theme.contrastStrongest,
+    contents: search20
+  }
 
-shape2 = icon {
-  left: 48px,
-  top: 30px,
-  width: 20px,
-  height: 20px,
-  fill: colors.theme.contrastStrongest,
-  contents: sideBarleft20
+  shape2 = icon {
+    left: 48px,
+    top: 30px,
+    width: 20px,
+    height: 20px,
+    fill: colors.theme.contrastStrongest,
+    contents: sideBarleft20
+  }
 }
 
 @variant
@@ -216,93 +214,137 @@ sidebarLiveEvent = frame : sidebar {
   overrides: [remove(workspaceSelector)],
 
   GroupedStack_3 {
-    overrides: [remove(Content)]
+    overrides: [remove(GroupedStack_3.Content)],
+
+    GroupedStack_3.GroupedStack_4 {
+      overrides: [insert(GroupedStack_5, after = .nil), remove(frame2)],
+
+      GroupedStack_2 {
+        padding-left: 0px,
+        padding-right: 0px,
+
+        frame4 {
+          overrides: [
+            insert(campaignsItem_11, after = frame4.campaignsItem_6),
+            insert(campaignsItem_12, after = campaignsItem_11)
+          ],
+
+          @use-variant(sideBarMenuEvent)
+          frame4.campaignsItem_6 {}
+
+          frame4.campaignsItem_6 {
+            sideBarMenuEvent.eventTag_2 {
+              layout.item-gap: Spacing.gap.xsmall,
+
+              eventTag.text3 {
+                contents: "5.1k"
+              }
+            }
+
+            sideBarMenuEvent.text5 {
+              contents: "Lowhealth"
+            }
+          }
+
+          @use-variant(sideBarMenuEvent)
+          frame4.campaignsItem_5 {}
+
+          frame4.campaignsItem_5 {
+            sideBarMenuEvent.eventTag_2 {
+              layout.item-gap: Spacing.gap.xsmall,
+
+              eventTag.text3 {
+                contents: "3.1k"
+              }
+            }
+
+            sideBarMenuEvent.text5 {
+              contents: "SkipperGO"
+            }
+          }
+
+          @use-variant(sideBarMenuEvent)
+          frame4.campaignsItem_3 {}
+
+          frame4.campaignsItem_3 {
+            sideBarMenuEvent.eventTag_2 {
+              layout.item-gap: Spacing.gap.xsmall,
+
+              eventTag.text3 {
+                contents: "9.7k"
+              }
+            }
+
+            sideBarMenuEvent.text5 {
+              contents: "HugeTown"
+            }
+          }
+
+          @use-variant(sideBarMenuEvent)
+          frame4.campaignsItem_4 {
+            corner-radius: radius.radius.full
+          }
+
+          frame4.campaignsItem_4 {
+            sideBarMenuEvent.eventTag_2 {
+              layout.item-gap: Spacing.gap.xsmall,
+
+              eventTag.text3 {
+                contents: "21.2k"
+              }
+            }
+
+            sideBarMenuEvent.text5 {
+              contents: "RamblingRoosterTV"
+            }
+          }
+        }
+
+        GroupedStack_2.segmentHeader_2 {
+          segmentHeader.settings20svg {
+            display: .hidden
+          }
+
+          segmentHeader.text1 {
+            contents: Strings.labels.liveChannels
+          }
+        }
+      }
+    }
   }
 
-  GroupedStack_3.GroupedStack_4 {
-    overrides: [insert(GroupedStack_5, after = .nil), remove(frame2)]
+  campaignsItem_11 = frame : sideBarMenuEvent {
+    left: 40px,
+    top: 164px,
+
+    sideBarMenuEvent.eventTag_2 {
+      layout.item-gap: Spacing.gap.xsmall,
+
+      eventTag.text3 {
+        contents: "71.1k"
+      }
+    }
+
+    sideBarMenuEvent.text5 {
+      contents: "TurnTV"
+    }
   }
 
-  GroupedStack_3.GroupedStack_4.GroupedStack_2 {
-    padding-left: 0px,
-    padding-right: 0px
-  }
+  campaignsItem_12 = frame : sideBarMenuEvent {
+    left: 40px,
+    top: 192px,
 
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4 {
-    overrides: [
-      insert(campaignsItem_11, after = campaignsItem_6),
-      insert(campaignsItem_12, after = campaignsItem_11)
-    ]
-  }
+    sideBarMenuEvent.eventTag_2 {
+      layout.item-gap: Spacing.gap.xsmall,
 
-  @use-variant(sideBarMenuEvent)
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6 {}
+      eventTag.text3 {
+        contents: "5.9k"
+      }
+    }
 
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.eventTag_2.text3 {
-    contents: "5.1k"
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_6.text5 {
-    contents: "Lowhealth"
-  }
-
-  @use-variant(sideBarMenuEvent)
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5 {}
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.eventTag_2.text3 {
-    contents: "3.1k"
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_5.text5 {
-    contents: "SkipperGO"
-  }
-
-  @use-variant(sideBarMenuEvent)
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3 {}
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.eventTag_2.text3 {
-    contents: "9.7k"
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_3.text5 {
-    contents: "HugeTown"
-  }
-
-  @use-variant(sideBarMenuEvent)
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4 {
-    corner-radius: radius.radius.full
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.eventTag_2.text3 {
-    contents: "21.2k"
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.frame4.campaignsItem_4.text5 {
-    contents: "RamblingRoosterTV"
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.settings20svg {
-    display: .hidden
-  }
-
-  GroupedStack_3.GroupedStack_4.GroupedStack_2.segmentHeader_2.text1 {
-    contents: Strings.labels.liveChannels
+    sideBarMenuEvent.text5 {
+      contents: "RespawnRegret"
+    }
   }
 }
 
@@ -316,43 +358,19 @@ sideBarMenuEvent = frame : sidebarItem.sidebarMenu {
   overrides: [
     insert(text5, after = .nil),
     insert(eventTag_2, after = text5),
-    remove(sidebarItem.text2),
-    remove(sidebarItem.shape1)
-  ]
-}
+    remove(sidebarItem.sidebarMenu.text2),
+    remove(sidebarItem.sidebarMenu.shape1)
+  ],
 
-campaignsItem_12 = frame : sideBarMenuEvent {
-  left: 40px,
-  top: 192px,
-
-  eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
+  text5 = text {
+    left: 54.5px,
+    top: 6.5px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.menu,
+    font-size: Typography.fontSize.small
   }
 
-  eventTag_2.text3 {
-    contents: "5.9k"
-  }
-
-  text5 {
-    contents: "RespawnRegret"
-  }
-}
-
-campaignsItem_11 = frame : sideBarMenuEvent {
-  left: 40px,
-  top: 164px,
-
-  eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
-  }
-
-  eventTag_2.text3 {
-    contents: "71.1k"
-  }
-
-  text5 {
-    contents: "TurnTV"
-  }
+  eventTag_2 = frame : eventTag {left: -251px, top: 161px}
 }
 
 GroupedStack_5 = frame {
@@ -361,20 +379,20 @@ GroupedStack_5 = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [segmentHeader_3, frame5]
-}
+  children: [segmentHeader_3, frame5],
 
-segmentHeader_3 = frame : segmentHeader {
-  left: 10px,
-  top: 222px,
-  width: 100%,
+  segmentHeader_3 = frame : segmentHeader {
+    left: 10px,
+    top: 222px,
+    width: 100%,
 
-  settings20svg {
-    contents: sideBarleft20
-  }
+    segmentHeader.settings20svg {
+      contents: sideBarleft20
+    }
 
-  text1 {
-    contents: Strings.labels.forYou
+    segmentHeader.text1 {
+      contents: Strings.labels.forYou
+    }
   }
 }
 
@@ -388,69 +406,69 @@ frame5 = frame {
   restrict-children: .true,
   padding-left: 0px,
   padding-right: 0px,
-  children: [campaignsItem_7, campaignsItem_8, campaignsItem_9, campaignsItem_10]
-}
+  children: [campaignsItem_7, campaignsItem_8, campaignsItem_9, campaignsItem_10],
 
-campaignsItem_7 = frame : sideBarMenuEvent {
-  left: 20px,
-  top: 84px,
+  campaignsItem_7 = frame : sideBarMenuEvent {
+    left: 20px,
+    top: 84px,
 
-  eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
+    sideBarMenuEvent.eventTag_2 {
+      layout.item-gap: Spacing.gap.xsmall,
+
+      eventTag.text3 {
+        contents: "5.5k"
+      }
+    }
+
+    sideBarMenuEvent.text5 {
+      contents: "PixelDriftTV"
+    }
   }
 
-  eventTag_2.text3 {
-    contents: "5.5k"
+  campaignsItem_8 = frame : sideBarMenuEvent {
+    left: 20px,
+    top: 54px,
+
+    sideBarMenuEvent.eventTag_2 {
+      layout.item-gap: Spacing.gap.xsmall,
+
+      eventTag.text3 {
+        contents: "1.2k"
+      }
+    }
+
+    sideBarMenuEvent.text5 {
+      contents: "ChessKing"
+    }
   }
 
-  text5 {
-    contents: "PixelDriftTV"
-  }
-}
+  campaignsItem_9 = frame : sideBarMenuEvent {
+    left: 20px,
+    top: 114px,
 
-campaignsItem_8 = frame : sideBarMenuEvent {
-  left: 20px,
-  top: 54px,
+    sideBarMenuEvent.eventTag_2 {
+      layout.item-gap: Spacing.gap.xsmall,
 
-  eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
-  }
+      eventTag.text3 {
+        contents: "13.4k"
+      }
+    }
 
-  eventTag_2.text3 {
-    contents: "1.2k"
-  }
-
-  text5 {
-    contents: "ChessKing"
-  }
-}
-
-campaignsItem_9 = frame : sideBarMenuEvent {
-  left: 20px,
-  top: 114px,
-
-  eventTag_2 {
-    layout.item-gap: Spacing.gap.xsmall
+    sideBarMenuEvent.text5 {
+      contents: "InkAndPixels"
+    }
   }
 
-  eventTag_2.text3 {
-    contents: "13.4k"
-  }
+  campaignsItem_10 = frame : sideBarMenuEvent {
+    left: 20px,
+    top: 144px,
 
-  text5 {
-    contents: "InkAndPixels"
-  }
-}
+    @use-variant(eventTagOffline)
+    sideBarMenuEvent.eventTag_2 {}
 
-campaignsItem_10 = frame : sideBarMenuEvent {
-  left: 20px,
-  top: 144px,
-
-  @use-variant(eventTagOffline)
-  eventTag_2 {}
-
-  text5 {
-    contents: "PaletteRiot"
+    sideBarMenuEvent.text5 {
+      contents: "PaletteRiot"
+    }
   }
 }
 
@@ -459,56 +477,53 @@ export eventTag = frame {
   top: 144px,
   layout: {justify-content: .center, align-items: .center, item-gap: 7px},
   overflow: .visible,
-  children: [status, text3]
-}
+  children: [status, text3],
 
-status = shape : avatar.status {left: 0px, top: 5px, fill[0].color: colors.palette.red70}
+  status = shape : avatar.status {left: 0px, top: 5px, fill[0].color: colors.palette.red70}
 
-text3 = text {
-  left: 15px,
-  top: 0px,
-  fill: colors.theme.contrastStrongest,
-  contents: "2.2k",
-  font-size: Typography.fontSize.small,
-  font-style: "SemiBold"
+  text3 = text {
+    left: 15px,
+    top: 0px,
+    fill: colors.theme.contrastStrongest,
+    contents: "2.2k",
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold"
+  }
 }
 
 @variant
 eventTagOffline = frame : eventTag {
   left: -435px,
   top: 207px,
-  overrides: [remove(status)],
+  overrides: [remove(eventTag.status)],
 
-  text3 {
+  eventTag.text3 {
     fill[0].color: colors.theme.contrastAlpha25,
     contents: Strings.status.offline
   }
-}
-
-eventTag_2 = frame : eventTag {left: -251px, top: 161px}
-
-text5 = text {
-  left: 54.5px,
-  top: 6.5px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.menu,
-  font-size: Typography.fontSize.small
 }
 
 GroupedStack_3 = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [Content, GroupedStack_4]
-}
+  children: [Content, GroupedStack_4],
 
-Content = frame {
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.gap.large},
-  overflow: .visible,
-  padding-left: 0px,
-  padding-right: 0px,
-  children: frame3
+  Content = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: Spacing.gap.large},
+    overflow: .visible,
+    padding-left: 0px,
+    padding-right: 0px,
+    children: frame3
+  }
+
+  GroupedStack_4 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.xlarge},
+    overflow: .visible,
+    children: [frame2, GroupedStack_2]
+  }
 }
 
 frame3 = frame {
@@ -519,28 +534,27 @@ frame3 = frame {
   layout: {direction: .column, justify-content: .space-between, item-gap: Spacing.gap.small},
   overflow: .visible,
   padding: [0px, Spacing.padding.medium],
-  children: frame1
-}
+  children: frame1,
 
-frame1 = frame {
-  width: 100%,
-  layout: {align-items: .center, item-gap: Spacing.gap.medium},
-  overflow: .visible,
-  padding: [Spacing.padding.small, 0px],
-  children: small_2
+  frame1 = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: Spacing.gap.medium},
+    overflow: .visible,
+    padding: [Spacing.padding.small, 0px],
+    children: small_2
+  }
 }
 
 small_2 = frame : logo.mediumWordmark {
   left: 134px,
   top: 22px,
-  overrides: [insert(small, after = .nil), remove(logo.text2), remove(logo.smallArtwork)]
-}
+  overrides: [
+    insert(small, after = .nil),
+    remove(logo.mediumWordmark.text2),
+    remove(logo.small.smallArtwork)
+  ],
 
-GroupedStack_4 = frame {
-  width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.xlarge},
-  overflow: .visible,
-  children: [frame2, GroupedStack_2]
+  small = frame : logo.mediumWordmark {left: -111px, top: 48px}
 }
 
 frame2 = frame {
@@ -553,71 +567,71 @@ frame2 = frame {
   restrict-children: .true,
   padding-left: 10px,
   padding-right: 10px,
-  children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem]
-}
+  children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem],
 
-campaignsItem = frame : sidebarItem.sidebarMenu {
-  left: 0px,
-  top: 34px,
+  campaignsItem = frame : sidebarItem.sidebarMenu {
+    left: 0px,
+    top: 34px,
 
-  sidebarItem.shape1 {
-    contents: plus24
+    sidebarItem.sidebarMenu.shape1 {
+      contents: plus24
+    }
+
+    sidebarItem.sidebarMenu.text2 {
+      contents: Strings.status.new
+    }
   }
 
-  sidebarItem.text2 {
-    contents: Strings.status.new
-  }
-}
+  overviewItem = frame : sidebarItem.sidebarMenu {
+    left: 0px,
+    top: 54px,
 
-overviewItem = frame : sidebarItem.sidebarMenu {
-  left: 0px,
-  top: 54px,
+    sidebarItem.sidebarMenu.shape1 {
+      contents: history24
+    }
 
-  sidebarItem.shape1 {
-    contents: history24
-  }
-
-  sidebarItem.text2 {
-    contents: Strings.navigation.projects
-  }
-}
-
-salesItem = frame : sidebarItem.sidebarMenu {
-  left: 0px,
-  top: 74px,
-
-  sidebarItem.shape1 {
-    contents: database24
+    sidebarItem.sidebarMenu.text2 {
+      contents: Strings.navigation.projects
+    }
   }
 
-  sidebarItem.text2 {
-    contents: Strings.navigation.data
-  }
-}
+  salesItem = frame : sidebarItem.sidebarMenu {
+    left: 0px,
+    top: 74px,
 
-tasksItem = frame : sidebarItem.sidebarMenu {
-  left: 20px,
-  top: 94px,
+    sidebarItem.sidebarMenu.shape1 {
+      contents: database24
+    }
 
-  sidebarItem.shape1 {
-    contents: notes24
-  }
-
-  sidebarItem.text2 {
-    contents: Strings.navigation.notes
-  }
-}
-
-settingsItem = frame : sidebarItem.sidebarMenu {
-  left: 20px,
-  top: 134px,
-
-  sidebarItem.shape1 {
-    contents: settings24
+    sidebarItem.sidebarMenu.text2 {
+      contents: Strings.navigation.data
+    }
   }
 
-  sidebarItem.text2 {
-    contents: Strings.navigation.settings
+  tasksItem = frame : sidebarItem.sidebarMenu {
+    left: 20px,
+    top: 94px,
+
+    sidebarItem.sidebarMenu.shape1 {
+      contents: notes24
+    }
+
+    sidebarItem.sidebarMenu.text2 {
+      contents: Strings.navigation.notes
+    }
+  }
+
+  settingsItem = frame : sidebarItem.sidebarMenu {
+    left: 20px,
+    top: 134px,
+
+    sidebarItem.sidebarMenu.shape1 {
+      contents: settings24
+    }
+
+    sidebarItem.sidebarMenu.text2 {
+      contents: Strings.navigation.settings
+    }
   }
 }
 
@@ -627,10 +641,10 @@ GroupedStack_2 = frame {
   overflow: .visible,
   padding-left: 10px,
   padding-right: 10px,
-  children: [segmentHeader_2, frame4]
-}
+  children: [segmentHeader_2, frame4],
 
-segmentHeader_2 = frame : segmentHeader {left: 10px, top: 222px, width: 100%}
+  segmentHeader_2 = frame : segmentHeader {left: 10px, top: 222px, width: 100%}
+}
 
 frame4 = frame {
   left: 0px,
@@ -642,62 +656,62 @@ frame4 = frame {
   restrict-children: .true,
   padding-left: 0px,
   padding-right: 0px,
-  children: [campaignsItem_4, campaignsItem_3, campaignsItem_5, campaignsItem_6]
-}
+  children: [campaignsItem_4, campaignsItem_3, campaignsItem_5, campaignsItem_6],
 
-campaignsItem_4 = frame : sidebarItem.selected {
-  left: 20px,
-  top: 84px,
-  fill[0].color: colors.primitives.blackAlpha10,
+  campaignsItem_4 = frame : sidebarItem.selected {
+    left: 20px,
+    top: 84px,
+    fill[0].color: colors.primitives.blackAlpha10,
 
-  sidebarItem.shape1 {
-    fill[0].color: colors.theme.contrastAlpha25,
-    contents: dot20
+    sidebarItem.sidebarMenu.shape1 {
+      fill[0].color: colors.theme.contrastAlpha25,
+      contents: dot20
+    }
+
+    sidebarItem.sidebarMenu.text2 {
+      contents: "Grocery list"
+    }
   }
 
-  sidebarItem.text2 {
-    contents: "Grocery list"
-  }
-}
+  campaignsItem_3 = frame : sidebarItem.sidebarMenu {
+    left: 20px,
+    top: 54px,
 
-campaignsItem_3 = frame : sidebarItem.sidebarMenu {
-  left: 20px,
-  top: 54px,
+    sidebarItem.sidebarMenu.shape1 {
+      fill[0].color: colors.theme.contrastAlpha25,
+      contents: dot20
+    }
 
-  sidebarItem.shape1 {
-    fill[0].color: colors.theme.contrastAlpha25,
-    contents: dot20
-  }
-
-  sidebarItem.text2 {
-    contents: "React component"
-  }
-}
-
-campaignsItem_5 = frame : sidebarItem.sidebarMenu {
-  left: 20px,
-  top: 114px,
-
-  sidebarItem.shape1 {
-    fill[0].color: colors.theme.contrastAlpha25,
-    contents: dot20
+    sidebarItem.sidebarMenu.text2 {
+      contents: "React component"
+    }
   }
 
-  sidebarItem.text2 {
-    contents: "Personal notes"
+  campaignsItem_5 = frame : sidebarItem.sidebarMenu {
+    left: 20px,
+    top: 114px,
+
+    sidebarItem.sidebarMenu.shape1 {
+      fill[0].color: colors.theme.contrastAlpha25,
+      contents: dot20
+    }
+
+    sidebarItem.sidebarMenu.text2 {
+      contents: "Personal notes"
+    }
   }
-}
 
-campaignsItem_6 = frame : sidebarItem.sidebarMenu {
-  left: 20px,
-  top: 144px,
+  campaignsItem_6 = frame : sidebarItem.sidebarMenu {
+    left: 20px,
+    top: 144px,
 
-  sidebarItem.shape1 {
-    fill[0].color: colors.theme.contrastAlpha25,
-    contents: dot20
-  }
+    sidebarItem.sidebarMenu.shape1 {
+      fill[0].color: colors.theme.contrastAlpha25,
+      contents: dot20
+    }
 
-  sidebarItem.text2 {
-    contents: "Draft email"
+    sidebarItem.sidebarMenu.text2 {
+      contents: "Draft email"
+    }
   }
 }

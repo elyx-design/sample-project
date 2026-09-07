@@ -18,7 +18,16 @@ export chatWindow = frame {
   fill: colors.theme.baseAlpha50,
   filter: {type: .background-blur, radius: 40px},
   padding: [Spacing.padding.xxlarge, Spacing.padding.medium, Spacing.padding.medium],
-  children: [messageThread, messageField]
+  children: [messageThread, messageField],
+
+  messageField = frame : textField.buttonPlaceholder {
+    left: 827px,
+    top: 524px,
+
+    textField.textField.label {
+      contents: Strings.forms.messagePlaceholder
+    }
+  }
 }
 
 messageThread = frame {
@@ -28,16 +37,18 @@ messageThread = frame {
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
-  children: [userMessage, replyMessages]
-}
+  children: [userMessage, replyMessages],
 
-userMessage = frame : chatBubble.user {
-  left: 1px,
-  top: 0px,
-  layout.justify-content: .end,
+  userMessage = frame : chatBubble.user {
+    left: 1px,
+    top: 0px,
+    layout.justify-content: .end,
 
-  chatBubble.message.messageText {
-    contents: "This heat is brutal"
+    chatBubble.message {
+      chatBubble.message.messageText {
+        contents: "This heat is brutal"
+      }
+    }
   }
 }
 
@@ -45,35 +56,30 @@ replyMessages = frame {
   width: 100%,
   layout: {direction: .column, align-items: .stretch, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [firstReply, secondReply]
-}
+  children: [firstReply, secondReply],
 
-firstReply = frame : chatBubble.chatBubble {
-  left: 0px,
-  top: 74px,
+  firstReply = frame : chatBubble.chatBubble {
+    left: 0px,
+    top: 74px,
 
-  chatBubble.message.messageText {
-    fill[0].color: colors.theme.base,
-    contents: "Yeah, it's true!"
+    chatBubble.message {
+      chatBubble.message.messageText {
+        fill[0].color: colors.theme.base,
+        contents: "Yeah, it's true!"
+      }
+    }
   }
-}
 
-secondReply = frame : chatBubble.chatBubble {
-  left: 20px,
-  top: 94px,
+  secondReply = frame : chatBubble.chatBubble {
+    left: 20px,
+    top: 94px,
 
-  chatBubble.message.messageText {
-    fill[0].color: colors.theme.base,
-    contents: "Incredible pace out there"
-  }
-}
-
-messageField = frame : textField.buttonPlaceholder {
-  left: 827px,
-  top: 524px,
-
-  textField.label {
-    contents: Strings.forms.messagePlaceholder
+    chatBubble.message {
+      chatBubble.message.messageText {
+        fill[0].color: colors.theme.base,
+        contents: "Incredible pace out there"
+      }
+    }
   }
 }
 
@@ -92,16 +98,16 @@ liveChat = frame : chatWindow {
   overrides: [
     insert(GroupedStack, after = .nil),
     insert(footer, after = GroupedStack),
-    remove(messageField),
+    remove(chatWindow.messageField),
     remove(messageThread)
-  ]
-}
+  ],
 
-GroupedStack = frame {
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
-  overflow: .visible,
-  children: [GroupedStack_4, chat]
+  GroupedStack = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
+    overflow: .visible,
+    children: [GroupedStack_4, chat]
+  }
 }
 
 GroupedStack_4 = frame {
@@ -118,7 +124,31 @@ GroupedStack_4 = frame {
   },
   overflow: .visible,
   padding: [Spacing.padding.large, Spacing.padding.medium, Spacing.padding.medium],
-  children: [GroupedStack_5, medium_2]
+  children: [GroupedStack_5, medium_2],
+
+  medium_2 = frame : segmentedControl.small {
+    left: 8px,
+    top: 29px,
+    width: 100%,
+
+    segmentedControl.medium.trailingSegment {
+      segmentedControl.mediumSelected.label {
+        contents: Strings.labels.analysis
+      }
+    }
+
+    segmentedControl.medium.middleSegment {
+      segmentedControl.mediumSelected.label {
+        contents: Strings.labels.fans
+      }
+    }
+
+    segmentedControl.small.smallLeadingSegment {
+      segmentedControl.mediumSelected.label {
+        contents: Strings.labels.public
+      }
+    }
+  }
 }
 
 GroupedStack_5 = frame {
@@ -130,59 +160,41 @@ GroupedStack_5 = frame {
   overflow: .visible,
   padding-left: 0px,
   padding-right: 0px,
-  children: [text1, GroupedStack_2]
-}
+  children: [text1, GroupedStack_2],
 
-text1 = text {
-  left: 793px,
-  top: 637px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.labels.broadcastChat,
-  font-size: Typography.fontSize.xlarge,
-  font-style: "SemiBold"
+  text1 = text {
+    left: 793px,
+    top: 637px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.labels.broadcastChat,
+    font-size: Typography.fontSize.xlarge,
+    font-style: "SemiBold"
+  }
 }
 
 GroupedStack_2 = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
-  children: [group24svg, text2]
-}
+  children: [group24svg, text2],
 
-group24svg = icon {
-  left: 897px,
-  top: 615px,
-  width: 24px,
-  height: 24px,
-  fill: colors.theme.contrastAlpha25,
-  contents: group24
-}
-
-text2 = text {
-  left: 813px,
-  top: 657px,
-  fill: colors.theme.contrastAlpha25,
-  contents: "2,490 online",
-  font-size: Typography.fontSize.small,
-  font-style: "SemiBold",
-  align: .right
-}
-
-medium_2 = frame : segmentedControl.small {
-  left: 8px,
-  top: 29px,
-  width: 100%,
-
-  segmentedControl.trailingSegment.label {
-    contents: Strings.labels.analysis
+  group24svg = icon {
+    left: 897px,
+    top: 615px,
+    width: 24px,
+    height: 24px,
+    fill: colors.theme.contrastAlpha25,
+    contents: group24
   }
 
-  segmentedControl.middleSegment.label {
-    contents: Strings.labels.fans
-  }
-
-  segmentedControl.smallLeadingSegment.label {
-    contents: Strings.labels.public
+  text2 = text {
+    left: 813px,
+    top: 657px,
+    fill: colors.theme.contrastAlpha25,
+    contents: "2,490 online",
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold",
+    align: .right
   }
 }
 
@@ -194,78 +206,86 @@ chat = frame {
   restrict-children: .true,
   padding-left: Spacing.padding.xlarge,
   padding-right: Spacing.padding.xlarge,
-  children: [base, base_2, base_4, base_3]
-}
+  children: [base, base_2, base_4, base_3],
 
-base = frame : chatBubble.liveBubble {
-  left: 0px,
-  top: 894px,
-  width: 100%,
+  base = frame : chatBubble.liveBubble {
+    left: 0px,
+    top: 894px,
+    width: 100%,
 
-  chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.palette.pink,
-    contents: "oasis_rider"
+    chatBubble.GroupedStack {
+      chatBubble.GroupedStack.messageText_3 {
+        fill[0].color: colors.palette.pink,
+        contents: "oasis_rider"
+      }
+    }
+
+    chatBubble.liveBubble.messageText_2 {
+      contents: "This is cycling history right here"
+    }
   }
 
-  chatBubble.messageText_2 {
-    contents: "This is cycling history right here"
-  }
-}
+  base_2 = frame : chatBubble.liveBubble {
+    left: 20px,
+    top: 914px,
+    width: 100%,
 
-base_2 = frame : chatBubble.liveBubble {
-  left: 20px,
-  top: 914px,
-  width: 100%,
+    chatBubble.GroupedStack {
+      chatBubble.GroupedStack.messageText_3 {
+        fill[0].color: colors.palette.purple,
+        contents: "Mirage_FC"
+      }
 
-  chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.palette.purple,
-    contents: "Mirage_FC"
-  }
+      chatBubble.GroupedStack.messageText_4 {
+        contents: "14:12"
+      }
+    }
 
-  chatBubble.messageText_2 {
-    contents: "Chahold this break to the finish please"
-  }
-
-  chatBubble.GroupedStack.messageText_4 {
-    contents: "14:12"
-  }
-}
-
-base_4 = frame : chatBubble.liveBubble {
-  left: 0px,
-  top: 986px,
-  width: 100%,
-
-  chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.palette.cyan,
-    contents: "joana.rd"
+    chatBubble.liveBubble.messageText_2 {
+      contents: "Chahold this break to the finish please"
+    }
   }
 
-  chatBubble.messageText_2 {
-    contents: "that crosswind s going to do damage. 4 so far because of the heat"
+  base_4 = frame : chatBubble.liveBubble {
+    left: 0px,
+    top: 986px,
+    width: 100%,
+
+    chatBubble.GroupedStack {
+      chatBubble.GroupedStack.messageText_3 {
+        fill[0].color: colors.palette.cyan,
+        contents: "joana.rd"
+      }
+
+      chatBubble.GroupedStack.messageText_4 {
+        contents: "14:10"
+      }
+    }
+
+    chatBubble.liveBubble.messageText_2 {
+      contents: "that crosswind s going to do damage. 4 so far because of the heat"
+    }
   }
 
-  chatBubble.GroupedStack.messageText_4 {
-    contents: "14:10"
-  }
-}
+  base_3 = frame : chatBubble.liveBubble {
+    left: 40px,
+    top: 934px,
+    width: 100%,
 
-base_3 = frame : chatBubble.liveBubble {
-  left: 40px,
-  top: 934px,
-  width: 100%,
+    chatBubble.GroupedStack {
+      chatBubble.GroupedStack.messageText_3 {
+        fill[0].color: colors.palette.green,
+        contents: "MODYara"
+      }
 
-  chatBubble.GroupedStack.messageText_3 {
-    fill[0].color: colors.palette.green,
-    contents: "MODYara"
-  }
+      chatBubble.GroupedStack.messageText_4 {
+        contents: "14:09"
+      }
+    }
 
-  chatBubble.messageText_2 {
-    contents: "he will blow up before the climb"
-  }
-
-  chatBubble.GroupedStack.messageText_4 {
-    contents: "14:09"
+    chatBubble.liveBubble.messageText_2 {
+      contents: "he will blow up before the climb"
+    }
   }
 }
 
@@ -277,23 +297,23 @@ footer = frame {
   layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.medium},
   overflow: .visible,
   padding: Spacing.padding.medium,
-  children: [messageField_2, medium]
-}
+  children: [messageField_2, medium],
 
-messageField_2 = frame : textField.buttonPlaceholder {
-  left: 0px,
-  top: -48px,
+  messageField_2 = frame : textField.buttonPlaceholder {
+    left: 0px,
+    top: -48px,
 
-  textField.label {
-    contents: Strings.forms.messagePlaceholder
+    textField.textField.label {
+      contents: Strings.forms.messagePlaceholder
+    }
   }
-}
 
-medium = frame : button.mediumIcon {
-  left: 0px,
-  top: -56.5px,
+  medium = frame : button.mediumIcon {
+    left: 0px,
+    top: -56.5px,
 
-  button.mediumIconGlyph {
-    contents: settings24
+    button.mediumIcon.mediumIconGlyph {
+      contents: settings24
+    }
   }
 }

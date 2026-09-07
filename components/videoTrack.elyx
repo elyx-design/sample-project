@@ -21,17 +21,17 @@ leadingHandle = frame {
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: leadingGrip
-}
+  children: leadingGrip,
 
-leadingGrip = shape {
-  left: 932px,
-  top: 532px,
-  width: 2px,
-  height: 16px,
-  fill: rgb(0%, 0%, 0%, 25%),
-  type: .rect,
-  corner-radius: radius.radius.full
+  leadingGrip = shape {
+    left: 932px,
+    top: 532px,
+    width: 2px,
+    height: 16px,
+    fill: rgb(0%, 0%, 0%, 25%),
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 }
 
 filmstrip = frame {
@@ -41,49 +41,49 @@ filmstrip = frame {
   corner-radius: 4px,
   slot: .true,
   restrict-children: .true,
-  children: [frameOne, frameTwo, frameThree]
-}
+  children: [frameOne, frameTwo, frameThree],
 
-frameOne = shape {
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  height: spacing.size.large,
-  fill: {image: {ref: bird}},
-  type: .rect
-}
+  frameOne = shape {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: spacing.size.large,
+    fill: {image: {ref: bird}},
+    type: .rect
+  }
 
-frameTwo = shape {
-  left: 0px,
-  top: 20px,
-  width: 100%,
-  height: spacing.size.large,
-  fill: {image: {ref: bird}},
-  type: .rect
-}
+  frameTwo = shape {
+    left: 0px,
+    top: 20px,
+    width: 100%,
+    height: spacing.size.large,
+    fill: {image: {ref: bird}},
+    type: .rect
+  }
 
-frameThree = shape {
-  left: 20px,
-  top: 40px,
-  width: 100%,
-  height: spacing.size.large,
-  fill: {image: {ref: bird}},
-  type: .rect
+  frameThree = shape {
+    left: 20px,
+    top: 40px,
+    width: 100%,
+    height: spacing.size.large,
+    fill: {image: {ref: bird}},
+    type: .rect
+  }
 }
 
 trailingHandle = frame {
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: trailingGrip
-}
+  children: trailingGrip,
 
-trailingGrip = shape {
-  left: 932px,
-  top: 532px,
-  width: 2px,
-  height: 16px,
-  fill: rgb(0%, 0%, 0%, 25%),
-  type: .rect,
-  corner-radius: radius.radius.full
+  trailingGrip = shape {
+    left: 932px,
+    top: 532px,
+    width: 2px,
+    height: 16px,
+    fill: rgb(0%, 0%, 0%, 25%),
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 }

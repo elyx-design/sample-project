@@ -28,7 +28,9 @@ export siteHeader = frame : cardBackground.solidFullRadius {
     insert(small_4, after = .nil),
     insert(navLinks, after = small_4),
     insert(headerCta, after = navLinks)
-  ]
+  ],
+
+  small_4 = frame : logo.mediumWordmark {left: 16px, top: 16px}
 }
 
 export menu = frame {
@@ -36,15 +38,15 @@ export menu = frame {
   top: 456px,
   width: .auto,
   layout: {justify-content: .center, align-items: .center},
-  children: label
-}
+  children: label,
 
-label = text {
-  left: 0px,
-  top: 0px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.menu,
-  font-style: "SemiBold"
+  label = text {
+    left: 0px,
+    top: 0px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.menu,
+    font-style: "SemiBold"
+  }
 }
 
 @variant
@@ -52,7 +54,7 @@ mutedMenu = frame : menu {
   left: 191px,
   top: 521px,
 
-  label {
+  menu.label {
     fill[0].color: colors.theme.contrastAlpha50
   }
 }
@@ -69,7 +71,16 @@ iconMenu = frame : menu {
   left: 275px,
   top: 456px,
   layout.item-gap: spacing.gap.xxsmall,
-  overrides: [insert(chevron, after = label)]
+  overrides: [insert(chevron, after = menu.label)],
+
+  chevron = icon {
+    left: 297px,
+    top: 460px,
+    width: 12px,
+    height: 12px,
+    fill: colors.theme.contrastStrongest,
+    contents: chevrondown122
+  }
 }
 
 @variant
@@ -77,34 +88,43 @@ mutedIconMenu = frame : menu {
   left: 275px,
   top: 521.6479px,
   layout.item-gap: spacing.gap.xxsmall,
-  overrides: [insert(mutedChevron, after = label)],
+  overrides: [insert(mutedChevron, after = menu.label)],
 
-  label {
+  menu.label {
     fill[0].color: colors.theme.contrastAlpha50
+  }
+
+  mutedChevron = icon {
+    left: 278px,
+    top: 460px,
+    width: 12px,
+    height: 12px,
+    fill: colors.theme.contrastAlpha50,
+    contents: chevrondown122
   }
 }
 
 headerCta = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.large},
-  children: [logInLink, getStartedButton]
-}
+  children: [logInLink, getStartedButton],
 
-logInLink = frame : menu {
-  left: 1545px,
-  top: 483px,
+  logInLink = frame : menu {
+    left: 1545px,
+    top: 483px,
 
-  label {
-    contents: Strings.actions.logIn
+    menu.label {
+      contents: Strings.actions.logIn
+    }
   }
-}
 
-getStartedButton = frame : button.mediumPrimary {
-  left: 751px,
-  top: 475px,
+  getStartedButton = frame : button.mediumPrimary {
+    left: 751px,
+    top: 475px,
 
-  button.mediumLabel {
-    contents: Strings.actions.getStartedHeader
+    button.medium.mediumLabel {
+      contents: Strings.actions.getStartedHeader
+    }
   }
 }
 
@@ -112,16 +132,16 @@ GroupedStack = frame {
   height: .auto,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
   overflow: .visible,
-  children: [searchField, accountCluster]
-}
+  children: [searchField, accountCluster],
 
-searchField = frame : textField.iconPlaceholder {
-  left: -90.12px,
-  top: 16px,
-  width: 180px,
+  searchField = frame : textField.iconPlaceholder {
+    left: -90.12px,
+    top: 16px,
+    width: 180px,
 
-  textField.label {
-    contents: Strings.actions.search
+    textField.textField.label {
+      contents: Strings.actions.search
+    }
   }
 }
 
@@ -129,19 +149,19 @@ accountCluster = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: spacing.gap.large},
   overflow: .visible,
-  children: [languageMenu, layer]
-}
+  children: [languageMenu, layer],
 
-languageMenu = frame : iconMenu {
-  left: 1478px,
-  top: 606px,
+  languageMenu = frame : iconMenu {
+    left: 1478px,
+    top: 606px,
 
-  label {
-    contents: "EN"
+    menu.label {
+      contents: "EN"
+    }
   }
-}
 
-layer = frame : avatar.smallPhoto {left: 1255px, top: 577px}
+  layer = frame : avatar.smallPhoto {left: 1255px, top: 577px}
+}
 
 @variant
 SiteHeaderVariant = frame : siteHeader {
@@ -159,20 +179,20 @@ SiteHeaderVariant = frame : siteHeader {
     insert(DividerWhite, after = bareContent),
     remove(headerCta),
     remove(navLinks),
-    remove(small_4)
+    remove(siteHeader.small_4)
   ],
-  shadow[0]: .nil
-}
+  shadow[0]: .nil,
 
-DividerWhite = frame : divider.horizontal {
-  left: 615px,
-  top: 752px,
-  width: 100%,
-  padding-top: 0px,
-  padding-bottom: 0px,
+  DividerWhite = frame : divider.horizontal {
+    left: 615px,
+    top: 752px,
+    width: 100%,
+    padding-top: 0px,
+    padding-bottom: 0px,
 
-  divider.horizontalLine {
-    fill[0].color: colors.theme.contrastAlpha50
+    divider.horizontal.horizontalLine {
+      fill[0].color: colors.theme.contrastAlpha50
+    }
   }
 }
 
@@ -182,74 +202,74 @@ bareContent = frame {
   layout: {justify-content: .space-between, align-items: .center, item-gap: spacing.gap.xlarge},
   padding-left: spacing.padding.xxlarge,
   padding-right: spacing.padding.xxlarge,
-  children: [small_5, bareNav, bareCta]
-}
+  children: [small_5, bareNav, bareCta],
 
-small_5 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
+  small_5 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
+}
 
 bareNav = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.xlarge},
-  children: [Menu, MenuVariant, bareCompany, bareResources]
-}
+  children: [Menu, MenuVariant, bareCompany, bareResources],
 
-Menu = frame : menu {
-  left: 357.9778px,
-  top: 33.5256px,
+  Menu = frame : menu {
+    left: 357.9778px,
+    top: 33.5256px,
 
-  label {
-    contents: Strings.navigation.product
+    menu.label {
+      contents: Strings.navigation.product
+    }
   }
-}
 
-MenuVariant = frame : mutedMenu {
-  left: 377.9778px,
-  top: 53.5256px,
+  MenuVariant = frame : mutedMenu {
+    left: 377.9778px,
+    top: 53.5256px,
 
-  label {
-    contents: Strings.navigation.pricing
+    menu.label {
+      contents: Strings.navigation.pricing
+    }
   }
-}
 
-bareCompany = frame : mutedMenu {
-  left: 397.9778px,
-  top: 73.5256px,
+  bareCompany = frame : mutedMenu {
+    left: 397.9778px,
+    top: 73.5256px,
 
-  label {
-    contents: Strings.navigation.company
+    menu.label {
+      contents: Strings.navigation.company
+    }
   }
-}
 
-bareResources = frame : mutedIconMenu {
-  left: 417.9778px,
-  top: 93.5256px,
+  bareResources = frame : mutedIconMenu {
+    left: 417.9778px,
+    top: 93.5256px,
 
-  label {
-    contents: Strings.navigation.resources
+    menu.label {
+      contents: Strings.navigation.resources
+    }
   }
 }
 
 bareCta = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.large},
-  children: [bareLogIn, Primary]
-}
+  children: [bareLogIn, Primary],
 
-bareLogIn = frame : menu {
-  left: 1545px,
-  top: 483px,
+  bareLogIn = frame : menu {
+    left: 1545px,
+    top: 483px,
 
-  label {
-    contents: Strings.actions.logIn
+    menu.label {
+      contents: Strings.actions.logIn
+    }
   }
-}
 
-Primary = frame : button.mediumPrimary {
-  left: 751px,
-  top: 475px,
+  Primary = frame : button.mediumPrimary {
+    left: 751px,
+    top: 475px,
 
-  button.mediumLabel {
-    contents: Strings.actions.getStartedHeader
+    button.medium.mediumLabel {
+      contents: Strings.actions.getStartedHeader
+    }
   }
 }
 
@@ -268,9 +288,21 @@ accountHeader = frame : siteHeader {
     insert(accountDivider, after = accountContent),
     remove(headerCta),
     remove(navLinks),
-    remove(small_4)
+    remove(siteHeader.small_4)
   ],
-  shadow[0]: .nil
+  shadow[0]: .nil,
+
+  accountDivider = frame : divider.horizontal {
+    left: 576.72px,
+    top: 718.25px,
+    width: 100%,
+    padding-top: 0px,
+    padding-bottom: 0px,
+
+    divider.horizontal.horizontalLine {
+      fill[0].color: colors.theme.contrastAlpha50
+    }
+  }
 }
 
 accountContent = frame {
@@ -281,50 +313,50 @@ accountContent = frame {
   layout: {justify-content: .space-between, align-items: .center, item-gap: spacing.gap.xlarge},
   padding-left: spacing.padding.xxlarge,
   padding-right: spacing.padding.xxlarge,
-  children: [small_6, accountNav, accountActions]
-}
+  children: [small_6, accountNav, accountActions],
 
-small_6 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
+  small_6 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
+}
 
 accountNav = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.xlarge},
-  children: [accountProduct, accountPricing, accountCompany, accountResources]
-}
+  children: [accountProduct, accountPricing, accountCompany, accountResources],
 
-accountProduct = frame : menu {
-  left: 357.9778px,
-  top: 33.5256px,
+  accountProduct = frame : menu {
+    left: 357.9778px,
+    top: 33.5256px,
 
-  label {
-    contents: Strings.navigation.product
+    menu.label {
+      contents: Strings.navigation.product
+    }
   }
-}
 
-accountPricing = frame : mutedMenu {
-  left: 377.9778px,
-  top: 53.5256px,
+  accountPricing = frame : mutedMenu {
+    left: 377.9778px,
+    top: 53.5256px,
 
-  label {
-    contents: Strings.navigation.pricing
+    menu.label {
+      contents: Strings.navigation.pricing
+    }
   }
-}
 
-accountCompany = frame : mutedMenu {
-  left: 397.9778px,
-  top: 73.5256px,
+  accountCompany = frame : mutedMenu {
+    left: 397.9778px,
+    top: 73.5256px,
 
-  label {
-    contents: Strings.navigation.company
+    menu.label {
+      contents: Strings.navigation.company
+    }
   }
-}
 
-accountResources = frame : mutedIconMenu {
-  left: 417.9778px,
-  top: 93.5256px,
+  accountResources = frame : mutedIconMenu {
+    left: 417.9778px,
+    top: 93.5256px,
 
-  label {
-    contents: Strings.navigation.resources
+    menu.label {
+      contents: Strings.navigation.resources
+    }
   }
 }
 
@@ -334,16 +366,16 @@ accountActions = frame {
   height: .auto,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
   overflow: .visible,
-  children: [accountSearch, accountMenu]
-}
+  children: [accountSearch, accountMenu],
 
-accountSearch = frame : textField.iconPlaceholder {
-  left: -90.12px,
-  top: 16px,
-  width: 180px,
+  accountSearch = frame : textField.iconPlaceholder {
+    left: -90.12px,
+    top: 16px,
+    width: 180px,
 
-  textField.label {
-    contents: Strings.actions.search
+    textField.textField.label {
+      contents: Strings.actions.search
+    }
   }
 }
 
@@ -351,90 +383,58 @@ accountMenu = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: spacing.gap.large},
   overflow: .visible,
-  children: [accountLanguage, accountAvatar]
-}
+  children: [accountLanguage, accountAvatar],
 
-accountLanguage = frame : iconMenu {
-  left: 1478px,
-  top: 606px,
+  accountLanguage = frame : iconMenu {
+    left: 1478px,
+    top: 606px,
 
-  label {
-    contents: "EN"
+    menu.label {
+      contents: "EN"
+    }
   }
-}
 
-accountAvatar = frame : avatar.smallPhoto {left: 1255px, top: 577px}
-
-accountDivider = frame : divider.horizontal {
-  left: 576.72px,
-  top: 718.25px,
-  width: 100%,
-  padding-top: 0px,
-  padding-bottom: 0px,
-
-  divider.horizontalLine {
-    fill[0].color: colors.theme.contrastAlpha50
-  }
-}
-
-mutedChevron = icon {
-  left: 278px,
-  top: 460px,
-  width: 12px,
-  height: 12px,
-  fill: colors.theme.contrastAlpha50,
-  contents: chevrondown122
-}
-
-chevron = icon {
-  left: 297px,
-  top: 460px,
-  width: 12px,
-  height: 12px,
-  fill: colors.theme.contrastStrongest,
-  contents: chevrondown122
+  accountAvatar = frame : avatar.smallPhoto {left: 1255px, top: 577px}
 }
 
 navLinks = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.xlarge},
-  children: [navProduct, navPricing, navCompany, navResources]
-}
+  children: [navProduct, navPricing, navCompany, navResources],
 
-navProduct = frame : menu {
-  left: 357.9778px,
-  top: 33.5256px,
+  navProduct = frame : menu {
+    left: 357.9778px,
+    top: 33.5256px,
 
-  label {
-    contents: Strings.navigation.product
+    menu.label {
+      contents: Strings.navigation.product
+    }
+  }
+
+  navPricing = frame : mutedMenu {
+    left: 377.9778px,
+    top: 53.5256px,
+
+    menu.label {
+      contents: Strings.navigation.pricing
+    }
+  }
+
+  navCompany = frame : mutedMenu {
+    left: 397.9778px,
+    top: 73.5256px,
+
+    menu.label {
+      contents: Strings.navigation.company
+    }
+  }
+
+  navResources = frame : mutedIconMenu {
+    left: 417.9778px,
+    top: 93.5256px,
+
+    menu.label {
+      contents: Strings.navigation.resources
+    }
   }
 }
-
-navPricing = frame : mutedMenu {
-  left: 377.9778px,
-  top: 53.5256px,
-
-  label {
-    contents: Strings.navigation.pricing
-  }
-}
-
-navCompany = frame : mutedMenu {
-  left: 397.9778px,
-  top: 73.5256px,
-
-  label {
-    contents: Strings.navigation.company
-  }
-}
-
-navResources = frame : mutedIconMenu {
-  left: 417.9778px,
-  top: 93.5256px,
-
-  label {
-    contents: Strings.navigation.resources
-  }
-}
-
-small_4 = frame : logo.mediumWordmark {left: 16px, top: 16px}

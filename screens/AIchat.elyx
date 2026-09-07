@@ -15,10 +15,10 @@ export AIChat = frame {
   layout: {align-items: .center},
   fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: waves}}],
   padding: Spacing.padding.medium,
-  children: [sidebar_3, layer1]
-}
+  children: [sidebar_3, layer1],
 
-sidebar_3 = frame : sidebar.sidebar {left: 226px, top: 0px, width: 18%, height: 100%}
+  sidebar_3 = frame : sidebar.sidebar {left: 226px, top: 0px, width: 18%, height: 100%}
+}
 
 layer1 = frame {
   left: 0px,
@@ -34,25 +34,25 @@ layer1 = frame {
   overflow: .visible,
   padding-top: 120px,
   padding-bottom: 48px,
-  children: [aiChat_3, bottom]
-}
+  children: [aiChat_3, bottom],
 
-aiChat_3 = frame : aiChat.aiChat {left: 775px, top: 0px}
+  aiChat_3 = frame : aiChat.aiChat {left: 775px, top: 0px}
+}
 
 bottom = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [chatAIComposer_2, text1]
-}
+  children: [chatAIComposer_2, text1],
 
-chatAIComposer_2 = frame : chatAIComposer.chatAIComposer {left: 119px, top: 105px, width: 60%}
+  chatAIComposer_2 = frame : chatAIComposer.chatAIComposer {left: 119px, top: 105px, width: 60%}
 
-text1 = text {
-  left: 1412px,
-  top: 1073px,
-  fill: colors.theme.contrastAlpha50,
-  contents: Strings.marketing.aiDisclaimer,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
+  text1 = text {
+    left: 1412px,
+    top: 1073px,
+    fill: colors.theme.contrastAlpha50,
+    contents: Strings.marketing.aiDisclaimer,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 }

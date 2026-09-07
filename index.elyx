@@ -46,16 +46,16 @@ welcome = frame {
   },
   corner-radius: 0px,
   padding: [0px, 56px, 56px],
-  children: [elyxLogopng, introCopy]
-}
+  children: [elyxLogopng, introCopy],
 
-elyxLogopng = shape {
-  left: 437.52px,
-  top: 74.7561px,
-  width: 252px,
-  height: 88px,
-  fill: {image: {ref: elyxLogo}},
-  type: .rect
+  elyxLogopng = shape {
+    left: 437.52px,
+    top: 74.7561px,
+    width: 252px,
+    height: 88px,
+    fill: {image: {ref: elyxLogo}},
+    type: .rect
+  }
 }
 
 introCopy = frame {
@@ -63,17 +63,17 @@ introCopy = frame {
   layout: {direction: .column, item-gap: Spacing.gap.small},
   corner-radius: 0px,
   padding: 0px,
-  children: welcomeHeading
-}
+  children: welcomeHeading,
 
-welcomeHeading = text {
-  left: 0px,
-  top: 0px,
-  mix-blend-mode: .overlay,
-  fill: colors.primitives.white70,
-  contents: Strings.scaffold.welcomeTitle,
-  font-size: 24,
-  align: .center
+  welcomeHeading = text {
+    left: 0px,
+    top: 0px,
+    mix-blend-mode: .overlay,
+    fill: colors.primitives.white70,
+    contents: Strings.scaffold.welcomeTitle,
+    font-size: 24,
+    align: .center
+  }
 }
 
 welcome_2 = frame {
@@ -93,43 +93,43 @@ welcome_2 = frame {
   },
   corner-radius: 0px,
   padding: 56px,
-  children: [GroupedStack, scaffoldSections_2, GroupedStack_2]
+  children: [GroupedStack, scaffoldSections_2, GroupedStack_2],
+
+  scaffoldSections_2 = frame {
+    width: 100%,
+    layout: {item-gap: 8px},
+    fill: rgb(7.0588%, 7.0588%, 7.0588%),
+    corner-radius: 12px,
+    padding: 8px,
+    children: [componentsCard_2, blocksCard_2, screensCard_2]
+  }
 }
 
 GroupedStack = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 12px},
   overflow: .visible,
-  children: [welcomeDescription_2, projectStructureOverview_2]
-}
+  children: [welcomeDescription_2, projectStructureOverview_2],
 
-welcomeDescription_2 = text {
-  left: -46.02px,
-  top: -161px,
-  width: 100%,
-  fill: colors.palette.tealDark,
-  contents: Strings.scaffold.welcomeDescription,
-  font-size: 24,
-  line-height: 1.3
-}
+  welcomeDescription_2 = text {
+    left: -46.02px,
+    top: -161px,
+    width: 100%,
+    fill: colors.palette.tealDark,
+    contents: Strings.scaffold.welcomeDescription,
+    font-size: 24,
+    line-height: 1.3
+  }
 
-projectStructureOverview_2 = text {
-  left: 0px,
-  top: 40px,
-  width: 100%,
-  fill: colors.palette.tealDark,
-  contents: Strings.scaffold.structureDescription,
-  font-size: 14,
-  line-height: 1.5
-}
-
-scaffoldSections_2 = frame {
-  width: 100%,
-  layout: {item-gap: 8px},
-  fill: rgb(7.0588%, 7.0588%, 7.0588%),
-  corner-radius: 12px,
-  padding: 8px,
-  children: [componentsCard_2, blocksCard_2, screensCard_2]
+  projectStructureOverview_2 = text {
+    left: 0px,
+    top: 40px,
+    width: 100%,
+    fill: colors.palette.tealDark,
+    contents: Strings.scaffold.structureDescription,
+    font-size: 14,
+    line-height: 1.5
+  }
 }
 
 componentsCard_2 = frame {
@@ -140,27 +140,27 @@ componentsCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [componentsLabel_2, componentsDescription_2]
-}
+  children: [componentsLabel_2, componentsDescription_2],
 
-componentsLabel_2 = text {
-  left: 69px,
-  top: 45px,
-  fill: colors.primitives.white,
-  contents: Strings.scaffold.componentsTitle,
-  font-size: Typography.fontSize.small,
-  font-style: "SemiBold",
-  letter-spacing: 10%
-}
+  componentsLabel_2 = text {
+    left: 69px,
+    top: 45px,
+    fill: colors.primitives.white,
+    contents: Strings.scaffold.componentsTitle,
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold",
+    letter-spacing: 10%
+  }
 
-componentsDescription_2 = text {
-  left: 0px,
-  top: 65px,
-  width: 100%,
-  fill: colors.primitives.white70,
-  contents: Strings.scaffold.componentsDescription,
-  font-size: Typography.fontSize.medium,
-  line-height: 1.5
+  componentsDescription_2 = text {
+    left: 0px,
+    top: 65px,
+    width: 100%,
+    fill: colors.primitives.white70,
+    contents: Strings.scaffold.componentsDescription,
+    font-size: Typography.fontSize.medium,
+    line-height: 1.5
+  }
 }
 
 blocksCard_2 = frame {
@@ -171,27 +171,27 @@ blocksCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [blocksLabel_2, blocksDescription_2]
-}
+  children: [blocksLabel_2, blocksDescription_2],
 
-blocksLabel_2 = text {
-  left: 162.6667px,
-  top: -17px,
-  fill: colors.primitives.white,
-  contents: Strings.scaffold.blocksTitle,
-  font-size: Typography.fontSize.small,
-  font-style: "SemiBold",
-  letter-spacing: 10%
-}
+  blocksLabel_2 = text {
+    left: 162.6667px,
+    top: -17px,
+    fill: colors.primitives.white,
+    contents: Strings.scaffold.blocksTitle,
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold",
+    letter-spacing: 10%
+  }
 
-blocksDescription_2 = text {
-  left: 0px,
-  top: 71px,
-  width: 100%,
-  fill: colors.primitives.white70,
-  contents: Strings.scaffold.blocksDescription,
-  font-size: Typography.fontSize.medium,
-  line-height: 1.5
+  blocksDescription_2 = text {
+    left: 0px,
+    top: 71px,
+    width: 100%,
+    fill: colors.primitives.white70,
+    contents: Strings.scaffold.blocksDescription,
+    font-size: Typography.fontSize.medium,
+    line-height: 1.5
+  }
 }
 
 screensCard_2 = frame {
@@ -202,53 +202,53 @@ screensCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [screensLabel_2, screensDescription_2]
-}
+  children: [screensLabel_2, screensDescription_2],
 
-screensLabel_2 = text {
-  left: 162.6667px,
-  top: -25.5px,
-  fill: colors.primitives.white,
-  contents: Strings.scaffold.screensTitle,
-  font-size: Typography.fontSize.small,
-  font-style: "SemiBold",
-  letter-spacing: 10%
-}
+  screensLabel_2 = text {
+    left: 162.6667px,
+    top: -25.5px,
+    fill: colors.primitives.white,
+    contents: Strings.scaffold.screensTitle,
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold",
+    letter-spacing: 10%
+  }
 
-screensDescription_2 = text {
-  left: 54px,
-  top: 0px,
-  width: 100%,
-  height: .auto,
-  fill: colors.primitives.white70,
-  contents: Strings.scaffold.screensDescription,
-  font-size: Typography.fontSize.medium,
-  line-height: 1.5
+  screensDescription_2 = text {
+    left: 54px,
+    top: 0px,
+    width: 100%,
+    height: .auto,
+    fill: colors.primitives.white70,
+    contents: Strings.scaffold.screensDescription,
+    font-size: Typography.fontSize.medium,
+    line-height: 1.5
+  }
 }
 
 GroupedStack_2 = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 12px},
   overflow: .visible,
-  children: [assetFoldersDescription_2, tokensFolderDescription_2]
-}
+  children: [assetFoldersDescription_2, tokensFolderDescription_2],
 
-assetFoldersDescription_2 = text {
-  left: 20px,
-  top: 60px,
-  width: 100%,
-  fill: colors.palette.tealDark,
-  contents: Strings.scaffold.assetsDescription,
-  font-size: 14,
-  line-height: 1.5
-}
+  assetFoldersDescription_2 = text {
+    left: 20px,
+    top: 60px,
+    width: 100%,
+    fill: colors.palette.tealDark,
+    contents: Strings.scaffold.assetsDescription,
+    font-size: 14,
+    line-height: 1.5
+  }
 
-tokensFolderDescription_2 = text {
-  left: 20px,
-  top: 301px,
-  width: 100%,
-  fill: colors.palette.tealDark,
-  contents: Strings.scaffold.tokensDescription,
-  font-size: 14,
-  line-height: 1.5
+  tokensFolderDescription_2 = text {
+    left: 20px,
+    top: 301px,
+    width: 100%,
+    fill: colors.palette.tealDark,
+    contents: Strings.scaffold.tokensDescription,
+    font-size: 14,
+    line-height: 1.5
+  }
 }

@@ -12,19 +12,19 @@ export chatBubble = frame {
   top: 476px,
   layout: {align-items: .center, item-gap: spacing.gap.small},
   overflow: .visible,
-  children: [profileAvatar, message]
-}
+  children: [profileAvatar, message],
 
-profileAvatar = frame : avatar.smallPhoto {
-  left: 0px,
-  top: 0px,
+  profileAvatar = frame : avatar.smallPhoto {
+    left: 0px,
+    top: 0px,
 
-  avatar.smallImage {
-    fill[0].image.ref: module4
-  }
+    avatar.smallPhoto.smallImage {
+      fill[0].image.ref: module4
+    }
 
-  avatar.smallStatus {
-    display: .hidden
+    avatar.small.smallStatus {
+      display: .hidden
+    }
   }
 }
 
@@ -38,10 +38,15 @@ message = frame {
   corner-radius: radius.radius.full,
   padding-left: spacing.padding.medium,
   padding-right: spacing.padding.medium,
-  children: messageText
-}
+  children: messageText,
 
-messageText = text {left: 0px, top: 0px, fill: .black, contents: Strings.componentDefaults.chatText}
+  messageText = text {
+    left: 0px,
+    top: 0px,
+    fill: .black,
+    contents: Strings.componentDefaults.chatText
+  }
+}
 
 @variant
 user = frame : chatBubble {
@@ -50,16 +55,18 @@ user = frame : chatBubble {
   layout.justify-content: .end,
   overrides: [move(message, after = .nil)],
 
-  profileAvatar.avatar.smallImage {
-    fill[0].image.ref: module
+  chatBubble.profileAvatar {
+    avatar.smallPhoto.smallImage {
+      fill[0].image.ref: module
+    }
   }
 
   message {
-    fill[0].color: colors.theme.contrastStrongest
-  }
+    fill[0].color: colors.theme.contrastStrongest,
 
-  message.messageText {
-    fill[0].color: colors.theme.base
+    message.messageText {
+      fill[0].color: colors.theme.base
+    }
   }
 }
 
@@ -74,39 +81,39 @@ liveBubble = frame : chatBubble {
     insert(GroupedStack, after = .nil),
     insert(messageText_2, after = GroupedStack),
     remove(message),
-    remove(profileAvatar)
-  ]
-}
+    remove(chatBubble.profileAvatar)
+  ],
 
-messageText_2 = text {
-  left: 0px,
-  top: 30.5px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.chatText,
-  font-size: typography.fontSize.small
+  messageText_2 = text {
+    left: 0px,
+    top: 30.5px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.chatText,
+    font-size: typography.fontSize.small
+  }
 }
 
 GroupedStack = frame {
   width: 100%,
   layout: {align-items: .end, item-gap: spacing.gap.small},
   overflow: .visible,
-  children: [messageText_3, messageText_4]
-}
+  children: [messageText_3, messageText_4],
 
-messageText_3 = text {
-  left: 0px,
-  top: 5.5px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.name,
-  font-style: "Bold"
-}
+  messageText_3 = text {
+    left: 0px,
+    top: 5.5px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.name,
+    font-style: "Bold"
+  }
 
-messageText_4 = text {
-  left: 20px,
-  top: 25.5px,
-  fill: colors.theme.contrastAlpha25,
-  contents: "14:15",
-  font-size: typography.fontSize.small,
-  font-style: "Medium"
+  messageText_4 = text {
+    left: 20px,
+    top: 25.5px,
+    fill: colors.theme.contrastAlpha25,
+    contents: "14:15",
+    font-size: typography.fontSize.small,
+    font-style: "Medium"
+  }
 }

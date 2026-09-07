@@ -10,78 +10,78 @@ export product = frame {
   width: 155px,
   height: 211px,
   overflow: .visible,
-  children: coverOne
-}
+  children: coverOne,
 
-coverOne = shape {
-  left: 0px,
-  top: 0px,
-  width: 155px,
-  height: 211px,
-  fill: {image: {ref: book1}},
-  type: .rect
+  coverOne = shape {
+    left: 0px,
+    top: 0px,
+    width: 155px,
+    height: 211px,
+    fill: {image: {ref: book1}},
+    type: .rect
+  }
 }
 
 @variant
-productFive = product {
+productFive = frame : product {
   left: 1162px,
   top: 494px,
-  overrides: [insert(coverFive, after = .nil), remove(coverOne)]
+  overrides: [insert(coverFive, after = .nil), remove(product.coverOne)],
+
+  coverFive = shape {
+    left: 0px,
+    top: 0px,
+    width: 155px,
+    height: 211px,
+    fill: {image: {ref: book5}},
+    type: .rect
+  }
 }
 
 @variant
-productFour = product {
+productFour = frame : product {
   left: 976.71px,
   top: 494px,
-  overrides: [insert(coverFour, after = .nil), remove(coverOne)]
+  overrides: [insert(coverFour, after = .nil), remove(product.coverOne)],
+
+  coverFour = shape {
+    left: 0px,
+    top: 0px,
+    width: 155px,
+    height: 211px,
+    fill: {image: {ref: book4}},
+    type: .rect
+  }
 }
 
 @variant
-productThree = product {
+productThree = frame : product {
   left: 780px,
   top: 494px,
-  overrides: [insert(coverThree, after = .nil), remove(coverOne)]
+  overrides: [insert(coverThree, after = .nil), remove(product.coverOne)],
+
+  coverThree = shape {
+    left: 0px,
+    top: 0px,
+    width: 155px,
+    height: 211px,
+    fill: {image: {ref: book3}},
+    type: .rect
+  }
 }
 
 @variant
-productTwo = product {
+productTwo = frame : product {
   left: 594.71px,
   top: 494px,
-  overrides: [insert(coverTwo, after = .nil), remove(coverOne)]
-}
+  overrides: [insert(coverTwo, after = .nil), remove(product.coverOne)],
 
-coverTwo = shape {
-  left: 0px,
-  top: 0px,
-  width: 155px,
-  height: 212px,
-  fill: {image: {ref: book2}},
-  type: .rect
-}
-
-coverFour = shape {
-  left: 0px,
-  top: 0px,
-  width: 155px,
-  height: 211px,
-  fill: {image: {ref: book4}},
-  type: .rect
-}
-
-coverThree = shape {
-  left: 0px,
-  top: 0px,
-  width: 155px,
-  height: 211px,
-  fill: {image: {ref: book3}},
-  type: .rect
-}
-
-coverFive = shape {
-  left: 0px,
-  top: 0px,
-  width: 155px,
-  height: 211px,
-  fill: {image: {ref: book5}},
-  type: .rect
+  coverTwo = shape {
+    left: 0px,
+    top: 0px,
+    width: 155px,
+    height: 212px,
+    fill: {image: {ref: book2}},
+    type: .rect
+  }
 }

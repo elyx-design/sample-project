@@ -9,36 +9,36 @@ export Selector = frame {
   top: 443px,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 15px},
   overflow: .visible,
-  children: [Left, shape1]
+  children: [Left, shape1],
+
+  shape1 = icon {
+    left: 26px,
+    top: 8px,
+    width: 24px,
+    height: 24px,
+    fill: colors.theme.contrastStrongest,
+    contents: chevronupDown24
+  }
 }
 
 Left = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: 15px},
   overflow: .visible,
-  children: [small, smallLeft]
-}
+  children: [small, smallLeft],
 
-small = frame : avatar.smallPhoto {left: 0px, top: 2px}
+  small = frame : avatar.smallPhoto {left: 0px, top: 2px}
 
-smallLeft = frame : header.smallLeft {
-  left: 51px,
-  top: 0px,
+  smallLeft = frame : header.smallLeft {
+    left: 51px,
+    top: 0px,
 
-  header.smallSubtitle {
-    contents: Strings.labels.manager
+    header.smallLeft.smallSubtitle {
+      contents: Strings.labels.manager
+    }
+
+    header.smallLeft.smallTitle {
+      contents: "Nora"
+    }
   }
-
-  header.smallTitle {
-    contents: "Nora"
-  }
-}
-
-shape1 = icon {
-  left: 26px,
-  top: 8px,
-  width: 24px,
-  height: 24px,
-  fill: colors.theme.contrastStrongest,
-  contents: chevronupDown24
 }

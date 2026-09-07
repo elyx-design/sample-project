@@ -23,7 +23,23 @@ export socialCard = frame : cardBackground.transparent {
   layout.align-items: .center,
   layout.item-gap: Spacing.gap.large,
   layout.justify-content: .space-between,
-  overrides: [insert(cardContent, after = .nil), insert(socialFooter, after = cardContent)]
+  overrides: [insert(cardContent, after = .nil), insert(socialFooter, after = cardContent)],
+
+  cardContent = frame {
+    width: 100%,
+    height: 100%,
+    layout: {direction: .column, align-items: .end, item-gap: Spacing.gap.xxlarge},
+    fill: {visible: .false, image: {ref: dots}},
+    border: {
+      color: colors.primitives.blackAlpha10,
+      visible: .false,
+      width: 0.5px,
+      position: .outside
+    },
+    corner-radius: Radius.radius.medium,
+    padding: Spacing.padding.xxlarge,
+    children: [cardActions, profileInfo]
+  }
 }
 
 socialFooter = frame {
@@ -32,29 +48,18 @@ socialFooter = frame {
   layout: {justify-content: .space-between, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [followerAvatars, followButton]
-}
+  children: [followerAvatars, followButton],
 
-followerAvatars = frame : avatarGroup.avatarGroup {left: 20px, top: 383px}
+  followerAvatars = frame : avatarGroup.avatarGroup {left: 20px, top: 383px}
 
-followButton = frame : button.mediumPrimary {
-  left: 151.5px,
-  top: 160px,
+  followButton = frame : button.mediumPrimary {
+    left: 151.5px,
+    top: 160px,
 
-  button.mediumLabel {
-    contents: Strings.actions.follow
+    button.medium.mediumLabel {
+      contents: Strings.actions.follow
+    }
   }
-}
-
-cardContent = frame {
-  width: 100%,
-  height: 100%,
-  layout: {direction: .column, align-items: .end, item-gap: Spacing.gap.xxlarge},
-  fill: {visible: .false, image: {ref: dots}},
-  border: {color: colors.primitives.blackAlpha10, visible: .false, width: 0.5px, position: .outside},
-  corner-radius: Radius.radius.medium,
-  padding: Spacing.padding.xxlarge,
-  children: [cardActions, profileInfo]
 }
 
 cardActions = frame {
@@ -62,31 +67,31 @@ cardActions = frame {
   layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.small},
   slot: .true,
   restrict-children: .true,
-  children: [favoriteButton, likeButton, closeButton]
-}
+  children: [favoriteButton, likeButton, closeButton],
 
-favoriteButton = frame : button.smallIcon {
-  left: 245.81px,
-  top: 37.5995px,
+  favoriteButton = frame : button.smallIcon {
+    left: 245.81px,
+    top: 37.5995px,
 
-  button.smallIconGlyph {
-    contents: star20
+    button.smallIcon.smallIconGlyph {
+      contents: star20
+    }
   }
-}
 
-likeButton = frame : button.smallIcon {
-  left: 265.81px,
-  top: 57.5995px,
+  likeButton = frame : button.smallIcon {
+    left: 265.81px,
+    top: 57.5995px,
 
-  button.smallIconGlyph {
-    contents: heart20
+    button.smallIcon.smallIconGlyph {
+      contents: heart20
+    }
   }
-}
 
-closeButton = frame : button.smallClose {
-  left: 526px,
-  top: 225px,
-  fill[0].color: colors.primitives.blackAlpha10
+  closeButton = frame : button.smallClose {
+    left: 526px,
+    top: 225px,
+    fill[0].color: colors.primitives.blackAlpha10
+  }
 }
 
 profileInfo = frame {
@@ -98,117 +103,119 @@ profileInfo = frame {
     align-items: .center,
     item-gap: Spacing.gap.huge
   },
-  children: [profileSummary, profileStats]
+  children: [profileSummary, profileStats],
+
+  profileStats = frame {
+    width: 100%,
+    layout: {justify-content: .space-evenly, align-items: .center, item-gap: Spacing.gap.xxlarge},
+    children: [followingStat, followersStat, postsStat]
+  }
 }
 
 profileSummary = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [profileIdentity, bio]
-}
+  children: [profileIdentity, bio],
 
-profileIdentity = frame : userSummary.UserSummaryMVariant {
-  left: 0px,
-  top: 160px,
-  width: 100%,
+  profileIdentity = frame : userSummary.UserSummaryMVariant {
+    left: 0px,
+    top: 160px,
+    width: 100%,
 
-  userSummary.mediumHeader.header.mediumSubtitle {
-    contents: "@noraharper"
+    userSummary.medium.mediumHeader {
+      userSummary.header.mediumLeft.mediumSubtitle {
+        contents: "@noraharper"
+      }
+    }
   }
-}
 
-bio = text {
-  left: 0px,
-  top: 160px,
-  width: 100%,
-  fill: colors.theme.contrastAlpha70,
-  contents: "I love good coffee, long conversations, and finding beauty in the little things.",
-  font-size: Typography.fontSize.small,
-  line-height: Typography.lineHeight.relaxed,
-  align: .center
-}
-
-profileStats = frame {
-  width: 100%,
-  layout: {justify-content: .space-evenly, align-items: .center, item-gap: Spacing.gap.xxlarge},
-  children: [followingStat, followersStat, postsStat]
+  bio = text {
+    left: 0px,
+    top: 160px,
+    width: 100%,
+    fill: colors.theme.contrastAlpha70,
+    contents: "I love good coffee, long conversations, and finding beauty in the little things.",
+    font-size: Typography.fontSize.small,
+    line-height: Typography.lineHeight.relaxed,
+    align: .center
+  }
 }
 
 followingStat = frame {
   left: 49px,
   top: 367px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
-  children: [followingCount, followingLabel]
-}
+  children: [followingCount, followingLabel],
 
-followingCount = text {
-  left: 16.5px,
-  top: 0px,
-  fill: colors.theme.contrastStrongest,
-  contents: "169",
-  font-size: Typography.fontSize.large,
-  font-style: "Bold",
-  align: .center
-}
+  followingCount = text {
+    left: 16.5px,
+    top: 0px,
+    fill: colors.theme.contrastStrongest,
+    contents: "169",
+    font-size: Typography.fontSize.large,
+    font-style: "Bold",
+    align: .center
+  }
 
-followingLabel = text {
-  left: 0px,
-  top: 18px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.labels.following,
-  font-size: Typography.fontSize.small,
-  align: .center
+  followingLabel = text {
+    left: 0px,
+    top: 18px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.labels.following,
+    font-size: Typography.fontSize.small,
+    align: .center
+  }
 }
 
 followersStat = frame {
   left: 69px,
   top: 387px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
-  children: [followerCount, followersLabel]
-}
+  children: [followerCount, followersLabel],
 
-followerCount = text {
-  left: 16.5px,
-  top: 0px,
-  fill: colors.theme.contrastStrongest,
-  contents: "18k",
-  font-size: Typography.fontSize.large,
-  font-style: "Bold",
-  align: .center
-}
+  followerCount = text {
+    left: 16.5px,
+    top: 0px,
+    fill: colors.theme.contrastStrongest,
+    contents: "18k",
+    font-size: Typography.fontSize.large,
+    font-style: "Bold",
+    align: .center
+  }
 
-followersLabel = text {
-  left: 0px,
-  top: 18px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.labels.followers,
-  font-size: Typography.fontSize.small,
-  align: .center
+  followersLabel = text {
+    left: 0px,
+    top: 18px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.labels.followers,
+    font-size: Typography.fontSize.small,
+    align: .center
+  }
 }
 
 postsStat = frame {
   left: 89px,
   top: 407px,
   layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
-  children: [postCount, postsLabel]
-}
+  children: [postCount, postsLabel],
 
-postCount = text {
-  left: 16.5px,
-  top: 0px,
-  fill: colors.theme.contrastStrongest,
-  contents: "1.2k",
-  font-size: Typography.fontSize.large,
-  font-style: "Bold",
-  align: .center
-}
+  postCount = text {
+    left: 16.5px,
+    top: 0px,
+    fill: colors.theme.contrastStrongest,
+    contents: "1.2k",
+    font-size: Typography.fontSize.large,
+    font-style: "Bold",
+    align: .center
+  }
 
-postsLabel = text {
-  left: 0px,
-  top: 18px,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.labels.posts,
-  font-size: Typography.fontSize.small,
-  align: .center
+  postsLabel = text {
+    left: 0px,
+    top: 18px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.labels.posts,
+    font-size: Typography.fontSize.small,
+    align: .center
+  }
 }

@@ -9,23 +9,23 @@ export mediumLeft = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: Spacing.gap.xxsmall},
-  children: [mediumTitle, mediumSubtitle]
-}
+  children: [mediumTitle, mediumSubtitle],
 
-mediumTitle = text {
-  width: 100%,
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.title,
-  font-size: Typography.fontSize.xxlarge,
-  font-style: "SemiBold"
-}
+  mediumTitle = text {
+    width: 100%,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.title,
+    font-size: Typography.fontSize.xxlarge,
+    font-style: "SemiBold"
+  }
 
-mediumSubtitle = text {
-  width: 100%,
-  fill: Colors.theme.contrastAlpha70,
-  contents: Strings.componentDefaults.subtitle,
-  font-size: Typography.fontSize.medium,
-  line-height: Typography.lineHeight.relaxed
+  mediumSubtitle = text {
+    width: 100%,
+    fill: Colors.theme.contrastAlpha70,
+    contents: Strings.componentDefaults.subtitle,
+    font-size: Typography.fontSize.medium,
+    line-height: Typography.lineHeight.relaxed
+  }
 }
 
 @variant
@@ -34,11 +34,11 @@ mediumCenter = frame : mediumLeft {
   top: 117px,
   layout.align-items: .center,
 
-  mediumSubtitle {
+  mediumLeft.mediumSubtitle {
     align: .center
   }
 
-  mediumTitle {
+  mediumLeft.mediumTitle {
     align: .center
   }
 }
@@ -49,22 +49,22 @@ export smallLeft = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: Spacing.gap.xsmall},
-  children: [smallTitle, smallSubtitle]
-}
+  children: [smallTitle, smallSubtitle],
 
-smallTitle = text {
-  width: 100%,
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.title,
-  font-size: Typography.fontSize.medium,
-  font-style: "SemiBold"
-}
+  smallTitle = text {
+    width: 100%,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.title,
+    font-size: Typography.fontSize.medium,
+    font-style: "SemiBold"
+  }
 
-smallSubtitle = text {
-  width: 100%,
-  fill: Colors.theme.contrastAlpha70,
-  contents: Strings.componentDefaults.subtitle,
-  font-size: Typography.fontSize.small
+  smallSubtitle = text {
+    width: 100%,
+    fill: Colors.theme.contrastAlpha70,
+    contents: Strings.componentDefaults.subtitle,
+    font-size: Typography.fontSize.small
+  }
 }
 
 @variant
@@ -73,11 +73,11 @@ smallCenter = frame : smallLeft {
   top: 113px,
   layout.align-items: .center,
 
-  smallSubtitle {
+  smallLeft.smallSubtitle {
     align: .center
   }
 
-  smallTitle {
+  smallLeft.smallTitle {
     align: .center
   }
 }
@@ -88,24 +88,24 @@ export largeLeft = frame {
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: Spacing.gap.xxsmall},
-  children: [largeTitle, largeSubtitle]
-}
+  children: [largeTitle, largeSubtitle],
 
-largeTitle = text {
-  width: 100%,
-  fill: Colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.title,
-  font-size: 56,
-  font-style: "Bold"
-}
+  largeTitle = text {
+    width: 100%,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.title,
+    font-size: 56,
+    font-style: "Bold"
+  }
 
-largeSubtitle = text {
-  width: 100%,
-  fill: Colors.theme.contrastAlpha70,
-  contents: Strings.componentDefaults.subtitle,
-  font-size: Typography.fontSize.xlarge,
-  font-style: "Medium",
-  line-height: Typography.lineHeight.relaxed
+  largeSubtitle = text {
+    width: 100%,
+    fill: Colors.theme.contrastAlpha70,
+    contents: Strings.componentDefaults.subtitle,
+    font-size: Typography.fontSize.xlarge,
+    font-style: "Medium",
+    line-height: Typography.lineHeight.relaxed
+  }
 }
 
 @variant
@@ -114,11 +114,11 @@ largeCenter = frame : largeLeft {
   top: 166.3172px,
   layout.align-items: .center,
 
-  largeSubtitle {
+  largeLeft.largeSubtitle {
     align: .center
   }
 
-  largeTitle {
+  largeLeft.largeTitle {
     align: .center
   }
 }

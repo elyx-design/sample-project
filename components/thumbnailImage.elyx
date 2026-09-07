@@ -27,7 +27,16 @@ export thumbnailImage = frame {
     }
   ],
   padding: Spacing.padding.medium,
-  children: [actions, imageName]
+  children: [actions, imageName],
+
+  imageName = text {
+    left: 0px,
+    top: 197px,
+    width: 100%,
+    fill: rgb(100%, 100%, 100%, 70%),
+    contents: Strings.componentDefaults.imageName,
+    font-size: Typography.fontSize.small
+  }
 }
 
 actions = frame {
@@ -35,25 +44,16 @@ actions = frame {
   top: 12px,
   width: 100%,
   layout: {justify-content: .end, align-items: .center},
-  children: favoriteIcon
-}
+  children: favoriteIcon,
 
-favoriteIcon = icon {
-  left: 0px,
-  top: 0px,
-  width: 20px,
-  height: 20px,
-  fill: rgb(100%, 100%, 100%, 70%),
-  contents: heart20
-}
-
-imageName = text {
-  left: 0px,
-  top: 197px,
-  width: 100%,
-  fill: rgb(100%, 100%, 100%, 70%),
-  contents: Strings.componentDefaults.imageName,
-  font-size: Typography.fontSize.small
+  favoriteIcon = icon {
+    left: 0px,
+    top: 0px,
+    width: 20px,
+    height: 20px,
+    fill: rgb(100%, 100%, 100%, 70%),
+    contents: heart20
+  }
 }
 
 @variant
@@ -62,18 +62,18 @@ thumbnailVideo = frame : thumbnailImage {
   top: 563px,
   layout.align-items: .center,
   layout.justify-content: .center,
-  overrides: [insert(base, after = .nil), remove(imageName), remove(actions)]
-}
+  overrides: [insert(base, after = .nil), remove(thumbnailImage.imageName), remove(actions)],
 
-base = frame : tag.iconAndLabel {
-  left: 63px,
-  top: 50px,
+  base = frame : tag.iconAndLabel {
+    left: 63px,
+    top: 50px,
 
-  tag.tagIcon {
-    contents: play20
-  }
+    tag.iconAndLabel.tagIcon {
+      contents: play20
+    }
 
-  tag.label {
-    contents: Strings.actions.watchTrailer
+    tag.tagTransparent.label {
+      contents: Strings.actions.watchTrailer
+    }
   }
 }

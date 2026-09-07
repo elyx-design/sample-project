@@ -5,20 +5,20 @@ import "tokens/typography.elyx" as Typography
 
 export projectsFeature = frame {
   layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [projectsBullet, projectsLabel]
-}
+  children: [projectsBullet, projectsLabel],
 
-projectsBullet = icon {
-  left: 4px,
-  top: 4px,
-  width: 12px,
-  height: 12px,
-  fill: colors.theme.contrastStrongest,
-  contents: dot12
-}
+  projectsBullet = icon {
+    left: 4px,
+    top: 4px,
+    width: 12px,
+    height: 12px,
+    fill: colors.theme.contrastStrongest,
+    contents: dot12
+  }
 
-projectsLabel = text {
-  fill: colors.theme.contrastDefault,
-  contents: "Label",
-  font-size: Typography.fontSize.medium
+  projectsLabel = text {
+    fill: colors.theme.contrastDefault,
+    contents: "Label",
+    font-size: Typography.fontSize.medium
+  }
 }

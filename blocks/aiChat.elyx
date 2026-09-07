@@ -17,27 +17,29 @@ export aiChat = frame {
   slot: .true,
   restrict-children: .true,
   padding: [0px, Spacing.padding.medium],
-  children: [userMessage, assistantResponse, layer1]
-}
+  children: [userMessage, assistantResponse, layer1],
 
-userMessage = frame : chatBubble.user {
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  overrides: [remove(chatBubble.profileAvatar)],
+  userMessage = frame : chatBubble.user {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    overrides: [remove(chatBubble.chatBubble.profileAvatar)],
 
-  chatBubble.message.messageText {
-    contents: "Help me make a grocery list for the week"
+    chatBubble.message {
+      chatBubble.message.messageText {
+        contents: "Help me make a grocery list for the week"
+      }
+    }
   }
-}
 
-assistantResponse = text {
-  left: 12px,
-  top: 60px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: "Perfect!\n\nI've put together a complete grocery list for the week based on what you usually eat, with a good balance of staples, fresh produce, and protein so you'll have everything you need. Here's your list:\n• Bread\n• Eggs\n• Rice\n• Beans\n• Chicken breast\n• Lettuce",
-  line-height: Typography.lineHeight.relaxed
+  assistantResponse = text {
+    left: 12px,
+    top: 60px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: "Perfect!\n\nI've put together a complete grocery list for the week based on what you usually eat, with a good balance of staples, fresh produce, and protein so you'll have everything you need. Here's your list:\n• Bread\n• Eggs\n• Rice\n• Beans\n• Chicken breast\n• Lettuce",
+    line-height: Typography.lineHeight.relaxed
+  }
 }
 
 layer1 = frame {
@@ -46,14 +48,14 @@ layer1 = frame {
   width: 8.7273%,
   layout: {align-items: .center},
   overflow: .visible,
-  children: assistantIcon
-}
+  children: assistantIcon,
 
-assistantIcon = icon {
-  left: 0px,
-  top: 0px,
-  width: 100%,
-  height: 24px,
-  fill: colors.theme.contrastStrongest,
-  contents: robot24
+  assistantIcon = icon {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 24px,
+    fill: colors.theme.contrastStrongest,
+    contents: robot24
+  }
 }

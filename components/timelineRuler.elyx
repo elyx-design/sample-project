@@ -8,16 +8,16 @@ export timelineRuler = frame {
   top: 488px,
   width: 335px,
   layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.small},
-  children: [marker0, marker1, marker2, marker3]
+  children: [marker0, marker1, marker2, marker3],
+
+  marker0 = frame : timeMarker {left: 0px, top: 495px, width: 100%}
+
+  marker1 = frame : timeMarker {left: 20px, top: 515px, width: 100%}
+
+  marker2 = frame : timeMarker {left: 29px, top: 515px, width: 100%}
+
+  marker3 = frame : timeMarker {left: 38px, top: 515px, width: 100%}
 }
-
-marker0 = frame : timeMarker {left: 0px, top: 495px, width: 100%}
-
-marker1 = frame : timeMarker {left: 20px, top: 515px, width: 100%}
-
-marker2 = frame : timeMarker {left: 29px, top: 515px, width: 100%}
-
-marker3 = frame : timeMarker {left: 38px, top: 515px, width: 100%}
 
 export timeMarker = frame {
   left: 609px,
@@ -25,7 +25,18 @@ export timeMarker = frame {
   width: 47.5px,
   height: 20px,
   layout: {direction: .column, item-gap: 3px},
-  children: [ticks, label]
+  children: [ticks, label],
+
+  label = text {
+    top: 8px,
+    right: 50.63px,
+    width: .auto,
+    height: 15px,
+    fill: colors.theme.baseAlpha50,
+    contents: "0",
+    font-size: Typography.fontSize.xsmall,
+    align: .center
+  }
 }
 
 ticks = frame {
@@ -42,76 +53,65 @@ ticks = frame {
     thirdMinorTick,
     fourthMinorTick,
     fifthMinorTick
-  ]
-}
+  ],
 
-majorTick = shape {
-  left: 0px,
-  top: 0px,
-  width: 1px,
-  height: 3px,
-  fill: colors.theme.baseAlpha50,
-  type: .rect,
-  corner-radius: radius.radius.full
-}
+  majorTick = shape {
+    left: 0px,
+    top: 0px,
+    width: 1px,
+    height: 3px,
+    fill: colors.theme.baseAlpha50,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 
-firstMinorTick = shape {
-  left: 11.12px,
-  top: 0px,
-  width: 1px,
-  height: 2px,
-  fill: colors.theme.baseAlpha50,
-  type: .rect,
-  corner-radius: radius.radius.full
-}
+  firstMinorTick = shape {
+    left: 11.12px,
+    top: 0px,
+    width: 1px,
+    height: 2px,
+    fill: colors.theme.baseAlpha50,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 
-secondMinorTick = shape {
-  left: 22px,
-  top: 0.39px,
-  width: 1px,
-  height: 2px,
-  fill: colors.theme.baseAlpha50,
-  type: .rect,
-  corner-radius: radius.radius.full
-}
+  secondMinorTick = shape {
+    left: 22px,
+    top: 0.39px,
+    width: 1px,
+    height: 2px,
+    fill: colors.theme.baseAlpha50,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 
-thirdMinorTick = shape {
-  left: 32.8778px,
-  top: 0.78px,
-  width: 1px,
-  height: 2px,
-  fill: colors.theme.baseAlpha50,
-  type: .rect,
-  corner-radius: radius.radius.full
-}
+  thirdMinorTick = shape {
+    left: 32.8778px,
+    top: 0.78px,
+    width: 1px,
+    height: 2px,
+    fill: colors.theme.baseAlpha50,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 
-fourthMinorTick = shape {
-  left: 43.7555px,
-  top: 1.17px,
-  width: 1px,
-  height: 2px,
-  fill: colors.theme.baseAlpha50,
-  type: .rect,
-  corner-radius: radius.radius.full
-}
+  fourthMinorTick = shape {
+    left: 43.7555px,
+    top: 1.17px,
+    width: 1px,
+    height: 2px,
+    fill: colors.theme.baseAlpha50,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 
-fifthMinorTick = shape {
-  left: 54.63px,
-  top: 1.56px,
-  width: 1px,
-  height: 1px,
-  fill: colors.theme.baseAlpha50,
-  type: .rect,
-  corner-radius: radius.radius.full
-}
-
-label = text {
-  top: 8px,
-  right: 50.63px,
-  width: .auto,
-  height: 15px,
-  fill: colors.theme.baseAlpha50,
-  contents: "0",
-  font-size: Typography.fontSize.xsmall,
-  align: .center
+  fifthMinorTick = shape {
+    left: 54.63px,
+    top: 1.56px,
+    width: 1px,
+    height: 1px,
+    fill: colors.theme.baseAlpha50,
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 }

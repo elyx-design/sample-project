@@ -21,14 +21,14 @@ export chatAIComposer = frame : cardBackground.transparent {
   padding-right: Spacing.padding.large,
   layout.item-gap: Spacing.gap.xlarge,
   layout.justify-content: .space-between,
-  overrides: [insert(prompt, after = .nil), insert(actions, after = prompt)]
-}
+  overrides: [insert(prompt, after = .nil), insert(actions, after = prompt)],
 
-actions = frame {
-  width: 100%,
-  layout: {justify-content: .space-between, item-gap: Spacing.gap.small},
-  overflow: .visible,
-  children: [attachmentActions, messageActions]
+  actions = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, item-gap: Spacing.gap.small},
+    overflow: .visible,
+    children: [attachmentActions, messageActions]
+  }
 }
 
 attachmentActions = frame {
@@ -37,42 +37,42 @@ attachmentActions = frame {
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
-  children: [add, modelSelector, search, more]
-}
+  children: [add, modelSelector, search, more],
 
-add = frame : button.smallIconBackground {
-  left: 654px,
-  top: 728px,
+  add = frame : button.smallIconBackground {
+    left: 654px,
+    top: 728px,
 
-  button.smallBackgroundIcon {
-    contents: plus20
+    button.smallIconBackground.smallBackgroundIcon {
+      contents: plus20
+    }
   }
-}
 
-modelSelector = frame : button.small {
-  left: 694px,
-  top: 768px,
+  modelSelector = frame : button.small {
+    left: 694px,
+    top: 768px,
 
-  button.smallLabel {
-    contents: "Haze 4.8 Pro"
+    button.small.smallLabel {
+      contents: "Haze 4.8 Pro"
+    }
   }
-}
 
-search = frame : button.smallIconBackground {
-  left: 674px,
-  top: 748px,
+  search = frame : button.smallIconBackground {
+    left: 674px,
+    top: 748px,
 
-  button.smallBackgroundIcon {
-    contents: search20
+    button.smallIconBackground.smallBackgroundIcon {
+      contents: search20
+    }
   }
-}
 
-more = frame : button.smallIconBackground {
-  left: 694px,
-  top: 768px,
+  more = frame : button.smallIconBackground {
+    left: 694px,
+    top: 768px,
 
-  button.smallBackgroundIcon {
-    contents: more20
+    button.smallIconBackground.smallBackgroundIcon {
+      contents: more20
+    }
   }
 }
 
@@ -82,38 +82,38 @@ messageActions = frame {
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
-  children: [voice, send]
-}
+  children: [voice, send],
 
-voice = frame : button.smallIconBackground {
-  left: 714px,
-  top: 788px,
+  voice = frame : button.smallIconBackground {
+    left: 714px,
+    top: 788px,
 
-  button.smallBackgroundIcon {
-    contents: voice20
+    button.smallIconBackground.smallBackgroundIcon {
+      contents: voice20
+    }
   }
-}
 
-send = frame : button.smallPrimaryRounded {
-  left: 734px,
-  top: 808px,
+  send = frame : button.smallPrimaryRounded {
+    left: 734px,
+    top: 808px,
 
-  button.smallPrimaryRoundedIcon {
-    contents: arrowUp20
+    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+      contents: arrowUp20
+    }
   }
 }
 
 prompt = frame {
   width: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
-  children: [small, placeholder]
-}
+  children: [small, placeholder],
 
-small = frame : logo.small {left: 550px, top: 487px}
+  small = frame : logo.small {left: 550px, top: 487px}
 
-placeholder = text {
-  left: 633px,
-  top: 581px,
-  fill: colors.theme.contrastDefault,
-  contents: Strings.forms.askAnything
+  placeholder = text {
+    left: 633px,
+    top: 581px,
+    fill: colors.theme.contrastDefault,
+    contents: Strings.forms.askAnything
+  }
 }

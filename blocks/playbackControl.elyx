@@ -26,7 +26,15 @@ export playbackControl = frame : cardBackground.none {
     insert(scrubber, after = .nil),
     insert(playbackTime, after = scrubber),
     insert(tools, after = playbackTime)
-  ]
+  ],
+
+  playbackTime = text {
+    left: 722px,
+    top: 543px,
+    fill: colors.theme.contrastStrongest,
+    contents: "0:00 / 32:46",
+    font-size: typography.fontSize.small
+  }
 }
 
 tools = frame {
@@ -34,58 +42,50 @@ tools = frame {
   layout: {align-items: .center},
   slot: .true,
   restrict-children: .true,
-  children: [settingsButton, likeButton, moreButton]
-}
+  children: [settingsButton, likeButton, moreButton],
 
-settingsButton = frame : button.smallIcon {
-  left: 264.5px,
-  top: 8.5px,
+  settingsButton = frame : button.smallIcon {
+    left: 264.5px,
+    top: 8.5px,
 
-  button.smallIconGlyph {
-    contents: settings20
+    button.smallIcon.smallIconGlyph {
+      contents: settings20
+    }
   }
-}
 
-likeButton = frame : button.smallIcon {
-  left: 284.5px,
-  top: 28.5px,
+  likeButton = frame : button.smallIcon {
+    left: 284.5px,
+    top: 28.5px,
 
-  button.smallIconGlyph {
-    contents: heart20
+    button.smallIcon.smallIconGlyph {
+      contents: heart20
+    }
   }
-}
 
-moreButton = frame : button.smallIcon {
-  left: 284.5px,
-  top: 28.5px,
+  moreButton = frame : button.smallIcon {
+    left: 284.5px,
+    top: 28.5px,
 
-  button.smallIconGlyph {
-    contents: more20
+    button.smallIcon.smallIconGlyph {
+      contents: more20
+    }
   }
-}
-
-playbackTime = text {
-  left: 722px,
-  top: 543px,
-  fill: colors.theme.contrastStrongest,
-  contents: "0:00 / 32:46",
-  font-size: typography.fontSize.small
 }
 
 scrubber = frame {
   width: 100%,
   height: 100%,
   layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
-  children: [playButton, progressSlider]
-}
+  children: [playButton, progressSlider],
 
-playButton = frame : button.smallIcon {
-  left: 737px,
-  top: 580px,
+  playButton = frame : button.smallIcon {
+    left: 737px,
+    top: 580px,
 
-  button.smallIconGlyph {
-    contents: play20
+    button.smallIcon.smallIconGlyph {
+      contents: play20
+    }
   }
-}
 
-progressSlider = frame : slider.slider {left: 0px, top: 636px, width: 100%}
+  progressSlider = frame : slider.slider {left: 0px, top: 636px, width: 100%}
+}

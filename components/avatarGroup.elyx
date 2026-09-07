@@ -22,76 +22,76 @@ baseStack = frame {
   width: 140px,
   height: Spacing.size.medium,
   overflow: .visible,
-  children: [baseFifthPhoto, baseFourthPhoto, baseThirdPhoto, baseSecondPhoto, baseFirstPhoto]
-}
+  children: [baseFifthPhoto, baseFourthPhoto, baseThirdPhoto, baseSecondPhoto, baseFirstPhoto],
 
-baseFifthPhoto = userAvatar.smallPhoto {
-  left: 104px,
-  top: 0px,
-  ignore-stack: .true,
+  baseFifthPhoto = frame : userAvatar.smallPhoto {
+    left: 104px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module8
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module8
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  baseFourthPhoto = frame : userAvatar.smallPhoto {
+    left: 78px,
+    top: 0px,
+    ignore-stack: .true,
 
-baseFourthPhoto = userAvatar.smallPhoto {
-  left: 78px,
-  top: 0px,
-  ignore-stack: .true,
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module7
+    }
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module7
-  }
-
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
-
-baseThirdPhoto = userAvatar.smallPhoto {
-  left: 52px,
-  top: 0px,
-  ignore-stack: .true,
-
-  userAvatar.smallImage {
-    fill[0].image.ref: module6
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
+  baseThirdPhoto = frame : userAvatar.smallPhoto {
+    left: 52px,
+    top: 0px,
+    ignore-stack: .true,
+
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module6
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
-}
 
-baseSecondPhoto = userAvatar.smallPhoto {
-  left: 26px,
-  top: 0px,
-  ignore-stack: .true,
+  baseSecondPhoto = frame : userAvatar.smallPhoto {
+    left: 26px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module5
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module5
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  baseFirstPhoto = frame : userAvatar.smallPhoto {
+    left: 0px,
+    top: 0px,
 
-baseFirstPhoto = userAvatar.smallPhoto {
-  left: 0px,
-  top: 0px,
-
-  userAvatar.smallStatus {
-    display: .hidden
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 }
 
 @variant
-labelRight = avatarGroup {
+labelRight = frame : avatarGroup {
   left: 484px,
   top: 595px,
   width: .auto,
@@ -104,7 +104,7 @@ labelRight = avatarGroup {
 }
 
 @variant
-labelBottom = avatarGroup {
+labelBottom = frame : avatarGroup {
   left: 487.3293px,
   top: 679px,
   width: .auto,
@@ -121,16 +121,16 @@ rightCount = frame {
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
-  children: rightCountText
-}
+  children: rightCountText,
 
-rightCountText = text {
-  left: 0px,
-  top: 0px,
-  width: .auto,
-  height: .auto,
-  fill: colors.theme.contrastStrongest,
-  contents: "+28"
+  rightCountText = text {
+    left: 0px,
+    top: 0px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastStrongest,
+    contents: "+28"
+  }
 }
 
 bottomStack = frame {
@@ -145,71 +145,71 @@ bottomStack = frame {
     bottomThirdPhoto,
     bottomSecondPhoto,
     bottomFirstPhoto
-  ]
-}
+  ],
 
-bottomFifthPhoto = userAvatar.smallPhoto {
-  left: 104px,
-  top: 0px,
-  ignore-stack: .true,
+  bottomFifthPhoto = frame : userAvatar.smallPhoto {
+    left: 104px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module8
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module8
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  bottomFourthPhoto = frame : userAvatar.smallPhoto {
+    left: 78px,
+    top: 0px,
+    ignore-stack: .true,
 
-bottomFourthPhoto = userAvatar.smallPhoto {
-  left: 78px,
-  top: 0px,
-  ignore-stack: .true,
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module7
+    }
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module7
-  }
-
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
-
-bottomThirdPhoto = userAvatar.smallPhoto {
-  left: 52px,
-  top: 0px,
-  ignore-stack: .true,
-
-  userAvatar.smallImage {
-    fill[0].image.ref: module6
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
+  bottomThirdPhoto = frame : userAvatar.smallPhoto {
+    left: 52px,
+    top: 0px,
+    ignore-stack: .true,
+
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module6
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
-}
 
-bottomSecondPhoto = userAvatar.smallPhoto {
-  left: 26px,
-  top: 0px,
-  ignore-stack: .true,
+  bottomSecondPhoto = frame : userAvatar.smallPhoto {
+    left: 26px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module5
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module5
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  bottomFirstPhoto = frame : userAvatar.smallPhoto {
+    left: 0px,
+    top: 0px,
 
-bottomFirstPhoto = userAvatar.smallPhoto {
-  left: 0px,
-  top: 0px,
-
-  userAvatar.smallStatus {
-    display: .hidden
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 }
 
@@ -217,20 +217,20 @@ bottomCount = frame {
   left: 148px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
-  children: bottomCountText
-}
+  children: bottomCountText,
 
-bottomCountText = text {
-  left: 0px,
-  top: 0px,
-  width: .auto,
-  height: .auto,
-  fill: colors.theme.contrastStrongest,
-  contents: "+28"
+  bottomCountText = text {
+    left: 0px,
+    top: 0px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastStrongest,
+    contents: "+28"
+  }
 }
 
 @variant
-labelTop = avatarGroup {
+labelTop = frame : avatarGroup {
   left: 484px,
   top: 788px,
   layout.align-items: .start,
@@ -245,71 +245,71 @@ topStack = frame {
   width: 140px,
   height: Spacing.size.medium,
   overflow: .visible,
-  children: [topFifthPhoto, topFourthPhoto, topThirdPhoto, topSecondPhoto, topFirstPhoto]
-}
+  children: [topFifthPhoto, topFourthPhoto, topThirdPhoto, topSecondPhoto, topFirstPhoto],
 
-topFifthPhoto = userAvatar.smallPhoto {
-  left: 104px,
-  top: 0px,
-  ignore-stack: .true,
+  topFifthPhoto = frame : userAvatar.smallPhoto {
+    left: 104px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module8
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module8
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  topFourthPhoto = frame : userAvatar.smallPhoto {
+    left: 78px,
+    top: 0px,
+    ignore-stack: .true,
 
-topFourthPhoto = userAvatar.smallPhoto {
-  left: 78px,
-  top: 0px,
-  ignore-stack: .true,
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module7
+    }
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module7
-  }
-
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
-
-topThirdPhoto = userAvatar.smallPhoto {
-  left: 52px,
-  top: 0px,
-  ignore-stack: .true,
-
-  userAvatar.smallImage {
-    fill[0].image.ref: module6
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
+  topThirdPhoto = frame : userAvatar.smallPhoto {
+    left: 52px,
+    top: 0px,
+    ignore-stack: .true,
+
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module6
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
-}
 
-topSecondPhoto = userAvatar.smallPhoto {
-  left: 26px,
-  top: 0px,
-  ignore-stack: .true,
+  topSecondPhoto = frame : userAvatar.smallPhoto {
+    left: 26px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module5
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module5
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  topFirstPhoto = frame : userAvatar.smallPhoto {
+    left: 0px,
+    top: 0px,
 
-topFirstPhoto = userAvatar.smallPhoto {
-  left: 0px,
-  top: 0px,
-
-  userAvatar.smallStatus {
-    display: .hidden
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 }
 
@@ -319,71 +319,71 @@ rightStack = frame {
   width: 140px,
   height: Spacing.size.medium,
   overflow: .visible,
-  children: [rightFifthPhoto, rightFourthPhoto, rightThirdPhoto, rightSecondPhoto, rightFirstPhoto]
-}
+  children: [rightFifthPhoto, rightFourthPhoto, rightThirdPhoto, rightSecondPhoto, rightFirstPhoto],
 
-rightFifthPhoto = userAvatar.smallPhoto {
-  left: 104px,
-  top: 0px,
-  ignore-stack: .true,
+  rightFifthPhoto = frame : userAvatar.smallPhoto {
+    left: 104px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module8
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module8
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  rightFourthPhoto = frame : userAvatar.smallPhoto {
+    left: 78px,
+    top: 0px,
+    ignore-stack: .true,
 
-rightFourthPhoto = userAvatar.smallPhoto {
-  left: 78px,
-  top: 0px,
-  ignore-stack: .true,
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module7
+    }
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module7
-  }
-
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
-
-rightThirdPhoto = userAvatar.smallPhoto {
-  left: 52px,
-  top: 0px,
-  ignore-stack: .true,
-
-  userAvatar.smallImage {
-    fill[0].image.ref: module6
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
+  rightThirdPhoto = frame : userAvatar.smallPhoto {
+    left: 52px,
+    top: 0px,
+    ignore-stack: .true,
+
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module6
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
-}
 
-rightSecondPhoto = userAvatar.smallPhoto {
-  left: 26px,
-  top: 0px,
-  ignore-stack: .true,
+  rightSecondPhoto = frame : userAvatar.smallPhoto {
+    left: 26px,
+    top: 0px,
+    ignore-stack: .true,
 
-  userAvatar.smallImage {
-    fill[0].image.ref: module5
+    userAvatar.smallPhoto.smallImage {
+      fill[0].image.ref: module5
+    }
+
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 
-  userAvatar.smallStatus {
-    display: .hidden
-  }
-}
+  rightFirstPhoto = frame : userAvatar.smallPhoto {
+    left: 0px,
+    top: 0px,
 
-rightFirstPhoto = userAvatar.smallPhoto {
-  left: 0px,
-  top: 0px,
-
-  userAvatar.smallStatus {
-    display: .hidden
+    userAvatar.small.smallStatus {
+      display: .hidden
+    }
   }
 }
 
@@ -391,15 +391,15 @@ title = frame {
   left: 65px,
   top: 9.5px,
   layout: {justify-content: .center, align-items: .center},
-  children: titleText
-}
+  children: titleText,
 
-titleText = text {
-  left: 0px,
-  top: 0px,
-  width: .auto,
-  height: .auto,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.componentDefaults.avatarGroupTitle,
-  font-style: "SemiBold"
+  titleText = text {
+    left: 0px,
+    top: 0px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.avatarGroupTitle,
+    font-style: "SemiBold"
+  }
 }

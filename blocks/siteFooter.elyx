@@ -23,7 +23,15 @@ content = frame {
   height: .auto,
   layout: {justify-content: .space-between, item-gap: 63.62px},
   overflow: .visible,
-  children: [brandColumn, linkColumns]
+  children: [brandColumn, linkColumns],
+
+  linkColumns = frame {
+    left: 354.62px,
+    top: 0px,
+    width: .auto,
+    layout: {justify-content: .end, item-gap: 50px},
+    children: [productColumn, companyColumn, contactColumn]
+  }
 }
 
 brandColumn = frame {
@@ -33,44 +41,44 @@ brandColumn = frame {
   height: 100%,
   layout: {direction: .column, justify-content: .space-between, item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
-  children: [small, Newsletter]
-}
+  children: [small, Newsletter],
 
-small = frame : logo.mediumWordmark {left: 0px, top: 0px}
+  small = frame : logo.mediumWordmark {left: 0px, top: 0px}
 
-Newsletter = frame {
-  width: 100%,
-  layout: {direction: .column, item-gap: Spacing.gap.large},
-  overflow: .visible,
-  children: [frame1, frame2]
+  Newsletter = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: Spacing.gap.large},
+    overflow: .visible,
+    children: [frame1, frame2]
+  }
 }
 
 frame1 = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
-  children: [blurb, blurb_2]
-}
+  children: [blurb, blurb_2],
 
-blurb = text {
-  left: 0px,
-  top: 7px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.labels.newsletter,
-  font-size: Typography.fontSize.small,
-  font-style: "Bold",
-  line-height: Typography.lineHeight.relaxed
-}
+  blurb = text {
+    left: 0px,
+    top: 7px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.labels.newsletter,
+    font-size: Typography.fontSize.small,
+    font-style: "Bold",
+    line-height: Typography.lineHeight.relaxed
+  }
 
-blurb_2 = text {
-  left: 20px,
-  top: 27px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.marketing.newsletterDescription,
-  font-size: Typography.fontSize.small,
-  line-height: Typography.lineHeight.relaxed
+  blurb_2 = text {
+    left: 20px,
+    top: 27px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.marketing.newsletterDescription,
+    font-size: Typography.fontSize.small,
+    line-height: Typography.lineHeight.relaxed
+  }
 }
 
 frame2 = frame {
@@ -78,37 +86,29 @@ frame2 = frame {
   height: .auto,
   layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [base, medium]
-}
+  children: [base, medium],
 
-base = frame : textField.iconPlaceholder {
-  left: 40px,
-  top: 94.5px,
+  base = frame : textField.iconPlaceholder {
+    left: 40px,
+    top: 94.5px,
 
-  textField.placeholderIcon {
-    contents: mail24
+    textField.iconPlaceholder.placeholderIcon {
+      contents: mail24
+    }
+
+    textField.textField.label {
+      contents: Strings.marketing.footerEmailAddress
+    }
   }
 
-  textField.label {
-    contents: Strings.marketing.footerEmailAddress
+  medium = frame : button.mediumPrimary {
+    left: 396.5px,
+    top: 0px,
+
+    button.medium.mediumLabel {
+      contents: Strings.actions.signUp
+    }
   }
-}
-
-medium = frame : button.mediumPrimary {
-  left: 396.5px,
-  top: 0px,
-
-  button.mediumLabel {
-    contents: Strings.actions.signUp
-  }
-}
-
-linkColumns = frame {
-  left: 354.62px,
-  top: 0px,
-  width: .auto,
-  layout: {justify-content: .end, item-gap: 50px},
-  children: [productColumn, companyColumn, contactColumn]
 }
 
 productColumn = frame {
@@ -116,19 +116,19 @@ productColumn = frame {
   top: 0px,
   width: 130px,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
-  children: [productHeading, productLinks]
-}
+  children: [productHeading, productLinks],
 
-productHeading = text {
-  left: 0px,
-  top: 61px,
-  width: 100%,
-  fill: colors.theme.contrastAlpha25,
-  contents: Strings.labels.productSection,
-  font-size: Typography.fontSize.xsmall,
-  font-style: "ExtraBold",
-  line-height: Typography.lineHeight.relaxed,
-  letter-spacing: Typography.letterSpacing.wide
+  productHeading = text {
+    left: 0px,
+    top: 61px,
+    width: 100%,
+    fill: colors.theme.contrastAlpha25,
+    contents: Strings.labels.productSection,
+    font-size: Typography.fontSize.xsmall,
+    font-style: "ExtraBold",
+    line-height: Typography.lineHeight.relaxed,
+    letter-spacing: Typography.letterSpacing.wide
+  }
 }
 
 productLinks = frame {
@@ -136,67 +136,67 @@ productLinks = frame {
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
   restrict-children: .true,
-  children: [howItWorksLink, pricingFooterLink, faqLink, resourcesLink, featuresLink, roadmapLink]
-}
+  children: [howItWorksLink, pricingFooterLink, faqLink, resourcesLink, featuresLink, roadmapLink],
 
-howItWorksLink = text {
-  left: 0px,
-  top: 522px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.howItWorks,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  howItWorksLink = text {
+    left: 0px,
+    top: 522px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.howItWorks,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-pricingFooterLink = text {
-  left: 0px,
-  top: 542px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.pricing,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  pricingFooterLink = text {
+    left: 0px,
+    top: 542px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.pricing,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-faqLink = text {
-  left: 0px,
-  top: 562px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.faq,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  faqLink = text {
+    left: 0px,
+    top: 562px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.faq,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-resourcesLink = text {
-  left: 0px,
-  top: 585px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.resources,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  resourcesLink = text {
+    left: 0px,
+    top: 585px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.resources,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-featuresLink = text {
-  left: 0px,
-  top: 605px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.features,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  featuresLink = text {
+    left: 0px,
+    top: 605px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.features,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-roadmapLink = text {
-  left: 0px,
-  top: 625px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.roadmap,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
+  roadmapLink = text {
+    left: 0px,
+    top: 625px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.roadmap,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 }
 
 companyColumn = frame {
@@ -204,19 +204,19 @@ companyColumn = frame {
   top: 0px,
   width: 130px,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
-  children: [companyHeading, companyLinks]
-}
+  children: [companyHeading, companyLinks],
 
-companyHeading = text {
-  left: 0px,
-  top: 61px,
-  width: 100%,
-  fill: colors.theme.contrastAlpha25,
-  contents: Strings.labels.companySection,
-  font-size: Typography.fontSize.xsmall,
-  font-style: "ExtraBold",
-  line-height: Typography.lineHeight.relaxed,
-  letter-spacing: Typography.letterSpacing.wide
+  companyHeading = text {
+    left: 0px,
+    top: 61px,
+    width: 100%,
+    fill: colors.theme.contrastAlpha25,
+    contents: Strings.labels.companySection,
+    font-size: Typography.fontSize.xsmall,
+    font-style: "ExtraBold",
+    line-height: Typography.lineHeight.relaxed,
+    letter-spacing: Typography.letterSpacing.wide
+  }
 }
 
 companyLinks = frame {
@@ -224,57 +224,57 @@ companyLinks = frame {
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
   restrict-children: .true,
-  children: [aboutLink, contactLink, careersLink, pressLink, ourStoryLink]
-}
+  children: [aboutLink, contactLink, careersLink, pressLink, ourStoryLink],
 
-aboutLink = text {
-  left: 0px,
-  top: 522px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.about,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  aboutLink = text {
+    left: 0px,
+    top: 522px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.about,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-contactLink = text {
-  left: 0px,
-  top: 542px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.contact,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  contactLink = text {
+    left: 0px,
+    top: 542px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.contact,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-careersLink = text {
-  left: 0px,
-  top: 562px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.careers,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  careersLink = text {
+    left: 0px,
+    top: 562px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.careers,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-pressLink = text {
-  left: 0px,
-  top: 582px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.press,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  pressLink = text {
+    left: 0px,
+    top: 582px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.press,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-ourStoryLink = text {
-  left: 0px,
-  top: 602px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.ourStory,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
+  ourStoryLink = text {
+    left: 0px,
+    top: 602px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.ourStory,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 }
 
 contactColumn = frame {
@@ -282,19 +282,19 @@ contactColumn = frame {
   top: 0px,
   width: 130px,
   layout: {direction: .column, justify-content: .center, item-gap: 26px},
-  children: [contactHeading, contactLinks]
-}
+  children: [contactHeading, contactLinks],
 
-contactHeading = text {
-  left: 0px,
-  top: 61px,
-  width: 100%,
-  fill: colors.theme.contrastAlpha25,
-  contents: Strings.labels.contactSection,
-  font-size: Typography.fontSize.xsmall,
-  font-style: "ExtraBold",
-  line-height: Typography.lineHeight.relaxed,
-  letter-spacing: Typography.letterSpacing.wide
+  contactHeading = text {
+    left: 0px,
+    top: 61px,
+    width: 100%,
+    fill: colors.theme.contrastAlpha25,
+    contents: Strings.labels.contactSection,
+    font-size: Typography.fontSize.xsmall,
+    font-style: "ExtraBold",
+    line-height: Typography.lineHeight.relaxed,
+    letter-spacing: Typography.letterSpacing.wide
+  }
 }
 
 contactLinks = frame {
@@ -302,91 +302,91 @@ contactLinks = frame {
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
   restrict-children: .true,
-  children: [privacyLink, termsLink, contactCareersLink, securityLink]
-}
+  children: [privacyLink, termsLink, contactCareersLink, securityLink],
 
-privacyLink = text {
-  left: 0px,
-  top: 522px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.privacyPolicy,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  privacyLink = text {
+    left: 0px,
+    top: 522px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.privacyPolicy,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-termsLink = text {
-  left: 0px,
-  top: 542px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.termsOfService,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  termsLink = text {
+    left: 0px,
+    top: 542px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.termsOfService,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-contactCareersLink = text {
-  left: 0px,
-  top: 562px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.careers,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
-}
+  contactCareersLink = text {
+    left: 0px,
+    top: 562px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.careers,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 
-securityLink = text {
-  left: 0px,
-  top: 582px,
-  width: 100%,
-  fill: colors.theme.contrastStrongest,
-  contents: Strings.navigation.security,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium"
+  securityLink = text {
+    left: 0px,
+    top: 582px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.security,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
+  }
 }
 
 bottom = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [bottomDivider, copy]
-}
+  children: [bottomDivider, copy],
 
-bottomDivider = frame : divider.horizontal {
-  left: 0px,
-  top: 472px,
-  width: 100%,
-  padding-top: 0px,
-  padding-bottom: 0px
+  bottomDivider = frame : divider.horizontal {
+    left: 0px,
+    top: 472px,
+    width: 100%,
+    padding-top: 0px,
+    padding-bottom: 0px
+  }
 }
 
 copy = frame {
   width: 100%,
   layout: {justify-content: .space-between, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [copyright, statusNote]
-}
+  children: [copyright, statusNote],
 
-copyright = text {
-  left: 415.5687px,
-  top: 1080px,
-  width: .auto,
-  height: .auto,
-  fill: colors.theme.contrastAlpha70,
-  contents: "© 2026 Overleaf. All rights reserved.",
-  font-size: Typography.fontSize.small,
-  font-style: "Medium",
-  line-height: Typography.lineHeight.relaxed
-}
+  copyright = text {
+    left: 415.5687px,
+    top: 1080px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastAlpha70,
+    contents: "© 2026 Overleaf. All rights reserved.",
+    font-size: Typography.fontSize.small,
+    font-style: "Medium",
+    line-height: Typography.lineHeight.relaxed
+  }
 
-statusNote = text {
-  left: 435.5687px,
-  top: 1100px,
-  width: .auto,
-  height: .auto,
-  fill: colors.theme.contrastAlpha70,
-  contents: Strings.status.servicesOnline,
-  font-size: Typography.fontSize.small,
-  font-style: "Medium",
-  line-height: Typography.lineHeight.relaxed
+  statusNote = text {
+    left: 435.5687px,
+    top: 1100px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastAlpha70,
+    contents: Strings.status.servicesOnline,
+    font-size: Typography.fontSize.small,
+    font-style: "Medium",
+    line-height: Typography.lineHeight.relaxed
+  }
 }

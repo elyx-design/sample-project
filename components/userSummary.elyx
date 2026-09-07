@@ -7,22 +7,22 @@ export small = frame {
   height: Spacing.size.medium,
   layout: {align-items: .center, item-gap: Spacing.gap.medium},
   overflow: .visible,
-  children: [smallAvatar, smallHeader]
-}
+  children: [smallAvatar, smallHeader],
 
-smallAvatar = frame : userAvatar.smallPhoto {left: -7.5px, top: 28px}
+  smallAvatar = frame : userAvatar.smallPhoto {left: -7.5px, top: 28px}
 
-smallHeader = frame : header.smallLeft {
-  left: -8.5px,
-  top: -18px,
+  smallHeader = frame : header.smallLeft {
+    left: -8.5px,
+    top: -18px,
 
-  header.smallSubtitle {
-    contents: "nora@mail.com"
-  }
+    header.smallLeft.smallSubtitle {
+      contents: "nora@mail.com"
+    }
 
-  header.smallTitle {
-    contents: "Nora Harper",
-    font-style: "Bold"
+    header.smallLeft.smallTitle {
+      contents: "Nora Harper",
+      font-style: "Bold"
+    }
   }
 }
 
@@ -34,7 +34,7 @@ UserSummarySVariant = frame : small {
   layout.direction: .column,
 
   @use-variant(header.smallCenter)
-  smallHeader {}
+  small.smallHeader {}
 }
 
 export medium = frame {
@@ -43,24 +43,24 @@ export medium = frame {
   height: 72px,
   layout: {justify-content: .end, align-items: .center, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
-  children: [mediumAvatar, mediumHeader]
-}
+  children: [mediumAvatar, mediumHeader],
 
-mediumAvatar = frame : userAvatar.mediumPhoto {left: 0px, top: 0px}
+  mediumAvatar = frame : userAvatar.mediumPhoto {left: 0px, top: 0px}
 
-mediumHeader = frame : header.mediumLeft {
-  left: 83px,
-  top: 10px,
+  mediumHeader = frame : header.mediumLeft {
+    left: 83px,
+    top: 10px,
 
-  header.mediumSubtitle {
-    contents: "nora@mail.com",
-    font-size: Typography.fontSize.xlarge
-  }
+    header.mediumLeft.mediumSubtitle {
+      contents: "nora@mail.com",
+      font-size: Typography.fontSize.xlarge
+    }
 
-  header.mediumTitle {
-    contents: "Nora Harper",
-    font-size: Typography.fontSize.xxxlarge,
-    font-style: "Bold"
+    header.mediumLeft.mediumTitle {
+      contents: "Nora Harper",
+      font-size: Typography.fontSize.xxxlarge,
+      font-style: "Bold"
+    }
   }
 }
 
@@ -72,5 +72,5 @@ UserSummaryMVariant = frame : medium {
   layout.direction: .column,
 
   @use-variant(header.mediumCenter)
-  mediumHeader {}
+  medium.mediumHeader {}
 }

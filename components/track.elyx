@@ -25,50 +25,50 @@ startHandle = frame {
   width: 12px,
   height: spacing.size.small,
   layout: {justify-content: .center, align-items: .center},
-  children: startGrip
-}
+  children: startGrip,
 
-startGrip = shape {
-  left: 932px,
-  top: 532px,
-  width: 2px,
-  height: 16px,
-  fill: rgb(0%, 0%, 0%, 25%),
-  type: .rect,
-  corner-radius: radius.radius.full
+  startGrip = shape {
+    left: 932px,
+    top: 532px,
+    width: 2px,
+    height: 16px,
+    fill: rgb(0%, 0%, 0%, 25%),
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 }
 
 content = frame {
   width: 100%,
   height: 100%,
   layout: {justify-content: .space-between, align-items: .center},
-  children: [left, dateLabel]
-}
+  children: [left, dateLabel],
 
-left = frame {height: .auto, layout: {align-items: .center}, overflow: .visible, children: label}
+  left = frame {height: .auto, layout: {align-items: .center}, overflow: .visible, children: label}
+}
 
 label = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
-  children: [typeIcon, trackName]
-}
+  children: [typeIcon, trackName],
 
-typeIcon = icon {
-  left: 810px,
-  top: 522px,
-  width: 24px,
-  height: 24px,
-  fill: colors.primitives.black,
-  contents: direct24
-}
+  typeIcon = icon {
+    left: 810px,
+    top: 522px,
+    width: 24px,
+    height: 24px,
+    fill: colors.primitives.black,
+    contents: direct24
+  }
 
-trackName = text {
-  left: 263px,
-  top: 553px,
-  fill: colors.primitives.black,
-  contents: Strings.componentDefaults.trackName,
-  font-size: typography.fontSize.small,
-  font-style: "SemiBold"
+  trackName = text {
+    left: 263px,
+    top: 553px,
+    fill: colors.primitives.black,
+    contents: Strings.componentDefaults.trackName,
+    font-size: typography.fontSize.small,
+    font-style: "SemiBold"
+  }
 }
 
 dateLabel = frame {
@@ -76,40 +76,40 @@ dateLabel = frame {
   top: 20px,
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
-  children: [dateIcon, dateText]
-}
+  children: [dateIcon, dateText],
 
-dateIcon = icon {
-  left: 810px,
-  top: 522px,
-  width: 24px,
-  height: 24px,
-  fill: rgb(0%, 0%, 0%, 25%),
-  contents: calendar24
-}
+  dateIcon = icon {
+    left: 810px,
+    top: 522px,
+    width: 24px,
+    height: 24px,
+    fill: rgb(0%, 0%, 0%, 25%),
+    contents: calendar24
+  }
 
-dateText = text {
-  left: 263px,
-  top: 553px,
-  fill: rgb(0%, 0%, 0%, 25%),
-  contents: "8 Jul",
-  font-size: typography.fontSize.small,
-  font-style: "SemiBold"
+  dateText = text {
+    left: 263px,
+    top: 553px,
+    fill: rgb(0%, 0%, 0%, 25%),
+    contents: "8 Jul",
+    font-size: typography.fontSize.small,
+    font-style: "SemiBold"
+  }
 }
 
 endHandle = frame {
   width: 12px,
   height: 100%,
   layout: {justify-content: .center, align-items: .center},
-  children: endGrip
-}
+  children: endGrip,
 
-endGrip = shape {
-  left: 932px,
-  top: 532px,
-  width: 2px,
-  height: 16px,
-  fill: rgb(0%, 0%, 0%, 25%),
-  type: .rect,
-  corner-radius: radius.radius.full
+  endGrip = shape {
+    left: 932px,
+    top: 532px,
+    width: 2px,
+    height: 16px,
+    fill: rgb(0%, 0%, 0%, 25%),
+    type: .rect,
+    corner-radius: radius.radius.full
+  }
 }
