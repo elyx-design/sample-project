@@ -30,14 +30,14 @@ export LandingPage = frame {
   overflow: .scroll,
   padding-top: Spacing.padding.xxlarge,
   padding-bottom: Spacing.padding.xxlarge,
-  children: [top, frame3, GroupedStack]
+  children: [top, featureSection, gallerySection]
 }
 
 top = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 96px},
   overflow: .visible,
-  children: [pageHeader, Copy],
+  children: [pageHeader, heroContent],
 
   pageHeader = frame : siteHeader.siteHeader {
     left: 388.5px,
@@ -66,13 +66,13 @@ top = frame {
   }
 }
 
-Copy = frame {
+heroContent = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.huge},
   overflow: .visible,
-  children: [largeLeft, frame2],
+  children: [heroHeading, heroActions],
 
-  largeLeft = frame : header.largeCenter {
+  heroHeading = frame : header.largeCenter {
     left: 1840px,
     top: 449px,
     width: 44.0752%,
@@ -88,7 +88,7 @@ Copy = frame {
   }
 }
 
-frame2 = frame {
+heroActions = frame {
   width: 100%,
   layout: {
     justify-content: .center,
@@ -96,9 +96,9 @@ frame2 = frame {
     item-gap: Spacing.gap.xlarge
   },
   overflow: .visible,
-  children: [medium, text3],
+  children: [getStartedButton, watchDemoLabel],
 
-  medium = frame : button.medium {
+  getStartedButton = frame : button.medium {
     left: 733px,
     top: 353px,
 
@@ -107,7 +107,7 @@ frame2 = frame {
     }
   }
 
-  text3 = text {
+  watchDemoLabel = text {
     left: 854px,
     top: 477px,
     fill: colors.theme.contrastAlpha50,
@@ -116,7 +116,7 @@ frame2 = frame {
   }
 }
 
-frame3 = frame {
+featureSection = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.huge},
   overflow: .visible,
@@ -162,9 +162,9 @@ layer1 = frame {
   corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [shape1, smallLeft],
+  children: [directIcon, directHeader],
 
-  shape1 = icon {
+  directIcon = icon {
     left: 644px,
     top: 704px,
     width: 40px,
@@ -172,7 +172,7 @@ layer1 = frame {
     contents: direct24
   }
 
-  smallLeft = frame : header.smallLeft {
+  directHeader = frame : header.smallLeft {
     left: 0px,
     top: 0px,
 
@@ -197,9 +197,9 @@ layer2 = frame {
   corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [shape2, steadyHeader],
+  children: [reliabilityIcon, steadyHeader],
 
-  shape2 = icon {
+  reliabilityIcon = icon {
     left: 648px,
     top: 708px,
     width: 40px,
@@ -232,9 +232,9 @@ layer3 = frame {
   corner-radius: Radius.radius.medium,
   overflow: .visible,
   padding: Spacing.padding.large,
-  children: [shape3, teamHeader],
+  children: [collaborationIcon, teamHeader],
 
-  shape3 = icon {
+  collaborationIcon = icon {
     left: 655px,
     top: 715px,
     width: 40px,
@@ -256,13 +256,13 @@ layer3 = frame {
   }
 }
 
-GroupedStack = frame {
+gallerySection = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 96px},
   overflow: .visible,
-  children: [largeLeft_2, productGallery_2],
+  children: [galleryHeading, galleryGrid],
 
-  largeLeft_2 = frame : header.largeCenter {
+  galleryHeading = frame : header.largeCenter {
     left: 1840px,
     top: -265px,
     width: 44.0752%,
@@ -277,7 +277,7 @@ GroupedStack = frame {
     }
   }
 
-  productGallery_2 = frame : productGallery.productGallery {
+  galleryGrid = frame : productGallery.productGallery {
     left: 276px,
     top: 443px
   }

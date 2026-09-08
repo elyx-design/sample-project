@@ -28,9 +28,9 @@ export MovieUI = frame {
   layout: {direction: .column, align-items: .center},
   fill: .black,
   padding-top: 0px,
-  children: [movieBG, siteHeader_2, GroupedStack],
+  children: [movieBackground, movieHeader, movieContent],
 
-  movieBG = frame {
+  movieBackground = frame {
     left: 0px,
     top: 0px,
     width: 100%,
@@ -40,7 +40,7 @@ export MovieUI = frame {
     overflow: .visible
   }
 
-  siteHeader_2 = frame : siteHeader.accountHeader {
+  movieHeader = frame : siteHeader.accountHeader {
     left: 0px,
     top: -142px,
     width: 100%,
@@ -107,7 +107,7 @@ export MovieUI = frame {
       }
 
       siteHeader.accountContent.small_6 {
-        siteHeader.logo.mediumWordmark.text2 {
+        siteHeader.logo.mediumWordmark.mediumWordmarkLabel {
           fill[0].color: colors.theme.base
         }
       }
@@ -115,7 +115,7 @@ export MovieUI = frame {
   }
 }
 
-GroupedStack = frame {
+movieContent = frame {
   width: 70%,
   height: 100%,
   layout: {
@@ -125,9 +125,9 @@ GroupedStack = frame {
   },
   overflow: .visible,
   padding-top: 0px,
-  children: [GroupedStack_13, GroupedStack_2, horizontal, GroupedStack_8],
+  children: [movieHero, movieTitleRow, contentDivider, movieDetails],
 
-  horizontal = frame : divider.horizontal {
+  contentDivider = frame : divider.horizontal {
     left: 0px,
     top: 553px,
     width: 100%,
@@ -139,15 +139,15 @@ GroupedStack = frame {
     }
   }
 
-  GroupedStack_8 = frame {
+  movieDetails = frame {
     width: 100%,
     layout: {item-gap: Spacing.gap.xxlarge},
     overflow: .visible,
-    children: [details, GroupedStack_9]
+    children: [details, gallerySection]
   }
 }
 
-GroupedStack_13 = frame {
+movieHero = frame {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -169,13 +169,13 @@ GroupedStack_13 = frame {
   }
 }
 
-GroupedStack_2 = frame {
+movieTitleRow = frame {
   width: 100%,
   layout: {justify-content: .space-between},
   overflow: .visible,
-  children: [text1, tags],
+  children: [movieTitle, movieTags],
 
-  text1 = text {
+  movieTitle = text {
     left: 656px,
     top: 852px,
     fill: colors.primitives.white,
@@ -185,13 +185,13 @@ GroupedStack_2 = frame {
   }
 }
 
-tags = frame {
+movieTags = frame {
   height: 100%,
   layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [base, base_2],
+  children: [genreTag, themeTag],
 
-  base = frame : tag.tagTransparent {
+  genreTag = frame : tag.tagTransparent {
     left: 924px,
     top: 538px,
 
@@ -200,7 +200,7 @@ tags = frame {
     }
   }
 
-  base_2 = frame : tag.tagTransparent {
+  themeTag = frame : tag.tagTransparent {
     left: 944px,
     top: 558px,
 
@@ -214,9 +214,9 @@ details = frame {
   width: 100%,
   layout: {item-gap: Spacing.gap.xxlarge},
   overflow: .visible,
-  children: [productInfo_2, About],
+  children: [movieInfo, aboutSection],
 
-  productInfo_2 = frame : productInfo.productInfo {
+  movieInfo = frame : productInfo.productInfo {
     left: 741px,
     top: 881px,
 
@@ -246,7 +246,7 @@ details = frame {
   }
 }
 
-About = frame {
+aboutSection = frame {
   width: 100%,
   layout: {
     direction: .column,
@@ -254,9 +254,9 @@ About = frame {
     item-gap: Spacing.gap.large
   },
   overflow: .visible,
-  children: [Synopsis, horizontal_2, GroupedStack_11, horizontal_3, Synopsis_4],
+  children: [synopsisSection, detailsDivider, castSections, castDivider, ratingsSummary],
 
-  horizontal_2 = frame : divider.horizontal {
+  detailsDivider = frame : divider.horizontal {
     left: 0px,
     top: 642px,
     width: 100%,
@@ -268,14 +268,14 @@ About = frame {
     }
   }
 
-  GroupedStack_11 = frame {
+  castSections = frame {
     width: 100%,
     layout: {item-gap: Spacing.gap.large},
     overflow: .visible,
-    children: [Synopsis_2, Synopsis_3]
+    children: [starringSection, crewSection]
   }
 
-  horizontal_3 = frame : divider.horizontal {
+  castDivider = frame : divider.horizontal {
     left: 20px,
     top: 662px,
     width: 100%,
@@ -288,7 +288,7 @@ About = frame {
   }
 }
 
-Synopsis = frame {
+synopsisSection = frame {
   width: 100%,
   layout: {
     direction: .column,
@@ -296,9 +296,9 @@ Synopsis = frame {
     item-gap: Spacing.gap.small
   },
   overflow: .visible,
-  children: [text2, text3],
+  children: [synopsisHeading, synopsisBody],
 
-  text2 = text {
+  synopsisHeading = text {
     left: 0px,
     top: 826px,
     width: 100%,
@@ -308,7 +308,7 @@ Synopsis = frame {
     font-style: "Bold"
   }
 
-  text3 = text {
+  synopsisBody = text {
     left: 0px,
     top: 846px,
     width: 100%,
@@ -319,15 +319,15 @@ Synopsis = frame {
   }
 }
 
-Synopsis_2 = frame {
+starringSection = frame {
   left: 20px,
   top: 109px,
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   overflow: .visible,
-  children: [text4, actors],
+  children: [starringHeading, actors],
 
-  text4 = text {
+  starringHeading = text {
     left: 0px,
     top: 826px,
     width: 100%,
@@ -341,17 +341,17 @@ Synopsis_2 = frame {
     width: 100%,
     layout: {direction: .column, item-gap: Spacing.gap.xsmall},
     overflow: .visible,
-    children: [GroupedStack_3, GroupedStack_4, GroupedStack_5, GroupedStack_6]
+    children: [niaActor, danielActor, simoneActor, graceActor]
   }
 }
 
-GroupedStack_3 = frame {
+niaActor = frame {
   width: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [xsmall_3, text5],
+  children: [niaAvatar, niaName],
 
-  xsmall_3 = frame : avatar.xsmallPhoto {
+  niaAvatar = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
@@ -365,7 +365,7 @@ GroupedStack_3 = frame {
     }
   }
 
-  text5 = text {
+  niaName = text {
     left: 0px,
     top: -1814px,
     width: 100%,
@@ -375,15 +375,15 @@ GroupedStack_3 = frame {
   }
 }
 
-GroupedStack_4 = frame {
+danielActor = frame {
   left: 20px,
   top: 83px,
   width: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [xsmall_4, text6],
+  children: [danielAvatar, danielName],
 
-  xsmall_4 = frame : avatar.xsmallPhoto {
+  danielAvatar = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
@@ -397,7 +397,7 @@ GroupedStack_4 = frame {
     }
   }
 
-  text6 = text {
+  danielName = text {
     left: 0px,
     top: -1814px,
     width: 100%,
@@ -407,15 +407,15 @@ GroupedStack_4 = frame {
   }
 }
 
-GroupedStack_5 = frame {
+simoneActor = frame {
   left: 40px,
   top: 103px,
   width: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [xsmall_5, text7],
+  children: [simoneAvatar, simoneName],
 
-  xsmall_5 = frame : avatar.xsmallPhoto {
+  simoneAvatar = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
@@ -429,7 +429,7 @@ GroupedStack_5 = frame {
     }
   }
 
-  text7 = text {
+  simoneName = text {
     left: 0px,
     top: -1814px,
     width: 100%,
@@ -439,15 +439,15 @@ GroupedStack_5 = frame {
   }
 }
 
-GroupedStack_6 = frame {
+graceActor = frame {
   left: 60px,
   top: 123px,
   width: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [xsmall_6, text8],
+  children: [graceAvatar, graceName],
 
-  xsmall_6 = frame : avatar.xsmallPhoto {
+  graceAvatar = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
@@ -461,7 +461,7 @@ GroupedStack_6 = frame {
     }
   }
 
-  text8 = text {
+  graceName = text {
     left: 0px,
     top: -1814px,
     width: 100%,
@@ -471,15 +471,15 @@ GroupedStack_6 = frame {
   }
 }
 
-Synopsis_3 = frame {
+crewSection = frame {
   left: 40px,
   top: 129px,
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   overflow: .visible,
-  children: [text9, GroupedStack_7],
+  children: [crewHeading, crewCredits],
 
-  text9 = text {
+  crewHeading = text {
     left: 0px,
     top: 826px,
     width: 100%,
@@ -490,15 +490,15 @@ Synopsis_3 = frame {
   }
 }
 
-GroupedStack_7 = frame {
+crewCredits = frame {
   left: 0px,
   top: 31px,
   width: 100%,
   layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: text10,
+  children: crewText,
 
-  text10 = text {
+  crewText = text {
     left: 0px,
     top: -1814px,
     width: 100%,
@@ -516,7 +516,7 @@ GroupedStack_7 = frame {
   }
 }
 
-Synopsis_4 = frame {
+ratingsSummary = frame {
   left: 20px,
   top: 126px,
   width: 100%,
@@ -526,9 +526,9 @@ Synopsis_4 = frame {
     item-gap: Spacing.gap.small
   },
   overflow: .visible,
-  children: text12,
+  children: ratingsText,
 
-  text12 = text {
+  ratingsText = text {
     left: 0px,
     top: 846px,
     width: 100%,
@@ -539,13 +539,13 @@ Synopsis_4 = frame {
   }
 }
 
-GroupedStack_9 = frame {
+gallerySection = frame {
   height: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
-  children: [text11, GroupedStack_12],
+  children: [galleryHeading, galleryThumbnails],
 
-  text11 = text {
+  galleryHeading = text {
     left: 901.2px,
     top: 141px,
     width: 100%,
@@ -556,13 +556,13 @@ GroupedStack_9 = frame {
   }
 }
 
-GroupedStack_12 = frame {
+galleryThumbnails = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [thumbnailImage_2, GroupedStack_10],
+  children: [featuredThumbnail, thumbnailRow],
 
-  thumbnailImage_2 = frame : thumbnailImage.thumbnailVideo {
+  featuredThumbnail = frame : thumbnailImage.thumbnailVideo {
     left: 36.6px,
     top: 283.2895px,
     width: 234px,
@@ -574,13 +574,13 @@ GroupedStack_12 = frame {
   }
 }
 
-GroupedStack_10 = frame {
+thumbnailRow = frame {
   width: 100%,
   layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [thumbnailImage_3, thumbnailImage_4],
+  children: [secondaryThumbnail, tertiaryThumbnail],
 
-  thumbnailImage_3 = frame : thumbnailImage.thumbnailImage {
+  secondaryThumbnail = frame : thumbnailImage.thumbnailImage {
     left: 0px,
     top: 303.2895px,
     width: 100%,
@@ -599,7 +599,7 @@ GroupedStack_10 = frame {
     }
   }
 
-  thumbnailImage_4 = frame : thumbnailImage.thumbnailImage {
+  tertiaryThumbnail = frame : thumbnailImage.thumbnailImage {
     left: 0px,
     top: 491.2895px,
     width: 100%,

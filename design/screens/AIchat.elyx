@@ -18,16 +18,16 @@ export AIChat = frame {
     {mix-blend-mode: .multiply, image: {ref: waves}}
   ],
   padding: Spacing.padding.medium,
-  children: [sidebar_3, layer1],
+  children: [chatSidebar, layer1],
 
-  sidebar_3 = frame : sidebar.sidebar {
+  chatSidebar = frame : sidebar.sidebar {
     left: 226px,
     top: 0px,
     width: 18%,
     height: 100%
   }
 
-  shape1 = shape {
+  chatBackdrop = shape {
     width: 80%,
     height: 100%,
     ignore-stack: .true,
@@ -51,15 +51,15 @@ layer1 = frame {
   overflow: .visible,
   padding-top: 120px,
   padding-bottom: 48px,
-  children: [AIChat.shape1, aiChat_3, bottom],
+  children: [AIChat.chatBackdrop, chatPanel, bottomBar],
 
-  aiChat_3 = frame : aiChat.aiChat {
+  chatPanel = frame : aiChat.aiChat {
     left: 775px,
     top: 0px
   }
 }
 
-bottom = frame {
+bottomBar = frame {
   width: 100%,
   layout: {
     direction: .column,
@@ -67,15 +67,15 @@ bottom = frame {
     item-gap: Spacing.gap.large
   },
   overflow: .visible,
-  children: [chatAIComposer_2, text1],
+  children: [composer, aiDisclaimer],
 
-  chatAIComposer_2 = frame : chatAIComposer.chatAIComposer {
+  composer = frame : chatAIComposer.chatAIComposer {
     left: 119px,
     top: 105px,
     width: 60%
   }
 
-  text1 = text {
+  aiDisclaimer = text {
     left: 1412px,
     top: 1073px,
     fill: colors.theme.contrastAlpha50,

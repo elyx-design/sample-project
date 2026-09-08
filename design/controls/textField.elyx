@@ -176,14 +176,14 @@ buttonPlaceholder = frame : textField {
   top: 850px,
   padding-right: Spacing.padding.xsmall,
   layout.justify-content: .space-between,
-  overrides: [insert(GroupedStack, after = textField.label)],
+  overrides: [insert(inputActionGroup, after = textField.label)],
 
   textField.label {
     fill[0].color: Colors.theme.contrastMuted
   }
 }
 
-GroupedStack = frame {
+inputActionGroup = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,

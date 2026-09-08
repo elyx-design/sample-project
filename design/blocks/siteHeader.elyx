@@ -63,7 +63,7 @@ mutedMenu = frame : menu {
 loggedInHeader = frame : siteHeader {
   left: 512px,
   top: 572px,
-  overrides: [insert(GroupedStack, after = navLinks), remove(headerCta)]
+  overrides: [insert(headerActionGroup, after = navLinks), remove(headerCta)]
 }
 
 @variant
@@ -128,7 +128,7 @@ headerCta = frame {
   }
 }
 
-GroupedStack = frame {
+headerActionGroup = frame {
   height: .auto,
   layout: {justify-content: .end, align-items: .center, item-gap: 40px},
   overflow: .visible,

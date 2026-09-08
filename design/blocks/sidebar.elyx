@@ -36,8 +36,8 @@ export sidebar = frame : cardBackground.transparent {
   layout.item-gap: Spacing.gap.large,
   layout.justify-content: .space-between,
   overrides: [
-    insert(GroupedStack_3, after = .nil),
-    insert(workspaceSelector, after = GroupedStack_3)
+    insert(sidebarBody, after = .nil),
+    insert(workspaceSelector, after = sidebarBody)
   ]
 }
 
@@ -139,9 +139,9 @@ export segmentHeader = frame {
     align-items: .center,
     item-gap: 39px
   },
-  children: [text1, settings20svg],
+  children: [segmentTitle, settings20svg],
 
-  text1 = text {
+  segmentTitle = text {
     left: 0px,
     top: 2px,
     fill: colors.theme.contrastAlpha50,
@@ -168,8 +168,8 @@ workspaceSelector = frame : selector.Selector {
   padding-left: 10px,
   padding-right: 10px,
   overrides: [
-    insert(GroupedStack, after = selector.Left),
-    remove(selector.Selector.shape1)
+    insert(workspaceActions, after = selector.Left),
+    remove(selector.Selector.selectionIcon)
   ],
 
   selector.Left {
@@ -197,13 +197,13 @@ workspaceSelector = frame : selector.Selector {
   }
 }
 
-GroupedStack = frame {
+workspaceActions = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   overflow: .visible,
-  children: [shape3, shape2],
+  children: [searchIcon, sidebarIcon],
 
-  shape3 = icon {
+  searchIcon = icon {
     left: Spacing.size.small,
     top: 10px,
     width: 20px,
@@ -212,7 +212,7 @@ GroupedStack = frame {
     contents: search20
   }
 
-  shape2 = icon {
+  sidebarIcon = icon {
     left: 48px,
     top: 30px,
     width: 20px,
@@ -234,91 +234,91 @@ sidebarLiveEvent = frame : sidebar {
   padding-right: Spacing.padding.large,
   overrides: [remove(workspaceSelector)],
 
-  GroupedStack_3 {
-    overrides: [remove(GroupedStack_3.Content)],
+  sidebarBody {
+    overrides: [remove(sidebarBody.sidebarSections)],
 
-    GroupedStack_3.GroupedStack_4 {
-      overrides: [insert(GroupedStack_5, after = .nil), remove(frame2)],
+    sidebarBody.sidebarNavigation {
+      overrides: [insert(eventNavigation, after = .nil), remove(primaryNavigation)],
 
-      GroupedStack_2 {
+      secondaryNavigation {
         padding-left: 0px,
         padding-right: 0px,
 
-        frame4 {
+        secondaryItems {
           overrides: [
-            insert(campaignsItem_11, after = frame4.campaignsItem_6),
+            insert(campaignsItem_11, after = secondaryItems.campaignsItem_6),
             insert(campaignsItem_12, after = campaignsItem_11)
           ],
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_6 {
+          secondaryItems.campaignsItem_6 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.text3 {
+              eventTag.viewerCount {
                 contents: "5.1k"
               }
             }
 
-            sideBarMenuEvent.text5 {
+            sideBarMenuEvent.eventLabel {
               contents: "Lowhealth"
             }
           }
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_5 {
+          secondaryItems.campaignsItem_5 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.text3 {
+              eventTag.viewerCount {
                 contents: "3.1k"
               }
             }
 
-            sideBarMenuEvent.text5 {
+            sideBarMenuEvent.eventLabel {
               contents: "SkipperGO"
             }
           }
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_3 {
+          secondaryItems.campaignsItem_3 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.text3 {
+              eventTag.viewerCount {
                 contents: "9.7k"
               }
             }
 
-            sideBarMenuEvent.text5 {
+            sideBarMenuEvent.eventLabel {
               contents: "HugeTown"
             }
           }
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_4 {
+          secondaryItems.campaignsItem_4 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.text3 {
+              eventTag.viewerCount {
                 contents: "21.2k"
               }
             }
 
             corner-radius: radius.radius.full,
 
-            sideBarMenuEvent.text5 {
+            sideBarMenuEvent.eventLabel {
               contents: "RamblingRoosterTV"
             }
           }
         }
 
-        GroupedStack_2.segmentHeader_2 {
+        secondaryNavigation.segmentHeader_2 {
           segmentHeader.settings20svg {
             display: .hidden
           }
 
-          segmentHeader.text1 {
+          segmentHeader.segmentTitle {
             contents: Strings.labels.liveChannels
           }
         }
@@ -333,12 +333,12 @@ sidebarLiveEvent = frame : sidebar {
     sideBarMenuEvent.eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.text3 {
+      eventTag.viewerCount {
         contents: "71.1k"
       }
     }
 
-    sideBarMenuEvent.text5 {
+    sideBarMenuEvent.eventLabel {
       contents: "TurnTV"
     }
   }
@@ -350,12 +350,12 @@ sidebarLiveEvent = frame : sidebar {
     sideBarMenuEvent.eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.text3 {
+      eventTag.viewerCount {
         contents: "5.9k"
       }
     }
 
-    sideBarMenuEvent.text5 {
+    sideBarMenuEvent.eventLabel {
       contents: "RespawnRegret"
     }
   }
@@ -369,13 +369,13 @@ sideBarMenuEvent = frame : sidebarItem.sidebarMenu {
   layout.item-gap: Spacing.gap.small,
   layout.justify-content: .space-between,
   overrides: [
-    insert(text5, after = .nil),
-    insert(eventTag_2, after = text5),
-    remove(sidebarItem.sidebarMenu.text2),
-    remove(sidebarItem.sidebarMenu.shape1)
+    insert(eventLabel, after = .nil),
+    insert(eventTag_2, after = eventLabel),
+    remove(sidebarItem.sidebarMenu.menuLabel),
+    remove(sidebarItem.sidebarMenu.menuIcon)
   ],
 
-  text5 = text {
+  eventLabel = text {
     left: 54.5px,
     top: 6.5px,
     fill: colors.theme.contrastStrongest,
@@ -388,13 +388,13 @@ sideBarMenuEvent = frame : sidebarItem.sidebarMenu {
     left: -251px,
     top: 161px,
 
-    eventTag.text3 {
+    eventTag.viewerCount {
       font-style: "Bold"
     }
   }
 }
 
-GroupedStack_5 = frame {
+eventNavigation = frame {
   left: 20px,
   top: 340px,
   width: 100%,
@@ -404,7 +404,7 @@ GroupedStack_5 = frame {
     item-gap: Spacing.gap.small
   },
   overflow: .visible,
-  children: [segmentHeader_3, frame5],
+  children: [segmentHeader_3, eventItems],
 
   segmentHeader_3 = frame : segmentHeader {
     left: 10px,
@@ -415,13 +415,13 @@ GroupedStack_5 = frame {
       contents: sideBarleft20
     }
 
-    segmentHeader.text1 {
+    segmentHeader.segmentTitle {
       contents: Strings.labels.forYou
     }
   }
 }
 
-frame5 = frame {
+eventItems = frame {
   left: 0px,
   top: 236px,
   width: 100%,
@@ -445,12 +445,12 @@ frame5 = frame {
     sideBarMenuEvent.eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.text3 {
+      eventTag.viewerCount {
         contents: "5.5k"
       }
     }
 
-    sideBarMenuEvent.text5 {
+      sideBarMenuEvent.eventLabel {
       contents: "PixelDriftTV"
     }
   }
@@ -462,12 +462,12 @@ frame5 = frame {
     sideBarMenuEvent.eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.text3 {
+      eventTag.viewerCount {
         contents: "1.2k"
       }
     }
 
-    sideBarMenuEvent.text5 {
+      sideBarMenuEvent.eventLabel {
       contents: "ChessKing"
     }
   }
@@ -479,12 +479,12 @@ frame5 = frame {
     sideBarMenuEvent.eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.text3 {
+      eventTag.viewerCount {
         contents: "13.4k"
       }
     }
 
-    sideBarMenuEvent.text5 {
+      sideBarMenuEvent.eventLabel {
       contents: "InkAndPixels"
     }
   }
@@ -496,7 +496,7 @@ frame5 = frame {
     @use-variant(eventTagOffline)
     sideBarMenuEvent.eventTag_2 {}
 
-    sideBarMenuEvent.text5 {
+      sideBarMenuEvent.eventLabel {
       contents: "PaletteRiot"
     }
   }
@@ -507,7 +507,7 @@ export eventTag = frame {
   top: 144px,
   layout: {justify-content: .center, align-items: .center, item-gap: 7px},
   overflow: .visible,
-  children: [status, text3],
+  children: [status, viewerCount],
 
   status = shape : avatar.status {
     left: 0px,
@@ -515,7 +515,7 @@ export eventTag = frame {
     fill[0].color: colors.palette.red70
   }
 
-  text3 = text {
+  viewerCount = text {
     left: 15px,
     top: 0px,
     fill: colors.theme.contrastStrongest,
@@ -531,13 +531,13 @@ eventTagOffline = frame : eventTag {
   top: 207px,
   overrides: [remove(eventTag.status)],
 
-  eventTag.text3 {
+  eventTag.viewerCount {
     fill[0].color: colors.theme.contrastAlpha25,
     contents: Strings.status.offline
   }
 }
 
-frame3 = frame {
+sidebarContent = frame {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -549,33 +549,33 @@ frame3 = frame {
   },
   overflow: .visible,
   padding: [0px, Spacing.padding.medium],
-  children: frame1,
+  children: brandRow,
 
-  frame1 = frame {
+  brandRow = frame {
     width: 100%,
     layout: {align-items: .center, item-gap: Spacing.gap.medium},
     overflow: .visible,
     padding: [Spacing.padding.small, 0px],
-    children: small_2
+    children: primaryBrand
   }
 }
 
-small_2 = frame : logo.mediumWordmark {
+primaryBrand = frame : logo.mediumWordmark {
   left: 134px,
   top: 22px,
   overrides: [
-    insert(small, after = .nil),
-    remove(logo.mediumWordmark.text2),
+    insert(secondaryBrand, after = .nil),
+    remove(logo.mediumWordmark.mediumWordmarkLabel),
     remove(logo.small.smallArtwork)
   ],
 
-  small = frame : logo.mediumWordmark {
+  secondaryBrand = frame : logo.mediumWordmark {
     left: -111px,
     top: 48px
   }
 }
 
-frame2 = frame {
+primaryNavigation = frame {
   left: 0px,
   top: 72px,
   width: 100%,
@@ -591,11 +591,11 @@ frame2 = frame {
     left: 0px,
     top: 34px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       contents: plus24
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: Strings.status.new
     }
   }
@@ -604,11 +604,11 @@ frame2 = frame {
     left: 0px,
     top: 54px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       contents: history24
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: Strings.navigation.projects
     }
   }
@@ -617,11 +617,11 @@ frame2 = frame {
     left: 0px,
     top: 74px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       contents: database24
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: Strings.navigation.data
     }
   }
@@ -630,11 +630,11 @@ frame2 = frame {
     left: 20px,
     top: 94px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       contents: notes24
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: Strings.navigation.notes
     }
   }
@@ -643,17 +643,17 @@ frame2 = frame {
     left: 20px,
     top: 134px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       contents: settings24
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: Strings.navigation.settings
     }
   }
 }
 
-GroupedStack_3 = frame {
+sidebarBody = frame {
   width: 100%,
   layout: {
     direction: .column,
@@ -661,18 +661,18 @@ GroupedStack_3 = frame {
     item-gap: Spacing.gap.large
   },
   overflow: .visible,
-  children: [Content, GroupedStack_4],
+  children: [sidebarSections, sidebarNavigation],
 
-  Content = frame {
+  sidebarSections = frame {
     width: 100%,
     layout: {direction: .column, item-gap: Spacing.gap.large},
     overflow: .visible,
     padding-left: 0px,
     padding-right: 0px,
-    children: frame3
+    children: sidebarContent
   }
 
-  GroupedStack_4 = frame {
+  sidebarNavigation = frame {
     width: 100%,
     layout: {
       direction: .column,
@@ -680,11 +680,11 @@ GroupedStack_3 = frame {
       item-gap: Spacing.gap.xlarge
     },
     overflow: .visible,
-    children: [frame2, GroupedStack_2]
+    children: [primaryNavigation, secondaryNavigation]
   }
 }
 
-GroupedStack_2 = frame {
+secondaryNavigation = frame {
   width: 100%,
   layout: {
     direction: .column,
@@ -694,7 +694,7 @@ GroupedStack_2 = frame {
   overflow: .visible,
   padding-left: 10px,
   padding-right: 10px,
-  children: [segmentHeader_2, frame4],
+  children: [segmentHeader_2, secondaryItems],
 
   segmentHeader_2 = frame : segmentHeader {
     left: 10px,
@@ -703,7 +703,7 @@ GroupedStack_2 = frame {
   }
 }
 
-frame4 = frame {
+secondaryItems = frame {
   left: 0px,
   top: 236px,
   width: 100%,
@@ -720,12 +720,12 @@ frame4 = frame {
     top: 84px,
     fill[0].color: colors.primitives.blackAlpha05,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: "Grocery list"
     }
   }
@@ -734,12 +734,12 @@ frame4 = frame {
     left: 20px,
     top: 54px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: "React component"
     }
   }
@@ -748,12 +748,12 @@ frame4 = frame {
     left: 20px,
     top: 114px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: "Personal notes"
     }
   }
@@ -762,12 +762,12 @@ frame4 = frame {
     left: 20px,
     top: 144px,
 
-    sidebarItem.sidebarMenu.shape1 {
+    sidebarItem.sidebarMenu.menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.text2 {
+    sidebarItem.sidebarMenu.menuLabel {
       contents: "Draft email"
     }
   }

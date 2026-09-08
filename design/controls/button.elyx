@@ -444,9 +444,9 @@ export Play = frame {
   width: 96px,
   height: 96px,
   layout: {justify-content: .center, align-items: .center},
-  children: [shape1, play20svg],
+  children: [playSurface, play20svg],
 
-  shape1 = shape {
+  playSurface = shape {
     left: 0px,
     top: 0px,
     width: 96px,

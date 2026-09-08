@@ -21,9 +21,9 @@ export sidebarMenu = frame {
   layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
   padding-left: Spacing.padding.small,
   padding-right: Spacing.padding.small,
-  children: [shape1, text2],
+  children: [menuIcon, menuLabel],
 
-  shape1 = icon {
+  menuIcon = icon {
     left: 2px,
     top: 2px,
     width: 20px,
@@ -32,7 +32,7 @@ export sidebarMenu = frame {
     contents: cloud20
   }
 
-  text2 = text {
+  menuLabel = text {
     left: 31px,
     top: 7px,
     fill: colors.theme.contrastStrongest,

@@ -111,21 +111,21 @@ liveChat = frame : chatWindow {
   layout.align-items: .start,
   layout.justify-content: .space-between,
   overrides: [
-    insert(GroupedStack, after = .nil),
-    insert(footer, after = GroupedStack),
+    insert(messageActionGroup, after = .nil),
+    insert(footer, after = messageActionGroup),
     remove(chatWindow.messageField),
     remove(messageThread)
   ],
 
-  GroupedStack = frame {
+  messageActionGroup = frame {
     width: 100%,
     layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
     overflow: .visible,
-    children: [GroupedStack_4, chat]
+  children: [chatPanel, chat]
   }
 }
 
-GroupedStack_4 = frame {
+chatPanel = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.large},
   fill: colors.theme.base,
@@ -143,9 +143,9 @@ GroupedStack_4 = frame {
     Spacing.padding.medium,
     Spacing.padding.medium
   ],
-  children: [GroupedStack_5, medium_2],
+  children: [chatHeader, chatTabs],
 
-  medium_2 = frame : segmentedControl.small {
+  chatTabs = frame : segmentedControl.small {
     left: 8px,
     top: 29px,
     width: 100%,
@@ -170,7 +170,7 @@ GroupedStack_4 = frame {
   }
 }
 
-GroupedStack_5 = frame {
+chatHeader = frame {
   left: 8px,
   top: 12px,
   width: 100%,
@@ -183,9 +183,9 @@ GroupedStack_5 = frame {
   overflow: .visible,
   padding-left: 0px,
   padding-right: 0px,
-  children: [text1, GroupedStack_2],
+  children: [chatTitle, onlineStatus],
 
-  text1 = text {
+  chatTitle = text {
     left: 793px,
     top: 637px,
     fill: colors.theme.contrastStrongest,
@@ -195,13 +195,13 @@ GroupedStack_5 = frame {
   }
 }
 
-GroupedStack_2 = frame {
+onlineStatus = frame {
   height: 100%,
   layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
-  children: [group24svg, text2],
+  children: [onlineIcon, onlineLabel],
 
-  group24svg = icon {
+  onlineIcon = icon {
     left: 897px,
     top: 615px,
     width: 24px,
@@ -210,7 +210,7 @@ GroupedStack_2 = frame {
     contents: group24
   }
 
-  text2 = text {
+  onlineLabel = text {
     left: 813px,
     top: 657px,
     fill: colors.theme.contrastAlpha25,
@@ -229,15 +229,15 @@ chat = frame {
   restrict-children: .true,
   padding-left: Spacing.padding.xlarge,
   padding-right: Spacing.padding.xlarge,
-  children: [base, base_2, base_4, base_3],
+  children: [firstMessage, secondMessage, thirdMessage, fourthMessage],
 
-  base = frame : chatBubble.liveBubble {
+  firstMessage = frame : chatBubble.liveBubble {
     left: 0px,
     top: 894px,
     width: 100%,
 
-    chatBubble.GroupedStack {
-      chatBubble.GroupedStack.messageText_3 {
+    chatBubble.messageActionGroup {
+      chatBubble.messageActionGroup.messageText_3 {
         fill[0].color: colors.palette.pink,
         contents: "oasis_rider"
       }
@@ -248,18 +248,18 @@ chat = frame {
     }
   }
 
-  base_2 = frame : chatBubble.liveBubble {
+  secondMessage = frame : chatBubble.liveBubble {
     left: 20px,
     top: 914px,
     width: 100%,
 
-    chatBubble.GroupedStack {
-      chatBubble.GroupedStack.messageText_3 {
+    chatBubble.messageActionGroup {
+      chatBubble.messageActionGroup.messageText_3 {
         fill[0].color: colors.palette.purple,
         contents: "Mirage_FC"
       }
 
-      chatBubble.GroupedStack.messageText_4 {
+      chatBubble.messageActionGroup.messageText_4 {
         contents: "14:12"
       }
     }
@@ -269,18 +269,18 @@ chat = frame {
     }
   }
 
-  base_4 = frame : chatBubble.liveBubble {
+  thirdMessage = frame : chatBubble.liveBubble {
     left: 0px,
     top: 986px,
     width: 100%,
 
-    chatBubble.GroupedStack {
-      chatBubble.GroupedStack.messageText_3 {
+    chatBubble.messageActionGroup {
+      chatBubble.messageActionGroup.messageText_3 {
         fill[0].color: colors.palette.cyan,
         contents: "joana.rd"
       }
 
-      chatBubble.GroupedStack.messageText_4 {
+      chatBubble.messageActionGroup.messageText_4 {
         contents: "14:10"
       }
     }
@@ -290,18 +290,18 @@ chat = frame {
     }
   }
 
-  base_3 = frame : chatBubble.liveBubble {
+  fourthMessage = frame : chatBubble.liveBubble {
     left: 40px,
     top: 934px,
     width: 100%,
 
-    chatBubble.GroupedStack {
-      chatBubble.GroupedStack.messageText_3 {
+    chatBubble.messageActionGroup {
+      chatBubble.messageActionGroup.messageText_3 {
         fill[0].color: colors.palette.green,
         contents: "MODYara"
       }
 
-      chatBubble.GroupedStack.messageText_4 {
+      chatBubble.messageActionGroup.messageText_4 {
         contents: "14:09"
       }
     }
@@ -324,7 +324,7 @@ footer = frame {
   },
   overflow: .visible,
   padding: Spacing.padding.medium,
-  children: [messageField_2, medium],
+  children: [messageField_2, settingsButton],
 
   messageField_2 = frame : textField.buttonPlaceholder {
     left: 0px,
@@ -335,7 +335,7 @@ footer = frame {
     }
   }
 
-  medium = frame : button.mediumIcon {
+  settingsButton = frame : button.mediumIcon {
     left: 0px,
     top: -56.5px,
 

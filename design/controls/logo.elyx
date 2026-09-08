@@ -71,14 +71,14 @@ extraLargeWordmark = frame : small {
   left: 475px,
   top: 769px,
   layout.item-gap: Spacing.gap.xxlarge,
-  overrides: [insert(text4, after = small.smallArtwork)],
+  overrides: [insert(extraLargeWordmarkLabel, after = small.smallArtwork)],
 
   small.smallArtwork {
     width: 80px,
     height: 80px
   }
 
-  text4 = text {
+  extraLargeWordmarkLabel = text {
     left: 362px,
     top: 655px,
     fill: Colors.theme.contrastStrongest,
@@ -93,14 +93,14 @@ largeWordmark = frame : small {
   left: 475px,
   top: 677px,
   layout.item-gap: Spacing.gap.medium,
-  overrides: [insert(text3, after = small.smallArtwork)],
+  overrides: [insert(largeWordmarkLabel, after = small.smallArtwork)],
 
   small.smallArtwork {
     width: 48px,
     height: 48px
   }
 
-  text3 = text {
+  largeWordmarkLabel = text {
     left: 402px,
     top: 655px,
     fill: Colors.theme.contrastStrongest,
@@ -115,14 +115,14 @@ mediumWordmark = frame : small {
   left: 475px,
   top: 597px,
   layout.item-gap: Spacing.gap.small,
-  overrides: [insert(text2, after = small.smallArtwork)],
+  overrides: [insert(mediumWordmarkLabel, after = small.smallArtwork)],
 
   small.smallArtwork {
     width: Spacing.size.medium,
     height: Spacing.size.medium
   }
 
-  text2 = text {
+  mediumWordmarkLabel = text {
     left: 426px,
     top: 655px,
     fill: Colors.theme.contrastStrongest,
@@ -137,9 +137,9 @@ smallWordmark = frame : small {
   left: 475px,
   top: 519px,
   layout.item-gap: Spacing.gap.small,
-  overrides: [insert(text1, after = small.smallArtwork)],
+  overrides: [insert(smallWordmarkLabel, after = small.smallArtwork)],
 
-  text1 = text {
+  smallWordmarkLabel = text {
     left: 426px,
     top: 673px,
     fill: Colors.theme.contrastStrongest,

@@ -9,9 +9,9 @@ export Selector = frame {
   top: 443px,
   layout: {justify-content: .space-between, align-items: .center, item-gap: 15px},
   overflow: .visible,
-  children: [Left, shape1],
+  children: [Left, selectionIcon],
 
-  shape1 = icon {
+  selectionIcon = icon {
     left: 26px,
     top: 8px,
     width: 24px,

@@ -58,8 +58,8 @@ liveBubble = frame : chatBubble {
   layout.direction: .column,
   layout.item-gap: spacing.gap.xsmall,
   overrides: [
-    insert(GroupedStack, after = .nil),
-    insert(messageText_2, after = GroupedStack),
+    insert(messageActionGroup, after = .nil),
+    insert(messageText_2, after = messageActionGroup),
     remove(message),
     remove(chatBubble.profileAvatar)
   ],
@@ -74,7 +74,7 @@ liveBubble = frame : chatBubble {
   }
 }
 
-GroupedStack = frame {
+messageActionGroup = frame {
   width: 100%,
   layout: {align-items: .end, item-gap: spacing.gap.small},
   overflow: .visible,

@@ -49,11 +49,11 @@ brandColumn = frame {
     width: 100%,
     layout: {direction: .column, item-gap: Spacing.gap.large},
     overflow: .visible,
-    children: [frame1, frame2]
+    children: [newsletterCopy, newsletterForm]
   }
 }
 
-frame1 = frame {
+newsletterCopy = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.xsmall},
   overflow: .visible,
@@ -81,7 +81,7 @@ frame1 = frame {
   }
 }
 
-frame2 = frame {
+newsletterForm = frame {
   width: 100%,
   height: .auto,
   layout: {item-gap: Spacing.gap.small},
