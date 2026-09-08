@@ -1,0 +1,59 @@
+import "tokens/strings.elyx" as Strings
+import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
+import "design/controls/product.elyx" as product
+import "tokens/colors.elyx" as colors
+import "design/controls/tag.elyx" as tag
+
+export productInfo = frame {
+  left: -167px,
+  top: 300px,
+  layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.xlarge},
+  overflow: .visible,
+  children: [productPreview, productDetails],
+
+  productPreview = frame : product.product {left: -30.85px, top: -42.3893px}
+}
+
+productDetails = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: Spacing.gap.large},
+  overflow: .visible,
+  children: [productCopy, ratingTag],
+
+  ratingTag = frame : tag.iconAndLabel {
+    left: 18.2196px,
+    top: 229.1186px,
+    fill[0].color: colors.palette.yellowAlpha50,
+
+    tag.tagTransparent.label {
+      contents: "4.5"
+    }
+  }
+}
+
+productCopy = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
+  children: [productName, subtitle],
+
+  productName = text {
+    left: 0px,
+    top: 344px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.productName,
+    font-size: Typography.fontSize.xlarge,
+    font-style: "SemiBold"
+  }
+
+  subtitle = text {
+    left: 0px,
+    top: 364px,
+    width: 100%,
+    fill: colors.theme.contrastAlpha70,
+    contents: Strings.componentDefaults.subtitle,
+    font-size: Typography.fontSize.medium,
+    font-style: "Medium"
+  }
+}

@@ -1,0 +1,204 @@
+import "tokens/strings.elyx" as Strings
+import "tokens/colors.elyx" as Colors
+import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
+import "tokens/radius.elyx" as Radius
+import "icons/24 pixels/calendar-24.svg" as calendar24
+import "design/controls/button.elyx" as button
+import "icons/20 pixels/arrowUp-20.svg" as arrowUp20
+import "icons/24 pixels/search-24.svg" as search24
+import "icons/20 pixels/emoji-20.svg" as emoji20
+
+export textField = frame {
+  left: 869px,
+  top: 770px,
+  width: 100%,
+  height: Spacing.size.medium,
+  layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
+  fill: Colors.theme.base,
+  border: {color: Colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  corner-radius: Radius.radius.full,
+  padding-left: Spacing.padding.medium,
+  padding-right: Spacing.padding.medium,
+  children: label,
+
+  label = text {
+    left: 0px,
+    top: 0px,
+    fill: Colors.theme.contrastStrongest,
+    contents: Strings.componentDefaults.label,
+    font-size: Typography.fontSize.medium
+  }
+}
+
+@variant
+placeholder = frame : textField {
+  left: 869px,
+  top: 850px,
+
+  textField.label {
+    fill[0].color: Colors.theme.contrastMuted
+  }
+}
+
+@variant
+focused = frame : textField {
+  left: 869px,
+  top: 930px,
+  border[0].color: Colors.theme.contrastStrongest,
+  border[0].position: .center,
+  border[0].width: 1.5px
+}
+
+@variant
+error = frame : textField {
+  left: 869px,
+  top: 1010px,
+  border[0].color: Colors.palette.red70,
+  border[0].position: .center,
+  border[0].width: 1.5px,
+
+  textField.label {
+    fill[0].color: Colors.palette.red70
+  }
+}
+
+@variant
+withIcon = frame : textField {
+  left: 989.73px,
+  top: 770px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
+  overrides: [insert(defaultIcon, after = .nil)],
+
+  defaultIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: calendar24
+  }
+}
+
+@variant
+iconPlaceholder = frame : textField {
+  left: 988.65px,
+  top: 850px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
+  overrides: [insert(placeholderIcon, after = .nil)],
+
+  textField.label {
+    fill[0].color: Colors.theme.contrastMuted
+  }
+
+  placeholderIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: search24
+  }
+}
+
+@variant
+iconFocused = frame : textField {
+  left: 987.9291px,
+  top: 930px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
+  border[0].color: Colors.theme.contrastStrongest,
+  border[0].width: 1.5px,
+  overrides: [insert(focusedIcon, after = .nil)],
+
+  focusedIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.theme.contrastStrongest,
+    contents: calendar24
+  }
+}
+
+@variant
+iconError = frame : textField {
+  left: 988.2896px,
+  top: 1010px,
+  padding-left: Spacing.padding.small,
+  padding-right: Spacing.padding.small,
+  border[0].color: Colors.palette.red70,
+  border[0].width: 1.5px,
+  overrides: [insert(errorIcon, after = .nil)],
+
+  textField.label {
+    fill[0].color: Colors.palette.red70
+  }
+
+  errorIcon = icon {
+    left: 981px,
+    top: 782px,
+    width: 24px,
+    height: 24px,
+    fill: Colors.palette.red70,
+    contents: calendar24
+  }
+}
+
+@variant
+withButton = frame : textField {
+  left: 1139px,
+  top: 770px,
+  padding-right: Spacing.padding.xsmall,
+  layout.justify-content: .space-between,
+  overrides: [insert(submitButton, after = textField.label)],
+
+  submitButton = frame : button.smallPrimaryRounded {
+    left: 52.3381px,
+    top: 5.85px,
+
+    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+      contents: arrowUp20
+    }
+  }
+}
+
+@variant
+buttonPlaceholder = frame : textField {
+  left: 1142.4px,
+  top: 850px,
+  padding-right: Spacing.padding.xsmall,
+  layout.justify-content: .space-between,
+  overrides: [insert(GroupedStack, after = textField.label)],
+
+  textField.label {
+    fill[0].color: Colors.theme.contrastMuted
+  }
+}
+
+GroupedStack = frame {
+  height: .auto,
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
+  overflow: .visible,
+  children: [small, placeholderButton],
+
+  small = frame : button.smallIcon {
+    left: 59.6px,
+    top: 6px,
+
+    button.smallIcon.smallIconGlyph {
+      contents: emoji20
+    }
+  }
+
+  placeholderButton = frame : button.smallPrimaryRounded {
+    left: 52.3381px,
+    top: 5.85px,
+
+    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+      contents: arrowUp20
+    }
+  }
+}

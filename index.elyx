@@ -2,20 +2,20 @@ import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/typography.elyx" as Typography
 import "tokens/radius.elyx" as Radius
-import "components/button.elyx" as button
+import "design/controls/button.elyx" as button
 import "tokens/colors.elyx" as colors
-import "blocks/cardInfo.elyx" as cardInfo
+import "design/blocks/cardInfo.elyx" as cardInfo
 import "images/intro/introBG.png" as introBG
 import "images/intro/elyxLogo.png" as elyxLogo
 
-componentExample = frame : button.medium {
-  doc: "A simple button as a component.",
+controlExample = frame : button.medium {
+  doc: "A simple button control.",
   left: -8px,
   top: 489px
 }
 
 blockExample = frame : cardInfo.reviewCard {
-  doc: "A review card as a block, containing multiple components.",
+  doc: "A review card block composed from controls.",
   left: 282px,
   top: 489px
 }
@@ -101,7 +101,7 @@ welcome_2 = frame {
     fill: rgb(7.0588%, 7.0588%, 7.0588%),
     corner-radius: 12px,
     padding: 8px,
-    children: [componentsCard_2, blocksCard_2, screensCard_2]
+    children: [controlsCard_2, blocksCard_2, screensCard_2]
   }
 }
 
@@ -132,7 +132,7 @@ GroupedStack = frame {
   }
 }
 
-componentsCard_2 = frame {
+controlsCard_2 = frame {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -140,24 +140,24 @@ componentsCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [componentsLabel_2, componentsDescription_2],
+  children: [controlsLabel_2, controlsDescription_2],
 
-  componentsLabel_2 = text {
+  controlsLabel_2 = text {
     left: 69px,
     top: 45px,
     fill: colors.primitives.white,
-    contents: Strings.scaffold.componentsTitle,
+    contents: Strings.scaffold.controlsTitle,
     font-size: Typography.fontSize.small,
     font-style: "SemiBold",
     letter-spacing: 10%
   }
 
-  componentsDescription_2 = text {
+  controlsDescription_2 = text {
     left: 0px,
     top: 65px,
     width: 100%,
     fill: colors.primitives.white70,
-    contents: Strings.scaffold.componentsDescription,
+    contents: Strings.scaffold.controlsDescription,
     font-size: Typography.fontSize.medium,
     line-height: 1.5
   }

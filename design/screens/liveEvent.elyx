@@ -1,0 +1,194 @@
+import "tokens/strings.elyx" as Strings
+import "tokens/spacing.elyx" as Spacing
+import "design/blocks/videoPlayer.elyx" as videoPlayer
+import "tokens/colors.elyx" as colors
+import "design/controls/button.elyx" as button
+import "design/blocks/chatWindow.elyx" as chatWindow
+import "design/blocks/userSummary.elyx" as userSummary
+import "design/blocks/siteHeader.elyx" as siteHeader
+import "icons/20 pixels/pause-20.svg" as pause20
+import "design/blocks/sidebar.elyx" as sideBar
+import "images/misc/bikeBGBanner.jpg" as bikeBGBanner
+
+export liveEvent = frame {
+  left: -642.9999px,
+  top: -511px,
+  width: 1440px,
+  height: 810px,
+  layout: {direction: .column, align-items: .center},
+  fill: colors.theme.base,
+  children: [siteHeader_2, Content],
+
+  siteHeader_2 = frame : siteHeader.accountHeader {
+    left: 0px,
+    top: 43px,
+    width: 100%,
+    fill[0].color: colors.theme.base,
+
+    siteHeader.accountHeader.accountDivider {
+      overrides: [remove(siteHeader.divider.horizontal.horizontalLine)]
+    }
+
+    siteHeader.accountContent {
+      siteHeader.accountNav {
+        siteHeader.accountNav.accountResources {
+          siteHeader.menu.label {
+            contents: Strings.navigation.playlists
+          }
+        }
+
+        siteHeader.accountNav.accountCompany {
+          siteHeader.menu.label {
+            contents: Strings.navigation.categories
+          }
+        }
+
+        siteHeader.accountNav.accountPricing {
+          siteHeader.menu.label {
+            contents: Strings.navigation.browse
+          }
+        }
+
+        siteHeader.accountNav.accountProduct {
+          siteHeader.menu.label {
+            contents: Strings.status.liveNow
+          }
+        }
+      }
+    }
+  }
+}
+
+Content = frame {
+  left: 226.9999px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {direction: .row},
+  corner-radius: 0px,
+  overflow: .visible,
+  children: [sidebar, Video, chat],
+
+  sidebar = frame : sideBar.sidebarLiveEvent {
+    left: 751px,
+    top: 0px,
+    height: 100%,
+    corner-radius: 0px,
+    border[0].visible: .false,
+    fill[0].visible: .false
+  }
+
+  chat = frame : chatWindow.liveChat {left: 0px, top: 0px, width: 100%, height: 100%}
+}
+
+Video = frame {
+  left: 0px,
+  top: 0px,
+  width: 65%,
+  height: 100%,
+  layout: {direction: .column, align-items: .end, item-gap: Spacing.gap.xxsmall},
+  overflow: .scroll,
+  children: [video, About],
+
+  video = frame : videoPlayer.videoPlayer {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 603px,
+    corner-radius: 0px,
+
+    videoPlayer.videoPlayer.controls {
+      videoPlayer.playbackControl.scrubber {
+        videoPlayer.playbackControl.scrubber.playButton {
+          videoPlayer.playbackControl.button.smallIcon.smallIconGlyph {
+            contents: pause20
+          }
+        }
+
+        videoPlayer.playbackControl.scrubber.progressSlider {
+          videoPlayer.playbackControl.slider.slider.track {
+            fill[0].opacity: .nil,
+            fill[0].mix-blend-mode: .nil
+          }
+        }
+      }
+    }
+
+    videoPlayer.headerRow {
+      videoPlayer.headerRow.eventHeader {
+        videoPlayer.header.smallLeft.smallSubtitle {
+          contents: Strings.liveEvent.streamTitle
+        }
+
+        videoPlayer.header.smallLeft.smallTitle {
+          contents: "CAM 3"
+        }
+      }
+    }
+  }
+}
+
+About = frame {
+  left: 0px,
+  top: 654px,
+  width: 100%,
+  height: 320px,
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
+  fill: {image: {ref: bikeBGBanner}},
+  overflow: .visible,
+  padding: Spacing.padding.xlarge,
+  children: [small, GroupedStack],
+
+  small = frame : userSummary.small {
+    left: -238px,
+    top: 333px,
+
+    userSummary.small.smallHeader {
+      userSummary.header.smallLeft.smallSubtitle {
+        fill[0].color: colors.primitives.white70,
+        contents: Strings.liveEvent.channelDescription
+      }
+
+      userSummary.header.smallLeft.smallTitle {
+        fill[0].color: colors.primitives.white,
+        contents: "BikeNOW"
+      }
+
+      width: .auto
+    }
+  }
+}
+
+GroupedStack = frame {
+  width: 100%,
+  layout: {item-gap: Spacing.gap.small},
+  overflow: .visible,
+  children: [small_2, small_3, small_4],
+
+  small_2 = frame : button.small {
+    left: 254.9999px,
+    top: 58px,
+
+    button.small.smallLabel {
+      contents: Strings.actions.follow
+    }
+  }
+
+  small_3 = frame : button.smallPrimary {
+    left: 274.9999px,
+    top: 78px,
+
+    button.small.smallLabel {
+      contents: Strings.actions.giftSubscription
+    }
+  }
+
+  small_4 = frame : button.smallPrimary {
+    left: 294.9999px,
+    top: 98px,
+
+    button.small.smallLabel {
+      contents: Strings.actions.subscribeDiscount
+    }
+  }
+}

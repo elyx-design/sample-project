@@ -1,0 +1,90 @@
+import "tokens/strings.elyx" as Strings
+import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
+import "design/blocks/authForm.elyx" as AuthForm
+import "tokens/colors.elyx" as Colors
+import "design/blocks/avatarGroup.elyx" as profileGroup
+import "images/background/desert.png" as desert
+import "design/screens/AIchat.elyx" as AIchat
+
+// Demonstrates a complete screen composed from reusable blocks, including a
+// connection to the AI chat screen.
+@draw-connections
+__canvas__
+
+export signInScreen = frame {
+  left: -16px,
+  top: 147px,
+  width: 1440px,
+  height: 810px,
+  layout: {direction: .column, align-items: .center, item-gap: 48px},
+  fill: [Colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: desert}}],
+  padding-top: 0px,
+  children: content
+}
+
+content = frame {
+  left: 0px,
+  top: 0px,
+  width: 1280px,
+  height: 100%,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.huge
+  },
+  overflow: .visible,
+  children: [signInForm, activeUsers, footerLinks],
+
+  signInForm = frame : AuthForm.signInForm {
+    left: 373px,
+    top: 389px,
+    width: 32%,
+
+    AuthForm.content {
+      AuthForm.content.signInButton {
+        connections[0].target: AIchat.AIChat
+      }
+    }
+  }
+
+  activeUsers = frame : profileGroup.labelBottom {
+    left: 600px,
+    top: 962px,
+
+    profileGroup.bottomCount {
+      profileGroup.bottomCount.bottomCountText {
+        fill[0].color: Colors.primitives.white70,
+        contents: "+28k online"
+      }
+    }
+  }
+}
+
+footerLinks = frame {
+  left: 569.5px,
+  top: 0px,
+  width: .auto,
+  height: .auto,
+  layout: {align-items: .center, item-gap: 18px},
+  children: [privacy, terms, help],
+
+  privacy = text {
+    fill: Colors.primitives.white50,
+    contents: Strings.navigation.privacy,
+    font-size: Typography.fontSize.small
+  }
+
+  terms = text {
+    fill: Colors.primitives.white50,
+    contents: Strings.navigation.terms,
+    font-size: Typography.fontSize.small
+  }
+
+  help = text {
+    fill: Colors.primitives.white50,
+    contents: Strings.navigation.help,
+    font-size: Typography.fontSize.small
+  }
+}

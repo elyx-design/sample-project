@@ -1,0 +1,132 @@
+import "tokens/strings.elyx" as Strings
+import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
+import "design/controls/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "design/controls/slider.elyx" as slider
+import "design/controls/product.elyx" as product
+
+export productCard = frame : cardBackground.cardBackground {
+  left: 140px,
+  top: 134px,
+  width: 565px,
+  layout.direction: .row,
+  layout.item-gap: Spacing.gap.xlarge,
+  overrides: [insert(productPreview, after = .nil), insert(bookDetails, after = productPreview)],
+
+  productPreview = frame : product.product {left: -63px, top: -86px}
+}
+
+bookDetails = frame {
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, item-gap: Spacing.gap.large},
+  children: [pageProgress, bookInfo, readingProgress, notes],
+
+  pageProgress = text {
+    left: 0px,
+    top: 62px,
+    fill: colors.theme.contrastAlpha25,
+    contents: "Page 214 of 344",
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold"
+  }
+}
+
+bookInfo = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: Spacing.gap.xsmall},
+  children: [title, author],
+
+  title = text {
+    left: 0px,
+    top: 413px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: "Hidden Treasures",
+    font-size: 28,
+    font-style: "SemiBold"
+  }
+
+  author = text {
+    left: 844px,
+    top: 393px,
+    fill: colors.theme.contrastAlpha50,
+    contents: "by Eric Mateo",
+    font-size: Typography.fontSize.medium,
+    font-style: "SemiBold"
+  }
+}
+
+readingProgress = frame {
+  left: 0px,
+  top: 98px,
+  width: 100%,
+  height: .auto,
+  layout: {direction: .column, justify-content: .center, item-gap: 6px},
+  children: [progressLabels, progressSlider],
+
+  progressSlider = frame : slider.slider {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+
+    slider.slider.track {
+      width: 42%
+    }
+  }
+}
+
+progressLabels = frame {
+  width: 100%,
+  layout: {justify-content: .space-between, item-gap: Spacing.gap.medium},
+  children: [progressLabel, progressValue],
+
+  progressLabel = text {
+    left: 0px,
+    top: 16px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastAlpha50,
+    contents: Strings.labels.progress,
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold"
+  }
+
+  progressValue = text {
+    left: 20px,
+    top: 36px,
+    width: .auto,
+    height: .auto,
+    fill: colors.theme.contrastAlpha50,
+    contents: "42%",
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold",
+    align: .right
+  }
+}
+
+notes = frame {
+  width: 100%,
+  layout: {direction: .column, item-gap: Spacing.gap.small},
+  children: [notesLabel, notesBody],
+
+  notesLabel = text {
+    left: 652px,
+    top: 688px,
+    fill: colors.theme.contrastStrongest,
+    contents: Strings.navigation.notes,
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold"
+  }
+
+  notesBody = text {
+    left: 0px,
+    top: 708px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: "The passages about the coastline stayed with me long after I closed it, the kind of writing that makes you look up from the page and picture the place in full. A book to read slowly, letting each cove and cliff sink in before moving to the next, never rushing toward the final chapter.",
+    font-size: Typography.fontSize.small,
+    line-height: Typography.lineHeight.relaxed
+  }
+}

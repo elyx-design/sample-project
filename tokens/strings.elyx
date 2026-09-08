@@ -168,13 +168,15 @@ export pricingPage = tokens {
 export scaffold = tokens {
   welcomeTitle: "Welcome to the Elyx scaffold",
   welcomeDescription: "This project demonstrates best practices for organizing and building with .elyx files.",
-  structureDescription: "The project is organized into folders. The three most important folders are components, blocks, and screens. Together, they form the foundation of the UI.",
-  componentsTitle: "COMPONENTS",
-  componentsDescription: "Components are the smallest reusable UI elements in the Elyx design system: the atoms of the interface. Examples include buttons, text fields, and badges.",
+  structureDescription: "UI files live under design/ in four layers: controls, blocks, screens, and flows.",
+  controlsTitle: "CONTROLS",
+  controlsDescription: "Controls are focused reusable UI elements such as buttons, text fields, tags, and avatars.",
   blocksTitle: "BLOCKS",
-  blocksDescription: "If components are atoms, blocks are molecules: reusable interface sections such as panels, menus, toasts, and alerts.",
+  blocksDescription: "Blocks combine controls into reusable interface sections such as panels, menus, forms, and alerts.",
   screensTitle: "SCREENS",
-  screensDescription: "Screens represent complete views or standalone states a user sees at a given moment, such as Sign in, Dashboard, Settings, or Account.",
+  screensDescription: "Screens are complete views or standalone states such as Sign in, Dashboard, Settings, or Account.",
+  flowsTitle: "FLOWS",
+  flowsDescription: "Flows connect screens into multi-step journeys and hold flow-specific annotations.",
   assetsDescription: "The project also includes folders for assets such as images and icons. Add a /fonts folder if the project needs custom fonts.",
   tokensDescription: "The tokens/ folder contains related token families, such as color, typography, spacing, and radius, that are referenced throughout the project."
 }

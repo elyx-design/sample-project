@@ -1,0 +1,505 @@
+import "tokens/spacing.elyx" as Spacing
+import "tokens/colors.elyx" as Colors
+import "design/blocks/videoPlayer.elyx" as videoPlayer
+import "design/controls/slider.elyx" as slider
+import "design/controls/timelineRuler.elyx" as timelineRuler
+import "design/controls/videoTrack.elyx" as videoTrack
+import "images/background/bird.jpg" as bird
+import "design/controls/track.elyx" as mediaTrack
+import "design/blocks/imageGallery.elyx" as imageGallery
+import "images/thumbnails/thumb08.jpg" as thumb08
+import "icons/20 pixels/image-20.svg" as image20
+import "images/thumbnails/thumb02.jpg" as thumb02
+import "icons/20 pixels/video-20.svg" as video20
+import "icons/20 pixels/pen-20.svg" as pen20
+import "icons/20 pixels/pointer-20.svg" as pointer20
+import "icons/24 pixels/music-24.svg" as music24
+import "icons/24 pixels/text-24.svg" as text24
+import "design/blocks/sidebar.elyx" as sidebar
+import "icons/24 pixels/notes-24.svg" as notes24
+
+export videoEditing = frame {
+  left: -689px,
+  top: -230px,
+  width: 1440px,
+  height: 810px,
+  layout: {justify-content: .center},
+  fill: Colors.primitives.black,
+  children: [editingSidebar, workspace],
+
+  editingSidebar = frame : sidebar.compact {
+    left: 0px,
+    top: 0px,
+    height: 100%,
+
+    sidebar.compactContent {
+      sidebar.compactNavigation {
+        sidebar.compactNavigation.history {
+          sidebar.button.mediumPlainIcon.mediumPlainIconGlyph {
+            contents: notes24
+          }
+        }
+      }
+    }
+  }
+}
+
+workspace = frame {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center},
+  shadow: {
+    drop-shadow: {
+      color: rgb(0%, 0%, 0%, 10%),
+      offset: point(0px, 5px),
+      blur-radius: 5px,
+      spread: 0px
+    }
+  },
+  corner-radius: 0px,
+  corner-smoothing: 0.5,
+  children: [preview, timeline],
+
+  timeline = frame {
+    width: 100%,
+    height: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+    fill: {color: Colors.theme.contrastStrongest, visible: .false},
+    padding-top: Spacing.padding.small,
+    children: [ruler, tracks]
+  }
+}
+
+preview = frame {
+  left: 0px,
+  top: 0px,
+  height: 60%,
+  layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.xxsmall},
+  fill: {color: Colors.theme.contrastStrongest, visible: .false},
+  children: [player, gallery],
+
+  player = frame : videoPlayer.videoPlayer {
+    left: -3772px,
+    top: 0px,
+    width: 60%,
+    height: 100%,
+    fill[0].image.ref: bird,
+    fill[1].linear-gradient.stops[1].color: Colors.gradients.overlayEnd,
+
+    videoPlayer.videoPlayer.controls {
+      videoPlayer.playbackControl.tools {
+        videoPlayer.playbackControl.tools.likeButton {
+          videoPlayer.playbackControl.button.smallIcon.smallIconGlyph {
+            contents: pen20
+          }
+        }
+
+        videoPlayer.playbackControl.tools.settingsButton {
+          videoPlayer.playbackControl.button.smallIcon.smallIconGlyph {
+            contents: pointer20
+          }
+        }
+      }
+
+      videoPlayer.playbackControl.scrubber {
+        @use-variant(slider.thumb)
+        videoPlayer.playbackControl.scrubber.progressSlider {}
+
+        videoPlayer.playbackControl.scrubber.progressSlider {
+          videoPlayer.playbackControl.slider.thumb.handle_2 {
+            videoPlayer.playbackControl.slider.handle.thumbHandle_2 {
+              fill[0].color: Colors.primitives.white,
+              border[0].visible: .false
+            }
+          }
+        }
+      }
+    }
+
+    videoPlayer.headerRow {
+      videoPlayer.headerRow.eventHeader {
+        width: .auto,
+
+        videoPlayer.header.smallLeft.smallSubtitle {
+          contents: "4K landscape film, cinematic 21:9"
+        }
+
+        videoPlayer.header.smallLeft.smallTitle {
+          contents: "Style in Motion"
+        }
+      }
+
+      videoPlayer.headerRow.liveStatus {
+        display: .hidden
+      }
+    }
+  }
+
+  gallery = frame : imageGallery.imageGallery {
+    left: 20px,
+    top: 0px,
+    width: 40%,
+    height: 100%,
+
+    imageGallery.bottomRow {
+      imageGallery.bottomRow.bottomCenter {
+        fill[0].image.ref: thumb02,
+
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: video20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Orange Bird"
+        }
+      }
+
+      imageGallery.bottomRow.bottomRight {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: video20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Red-flanked Bluetail"
+        }
+      }
+
+      imageGallery.bottomRow.bottomLeft {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: image20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Great Horned Owl"
+        }
+      }
+    }
+
+    imageGallery.middleRow {
+      imageGallery.middleRow.middleRight {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: image20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Blue-and-yellow Macaw"
+        }
+      }
+
+      imageGallery.middleRow.middleCenter {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: video20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Bald Eagle.wave"
+        }
+      }
+
+      imageGallery.middleRow.middleLeft {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: image20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Northern Cardinal\nBody Red"
+        }
+      }
+    }
+
+    imageGallery.topRow {
+      imageGallery.topRow.topRight {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: video20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Toco Toucan"
+        }
+      }
+
+      imageGallery.topRow.topCenter {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: video20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Eurasian Blue"
+        }
+      }
+
+      imageGallery.topRow.topLeft {
+        imageGallery.thumbnailImage.actions {
+          imageGallery.thumbnailImage.actions.favoriteIcon {
+            contents: video20
+          }
+        }
+
+        imageGallery.thumbnailImage.thumbnailImage.imageName {
+          contents: "Lilac"
+        }
+      }
+    }
+  }
+}
+
+ruler = frame : timelineRuler.timelineRuler {
+  left: 0px,
+  top: 442.5px,
+  width: 100%,
+  overflow: .visible,
+  padding-left: Spacing.padding.xxlarge,
+  padding-right: 0px,
+  overrides: [
+    insert(marker4, after = timelineRuler.timelineRuler.marker3),
+    insert(marker5, after = marker4),
+    insert(marker6, after = marker5),
+    insert(marker7, after = marker6),
+    insert(marker8, after = marker7),
+    insert(marker9, after = marker8),
+    insert(timelinePlayHead, after = marker9)
+  ],
+
+  timelineRuler.timelineRuler.marker3 {
+    timelineRuler.timeMarker.label {
+      contents: "3"
+    }
+  }
+
+  timelineRuler.timelineRuler.marker2 {
+    timelineRuler.timeMarker.label {
+      contents: "2"
+    }
+  }
+
+  timelineRuler.timelineRuler.marker1 {
+    timelineRuler.timeMarker.label {
+      contents: "1"
+    }
+  }
+
+  marker4 = frame : timelineRuler.timeMarker {
+    left: 58px,
+    top: 535px,
+    width: 100%,
+
+    timelineRuler.timeMarker.label {
+      contents: "4"
+    }
+  }
+
+  marker5 = frame : timelineRuler.timeMarker {
+    left: 133px,
+    top: 535px,
+    width: 100%,
+
+    timelineRuler.timeMarker.label {
+      contents: "5"
+    }
+  }
+
+  marker6 = frame : timelineRuler.timeMarker {
+    left: 197.2858px,
+    top: 535px,
+    width: 100%,
+
+    timelineRuler.timeMarker.label {
+      contents: "6"
+    }
+  }
+
+  marker7 = frame : timelineRuler.timeMarker {
+    left: 217.2858px,
+    top: 555px,
+    width: 100%,
+
+    timelineRuler.timeMarker.label {
+      contents: "7"
+    }
+  }
+
+  marker8 = frame : timelineRuler.timeMarker {
+    left: 306.508px,
+    top: 555px,
+    width: 100%,
+
+    timelineRuler.timeMarker.label {
+      contents: "8"
+    }
+  }
+
+  marker9 = frame : timelineRuler.timeMarker {
+    left: 326.508px,
+    top: 575px,
+    width: 100%,
+
+    timelineRuler.timeMarker.label {
+      contents: "9"
+    }
+  }
+}
+
+tracks = frame {
+  width: 100%,
+  height: 100%,
+  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  padding: [Spacing.padding.xxlarge, 0px],
+  children: [videoTrackRow, audioTrack, titleTrack],
+
+  audioTrack = frame : mediaTrack.track {
+    left: 4241.5px,
+    top: 788px,
+    width: 48.3773%,
+    fill[0].color: Colors.palette.magenta,
+
+    mediaTrack.content {
+      mediaTrack.dateLabel {
+        display: .hidden
+      }
+
+      mediaTrack.content.left {
+        mediaTrack.label {
+          mediaTrack.label.typeIcon {
+            contents: music24
+          }
+
+          mediaTrack.label.trackName {
+            contents: "ambientForest.mp3"
+          }
+        }
+      }
+    }
+  }
+
+  titleTrack = frame : mediaTrack.track {
+    left: -13207.5px,
+    top: 808px,
+    width: 59.2292%,
+    fill[0].color: .aqua,
+
+    mediaTrack.content {
+      mediaTrack.dateLabel {
+        display: .hidden
+      }
+
+      mediaTrack.content.left {
+        mediaTrack.label {
+          mediaTrack.label.typeIcon {
+            contents: text24
+          }
+
+          mediaTrack.label.trackName {
+            contents: "Wild Birds"
+          }
+        }
+      }
+    }
+  }
+}
+
+videoTrackRow = frame {
+  width: 100%,
+  layout: {align-items: .center, item-gap: Spacing.gap.small},
+  padding-left: 80px,
+  children: [birdTrack, thumbnailTrack],
+
+  birdTrack = frame : videoTrack.videoTrack {
+    left: 7941px,
+    top: 763px,
+    width: 23.6364%,
+
+    videoTrack.filmstrip {
+      videoTrack.filmstrip.frameThree {
+        fill[0].image.ref: bird
+      }
+
+      videoTrack.filmstrip.frameTwo {
+        fill[0].image.ref: bird
+      }
+
+      videoTrack.filmstrip.frameOne {
+        fill[0].image.ref: bird
+      }
+    }
+  }
+
+  thumbnailTrack = frame : videoTrack.videoTrack {
+    left: 7961px,
+    top: 783px,
+    width: 23.6364%,
+
+    videoTrack.filmstrip {
+      videoTrack.filmstrip.frameThree {
+        fill[0].image.ref: thumb08
+      }
+
+      videoTrack.filmstrip.frameTwo {
+        fill[0].image.ref: thumb08
+      }
+
+      videoTrack.filmstrip.frameOne {
+        fill[0].image.ref: thumb08
+      }
+    }
+  }
+}
+
+timelinePlayHead = frame {
+  left: 385px,
+  top: -5px,
+  width: 12px,
+  height: 281px,
+  ignore-stack: .true,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  padding-top: Spacing.padding.medium,
+  children: [line, handle],
+
+  line = shape {
+    left: 6px,
+    top: 0px,
+    width: 2px,
+    height: 100%,
+    fill: [
+      Colors.palette.lime,
+      {
+        linear-gradient: {
+          from: point(50%, 88.7466%),
+          to: point(50%, 100%),
+          stops: [stop(0%, .transparent), stop(100%, Colors.gradients.overlayEnd)]
+        }
+      }
+    ],
+    border: {color: Colors.theme.contrastAlpha70, width: 0.5px, position: .outside},
+    type: .rect
+  }
+
+  handle = shape {
+    left: 0px,
+    top: 0px,
+    width: 12px,
+    height: 12px,
+    ignore-stack: .true,
+    fill: Colors.theme.contrastAlpha70,
+    border: {color: Colors.palette.lime, width: 2px},
+    type: .ellipse
+  }
+}

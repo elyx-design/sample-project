@@ -2,28 +2,30 @@
 
 Welcome to the Elyx scaffold.
 
-This project demonstrates best practices for organizing and building with .elyx files.
+This project demonstrates how to organize and build `.elyx` files. UI files live under `design/` in four layers:
 
-The project is organized into folders. The three most important folders are components,
-blocks, and screens. Together, they form the foundation of the UI.
+```text
+design/
+  controls/
+  blocks/
+  screens/
+  flows/
+```
 
-## Components
+## Controls
 
-Components are the smallest reusable UI elements in the Elyx design system: the atoms of
-the interface. Examples include buttons, text fields, and badges.
+Controls are the smallest reusable UI elements. Buttons, text fields, tags, avatars, and similar elements belong in `design/controls/`.
 
 ## Blocks
 
-If components are atoms, blocks are molecules: reusable interface sections such as
-panels, menus, toasts, and alerts.
+Blocks combine controls into reusable interface sections such as cards, menus, forms, and navigation areas. They belong in `design/blocks/`.
 
 ## Screens
 
-Screens represent complete views or standalone states a user sees at a given moment,
-such as Sign in, Dashboard, Settings, or Account.
+Screens are complete views or standalone states. Sign in, pricing, and editor views belong in `design/screens/`.
 
-The project also includes folders for assets such as images and icons. Add a `/fonts`
-folder if the project needs custom fonts.
+## Flows
 
-The `tokens/` folder contains related token families, such as color, typography, spacing,
-and radius, that are referenced throughout the project.
+Flows connect screens into journeys. Use `design/flows/` when a prototype needs multi-screen paths or flow-specific annotations.
+
+Tokens and assets remain at the project root. `tokens/` contains shared colors, typography, spacing, strings, and radii. Images and icons live in their matching asset folders.

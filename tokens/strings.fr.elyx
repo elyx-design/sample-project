@@ -10,13 +10,15 @@ __canvas__
 export scaffold = tokens : strings.scaffold {
   welcomeTitle: "Bienvenue dans le projet de démarrage Elyx",
   welcomeDescription: "Ce document présente les bonnes pratiques pour configurer les fichiers .elyx dans votre projet",
-  structureDescription: "Comme vous pouvez le voir dans la liste des projets à gauche, les fichiers sont organisés en groupes. Les plus importants sont les composants, les blocs et les écrans, qui constituent les trois principaux éléments de structuration de vos composants.",
-  componentsTitle: "COMPOSANTS",
-  componentsDescription: "Les composants sont les plus petits éléments d’interface réutilisables du système de conception Elyx. Considérez-les comme des atomes : boutons, champs de texte, badges, etc.",
+  structureDescription: "Les fichiers d’interface sont organisés sous design/ en quatre niveaux : contrôles, blocs, écrans et parcours.",
+  controlsTitle: "CONTRÔLES",
+  controlsDescription: "Les contrôles sont des éléments d’interface réutilisables et ciblés, comme les boutons, champs de texte, étiquettes et avatars.",
   blocksTitle: "BLOCS",
-  blocksDescription: "Si les composants sont des atomes, les blocs sont des molécules. Ils représentent des sections d’interface telles que des panneaux, menus, notifications ou alertes, composées de plusieurs composants.",
+  blocksDescription: "Les blocs combinent des contrôles en sections réutilisables, comme les panneaux, menus, formulaires et alertes.",
   screensTitle: "ÉCRANS",
-  screensDescription: "Les écrans représentent ce que l’utilisateur voit à un instant donné, par exemple une fenêtre d’application, un panneau ou un état autonome : connexion, tableau de bord, paramètres, compte, etc.",
+  screensDescription: "Les écrans sont des vues complètes ou des états autonomes, comme Connexion, Tableau de bord, Paramètres ou Compte.",
+  flowsTitle: "PARCOURS",
+  flowsDescription: "Les parcours relient les écrans en séquences et contiennent les annotations propres au parcours.",
   assetsDescription: "Le projet contient également des dossiers pour d’autres ressources, comme les images et les icônes. Pour ajouter des polices, créez un dossier /fonts.",
   tokensDescription: "Enfin, le dossier tokens/ regroupe les différentes familles de jetons — couleurs, typographie, espacement et rayons — utilisées dans l’ensemble du projet."
 }

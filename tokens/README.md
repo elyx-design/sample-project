@@ -2,13 +2,14 @@
 
 Tokens are shared values referenced throughout the Elyx design system. They
 provide a single source of truth for colors, strings, spacing, typography, and
-corner radii, and sit beneath components, blocks, and screens:
+corner radii, and sit beneath the design hierarchy:
 
 ```
 tokens / icons / images
-  -> components
-    -> blocks
-      -> screens
+  -> design/controls
+    -> design/blocks
+      -> design/screens
+        -> design/flows
 ```
 
 Use `tokens/` for values that should remain consistent across multiple files.
@@ -35,5 +36,5 @@ as demonstrated by `colors.dark.elyx` and `strings.fr.elyx`.
 - Store reusable values here, but keep component structure and screen-specific
   layout in their appropriate folders.
 
-Reusable UI elements belong in `components/`, larger interface sections belong
-in `blocks/`, and complete views or standalone states belong in `screens/`.
+Reusable UI elements belong in `design/controls/`, larger interface sections
+belong in `design/blocks/`, and complete views belong in `design/screens/`.

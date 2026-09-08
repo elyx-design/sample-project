@@ -1,0 +1,61 @@
+import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
+import "design/controls/cardBackground.elyx" as cardBackground
+import "tokens/colors.elyx" as colors
+import "design/blocks/chatBubble.elyx" as chatBubble
+import "icons/24 pixels/robot-24.svg" as robot24
+
+export aiChat = frame {
+  left: -465px,
+  top: 429px,
+  width: 550px,
+  height: .auto,
+  min-width: 100px,
+  min-height: 60px,
+  layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
+  corner-radius: cardBackground.Radius.radius.xlarge,
+  slot: .true,
+  restrict-children: .true,
+  padding: [0px, Spacing.padding.medium],
+  children: [userMessage, assistantResponse, layer1],
+
+  userMessage = frame : chatBubble.user {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    overrides: [remove(chatBubble.chatBubble.profileAvatar)],
+
+    chatBubble.message {
+      chatBubble.message.messageText {
+        contents: "Help me make a grocery list for the week"
+      }
+    }
+  }
+
+  assistantResponse = text {
+    left: 12px,
+    top: 60px,
+    width: 100%,
+    fill: colors.theme.contrastStrongest,
+    contents: "Perfect!\n\nI've put together a complete grocery list for the week based on what you usually eat, with a good balance of staples, fresh produce, and protein so you'll have everything you need. Here's your list:\n• Bread\n• Eggs\n• Rice\n• Beans\n• Chicken breast\n• Lettuce",
+    line-height: Typography.lineHeight.relaxed
+  }
+}
+
+layer1 = frame {
+  left: 0px,
+  top: 331px,
+  width: 8.7273%,
+  layout: {align-items: .center},
+  overflow: .visible,
+  children: assistantIcon,
+
+  assistantIcon = icon {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 24px,
+    fill: colors.theme.contrastStrongest,
+    contents: robot24
+  }
+}

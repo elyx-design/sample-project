@@ -1,0 +1,223 @@
+import "tokens/strings.elyx" as Strings
+import "tokens/spacing.elyx" as Spacing
+import "tokens/colors.elyx" as colors
+import "design/blocks/planCard.elyx" as planCard
+import "tokens/radius.elyx" as Radius
+import "icons/24 pixels/dashboard.svg" as dashboard
+import "icons/24 pixels/processor.svg" as processor
+import "design/blocks/header.elyx" as header
+import "images/background/sea.jpg" as sea
+
+export pricingPage = frame {
+  left: 130.5px,
+  top: 163px,
+  width: 1440px,
+  height: 810px,
+  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 34px},
+  fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: sea}}],
+  children: [pricingHeader, pricingCards],
+
+  pricingHeader = frame : header.mediumCenter {
+    left: 742.5px,
+    top: 121px,
+    width: 62.5%,
+
+    header.mediumLeft.mediumSubtitle {
+      contents: Strings.pricingPage.description
+    }
+
+    header.mediumLeft.mediumTitle {
+      contents: Strings.pricingPage.title
+    }
+  }
+}
+
+pricingCards = frame {
+  left: 125.5px,
+  top: 202px,
+  layout: {justify-content: .center, align-items: .center},
+  fill: colors.theme.baseAlpha50,
+  border: {color: colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  shadow: {
+    drop-shadow: {
+      color: colors.primitives.blackAlpha10,
+      offset: point(0px, 5px),
+      blur-radius: 5px,
+      spread: 0px
+    }
+  },
+  filter: {type: .background-blur, radius: 40px},
+  corner-radius: Radius.radius.xlarge,
+  padding: Spacing.padding.medium,
+  children: [freePlan, proPlan, businessPlan],
+
+  freePlan = frame : planCard.planCard {
+    left: 0px,
+    top: 0px,
+    width: 380px,
+    height: 100%,
+    corner-radius: [20px, 0px, 0px, 20px],
+
+    planCard.planCard.manageButton {
+      planCard.button.medium.mediumLabel {
+        contents: Strings.pricingPage.freeRegistration
+      }
+    }
+
+    planCard.planContent {
+      planCard.planContent.planDetails {
+        planCard.pricingCopy {
+          planCard.priceRow {
+            planCard.priceRow.price {
+              contents: "$0"
+            }
+          }
+        }
+      }
+
+      planCard.planContent.planSummary {
+        planCard.planHeader {
+          overrides: [remove(planCard.planHeader.badge)]
+        }
+      }
+    }
+  }
+}
+
+proPlan = frame : planCard.planCard {
+  left: 420px,
+  top: 0.9999px,
+  width: 380px,
+  height: 498px,
+  corner-radius: 0px,
+
+  planCard.planCard.manageButton {
+    planCard.button.medium.mediumLabel {
+      contents: Strings.actions.getStarted
+    }
+  }
+
+  planCard.planContent {
+    planCard.planContent.planDetails {
+      planCard.features {
+        overrides: [
+          insert(projectsFeature_4, after = planCard.features.projectsFeature_4),
+          insert(projectsFeature_5, after = projectsFeature_4)
+        ]
+      }
+
+      planCard.pricingCopy {
+        planCard.pricingCopy.description {
+          contents: Strings.plans.proDescription
+        }
+      }
+    }
+
+    planCard.planContent.planSummary {
+      planCard.planIcon {
+        planCard.planIcon.planGlyph {
+          left: 6px,
+          top: 33px,
+          contents: dashboard
+        }
+      }
+
+      planCard.planHeader {
+        planCard.planHeader.planName {
+          contents: Strings.plans.pro
+        }
+      }
+    }
+  }
+
+  projectsFeature_4 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 115px,
+
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.hundredGigabytesStorage
+    }
+  }
+
+  projectsFeature_5 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 140px,
+
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.versionHistory
+    }
+  }
+}
+
+businessPlan = frame : planCard.planCard {
+  left: 840px,
+  top: 0px,
+  width: 380px,
+  height: 100%,
+  corner-radius: [0px, Radius.radius.large, Radius.radius.large, 0px],
+
+  planCard.planCard.manageButton {
+    planCard.button.medium.mediumLabel {
+      contents: Strings.actions.contactSales
+    }
+  }
+
+  planCard.planContent {
+    planCard.planContent.planDetails {
+      planCard.features {
+        overrides: [
+          insert(projectsFeature_6, after = planCard.features.projectsFeature_4),
+          insert(projectsFeature_7, after = projectsFeature_6)
+        ]
+      }
+
+      planCard.pricingCopy {
+        planCard.pricingCopy.description {
+          contents: Strings.plans.businessDescription
+        }
+
+        planCard.priceRow {
+          planCard.priceRow.price {
+            contents: "$29"
+          }
+        }
+      }
+    }
+
+    planCard.planContent.planSummary {
+      planCard.planHeader {
+        overrides: [remove(planCard.planHeader.badge)],
+
+        planCard.planHeader.planName {
+          contents: Strings.plans.business
+        }
+      }
+
+      planCard.planIcon {
+        planCard.planIcon.planGlyph {
+          left: 6px,
+          top: 33px,
+          contents: processor
+        }
+      }
+    }
+  }
+
+  projectsFeature_6 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 115px,
+
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.oneTerabyteStorage
+    }
+  }
+
+  projectsFeature_7 = frame : planCard.listItem.projectsFeature {
+    left: 40px,
+    top: 140px,
+
+    planCard.listItem.projectsFeature.projectsLabel {
+      contents: Strings.plans.adminControls
+    }
+  }
+}

@@ -1,0 +1,116 @@
+import "tokens/spacing.elyx" as Spacing
+import "design/blocks/thumbnailImage.elyx" as thumbnailImage
+import "images/thumbnails/thumb07.jpg" as thumb07
+import "images/thumbnails/thumb03.jpg" as thumb03
+import "images/thumbnails/thumb04.jpg" as thumb04
+import "images/thumbnails/thumb05.jpg" as thumb05
+import "images/thumbnails/thumb06.jpg" as thumb06
+import "images/thumbnails/thumb08.jpg" as thumb08
+import "images/thumbnails/thumb09.jpg" as thumb09
+
+export imageGallery = frame {
+  left: 438px,
+  top: 310px,
+  width: 585px,
+  height: 444px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xxsmall
+  },
+  children: [topRow, middleRow, bottomRow]
+}
+
+topRow = frame {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
+  children: [topLeft, topCenter, topRight],
+
+  topLeft = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb08
+  }
+
+  topCenter = frame : thumbnailImage.thumbnailImage {left: 0px, top: 0px, width: 100%, height: 100%}
+
+  topRight = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb03
+  }
+}
+
+middleRow = frame {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
+  children: [middleLeft, middleCenter, middleRight],
+
+  middleLeft = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb04
+  }
+
+  middleCenter = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb05
+  }
+
+  middleRight = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb06
+  }
+}
+
+bottomRow = frame {
+  left: 0px,
+  top: 0px,
+  width: 100%,
+  height: 100%,
+  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
+  children: [bottomLeft, bottomCenter, bottomRight],
+
+  bottomLeft = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb07
+  }
+
+  bottomCenter = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb05
+  }
+
+  bottomRight = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%,
+    fill[0].image.ref: thumb09
+  }
+}

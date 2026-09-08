@@ -1,0 +1,198 @@
+import "tokens/spacing.elyx" as Spacing
+import "tokens/typography.elyx" as Typography
+import "tokens/colors.elyx" as Colors
+import "tokens/radius.elyx" as Radius
+import "images/profileImgs/005.jpg" as module
+
+export small = frame {
+  left: -94px,
+  top: 10px,
+  width: Spacing.size.medium,
+  height: Spacing.size.medium,
+  layout: {justify-content: .center, align-items: .center},
+  corner-radius: Radius.radius.full,
+  overflow: .visible,
+  children: [smallBackground, smallInitials, smallStatus],
+
+  smallBackground = shape {
+    left: 0px,
+    top: 0px,
+    width: Spacing.size.medium,
+    height: Spacing.size.medium,
+    ignore-stack: .true,
+    fill: Colors.theme.contrastSubtle,
+    border: {color: Colors.theme.base, width: 2px, position: .outside},
+    type: .ellipse
+  }
+
+  smallInitials = text {
+    left: 10px,
+    top: 10.5px,
+    width: 16px,
+    height: 15px,
+    fill: Colors.theme.contrastStrongest,
+    contents: "JC",
+    font-size: Typography.fontSize.small,
+    font-style: "SemiBold"
+  }
+
+  smallStatus = shape : status {
+    left: 26.85px,
+    top: 26.83px,
+    ignore-stack: .true,
+    border[0].width: 2px
+  }
+}
+
+export status = shape {
+  left: -94px,
+  top: -72.12px,
+  width: 8px,
+  height: 8px,
+  fill: Colors.status.visible,
+  border: {color: Colors.theme.base, position: .outside},
+  type: .ellipse
+}
+
+@variant
+statusAway = shape : status {left: -58px, top: -72px, fill[0].color: Colors.status.away}
+
+@variant
+smallPhoto = frame : small {
+  left: -4px,
+  top: 10px,
+  overrides: [
+    insert(smallImage, after = .nil),
+    remove(small.smallInitials),
+    remove(small.smallBackground)
+  ],
+
+  smallImage = shape {
+    left: 0px,
+    top: 0px,
+    width: Spacing.size.medium,
+    height: Spacing.size.medium,
+    ignore-stack: .true,
+    fill: {image: {ref: module}},
+    border: {color: Colors.theme.base, width: 2px, position: .outside},
+    type: .ellipse
+  }
+}
+
+export medium = frame {
+  left: -94px,
+  top: 94px,
+  width: 72px,
+  height: 72px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [mediumBackground, mediumInitials, mediumStatus],
+
+  mediumBackground = shape {
+    left: 0px,
+    top: 0px,
+    width: 72px,
+    height: 72px,
+    ignore-stack: .true,
+    fill: Colors.theme.contrastSubtle,
+    border: {color: Colors.theme.base, width: 2px, position: .outside},
+    type: .ellipse
+  }
+
+  mediumInitials = text {
+    left: 21.5px,
+    fill: Colors.theme.contrastStrongest,
+    contents: "JC",
+    font-size: 22,
+    font-style: "SemiBold"
+  }
+
+  mediumStatus = shape : status {
+    left: 56.85px,
+    top: 56.83px,
+    ignore-stack: .true,
+    border[0].width: 2px
+  }
+}
+
+@variant
+mediumPhoto = frame : medium {
+  left: -4px,
+  top: 94px,
+  layout.include-borders: .true,
+  overrides: [
+    insert(mediumImage, after = .nil),
+    remove(medium.mediumInitials),
+    remove(medium.mediumBackground)
+  ],
+
+  mediumImage = shape {
+    left: 0px,
+    top: 0px,
+    width: 72px,
+    height: 72px,
+    ignore-stack: .true,
+    fill: {image: {ref: module}},
+    border: {color: Colors.theme.base, width: 2px, position: .outside},
+    type: .ellipse
+  }
+}
+
+export xsmall = frame {
+  left: -94px,
+  top: 235px,
+  width: Spacing.size.small,
+  height: Spacing.size.small,
+  overflow: .visible,
+  children: [color, smallInitials_2, smallStatus_2],
+
+  color = shape {
+    left: 0px,
+    top: 0px,
+    width: Spacing.size.small,
+    height: Spacing.size.small,
+    ignore-stack: .true,
+    fill: Colors.theme.contrastFaint,
+    border: {color: Colors.theme.base, width: 2px, position: .outside},
+    type: .ellipse
+  }
+
+  smallInitials_2 = text {
+    left: 6px,
+    top: 7px,
+    width: 16px,
+    height: 15px,
+    fill: Colors.theme.contrastStrongest,
+    contents: "JC",
+    font-size: 11,
+    font-style: "SemiBold",
+    align: .center
+  }
+
+  smallStatus_2 = shape : status {left: 20px, top: 20px, ignore-stack: .true, border[0].width: 2px}
+}
+
+@variant
+xsmallVariant = frame : xsmall {
+  left: -4px,
+  top: 235px,
+  overrides: [insert(photoBG, after = .nil), remove(xsmall.color)],
+
+  xsmall.smallInitials_2 {
+    display: .hidden
+  }
+
+  photoBG = shape {
+    left: 0px,
+    top: 0px,
+    width: Spacing.size.small,
+    height: Spacing.size.small,
+    ignore-stack: .true,
+    fill: {image: {ref: module}},
+    border: {color: Colors.theme.base, width: 2px, position: .outside},
+    type: .ellipse
+  }
+}
+
+@variant
+statusOffline = shape : status {left: -22px, top: -72px, fill[0].color: Colors.theme.contrastMuted}
