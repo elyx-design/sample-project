@@ -28,26 +28,6 @@ export chatBubble = frame {
   }
 }
 
-message = frame {
-  left: 65px,
-  top: 0px,
-  width: .auto,
-  height: spacing.size.medium,
-  layout: {justify-content: .center, align-items: .center},
-  fill: colors.theme.contrastAlpha25,
-  corner-radius: radius.radius.full,
-  padding-left: spacing.padding.medium,
-  padding-right: spacing.padding.medium,
-  children: messageText,
-
-  messageText = text {
-    left: 0px,
-    top: 0px,
-    fill: .black,
-    contents: Strings.componentDefaults.chatText
-  }
-}
-
 @variant
 user = frame : chatBubble {
   left: 602px,
@@ -115,5 +95,25 @@ GroupedStack = frame {
     contents: "14:15",
     font-size: typography.fontSize.small,
     font-style: "Medium"
+  }
+}
+
+message = frame {
+  left: 65px,
+  top: 0px,
+  width: .auto,
+  height: spacing.size.medium,
+  layout: {justify-content: .center, align-items: .center},
+  fill: colors.theme.contrastAlpha08,
+  corner-radius: radius.radius.full,
+  padding-left: spacing.padding.medium,
+  padding-right: spacing.padding.medium,
+  children: messageText,
+
+  messageText = text {
+    left: 0px,
+    top: 0px,
+    fill: .black,
+    contents: Strings.componentDefaults.chatText
   }
 }

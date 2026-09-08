@@ -6,7 +6,7 @@ import "images/profileImgs/005.jpg" as module
 
 export small = frame {
   left: -94px,
-  top: 10px,
+  top: 137px,
   width: Spacing.size.medium,
   height: Spacing.size.medium,
   layout: {justify-content: .center, align-items: .center},
@@ -55,12 +55,16 @@ export status = shape {
 }
 
 @variant
-statusAway = shape : status {left: -58px, top: -72px, fill[0].color: Colors.status.away}
+statusAway = shape : status {
+  left: -58px,
+  top: -72px,
+  fill[0].color: Colors.status.away
+}
 
 @variant
 smallPhoto = frame : small {
-  left: -4px,
-  top: 10px,
+  left: 45px,
+  top: 137px,
   overrides: [
     insert(smallImage, after = .nil),
     remove(small.smallInitials),
@@ -81,7 +85,7 @@ smallPhoto = frame : small {
 
 export medium = frame {
   left: -94px,
-  top: 94px,
+  top: 15px,
   width: 72px,
   height: 72px,
   layout: {direction: .column, justify-content: .center, align-items: .center},
@@ -117,8 +121,8 @@ export medium = frame {
 
 @variant
 mediumPhoto = frame : medium {
-  left: -4px,
-  top: 94px,
+  left: 45px,
+  top: 15px,
   layout.include-borders: .true,
   overrides: [
     insert(mediumImage, after = .nil),
@@ -140,13 +144,13 @@ mediumPhoto = frame : medium {
 
 export xsmall = frame {
   left: -94px,
-  top: 235px,
+  top: 223px,
   width: Spacing.size.small,
   height: Spacing.size.small,
   overflow: .visible,
-  children: [color, smallInitials_2, smallStatus_2],
+  children: [xsmallBackground, xsmallInitials, xsmallStatus],
 
-  color = shape {
+  xsmallBackground = shape {
     left: 0px,
     top: 0px,
     width: Spacing.size.small,
@@ -157,7 +161,7 @@ export xsmall = frame {
     type: .ellipse
   }
 
-  smallInitials_2 = text {
+  xsmallInitials = text {
     left: 6px,
     top: 7px,
     width: 16px,
@@ -169,20 +173,28 @@ export xsmall = frame {
     align: .center
   }
 
-  smallStatus_2 = shape : status {left: 20px, top: 20px, ignore-stack: .true, border[0].width: 2px}
+  xsmallStatus = shape : status {
+    left: 20px,
+    top: 20px,
+    ignore-stack: .true,
+    border[0].width: 2px
+  }
 }
 
 @variant
-xsmallVariant = frame : xsmall {
-  left: -4px,
-  top: 235px,
-  overrides: [insert(photoBG, after = .nil), remove(xsmall.color)],
+xsmallPhoto = frame : xsmall {
+  left: 45px,
+  top: 223px,
+  overrides: [
+    insert(xsmallImage, after = .nil),
+    remove(xsmall.xsmallBackground)
+  ],
 
-  xsmall.smallInitials_2 {
+  xsmall.xsmallInitials {
     display: .hidden
   }
 
-  photoBG = shape {
+  xsmallImage = shape {
     left: 0px,
     top: 0px,
     width: Spacing.size.small,
@@ -195,4 +207,8 @@ xsmallVariant = frame : xsmall {
 }
 
 @variant
-statusOffline = shape : status {left: -22px, top: -72px, fill[0].color: Colors.theme.contrastMuted}
+statusOffline = shape : status {
+  left: -22px,
+  top: -72px,
+  fill[0].color: Colors.theme.contrastMuted
+}

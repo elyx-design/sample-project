@@ -4,12 +4,17 @@ import "design/controls/avatar.elyx" as userAvatar
 import "design/blocks/header.elyx" as header
 
 export small = frame {
+  left: 558px,
+  top: 0px,
   height: Spacing.size.medium,
   layout: {align-items: .center, item-gap: Spacing.gap.medium},
   overflow: .visible,
   children: [smallAvatar, smallHeader],
 
-  smallAvatar = frame : userAvatar.smallPhoto {left: -7.5px, top: 28px}
+  smallAvatar = frame : userAvatar.smallPhoto {
+    left: -7.5px,
+    top: 28px
+  }
 
   smallHeader = frame : header.smallLeft {
     left: -8.5px,
@@ -28,8 +33,8 @@ export small = frame {
 
 @variant
 UserSummarySVariant = frame : small {
-  left: 140px,
-  top: -18px,
+  left: 558px,
+  top: 192px,
   height: .auto,
   layout.direction: .column,
 
@@ -38,14 +43,21 @@ UserSummarySVariant = frame : small {
 }
 
 export medium = frame {
-  left: -67px,
-  top: 192px,
+  left: 229px,
+  top: 0px,
   height: 72px,
-  layout: {justify-content: .end, align-items: .center, item-gap: Spacing.gap.xlarge},
+  layout: {
+    justify-content: .end,
+    align-items: .center,
+    item-gap: Spacing.gap.xlarge
+  },
   overflow: .visible,
   children: [mediumAvatar, mediumHeader],
 
-  mediumAvatar = frame : userAvatar.mediumPhoto {left: 0px, top: 0px}
+  mediumAvatar = frame : userAvatar.mediumPhoto {
+    left: 0px,
+    top: 0px
+  }
 
   mediumHeader = frame : header.mediumLeft {
     left: 83px,

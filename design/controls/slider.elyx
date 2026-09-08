@@ -33,10 +33,14 @@ thumb = frame : slider {
   overrides: [insert(handle_2, after = slider.track)],
 
   slider.track {
+    width: 81.2px,
     corner-radius: [radius.radius.full, 0px, 0px, radius.radius.full]
   }
 
-  handle_2 = frame : handle {left: 789px, top: 589px}
+  handle_2 = frame : handle {
+    left: 789px,
+    top: 589px
+  }
 }
 
 @variant
@@ -47,10 +51,14 @@ full = frame : slider {
   overrides: [insert(handle_3, after = slider.track)],
 
   slider.track {
-    width: 100%
+    width: 100%,
+    corner-radius: [radius.radius.full, 0px, 0px, radius.radius.full]
   }
 
-  handle_3 = frame : handle {left: 796px, top: 643px}
+  handle_3 = frame : handle {
+    left: 796px,
+    top: 643px
+  }
 }
 
 export handle = frame {

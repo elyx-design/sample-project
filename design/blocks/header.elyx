@@ -4,7 +4,7 @@ import "tokens/typography.elyx" as Typography
 import "tokens/colors.elyx" as Colors
 
 export mediumLeft = frame {
-  left: 20px,
+  left: 524px,
   top: 20px,
   width: 100%,
   height: .auto,
@@ -24,14 +24,15 @@ export mediumLeft = frame {
     fill: Colors.theme.contrastAlpha70,
     contents: Strings.componentDefaults.subtitle,
     font-size: Typography.fontSize.medium,
+    font-style: "Medium",
     line-height: Typography.lineHeight.relaxed
   }
 }
 
 @variant
 mediumCenter = frame : mediumLeft {
-  left: 20px,
-  top: 117px,
+  left: 524px,
+  top: 166px,
   layout.align-items: .center,
 
   mediumLeft.mediumSubtitle {
@@ -44,8 +45,8 @@ mediumCenter = frame : mediumLeft {
 }
 
 export smallLeft = frame {
-  left: -267.28px,
-  top: 29px,
+  left: 654px,
+  top: 20px,
   width: 100%,
   height: .auto,
   layout: {direction: .column, item-gap: Spacing.gap.xsmall},
@@ -63,14 +64,15 @@ export smallLeft = frame {
     width: 100%,
     fill: Colors.theme.contrastAlpha70,
     contents: Strings.componentDefaults.subtitle,
-    font-size: Typography.fontSize.small
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
   }
 }
 
 @variant
 smallCenter = frame : smallLeft {
-  left: -267.28px,
-  top: 113px,
+  left: 654px,
+  top: 166px,
   layout.align-items: .center,
 
   smallLeft.smallSubtitle {

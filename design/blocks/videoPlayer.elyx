@@ -1,6 +1,7 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "design/blocks/playbackControl.elyx" as playbackControl
+import "tokens/radius.elyx" as radius
 import "tokens/colors.elyx" as colors
 import "images/background/liveEvent.jpg" as liveEvent
 import "design/blocks/header.elyx" as header
@@ -29,6 +30,8 @@ export videoPlayer = frame {
       }
     }
   ],
+  corner-radius: radius.radius.small,
+  corner-smoothing: radius.radius.smoothing,
   padding: Spacing.padding.xlarge,
   children: [headerRow, controls],
 
@@ -88,13 +91,13 @@ headerRow = frame {
     top: 250px,
 
     header.smallLeft.smallSubtitle {
-      contents: "Live from the dunes: Stage 3",
-      fill[0].color: colors.primitives.white70
+      fill[0].color: colors.primitives.white70,
+      contents: "Live from the dunes: Stage 3"
     }
 
     header.smallLeft.smallTitle {
-      contents: "Endless Dunes",
-      fill[0].color: colors.primitives.white
+      fill[0].color: colors.primitives.white,
+      contents: "Endless Dunes"
     }
   }
 

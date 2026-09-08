@@ -37,6 +37,7 @@ export sidebarMenu = frame {
     top: 7px,
     fill: colors.theme.contrastStrongest,
     contents: strings.navigation.menu,
-    font-size: Typography.fontSize.small
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
   }
 }

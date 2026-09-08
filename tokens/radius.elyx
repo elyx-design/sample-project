@@ -1,1 +1,9 @@
-export radius = tokens {xsmall: 8, small: 10, medium: 16, large: 20, xlarge: 24, full: 999}
+export radius = tokens {
+  xsmall: 8,
+  small: 10,
+  medium: 16,
+  large: 20,
+  xlarge: 24,
+  full: 999,
+  smoothing: 0.6
+}

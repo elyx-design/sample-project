@@ -15,7 +15,11 @@ export cardBackground = frame {
   min-height: 60px,
   layout: {direction: .column, item-gap: Spacing.padding.xlarge},
   fill: colors.theme.base,
-  border: {color: colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  border: {
+    color: colors.theme.contrastAlpha25,
+    width: 0.5px,
+    position: .outside
+  },
   shadow: {
     drop-shadow: {
       color: colors.primitives.blackAlpha10,
@@ -25,6 +29,7 @@ export cardBackground = frame {
     }
   },
   corner-radius: Radius.radius.xlarge,
+  corner-smoothing: 0.6,
   padding: Spacing.padding.xxlarge
 }
 

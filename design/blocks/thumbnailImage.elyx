@@ -35,7 +35,8 @@ export thumbnailImage = frame {
     width: 100%,
     fill: rgb(100%, 100%, 100%, 70%),
     contents: Strings.componentDefaults.imageName,
-    font-size: Typography.fontSize.small
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
   }
 }
 
@@ -62,7 +63,11 @@ thumbnailVideo = frame : thumbnailImage {
   top: 563px,
   layout.align-items: .center,
   layout.justify-content: .center,
-  overrides: [insert(base, after = .nil), remove(thumbnailImage.imageName), remove(actions)],
+  overrides: [
+    insert(base, after = .nil),
+    remove(thumbnailImage.imageName),
+    remove(actions)
+  ],
 
   base = frame : tag.iconAndLabel {
     left: 63px,

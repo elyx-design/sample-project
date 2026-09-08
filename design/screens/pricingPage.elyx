@@ -13,8 +13,16 @@ export pricingPage = frame {
   top: 163px,
   width: 1440px,
   height: 810px,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 34px},
-  fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: sea}}],
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 34px
+  },
+  fill: [
+    colors.gradients.surfaceTop,
+    {mix-blend-mode: .multiply, image: {ref: sea}}
+  ],
   children: [pricingHeader, pricingCards],
 
   pricingHeader = frame : header.mediumCenter {
@@ -37,7 +45,11 @@ pricingCards = frame {
   top: 202px,
   layout: {justify-content: .center, align-items: .center},
   fill: colors.theme.baseAlpha50,
-  border: {color: colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  border: {
+    color: colors.theme.contrastAlpha25,
+    width: 0.5px,
+    position: .outside
+  },
   shadow: {
     drop-shadow: {
       color: colors.primitives.blackAlpha10,

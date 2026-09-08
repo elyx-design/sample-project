@@ -17,7 +17,10 @@ export reviewCard = frame : cardBackground.cardBackground {
   fill[0].image.ref: nightMountain,
   layout.item-gap: Spacing.gap.xlarge,
   layout.justify-content: .space-between,
-  overrides: [insert(reviewAuthor, after = .nil), insert(reviewFooter, after = reviewAuthor)]
+  overrides: [
+    insert(reviewAuthor, after = .nil),
+    insert(reviewFooter, after = reviewAuthor)
+  ]
 }
 
 reviewFooter = frame {
@@ -47,13 +50,13 @@ reviewInfo = frame {
     top: 512px,
 
     header.mediumLeft.mediumSubtitle {
-      contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure.",
-      fill[0].color: colors.primitives.white70
+      fill[0].color: colors.primitives.white70,
+      contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure."
     }
 
     header.mediumLeft.mediumTitle {
-      contents: "A Breathtaking Escape",
-      fill[0].color: colors.primitives.white
+      fill[0].color: colors.primitives.white,
+      contents: "A Breathtaking Escape"
     }
   }
 }
@@ -86,8 +89,8 @@ tags = frame {
     top: 746px,
 
     tag.tagTransparent.label {
-      contents: "Thriller",
-      fill[0].color: colors.primitives.white
+      fill[0].color: colors.primitives.white,
+      contents: "Thriller"
     }
   }
 
@@ -96,8 +99,8 @@ tags = frame {
     top: 827.25px,
 
     tag.tagTransparent.label {
-      contents: "Drama",
-      fill[0].color: colors.primitives.white
+      fill[0].color: colors.primitives.white,
+      contents: "Drama"
     }
   }
 }
@@ -119,7 +122,6 @@ reviewAuthor = frame {
 
   closeButton = frame : button.smallClose {
     left: 1097px,
-    top: 291px,
-    fill[0].color: colors.primitives.white70
+    top: 291px
   }
 }

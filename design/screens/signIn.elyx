@@ -18,7 +18,10 @@ export signInScreen = frame {
   width: 1440px,
   height: 810px,
   layout: {direction: .column, align-items: .center, item-gap: 48px},
-  fill: [Colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: desert}}],
+  fill: [
+    Colors.gradients.surfaceTop,
+    {mix-blend-mode: .multiply, image: {ref: desert}}
+  ],
   padding-top: 0px,
   children: content
 }

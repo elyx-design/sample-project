@@ -17,14 +17,24 @@ export signInForm = frame : cardBackground.transparent {
   padding-top: 48px,
   layout.align-items: .center,
   layout.item-gap: 48px,
-  overrides: [insert(signInLogo, after = .nil), insert(content, after = signInLogo)],
+  overrides: [
+    insert(signInLogo, after = .nil),
+    insert(content, after = signInLogo)
+  ],
 
-  signInLogo = frame : logo.extraLarge {left: 351px, top: 15px}
+  signInLogo = frame : logo.extraLarge {
+    left: 351px,
+    top: 15px
+  }
 }
 
 content = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.xlarge},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.xlarge
+  },
   overflow: .visible,
   children: [header, credentialFields, options, signInButton],
 
@@ -87,7 +97,10 @@ options = frame {
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [rememberToggle, rememberLabel],
 
-  rememberToggle = frame : Checkbox.on {left: 127px, top: 285px}
+  rememberToggle = frame : Checkbox.on {
+    left: 127px,
+    top: 285px
+  }
 
   rememberLabel = text {
     fill: Colors.theme.contrastStrongest,

@@ -9,11 +9,17 @@ export Footer = frame {
   width: 1440px,
   height: 810px,
   layout: {justify-content: .center, align-items: .center},
-  fill: [colors.gradients.surfaceTop, {mix-blend-mode: .multiply, image: {ref: plain}}],
+  fill: [
+    colors.gradients.surfaceTop,
+    {mix-blend-mode: .multiply, image: {ref: plain}}
+  ],
   padding-top: 0px,
   padding-left: spacing.padding.xxlarge,
   padding-right: spacing.padding.xxlarge,
   children: siteFooter_2,
 
-  siteFooter_2 = frame : siteFooter.siteFooter {left: 225px, top: 213px}
+  siteFooter_2 = frame : siteFooter.siteFooter {
+    left: 225px,
+    top: 213px
+  }
 }

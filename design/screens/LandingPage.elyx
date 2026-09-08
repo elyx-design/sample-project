@@ -90,7 +90,11 @@ Copy = frame {
 
 frame2 = frame {
   width: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xlarge},
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xlarge
+  },
   overflow: .visible,
   children: [medium, text3],
 
@@ -160,7 +164,13 @@ layer1 = frame {
   padding: Spacing.padding.large,
   children: [shape1, smallLeft],
 
-  shape1 = icon {left: 644px, top: 704px, width: 40px, height: 40px, contents: direct24}
+  shape1 = icon {
+    left: 644px,
+    top: 704px,
+    width: 40px,
+    height: 40px,
+    contents: direct24
+  }
 
   smallLeft = frame : header.smallLeft {
     left: 0px,
@@ -189,7 +199,13 @@ layer2 = frame {
   padding: Spacing.padding.large,
   children: [shape2, steadyHeader],
 
-  shape2 = icon {left: 648px, top: 708px, width: 40px, height: 40px, contents: activity}
+  shape2 = icon {
+    left: 648px,
+    top: 708px,
+    width: 40px,
+    height: 40px,
+    contents: activity
+  }
 
   steadyHeader = frame : header.smallLeft {
     left: 0px,
@@ -218,7 +234,13 @@ layer3 = frame {
   padding: Spacing.padding.large,
   children: [shape3, teamHeader],
 
-  shape3 = icon {left: 655px, top: 715px, width: 40px, height: 40px, contents: mug24}
+  shape3 = icon {
+    left: 655px,
+    top: 715px,
+    width: 40px,
+    height: 40px,
+    contents: mug24
+  }
 
   teamHeader = frame : header.smallLeft {
     left: 0px,
@@ -255,5 +277,8 @@ GroupedStack = frame {
     }
   }
 
-  productGallery_2 = frame : productGallery.productGallery {left: 276px, top: 443px}
+  productGallery_2 = frame : productGallery.productGallery {
+    left: 276px,
+    top: 443px
+  }
 }

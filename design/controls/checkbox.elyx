@@ -1,15 +1,6 @@
 import "tokens/colors.elyx" as Colors
 import "tokens/radius.elyx" as Radius
 
-anchor = frame {
-  left: 2003px,
-  top: 1069px,
-  width: 0px,
-  height: 0px,
-  fill: .white,
-  border: Colors.controls.border
-}
-
 export on = frame {
   left: 759px,
   top: 674px,
@@ -19,7 +10,10 @@ export on = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.gradients.emphasisTop), stop(100%, Colors.gradients.emphasisBottom)]
+      stops: [
+        stop(0%, Colors.gradients.emphasisTop),
+        stop(100%, Colors.gradients.emphasisBottom)
+      ]
     }
   },
   border: {color: Colors.primitives.blackAlpha10, width: 0.5px},
@@ -35,7 +29,10 @@ export on = frame {
     fill: {
       linear-gradient: {
         angle: 180deg,
-        stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
+        stops: [
+          stop(0%, Colors.gradients.surfaceTop),
+          stop(100%, Colors.gradients.surfaceBottom)
+        ]
       }
     },
     corner-radius: Radius.radius.full
@@ -51,4 +48,8 @@ off = frame : on {
 }
 
 @variant
-mixed = frame : on {left: 919px, top: 674px, layout.justify-content: .center}
+mixed = frame : on {
+  left: 919px,
+  top: 674px,
+  layout.justify-content: .center
+}

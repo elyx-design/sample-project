@@ -16,10 +16,14 @@ export textField = frame {
   height: Spacing.size.medium,
   layout: {align-items: .center, item-gap: Spacing.gap.xsmall},
   fill: Colors.theme.base,
-  border: {color: Colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  border: {
+    color: Colors.theme.contrastAlpha25,
+    width: 0.5px,
+    position: .outside
+  },
   corner-radius: Radius.radius.full,
-  padding-left: Spacing.padding.medium,
-  padding-right: Spacing.padding.medium,
+  padding-left: Spacing.gap.large,
+  padding-right: Spacing.gap.large,
   children: label,
 
   label = text {
@@ -27,7 +31,8 @@ export textField = frame {
     top: 0px,
     fill: Colors.theme.contrastStrongest,
     contents: Strings.componentDefaults.label,
-    font-size: Typography.fontSize.medium
+    font-size: Typography.fontSize.medium,
+    font-style: "Regular"
   }
 }
 

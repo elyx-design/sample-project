@@ -2,15 +2,15 @@ import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "tokens/typography.elyx" as Typography
 import "design/blocks/productInfo.elyx" as productInfo
+import "tokens/radius.elyx" as Radius
 import "tokens/colors.elyx" as colors
 import "design/controls/tag.elyx" as tag
-import "tokens/radius.elyx" as Radius
 import "design/blocks/siteHeader.elyx" as siteHeader
 import "design/controls/button.elyx" as button
 import "design/controls/avatar.elyx" as avatar
+import "design/controls/divider.elyx" as divider
 import "images/profileImgs/002.jpg" as lib2
 import "images/profileImgs/004.jpg" as lib4
-import "design/controls/divider.elyx" as divider
 import "images/profileImgs/007.jpg" as lib3
 import "images/background/woman.jpg" as woman
 import "images/misc/movieCover.png" as movieCover
@@ -46,7 +46,7 @@ export MovieUI = frame {
     width: 100%,
 
     siteHeader.accountHeader.accountDivider {
-      siteHeader.divider.horizontal.horizontalLine {
+      divider.horizontal.horizontalLine {
         fill[0].color: colors.theme.baseAlpha50
       }
     }
@@ -55,10 +55,9 @@ export MovieUI = frame {
       siteHeader.accountActions {
         siteHeader.accountMenu {
           overrides: [remove(siteHeader.accountMenu.accountLanguage)],
-          overflow: .visible,
 
           siteHeader.accountMenu.accountAvatar {
-            siteHeader.avatar.small.smallStatus {
+            avatar.small.smallStatus {
               display: .hidden
             }
           }
@@ -119,7 +118,11 @@ export MovieUI = frame {
 GroupedStack = frame {
   width: 70%,
   height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.large
+  },
   overflow: .visible,
   padding-top: 0px,
   children: [GroupedStack_13, GroupedStack_2, horizontal, GroupedStack_8],
@@ -160,7 +163,10 @@ GroupedStack_13 = frame {
   padding-bottom: 0px,
   children: Play,
 
-  Play = frame : button.Play {left: 1052px, top: 310px}
+  Play = frame : button.Play {
+    left: 1052px,
+    top: 310px
+  }
 }
 
 GroupedStack_2 = frame {
@@ -242,7 +248,11 @@ details = frame {
 
 About = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.large
+  },
   overflow: .visible,
   children: [Synopsis, horizontal_2, GroupedStack_11, horizontal_3, Synopsis_4],
 
@@ -280,7 +290,11 @@ About = frame {
 
 Synopsis = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.small
+  },
   overflow: .visible,
   children: [text2, text3],
 
@@ -337,16 +351,16 @@ GroupedStack_3 = frame {
   overflow: .visible,
   children: [xsmall_3, text5],
 
-  xsmall_3 = frame : avatar.xsmallVariant {
+  xsmall_3 = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallVariant.photoBG {
+    avatar.xsmallPhoto.xsmallImage {
       fill[0].image.ref: lib4,
       border[0]: .nil
     }
 
-    avatar.xsmall.smallStatus_2 {
+    avatar.xsmall.xsmallStatus {
       display: .hidden
     }
   }
@@ -369,16 +383,16 @@ GroupedStack_4 = frame {
   overflow: .visible,
   children: [xsmall_4, text6],
 
-  xsmall_4 = frame : avatar.xsmallVariant {
+  xsmall_4 = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallVariant.photoBG {
+    avatar.xsmallPhoto.xsmallImage {
       fill[0].image.ref: lib,
       border[0]: .nil
     }
 
-    avatar.xsmall.smallStatus_2 {
+    avatar.xsmall.xsmallStatus {
       display: .hidden
     }
   }
@@ -401,16 +415,16 @@ GroupedStack_5 = frame {
   overflow: .visible,
   children: [xsmall_5, text7],
 
-  xsmall_5 = frame : avatar.xsmallVariant {
+  xsmall_5 = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallVariant.photoBG {
+    avatar.xsmallPhoto.xsmallImage {
       fill[0].image.ref: lib2,
       border[0]: .nil
     }
 
-    avatar.xsmall.smallStatus_2 {
+    avatar.xsmall.xsmallStatus {
       display: .hidden
     }
   }
@@ -433,16 +447,16 @@ GroupedStack_6 = frame {
   overflow: .visible,
   children: [xsmall_6, text8],
 
-  xsmall_6 = frame : avatar.xsmallVariant {
+  xsmall_6 = frame : avatar.xsmallPhoto {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallVariant.photoBG {
+    avatar.xsmallPhoto.xsmallImage {
       fill[0].image.ref: lib3,
       border[0]: .nil
     }
 
-    avatar.xsmall.smallStatus_2 {
+    avatar.xsmall.xsmallStatus {
       display: .hidden
     }
   }
@@ -489,6 +503,13 @@ GroupedStack_7 = frame {
     top: -1814px,
     width: 100%,
     fill: colors.primitives.white70,
+    subrange: [
+      {range: [0, 9], font-style: "Medium"},
+      {range: [21, 33], font-style: "Medium"},
+      {range: [57, 69], font-style: "Medium"},
+      {range: [95, 110], font-style: "Medium"},
+      {range: [125, 141], font-style: "Medium"}
+    ],
     contents: "Director: Amara Vale\nWritten by: Amara Vale, Julian Foss\nProduced by: Rina Kapoor, Marcus Bell\nCinematography: Yusuf Adeyemi\nOriginal Score: Lena Vasquez",
     font-style: "Light",
     line-height: Typography.lineHeight.relaxed
@@ -499,7 +520,11 @@ Synopsis_4 = frame {
   left: 20px,
   top: 126px,
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.small
+  },
   overflow: .visible,
   children: text12,
 

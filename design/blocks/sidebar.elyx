@@ -49,19 +49,33 @@ compact = frame {
   height: 456px,
   layout: {direction: .column, justify-content: .space-between},
   fill: colors.theme.base,
-  border: {color: colors.theme.contrastAlpha08, visible: .false, position: .outside},
+  border: {
+    color: colors.theme.contrastAlpha08,
+    visible: .false,
+    position: .outside
+  },
   padding: [Spacing.padding.xlarge, Spacing.padding.medium],
   children: [compactContent, profileAvatar],
 
-  profileAvatar = frame : avatar.smallPhoto {left: 550px, top: 402px}
+  profileAvatar = frame : avatar.smallPhoto {
+    left: 550px,
+    top: 402px
+  }
 }
 
 compactContent = frame {
   width: 100%,
-  layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.xxlarge},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    item-gap: Spacing.gap.xxlarge
+  },
   children: [compactLogo, compactNavigation],
 
-  compactLogo = frame : logo.medium {left: 0px, top: 278px}
+  compactLogo = frame : logo.medium {
+    left: 0px,
+    top: 278px
+  }
 }
 
 compactNavigation = frame {
@@ -120,7 +134,11 @@ compactNavigation = frame {
 export segmentHeader = frame {
   left: -435px,
   top: 0px,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: 39px},
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 39px
+  },
   children: [text1, settings20svg],
 
   text1 = text {
@@ -129,7 +147,7 @@ export segmentHeader = frame {
     fill: colors.theme.contrastAlpha50,
     contents: Strings.labels.chatsAndTasks,
     font-size: Typography.fontSize.small,
-    font-style: "Medium"
+    font-style: "SemiBold"
   }
 
   settings20svg = icon {
@@ -149,7 +167,10 @@ workspaceSelector = frame : selector.Selector {
   height: Spacing.size.medium,
   padding-left: 10px,
   padding-right: 10px,
-  overrides: [insert(GroupedStack, after = selector.Left), remove(selector.Selector.shape1)],
+  overrides: [
+    insert(GroupedStack, after = selector.Left),
+    remove(selector.Selector.shape1)
+  ],
 
   selector.Left {
     overrides: [insert(xsmall, after = .nil), remove(selector.Left.small)],
@@ -166,11 +187,11 @@ workspaceSelector = frame : selector.Selector {
     }
   }
 
-  xsmall = frame : avatar.xsmallVariant {
+  xsmall = frame : avatar.xsmallPhoto {
     left: -123px,
     top: 600px,
 
-    avatar.xsmall.smallStatus_2 {
+    avatar.xsmall.xsmallStatus {
       display: .hidden
     }
   }
@@ -230,8 +251,6 @@ sidebarLiveEvent = frame : sidebar {
           ],
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_6 {}
-
           frame4.campaignsItem_6 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
@@ -247,8 +266,6 @@ sidebarLiveEvent = frame : sidebar {
           }
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_5 {}
-
           frame4.campaignsItem_5 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
@@ -264,8 +281,6 @@ sidebarLiveEvent = frame : sidebar {
           }
 
           @use-variant(sideBarMenuEvent)
-          frame4.campaignsItem_3 {}
-
           frame4.campaignsItem_3 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
@@ -282,10 +297,6 @@ sidebarLiveEvent = frame : sidebar {
 
           @use-variant(sideBarMenuEvent)
           frame4.campaignsItem_4 {
-            corner-radius: radius.radius.full
-          }
-
-          frame4.campaignsItem_4 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
@@ -293,6 +304,8 @@ sidebarLiveEvent = frame : sidebar {
                 contents: "21.2k"
               }
             }
+
+            corner-radius: radius.radius.full,
 
             sideBarMenuEvent.text5 {
               contents: "RamblingRoosterTV"
@@ -367,17 +380,29 @@ sideBarMenuEvent = frame : sidebarItem.sidebarMenu {
     top: 6.5px,
     fill: colors.theme.contrastStrongest,
     contents: Strings.navigation.menu,
-    font-size: Typography.fontSize.small
+    font-size: Typography.fontSize.small,
+    font-style: "Medium"
   }
 
-  eventTag_2 = frame : eventTag {left: -251px, top: 161px}
+  eventTag_2 = frame : eventTag {
+    left: -251px,
+    top: 161px,
+
+    eventTag.text3 {
+      font-style: "Bold"
+    }
+  }
 }
 
 GroupedStack_5 = frame {
   left: 20px,
   top: 340px,
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.small
+  },
   overflow: .visible,
   children: [segmentHeader_3, frame5],
 
@@ -406,7 +431,12 @@ frame5 = frame {
   restrict-children: .true,
   padding-left: 0px,
   padding-right: 0px,
-  children: [campaignsItem_7, campaignsItem_8, campaignsItem_9, campaignsItem_10],
+  children: [
+    campaignsItem_7,
+    campaignsItem_8,
+    campaignsItem_9,
+    campaignsItem_10
+  ],
 
   campaignsItem_7 = frame : sideBarMenuEvent {
     left: 20px,
@@ -479,7 +509,11 @@ export eventTag = frame {
   overflow: .visible,
   children: [status, text3],
 
-  status = shape : avatar.status {left: 0px, top: 5px, fill[0].color: colors.palette.red70}
+  status = shape : avatar.status {
+    left: 0px,
+    top: 5px,
+    fill[0].color: colors.palette.red70
+  }
 
   text3 = text {
     left: 15px,
@@ -503,35 +537,16 @@ eventTagOffline = frame : eventTag {
   }
 }
 
-GroupedStack_3 = frame {
-  width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
-  overflow: .visible,
-  children: [Content, GroupedStack_4],
-
-  Content = frame {
-    width: 100%,
-    layout: {direction: .column, item-gap: Spacing.gap.large},
-    overflow: .visible,
-    padding-left: 0px,
-    padding-right: 0px,
-    children: frame3
-  }
-
-  GroupedStack_4 = frame {
-    width: 100%,
-    layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.xlarge},
-    overflow: .visible,
-    children: [frame2, GroupedStack_2]
-  }
-}
-
 frame3 = frame {
   left: 0px,
   top: 0px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, justify-content: .space-between, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    item-gap: Spacing.gap.small
+  },
   overflow: .visible,
   padding: [0px, Spacing.padding.medium],
   children: frame1,
@@ -554,7 +569,10 @@ small_2 = frame : logo.mediumWordmark {
     remove(logo.small.smallArtwork)
   ],
 
-  small = frame : logo.mediumWordmark {left: -111px, top: 48px}
+  small = frame : logo.mediumWordmark {
+    left: -111px,
+    top: 48px
+  }
 }
 
 frame2 = frame {
@@ -635,15 +653,54 @@ frame2 = frame {
   }
 }
 
+GroupedStack_3 = frame {
+  width: 100%,
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.large
+  },
+  overflow: .visible,
+  children: [Content, GroupedStack_4],
+
+  Content = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: Spacing.gap.large},
+    overflow: .visible,
+    padding-left: 0px,
+    padding-right: 0px,
+    children: frame3
+  }
+
+  GroupedStack_4 = frame {
+    width: 100%,
+    layout: {
+      direction: .column,
+      align-items: .center,
+      item-gap: Spacing.gap.xlarge
+    },
+    overflow: .visible,
+    children: [frame2, GroupedStack_2]
+  }
+}
+
 GroupedStack_2 = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.small
+  },
   overflow: .visible,
   padding-left: 10px,
   padding-right: 10px,
   children: [segmentHeader_2, frame4],
 
-  segmentHeader_2 = frame : segmentHeader {left: 10px, top: 222px, width: 100%}
+  segmentHeader_2 = frame : segmentHeader {
+    left: 10px,
+    top: 222px,
+    width: 100%
+  }
 }
 
 frame4 = frame {
@@ -661,7 +718,7 @@ frame4 = frame {
   campaignsItem_4 = frame : sidebarItem.selected {
     left: 20px,
     top: 84px,
-    fill[0].color: colors.primitives.blackAlpha10,
+    fill[0].color: colors.primitives.blackAlpha05,
 
     sidebarItem.sidebarMenu.shape1 {
       fill[0].color: colors.theme.contrastAlpha25,

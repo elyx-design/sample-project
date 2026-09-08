@@ -15,7 +15,6 @@ controlExample = frame : button.medium {
 }
 
 blockExample = frame : cardInfo.reviewCard {
-  doc: "A review card block composed from controls.",
   left: 282px,
   top: 489px
 }
@@ -26,7 +25,7 @@ intro = frame {
   height: 620px,
   layout: {justify-content: .center, align-items: .center},
   corner-radius: 20px,
-  children: [welcome, welcome_2]
+  children: [welcome, scaffoldContent]
 }
 
 welcome = frame {
@@ -46,9 +45,9 @@ welcome = frame {
   },
   corner-radius: 0px,
   padding: [0px, 56px, 56px],
-  children: [elyxLogopng, introCopy],
+  children: [elyxLogoImage, introCopy],
 
-  elyxLogopng = shape {
+  elyxLogoImage = shape {
     left: 437.52px,
     top: 74.7561px,
     width: 252px,
@@ -72,11 +71,12 @@ introCopy = frame {
     fill: colors.primitives.white70,
     contents: Strings.scaffold.welcomeTitle,
     font-size: 24,
+    font-style: "Medium",
     align: .center
   }
 }
 
-welcome_2 = frame {
+scaffoldContent = frame {
   left: 903px,
   top: 0px,
   width: 831px,
@@ -93,35 +93,37 @@ welcome_2 = frame {
   },
   corner-radius: 0px,
   padding: 56px,
-  children: [GroupedStack, scaffoldSections_2, GroupedStack_2],
+  children: [welcomeIntro, layerTypesOverview, projectResourcesOverview],
 
-  scaffoldSections_2 = frame {
+  layerTypesOverview = frame {
     width: 100%,
     layout: {item-gap: 8px},
     fill: rgb(7.0588%, 7.0588%, 7.0588%),
     corner-radius: 12px,
+    corner-smoothing: 0.6,
     padding: 8px,
-    children: [controlsCard_2, blocksCard_2, screensCard_2]
+    children: [controlsOverviewCard, blocksOverviewCard, screensOverviewCard]
   }
 }
 
-GroupedStack = frame {
+welcomeIntro = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 12px},
   overflow: .visible,
-  children: [welcomeDescription_2, projectStructureOverview_2],
+  children: [welcomeDescription, projectStructureOverview],
 
-  welcomeDescription_2 = text {
+  welcomeDescription = text {
     left: -46.02px,
     top: -161px,
     width: 100%,
     fill: colors.palette.tealDark,
     contents: Strings.scaffold.welcomeDescription,
     font-size: 24,
+    font-style: "Medium",
     line-height: 1.3
   }
 
-  projectStructureOverview_2 = text {
+  projectStructureOverview = text {
     left: 0px,
     top: 40px,
     width: 100%,
@@ -132,7 +134,7 @@ GroupedStack = frame {
   }
 }
 
-controlsCard_2 = frame {
+controlsOverviewCard = frame {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -140,9 +142,9 @@ controlsCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [controlsLabel_2, controlsDescription_2],
+  children: [controlsLabel, controlsDescription],
 
-  controlsLabel_2 = text {
+  controlsLabel = text {
     left: 69px,
     top: 45px,
     fill: colors.primitives.white,
@@ -152,7 +154,7 @@ controlsCard_2 = frame {
     letter-spacing: 10%
   }
 
-  controlsDescription_2 = text {
+  controlsDescription = text {
     left: 0px,
     top: 65px,
     width: 100%,
@@ -163,7 +165,7 @@ controlsCard_2 = frame {
   }
 }
 
-blocksCard_2 = frame {
+blocksOverviewCard = frame {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -171,9 +173,9 @@ blocksCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [blocksLabel_2, blocksDescription_2],
+  children: [blocksLabel, blocksDescription],
 
-  blocksLabel_2 = text {
+  blocksLabel = text {
     left: 162.6667px,
     top: -17px,
     fill: colors.primitives.white,
@@ -183,7 +185,7 @@ blocksCard_2 = frame {
     letter-spacing: 10%
   }
 
-  blocksDescription_2 = text {
+  blocksDescription = text {
     left: 0px,
     top: 71px,
     width: 100%,
@@ -194,7 +196,7 @@ blocksCard_2 = frame {
   }
 }
 
-screensCard_2 = frame {
+screensOverviewCard = frame {
   left: 0px,
   top: 0px,
   width: 100%,
@@ -202,9 +204,9 @@ screensCard_2 = frame {
   layout: {direction: .column, item-gap: 10px},
   corner-radius: Radius.radius.small,
   padding: Spacing.padding.large,
-  children: [screensLabel_2, screensDescription_2],
+  children: [screensLabel, screensDescription],
 
-  screensLabel_2 = text {
+  screensLabel = text {
     left: 162.6667px,
     top: -25.5px,
     fill: colors.primitives.white,
@@ -214,7 +216,7 @@ screensCard_2 = frame {
     letter-spacing: 10%
   }
 
-  screensDescription_2 = text {
+  screensDescription = text {
     left: 54px,
     top: 0px,
     width: 100%,
@@ -226,13 +228,13 @@ screensCard_2 = frame {
   }
 }
 
-GroupedStack_2 = frame {
+projectResourcesOverview = frame {
   width: 100%,
   layout: {direction: .column, align-items: .center, item-gap: 12px},
   overflow: .visible,
-  children: [assetFoldersDescription_2, tokensFolderDescription_2],
+  children: [assetFoldersDescription, tokensFolderDescription],
 
-  assetFoldersDescription_2 = text {
+  assetFoldersDescription = text {
     left: 20px,
     top: 60px,
     width: 100%,
@@ -242,7 +244,7 @@ GroupedStack_2 = frame {
     line-height: 1.5
   }
 
-  tokensFolderDescription_2 = text {
+  tokensFolderDescription = text {
     left: 20px,
     top: 301px,
     width: 100%,

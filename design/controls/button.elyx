@@ -17,7 +17,10 @@ export medium = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(2.58%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
+      stops: [
+        stop(2.58%, Colors.gradients.surfaceTop),
+        stop(100%, Colors.gradients.surfaceBottom)
+      ]
     }
   },
   border: {color: Colors.theme.contrastAlpha25, width: 0.5px},
@@ -49,7 +52,7 @@ export medium = frame {
 
 @variant
 mediumPrimary = frame : medium {
-  left: 1072px,
+  left: 1132px,
   top: 689px,
   border[0].color: Colors.theme.contrastStrongest,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
@@ -67,7 +70,7 @@ mediumPrimary = frame : medium {
 
 @variant
 mediumDanger = frame : medium {
-  left: 1181px,
+  left: 1301px,
   top: 689px,
   border[0].color: Colors.palette.red50,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.dangerTop,
@@ -97,7 +100,7 @@ mediumPressed = frame : medium {
 
 @variant
 mediumPrimaryPressed = frame : medium {
-  left: 1072px,
+  left: 1132px,
   top: 769px,
   border[0].color: Colors.theme.contrastStrong,
   fill[0].color: Colors.theme.contrastDefault,
@@ -113,7 +116,7 @@ mediumPrimaryPressed = frame : medium {
 
 @variant
 mediumDangerPressed = frame : medium {
-  left: 1181px,
+  left: 1301px,
   top: 769px,
   border[0].color: Colors.palette.red50,
   fill[0].color: Colors.palette.red60,
@@ -136,7 +139,10 @@ export small = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
+      stops: [
+        stop(0%, Colors.gradients.surfaceTop),
+        stop(100%, Colors.gradients.surfaceBottom)
+      ]
     }
   },
   border: {color: Colors.theme.contrastAlpha25, width: 0.5px},
@@ -167,7 +173,7 @@ export small = frame {
 
 @variant
 smallDangerPressed = frame : small {
-  left: 1127px,
+  left: 1301px,
   top: 993px,
   fill[0].color: Colors.palette.red60,
   shadow[0].drop-shadow.color: Colors.palette.red50,
@@ -183,7 +189,7 @@ smallDangerPressed = frame : small {
 
 @variant
 smallDanger = frame : small {
-  left: 1127px,
+  left: 1301px,
   top: 917px,
   border[0].color: Colors.palette.red50,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.dangerTop,
@@ -212,7 +218,7 @@ smallPressed = frame : small {
 
 @variant
 smallPrimary = frame : small {
-  left: 1045px,
+  left: 1132px,
   top: 917px,
   border[1].color: Colors.theme.contrastStrongest,
   border[1].width: 0.5px,
@@ -230,7 +236,7 @@ smallPrimary = frame : small {
 
 @variant
 smallPrimaryPressed = frame : small {
-  left: 1045px,
+  left: 1132px,
   top: 993px,
   fill[0].color: Colors.theme.contrastDefault,
   shadow[0].drop-shadow.color: rgb(0%, 0%, 0%, 20%),
@@ -245,7 +251,7 @@ smallPrimaryPressed = frame : small {
 
 @variant
 mediumIcon = frame : medium {
-  left: 1368px,
+  left: 1588px,
   top: 689px,
   width: Spacing.size.medium,
   padding-left: 0px,
@@ -264,7 +270,7 @@ mediumIcon = frame : medium {
 
 @variant
 mediumClose = frame : medium {
-  left: 1291px,
+  left: 1511px,
   top: 689px,
   width: Spacing.size.medium,
   padding-left: 0px,
@@ -288,12 +294,15 @@ mediumClose = frame : medium {
 
 @variant
 smallIconBackground = frame : small {
-  left: 1277px,
+  left: 1588px,
   top: 917px,
   width: Spacing.size.small,
   padding-left: 0px,
   padding-right: 0px,
-  overrides: [insert(smallBackgroundIcon, after = .nil), remove(small.smallLabel)],
+  overrides: [
+    insert(smallBackgroundIcon, after = .nil),
+    remove(small.smallLabel)
+  ],
 
   smallBackgroundIcon = icon {
     left: 1248px,
@@ -307,7 +316,7 @@ smallIconBackground = frame : small {
 
 @variant
 smallClose = frame : small {
-  left: 1210px,
+  left: 1511px,
   top: 917px,
   width: Spacing.size.small,
   padding-left: 0px,
@@ -331,14 +340,17 @@ smallClose = frame : small {
 
 @variant
 smallPrimaryRounded = frame : small {
-  left: 1344px,
+  left: 1665px,
   top: 917px,
   width: Spacing.size.small,
   padding-left: 0px,
   padding-right: 0px,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
   fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
-  overrides: [insert(smallPrimaryRoundedIcon, after = .nil), remove(small.smallLabel)],
+  overrides: [
+    insert(smallPrimaryRoundedIcon, after = .nil),
+    remove(small.smallLabel)
+  ],
 
   smallPrimaryRoundedIcon = icon {
     left: 1248px,
@@ -352,7 +364,7 @@ smallPrimaryRounded = frame : small {
 
 @variant
 smallIcon = frame : small {
-  left: 1417px,
+  left: 1742px,
   top: 917px,
   width: Spacing.size.small,
   padding-left: 0px,
@@ -374,7 +386,7 @@ smallIcon = frame : small {
 
 @variant
 mediumPrimaryRounded = frame : medium {
-  left: 1445px,
+  left: 1665px,
   top: 689px,
   width: Spacing.size.medium,
   padding-left: 0px,
@@ -382,7 +394,10 @@ mediumPrimaryRounded = frame : medium {
   border[0].color: Colors.theme.contrastStrongest,
   fill[0].linear-gradient.stops[0].color: Colors.gradients.emphasisTop,
   fill[0].linear-gradient.stops[1].color: Colors.gradients.emphasisBottom,
-  overrides: [insert(mediumPrimaryRoundedIcon, after = .nil), remove(medium.mediumLabel)],
+  overrides: [
+    insert(mediumPrimaryRoundedIcon, after = .nil),
+    remove(medium.mediumLabel)
+  ],
   shadow[1].inner-shadow.blur-radius: 0.5px,
   shadow[1].inner-shadow.color: Colors.primitives.white50,
   shadow[1].inner-shadow.offset: [0px, 1px],
@@ -400,14 +415,17 @@ mediumPrimaryRounded = frame : medium {
 
 @variant
 mediumPlainIcon = frame : medium {
-  left: 1522px,
+  left: 1742px,
   top: 689px,
   width: Spacing.size.medium,
   padding-left: 0px,
   padding-right: 0px,
   border[0]: .nil,
   fill[0]: .nil,
-  overrides: [insert(mediumPlainIconGlyph, after = .nil), remove(medium.mediumLabel)],
+  overrides: [
+    insert(mediumPlainIconGlyph, after = .nil),
+    remove(medium.mediumLabel)
+  ],
   shadow[0]: .nil,
 
   mediumPlainIconGlyph = icon {
@@ -421,7 +439,7 @@ mediumPlainIcon = frame : medium {
 }
 
 export Play = frame {
-  left: 1664px,
+  left: 1884px,
   top: 673px,
   width: 96px,
   height: 96px,

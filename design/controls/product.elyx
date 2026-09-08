@@ -3,12 +3,15 @@ import "images/misc/book2.png" as book2
 import "images/misc/book3.png" as book3
 import "images/misc/book4.png" as book4
 import "images/misc/book5.png" as book5
+import "tokens/radius.elyx" as radius
 
 export product = frame {
   left: 409.71px,
   top: 494px,
   width: 155px,
   height: 211px,
+  corner-radius: radius.radius.smoothing,
+  corner-smoothing: radius.radius.smoothing,
   overflow: .visible,
   children: coverOne,
 

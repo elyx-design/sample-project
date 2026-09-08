@@ -1,22 +1,41 @@
 import "tokens/spacing.elyx" as Spacing
 import "tokens/typography.elyx" as Typography
-import "tokens/colors.elyx" as colors
 import "tokens/radius.elyx" as radius
 
 export timelineRuler = frame {
   left: 609px,
   top: 488px,
   width: 335px,
-  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.small},
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.small
+  },
   children: [marker0, marker1, marker2, marker3],
 
-  marker0 = frame : timeMarker {left: 0px, top: 495px, width: 100%}
+  marker0 = frame : timeMarker {
+    left: 0px,
+    top: 495px,
+    width: 100%
+  }
 
-  marker1 = frame : timeMarker {left: 20px, top: 515px, width: 100%}
+  marker1 = frame : timeMarker {
+    left: 20px,
+    top: 515px,
+    width: 100%
+  }
 
-  marker2 = frame : timeMarker {left: 29px, top: 515px, width: 100%}
+  marker2 = frame : timeMarker {
+    left: 29px,
+    top: 515px,
+    width: 100%
+  }
 
-  marker3 = frame : timeMarker {left: 38px, top: 515px, width: 100%}
+  marker3 = frame : timeMarker {
+    left: 38px,
+    top: 515px,
+    width: 100%
+  }
 }
 
 export timeMarker = frame {
@@ -32,7 +51,7 @@ export timeMarker = frame {
     right: 50.63px,
     width: .auto,
     height: 15px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     contents: "0",
     font-size: Typography.fontSize.xsmall,
     align: .center
@@ -60,7 +79,7 @@ ticks = frame {
     top: 0px,
     width: 1px,
     height: 3px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     type: .rect,
     corner-radius: radius.radius.full
   }
@@ -70,7 +89,7 @@ ticks = frame {
     top: 0px,
     width: 1px,
     height: 2px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     type: .rect,
     corner-radius: radius.radius.full
   }
@@ -80,7 +99,7 @@ ticks = frame {
     top: 0.39px,
     width: 1px,
     height: 2px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     type: .rect,
     corner-radius: radius.radius.full
   }
@@ -90,7 +109,7 @@ ticks = frame {
     top: 0.78px,
     width: 1px,
     height: 2px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     type: .rect,
     corner-radius: radius.radius.full
   }
@@ -100,7 +119,7 @@ ticks = frame {
     top: 1.17px,
     width: 1px,
     height: 2px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     type: .rect,
     corner-radius: radius.radius.full
   }
@@ -110,7 +129,7 @@ ticks = frame {
     top: 1.56px,
     width: 1px,
     height: 1px,
-    fill: colors.theme.baseAlpha50,
+    fill: .white,
     type: .rect,
     corner-radius: radius.radius.full
   }

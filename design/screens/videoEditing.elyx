@@ -17,7 +17,9 @@ import "icons/24 pixels/music-24.svg" as music24
 import "icons/24 pixels/text-24.svg" as text24
 import "design/blocks/sidebar.elyx" as sidebar
 import "icons/24 pixels/notes-24.svg" as notes24
+import "tokens/colors.dark.elyx" as colorsdark
 
+@with-context(theme="dark")
 export videoEditing = frame {
   left: -689px,
   top: -230px,
@@ -65,8 +67,12 @@ workspace = frame {
   timeline = frame {
     width: 100%,
     height: 100%,
-    layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
-    fill: {color: Colors.theme.contrastStrongest, visible: .false},
+    layout: {
+      direction: .column,
+      align-items: .center,
+      item-gap: Spacing.gap.small
+    },
+    fill: {color: colorsdark.darkTheme.contrastStrongest, visible: .false},
     padding-top: Spacing.padding.small,
     children: [ruler, tracks]
   }
@@ -76,8 +82,12 @@ preview = frame {
   left: 0px,
   top: 0px,
   height: 60%,
-  layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.xxsmall},
-  fill: {color: Colors.theme.contrastStrongest, visible: .false},
+  layout: {
+    justify-content: .end,
+    align-items: .end,
+    item-gap: Spacing.gap.xxsmall
+  },
+  fill: {color: colorsdark.darkTheme.contrastStrongest, visible: .false},
   children: [player, gallery],
 
   player = frame : videoPlayer.videoPlayer {
@@ -86,18 +96,18 @@ preview = frame {
     width: 60%,
     height: 100%,
     fill[0].image.ref: bird,
-    fill[1].linear-gradient.stops[1].color: Colors.gradients.overlayEnd,
+    fill[1].linear-gradient.stops[1].color: colorsdark.darkGradients.overlayEnd,
 
     videoPlayer.videoPlayer.controls {
       videoPlayer.playbackControl.tools {
         videoPlayer.playbackControl.tools.likeButton {
-          videoPlayer.playbackControl.button.smallIcon.smallIconGlyph {
+          sidebar.button.smallIcon.smallIconGlyph {
             contents: pen20
           }
         }
 
         videoPlayer.playbackControl.tools.settingsButton {
-          videoPlayer.playbackControl.button.smallIcon.smallIconGlyph {
+          sidebar.button.smallIcon.smallIconGlyph {
             contents: pointer20
           }
         }
@@ -105,11 +115,9 @@ preview = frame {
 
       videoPlayer.playbackControl.scrubber {
         @use-variant(slider.thumb)
-        videoPlayer.playbackControl.scrubber.progressSlider {}
-
         videoPlayer.playbackControl.scrubber.progressSlider {
-          videoPlayer.playbackControl.slider.thumb.handle_2 {
-            videoPlayer.playbackControl.slider.handle.thumbHandle_2 {
+          slider.thumb.handle_2 {
+            slider.handle.thumbHandle_2 {
               fill[0].color: Colors.primitives.white,
               border[0].visible: .false
             }
@@ -360,7 +368,11 @@ ruler = frame : timelineRuler.timelineRuler {
 tracks = frame {
   width: 100%,
   height: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.small
+  },
   padding: [Spacing.padding.xxlarge, 0px],
   children: [videoTrackRow, audioTrack, titleTrack],
 
@@ -368,7 +380,7 @@ tracks = frame {
     left: 4241.5px,
     top: 788px,
     width: 48.3773%,
-    fill[0].color: Colors.palette.magenta,
+    fill[0].color: colorsdark.darkPalette.magenta,
 
     mediaTrack.content {
       mediaTrack.dateLabel {
@@ -479,16 +491,23 @@ timelinePlayHead = frame {
     width: 2px,
     height: 100%,
     fill: [
-      Colors.palette.lime,
+      colorsdark.darkPalette.lime,
       {
         linear-gradient: {
           from: point(50%, 88.7466%),
           to: point(50%, 100%),
-          stops: [stop(0%, .transparent), stop(100%, Colors.gradients.overlayEnd)]
+          stops: [
+            stop(0%, .transparent),
+            stop(100%, colorsdark.darkGradients.overlayEnd)
+          ]
         }
       }
     ],
-    border: {color: Colors.theme.contrastAlpha70, width: 0.5px, position: .outside},
+    border: {
+      color: colorsdark.darkTheme.contrastAlpha70,
+      width: 0.5px,
+      position: .outside
+    },
     type: .rect
   }
 
@@ -498,8 +517,8 @@ timelinePlayHead = frame {
     width: 12px,
     height: 12px,
     ignore-stack: .true,
-    fill: Colors.theme.contrastAlpha70,
-    border: {color: Colors.palette.lime, width: 2px},
+    fill: colorsdark.darkTheme.contrastAlpha70,
+    border: {color: colorsdark.darkPalette.lime, width: 2px},
     type: .ellipse
   }
 }

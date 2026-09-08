@@ -1,7 +1,7 @@
 import "design/controls/cardBackground.elyx" as cardBackground
 import "tokens/spacing.elyx" as spacing
-import "tokens/typography.elyx" as typography
 import "tokens/colors.elyx" as colors
+import "tokens/typography.elyx" as typography
 import "design/controls/slider.elyx" as slider
 import "design/controls/button.elyx" as button
 import "icons/20 pixels/play-20.svg" as play20
@@ -33,7 +33,8 @@ export playbackControl = frame : cardBackground.none {
     top: 543px,
     fill: colors.theme.contrastStrongest,
     contents: "0:00 / 32:46",
-    font-size: typography.fontSize.small
+    font-size: typography.fontSize.small,
+    font-style: "Medium"
   }
 }
 
@@ -87,5 +88,9 @@ scrubber = frame {
     }
   }
 
-  progressSlider = frame : slider.slider {left: 0px, top: 636px, width: 100%}
+  progressSlider = frame : slider.slider {
+    left: 0px,
+    top: 636px,
+    width: 100%
+  }
 }

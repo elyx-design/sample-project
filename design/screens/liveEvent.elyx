@@ -1,6 +1,7 @@
 import "tokens/strings.elyx" as Strings
 import "tokens/spacing.elyx" as Spacing
 import "design/blocks/videoPlayer.elyx" as videoPlayer
+import "tokens/radius.elyx" as radius
 import "tokens/colors.elyx" as colors
 import "design/controls/button.elyx" as button
 import "design/blocks/chatWindow.elyx" as chatWindow
@@ -78,7 +79,12 @@ Content = frame {
     fill[0].visible: .false
   }
 
-  chat = frame : chatWindow.liveChat {left: 0px, top: 0px, width: 100%, height: 100%}
+  chat = frame : chatWindow.liveChat {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%
+  }
 }
 
 Video = frame {
@@ -95,12 +101,11 @@ Video = frame {
     top: 0px,
     width: 100%,
     height: 603px,
-    corner-radius: 0px,
 
     videoPlayer.videoPlayer.controls {
       videoPlayer.playbackControl.scrubber {
         videoPlayer.playbackControl.scrubber.playButton {
-          videoPlayer.playbackControl.button.smallIcon.smallIconGlyph {
+          button.smallIcon.smallIconGlyph {
             contents: pause20
           }
         }
@@ -116,11 +121,11 @@ Video = frame {
 
     videoPlayer.headerRow {
       videoPlayer.headerRow.eventHeader {
-        videoPlayer.header.smallLeft.smallSubtitle {
+        userSummary.header.smallLeft.smallSubtitle {
           contents: Strings.liveEvent.streamTitle
         }
 
-        videoPlayer.header.smallLeft.smallTitle {
+        userSummary.header.smallLeft.smallTitle {
           contents: "CAM 3"
         }
       }
@@ -135,6 +140,8 @@ About = frame {
   height: 320px,
   layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   fill: {image: {ref: bikeBGBanner}},
+  corner-radius: radius.radius.small,
+  corner-smoothing: radius.radius.smoothing,
   overflow: .visible,
   padding: Spacing.padding.xlarge,
   children: [small, GroupedStack],

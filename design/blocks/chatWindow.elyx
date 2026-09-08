@@ -14,10 +14,19 @@ export chatWindow = frame {
   top: 241px,
   width: 327px,
   height: 316px,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 38px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 38px
+  },
   fill: colors.theme.baseAlpha50,
   filter: {type: .background-blur, radius: 40px},
-  padding: [Spacing.padding.xxlarge, Spacing.padding.medium, Spacing.padding.medium],
+  padding: [
+    Spacing.padding.xxlarge,
+    Spacing.padding.medium,
+    Spacing.padding.medium
+  ],
   children: [messageThread, messageField],
 
   messageField = frame : textField.buttonPlaceholder {
@@ -33,7 +42,11 @@ export chatWindow = frame {
 messageThread = frame {
   width: 100%,
   height: 100%,
-  layout: {direction: .column, align-items: .stretch, item-gap: Spacing.gap.xxlarge},
+  layout: {
+    direction: .column,
+    align-items: .stretch,
+    item-gap: Spacing.gap.xxlarge
+  },
   overflow: .visible,
   slot: .true,
   restrict-children: .true,
@@ -54,7 +67,11 @@ messageThread = frame {
 
 replyMessages = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .stretch, item-gap: Spacing.gap.small},
+  layout: {
+    direction: .column,
+    align-items: .stretch,
+    item-gap: Spacing.gap.small
+  },
   overflow: .visible,
   children: [firstReply, secondReply],
 
@@ -64,7 +81,6 @@ replyMessages = frame {
 
     chatBubble.message {
       chatBubble.message.messageText {
-        fill[0].color: colors.theme.base,
         contents: "Yeah, it's true!"
       }
     }
@@ -76,7 +92,6 @@ replyMessages = frame {
 
     chatBubble.message {
       chatBubble.message.messageText {
-        fill[0].color: colors.theme.base,
         contents: "Incredible pace out there"
       }
     }
@@ -123,7 +138,11 @@ GroupedStack_4 = frame {
     }
   },
   overflow: .visible,
-  padding: [Spacing.padding.large, Spacing.padding.medium, Spacing.padding.medium],
+  padding: [
+    Spacing.padding.large,
+    Spacing.padding.medium,
+    Spacing.padding.medium
+  ],
   children: [GroupedStack_5, medium_2],
 
   medium_2 = frame : segmentedControl.small {
@@ -156,7 +175,11 @@ GroupedStack_5 = frame {
   top: 12px,
   width: 100%,
   height: .auto,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: 38px},
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 38px
+  },
   overflow: .visible,
   padding-left: 0px,
   padding-right: 0px,
@@ -294,7 +317,11 @@ footer = frame {
   top: 868px,
   width: 100%,
   height: .auto,
-  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.medium},
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.medium
+  },
   overflow: .visible,
   padding: Spacing.padding.medium,
   children: [messageField_2, medium],

@@ -15,11 +15,23 @@ export medium = frame {
   padding: Spacing.padding.xsmall,
   children: [leadingSegment, middleSegment, trailingSegment],
 
-  leadingSegment = frame : mediumSelected {left: 0px, top: 10px, width: 100%}
+  leadingSegment = frame : mediumSelected {
+    left: 0px,
+    top: 10px,
+    width: 100%
+  }
 
-  middleSegment = frame : mediumInactive {left: 0px, top: 30px, width: 100%}
+  middleSegment = frame : mediumInactive {
+    left: 0px,
+    top: 30px,
+    width: 100%
+  }
 
-  trailingSegment = frame : mediumInactive {left: 0px, top: 30px, width: 100%}
+  trailingSegment = frame : mediumInactive {
+    left: 0px,
+    top: 30px,
+    width: 100%
+  }
 }
 
 export mediumSelected = frame {
@@ -31,10 +43,17 @@ export mediumSelected = frame {
   fill: {
     linear-gradient: {
       angle: 180deg,
-      stops: [stop(0%, Colors.gradients.surfaceTop), stop(100%, Colors.gradients.surfaceBottom)]
+      stops: [
+        stop(0%, Colors.gradients.surfaceTop),
+        stop(100%, Colors.gradients.surfaceBottom)
+      ]
     }
   },
-  border: {color: Colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  border: {
+    color: Colors.theme.contrastAlpha25,
+    width: 0.5px,
+    position: .outside
+  },
   shadow: {
     drop-shadow: {
       color: Colors.primitives.blackAlpha05,
@@ -80,7 +99,10 @@ small = frame : medium {
   width: .auto,
   height: .auto,
   fill[0].color: Colors.theme.contrastFaint,
-  overrides: [insert(smallLeadingSegment, after = .nil), remove(medium.leadingSegment)],
+  overrides: [
+    insert(smallLeadingSegment, after = .nil),
+    remove(medium.leadingSegment)
+  ],
 
   @use-variant(smallInactive)
   medium.trailingSegment {}
@@ -88,12 +110,16 @@ small = frame : medium {
   @use-variant(smallInactive)
   medium.middleSegment {}
 
-  smallLeadingSegment = frame : smallSelected {left: 0px, top: 6.5px, width: 100%}
+  smallLeadingSegment = frame : smallSelected {
+    left: 0px,
+    top: 6.5px,
+    width: 100%
+  }
 }
 
 @variant
 smallInactive = frame : mediumSelected {
-  left: 726px,
+  left: 756px,
   top: 812px,
   height: .auto,
   padding-top: Spacing.padding.xsmall,
@@ -109,7 +135,7 @@ smallInactive = frame : mediumSelected {
 
 @variant
 smallSelected = frame : mediumSelected {
-  left: 726px,
+  left: 756px,
   top: 736px,
   height: .auto,
   padding-top: Spacing.padding.xsmall,

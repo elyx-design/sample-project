@@ -13,7 +13,11 @@ export tagTransparent = frame {
   height: spacing.size.small,
   layout: {justify-content: .center, align-items: .center},
   fill: colors.theme.baseAlpha50,
-  border: {color: colors.theme.contrastAlpha25, width: 0.5px, position: .outside},
+  border: {
+    color: colors.theme.contrastAlpha25,
+    width: 0.5px,
+    position: .outside
+  },
   filter: {type: .background-blur, radius: 40px},
   corner-radius: radius.radius.full,
   padding-left: spacing.padding.medium,
@@ -26,7 +30,7 @@ export tagTransparent = frame {
     fill: colors.theme.contrastAlpha50,
     contents: Strings.componentDefaults.label,
     font-size: typography.fontSize.small,
-    font-style: "Bold"
+    font-style: "Medium"
   }
 }
 

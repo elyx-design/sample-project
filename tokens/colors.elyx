@@ -36,7 +36,10 @@ export palette = tokens {
   lavender: rgb(90.2878%, 81.12%, 100%)
 }
 
-export status = tokens {visible: rgb(0%, 92.12%, 0%), away: rgb(100%, 65.3497%, 0%)}
+export status = tokens {
+  visible: rgb(0%, 92.12%, 0%),
+  away: rgb(100%, 65.3497%, 0%)
+}
 
 export controls = tokens {
   foreground: rgb(98.9987%, 98.9987%, 98.9987%),
@@ -44,7 +47,9 @@ export controls = tokens {
   surface: rgb(89.84%, 89.84%, 89.84%)
 }
 
-export surfaces = tokens {subtle: rgb(94.9997%, 94.9997%, 94.9997%)}
+export surfaces = tokens {
+  subtle: rgb(94.9997%, 94.9997%, 94.9997%)
+}
 
 export primitives = tokens {
   white: .white,
