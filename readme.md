@@ -1,6 +1,6 @@
-# Scaffold
+# Demo Project
 
-Welcome to the Elyx scaffold.
+Welcome to the Elyx demo project.
 
 This project demonstrates how to organize and build `.elyx` files. UI files live under `design/` in four layers:
 

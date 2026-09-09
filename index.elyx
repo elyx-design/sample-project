@@ -25,7 +25,7 @@ intro = frame {
   height: 620px,
   layout: {justify-content: .center, align-items: .center},
   corner-radius: 20px,
-  children: [welcome, scaffoldContent]
+  children: [welcome, demoProjectContent]
 }
 
 welcome = frame {
@@ -69,14 +69,14 @@ introCopy = frame {
     top: 0px,
     mix-blend-mode: .overlay,
     fill: colors.primitives.white70,
-    contents: Strings.scaffold.welcomeTitle,
+    contents: Strings.demoProject.welcomeTitle,
     font-size: 24,
     font-style: "Medium",
     align: .center
   }
 }
 
-scaffoldContent = frame {
+demoProjectContent = frame {
   left: 903px,
   top: 0px,
   width: 831px,
@@ -117,7 +117,7 @@ welcomeIntro = frame {
     top: -161px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: Strings.scaffold.welcomeDescription,
+    contents: Strings.demoProject.welcomeDescription,
     font-size: 24,
     font-style: "Medium",
     line-height: 1.3
@@ -128,7 +128,7 @@ welcomeIntro = frame {
     top: 40px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: Strings.scaffold.structureDescription,
+    contents: Strings.demoProject.structureDescription,
     font-size: 14,
     line-height: 1.5
   }
@@ -148,7 +148,7 @@ controlsOverviewCard = frame {
     left: 69px,
     top: 45px,
     fill: colors.primitives.white,
-    contents: Strings.scaffold.controlsTitle,
+    contents: Strings.demoProject.controlsTitle,
     font-size: Typography.fontSize.small,
     font-style: "SemiBold",
     letter-spacing: 10%
@@ -159,7 +159,7 @@ controlsOverviewCard = frame {
     top: 65px,
     width: 100%,
     fill: colors.primitives.white70,
-    contents: Strings.scaffold.controlsDescription,
+    contents: Strings.demoProject.controlsDescription,
     font-size: Typography.fontSize.medium,
     line-height: 1.5
   }
@@ -179,7 +179,7 @@ blocksOverviewCard = frame {
     left: 162.6667px,
     top: -17px,
     fill: colors.primitives.white,
-    contents: Strings.scaffold.blocksTitle,
+    contents: Strings.demoProject.blocksTitle,
     font-size: Typography.fontSize.small,
     font-style: "SemiBold",
     letter-spacing: 10%
@@ -190,7 +190,7 @@ blocksOverviewCard = frame {
     top: 71px,
     width: 100%,
     fill: colors.primitives.white70,
-    contents: Strings.scaffold.blocksDescription,
+    contents: Strings.demoProject.blocksDescription,
     font-size: Typography.fontSize.medium,
     line-height: 1.5
   }
@@ -210,7 +210,7 @@ screensOverviewCard = frame {
     left: 162.6667px,
     top: -25.5px,
     fill: colors.primitives.white,
-    contents: Strings.scaffold.screensTitle,
+    contents: Strings.demoProject.screensTitle,
     font-size: Typography.fontSize.small,
     font-style: "SemiBold",
     letter-spacing: 10%
@@ -222,7 +222,7 @@ screensOverviewCard = frame {
     width: 100%,
     height: .auto,
     fill: colors.primitives.white70,
-    contents: Strings.scaffold.screensDescription,
+    contents: Strings.demoProject.screensDescription,
     font-size: Typography.fontSize.medium,
     line-height: 1.5
   }
@@ -239,7 +239,7 @@ projectResourcesOverview = frame {
     top: 60px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: Strings.scaffold.assetsDescription,
+    contents: Strings.demoProject.assetsDescription,
     font-size: 14,
     line-height: 1.5
   }
@@ -249,7 +249,7 @@ projectResourcesOverview = frame {
     top: 301px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: Strings.scaffold.tokensDescription,
+    contents: Strings.demoProject.tokensDescription,
     font-size: 14,
     line-height: 1.5
   }

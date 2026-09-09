@@ -7,8 +7,8 @@ __file__
 // exported group structure aligned with strings.elyx.
 __canvas__
 
-export scaffold = tokens : strings.scaffold {
-  welcomeTitle: "Bienvenue dans le projet de démarrage Elyx",
+export demoProject = tokens : strings.demoProject {
+  welcomeTitle: "Bienvenue dans le projet de démonstration Elyx",
   welcomeDescription: "Ce document présente les bonnes pratiques pour configurer les fichiers .elyx dans votre projet",
   structureDescription: "Les fichiers d’interface sont organisés sous design/ en quatre niveaux : contrôles, blocs, écrans et parcours.",
   controlsTitle: "CONTRÔLES",

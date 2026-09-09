@@ -165,8 +165,8 @@ export pricingPage = tokens {
   title: "Choose the plan that fits your work"
 }
 
-export scaffold = tokens {
-  welcomeTitle: "Welcome to the Elyx scaffold",
+export demoProject = tokens {
+  welcomeTitle: "Welcome to the Elyx demo project",
   welcomeDescription: "This project demonstrates best practices for organizing and building with .elyx files.",
   structureDescription: "UI files live under design/ in four layers: controls, blocks, screens, and flows.",
   controlsTitle: "CONTROLS",
