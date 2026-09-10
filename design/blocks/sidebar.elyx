@@ -82,7 +82,6 @@ compactNavigation = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
   slot: .true,
-  restrict-children: .true,
   children: [home, create, folder, cloud, history],
 
   home = frame : button.mediumPlainIcon {
@@ -428,7 +427,6 @@ eventItems = frame {
   layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   padding-left: 0px,
   padding-right: 0px,
   children: [
@@ -582,7 +580,6 @@ primaryNavigation = frame {
   layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   padding-left: 10px,
   padding-right: 10px,
   children: [campaignsItem, overviewItem, salesItem, tasksItem, settingsItem],
@@ -710,7 +707,6 @@ secondaryItems = frame {
   layout: {direction: .column, item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   padding-left: 0px,
   padding-right: 0px,
   children: [campaignsItem_4, campaignsItem_3, campaignsItem_5, campaignsItem_6],

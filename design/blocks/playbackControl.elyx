@@ -42,7 +42,6 @@ tools = frame {
   height: 100%,
   layout: {align-items: .center},
   slot: .true,
-  restrict-children: .true,
   children: [settingsButton, likeButton, moreButton],
 
   settingsButton = frame : button.smallIcon {

@@ -49,7 +49,6 @@ messageThread = frame {
   },
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   children: [userMessage, replyMessages],
 
   userMessage = frame : chatBubble.user {
@@ -226,7 +225,6 @@ chat = frame {
   layout: {direction: .column, item-gap: Spacing.gap.large},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   padding-left: Spacing.padding.xlarge,
   padding-right: Spacing.padding.xlarge,
   children: [firstMessage, secondMessage, thirdMessage, fourthMessage],

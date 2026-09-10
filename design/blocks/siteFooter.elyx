@@ -135,7 +135,6 @@ productLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
-  restrict-children: .true,
   children: [howItWorksLink, pricingFooterLink, faqLink, resourcesLink, featuresLink, roadmapLink],
 
   howItWorksLink = text {
@@ -223,7 +222,6 @@ companyLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
-  restrict-children: .true,
   children: [aboutLink, contactLink, careersLink, pressLink, ourStoryLink],
 
   aboutLink = text {
@@ -301,7 +299,6 @@ contactLinks = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.medium},
   slot: .true,
-  restrict-children: .true,
   children: [privacyLink, termsLink, contactCareersLink, securityLink],
 
   privacyLink = text {

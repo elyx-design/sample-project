@@ -30,7 +30,6 @@ productList = frame {
   layout: {justify-content: .space-between, item-gap: Spacing.gap.xlarge},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   children: [designBook, candyBook, seaLifeBook, wildlifeBook],
 
   designBook = frame : productInfo.productInfo {

@@ -14,7 +14,6 @@ export aiChat = frame {
   layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
   corner-radius: cardBackground.Radius.radius.xlarge,
   slot: .true,
-  restrict-children: .true,
   padding: [0px, Spacing.padding.medium],
   children: [userMessage, assistantResponse],
 

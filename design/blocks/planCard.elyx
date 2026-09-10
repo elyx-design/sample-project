@@ -145,7 +145,6 @@ features = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
   slot: .true,
-  restrict-children: .true,
   children: [projectsFeature, projectsFeature_2, projectsFeature_3, projectsFeature_4],
 
   projectsFeature = frame : listItem.projectsFeature {

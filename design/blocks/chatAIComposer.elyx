@@ -36,7 +36,6 @@ attachmentActions = frame {
   layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   children: [add, modelSelector, search, more],
 
   add = frame : button.smallIconBackground {
@@ -81,7 +80,6 @@ messageActions = frame {
   layout: {item-gap: Spacing.gap.small},
   overflow: .visible,
   slot: .true,
-  restrict-children: .true,
   children: [voice, send],
 
   voice = frame : button.smallIconBackground {
