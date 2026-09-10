@@ -23,29 +23,6 @@
       }
     },
     {
-      "id": "c29fd562-a70d-4c91-b44d-f288de725845",
-      "name": "flows",
-      "gallery": {
-        "type": "folderGallery",
-        "rootPath": "design/flows",
-        "query": {
-          "filters": {
-            "diagnostics": [],
-            "extensions": [
-              ".elyx"
-            ],
-            "gitStatuses": [],
-            "modifiedWithin": null
-          },
-          "search": "",
-          "sort": {
-            "field": "name",
-            "direction": "ascending"
-          }
-        }
-      }
-    },
-    {
       "id": "1916f407-4eef-4b27-bb36-751dcb7f42e0",
       "name": "screens",
       "gallery": {
