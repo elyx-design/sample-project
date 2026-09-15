@@ -25,9 +25,9 @@
       ]
     },
     "images": {
-      "writePath": "images",
+      "writePath": "images/",
       "additionalSourcePaths": [
-        "icons"
+        "icons/"
       ]
     }
   },
