@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>cart-24</title>
-    <g id="cart-24" stroke="none" fill="none">
-        <path d="M7,8 L16,8 C17.1045695,8 18,8.8954305 18,10 L18,13 C18,14.1045695 17.1045695,15 16,15 L9.63960781,15 C8.68624577,15 7.86541613,14.3270807 7.67844645,13.3922323 L6,5 L4,5" id="Path" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <circle id="Oval" fill="#000000" fill-rule="evenodd" cx="9.5" cy="18.5" r="1.5"></circle>
-        <circle id="Oval-2" fill="#000000" fill-rule="evenodd" cx="16.5" cy="18.5" r="1.5"></circle>
-    </g>
-</svg>

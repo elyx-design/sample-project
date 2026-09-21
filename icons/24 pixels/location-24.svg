@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>location-24</title>
-    <g id="location-24" stroke="none" fill="none">
-        <path d="M12,19.9312308 C14.0507965,19.9312308 18.460305,16.0149449 18.460305,11.3915358 C18.460305,6.76812671 15.5679279,4.9312308 12,4.9312308 C8.43207207,4.9312308 5.539695,6.76812671 5.539695,11.3915358 C5.539695,16.0149449 9.94920348,19.9312308 12,19.9312308 Z" id="Oval" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <circle id="Oval" fill="#000000" fill-rule="evenodd" cx="12" cy="11" r="2"></circle>
-    </g>
-</svg>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>code-20</title>
-    <g id="code-20" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-        <path d="M3.75735931,12 L3.75735931,9.5 C3.75735931,8.67157288 4.42893219,8 5.25735931,8 L7.75735931,8" id="Path" stroke="#000000" transform="translate(5.7574, 10) rotate(-45) translate(-5.7574, -10)"></path>
-        <path d="M12.2426407,12 L12.2426407,9.5 C12.2426407,8.67157288 12.9142136,8 13.7426407,8 L16.2426407,8" id="Path-2" stroke="#000000" transform="translate(14.2426, 10) scale(-1, 1) rotate(-45) translate(-14.2426, -10)"></path>
-        <line x1="11.552916" y1="4.2044321" x2="8.44708743" y2="15.795542" id="Path-26" stroke="#000000"></line>
-    </g>
-</svg>
