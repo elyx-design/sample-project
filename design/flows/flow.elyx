@@ -1,13 +1,13 @@
-import "design/screens/signIn.elyx" as signIn
+import "design/screens/signIn.elyx" as signInFile
 import "design/screens/AIchat.elyx" as AIchat
-import "design/screens/LandingPage.elyx" as LandingPage
-import "design/screens/footer.elyx" as footerPage
-import "design/screens/pricingPage.elyx" as pricingPage
+import "design/screens/LandingPage.elyx" as landingFile
+import "design/screens/footer.elyx" as footerFile
+import "design/screens/pricingPage.elyx" as pricingFile
 
 @draw-connections
 __canvas__
 
-signInScreen = frame : signIn.signInScreen {
+signIn = frame : signInFile.signInScreen {
   left: 1800px,
   top: 1000px,
 }
@@ -17,17 +17,17 @@ chat = frame : AIchat.AIChat {
   top: 2000px,
 }
 
-landing = frame : LandingPage.LandingPage {
+landing = frame : landingFile.LandingPage {
   left: 0px,
   top: 1000px
 }
 
-pricing = frame : pricingPage.pricingPage {
+pricing = frame : pricingFile.pricingPage {
   left: 1800px,
   top: 0px,
 }
 
-footer = frame : footerPage.Footer {
+footer = frame : footerFile.Footer {
   left: 0px,
   top: 2000px
 }
