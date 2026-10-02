@@ -2,7 +2,7 @@
 
 Welcome to the Elyx demo project.
 
-This project demonstrates how to organize and build `.elyx` files. An Elyx project consists of many components so we've organied our UI files in the `design/` in four folders:
+This project demonstrates how to organize a Project and build `.elyx` files. An Elyx project consists of many components so we've organied our UI files in the `design/` in four folders:
 
 ```text
 design/
