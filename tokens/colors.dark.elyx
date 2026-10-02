@@ -1,11 +1,10 @@
 import "tokens/colors.elyx" as colors
 
-@context(theme="dark")
-__file__
 
 // Provides dark-theme overrides for contextual color groups. Fixed primitives
-// remain unchanged.
-__canvas__
+// remain unchanged
+@context(theme="dark")
+__file__
 
 export darkTheme = tokens : colors.theme {
   base: rgb(8.61%, 8.61%, 8.61%),

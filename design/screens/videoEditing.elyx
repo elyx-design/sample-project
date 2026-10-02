@@ -20,6 +20,8 @@ import "icons/24 pixels/notes-24.svg" as notes24
 import "tokens/colors.dark.elyx" as colorsdark
 
 @with-context(theme="dark")
+__file__
+
 export videoEditing = frame {
   left: -689px,
   top: -230px,
