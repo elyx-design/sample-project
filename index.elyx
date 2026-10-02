@@ -258,7 +258,7 @@ welcomeIntro = frame {
     top: -161px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: "Elyx is a new take on design. We believe design needs to get closer to development, and friendlier to agents.",
+    contents: "Elyx is a new take on design. We believe design needs to get closer to development and friendlier to agents.",
     font-size: 24,
     font-style: "Medium",
     line-height: 1.3
@@ -269,7 +269,7 @@ welcomeIntro = frame {
     top: 40px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: "Elyx wants to be a knowledge base for your product, so we're moving design to where developers live; in git. Rather than large opaque design files Elyx splits design up into many small files; agent-friendly and git-friendly.",
+    contents: "Rather than large, opaque design files, Elyx splits design up into many small files; agent-friendly and git-friendly. We’re also moving to design to where developers live, in the codebase. By following this approach, you can create a knowledge base for your product.",
     font-size: 14,
     line-height: 1.5
   }
