@@ -161,7 +161,7 @@ blocksOverviewCard = frame {
     left: 162.6667px,
     top: -17px,
     fill: colors.primitives.white,
-    contents: "ELYX IS A PROJECT",
+    contents: "A PROJECT IS THE UNIT",
     font-size: Typography.fontSize.small,
     font-style: "SemiBold",
     letter-spacing: 10%
@@ -172,7 +172,7 @@ blocksOverviewCard = frame {
     top: 71px,
     width: 100%,
     fill: colors.primitives.white70,
-    contents: "This sample project contains dozens of small files. Use a single project for a product you are working on, from a website to an app.",
+    contents: "This sample project contains dozens of small files. Use a single project for a product you are working on — from a website, to an app.",
     font-size: Typography.fontSize.medium,
     line-height: 1.5
   }
@@ -222,12 +222,12 @@ projectResourcesOverview = frame {
     width: 100%,
     fill: colors.palette.tealDark,
     subrange: [
-      {range: [217, 225], font-style: "Bold"},
-      {range: [227, 233], font-style: "Bold"},
-      {range: [235, 242], font-style: "Bold"},
-      {range: [248, 253], font-style: "Bold"}
+      {range: [208, 216], font-style: "Bold"},
+      {range: [218, 224], font-style: "Bold"},
+      {range: [226, 233], font-style: "Bold"},
+      {range: [239, 244], font-style: "Bold"}
     ],
-    contents: "This project demonstrates best practices for organizing and building with .elyx files. Fundamentally everything is just a component, but for organisational purposes we have organised these components in four folders: controls, blocks, screens, and flows; \n\nThe project also includes folders for assets such as images and icons. Add a /fonts folder if the project needs custom fonts.",
+    contents: "This project demonstrates best practices for organizing and building with .elyx files. Fundamentally everything is just a component, but for organizational purposes we group these components in four folders: controls, blocks, screens, and flows; \n\nThe project also includes folders for assets such as images and icons. Add a fonts folder if the project needs custom fonts.",
     font-size: 14,
     line-height: 1.5
   }
@@ -237,7 +237,7 @@ projectResourcesOverview = frame {
     top: 301px,
     width: 100%,
     fill: colors.palette.tealDark,
-    contents: Strings.demoProject.tokensDescription,
+    contents: "The tokens folder contains related token families, such as color, typography, spacing, and radius, that are referenced throughout the project.",
     font-size: 14,
     line-height: 1.5
   }
