@@ -1,6 +1,6 @@
 // Defines fixed primitives and palette colors alongside theme-aware neutral,
 // control, surface, status, and gradient tokens.
-__canvas__
+__file__
 
 export theme = tokens {
   base: .white,

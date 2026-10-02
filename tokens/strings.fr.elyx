@@ -1,11 +1,9 @@
 import "tokens/strings.elyx" as strings
 
-@context(lang="fr")
-__file__
-
 // Provides French locale overrides for the default string tokens. Keep its
 // exported group structure aligned with strings.elyx.
-__canvas__
+@context(lang="fr")
+__file__
 
 export demoProject = tokens : strings.demoProject {
   welcomeTitle: "Bienvenue dans le projet de démonstration Elyx",
