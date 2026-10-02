@@ -141,7 +141,7 @@ controlsOverviewCard = frame {
     top: 65px,
     width: 100%,
     fill: colors.primitives.white70,
-    contents: "We encourage you to create components for from simple controls to entire views. Think of Elyx as the knowledge base of your project.",
+    contents: "We encourage you to create components from simple controls to entire views. Think of Elyx as the knowledge base of your project.",
     font-size: Typography.fontSize.medium,
     line-height: 1.5
   }
