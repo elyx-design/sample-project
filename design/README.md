@@ -1,12 +1,12 @@
 # Design
 
-We've organised our Elyx design files in folders, divided roughly by size;
+We've organized our Elyx design files in folders, divided roughly by size;
 
 - "controls" for small elements like buttons
 - "blocks" for larger elements that combine controls; think panels, menus, cards and forms
 - "screens" for the largest components that capture entire screens; login screens, account screens etc.
 
-Think of Elyx as a knowledge base that captures the state of a project. The knowledge of what a project is goes way beyond what you may call traditionally a "design system", which was always a glorified bucket of styles and buttons. Consequently we encourage you to create components for the larger sttaes as well. This in turn then feeds in to teaching agents about your project.
+Think of Elyx as a knowledge base that captures the state of a project. The knowledge of what a project is goes way beyond what you may traditionally call a "design system" (which was always a glorified bucket of styles and buttons). We encourage you to create components for the larger states as well. This in turn then feeds in to teaching agents about your project.
 
 
 # Agent Instructions
