@@ -7,11 +7,15 @@ import "icons/24 pixels/chevron-upDown-24.svg" as chevronupDown24
 export Selector = frame {
   left: 268px,
   top: 443px,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: 15px},
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 15px
+  },
   overflow: .visible,
   children: [Left, selectionIcon],
 
-  selectionIcon = icon {
+  selectionIcon = asset {
     left: 26px,
     top: 8px,
     width: 24px,
@@ -27,17 +31,20 @@ Left = frame {
   overflow: .visible,
   children: [small, smallLeft],
 
-  small = frame : avatar.smallPhoto {left: 0px, top: 2px}
+  small = frame : avatar.smallPhoto {
+    left: 0px,
+    top: 2px
+  }
 
   smallLeft = frame : header.smallLeft {
     left: 51px,
     top: 0px,
 
-    header.smallLeft.smallSubtitle {
+    smallSubtitle {
       contents: Strings.labels.manager
     }
 
-    header.smallLeft.smallTitle {
+    smallTitle {
       contents: "Nora"
     }
   }

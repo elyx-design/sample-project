@@ -23,7 +23,7 @@ export sidebarMenu = frame {
   padding-right: Spacing.padding.small,
   children: [menuIcon, menuLabel],
 
-  menuIcon = icon {
+  menuIcon = asset {
     left: 2px,
     top: 2px,
     width: 20px,

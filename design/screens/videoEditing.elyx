@@ -38,8 +38,8 @@ export videoEditing = frame {
 
     sidebar.compactContent {
       sidebar.compactNavigation {
-        sidebar.compactNavigation.history {
-          sidebar.button.mediumPlainIcon.mediumPlainIconGlyph {
+        history {
+          mediumPlainIconGlyph {
             contents: notes24
           }
         }
@@ -100,26 +100,26 @@ preview = frame {
     fill[0].image.ref: bird,
     fill[1].linear-gradient.stops[1].color: colorsdark.darkGradients.overlayEnd,
 
-    videoPlayer.videoPlayer.controls {
+    controls {
       videoPlayer.playbackControl.tools {
-        videoPlayer.playbackControl.tools.likeButton {
-          sidebar.button.smallIcon.smallIconGlyph {
+        likeButton {
+          smallIconGlyph {
             contents: pen20
           }
         }
 
-        videoPlayer.playbackControl.tools.settingsButton {
-          sidebar.button.smallIcon.smallIconGlyph {
+        settingsButton {
+          smallIconGlyph {
             contents: pointer20
           }
         }
       }
 
       videoPlayer.playbackControl.scrubber {
-        @use-variant(slider.thumb)
-        videoPlayer.playbackControl.scrubber.progressSlider {
+        @with-variant(slider.thumb)
+        progressSlider {
           slider.thumb.handle_2 {
-            slider.handle.thumbHandle_2 {
+            thumbHandle_2 {
               fill[0].color: Colors.primitives.white,
               border[0].visible: .false
             }
@@ -129,19 +129,19 @@ preview = frame {
     }
 
     videoPlayer.headerRow {
-      videoPlayer.headerRow.eventHeader {
+      eventHeader {
         width: .auto,
 
-        videoPlayer.header.smallLeft.smallSubtitle {
+        smallSubtitle {
           contents: "4K landscape film, cinematic 21:9"
         }
 
-        videoPlayer.header.smallLeft.smallTitle {
+        smallTitle {
           contents: "Style in Motion"
         }
       }
 
-      videoPlayer.headerRow.liveStatus {
+      liveStatus {
         display: .hidden
       }
     }
@@ -154,116 +154,116 @@ preview = frame {
     height: 100%,
 
     imageGallery.bottomRow {
-      imageGallery.bottomRow.bottomCenter {
+      bottomCenter {
         fill[0].image.ref: thumb02,
 
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: video20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Orange Bird"
         }
       }
 
-      imageGallery.bottomRow.bottomRight {
+      bottomRight {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: video20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Red-flanked Bluetail"
         }
       }
 
-      imageGallery.bottomRow.bottomLeft {
+      bottomLeft {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: image20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Great Horned Owl"
         }
       }
     }
 
     imageGallery.middleRow {
-      imageGallery.middleRow.middleRight {
+      middleRight {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: image20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Blue-and-yellow Macaw"
         }
       }
 
-      imageGallery.middleRow.middleCenter {
+      middleCenter {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: video20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Bald Eagle.wave"
         }
       }
 
-      imageGallery.middleRow.middleLeft {
+      middleLeft {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: image20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Northern Cardinal\nBody Red"
         }
       }
     }
 
     imageGallery.topRow {
-      imageGallery.topRow.topRight {
+      topRight {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: video20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Toco Toucan"
         }
       }
 
-      imageGallery.topRow.topCenter {
+      topCenter {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: video20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Eurasian Blue"
         }
       }
 
-      imageGallery.topRow.topLeft {
+      topLeft {
         imageGallery.thumbnailImage.actions {
-          imageGallery.thumbnailImage.actions.favoriteIcon {
+          favoriteIcon {
             contents: video20
           }
         }
 
-        imageGallery.thumbnailImage.thumbnailImage.imageName {
+        imageName {
           contents: "Lilac"
         }
       }
@@ -288,20 +288,20 @@ ruler = frame : timelineRuler.timelineRuler {
     insert(timelinePlayHead, after = marker9)
   ],
 
-  timelineRuler.timelineRuler.marker3 {
-    timelineRuler.timeMarker.label {
+  marker3 {
+    label {
       contents: "3"
     }
   }
 
-  timelineRuler.timelineRuler.marker2 {
-    timelineRuler.timeMarker.label {
+  marker2 {
+    label {
       contents: "2"
     }
   }
 
-  timelineRuler.timelineRuler.marker1 {
-    timelineRuler.timeMarker.label {
+  marker1 {
+    label {
       contents: "1"
     }
   }
@@ -311,7 +311,7 @@ ruler = frame : timelineRuler.timelineRuler {
     top: 535px,
     width: 100%,
 
-    timelineRuler.timeMarker.label {
+    label {
       contents: "4"
     }
   }
@@ -321,7 +321,7 @@ ruler = frame : timelineRuler.timelineRuler {
     top: 535px,
     width: 100%,
 
-    timelineRuler.timeMarker.label {
+    label {
       contents: "5"
     }
   }
@@ -331,7 +331,7 @@ ruler = frame : timelineRuler.timelineRuler {
     top: 535px,
     width: 100%,
 
-    timelineRuler.timeMarker.label {
+    label {
       contents: "6"
     }
   }
@@ -341,7 +341,7 @@ ruler = frame : timelineRuler.timelineRuler {
     top: 555px,
     width: 100%,
 
-    timelineRuler.timeMarker.label {
+    label {
       contents: "7"
     }
   }
@@ -351,7 +351,7 @@ ruler = frame : timelineRuler.timelineRuler {
     top: 555px,
     width: 100%,
 
-    timelineRuler.timeMarker.label {
+    label {
       contents: "8"
     }
   }
@@ -361,7 +361,7 @@ ruler = frame : timelineRuler.timelineRuler {
     top: 575px,
     width: 100%,
 
-    timelineRuler.timeMarker.label {
+    label {
       contents: "9"
     }
   }
@@ -389,13 +389,13 @@ tracks = frame {
         display: .hidden
       }
 
-      mediaTrack.content.left {
+      left {
         mediaTrack.label {
-          mediaTrack.label.typeIcon {
+          typeIcon {
             contents: music24
           }
 
-          mediaTrack.label.trackName {
+          trackName {
             contents: "ambientForest.mp3"
           }
         }
@@ -414,13 +414,13 @@ tracks = frame {
         display: .hidden
       }
 
-      mediaTrack.content.left {
+      left {
         mediaTrack.label {
-          mediaTrack.label.typeIcon {
+          typeIcon {
             contents: text24
           }
 
-          mediaTrack.label.trackName {
+          trackName {
             contents: "Wild Birds"
           }
         }
@@ -441,15 +441,15 @@ videoTrackRow = frame {
     width: 23.6364%,
 
     videoTrack.filmstrip {
-      videoTrack.filmstrip.frameThree {
+      frameThree {
         fill[0].image.ref: bird
       }
 
-      videoTrack.filmstrip.frameTwo {
+      frameTwo {
         fill[0].image.ref: bird
       }
 
-      videoTrack.filmstrip.frameOne {
+      frameOne {
         fill[0].image.ref: bird
       }
     }
@@ -461,15 +461,15 @@ videoTrackRow = frame {
     width: 23.6364%,
 
     videoTrack.filmstrip {
-      videoTrack.filmstrip.frameThree {
+      frameThree {
         fill[0].image.ref: thumb08
       }
 
-      videoTrack.filmstrip.frameTwo {
+      frameTwo {
         fill[0].image.ref: thumb08
       }
 
-      videoTrack.filmstrip.frameOne {
+      frameOne {
         fill[0].image.ref: thumb08
       }
     }

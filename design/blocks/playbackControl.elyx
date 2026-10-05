@@ -48,7 +48,7 @@ tools = frame {
     left: 264.5px,
     top: 8.5px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: settings20
     }
   }
@@ -57,7 +57,7 @@ tools = frame {
     left: 284.5px,
     top: 28.5px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: heart20
     }
   }
@@ -66,7 +66,7 @@ tools = frame {
     left: 284.5px,
     top: 28.5px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: more20
     }
   }
@@ -82,7 +82,7 @@ scrubber = frame {
     left: 737px,
     top: 580px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: play20
     }
   }

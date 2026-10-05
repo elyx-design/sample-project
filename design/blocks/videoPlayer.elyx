@@ -41,39 +41,39 @@ export videoPlayer = frame {
     width: 100%,
 
     playbackControl.tools {
-      playbackControl.tools.moreButton {
-        playbackControl.button.smallIcon.smallIconGlyph {
+      moreButton {
+        smallIconGlyph {
           fill[0].color: colors.primitives.white70
         }
       }
 
-      playbackControl.tools.likeButton {
-        playbackControl.button.smallIcon.smallIconGlyph {
+      likeButton {
+        smallIconGlyph {
           fill[0].color: colors.primitives.white70
         }
       }
 
-      playbackControl.tools.settingsButton {
-        playbackControl.button.smallIcon.smallIconGlyph {
+      settingsButton {
+        smallIconGlyph {
           fill[0].color: colors.primitives.white70
         }
       }
     }
 
-    playbackControl.playbackControl.playbackTime {
+    playbackTime {
       fill[0].color: colors.primitives.white70,
       contents: "12:59 / 32:46"
     }
 
     playbackControl.scrubber {
-      playbackControl.scrubber.progressSlider {
-        playbackControl.slider.slider.track {
+      progressSlider {
+        track {
           fill[0].color: colors.primitives.white
         }
       }
 
-      playbackControl.scrubber.playButton {
-        playbackControl.button.smallIcon.smallIconGlyph {
+      playButton {
+        smallIconGlyph {
           fill[0].color: colors.primitives.white70
         }
       }
@@ -90,12 +90,12 @@ headerRow = frame {
     left: 0px,
     top: 250px,
 
-    header.smallLeft.smallSubtitle {
+    smallSubtitle {
       fill[0].color: colors.primitives.white70,
       contents: "Live from the dunes: Stage 3"
     }
 
-    header.smallLeft.smallTitle {
+    smallTitle {
       fill[0].color: colors.primitives.white,
       contents: "Endless Dunes"
     }
@@ -106,12 +106,12 @@ headerRow = frame {
     top: 450px,
     fill[0].color: rgb(100%, 0%, 0%, 60%),
 
-    tag.tagTransparent.label {
+    label {
       fill[0].color: colors.primitives.white,
       contents: Strings.status.live
     }
 
-    tag.status.statusIcon {
+    statusIcon {
       fill[0].color: colors.primitives.white
     }
   }

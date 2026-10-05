@@ -33,7 +33,7 @@ reviewFooter = frame {
     left: 0px,
     top: 165px,
 
-    button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.readFullReview
     }
   }
@@ -49,12 +49,12 @@ reviewInfo = frame {
     left: 768px,
     top: 512px,
 
-    header.mediumLeft.mediumSubtitle {
+    mediumSubtitle {
       fill[0].color: colors.primitives.white70,
       contents: "Stunning mountain scenery and a story full of heart. This one leaves you calm, inspired, and ready for your next adventure."
     }
 
-    header.mediumLeft.mediumTitle {
+    mediumTitle {
       fill[0].color: colors.primitives.white,
       contents: "A Breathtaking Escape"
     }
@@ -73,12 +73,12 @@ tags = frame {
     top: 726px,
     overflow: .visible,
 
-    tag.tagTransparent.label {
-      contents: "4.2",
-      fill[0].color: colors.primitives.white
+    label {
+      fill[0].color: colors.primitives.white,
+      contents: "4.2"
     }
 
-    tag.iconAndLabel.tagIcon {
+    tagIcon {
       fill[0].color: colors.primitives.white
     }
   }
@@ -87,7 +87,7 @@ tags = frame {
     left: 785px,
     top: 746px,
 
-    tag.tagTransparent.label {
+    label {
       fill[0].color: colors.primitives.white,
       contents: "Thriller"
     }
@@ -97,7 +97,7 @@ tags = frame {
     left: 785px,
     top: 827.25px,
 
-    tag.tagTransparent.label {
+    label {
       fill[0].color: colors.primitives.white,
       contents: "Drama"
     }
@@ -114,7 +114,7 @@ reviewAuthor = frame {
     left: 786px,
     top: 143px,
 
-    avatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }

@@ -26,32 +26,32 @@ export liveEvent = frame {
     width: 100%,
     fill[0].color: colors.theme.base,
 
-    siteHeader.accountHeader.accountDivider {
+    accountDivider {
       overrides: [remove(siteHeader.divider.horizontal.horizontalLine)]
     }
 
     siteHeader.accountContent {
       siteHeader.accountNav {
-        siteHeader.accountNav.accountResources {
-          siteHeader.menu.label {
+        accountResources {
+          label {
             contents: Strings.navigation.playlists
           }
         }
 
-        siteHeader.accountNav.accountCompany {
-          siteHeader.menu.label {
+        accountCompany {
+          label {
             contents: Strings.navigation.categories
           }
         }
 
-        siteHeader.accountNav.accountPricing {
-          siteHeader.menu.label {
+        accountPricing {
+          label {
             contents: Strings.navigation.browse
           }
         }
 
-        siteHeader.accountNav.accountProduct {
-          siteHeader.menu.label {
+        accountProduct {
+          label {
             contents: Strings.status.liveNow
           }
         }
@@ -102,16 +102,16 @@ eventVideo = frame {
     width: 100%,
     height: 603px,
 
-    videoPlayer.videoPlayer.controls {
+    controls {
       videoPlayer.playbackControl.scrubber {
-        videoPlayer.playbackControl.scrubber.playButton {
-          button.smallIcon.smallIconGlyph {
+        playButton {
+          smallIconGlyph {
             contents: pause20
           }
         }
 
-        videoPlayer.playbackControl.scrubber.progressSlider {
-          videoPlayer.playbackControl.slider.slider.track {
+        progressSlider {
+          track {
             fill[0].opacity: .nil,
             fill[0].mix-blend-mode: .nil
           }
@@ -120,12 +120,12 @@ eventVideo = frame {
     }
 
     videoPlayer.headerRow {
-      videoPlayer.headerRow.eventHeader {
-        userSummary.header.smallLeft.smallSubtitle {
+      eventHeader {
+        smallSubtitle {
           contents: Strings.liveEvent.streamTitle
         }
 
-        userSummary.header.smallLeft.smallTitle {
+        smallTitle {
           contents: "CAM 3"
         }
       }
@@ -150,13 +150,13 @@ aboutSection = frame {
     left: -238px,
     top: 333px,
 
-    userSummary.small.smallHeader {
-      userSummary.header.smallLeft.smallSubtitle {
+    smallHeader {
+      smallSubtitle {
         fill[0].color: colors.primitives.white70,
         contents: Strings.liveEvent.channelDescription
       }
 
-      userSummary.header.smallLeft.smallTitle {
+      smallTitle {
         fill[0].color: colors.primitives.white,
         contents: "BikeNOW"
       }
@@ -176,7 +176,7 @@ actionButtons = frame {
     left: 254.9999px,
     top: 58px,
 
-    button.small.smallLabel {
+    smallLabel {
       contents: Strings.actions.follow
     }
   }
@@ -185,7 +185,7 @@ actionButtons = frame {
     left: 274.9999px,
     top: 78px,
 
-    button.small.smallLabel {
+    smallLabel {
       contents: Strings.actions.giftSubscription
     }
   }
@@ -194,7 +194,7 @@ actionButtons = frame {
     left: 294.9999px,
     top: 98px,
 
-    button.small.smallLabel {
+    smallLabel {
       contents: Strings.actions.subscribeDiscount
     }
   }

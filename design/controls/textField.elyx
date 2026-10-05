@@ -41,7 +41,7 @@ placeholder = frame : textField {
   left: 869px,
   top: 850px,
 
-  textField.label {
+  label {
     fill[0].color: Colors.theme.contrastMuted
   }
 }
@@ -63,7 +63,7 @@ error = frame : textField {
   border[0].position: .center,
   border[0].width: 1.5px,
 
-  textField.label {
+  label {
     fill[0].color: Colors.palette.red70
   }
 }
@@ -76,7 +76,7 @@ withIcon = frame : textField {
   padding-right: Spacing.padding.small,
   overrides: [insert(defaultIcon, after = .nil)],
 
-  defaultIcon = icon {
+  defaultIcon = asset {
     left: 981px,
     top: 782px,
     width: 24px,
@@ -94,11 +94,11 @@ iconPlaceholder = frame : textField {
   padding-right: Spacing.padding.small,
   overrides: [insert(placeholderIcon, after = .nil)],
 
-  textField.label {
+  label {
     fill[0].color: Colors.theme.contrastMuted
   }
 
-  placeholderIcon = icon {
+  placeholderIcon = asset {
     left: 981px,
     top: 782px,
     width: 24px,
@@ -118,7 +118,7 @@ iconFocused = frame : textField {
   border[0].width: 1.5px,
   overrides: [insert(focusedIcon, after = .nil)],
 
-  focusedIcon = icon {
+  focusedIcon = asset {
     left: 981px,
     top: 782px,
     width: 24px,
@@ -138,11 +138,11 @@ iconError = frame : textField {
   border[0].width: 1.5px,
   overrides: [insert(errorIcon, after = .nil)],
 
-  textField.label {
+  label {
     fill[0].color: Colors.palette.red70
   }
 
-  errorIcon = icon {
+  errorIcon = asset {
     left: 981px,
     top: 782px,
     width: 24px,
@@ -164,7 +164,7 @@ withButton = frame : textField {
     left: 52.3381px,
     top: 5.85px,
 
-    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+    smallPrimaryRoundedIcon {
       contents: arrowUp20
     }
   }
@@ -178,7 +178,7 @@ buttonPlaceholder = frame : textField {
   layout.justify-content: .space-between,
   overrides: [insert(inputActionGroup, after = textField.label)],
 
-  textField.label {
+  label {
     fill[0].color: Colors.theme.contrastMuted
   }
 }
@@ -193,7 +193,7 @@ inputActionGroup = frame {
     left: 59.6px,
     top: 6px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: emoji20
     }
   }
@@ -202,7 +202,7 @@ inputActionGroup = frame {
     left: 52.3381px,
     top: 5.85px,
 
-    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+    smallPrimaryRoundedIcon {
       contents: arrowUp20
     }
   }

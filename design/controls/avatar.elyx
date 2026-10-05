@@ -190,7 +190,7 @@ xsmallPhoto = frame : xsmall {
     remove(xsmall.xsmallBackground)
   ],
 
-  xsmall.xsmallInitials {
+  xsmallInitials {
     display: .hidden
   }
 

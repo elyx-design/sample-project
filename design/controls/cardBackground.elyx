@@ -4,7 +4,7 @@ import "tokens/colors.elyx" as colors
 
 // Defines reusable card surfaces and variants for solid, transparent,
 // borderless, and fully rounded containers.
-__canvas__
+__file__
 
 export cardBackground = frame {
   left: 80px,

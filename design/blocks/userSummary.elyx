@@ -20,11 +20,11 @@ export small = frame {
     left: -8.5px,
     top: -18px,
 
-    header.smallLeft.smallSubtitle {
+    smallSubtitle {
       contents: "nora@mail.com"
     }
 
-    header.smallLeft.smallTitle {
+    smallTitle {
       contents: "Nora Harper",
       font-style: "Bold"
     }
@@ -38,8 +38,8 @@ UserSummarySVariant = frame : small {
   height: .auto,
   layout.direction: .column,
 
-  @use-variant(header.smallCenter)
-  small.smallHeader {}
+  @with-variant(header.smallCenter)
+  smallHeader {}
 }
 
 export medium = frame {
@@ -63,12 +63,12 @@ export medium = frame {
     left: 83px,
     top: 10px,
 
-    header.mediumLeft.mediumSubtitle {
+    mediumSubtitle {
       contents: "nora@mail.com",
       font-size: Typography.fontSize.xlarge
     }
 
-    header.mediumLeft.mediumTitle {
+    mediumTitle {
       contents: "Nora Harper",
       font-size: Typography.fontSize.xxxlarge,
       font-style: "Bold"
@@ -83,6 +83,6 @@ UserSummaryMVariant = frame : medium {
   height: .auto,
   layout.direction: .column,
 
-  @use-variant(header.mediumCenter)
-  medium.mediumHeader {}
+  @with-variant(header.mediumCenter)
+  mediumHeader {}
 }

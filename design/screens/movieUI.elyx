@@ -45,8 +45,8 @@ export MovieUI = frame {
     top: -142px,
     width: 100%,
 
-    siteHeader.accountHeader.accountDivider {
-      divider.horizontal.horizontalLine {
+    accountDivider {
+      horizontalLine {
         fill[0].color: colors.theme.baseAlpha50
       }
     }
@@ -56,58 +56,58 @@ export MovieUI = frame {
         siteHeader.accountMenu {
           overrides: [remove(siteHeader.accountMenu.accountLanguage)],
 
-          siteHeader.accountMenu.accountAvatar {
-            avatar.small.smallStatus {
+          accountAvatar {
+            smallStatus {
               display: .hidden
             }
           }
         }
 
-        siteHeader.accountActions.accountSearch {
+        accountSearch {
           fill[0].color: colors.primitives.whiteAlpha25,
 
-          siteHeader.textField.iconPlaceholder.placeholderIcon {
+          placeholderIcon {
             fill[0].color: colors.theme.baseAlpha70
           }
         }
       }
 
       siteHeader.accountNav {
-        siteHeader.accountNav.accountResources {
-          siteHeader.mutedIconMenu.mutedChevron {
+        accountResources {
+          mutedChevron {
             fill[0].color: colors.theme.baseAlpha70
           }
 
-          siteHeader.menu.label {
+          label {
             fill[0].color: colors.theme.baseAlpha70,
             contents: Strings.navigation.favourites
           }
         }
 
-        siteHeader.accountNav.accountCompany {
-          siteHeader.menu.label {
+        accountCompany {
+          label {
             fill[0].color: colors.theme.baseAlpha70,
             contents: Strings.status.live
           }
         }
 
-        siteHeader.accountNav.accountPricing {
-          siteHeader.menu.label {
+        accountPricing {
+          label {
             fill[0].color: colors.theme.baseAlpha70,
             contents: Strings.navigation.tvShows
           }
         }
 
-        siteHeader.accountNav.accountProduct {
-          siteHeader.menu.label {
+        accountProduct {
+          label {
             fill[0].color: colors.theme.baseAlpha70,
             contents: Strings.navigation.movies
           }
         }
       }
 
-      siteHeader.accountContent.small_6 {
-        siteHeader.logo.mediumWordmark.mediumWordmarkLabel {
+      small_6 {
+        mediumWordmarkLabel {
           fill[0].color: colors.theme.base
         }
       }
@@ -134,7 +134,7 @@ movieContent = frame {
     padding-top: 0px,
     padding-bottom: 0px,
 
-    divider.horizontal.horizontalLine {
+    horizontalLine {
       fill[0].color: colors.primitives.white50
     }
   }
@@ -195,7 +195,7 @@ movieTags = frame {
     left: 924px,
     top: 538px,
 
-    tag.tagTransparent.label {
+    label {
       contents: "Drama"
     }
   }
@@ -204,7 +204,7 @@ movieTags = frame {
     left: 944px,
     top: 558px,
 
-    tag.tagTransparent.label {
+    label {
       contents: "Psychological"
     }
   }
@@ -221,25 +221,25 @@ details = frame {
     top: 881px,
 
     productInfo.productDetails {
-      productInfo.productDetails.ratingTag {
+      ratingTag {
         fill[0].color: colors.palette.yellow
       }
 
       productInfo.productCopy {
-        productInfo.productCopy.subtitle {
+        subtitle {
           fill[0].color: colors.primitives.white70,
           contents: "by Amara Vale"
         }
 
-        productInfo.productCopy.productName {
+        productName {
           fill[0].color: colors.primitives.white,
           contents: "Silent Hues"
         }
       }
     }
 
-    productInfo.productInfo.productPreview {
-      productInfo.product.product.coverOne {
+    productPreview {
+      coverOne {
         fill[0].image.ref: movieCover
       }
     }
@@ -254,7 +254,13 @@ aboutSection = frame {
     item-gap: Spacing.gap.large
   },
   overflow: .visible,
-  children: [synopsisSection, detailsDivider, castSections, castDivider, ratingsSummary],
+  children: [
+    synopsisSection,
+    detailsDivider,
+    castSections,
+    castDivider,
+    ratingsSummary
+  ],
 
   detailsDivider = frame : divider.horizontal {
     left: 0px,
@@ -263,7 +269,7 @@ aboutSection = frame {
     padding-top: 0px,
     padding-bottom: 0px,
 
-    divider.horizontal.horizontalLine {
+    horizontalLine {
       fill[0].color: colors.primitives.white50
     }
   }
@@ -282,7 +288,7 @@ aboutSection = frame {
     padding-top: 0px,
     padding-bottom: 0px,
 
-    divider.horizontal.horizontalLine {
+    horizontalLine {
       fill[0].color: colors.primitives.white50
     }
   }
@@ -355,12 +361,12 @@ niaActor = frame {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallPhoto.xsmallImage {
+    xsmallImage {
       fill[0].image.ref: lib4,
       border[0]: .nil
     }
 
-    avatar.xsmall.xsmallStatus {
+    xsmallStatus {
       display: .hidden
     }
   }
@@ -387,12 +393,12 @@ danielActor = frame {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallPhoto.xsmallImage {
+    xsmallImage {
       fill[0].image.ref: lib,
       border[0]: .nil
     }
 
-    avatar.xsmall.xsmallStatus {
+    xsmallStatus {
       display: .hidden
     }
   }
@@ -419,12 +425,12 @@ simoneActor = frame {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallPhoto.xsmallImage {
+    xsmallImage {
       fill[0].image.ref: lib2,
       border[0]: .nil
     }
 
-    avatar.xsmall.xsmallStatus {
+    xsmallStatus {
       display: .hidden
     }
   }
@@ -451,12 +457,12 @@ graceActor = frame {
     left: 782.1px,
     top: 536.5px,
 
-    avatar.xsmallPhoto.xsmallImage {
+    xsmallImage {
       fill[0].image.ref: lib3,
       border[0]: .nil
     }
 
-    avatar.xsmall.xsmallStatus {
+    xsmallStatus {
       display: .hidden
     }
   }
@@ -590,7 +596,7 @@ thumbnailRow = frame {
     fill[0].image.ref: thumb11,
     fill[1]: .nil,
 
-    thumbnailImage.thumbnailImage.imageName {
+    imageName {
       display: .hidden
     }
 
@@ -609,7 +615,7 @@ thumbnailRow = frame {
     fill[0].image.ref: thumb12,
     fill[1]: .nil,
 
-    thumbnailImage.thumbnailImage.imageName {
+    imageName {
       display: .hidden
     }
 

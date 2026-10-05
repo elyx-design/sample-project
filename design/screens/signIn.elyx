@@ -9,8 +9,9 @@ import "design/screens/AIchat.elyx" as AIchat
 
 // Demonstrates a complete screen composed from reusable blocks, including a
 // connection to the AI chat screen.
-@draw-connections
-__canvas__
+__file__ {
+  draw-connections: .true
+}
 
 export signInScreen = frame {
   left: -16px,
@@ -46,7 +47,7 @@ content = frame {
     width: 32%,
 
     AuthForm.content {
-      AuthForm.content.signInButton {
+      signInButton {
         connections[0].target: AIchat.AIChat
       }
     }
@@ -57,7 +58,7 @@ content = frame {
     top: 962px,
 
     profileGroup.bottomCount {
-      profileGroup.bottomCount.bottomCountText {
+      bottomCountText {
         fill[0].color: Colors.primitives.white70,
         contents: "+28k online"
       }

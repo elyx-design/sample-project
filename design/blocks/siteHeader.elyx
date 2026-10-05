@@ -30,7 +30,10 @@ export siteHeader = frame : cardBackground.solidFullRadius {
     insert(headerCta, after = navLinks)
   ],
 
-  small_4 = frame : logo.mediumWordmark {left: 16px, top: 16px}
+  small_4 = frame : logo.mediumWordmark {
+    left: 16px,
+    top: 16px
+  }
 }
 
 export menu = frame {
@@ -54,7 +57,7 @@ mutedMenu = frame : menu {
   left: 191px,
   top: 521px,
 
-  menu.label {
+  label {
     fill[0].color: colors.theme.contrastAlpha50
   }
 }
@@ -73,7 +76,7 @@ iconMenu = frame : menu {
   layout.item-gap: spacing.gap.xxsmall,
   overrides: [insert(chevron, after = menu.label)],
 
-  chevron = icon {
+  chevron = asset {
     left: 297px,
     top: 460px,
     width: 12px,
@@ -90,11 +93,11 @@ mutedIconMenu = frame : menu {
   layout.item-gap: spacing.gap.xxsmall,
   overrides: [insert(mutedChevron, after = menu.label)],
 
-  menu.label {
+  label {
     fill[0].color: colors.theme.contrastAlpha50
   }
 
-  mutedChevron = icon {
+  mutedChevron = asset {
     left: 278px,
     top: 460px,
     width: 12px,
@@ -113,7 +116,7 @@ headerCta = frame {
     left: 1545px,
     top: 483px,
 
-    menu.label {
+    label {
       contents: Strings.actions.logIn
     }
   }
@@ -122,7 +125,7 @@ headerCta = frame {
     left: 751px,
     top: 475px,
 
-    button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.getStartedHeader
     }
   }
@@ -139,7 +142,7 @@ headerActionGroup = frame {
     top: 16px,
     width: 180px,
 
-    textField.textField.label {
+    label {
       contents: Strings.actions.search
     }
   }
@@ -155,12 +158,15 @@ accountCluster = frame {
     left: 1478px,
     top: 606px,
 
-    menu.label {
+    label {
       contents: "EN"
     }
   }
 
-  layer = frame : avatar.smallPhoto {left: 1255px, top: 577px}
+  layer = frame : avatar.smallPhoto {
+    left: 1255px,
+    top: 577px
+  }
 }
 
 @variant
@@ -190,7 +196,7 @@ SiteHeaderVariant = frame : siteHeader {
     padding-top: 0px,
     padding-bottom: 0px,
 
-    divider.horizontal.horizontalLine {
+    horizontalLine {
       fill[0].color: colors.theme.contrastAlpha50
     }
   }
@@ -199,12 +205,19 @@ SiteHeaderVariant = frame : siteHeader {
 bareContent = frame {
   width: 100%,
   height: 100%,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: spacing.gap.xlarge},
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: spacing.gap.xlarge
+  },
   padding-left: spacing.padding.xxlarge,
   padding-right: spacing.padding.xxlarge,
   children: [small_5, bareNav, bareCta],
 
-  small_5 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
+  small_5 = frame : logo.mediumWordmark {
+    left: 452.5px,
+    top: 0px
+  }
 }
 
 bareNav = frame {
@@ -216,7 +229,7 @@ bareNav = frame {
     left: 357.9778px,
     top: 33.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.product
     }
   }
@@ -225,7 +238,7 @@ bareNav = frame {
     left: 377.9778px,
     top: 53.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.pricing
     }
   }
@@ -234,7 +247,7 @@ bareNav = frame {
     left: 397.9778px,
     top: 73.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.company
     }
   }
@@ -243,7 +256,7 @@ bareNav = frame {
     left: 417.9778px,
     top: 93.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.resources
     }
   }
@@ -258,7 +271,7 @@ bareCta = frame {
     left: 1545px,
     top: 483px,
 
-    menu.label {
+    label {
       contents: Strings.actions.logIn
     }
   }
@@ -267,7 +280,7 @@ bareCta = frame {
     left: 751px,
     top: 475px,
 
-    button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.getStartedHeader
     }
   }
@@ -299,7 +312,7 @@ accountHeader = frame : siteHeader {
     padding-top: 0px,
     padding-bottom: 0px,
 
-    divider.horizontal.horizontalLine {
+    horizontalLine {
       fill[0].color: colors.theme.contrastAlpha50
     }
   }
@@ -310,12 +323,19 @@ accountContent = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: spacing.gap.xlarge},
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: spacing.gap.xlarge
+  },
   padding-left: spacing.padding.xxlarge,
   padding-right: spacing.padding.xxlarge,
   children: [small_6, accountNav, accountActions],
 
-  small_6 = frame : logo.mediumWordmark {left: 452.5px, top: 0px}
+  small_6 = frame : logo.mediumWordmark {
+    left: 452.5px,
+    top: 0px
+  }
 }
 
 accountNav = frame {
@@ -327,7 +347,7 @@ accountNav = frame {
     left: 357.9778px,
     top: 33.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.product
     }
   }
@@ -336,7 +356,7 @@ accountNav = frame {
     left: 377.9778px,
     top: 53.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.pricing
     }
   }
@@ -345,7 +365,7 @@ accountNav = frame {
     left: 397.9778px,
     top: 73.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.company
     }
   }
@@ -354,7 +374,7 @@ accountNav = frame {
     left: 417.9778px,
     top: 93.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.resources
     }
   }
@@ -373,7 +393,7 @@ accountActions = frame {
     top: 16px,
     width: 180px,
 
-    textField.textField.label {
+    label {
       contents: Strings.actions.search
     }
   }
@@ -389,12 +409,15 @@ accountMenu = frame {
     left: 1478px,
     top: 606px,
 
-    menu.label {
+    label {
       contents: "EN"
     }
   }
 
-  accountAvatar = frame : avatar.smallPhoto {left: 1255px, top: 577px}
+  accountAvatar = frame : avatar.smallPhoto {
+    left: 1255px,
+    top: 577px
+  }
 }
 
 navLinks = frame {
@@ -406,7 +429,7 @@ navLinks = frame {
     left: 357.9778px,
     top: 33.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.product
     }
   }
@@ -415,7 +438,7 @@ navLinks = frame {
     left: 377.9778px,
     top: 53.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.pricing
     }
   }
@@ -424,7 +447,7 @@ navLinks = frame {
     left: 397.9778px,
     top: 73.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.company
     }
   }
@@ -433,7 +456,7 @@ navLinks = frame {
     left: 417.9778px,
     top: 93.5256px,
 
-    menu.label {
+    label {
       contents: Strings.navigation.resources
     }
   }

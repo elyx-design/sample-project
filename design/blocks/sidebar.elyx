@@ -88,7 +88,7 @@ compactNavigation = frame {
     left: 8.72px,
     top: 108px,
 
-    button.mediumPlainIcon.mediumPlainIconGlyph {
+    mediumPlainIconGlyph {
       contents: home24
     }
   }
@@ -97,7 +97,7 @@ compactNavigation = frame {
     left: 28.72px,
     top: 128px,
 
-    button.mediumPlainIcon.mediumPlainIconGlyph {
+    mediumPlainIconGlyph {
       contents: create24
     }
   }
@@ -106,7 +106,7 @@ compactNavigation = frame {
     left: 28.72px,
     top: 128px,
 
-    button.mediumPlainIcon.mediumPlainIconGlyph {
+    mediumPlainIconGlyph {
       contents: folder24
     }
   }
@@ -115,7 +115,7 @@ compactNavigation = frame {
     left: 28.72px,
     top: 164px,
 
-    button.mediumPlainIcon.mediumPlainIconGlyph {
+    mediumPlainIconGlyph {
       contents: cloud24
     }
   }
@@ -124,7 +124,7 @@ compactNavigation = frame {
     left: 28.72px,
     top: 128px,
 
-    button.mediumPlainIcon.mediumPlainIconGlyph {
+    mediumPlainIconGlyph {
       contents: history24
     }
   }
@@ -149,7 +149,7 @@ export segmentHeader = frame {
     font-style: "SemiBold"
   }
 
-  settings20svg = icon {
+  settings20svg = asset {
     left: 132px,
     top: 0px,
     width: 20px,
@@ -176,11 +176,11 @@ workspaceSelector = frame : selector.Selector {
     height: .auto,
     layout.item-gap: Spacing.gap.small,
 
-    selector.Left.smallLeft {
+    smallLeft {
       overrides: [remove(selector.header.smallLeft.smallSubtitle)],
       layout.item-gap: Spacing.gap.xxsmall,
 
-      selector.header.smallLeft.smallTitle {
+      smallTitle {
         font-size: Typography.fontSize.small
       }
     }
@@ -190,7 +190,7 @@ workspaceSelector = frame : selector.Selector {
     left: -123px,
     top: 600px,
 
-    avatar.xsmall.xsmallStatus {
+    xsmallStatus {
       display: .hidden
     }
   }
@@ -202,7 +202,7 @@ workspaceActions = frame {
   overflow: .visible,
   children: [searchIcon, sidebarIcon],
 
-  searchIcon = icon {
+  searchIcon = asset {
     left: Spacing.size.small,
     top: 10px,
     width: 20px,
@@ -211,7 +211,7 @@ workspaceActions = frame {
     contents: search20
   }
 
-  sidebarIcon = icon {
+  sidebarIcon = asset {
     left: 48px,
     top: 30px,
     width: 20px,
@@ -236,8 +236,11 @@ sidebarLiveEvent = frame : sidebar {
   sidebarBody {
     overrides: [remove(sidebarBody.sidebarSections)],
 
-    sidebarBody.sidebarNavigation {
-      overrides: [insert(eventNavigation, after = .nil), remove(primaryNavigation)],
+    sidebarNavigation {
+      overrides: [
+        insert(eventNavigation, after = .nil),
+        remove(primaryNavigation)
+      ],
 
       secondaryNavigation {
         padding-left: 0px,
@@ -249,12 +252,12 @@ sidebarLiveEvent = frame : sidebar {
             insert(campaignsItem_12, after = campaignsItem_11)
           ],
 
-          @use-variant(sideBarMenuEvent)
-          secondaryItems.campaignsItem_6 {
+          @with-variant(sideBarMenuEvent)
+          campaignsItem_6 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.viewerCount {
+              viewerCount {
                 contents: "5.1k"
               }
             }
@@ -264,12 +267,12 @@ sidebarLiveEvent = frame : sidebar {
             }
           }
 
-          @use-variant(sideBarMenuEvent)
-          secondaryItems.campaignsItem_5 {
+          @with-variant(sideBarMenuEvent)
+          campaignsItem_5 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.viewerCount {
+              viewerCount {
                 contents: "3.1k"
               }
             }
@@ -279,12 +282,12 @@ sidebarLiveEvent = frame : sidebar {
             }
           }
 
-          @use-variant(sideBarMenuEvent)
-          secondaryItems.campaignsItem_3 {
+          @with-variant(sideBarMenuEvent)
+          campaignsItem_3 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.viewerCount {
+              viewerCount {
                 contents: "9.7k"
               }
             }
@@ -294,12 +297,12 @@ sidebarLiveEvent = frame : sidebar {
             }
           }
 
-          @use-variant(sideBarMenuEvent)
-          secondaryItems.campaignsItem_4 {
+          @with-variant(sideBarMenuEvent)
+          campaignsItem_4 {
             sideBarMenuEvent.eventTag_2 {
               layout.item-gap: Spacing.gap.xsmall,
 
-              eventTag.viewerCount {
+              viewerCount {
                 contents: "21.2k"
               }
             }
@@ -312,12 +315,12 @@ sidebarLiveEvent = frame : sidebar {
           }
         }
 
-        secondaryNavigation.segmentHeader_2 {
-          segmentHeader.settings20svg {
+        segmentHeader_2 {
+          settings20svg {
             display: .hidden
           }
 
-          segmentHeader.segmentTitle {
+          segmentTitle {
             contents: Strings.labels.liveChannels
           }
         }
@@ -329,15 +332,15 @@ sidebarLiveEvent = frame : sidebar {
     left: 40px,
     top: 164px,
 
-    sideBarMenuEvent.eventTag_2 {
+    eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.viewerCount {
+      viewerCount {
         contents: "71.1k"
       }
     }
 
-    sideBarMenuEvent.eventLabel {
+    eventLabel {
       contents: "TurnTV"
     }
   }
@@ -346,15 +349,15 @@ sidebarLiveEvent = frame : sidebar {
     left: 40px,
     top: 192px,
 
-    sideBarMenuEvent.eventTag_2 {
+    eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.viewerCount {
+      viewerCount {
         contents: "5.9k"
       }
     }
 
-    sideBarMenuEvent.eventLabel {
+    eventLabel {
       contents: "RespawnRegret"
     }
   }
@@ -387,7 +390,7 @@ sideBarMenuEvent = frame : sidebarItem.sidebarMenu {
     left: -251px,
     top: 161px,
 
-    eventTag.viewerCount {
+    viewerCount {
       font-style: "Bold"
     }
   }
@@ -410,11 +413,11 @@ eventNavigation = frame {
     top: 222px,
     width: 100%,
 
-    segmentHeader.settings20svg {
+    settings20svg {
       contents: sideBarleft20
     }
 
-    segmentHeader.segmentTitle {
+    segmentTitle {
       contents: Strings.labels.forYou
     }
   }
@@ -440,15 +443,15 @@ eventItems = frame {
     left: 20px,
     top: 84px,
 
-    sideBarMenuEvent.eventTag_2 {
+    eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.viewerCount {
+      viewerCount {
         contents: "5.5k"
       }
     }
 
-      sideBarMenuEvent.eventLabel {
+    eventLabel {
       contents: "PixelDriftTV"
     }
   }
@@ -457,15 +460,15 @@ eventItems = frame {
     left: 20px,
     top: 54px,
 
-    sideBarMenuEvent.eventTag_2 {
+    eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.viewerCount {
+      viewerCount {
         contents: "1.2k"
       }
     }
 
-      sideBarMenuEvent.eventLabel {
+    eventLabel {
       contents: "ChessKing"
     }
   }
@@ -474,15 +477,15 @@ eventItems = frame {
     left: 20px,
     top: 114px,
 
-    sideBarMenuEvent.eventTag_2 {
+    eventTag_2 {
       layout.item-gap: Spacing.gap.xsmall,
 
-      eventTag.viewerCount {
+      viewerCount {
         contents: "13.4k"
       }
     }
 
-      sideBarMenuEvent.eventLabel {
+    eventLabel {
       contents: "InkAndPixels"
     }
   }
@@ -491,10 +494,10 @@ eventItems = frame {
     left: 20px,
     top: 144px,
 
-    @use-variant(eventTagOffline)
-    sideBarMenuEvent.eventTag_2 {}
+    @with-variant(eventTagOffline)
+    eventTag_2 {}
 
-      sideBarMenuEvent.eventLabel {
+    eventLabel {
       contents: "PaletteRiot"
     }
   }
@@ -529,7 +532,7 @@ eventTagOffline = frame : eventTag {
   top: 207px,
   overrides: [remove(eventTag.status)],
 
-  eventTag.viewerCount {
+  viewerCount {
     fill[0].color: colors.theme.contrastAlpha25,
     contents: Strings.status.offline
   }
@@ -588,11 +591,11 @@ primaryNavigation = frame {
     left: 0px,
     top: 34px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       contents: plus24
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: Strings.status.new
     }
   }
@@ -601,11 +604,11 @@ primaryNavigation = frame {
     left: 0px,
     top: 54px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       contents: history24
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: Strings.navigation.projects
     }
   }
@@ -614,11 +617,11 @@ primaryNavigation = frame {
     left: 0px,
     top: 74px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       contents: database24
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: Strings.navigation.data
     }
   }
@@ -627,11 +630,11 @@ primaryNavigation = frame {
     left: 20px,
     top: 94px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       contents: notes24
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: Strings.navigation.notes
     }
   }
@@ -640,11 +643,11 @@ primaryNavigation = frame {
     left: 20px,
     top: 134px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       contents: settings24
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: Strings.navigation.settings
     }
   }
@@ -716,12 +719,12 @@ secondaryItems = frame {
     top: 84px,
     fill[0].color: colors.primitives.blackAlpha05,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: "Grocery list"
     }
   }
@@ -730,12 +733,12 @@ secondaryItems = frame {
     left: 20px,
     top: 54px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: "React component"
     }
   }
@@ -744,12 +747,12 @@ secondaryItems = frame {
     left: 20px,
     top: 114px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: "Personal notes"
     }
   }
@@ -758,12 +761,12 @@ secondaryItems = frame {
     left: 20px,
     top: 144px,
 
-    sidebarItem.sidebarMenu.menuIcon {
+    menuIcon {
       fill[0].color: colors.theme.contrastAlpha25,
       contents: dot20
     }
 
-    sidebarItem.sidebarMenu.menuLabel {
+    menuLabel {
       contents: "Draft email"
     }
   }

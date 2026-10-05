@@ -87,7 +87,7 @@ mediumInactive = frame : mediumSelected {
   border[0].visible: .false,
   fill[0]: .nil,
 
-  mediumSelected.label {
+  label {
     fill[0].color: Colors.theme.contrastAlpha50
   }
 }
@@ -104,11 +104,11 @@ small = frame : medium {
     remove(medium.leadingSegment)
   ],
 
-  @use-variant(smallInactive)
-  medium.trailingSegment {}
+  @with-variant(smallInactive)
+  trailingSegment {}
 
-  @use-variant(smallInactive)
-  medium.middleSegment {}
+  @with-variant(smallInactive)
+  middleSegment {}
 
   smallLeadingSegment = frame : smallSelected {
     left: 0px,
@@ -128,7 +128,7 @@ smallInactive = frame : mediumSelected {
   fill[0]: .nil,
   shadow[0]: .nil,
 
-  mediumSelected.label {
+  label {
     fill[0].color: Colors.theme.contrastAlpha50
   }
 }

@@ -22,18 +22,24 @@ baseStack = frame {
   width: 140px,
   height: Spacing.size.medium,
   overflow: .visible,
-  children: [baseFifthPhoto, baseFourthPhoto, baseThirdPhoto, baseSecondPhoto, baseFirstPhoto],
+  children: [
+    baseFifthPhoto,
+    baseFourthPhoto,
+    baseThirdPhoto,
+    baseSecondPhoto,
+    baseFirstPhoto
+  ],
 
   baseFifthPhoto = frame : userAvatar.smallPhoto {
     left: 104px,
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module8
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -43,11 +49,11 @@ baseStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module7
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -57,11 +63,11 @@ baseStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module6
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -71,11 +77,11 @@ baseStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module5
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -84,7 +90,7 @@ baseStack = frame {
     left: 0px,
     top: 0px,
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -152,11 +158,11 @@ bottomStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module8
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -166,11 +172,11 @@ bottomStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module7
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -180,11 +186,11 @@ bottomStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module6
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -194,11 +200,11 @@ bottomStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module5
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -207,7 +213,7 @@ bottomStack = frame {
     left: 0px,
     top: 0px,
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -236,7 +242,11 @@ labelTop = frame : avatarGroup {
   layout.align-items: .start,
   layout.direction: .column,
   layout.item-gap: Spacing.gap.xsmall,
-  overrides: [insert(title, after = .nil), insert(topStack, after = title), remove(baseStack)]
+  overrides: [
+    insert(title, after = .nil),
+    insert(topStack, after = title),
+    remove(baseStack)
+  ]
 }
 
 topStack = frame {
@@ -245,18 +255,24 @@ topStack = frame {
   width: 140px,
   height: Spacing.size.medium,
   overflow: .visible,
-  children: [topFifthPhoto, topFourthPhoto, topThirdPhoto, topSecondPhoto, topFirstPhoto],
+  children: [
+    topFifthPhoto,
+    topFourthPhoto,
+    topThirdPhoto,
+    topSecondPhoto,
+    topFirstPhoto
+  ],
 
   topFifthPhoto = frame : userAvatar.smallPhoto {
     left: 104px,
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module8
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -266,11 +282,11 @@ topStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module7
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -280,11 +296,11 @@ topStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module6
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -294,11 +310,11 @@ topStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module5
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -307,7 +323,7 @@ topStack = frame {
     left: 0px,
     top: 0px,
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -319,18 +335,24 @@ rightStack = frame {
   width: 140px,
   height: Spacing.size.medium,
   overflow: .visible,
-  children: [rightFifthPhoto, rightFourthPhoto, rightThirdPhoto, rightSecondPhoto, rightFirstPhoto],
+  children: [
+    rightFifthPhoto,
+    rightFourthPhoto,
+    rightThirdPhoto,
+    rightSecondPhoto,
+    rightFirstPhoto
+  ],
 
   rightFifthPhoto = frame : userAvatar.smallPhoto {
     left: 104px,
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module8
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -340,11 +362,11 @@ rightStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module7
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -354,11 +376,11 @@ rightStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module6
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -368,11 +390,11 @@ rightStack = frame {
     top: 0px,
     ignore-stack: .true,
 
-    userAvatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module5
     }
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -381,7 +403,7 @@ rightStack = frame {
     left: 0px,
     top: 0px,
 
-    userAvatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }

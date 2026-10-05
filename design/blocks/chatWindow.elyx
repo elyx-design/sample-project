@@ -33,7 +33,7 @@ export chatWindow = frame {
     left: 827px,
     top: 524px,
 
-    textField.textField.label {
+    label {
       contents: Strings.forms.messagePlaceholder
     }
   }
@@ -57,7 +57,7 @@ messageThread = frame {
     layout.justify-content: .end,
 
     chatBubble.message {
-      chatBubble.message.messageText {
+      messageText {
         contents: "This heat is brutal"
       }
     }
@@ -79,7 +79,7 @@ replyMessages = frame {
     top: 74px,
 
     chatBubble.message {
-      chatBubble.message.messageText {
+      messageText {
         contents: "Yeah, it's true!"
       }
     }
@@ -90,7 +90,7 @@ replyMessages = frame {
     top: 94px,
 
     chatBubble.message {
-      chatBubble.message.messageText {
+      messageText {
         contents: "Incredible pace out there"
       }
     }
@@ -120,7 +120,7 @@ liveChat = frame : chatWindow {
     width: 100%,
     layout: {direction: .column, item-gap: Spacing.gap.xxlarge},
     overflow: .visible,
-  children: [chatPanel, chat]
+    children: [chatPanel, chat]
   }
 }
 
@@ -149,20 +149,20 @@ chatPanel = frame {
     top: 29px,
     width: 100%,
 
-    segmentedControl.medium.trailingSegment {
-      segmentedControl.mediumSelected.label {
+    trailingSegment {
+      label {
         contents: Strings.labels.analysis
       }
     }
 
-    segmentedControl.medium.middleSegment {
-      segmentedControl.mediumSelected.label {
+    middleSegment {
+      label {
         contents: Strings.labels.fans
       }
     }
 
-    segmentedControl.small.smallLeadingSegment {
-      segmentedControl.mediumSelected.label {
+    smallLeadingSegment {
+      label {
         contents: Strings.labels.public
       }
     }
@@ -200,7 +200,7 @@ onlineStatus = frame {
   overflow: .visible,
   children: [onlineIcon, onlineLabel],
 
-  onlineIcon = icon {
+  onlineIcon = asset {
     left: 897px,
     top: 615px,
     width: 24px,
@@ -235,13 +235,13 @@ chat = frame {
     width: 100%,
 
     chatBubble.messageActionGroup {
-      chatBubble.messageActionGroup.messageText_3 {
+      messageText_3 {
         fill[0].color: colors.palette.pink,
         contents: "oasis_rider"
       }
     }
 
-    chatBubble.liveBubble.messageText_2 {
+    messageText_2 {
       contents: "This is cycling history right here"
     }
   }
@@ -252,17 +252,17 @@ chat = frame {
     width: 100%,
 
     chatBubble.messageActionGroup {
-      chatBubble.messageActionGroup.messageText_3 {
+      messageText_3 {
         fill[0].color: colors.palette.purple,
         contents: "Mirage_FC"
       }
 
-      chatBubble.messageActionGroup.messageText_4 {
+      messageText_4 {
         contents: "14:12"
       }
     }
 
-    chatBubble.liveBubble.messageText_2 {
+    messageText_2 {
       contents: "Chahold this break to the finish please"
     }
   }
@@ -273,17 +273,17 @@ chat = frame {
     width: 100%,
 
     chatBubble.messageActionGroup {
-      chatBubble.messageActionGroup.messageText_3 {
+      messageText_3 {
         fill[0].color: colors.palette.cyan,
         contents: "joana.rd"
       }
 
-      chatBubble.messageActionGroup.messageText_4 {
+      messageText_4 {
         contents: "14:10"
       }
     }
 
-    chatBubble.liveBubble.messageText_2 {
+    messageText_2 {
       contents: "that crosswind s going to do damage. 4 so far because of the heat"
     }
   }
@@ -294,17 +294,17 @@ chat = frame {
     width: 100%,
 
     chatBubble.messageActionGroup {
-      chatBubble.messageActionGroup.messageText_3 {
+      messageText_3 {
         fill[0].color: colors.palette.green,
         contents: "MODYara"
       }
 
-      chatBubble.messageActionGroup.messageText_4 {
+      messageText_4 {
         contents: "14:09"
       }
     }
 
-    chatBubble.liveBubble.messageText_2 {
+    messageText_2 {
       contents: "he will blow up before the climb"
     }
   }
@@ -328,7 +328,7 @@ footer = frame {
     left: 0px,
     top: -48px,
 
-    textField.textField.label {
+    label {
       contents: Strings.forms.messagePlaceholder
     }
   }
@@ -337,7 +337,7 @@ footer = frame {
     left: 0px,
     top: -56.5px,
 
-    button.mediumIcon.mediumIconGlyph {
+    mediumIconGlyph {
       contents: settings24
     }
   }

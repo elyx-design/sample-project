@@ -62,7 +62,7 @@ mediumPrimary = frame : medium {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  medium.mediumLabel {
+  mediumLabel {
     fill[0].color: Colors.controls.foreground,
     left: 16px
   }
@@ -81,7 +81,7 @@ mediumDanger = frame : medium {
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
-  medium.mediumLabel {
+  mediumLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -109,7 +109,7 @@ mediumPrimaryPressed = frame : medium {
   shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
 
-  medium.mediumLabel {
+  mediumLabel {
     fill[0].color: Colors.controls.foreground
   }
 }
@@ -126,7 +126,7 @@ mediumDangerPressed = frame : medium {
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal,
 
-  medium.mediumLabel {
+  mediumLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -182,7 +182,7 @@ smallDangerPressed = frame : small {
   shadow[0].inner-shadow.offset: [0px, 3px],
   shadow[0].inner-shadow.style: .normal,
 
-  small.smallLabel {
+  smallLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -199,7 +199,7 @@ smallDanger = frame : small {
   shadow[1].inner-shadow.offset: [0px, 1.5px],
   shadow[1].inner-shadow.spread: 0px,
 
-  small.smallLabel {
+  smallLabel {
     fill[0].color: Colors.primitives.white
   }
 }
@@ -229,7 +229,7 @@ smallPrimary = frame : small {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  small.smallLabel {
+  smallLabel {
     fill[0].color: Colors.theme.base
   }
 }
@@ -244,7 +244,7 @@ smallPrimaryPressed = frame : small {
   shadow[0].inner-shadow.color: rgb(0%, 0%, 0%, 20%),
   shadow[0].inner-shadow.offset: [0px, 3px],
 
-  small.smallLabel {
+  smallLabel {
     fill[0].color: Colors.theme.base
   }
 }
@@ -258,7 +258,7 @@ mediumIcon = frame : medium {
   padding-right: 0px,
   overrides: [insert(mediumIconGlyph, after = .nil), remove(medium.mediumLabel)],
 
-  mediumIconGlyph = icon {
+  mediumIconGlyph = asset {
     left: 1353px,
     top: 705px,
     width: 24px,
@@ -282,7 +282,7 @@ mediumClose = frame : medium {
   overrides: [insert(mediumCloseIcon, after = .nil), remove(medium.mediumLabel)],
   shadow[0]: .nil,
 
-  mediumCloseIcon = icon {
+  mediumCloseIcon = asset {
     left: 1387px,
     top: 682px,
     width: 24px,
@@ -304,7 +304,7 @@ smallIconBackground = frame : small {
     remove(small.smallLabel)
   ],
 
-  smallBackgroundIcon = icon {
+  smallBackgroundIcon = asset {
     left: 1248px,
     top: 918px,
     width: 20px,
@@ -328,7 +328,7 @@ smallClose = frame : small {
   overrides: [insert(smallCloseIcon, after = .nil), remove(small.smallLabel)],
   shadow[0]: .nil,
 
-  smallCloseIcon = icon {
+  smallCloseIcon = asset {
     left: 1211px,
     top: 918px,
     width: 20px,
@@ -352,7 +352,7 @@ smallPrimaryRounded = frame : small {
     remove(small.smallLabel)
   ],
 
-  smallPrimaryRoundedIcon = icon {
+  smallPrimaryRoundedIcon = asset {
     left: 1248px,
     top: 918px,
     width: 20px,
@@ -374,7 +374,7 @@ smallIcon = frame : small {
   overrides: [insert(smallIconGlyph, after = .nil), remove(small.smallLabel)],
   shadow[0]: .nil,
 
-  smallIconGlyph = icon {
+  smallIconGlyph = asset {
     left: 1248px,
     top: 918px,
     width: 20px,
@@ -403,7 +403,7 @@ mediumPrimaryRounded = frame : medium {
   shadow[1].inner-shadow.offset: [0px, 1px],
   shadow[1].inner-shadow.spread: 0px,
 
-  mediumPrimaryRoundedIcon = icon {
+  mediumPrimaryRoundedIcon = asset {
     left: 1397px,
     top: 701px,
     width: 24px,
@@ -428,7 +428,7 @@ mediumPlainIcon = frame : medium {
   ],
   shadow[0]: .nil,
 
-  mediumPlainIconGlyph = icon {
+  mediumPlainIconGlyph = asset {
     left: 1397px,
     top: 701px,
     width: 24px,
@@ -457,7 +457,7 @@ export Play = frame {
     type: .ellipse
   }
 
-  play20svg = icon {
+  play20svg = asset {
     left: 38px,
     top: 38px,
     width: 64px,

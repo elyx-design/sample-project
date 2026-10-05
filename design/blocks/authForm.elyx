@@ -42,11 +42,11 @@ content = frame {
     left: -33px,
     top: 120px,
 
-    header2.mediumLeft.mediumSubtitle {
+    mediumSubtitle {
       contents: Strings.forms.accountPrompt
     }
 
-    header2.mediumLeft.mediumTitle {
+    mediumTitle {
       contents: Strings.forms.signInTitle
     }
   }
@@ -54,7 +54,7 @@ content = frame {
   signInButton = frame : Button.mediumPrimary {
     width: 100%,
 
-    Button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.signIn
     }
   }
@@ -69,21 +69,21 @@ credentialFields = frame {
   children: [emailField, passwordField],
 
   emailField = frame : TextField.iconPlaceholder {
-    TextField.iconPlaceholder.placeholderIcon {
+    placeholderIcon {
       contents: mail24
     }
 
-    TextField.textField.label {
+    label {
       contents: Strings.forms.emailAddress
     }
   }
 
   passwordField = frame : TextField.iconPlaceholder {
-    TextField.iconPlaceholder.placeholderIcon {
+    placeholderIcon {
       contents: padlock24
     }
 
-    TextField.textField.label {
+    label {
       contents: Strings.forms.password
     }
   }

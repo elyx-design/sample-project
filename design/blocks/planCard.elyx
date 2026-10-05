@@ -24,7 +24,7 @@ export planCard = frame {
     left: 24px,
     top: 390px,
 
-    button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.managePlan
     }
   }
@@ -60,7 +60,7 @@ planIcon = frame {
   corner-radius: Radius.radius.xsmall,
   children: planGlyph,
 
-  planGlyph = icon {
+  planGlyph = asset {
     left: 2px,
     top: 29px,
     width: 32px,
@@ -89,12 +89,12 @@ planHeader = frame {
     border[0].visible: .false,
     fill[0].color: Colors.palette.lavender,
 
-    tag.tagTransparent.label {
+    label {
       fill[0].color: Colors.primitives.black,
       contents: Strings.plans.best
     }
 
-    tag.iconAndLabel.tagIcon {
+    tagIcon {
       fill[0].color: Colors.primitives.black
     }
   }
@@ -145,10 +145,15 @@ features = frame {
   width: 100%,
   layout: {direction: .column, item-gap: Spacing.gap.small},
   slot: .true,
-  children: [projectsFeature, projectsFeature_2, projectsFeature_3, projectsFeature_4],
+  children: [
+    projectsFeature,
+    projectsFeature_2,
+    projectsFeature_3,
+    projectsFeature_4
+  ],
 
   projectsFeature = frame : listItem.projectsFeature {
-    listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.threeProjects
     }
   }
@@ -157,7 +162,7 @@ features = frame {
     left: 20px,
     top: 45px,
 
-    listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.communitySupport
     }
   }
@@ -166,7 +171,7 @@ features = frame {
     left: 20px,
     top: 70px,
 
-    listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.basicExport
     }
   }
@@ -175,7 +180,7 @@ features = frame {
     left: 20px,
     top: 95px,
 
-    listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.twoGigabytesStorage
     }
   }

@@ -18,7 +18,10 @@ export profileCard = frame : cardBackground.transparent {
   border[0].color: colors.primitives.black25,
   fill[0].color: colors.palette.yellowAlpha50,
   layout.item-gap: 0,
-  overrides: [insert(content, after = .nil), insert(profileStats, after = content)],
+  overrides: [
+    insert(content, after = .nil),
+    insert(profileStats, after = content)
+  ],
 
   profileStats = frame : stats.stats {
     left: 0px,
@@ -27,18 +30,21 @@ export profileCard = frame : cardBackground.transparent {
     padding-left: Spacing.padding.xxlarge,
     padding-bottom: Spacing.padding.xlarge,
     padding-right: Spacing.padding.xxlarge,
-    overrides: [remove(stats.stats.bottomDivider), remove(stats.stats.topDivider)],
+    overrides: [
+      remove(stats.stats.bottomDivider),
+      remove(stats.stats.topDivider)
+    ],
 
     stats.row {
-      stats.row.ratingDivider {
+      ratingDivider {
         top: 0px
       }
 
-      stats.row.pagesDivider {
+      pagesDivider {
         top: 0px
       }
 
-      stats.row.booksDivider {
+      booksDivider {
         top: 0px
       }
     }
@@ -50,7 +56,11 @@ content = frame {
   top: 0px,
   width: 100%,
   height: .auto,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.large
+  },
   fill: colors.theme.base,
   corner-radius: [0px, 0px, Radius.radius.xlarge, Radius.radius.xlarge],
   padding: Spacing.padding.xxlarge,
@@ -78,7 +88,7 @@ profileHeader = frame {
     top: 2px,
     overrides: [remove(header.mediumLeft.mediumSubtitle)],
 
-    header.mediumLeft.mediumTitle {
+    mediumTitle {
       contents: Strings.labels.publicProfile
     }
   }

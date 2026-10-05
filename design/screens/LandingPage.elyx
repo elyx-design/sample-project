@@ -16,8 +16,9 @@ import "design/screens/footer.elyx" as footer
 import "design/screens/pricingPage.elyx" as pricingPage
 import "design/blocks/productGallery.elyx" as productGallery
 
-@draw-connections
-__canvas__
+__file__ {
+  draw-connections: .true
+}
 
 export LandingPage = frame {
   doc: "This frame is a real scroll view. Select it, and scroll down.",
@@ -47,8 +48,8 @@ top = frame {
     shadow[0].drop-shadow.visible: .false,
 
     siteHeader.headerCta {
-      siteHeader.headerCta.logInLink {
-        siteHeader.menu.label {
+      logInLink {
+        label {
           connections[0].target: signIn.signInScreen
         }
       }
@@ -57,8 +58,8 @@ top = frame {
     siteHeader.navLinks {
       overrides: [remove(siteHeader.navLinks.navResources)],
 
-      siteHeader.navLinks.navPricing {
-        siteHeader.menu.label {
+      navPricing {
+        label {
           connections[0].target: pricingPage.pricingPage
         }
       }
@@ -77,12 +78,12 @@ heroContent = frame {
     top: 449px,
     width: 44.0752%,
 
-    header.largeLeft.largeTitle {
+    largeTitle {
       width: 100%,
       contents: Strings.landingPage.heroTitle
     }
 
-    header.largeLeft.largeSubtitle {
+    largeSubtitle {
       contents: Strings.landingPage.heroDescription
     }
   }
@@ -102,7 +103,7 @@ heroActions = frame {
     left: 733px,
     top: 353px,
 
-    button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.getStarted
     }
   }
@@ -139,12 +140,12 @@ featureSection = frame {
     connections[0].target: footer.Footer,
     fill[0].color: colors.theme.contrastAlpha25,
 
-    tag.tagTransparent.label {
+    label {
       fill[0].color: colors.theme.baseAlpha70,
       contents: Strings.actions.scrollDown
     }
 
-    tag.iconAndLabel.tagIcon {
+    tagIcon {
       fill[0].color: colors.theme.baseAlpha70,
       contents: arrowDown20
     }
@@ -164,7 +165,7 @@ layer1 = frame {
   padding: Spacing.padding.large,
   children: [directIcon, directHeader],
 
-  directIcon = icon {
+  directIcon = asset {
     left: 644px,
     top: 704px,
     width: 40px,
@@ -176,11 +177,11 @@ layer1 = frame {
     left: 0px,
     top: 0px,
 
-    header.smallLeft.smallSubtitle {
+    smallSubtitle {
       contents: Strings.landingPage.minimalDescription
     }
 
-    header.smallLeft.smallTitle {
+    smallTitle {
       contents: Strings.landingPage.minimalTitle
     }
   }
@@ -199,7 +200,7 @@ layer2 = frame {
   padding: Spacing.padding.large,
   children: [reliabilityIcon, steadyHeader],
 
-  reliabilityIcon = icon {
+  reliabilityIcon = asset {
     left: 648px,
     top: 708px,
     width: 40px,
@@ -211,11 +212,11 @@ layer2 = frame {
     left: 0px,
     top: 0px,
 
-    header.smallLeft.smallSubtitle {
+    smallSubtitle {
       contents: Strings.landingPage.reliabilityDescription
     }
 
-    header.smallLeft.smallTitle {
+    smallTitle {
       contents: Strings.landingPage.reliabilityTitle
     }
   }
@@ -234,7 +235,7 @@ layer3 = frame {
   padding: Spacing.padding.large,
   children: [collaborationIcon, teamHeader],
 
-  collaborationIcon = icon {
+  collaborationIcon = asset {
     left: 655px,
     top: 715px,
     width: 40px,
@@ -246,11 +247,11 @@ layer3 = frame {
     left: 0px,
     top: 0px,
 
-    header.smallLeft.smallSubtitle {
+    smallSubtitle {
       contents: Strings.landingPage.collaborationDescription
     }
 
-    header.smallLeft.smallTitle {
+    smallTitle {
       contents: Strings.landingPage.collaborationTitle
     }
   }
@@ -267,12 +268,12 @@ gallerySection = frame {
     top: -265px,
     width: 44.0752%,
 
-    header.largeLeft.largeTitle {
+    largeTitle {
       width: 100%,
       contents: Strings.landingPage.galleryTitle
     }
 
-    header.largeLeft.largeSubtitle {
+    largeSubtitle {
       contents: Strings.landingPage.galleryDescription
     }
   }

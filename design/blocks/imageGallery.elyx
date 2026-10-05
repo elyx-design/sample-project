@@ -27,7 +27,11 @@ topRow = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xxsmall
+  },
   children: [topLeft, topCenter, topRight],
 
   topLeft = frame : thumbnailImage.thumbnailImage {
@@ -38,7 +42,12 @@ topRow = frame {
     fill[0].image.ref: thumb08
   }
 
-  topCenter = frame : thumbnailImage.thumbnailImage {left: 0px, top: 0px, width: 100%, height: 100%}
+  topCenter = frame : thumbnailImage.thumbnailImage {
+    left: 0px,
+    top: 0px,
+    width: 100%,
+    height: 100%
+  }
 
   topRight = frame : thumbnailImage.thumbnailImage {
     left: 0px,
@@ -54,7 +63,11 @@ middleRow = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xxsmall
+  },
   children: [middleLeft, middleCenter, middleRight],
 
   middleLeft = frame : thumbnailImage.thumbnailImage {
@@ -87,7 +100,11 @@ bottomRow = frame {
   top: 0px,
   width: 100%,
   height: 100%,
-  layout: {justify-content: .center, align-items: .center, item-gap: Spacing.gap.xxsmall},
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: Spacing.gap.xxsmall
+  },
   children: [bottomLeft, bottomCenter, bottomRight],
 
   bottomLeft = frame : thumbnailImage.thumbnailImage {

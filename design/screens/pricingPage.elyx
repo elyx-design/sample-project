@@ -30,11 +30,11 @@ export pricingPage = frame {
     top: 121px,
     width: 62.5%,
 
-    header.mediumLeft.mediumSubtitle {
+    mediumSubtitle {
       contents: Strings.pricingPage.description
     }
 
-    header.mediumLeft.mediumTitle {
+    mediumTitle {
       contents: Strings.pricingPage.title
     }
   }
@@ -70,24 +70,24 @@ pricingCards = frame {
     height: 100%,
     corner-radius: [20px, 0px, 0px, 20px],
 
-    planCard.planCard.manageButton {
-      planCard.button.medium.mediumLabel {
+    manageButton {
+      mediumLabel {
         contents: Strings.pricingPage.freeRegistration
       }
     }
 
     planCard.planContent {
-      planCard.planContent.planDetails {
+      planDetails {
         planCard.pricingCopy {
           planCard.priceRow {
-            planCard.priceRow.price {
+            price {
               contents: "$0"
             }
           }
         }
       }
 
-      planCard.planContent.planSummary {
+      planSummary {
         planCard.planHeader {
           overrides: [remove(planCard.planHeader.badge)]
         }
@@ -103,14 +103,14 @@ proPlan = frame : planCard.planCard {
   height: 498px,
   corner-radius: 0px,
 
-  planCard.planCard.manageButton {
-    planCard.button.medium.mediumLabel {
+  manageButton {
+    mediumLabel {
       contents: Strings.actions.getStarted
     }
   }
 
   planCard.planContent {
-    planCard.planContent.planDetails {
+    planDetails {
       planCard.features {
         overrides: [
           insert(projectsFeature_4, after = planCard.features.projectsFeature_4),
@@ -119,15 +119,15 @@ proPlan = frame : planCard.planCard {
       }
 
       planCard.pricingCopy {
-        planCard.pricingCopy.description {
+        description {
           contents: Strings.plans.proDescription
         }
       }
     }
 
-    planCard.planContent.planSummary {
+    planSummary {
       planCard.planIcon {
-        planCard.planIcon.planGlyph {
+        planGlyph {
           left: 6px,
           top: 33px,
           contents: dashboard
@@ -135,7 +135,7 @@ proPlan = frame : planCard.planCard {
       }
 
       planCard.planHeader {
-        planCard.planHeader.planName {
+        planName {
           contents: Strings.plans.pro
         }
       }
@@ -146,7 +146,7 @@ proPlan = frame : planCard.planCard {
     left: 40px,
     top: 115px,
 
-    planCard.listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.hundredGigabytesStorage
     }
   }
@@ -155,7 +155,7 @@ proPlan = frame : planCard.planCard {
     left: 40px,
     top: 140px,
 
-    planCard.listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.versionHistory
     }
   }
@@ -168,14 +168,14 @@ businessPlan = frame : planCard.planCard {
   height: 100%,
   corner-radius: [0px, Radius.radius.large, Radius.radius.large, 0px],
 
-  planCard.planCard.manageButton {
-    planCard.button.medium.mediumLabel {
+  manageButton {
+    mediumLabel {
       contents: Strings.actions.contactSales
     }
   }
 
   planCard.planContent {
-    planCard.planContent.planDetails {
+    planDetails {
       planCard.features {
         overrides: [
           insert(projectsFeature_6, after = planCard.features.projectsFeature_4),
@@ -184,29 +184,29 @@ businessPlan = frame : planCard.planCard {
       }
 
       planCard.pricingCopy {
-        planCard.pricingCopy.description {
+        description {
           contents: Strings.plans.businessDescription
         }
 
         planCard.priceRow {
-          planCard.priceRow.price {
+          price {
             contents: "$29"
           }
         }
       }
     }
 
-    planCard.planContent.planSummary {
+    planSummary {
       planCard.planHeader {
         overrides: [remove(planCard.planHeader.badge)],
 
-        planCard.planHeader.planName {
+        planName {
           contents: Strings.plans.business
         }
       }
 
       planCard.planIcon {
-        planCard.planIcon.planGlyph {
+        planGlyph {
           left: 6px,
           top: 33px,
           contents: processor
@@ -219,7 +219,7 @@ businessPlan = frame : planCard.planCard {
     left: 40px,
     top: 115px,
 
-    planCard.listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.oneTerabyteStorage
     }
   }
@@ -228,7 +228,7 @@ businessPlan = frame : planCard.planCard {
     left: 40px,
     top: 140px,
 
-    planCard.listItem.projectsFeature.projectsLabel {
+    projectsLabel {
       contents: Strings.plans.adminControls
     }
   }

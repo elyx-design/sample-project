@@ -47,7 +47,7 @@ actions = frame {
   layout: {justify-content: .end, align-items: .center},
   children: favoriteIcon,
 
-  favoriteIcon = icon {
+  favoriteIcon = asset {
     left: 0px,
     top: 0px,
     width: 20px,
@@ -73,11 +73,11 @@ thumbnailVideo = frame : thumbnailImage {
     left: 63px,
     top: 50px,
 
-    tag.iconAndLabel.tagIcon {
+    tagIcon {
       contents: play20
     }
 
-    tag.tagTransparent.label {
+    label {
       contents: Strings.actions.watchTrailer
     }
   }

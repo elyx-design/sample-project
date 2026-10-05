@@ -23,12 +23,19 @@ export socialCard = frame : cardBackground.transparent {
   layout.align-items: .center,
   layout.item-gap: Spacing.gap.large,
   layout.justify-content: .space-between,
-  overrides: [insert(cardContent, after = .nil), insert(socialFooter, after = cardContent)],
+  overrides: [
+    insert(cardContent, after = .nil),
+    insert(socialFooter, after = cardContent)
+  ],
 
   cardContent = frame {
     width: 100%,
     height: 100%,
-    layout: {direction: .column, align-items: .end, item-gap: Spacing.gap.xxlarge},
+    layout: {
+      direction: .column,
+      align-items: .end,
+      item-gap: Spacing.gap.xxlarge
+    },
     fill: {visible: .false, image: {ref: dots}},
     border: {
       color: colors.primitives.blackAlpha10,
@@ -45,18 +52,25 @@ export socialCard = frame : cardBackground.transparent {
 socialFooter = frame {
   width: 100%,
   height: .auto,
-  layout: {justify-content: .space-between, align-items: .center, item-gap: Spacing.gap.xlarge},
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: Spacing.gap.xlarge
+  },
   overflow: .visible,
   padding: Spacing.padding.large,
   children: [followerAvatars, followButton],
 
-  followerAvatars = frame : avatarGroup.avatarGroup {left: 20px, top: 383px}
+  followerAvatars = frame : avatarGroup.avatarGroup {
+    left: 20px,
+    top: 383px
+  }
 
   followButton = frame : button.mediumPrimary {
     left: 151.5px,
     top: 160px,
 
-    button.medium.mediumLabel {
+    mediumLabel {
       contents: Strings.actions.follow
     }
   }
@@ -64,7 +78,11 @@ socialFooter = frame {
 
 cardActions = frame {
   width: .auto,
-  layout: {justify-content: .end, align-items: .end, item-gap: Spacing.gap.small},
+  layout: {
+    justify-content: .end,
+    align-items: .end,
+    item-gap: Spacing.gap.small
+  },
   slot: .true,
   children: [favoriteButton, likeButton, closeButton],
 
@@ -72,7 +90,7 @@ cardActions = frame {
     left: 245.81px,
     top: 37.5995px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: star20
     }
   }
@@ -81,7 +99,7 @@ cardActions = frame {
     left: 265.81px,
     top: 57.5995px,
 
-    button.smallIcon.smallIconGlyph {
+    smallIconGlyph {
       contents: heart20
     }
   }
@@ -106,14 +124,22 @@ profileInfo = frame {
 
   profileStats = frame {
     width: 100%,
-    layout: {justify-content: .space-evenly, align-items: .center, item-gap: Spacing.gap.xxlarge},
+    layout: {
+      justify-content: .space-evenly,
+      align-items: .center,
+      item-gap: Spacing.gap.xxlarge
+    },
     children: [followingStat, followersStat, postsStat]
   }
 }
 
 profileSummary = frame {
   width: 100%,
-  layout: {direction: .column, align-items: .center, item-gap: Spacing.gap.large},
+  layout: {
+    direction: .column,
+    align-items: .center,
+    item-gap: Spacing.gap.large
+  },
   overflow: .visible,
   children: [profileIdentity, bio],
 
@@ -122,8 +148,8 @@ profileSummary = frame {
     top: 160px,
     width: 100%,
 
-    userSummary.medium.mediumHeader {
-      userSummary.header.mediumLeft.mediumSubtitle {
+    mediumHeader {
+      mediumSubtitle {
         contents: "@noraharper"
       }
     }
@@ -144,7 +170,12 @@ profileSummary = frame {
 followingStat = frame {
   left: 49px,
   top: 367px,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 3px
+  },
   children: [followingCount, followingLabel],
 
   followingCount = text {
@@ -170,7 +201,12 @@ followingStat = frame {
 followersStat = frame {
   left: 69px,
   top: 387px,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 3px
+  },
   children: [followerCount, followersLabel],
 
   followerCount = text {
@@ -196,7 +232,12 @@ followersStat = frame {
 postsStat = frame {
   left: 89px,
   top: 407px,
-  layout: {direction: .column, justify-content: .center, align-items: .center, item-gap: 3px},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 3px
+  },
   children: [postCount, postsLabel],
 
   postCount = text {

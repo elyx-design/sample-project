@@ -43,7 +43,10 @@ large = frame : small {
 extraLarge = frame : small {
   left: 340px,
   top: 769px,
-  overrides: [insert(extraLargeArtwork, after = .nil), remove(small.smallArtwork)],
+  overrides: [
+    insert(extraLargeArtwork, after = .nil),
+    remove(small.smallArtwork)
+  ],
 
   extraLargeArtwork = shape {
     left: 0px,
@@ -60,7 +63,7 @@ medium = frame : small {
   left: 340px,
   top: 597px,
 
-  small.smallArtwork {
+  smallArtwork {
     width: Spacing.size.medium,
     height: Spacing.size.medium
   }
@@ -73,7 +76,7 @@ extraLargeWordmark = frame : small {
   layout.item-gap: Spacing.gap.xxlarge,
   overrides: [insert(extraLargeWordmarkLabel, after = small.smallArtwork)],
 
-  small.smallArtwork {
+  smallArtwork {
     width: 80px,
     height: 80px
   }
@@ -95,7 +98,7 @@ largeWordmark = frame : small {
   layout.item-gap: Spacing.gap.medium,
   overrides: [insert(largeWordmarkLabel, after = small.smallArtwork)],
 
-  small.smallArtwork {
+  smallArtwork {
     width: 48px,
     height: 48px
   }
@@ -117,7 +120,7 @@ mediumWordmark = frame : small {
   layout.item-gap: Spacing.gap.small,
   overrides: [insert(mediumWordmarkLabel, after = small.smallArtwork)],
 
-  small.smallArtwork {
+  smallArtwork {
     width: Spacing.size.medium,
     height: Spacing.size.medium
   }

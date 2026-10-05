@@ -24,7 +24,7 @@ export aiChat = frame {
     overrides: [remove(chatBubble.chatBubble.profileAvatar)],
 
     chatBubble.message {
-      chatBubble.message.messageText {
+      messageText {
         contents: "Help me make a grocery list for the week"
       }
     }

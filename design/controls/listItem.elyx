@@ -7,7 +7,7 @@ export projectsFeature = frame {
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [projectsBullet, projectsLabel],
 
-  projectsBullet = icon {
+  projectsBullet = asset {
     left: 4px,
     top: 4px,
     width: 12px,

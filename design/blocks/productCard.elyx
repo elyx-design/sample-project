@@ -12,9 +12,15 @@ export productCard = frame : cardBackground.cardBackground {
   width: 565px,
   layout.direction: .row,
   layout.item-gap: Spacing.gap.xlarge,
-  overrides: [insert(productPreview, after = .nil), insert(bookDetails, after = productPreview)],
+  overrides: [
+    insert(productPreview, after = .nil),
+    insert(bookDetails, after = productPreview)
+  ],
 
-  productPreview = frame : product.product {left: -63px, top: -86px}
+  productPreview = frame : product.product {
+    left: -63px,
+    top: -86px
+  }
 }
 
 bookDetails = frame {
@@ -71,7 +77,7 @@ readingProgress = frame {
     top: 0px,
     width: 100%,
 
-    slider.slider.track {
+    track {
       width: 42%
     }
   }

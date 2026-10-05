@@ -32,7 +32,7 @@ thumb = frame : slider {
   overflow: .visible,
   overrides: [insert(handle_2, after = slider.track)],
 
-  slider.track {
+  track {
     width: 81.2px,
     corner-radius: [radius.radius.full, 0px, 0px, radius.radius.full]
   }
@@ -50,7 +50,7 @@ full = frame : slider {
   overflow: .visible,
   overrides: [insert(handle_3, after = slider.track)],
 
-  slider.track {
+  track {
     width: 100%,
     corner-radius: [radius.radius.full, 0px, 0px, radius.radius.full]
   }

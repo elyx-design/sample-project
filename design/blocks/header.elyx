@@ -35,11 +35,11 @@ mediumCenter = frame : mediumLeft {
   top: 166px,
   layout.align-items: .center,
 
-  mediumLeft.mediumSubtitle {
+  mediumSubtitle {
     align: .center
   }
 
-  mediumLeft.mediumTitle {
+  mediumTitle {
     align: .center
   }
 }
@@ -75,11 +75,11 @@ smallCenter = frame : smallLeft {
   top: 166px,
   layout.align-items: .center,
 
-  smallLeft.smallSubtitle {
+  smallSubtitle {
     align: .center
   }
 
-  smallLeft.smallTitle {
+  smallTitle {
     align: .center
   }
 }
@@ -116,11 +116,11 @@ largeCenter = frame : largeLeft {
   top: 166.3172px,
   layout.align-items: .center,
 
-  largeLeft.largeSubtitle {
+  largeSubtitle {
     align: .center
   }
 
-  largeLeft.largeTitle {
+  largeTitle {
     align: .center
   }
 }

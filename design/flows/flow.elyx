@@ -4,17 +4,18 @@ import "design/screens/LandingPage.elyx" as landingFile
 import "design/screens/footer.elyx" as footerFile
 import "design/screens/pricingPage.elyx" as pricingFile
 
-@draw-connections
-__canvas__
+__file__ {
+  draw-connections: .true
+}
 
 signIn = frame : signInFile.signInScreen {
   left: 1800px,
-  top: 1000px,
+  top: 1000px
 }
 
 chat = frame : AIchat.AIChat {
   left: 1800px,
-  top: 2000px,
+  top: 2000px
 }
 
 landing = frame : landingFile.LandingPage {
@@ -24,7 +25,7 @@ landing = frame : landingFile.LandingPage {
 
 pricing = frame : pricingFile.pricingPage {
   left: 1800px,
-  top: 0px,
+  top: 0px
 }
 
 footer = frame : footerFile.Footer {

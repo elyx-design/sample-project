@@ -42,7 +42,7 @@ attachmentActions = frame {
     left: 654px,
     top: 728px,
 
-    button.smallIconBackground.smallBackgroundIcon {
+    smallBackgroundIcon {
       contents: plus20
     }
   }
@@ -51,7 +51,7 @@ attachmentActions = frame {
     left: 694px,
     top: 768px,
 
-    button.small.smallLabel {
+    smallLabel {
       contents: "Haze 4.8 Pro"
     }
   }
@@ -60,7 +60,7 @@ attachmentActions = frame {
     left: 674px,
     top: 748px,
 
-    button.smallIconBackground.smallBackgroundIcon {
+    smallBackgroundIcon {
       contents: search20
     }
   }
@@ -69,7 +69,7 @@ attachmentActions = frame {
     left: 694px,
     top: 768px,
 
-    button.smallIconBackground.smallBackgroundIcon {
+    smallBackgroundIcon {
       contents: more20
     }
   }
@@ -86,7 +86,7 @@ messageActions = frame {
     left: 714px,
     top: 788px,
 
-    button.smallIconBackground.smallBackgroundIcon {
+    smallBackgroundIcon {
       contents: voice20
     }
   }
@@ -95,7 +95,7 @@ messageActions = frame {
     left: 734px,
     top: 808px,
 
-    button.smallPrimaryRounded.smallPrimaryRoundedIcon {
+    smallPrimaryRoundedIcon {
       contents: arrowUp20
     }
   }
@@ -106,7 +106,10 @@ prompt = frame {
   layout: {align-items: .center, item-gap: Spacing.gap.small},
   children: [small, placeholder],
 
-  small = frame : logo.small {left: 550px, top: 487px}
+  small = frame : logo.small {
+    left: 550px,
+    top: 487px
+  }
 
   placeholder = text {
     left: 633px,

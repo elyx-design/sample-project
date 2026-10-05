@@ -39,23 +39,23 @@ productList = frame {
 
     productInfo.productDetails {
       productInfo.productCopy {
-        productInfo.productCopy.subtitle {
+        subtitle {
           contents: "by Alicia Puma"
         }
 
-        productInfo.productCopy.productName {
+        productName {
           width: 155px,
           contents: "Design"
         }
       }
 
-      productInfo.productDetails.ratingTag {
+      ratingTag {
         overflow: .visible
       }
     }
 
-    @use-variant(product.productFive)
-    productInfo.productInfo.productPreview {}
+    @with-variant(product.productFive)
+    productPreview {}
   }
 
   candyBook = frame : productInfo.productInfo {
@@ -64,26 +64,26 @@ productList = frame {
     width: .auto,
 
     productInfo.productDetails {
-      productInfo.productDetails.ratingTag {
-        productInfo.tag.tagTransparent.label {
+      ratingTag {
+        label {
           contents: "4.2"
         }
       }
 
       productInfo.productCopy {
-        productInfo.productCopy.subtitle {
+        subtitle {
           contents: "by Alice Sherman"
         }
 
-        productInfo.productCopy.productName {
+        productName {
           width: 155px,
           contents: "The Delicious Book of Candy"
         }
       }
     }
 
-    @use-variant(product.productFour)
-    productInfo.productInfo.productPreview {}
+    @with-variant(product.productFour)
+    productPreview {}
   }
 
   seaLifeBook = frame : productInfo.productInfo {
@@ -92,26 +92,26 @@ productList = frame {
     width: .auto,
 
     productInfo.productDetails {
-      productInfo.productDetails.ratingTag {
-        productInfo.tag.tagTransparent.label {
+      ratingTag {
+        label {
           contents: "3.9"
         }
       }
 
       productInfo.productCopy {
-        productInfo.productCopy.subtitle {
+        subtitle {
           contents: "by Eric Mateo"
         }
 
-        productInfo.productCopy.productName {
+        productName {
           width: 155px,
           contents: "Sea Life"
         }
       }
     }
 
-    @use-variant(product.productThree)
-    productInfo.productInfo.productPreview {}
+    @with-variant(product.productThree)
+    productPreview {}
   }
 
   wildlifeBook = frame : productInfo.productInfo {
@@ -120,25 +120,25 @@ productList = frame {
     width: .auto,
 
     productInfo.productDetails {
-      productInfo.productDetails.ratingTag {
-        productInfo.tag.tagTransparent.label {
+      ratingTag {
+        label {
           contents: "4.8"
         }
       }
 
       productInfo.productCopy {
-        productInfo.productCopy.subtitle {
+        subtitle {
           contents: "by Elena Marsh"
         }
 
-        productInfo.productCopy.productName {
+        productName {
           width: 155px,
           contents: "Widlife"
         }
       }
     }
 
-    @use-variant(product.productTwo)
-    productInfo.productInfo.productPreview {}
+    @with-variant(product.productTwo)
+    productPreview {}
   }
 }

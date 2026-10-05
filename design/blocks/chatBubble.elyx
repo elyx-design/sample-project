@@ -18,11 +18,11 @@ export chatBubble = frame {
     left: 0px,
     top: 0px,
 
-    avatar.smallPhoto.smallImage {
+    smallImage {
       fill[0].image.ref: module4
     }
 
-    avatar.small.smallStatus {
+    smallStatus {
       display: .hidden
     }
   }
@@ -35,8 +35,8 @@ user = frame : chatBubble {
   layout.justify-content: .end,
   overrides: [move(message, after = .nil)],
 
-  chatBubble.profileAvatar {
-    avatar.smallPhoto.smallImage {
+  profileAvatar {
+    smallImage {
       fill[0].image.ref: module
     }
   }
@@ -44,7 +44,7 @@ user = frame : chatBubble {
   message {
     fill[0].color: colors.theme.contrastStrongest,
 
-    message.messageText {
+    messageText {
       fill[0].color: colors.theme.base
     }
   }

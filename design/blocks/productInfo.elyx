@@ -8,11 +8,18 @@ import "design/controls/tag.elyx" as tag
 export productInfo = frame {
   left: -167px,
   top: 300px,
-  layout: {direction: .column, justify-content: .center, item-gap: Spacing.gap.xlarge},
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    item-gap: Spacing.gap.xlarge
+  },
   overflow: .visible,
   children: [productPreview, productDetails],
 
-  productPreview = frame : product.product {left: -30.85px, top: -42.3893px}
+  productPreview = frame : product.product {
+    left: -30.85px,
+    top: -42.3893px
+  }
 }
 
 productDetails = frame {
@@ -26,7 +33,7 @@ productDetails = frame {
     top: 229.1186px,
     fill[0].color: colors.palette.yellowAlpha50,
 
-    tag.tagTransparent.label {
+    label {
       contents: "4.5"
     }
   }

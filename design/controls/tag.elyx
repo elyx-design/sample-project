@@ -42,7 +42,7 @@ labelAndClose = frame : tagTransparent {
   layout.item-gap: spacing.gap.xsmall,
   overrides: [insert(closeIcon, after = tagTransparent.label)],
 
-  closeIcon = icon {
+  closeIcon = asset {
     left: 525px,
     top: 635px,
     width: 20px,
@@ -59,7 +59,7 @@ status = frame : tagTransparent {
   padding-left: spacing.padding.xsmall,
   overrides: [insert(statusIcon, after = .nil)],
 
-  statusIcon = icon {
+  statusIcon = asset {
     left: 525px,
     top: 635px,
     width: 20px,
@@ -77,7 +77,7 @@ iconAndLabel = frame : tagTransparent {
   layout.item-gap: spacing.gap.xsmall,
   overrides: [insert(tagIcon, after = .nil)],
 
-  tagIcon = icon {
+  tagIcon = asset {
     left: 525px,
     top: 635px,
     width: 20px,
