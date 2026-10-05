@@ -9,6 +9,17 @@ export gap = tokens {
   huge: 32
 }
 
-export padding = tokens {xsmall: 4, small: 8, medium: 12, large: 16, xlarge: 20, xxlarge: 24}
+export padding = tokens {
+  xsmall: 4,
+  small: 8,
+  medium: 12,
+  large: 16,
+  xlarge: 20,
+  xxlarge: 24
+}
 
-export size = tokens {small: 28, medium: 36, large: 68}
+export size = tokens {
+  small: 28,
+  medium: 36,
+  large: 68
+}

@@ -44,7 +44,12 @@ content = frame {
   layout: {justify-content: .space-between, align-items: .center},
   children: [left, dateLabel],
 
-  left = frame {height: .auto, layout: {align-items: .center}, overflow: .visible, children: label}
+  left = frame {
+    height: .auto,
+    layout: {align-items: .center},
+    overflow: .visible,
+    children: label
+  }
 }
 
 label = frame {
@@ -52,7 +57,7 @@ label = frame {
   layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
   children: [typeIcon, trackName],
 
-  typeIcon = icon {
+  typeIcon = asset {
     left: 810px,
     top: 522px,
     width: 24px,
@@ -78,7 +83,7 @@ dateLabel = frame {
   layout: {align-items: .center, item-gap: spacing.gap.xxsmall},
   children: [dateIcon, dateText],
 
-  dateIcon = icon {
+  dateIcon = asset {
     left: 810px,
     top: 522px,
     width: 24px,

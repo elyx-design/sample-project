@@ -9,6 +9,11 @@ export fontSize = tokens {
   huge: 32
 }
 
-export lineHeight = tokens {relaxed: 1.5}
+export lineHeight = tokens {
+  relaxed: 1.5
+}
 
-export letterSpacing = tokens {medium: 5%, wide: 10%}
+export letterSpacing = tokens {
+  medium: 0.05,
+  wide: 0.1
+}

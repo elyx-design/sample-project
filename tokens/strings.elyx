@@ -106,7 +106,12 @@ export componentDefaults = tokens {
   productName: "Product Name"
 }
 
-export stats = tokens {books: "Books", pages: "Pages", rating: "Rating", shelves: "Shelves"}
+export stats = tokens {
+  books: "Books",
+  pages: "Pages",
+  rating: "Rating",
+  shelves: "Shelves"
+}
 
 export plans = tokens {
   starter: "Starter",

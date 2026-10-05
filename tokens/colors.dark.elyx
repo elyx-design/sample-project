@@ -1,6 +1,5 @@
 import "tokens/colors.elyx" as colors
 
-
 // Provides dark-theme overrides for contextual color groups. Fixed primitives
 // remain unchanged
 @context(theme="dark")
@@ -42,7 +41,9 @@ export darkControls = tokens : colors.controls {
   surface: rgb(17.92%, 17.92%, 17.92%)
 }
 
-export darkSurfaces = tokens : colors.surfaces {subtle: rgb(13.73%, 13.73%, 13.73%)}
+export darkSurfaces = tokens : colors.surfaces {
+  subtle: rgb(13.73%, 13.73%, 13.73%)
+}
 
 export darkGradients = tokens : colors.gradients {
   surfaceTop: rgb(13.73%, 13.73%, 13.73%),
