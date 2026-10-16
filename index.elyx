@@ -24,7 +24,7 @@ intro = frame {
   height: .auto,
   layout: {justify-content: .center, align-items: .center},
   corner-radius: 20px,
-  children: [welcome, demoProjectContent],
+  children: [welcome, sampleProjectContent],
 
   welcomeDescription = text {
     left: -46.02px,
@@ -79,14 +79,14 @@ introCopy = frame {
     top: 0px,
     mix-blend-mode: .overlay,
     fill: colors.primitives.white70,
-    contents: Strings.demoProject.welcomeTitle,
+    contents: Strings.sampleProject.welcomeTitle,
     font-size: 24,
     font-style: "Medium",
     align: .center
   }
 }
 
-demoProjectContent = frame {
+sampleProjectContent = frame {
   left: 903px,
   top: 0px,
   width: 831px,

@@ -16,7 +16,7 @@ import "design/screens/footer.elyx" as footer
 import "design/screens/pricingPage.elyx" as pricingPage
 import "design/blocks/productGallery.elyx" as productGallery
 
-__file__ {
+file {
   draw-connections: .true
 }
 

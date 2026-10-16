@@ -9,7 +9,7 @@ import "design/screens/AIchat.elyx" as AIchat
 
 // Demonstrates a complete screen composed from reusable blocks, including a
 // connection to the AI chat screen.
-__file__ {
+file {
   draw-connections: .true
 }
 

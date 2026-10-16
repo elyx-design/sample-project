@@ -1,37 +1,5 @@
 {
-  "color": {
-    "space": "sRGB",
-    "depth": "RGBA8",
-    "encoding": "rgb"
-  },
-  "git": {
-    "flow": "relaxed"
-  },
-  "defaults": {
-    "text": {
-      "font": {
-        "family": "Inter",
-        "style": "Regular"
-      },
-      "fontSize": 14,
-      "fontWeight": 400
-    }
-  },
   "assets": {
-    "fonts": {
-      "writePath": "resources/fonts",
-      "additionalSourcePaths": [
-        "fonts"
-      ]
-    },
-    "images": {
-      "writePath": "images/",
-      "additionalSourcePaths": [
-        "icons/"
-      ]
-    }
-  },
-  "files": {
-    "exclude": []
+    "include": ["images", "icons"]
   }
 }

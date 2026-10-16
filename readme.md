@@ -1,6 +1,6 @@
-# Demo Project
+# Sample Project
 
-Welcome to the Elyx demo project.
+Welcome to the Elyx sample project.
 
 This project demonstrates how to organize a Project and build `.elyx` files. An Elyx project consists of many components so we’ve organized our UI files in the `design/` in four folders:
 

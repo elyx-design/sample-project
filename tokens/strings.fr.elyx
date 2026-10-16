@@ -3,10 +3,10 @@ import "tokens/strings.elyx" as strings
 // Provides French locale overrides for the default string tokens. Keep its
 // exported group structure aligned with strings.elyx.
 @context(lang="fr")
-__file__
+file {}
 
-export demoProject = tokens : strings.demoProject {
-  welcomeTitle: "Bienvenue dans le projet de démonstration Elyx",
+export sampleProject = tokens : strings.sampleProject {
+  welcomeTitle: "Bienvenue dans le projet d’exemple Elyx",
   welcomeDescription: "Ce document présente les bonnes pratiques pour configurer les fichiers .elyx dans votre projet",
   structureDescription: "Les fichiers d’interface sont organisés sous design/ en quatre niveaux : contrôles, blocs, écrans et parcours.",
   controlsTitle: "CONTRÔLES",

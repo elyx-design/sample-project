@@ -4,7 +4,7 @@ import "design/screens/LandingPage.elyx" as landingFile
 import "design/screens/footer.elyx" as footerFile
 import "design/screens/pricingPage.elyx" as pricingFile
 
-__file__ {
+file {
   draw-connections: .true
 }
 

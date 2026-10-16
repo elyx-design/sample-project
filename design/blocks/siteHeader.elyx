@@ -110,6 +110,7 @@ mutedIconMenu = frame : menu {
 headerCta = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.large},
+  overflow: .visible,
   children: [logInLink, getStartedButton],
 
   logInLink = frame : menu {
@@ -265,6 +266,7 @@ bareNav = frame {
 bareCta = frame {
   height: .auto,
   layout: {align-items: .center, item-gap: spacing.gap.large},
+  overflow: .visible,
   children: [bareLogIn, Primary],
 
   bareLogIn = frame : menu {
